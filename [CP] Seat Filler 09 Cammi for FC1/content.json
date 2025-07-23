@@ -1,0 +1,62 @@
+{
+  "Format": "1.25.0",
+  "Changes": [
+    {
+      "LogName": "NPC Manifestation",
+      "Action": "EditData",
+      "Target": "data/NPCDispositions",
+      "Entries": {
+        "[65]Cammi": "child/polite/outgoing/negative/male/non-datable/null/Other/spring 6//Custom_Claire_WarpRoom 3 3/Cammi"
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+   	"LogName": "Cammi's AntiSocial Flag",
+  	"Action": "EditData",
+  	"Target": "Data/AntiSocialNPCs",
+  	"Entries": {"[65]Cammi": true}
+    },
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/[65]Cammi",
+      "FromFile": "assets/spritesheet.png",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "NPC Portrait",
+      "Action": "Load",
+      "Target": "Portraits/[65]Cammi",
+      "FromFile": "assets/portrait.png",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/[65]Cammi",
+      "FromFile": "assets/schedule.json",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/[65]Cammi",
+      "FromFile": "assets/Dialogue.json",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "Cammi_read_right": "16/19/16"	
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+{	 "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.9":  "This is Cammi's seat. Down Forward B"},
+	"When": {"HasSeenEvent": "9695002"}
+}
+
+  ]
+}

@@ -1,0 +1,2391 @@
+{
+  "Format": "2.0",
+  "ConfigSchema": {
+    "Difficulty": {
+      "AllowValues": "easy, normal, hard, custom",
+      "Default": "normal"
+    },
+    "ResentmentLevel": {
+      "AllowValues": "easy, hard, disable, propoly, custom",
+      "Default": "easy"
+    },
+    "Messages": {
+      "AllowValues": "true, false",
+      "Default": "true"
+    },
+    "Platonic": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+    "Optimization": {
+      "AllowValues": "true, false",
+      "Default": "false"
+    },
+    "GameMode": {
+      "AllowValues": "normal",
+      "Default": "normal"
+    },
+    "CustomFV01": {
+      "Default": "0"
+    },
+    "CustomFV02": {
+      "Default": "0"
+    },
+    "CustomFV03": {
+      "Default": "0"
+    },
+    "CustomFV04": {
+      "Default": "0"
+    },
+    "CustomFV05": {
+      "Default": "0"
+    },
+    "CustomFV06": {
+      "Default": "0"
+    },
+    "CustomFV07": {
+      "Default": "0"
+    },
+    "CustomFV08": {
+      "Default": "0"
+    },
+    "CustomFV09": {
+      "Default": "0"
+    },
+    "CustomFV10": {
+      "Default": "0"
+    },
+    "CustomFV11": {
+      "Default": "0"
+    },
+    "CustomFV12": {
+      "Default": "0"
+    },
+    "CustomFV13": {
+      "Default": "0"
+    },
+    "CustomFV14": {
+      "Default": "0"
+    },
+    "CustomFV15": {
+      "Default": "0"
+    },
+    "CustomFV16": {
+      "Default": "0"
+    },
+    "CustomFV17": {
+      "Default": "0"
+    },
+    "CustomFV18": {
+      "Default": "0"
+    },
+    "CustomFV19": {
+      "Default": "0"
+    },
+    "CustomFV20": {
+      "Default": "0"
+    },
+    "CustomFV21": {
+      "Default": "0"
+    },
+    "CustomFV22": {
+      "Default": "0"
+    },
+    "CustomFV23": {
+      "Default": "0"
+    },
+    "CustomFV24": {
+      "Default": "0"
+    },
+    "CustomFV25": {
+      "Default": "0"
+    },
+    "CustomFV26": {
+      "Default": "0"
+    },
+    "CustomFV27": {
+      "Default": "0"
+    },
+    "CustomRV01": {
+      "Default": "0"
+    },
+    "CustomRV02": {
+      "Default": "0"
+    },
+    "CustomRV03": {
+      "Default": "0"
+    },
+    "CustomRV04": {
+      "Default": "0"
+    },
+    "CustomRV05": {
+      "Default": "0"
+    },
+    "CustomRV06": {
+      "Default": "0"
+    },
+    "CustomRV07": {
+      "Default": "0"
+    },
+    "CustomRV08": {
+      "Default": "0"
+    },
+    "CustomRV09": {
+      "Default": "0"
+    },
+    "CustomRV10": {
+      "Default": "0"
+    },
+    "CustomRV11": {
+      "Default": "0"
+    },
+    "CustomRV12": {
+      "Default": "0"
+    },
+    "CustomRV13": {
+      "Default": "0"
+    },
+    "CustomOV01": {
+      "Default": "0"
+    },
+    "CustomOV02": {
+      "Default": "0"
+    },
+    "CustomOV03": {
+      "Default": "0"
+    },
+    "CustomOV04": {
+      "Default": "0"
+    }
+  },
+
+  "DynamicTokens": [
+    //Messages Toggle
+    {
+      "Name": "MC01", //turns Messages on
+      "Value": "message",
+      "When": {
+        "Messages": "true"
+      }
+    },
+    {
+      "Name": "MC01", //turns Messages off
+      "Value": "textAboveHead",
+      "When": {
+        "Messages": "false"
+      }
+    },
+    //Platonic Messages
+    {
+      "Name": "PM01", //turns Platonics off
+      "Value": "{{i18n:Message.BuddingR}}",
+      "When": {
+        "Platonic": "false"
+      }
+    },
+    {
+      "Name": "PM01", //turns Platonics on
+      "Value": "{{i18n:Message.StrongConnection}}",
+      "When": {
+        "Platonic": "true"
+      }
+    },
+    {
+      "Name": "PM02", //turns Platonics off
+      "Value": "{{i18n:Message.BlossomingR}}",
+      "When": {
+        "Platonic": "false"
+      }
+    },
+    {
+      "Name": "PM02", //turns Platonics on
+      "Value": "{{i18n:Message.PowerfulConnection}}",
+      "When": {
+        "Platonic": "true"
+      }
+    },
+    //Difficulty Easy
+    {
+      "Name": "FV01", //2-heart standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV02", //4-heart standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV03", //6-heart standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV04", //8-heart standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV05", //10-heart standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV06", //Dating standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV07", //Married standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV08", //2-heart low
+      "Value": "50",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV09", //4-heart low
+      "Value": "50",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV10", //6-heart low
+      "Value": "50",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV11", //8-heart low
+      "Value": "50",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV12", //10-heart low
+      "Value": "50",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV13", //Dating low
+      "Value": "50",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV14", //Married low
+      "Value": "50",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV15", //2-heart high
+      "Value": "150",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV16", //4-heart high
+      "Value": "150",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV17", //6-heart high
+      "Value": "150",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV18", //8-heart high
+      "Value": "150",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV19", //10-heart high
+      "Value": "150",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV20", //Dating high
+      "Value": "150",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV21", //Married high
+      "Value": "150",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV22", //12-heart standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV23", //14-heart standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV24", //12-heart low
+      "Value": "50",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV25", //14-heart low
+      "Value": "50",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV26", //12-heart high
+      "Value": "150",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "FV27", //14-heart high
+      "Value": "150",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    //Difficulty Normal
+    {
+      "Name": "FV01", //2-heart standard
+      "Value": "25",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV02", //4-heart standard
+      "Value": "40",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV03", //6-heart standard
+      "Value": "60",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV04", //8-heart standard
+      "Value": "75",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV05", //10-heart standard
+      "Value": "85",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV06", //Dating standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV07", //Married standard
+      "Value": "175",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV08", //2-heart low
+      "Value": "10",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV09", //4-heart low
+      "Value": "15",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV10", //6-heart low
+      "Value": "25",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV11", //8-heart low
+      "Value": "30",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV12", //10-heart low
+      "Value": "50",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV13", //Dating low
+      "Value": "50",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV14", //Married low
+      "Value": "100",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV15", //2-heart high
+      "Value": "40",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV16", //4-heart high
+      "Value": "60",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV17", //6-heart high
+      "Value": "80",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV18", //8-heart high
+      "Value": "90",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV19", //10-heart high
+      "Value": "100",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV20", //Dating high
+      "Value": "150",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV21", //Married high
+      "Value": "250",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV22", //12-heart standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV23", //14-heart standard
+      "Value": "250",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV24", //12-heart low
+      "Value": "50",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV25", //14-heart low
+      "Value": "200",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV26", //12-heart high
+      "Value": "250",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "FV27", //14-heart high
+      "Value": "300",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    //Difficulty Hard
+    {
+      "Name": "FV01", //2-heart standard
+      "Value": "20",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV02", //4-heart standard
+      "Value": "30",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV03", //6-heart standard
+      "Value": "45",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV04", //8-heart standard
+      "Value": "55",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV05", //10-heart standard
+      "Value": "65",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV06", //Dating standard
+      "Value": "70",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV07", //Married standard
+      "Value": "90",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV08", //2-heart low
+      "Value": "10",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV09", //4-heart low
+      "Value": "15",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV10", //6-heart low
+      "Value": "20",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV11", //8-heart low
+      "Value": "25",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV12", //10-heart low
+      "Value": "40",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV13", //Dating low
+      "Value": "50",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV14", //Married low
+      "Value": "75",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV15", //2-heart high
+      "Value": "25",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV16", //4-heart high
+      "Value": "40",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV17", //6-heart high
+      "Value": "60",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV18", //8-heart high
+      "Value": "75",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV19", //10-heart high
+      "Value": "90",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV20", //Dating high
+      "Value": "100",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV21", //Married high
+      "Value": "150",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV22", //12-heart standard
+      "Value": "90",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV23", //14-heart standard
+      "Value": "100",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV24", //12-heart low
+      "Value": "75",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV25", //14-heart low
+      "Value": "100",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV26", //12-heart high
+      "Value": "150",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "FV27", //14-heart high
+      "Value": "175",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    //Resentment Easy
+    {
+      "Name": "RV01", //Dating standard
+      "Value": "-125",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV02", //Married standard
+      "Value": "-125",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV03", //12-heart standard
+      "Value": "-125",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV04", //14-heart standard
+      "Value": "-125",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV05", //Dating high
+      "Value": "-250",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV06", //Married high
+      "Value": "-250",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV07", //12-heart high
+      "Value": "-250",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV08", //14-heart high
+      "Value": "-250",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV09", //Dating low
+      "Value": "-50",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV10", //Married low
+      "Value": "-50",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV11", //12-heart low
+      "Value": "-50",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV12", //14-heart low
+      "Value": "-50",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "RV13", //2-10-heart low
+      "Value": "-50",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    //Resentment Hard
+    {
+      "Name": "RV01", //Dating standard
+      "Value": "-250",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV02", //Married standard
+      "Value": "-1000",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV03", //12-heart standard
+      "Value": "-500",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV04", //14-heart standard
+      "Value": "-250",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV05", //Dating high
+      "Value": "-500",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV06", //Married high
+      "Value": "-2000",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV07", //12-heart high
+      "Value": "-1000",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV08", //14-heart high
+      "Value": "-500",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV09", //Dating low
+      "Value": "-250",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV10", //Married low
+      "Value": "-500",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV11", //12-heart low
+      "Value": "-250",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV12", //14-heart low
+      "Value": "-125",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "RV13", //2-10-heart low
+      "Value": "-100",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    //Resentment Disabled
+    {
+      "Name": "RV01", //Dating standard
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV02", //Married standard
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV03", //12-heart standard
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV04", //14-heart standard
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV05", //Dating high
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV06", //Married high
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV07", //12-heart high
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV08", //14-heart high
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV09", //Dating low
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV10", //Married low
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV11", //12-heart low
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV12", //14-heart low
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "RV13", //2-10-heart low
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    //Resentment ProPoly
+    {
+      "Name": "RV01", //Dating standard
+      "Value": "75",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV02", //Married standard
+      "Value": "125",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV03", //12-heart standard
+      "Value": "75",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV04", //14-heart standard
+      "Value": "100",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV05", //Dating high
+      "Value": "100",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV06", //Married high
+      "Value": "150",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV07", //12-heart high
+      "Value": "100",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV08", //14-heart high
+      "Value": "125",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV09", //Dating low
+      "Value": "25",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV10", //Married low
+      "Value": "50",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV11", //12-heart low
+      "Value": "25",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV12", //14-heart low
+      "Value": "50",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    {
+      "Name": "RV13", //2-10-heart low
+      "Value": "50",
+      "When": {
+        "ResentmentLevel": "propoly"
+      }
+    },
+    //Sophia Friendship Token
+    {
+      "Name": "SF01",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=8185295": false
+      }
+    },
+    {
+      "Name": "SF01",
+      "Value": "/friendship Sophia {{FV01}}/",
+      "When": {
+        "HasSeenEvent |contains=8185295": true
+      }
+    },
+    {
+      "Name": "SF02",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=8185295": false
+      }
+    },
+    {
+      "Name": "SF02",
+      "Value": "/friendship Sophia {{FV02}}/",
+      "When": {
+        "HasSeenEvent |contains=8185295": true
+      }
+    },
+    {
+      "Name": "SF03",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=8185295": false
+      }
+    },
+    {
+      "Name": "SF03",
+      "Value": "/friendship Sophia {{FV03}}/",
+      "When": {
+        "HasSeenEvent |contains=8185295": true
+      }
+    },
+    {
+      "Name": "SF04",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=8185295": false
+      }
+    },
+    {
+      "Name": "SF04",
+      "Value": "/friendship Sophia {{FV04}}/",
+      "When": {
+        "HasSeenEvent |contains=8185295": true
+      }
+    },
+    {
+      "Name": "SF05",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=8185295": false
+      }
+    },
+    {
+      "Name": "SF05",
+      "Value": "/friendship Sophia {{FV05}}/",
+      "When": {
+        "HasSeenEvent |contains=8185295": true
+      }
+    },
+    {
+      "Name": "SF22",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=8185295": false
+      }
+    },
+    {
+      "Name": "SF22",
+      "Value": "/friendship Sophia {{FV22}}/",
+      "When": {
+        "HasSeenEvent |contains=8185295": true
+      }
+    },
+    {
+      "Name": "SF23",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=8185295": false
+      }
+    },
+    {
+      "Name": "SF23",
+      "Value": "/friendship Sophia {{FV23}}/",
+      "When": {
+        "HasSeenEvent |contains=8185295": true
+      }
+    },
+    {
+      "Name": "SF06",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=8185295": false
+      }
+    },
+    {
+      "Name": "SF06",
+      "Value": "/friendship Sophia {{FV06}}/",
+      "When": {
+        "HasSeenEvent |contains=8185295": true
+      }
+    },
+    {
+      "Name": "SF07",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=8185295": false
+      }
+    },
+    {
+      "Name": "SF07",
+      "Value": "/friendship Sophia {{FV07}}/",
+      "When": {
+        "HasSeenEvent |contains=8185295": true
+      }
+    },
+    //Tristan Friendship Token
+    {
+      "Name": "TF01",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=5295000": false
+      }
+    },
+    {
+      "Name": "TF01",
+      "Value": "/friendship MisterGinger {{FV01}}/",
+      "When": {
+        "HasSeenEvent |contains=5295000": true
+      }
+    },
+    {
+      "Name": "TF02",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=5295000": false
+      }
+    },
+    {
+      "Name": "TF02",
+      "Value": "/friendship MisterGinger {{FV02}}/",
+      "When": {
+        "HasSeenEvent |contains=5295000": true
+      }
+    },
+    {
+      "Name": "TF03",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=5295000": false
+      }
+    },
+    {
+      "Name": "TF03",
+      "Value": "/friendship MisterGinger {{FV03}}/",
+      "When": {
+        "HasSeenEvent |contains=5295000": true
+      }
+    },
+    {
+      "Name": "TF04",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=5295000": false
+      }
+    },
+    {
+      "Name": "TF04",
+      "Value": "/friendship MisterGinger {{FV04}}/",
+      "When": {
+        "HasSeenEvent |contains=5295000": true
+      }
+    },
+    {
+      "Name": "TF05",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=5295000": false
+      }
+    },
+    {
+      "Name": "TF05",
+      "Value": "/friendship MisterGinger {{FV05}}/",
+      "When": {
+        "HasSeenEvent |contains=5295000": true
+      }
+    },
+    {
+      "Name": "TF22",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=5295000": false
+      }
+    },
+    {
+      "Name": "TF22",
+      "Value": "/friendship MisterGinger {{FV22}}/",
+      "When": {
+        "HasSeenEvent |contains=5295000": true
+      }
+    },
+    {
+      "Name": "TF23",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=5295000": false
+      }
+    },
+    {
+      "Name": "TF23",
+      "Value": "/friendship MisterGinger {{FV23}}/",
+      "When": {
+        "HasSeenEvent |contains=5295000": true
+      }
+    },
+    {
+      "Name": "TF06",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=5295000": false
+      }
+    },
+    {
+      "Name": "TF06",
+      "Value": "/friendship MisterGinger {{FV06}}/",
+      "When": {
+        "HasSeenEvent |contains=5295000": true
+      }
+    },
+    {
+      "Name": "TF07",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=5295000": false
+      }
+    },
+    {
+      "Name": "TF07",
+      "Value": "/friendship MisterGinger {{FV07}}/",
+      "When": {
+        "HasSeenEvent |contains=5295000": true
+      }
+    },
+    //Leo Friendship Token
+    {
+      "Name": "LF01",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=6497428": false
+      }
+    },
+    {
+      "Name": "LF01",
+      "Value": "/friendship Leo {{FV01}}/",
+      "When": {
+        "HasSeenEvent |contains=6497428": true
+      }
+    },
+    {
+      "Name": "LF02",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=6497428": false
+      }
+    },
+    {
+      "Name": "LF02",
+      "Value": "/friendship Leo {{FV02}}/",
+      "When": {
+        "HasSeenEvent |contains=6497428": true
+      }
+    },
+    {
+      "Name": "LF03",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=6497428": false
+      }
+    },
+    {
+      "Name": "LF03",
+      "Value": "/friendship Leo {{FV03}}/",
+      "When": {
+        "HasSeenEvent |contains=6497428": true
+      }
+    },
+    {
+      "Name": "LF04",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=6497428": false
+      }
+    },
+    {
+      "Name": "LF04",
+      "Value": "/friendship Leo {{FV04}}/",
+      "When": {
+        "HasSeenEvent |contains=6497428": true
+      }
+    },
+    {
+      "Name": "LF05",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=6497428": false
+      }
+    },
+    {
+      "Name": "LF05",
+      "Value": "/friendship Leo {{FV05}}/",
+      "When": {
+        "HasSeenEvent |contains=6497428": true
+      }
+    },
+    {
+      "Name": "LF22",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=6497428": false
+      }
+    },
+    {
+      "Name": "LF22",
+      "Value": "/friendship Leo {{FV22}}/",
+      "When": {
+        "HasSeenEvent |contains=6497428": true
+      }
+    },
+    {
+      "Name": "LF23",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=6497428": false
+      }
+    },
+    {
+      "Name": "LF23",
+      "Value": "/friendship Leo {{FV23}}/",
+      "When": {
+        "HasSeenEvent |contains=6497428": true
+      }
+    },
+    {
+      "Name": "LF06",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=6497428": false
+      }
+    },
+    {
+      "Name": "LF06",
+      "Value": "/friendship Leo {{FV06}}/",
+      "When": {
+        "HasSeenEvent |contains=6497428": true
+      }
+    },
+    {
+      "Name": "LF07",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=6497428": false
+      }
+    },
+    {
+      "Name": "LF07",
+      "Value": "/friendship Leo {{FV07}}/",
+      "When": {
+        "HasSeenEvent |contains=6497428": true
+      }
+    },
+    //Joja Prank - Juliet Friendship Token
+    {
+      "Name": "JF01",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "JF01",
+      "Value": "/friendship Juliet {{FV01}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "JF02",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "JF02",
+      "Value": "/friendship Juliet {{FV02}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "JF03",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "JF03",
+      "Value": "/friendship Juliet {{FV03}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "JF04",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "JF04",
+      "Value": "/friendship Juliet {{FV04}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "JF05",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "JF05",
+      "Value": "/friendship Juliet {{FV05}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "JF22",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "JF22",
+      "Value": "/friendship Juliet {{FV22}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "JF23",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "JF23",
+      "Value": "/friendship Juliet {{FV23}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "JF06",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "JF06",
+      "Value": "/friendship Juliet {{FV06}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "JF07",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "JF07",
+      "Value": "/friendship Juliet {{FV07}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    //Joja Prank - Abigail Friendship Token
+    {
+      "Name": "AF01",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "AF01",
+      "Value": "/friendship Abigail {{FV01}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "AF02",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "AF02",
+      "Value": "/friendship Abigail {{FV02}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "AF03",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "AF03",
+      "Value": "/friendship Abigail {{FV03}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "AF04",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "AF04",
+      "Value": "/friendship Abigail {{FV04}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "AF05",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "AF05",
+      "Value": "/friendship Abigail {{FV05}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "AF22",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "AF22",
+      "Value": "/friendship Abigail {{FV22}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "AF23",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "AF23",
+      "Value": "/friendship Abigail {{FV23}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "AF06",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "AF06",
+      "Value": "/friendship Abigail {{FV06}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "AF07",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "AF07",
+      "Value": "/friendship Abigail {{FV07}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    //Witch Friendship Token (Fostoria, Iris)
+    {
+      "Name": "WF01",
+      "Value": "/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": false
+      }
+    },
+    {
+      "Name": "WF01",
+      "Value": "/friendship Witch {{FV01}}/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": true
+      }
+    },
+    {
+      "Name": "WF02",
+      "Value": "/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": false
+      }
+    },
+    {
+      "Name": "WF02",
+      "Value": "/friendship Witch {{FV02}}/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": true
+      }
+    },
+    {
+      "Name": "WF03",
+      "Value": "/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": false
+      }
+    },
+    {
+      "Name": "WF03",
+      "Value": "/friendship Witch {{FV03}}/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": true
+      }
+    },
+    {
+      "Name": "WF04",
+      "Value": "/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": false
+      }
+    },
+    {
+      "Name": "WF04",
+      "Value": "/friendship Witch {{FV04}}/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": true
+      }
+    },
+    {
+      "Name": "WF05",
+      "Value": "/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": false
+      }
+    },
+    {
+      "Name": "WF05",
+      "Value": "/friendship Witch {{FV05}}/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": true
+      }
+    },
+    {
+      "Name": "WF22",
+      "Value": "/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": false
+      }
+    },
+    {
+      "Name": "WF22",
+      "Value": "/friendship Witch {{FV22}}/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": true
+      }
+    },
+    {
+      "Name": "WF23",
+      "Value": "/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": false
+      }
+    },
+    {
+      "Name": "WF23",
+      "Value": "/friendship Witch {{FV23}}/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": true
+      }
+    },
+    {
+      "Name": "WF06",
+      "Value": "/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": false
+      }
+    },
+    {
+      "Name": "WF06",
+      "Value": "/friendship Witch {{FV06}}/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": true
+      }
+    },
+    {
+      "Name": "WF07",
+      "Value": "/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": false
+      }
+    },
+    {
+      "Name": "WF07",
+      "Value": "/friendship Witch {{FV07}}/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": true
+      }
+    },
+    //Optimizations
+    {
+      "Name": "OV01", //Optimization Standard
+      "Value": "400",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "OV02", //Optimization Low
+      "Value": "200",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "OV03", //Optimization High
+      "Value": "600",
+      "When": {
+        "Difficulty": "easy"
+      }
+    },
+    {
+      "Name": "OV01", //Optimization Standard
+      "Value": "200",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "OV02", //Optimization Low
+      "Value": "80",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "OV03", //Optimization High
+      "Value": "270",
+      "When": {
+        "Difficulty": "normal"
+      }
+    },
+    {
+      "Name": "OV01", //Optimization Standard
+      "Value": "150",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "OV02", //Optimization Low
+      "Value": "70",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "OV03", //Optimization High
+      "Value": "200",
+      "When": {
+        "Difficulty": "hard"
+      }
+    },
+    {
+      "Name": "OV04", //Optimization Resentment
+      "Value": "-200",
+      "When": {
+        "ResentmentLevel": "easy"
+      }
+    },
+    {
+      "Name": "OV04", //Optimization Resentment
+      "Value": "-400",
+      "When": {
+        "ResentmentLevel": "hard"
+      }
+    },
+    {
+      "Name": "OV04", //Optimization Resentment
+      "Value": "0",
+      "When": {
+        "ResentmentLevel": "disable"
+      }
+    },
+    {
+      "Name": "OV04", //Optimization Resentment
+      "Value": "200",
+      "When": {
+        "ResentmentLevel": "proPoly"
+      }
+    },
+    {
+      "Name": "OVSF",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=8185295": false
+      }
+    },
+    {
+      "Name": "OVSF",
+      "Value": "/friendship Sophia {{OV01}}/",
+      "When": {
+        "HasSeenEvent |contains=8185295": true
+      }
+    },
+    {
+      "Name": "OVAF",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "OVAF",
+      "Value": "/friendship Abigail {{OV01}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "OVJF",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=908904": false
+      }
+    },
+    {
+      "Name": "OVJF",
+      "Value": "/friendship Juliet {{OV01}}/",
+      "When": {
+        "HasSeenEvent |contains=908904": true
+      }
+    },
+    {
+      "Name": "OVLF",
+      "Value": "/",
+      "When": {
+        "HasSeenEvent |contains=6497428": false
+      }
+    },
+    {
+      "Name": "OVLF",
+      "Value": "/friendship Leo {{OV01}}/",
+      "When": {
+        "HasSeenEvent |contains=6497428": true
+      }
+    },
+    {
+      "Name": "OVWF",
+      "Value": "/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": false
+      }
+    },
+    {
+      "Name": "OVWF",
+      "Value": "/friendship Witch {{OV01}}/",
+      "When": {
+        "HasMod |contains=Fostoria.Stoffton": true
+      }
+    },
+    //Custom
+    {
+      "Name": "FV01",
+      "Value": "{{CustomFV01}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV02",
+      "Value": "{{CustomFV02}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV03",
+      "Value": "{{CustomFV03}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV04",
+      "Value": "{{CustomFV04}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV05",
+      "Value": "{{CustomFV05}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV06",
+      "Value": "{{CustomFV06}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV07",
+      "Value": "{{CustomFV07}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV08",
+      "Value": "{{CustomFV08}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV09",
+      "Value": "{{CustomFV09}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV10",
+      "Value": "{{CustomFV10}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV11",
+      "Value": "{{CustomFV11}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV12",
+      "Value": "{{CustomFV12}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV13",
+      "Value": "{{CustomFV13}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV14",
+      "Value": "{{CustomFV14}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV15",
+      "Value": "{{CustomFV15}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV16",
+      "Value": "{{CustomFV16}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV17",
+      "Value": "{{CustomFV17}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV18",
+      "Value": "{{CustomFV18}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV19",
+      "Value": "{{CustomFV19}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV20",
+      "Value": "{{CustomFV20}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV21",
+      "Value": "{{CustomFV21}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV22",
+      "Value": "{{CustomFV22}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV23",
+      "Value": "{{CustomFV23}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV24",
+      "Value": "{{CustomFV24}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV25",
+      "Value": "{{CustomFV25}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV26",
+      "Value": "{{CustomFV26}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "FV27",
+      "Value": "{{CustomFV27}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV01",
+      "Value": "{{CustomRV01}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV02",
+      "Value": "{{CustomRV02}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV03",
+      "Value": "{{CustomRV03}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV04",
+      "Value": "{{CustomRV04}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV05",
+      "Value": "{{CustomRV05}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV06",
+      "Value": "{{CustomRV06}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV07",
+      "Value": "{{CustomRV07}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV08",
+      "Value": "{{CustomRV08}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV09",
+      "Value": "{{CustomRV09}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV10",
+      "Value": "{{CustomRV10}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV11",
+      "Value": "{{CustomRV11}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV12",
+      "Value": "{{CustomRV12}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "RV13",
+      "Value": "{{CustomRV13}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "OV01",
+      "Value": "{{CustomOV01}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "OV02",
+      "Value": "{{CustomOV02}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "OV03",
+      "Value": "{{CustomOV03}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    },
+    {
+      "Name": "OV04",
+      "Value": "{{CustomOV04}}",
+      "When": {
+        "Difficulty": "custom"
+      }
+    }
+  ],
+
+
+  "Changes": [
+    {
+      "Action": "Include",
+      "Logname": "NormalMode",
+      "FromFile": "assets/NormalMode.json",
+      "When": {
+        "GameMode": "normal"
+      }
+    }
+  ]
+}

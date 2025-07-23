@@ -1,0 +1,108 @@
+{
+	"Changes": [
+		{
+      			"LogName": "The Weather Data Tornado",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Tornado": {
+					"Id": "kath.weathering_Tornado",
+					"DisplayName": "{{i18n: Weather.Nado}}",
+
+					"Forecast": "{{i18n: Weather.Nado.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Nado.ForecastIsland}}", "Desert": "{{i18n: Weather.Nado.ForecastDesert}}",},
+					
+					"UseNightTiles": false,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"IsDebrisWeather": true,
+					"IsLightning": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 12, "Y": 16},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 52, "Y": 65},
+					"TVFrames": 4,
+
+
+					"TotemMessage": "{{i18n: Weather.NadoTotem}}",
+					"TotemScreenTint": "gray",
+					"TotemSound": "thunder",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDTornadoW 3",
+							],
+						},
+						{
+							"Id": "Dread",
+							"Type": "Buff",
+							"BuffId": "ExistentialDread",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island",
+							"TargetMapType": "Outdoors",
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "cloudymaybe",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 0, "Y": 64, "Width": 64, "Height": 64 },
+							"Color": "black",
+							"Opacity": 0.51,
+							"Speed": "0.05, 0.05",
+							"ViewSpeed": "-1, -1",
+							"Scale": 25,
+						},
+						{
+							"Id": "cloudymaybe1",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Fog",
+							"Source": {"X": 0, "Y": 0, "Width": 1200, "Height": 1200 },
+							"Color": null,
+							"Opacity": 0.21,
+							"Speed": "0.02, 0.02",
+							"ViewSpeed": "-1, -1",
+							"Scale": 2,
+						},
+						{
+							"Id": "LightingCloudy",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "180, 182, 194",
+							"Opacity": 0.27
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "!LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.27
+						},
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

@@ -1,0 +1,295 @@
+{
+  "Name": "Maid Skirt",
+  "Tags": [
+    "Maid"
+  ],
+  "FrontPants": {
+    "DisableGrayscale": false,
+    "DrawOrderOverride": {
+      "Preposition": "Before",
+      "AppearanceType": "Shirt"
+    },
+    "ColorMaskLayers": [
+      {
+        "Name": "Skirt",
+        "Values": [
+          [ 46, 46, 46 ],
+          [ 49, 49, 49 ],
+          [ 62, 62, 62 ],
+          [ 76, 76, 76 ],
+          [ 98, 98, 98 ]
+        ]
+      },
+      {
+        "Name": "Cover",
+        "Values": [
+          [ 168, 168, 168 ],
+          [ 234, 234, 234 ]
+        ]
+      },
+      {
+        "Name": "Frills",
+        "Values": [
+          [ 170, 170, 170 ],
+          [ 232, 232, 232 ]
+        ]
+      },
+    ],
+    "StartingPosition": {
+      "X": 0,
+      "Y": 0
+    },
+    "BodyPosition": {
+      "X": 0,
+      "Y": -15
+    },
+    "PantsSize": {
+      "Width": 16,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      }
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      }
+    ]
+  },
+  "BackPants": {
+    "DisableGrayscale": false,
+    "DrawOrderOverride": {
+      "Preposition": "Before",
+      "AppearanceType": "Shirt"
+    },
+    "ColorMaskLayers": [
+      {
+        "Name": "Skirt",
+        "Values": [
+          [ 46, 46, 46 ],
+          [ 49, 49, 49 ],
+          [ 62, 62, 62 ],
+          [ 76, 76, 76 ],
+          [ 98, 98, 98 ]
+        ]
+      },
+      {
+        "Name": "Cover",
+        "Values": [
+          [ 168, 168, 168 ],
+          [ 234, 234, 234 ]
+        ]
+      },
+      {
+        "Name": "Frills",
+        "Values": [
+          [ 170, 170, 170 ],
+          [ 232, 232, 232 ]
+        ]
+      },
+    ],
+    "StartingPosition": {
+      "X": 16,
+      "Y": 0
+    },
+    "BodyPosition": {
+      "X": 0,
+      "Y": -15
+    },
+    "PantsSize": {
+      "Width": 16,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      }
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      }
+    ]
+  },
+  "RightPants": {
+    "DisableGrayscale": false,
+    "DrawOrderOverride": {
+      "Preposition": "Before",
+      "AppearanceType": "Shirt"
+    },
+    "ColorMaskLayers": [
+      {
+        "Name": "Skirt",
+        "Values": [
+          [ 46, 46, 46 ],
+          [ 49, 49, 49 ],
+          [ 62, 62, 62 ],
+          [ 76, 76, 76 ],
+          [ 98, 98, 98 ]
+        ]
+      },
+      {
+        "Name": "Cover",
+        "Values": [
+          [ 168, 168, 168 ],
+          [ 234, 234, 234 ]
+        ]
+      },
+      {
+        "Name": "Frills",
+        "Values": [
+          [ 170, 170, 170 ],
+          [ 232, 232, 232 ]
+        ]
+      },
+    ],
+    "StartingPosition": {
+      "X": 0,
+      "Y": 16
+    },
+    "BodyPosition": {
+      "X": 0,
+      "Y": -14
+    },
+    "PantsSize": {
+      "Width": 16,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      }
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 1,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "CurrentFarmerFrame",
+            "Operator": "EqualTo",
+            "Value": 20,
+            "Independent": true
+          },
+          {
+            "Name": "CurrentFarmerFrame",
+            "Operator": "EqualTo",
+            "Value": 21,
+            "Independent": true
+          }
+        ]
+      }
+    ]
+  },
+  "LeftPants": {
+    "Flipped": true,
+    "DisableGrayscale": false,
+    "DrawOrderOverride": {
+      "Preposition": "Before",
+      "AppearanceType": "Shirt"
+    },
+    "ColorMaskLayers": [
+      {
+        "Name": "Skirt",
+        "Values": [
+          [ 46, 46, 46 ],
+          [ 49, 49, 49 ],
+          [ 62, 62, 62 ],
+          [ 76, 76, 76 ],
+          [ 98, 98, 98 ]
+        ]
+      },
+      {
+        "Name": "Cover",
+        "Values": [
+          [ 168, 168, 168 ],
+          [ 234, 234, 234 ]
+        ]
+      },
+      {
+        "Name": "Frills",
+        "Values": [
+          [ 170, 170, 170 ],
+          [ 232, 232, 232 ]
+        ]
+      },
+    ],
+    "StartingPosition": {
+      "X": 0,
+      "Y": 16
+    },
+    "BodyPosition": {
+      "X": 0,
+      "Y": -15
+    },
+    "PantsSize": {
+      "Width": 16,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      }
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 1,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "CurrentFarmerFrame",
+            "Operator": "EqualTo",
+            "Value": 20,
+            "Independent": true
+          },
+          {
+            "Name": "CurrentFarmerFrame",
+            "Operator": "EqualTo",
+            "Value": 21,
+            "Independent": true
+          }
+        ]
+      }
+    ]
+  }
+}

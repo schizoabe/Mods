@@ -1,0 +1,552 @@
+{
+ "Changes": [
+ 
+  //standard
+ 
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "AdventureShop",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(W)12": null,
+	  "(W)17": null,
+	  "(W)1": null,
+	  "(W)43": null,
+	  "(W)44": null,
+	  "(W)27": null,
+	  "(W)10": null,
+	  "(W)7": null,
+	  "(W)5": null,
+	  "(W)50": null,
+	  "(W)9": null,
+	  "(W)4": null,
+	  "(W)23": null,
+	  "(W)29": null,
+	  "(B)504": null,
+	  "(B)506": null,
+	  "(B)509": null,
+	  "(B)508": null,
+	  "(B)512": null,
+	  "(B)511": null,
+	  "(B)514": null,
+	  "(O)529": null,
+	  "(O)530": null,
+	  "(O)531": null,
+	  "(O)532": null,
+	  "(O)533": null,
+	  "(O)534": null,
+	  "(W)32": null,
+	  "(W)33": null,
+	  "(O)441": null,
+	  "(F)WallSword": null,
+	  "(F)DecorativeSword": null,
+	  
+		  
+	  "boringvlln.rshops_LifeElixirG": {
+      "Id": "boringvlln.rshops_LifeElixirG",
+      "ItemId": "(O)773",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_OilyGarlicG": {
+      "Id": "boringvlln.rshops_OilyGarlicG",
+      "ItemId": "(O)772",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_GuildMinerals": {
+		   "Condition": "SYNCED_RANDOM day boringvlln.rshops_GuildMinerals 0.6",
+      "Id": "boringvlln.rshops_GuildMinerals",
+      "RandomItemId": [ "(O)80", "(O)82", "(O)84", "(O)86", "(O)538", "(O)539", "(O)540", "(O)541", "(O)542", "(O)543", "(O)544", "(O)545", "(O)546", "(O)547", "(O)548", "(O)549", "(O)550", "(O)551", "(O)552", "(O)553", "(O)554", "(O)555", "(O)556", "(O)557", "(O)558", "(O)559", "(O)560", "(O)561", "(O)562", "(O)563", "(O)564", "(O)565", "(O)566", "(O)567", "(O)568", "(O)569", "(O)570", "(O)571", "(O)572", "(O)573", "(O)574", "(O)575", "(O)576", "(O)577", "(O)578" ],
+	  "Price": 5000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildGems": {
+		  "Condition": "SYNCED_RANDOM day boringvlln.rshops_GuildGems 0.6",
+      "Id": "boringvlln.rshops_GuildGems",
+      "RandomItemId": [ "(O)60", "(O)62", "(O)64", "(O)66", "(O)68", "(O)70", "(O)72" ],
+	  "Price": 10000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildGuts": {
+      "Id": "boringvlln.rshops_GuildGuts",
+      "RandomItemId": [ "(O)684", "(O)766", "(O)767", "(O)768", "(O)769" ],
+	  "Price": 500,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+	  },	  
+	  "boringvlln.rshops_GuildTwentyBoots": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 20, SYNCED_RANDOM day boringvlln.rshops_GuildTwentyBoots 0.6",
+      "Id": "boringvlln.rshops_GuildTwentyBoots",
+      "RandomItemId": [ "(B)504", "(B)506" ],
+	  "Price": 500,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildFiftyBoots": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 50, SYNCED_RANDOM day boringvlln.rshops_GuildFiftyBoots 0.6",
+      "Id": "boringvlln.rshops_GuildFiftyBoots",
+      "RandomItemId": [ "(B)509", "(B)508" ],
+	  "Price": 1200,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildEightyBoots": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 80, SYNCED_RANDOM day boringvlln.rshops_GuildEightyBoots 0.6",
+      "Id": "boringvlln.rshops_GuildEightyBoots",
+      "RandomItemId": [ "(B)512", "(B)511", "(B)514" ],
+	  "Price": 5000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildTwentyRing": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 20, SYNCED_RANDOM day boringvlln.rshops_GuildTwentyRing 0.6",
+      "Id": "boringvlln.rshops_GuildTwentyRing",
+      "RandomItemId": [ "(O)529", "(O)530" ],
+	  "Price": 1000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildFiftyRing": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 50, SYNCED_RANDOM day boringvlln.rshops_GuildFiftyRing 0.6",
+      "Id": "boringvlln.rshops_GuildFiftyRing",
+      "RandomItemId": [ "(O)531", "(O)532" ],
+	  "Price": 2500,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildEightyRing": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 80, SYNCED_RANDOM day boringvlln.rshops_GuildEightyRing 0.6",
+      "Id": "boringvlln.rshops_GuildEightyRing",
+      "RandomItemId": [ "(O)533", "(O)534" ],
+	  "Price": 5000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildRookieSword": {
+      "Id": "boringvlln.rshops_GuildRookieSword",
+      "RandomItemId": [ "(W)0", "(W)12" ],
+	  "Price": 250,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildTwentySword": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 20, SYNCED_RANDOM day boringvlln.rshops_GuildTwentySword 0.6",
+      "Id": "boringvlln.rshops_GuildTwentySword",
+      "RandomItemId": [ "(W)17", "(W)1", "(W)43", "(W)44" ],
+	  "Price": 1500,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_Sling1": {
+		  "Condition": "MINE_LOWEST_LEVEL_REACHED 40, SYNCED_RANDOM day boringvlln.rshops_Sling1 0.6",
+      "Id": "boringvlln.rshops_Sling1",	   
+	   "ItemId": "(W)32",
+	   "Price": 500,
+	  "AvailableStock": 1,
+    },
+	  "boringvlln.rshops_GuildFiftySword": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 50, SYNCED_RANDOM day boringvlln.rshops_GuildFiftySword 0.6",
+      "Id": "boringvlln.rshops_GuildFiftySword",
+      "RandomItemId": [ "(W)27", "(W)10", "(W)7" ],
+	  "Price": 4000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_Sling2": {
+		  "Condition": "MINE_LOWEST_LEVEL_REACHED 70, SYNCED_RANDOM day boringvlln.rshops_Sling2 0.6",
+      "Id": "boringvlln.rshops_Sling2",	   
+	   "ItemId": "(W)33",
+	   "Price": 1000,
+	  "AvailableStock": 1,
+    },
+	  "boringvlln.rshops_GuildEightySword": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 80, SYNCED_RANDOM day boringvlln.rshops_GuildEightySword 0.6",
+      "Id": "boringvlln.rshops_GuildEightySword",
+      "RandomItemId": [ "(W)5", "(W)50", "(W)9" ],
+	  "Price": 25000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_SlingAmmoEx": {
+		  "Condition": "PLAYER_HAS_CRAFTING_RECIPE Current Explosive Ammo",
+      "Id": "boringvlln.rshops_SlingAmmoEx",	   
+	   "ItemId": "(O)441",
+	   "Price": 300,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+    },
+	  "boringvlln.rshops_GuildGalaxySword1": {
+		   "Condition": "PLAYER_HAS_MAIL Current galaxySword",
+      "Id": "boringvlln.rshops_GuildGalaxySword1",
+      "ItemId": "(W)4",
+	  "TradeItemId": "(O)74",
+	  "TradeItemAmount": 1,
+	  "Price": -1,
+	  "AvailableStock": 1,
+	  "AvoidRepeat": false,
+	  },
+	  "boringvlln.rshops_GuildGalaxySword2": {
+		   "Condition": "PLAYER_HAS_MAIL Current galaxySword",
+      "Id": "boringvlln.rshops_GuildGalaxySword2",
+      "ItemId": "(W)23",
+	  "TradeItemId": "(O)74",
+	  "TradeItemAmount": 1,
+	  "Price": -1,
+	  "AvailableStock": 1,
+	  "AvoidRepeat": false,
+	  },
+	  "boringvlln.rshops_GuildGalaxySword3": {
+		   "Condition": "PLAYER_HAS_MAIL Current galaxySword",
+      "Id": "boringvlln.rshops_GuildGalaxySword3",
+      "ItemId": "(W)29",
+	  "TradeItemId": "(O)74",
+	  "TradeItemAmount": 1,
+	  "Price": -1,
+	  "AvailableStock": 1,
+	  "AvoidRepeat": false,
+	  },	    
+	"boringvlln.rshops_GuildDeco": {
+		"Condition": "MINE_LOWEST_LEVEL_REACHED 90, SYNCED_RANDOM day boringvlln.rshops_GuildDeco 0.6",
+      "Id": "boringvlln.rshops_GuildDeco",
+      "RandomItemId": [ "(F)WallSword", "(F)DecorativeSword" ],
+	  "Price": 10000,
+	  "AvailableStock": 1,
+	  },
+ },
+  "When": { "AdventureShop": "standard" }
+},
+
+//hardmode
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "AdventureShop",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(W)12": null,
+	  "(W)17": null,
+	  "(W)1": null,
+	  "(W)43": null,
+	  "(W)44": null,
+	  "(W)27": null,
+	  "(W)10": null,
+	  "(W)7": null,
+	  "(W)5": null,
+	  "(W)50": null,
+	  "(W)9": null,
+	  "(W)4": null,
+	  "(W)23": null,
+	  "(W)29": null,
+	  "(B)504": null,
+	  "(B)506": null,
+	  "(B)509": null,
+	  "(B)508": null,
+	  "(B)512": null,
+	  "(B)511": null,
+	  "(B)514": null,
+	  "(O)529": null,
+	  "(O)530": null,
+	  "(O)531": null,
+	  "(O)532": null,
+	  "(O)533": null,
+	  "(O)534": null,
+	  "(W)32": null,
+	  "(W)33": null,
+	  "(O)441": null,
+	  "(F)WallSword": null,
+	  "(F)DecorativeSword": null,
+	  
+		  
+	  "boringvlln.rshops_LifeElixirG": {
+      "Id": "boringvlln.rshops_LifeElixirG",
+      "ItemId": "(O)773",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,			
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_OilyGarlicG": {
+      "Id": "boringvlln.rshops_OilyGarlicG",
+      "ItemId": "(O)772",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,			
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_GuildMinerals": {
+		   "Condition": "SYNCED_RANDOM day boringvlln.rshops_GuildMinerals 0.3",
+      "Id": "boringvlln.rshops_GuildMinerals",
+      "RandomItemId": [ "(O)80", "(O)82", "(O)84", "(O)86", "(O)538", "(O)539", "(O)540", "(O)541", "(O)542", "(O)543", "(O)544", "(O)545", "(O)546", "(O)547", "(O)548", "(O)549", "(O)550", "(O)551", "(O)552", "(O)553", "(O)554", "(O)555", "(O)556", "(O)557", "(O)558", "(O)559", "(O)560", "(O)561", "(O)562", "(O)563", "(O)564", "(O)565", "(O)566", "(O)567", "(O)568", "(O)569", "(O)570", "(O)571", "(O)572", "(O)573", "(O)574", "(O)575", "(O)576", "(O)577", "(O)578" ],
+	  "Price": 5000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildGems": {
+		  "Condition": "SYNCED_RANDOM day boringvlln.rshops_GuildGems 0.3",
+      "Id": "boringvlln.rshops_GuildGems",
+      "RandomItemId": [ "(O)60", "(O)62", "(O)64", "(O)66", "(O)68", "(O)70", "(O)72" ],
+	  "Price": 10000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildGuts": {
+      "Id": "boringvlln.rshops_GuildGuts",
+      "RandomItemId": [ "(O)684", "(O)766", "(O)767", "(O)768", "(O)769" ],
+	  "Price": 500,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,			
+              ]
+            }
+          ],
+	  },	  
+	  "boringvlln.rshops_GuildTwentyBoots": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 20, SYNCED_RANDOM day boringvlln.rshops_GuildTwentyBoots 0.3",
+      "Id": "boringvlln.rshops_GuildTwentyBoots",
+      "RandomItemId": [ "(B)504", "(B)506" ],
+	  "Price": 1000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildFiftyBoots": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 50, SYNCED_RANDOM day boringvlln.rshops_GuildFiftyBoots 0.3",
+      "Id": "boringvlln.rshops_GuildFiftyBoots",
+      "RandomItemId": [ "(B)509", "(B)508" ],
+	  "Price": 2500,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildEightyBoots": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 80, SYNCED_RANDOM day boringvlln.rshops_GuildEightyBoots 0.3",
+      "Id": "boringvlln.rshops_GuildEightyBoots",
+      "RandomItemId": [ "(B)512", "(B)511", "(B)514" ],
+	  "Price": 10000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildTwentyRing": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 20, SYNCED_RANDOM day boringvlln.rshops_GuildTwentyRing 0.3",
+      "Id": "boringvlln.rshops_GuildTwentyRing",
+      "RandomItemId": [ "(O)529", "(O)530" ],
+	  "Price": 2000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildFiftyRing": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 50, SYNCED_RANDOM day boringvlln.rshops_GuildFiftyRing 0.3",
+      "Id": "boringvlln.rshops_GuildFiftyRing",
+      "RandomItemId": [ "(O)531", "(O)532" ],
+	  "Price": 5000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildEightyRing": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 80, SYNCED_RANDOM day boringvlln.rshops_GuildEightyRing 0.3",
+      "Id": "boringvlln.rshops_GuildEightyRing",
+      "RandomItemId": [ "(O)533", "(O)534" ],
+	  "Price": 10000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildRookieSword": {
+      "Id": "boringvlln.rshops_GuildRookieSword",
+      "RandomItemId": [ "(W)0", "(W)12" ],
+	  "Price": 500,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GuildTwentySword": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 20, SYNCED_RANDOM day boringvlln.rshops_GuildTwentySword 0.3",
+      "Id": "boringvlln.rshops_GuildTwentySword",
+      "RandomItemId": [ "(W)17", "(W)1", "(W)43", "(W)44" ],
+	  "Price": 3000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_Sling1": {
+		  "Condition": "MINE_LOWEST_LEVEL_REACHED 40, SYNCED_RANDOM day boringvlln.rshops_Sling1 0.3",
+      "Id": "boringvlln.rshops_Sling1",	   
+	   "ItemId": "(W)32",
+	   "Price": 1000,
+	  "AvailableStock": 1,
+    },
+	  "boringvlln.rshops_GuildFiftySword": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 50, SYNCED_RANDOM day boringvlln.rshops_GuildFiftySword 0.3",
+      "Id": "boringvlln.rshops_GuildFiftySword",
+      "RandomItemId": [ "(W)27", "(W)10", "(W)7" ],
+	  "Price": 8000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_Sling2": {
+		  "Condition": "MINE_LOWEST_LEVEL_REACHED 70, SYNCED_RANDOM day boringvlln.rshops_Sling2 0.3",
+      "Id": "boringvlln.rshops_Sling2",	   
+	   "ItemId": "(W)33",
+	   "Price": 2000,
+	  "AvailableStock": 1,
+    },
+	  "boringvlln.rshops_GuildEightySword": {
+		   "Condition": "MINE_LOWEST_LEVEL_REACHED 80, SYNCED_RANDOM day boringvlln.rshops_GuildEightySword 0.3",
+      "Id": "boringvlln.rshops_GuildEightySword",
+      "RandomItemId": [ "(W)5", "(W)50", "(W)9" ],
+	  "Price": 50000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_SlingAmmoEx": {
+		  "Condition": "PLAYER_HAS_CRAFTING_RECIPE Current Explosive Ammo",
+      "Id": "boringvlln.rshops_SlingAmmoEx",	   
+	   "ItemId": "(O)441",
+	   "Price": 600,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,			
+              ]
+            }
+          ],
+    },
+	  "boringvlln.rshops_GuildGalaxySword1": {
+		   "Condition": "PLAYER_HAS_MAIL Current galaxySword",
+      "Id": "boringvlln.rshops_GuildGalaxySword1",
+      "ItemId": "(W)4",
+	  "TradeItemId": "(O)74",
+	  "TradeItemAmount": 1,
+	  "Price": -1,
+	  "AvailableStock": 1,
+	  "AvoidRepeat": false,
+	  },
+	  "boringvlln.rshops_GuildGalaxySword2": {
+		   "Condition": "PLAYER_HAS_MAIL Current galaxySword",
+      "Id": "boringvlln.rshops_GuildGalaxySword2",
+      "ItemId": "(W)23",
+	  "TradeItemId": "(O)74",
+	  "TradeItemAmount": 1,
+	  "Price": -1,
+	  "AvailableStock": 1,
+	  "AvoidRepeat": false,
+	  },
+	  "boringvlln.rshops_GuildGalaxySword3": {
+		   "Condition": "PLAYER_HAS_MAIL Current galaxySword",
+      "Id": "boringvlln.rshops_GuildGalaxySword3",
+      "ItemId": "(W)29",
+	  "TradeItemId": "(O)74",
+	  "TradeItemAmount": 1,
+	  "Price": -1,
+	  "AvailableStock": 1,
+	  "AvoidRepeat": false,
+	  },	    
+	"boringvlln.rshops_GuildDeco": {
+		"Condition": "MINE_LOWEST_LEVEL_REACHED 90, SYNCED_RANDOM day boringvlln.rshops_GuildDeco 0.3",
+      "Id": "boringvlln.rshops_GuildDeco",
+      "RandomItemId": [ "(F)WallSword", "(F)DecorativeSword" ],
+	  "Price": 10000,
+	  "AvailableStock": 1,
+	  },
+ },
+  "When": { "AdventureShop": "hardmode" }
+},
+]
+}

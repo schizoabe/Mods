@@ -1,0 +1,20 @@
+{
+    "Format": "2.0.0",
+    "ConfigSchema": {
+        "SoldItemDialogue": {
+            "AllowValues": "New, Short, Off",
+            "Default": "New",
+            "Description": "Set the state of the modded dialogue for sold items."}},    
+    "Changes": [ 
+        {  
+            "LogName": "New Sold Item Dialogue",
+            "Action": "Include",
+            "FromFile": "assets/NewSoldItemDialogue.json",
+        },
+		{  
+            "LogName": "Short Sold Item Dialogue",
+            "Action": "Include",
+            "FromFile": "assets/ShortSoldItemDialogue.json",
+        }
+    ]
+}

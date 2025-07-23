@@ -1,0 +1,30 @@
+{
+    "Format": "2.3.0",
+	  "ConfigSchema": {
+	"Cooking Recipes": {
+	"AllowValues": "true, false",
+    "Default": "true"
+	},
+	"Drinkable Water Sprite": {
+	"AllowValues": "new, old",
+    "Default": "new"
+	},
+  },
+    "Changes": [
+	
+	//Adds sprites
+	
+	 {
+            "Action": "Load",
+            "Target": "boringvlln.kettlemicrowave/packaging_c, boringvlln.kettlemicrowave/packaging_g, boringvlln.kettlemicrowave/packaging_i, boringvlln.kettlemicrowave/packaging_j, boringvlln.kettlemicrowave/packaging_s, boringvlln.kettlemicrowave/packaging_t, boringvlln.kettlemicrowave/kettle_small, boringvlln.kettlemicrowave/kettle_big, boringvlln.kettlemicrowave/microwave_ant, boringvlln.kettlemicrowave/glass_water_new, boringvlln.kettlemicrowave/glass_water_old, boringvlln.kettlemicrowave/milk_coffee, boringvlln.kettlemicrowave/tea_ginger, boringvlln.kettlemicrowave/weak_coffee, boringvlln.kettlemicrowave/weak_tea, boringvlln.kettlemicrowave/food_b, boringvlln.kettlemicrowave/food_d, boringvlln.kettlemicrowave/food_g, boringvlln.kettlemicrowave/food_i, boringvlln.kettlemicrowave/food_j, boringvlln.kettlemicrowave/food_s",
+            "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/Objects.png
+        },
+	
+	//Adds jsons
+	
+	{
+			"Action": "Include",
+			"FromFile": "data/objects.json, data/machines.json, data/craftingrecipes.json, data/bigcraftables.json, data/shops.json, data/cookingrecipes.json, data/letters.json"
+		}
+]
+}

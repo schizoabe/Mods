@@ -1,0 +1,208 @@
+{
+	"Changes": [	
+	{
+		"LogName": "Load Telescope Buildings",
+		"Action": "Load",
+		"Target": "Mods/kath.cosmos/Buildings",
+		"FromFile": "assets/Telescope/buildings.png"
+	},
+
+    {
+		"LogName": "Add Buildings",
+		"Action": "EditData",
+		"Target": "Data/Buildings",
+		"Entries": {
+		  
+	"kath.cosmos_TelescopeBuilding": {
+            "ID": "kath.cosmos_TelescopeBuilding",
+            "Name": "{{i18n: TelescopeBuilding.Name}}",
+            "Description": "{{i18n: TelescopeBuilding.Description}}",
+
+            "Texture": "Mods/kath.cosmos/Buildings",
+            "Skins": [],
+            "DrawShadow": false,
+			"CollisionMap": "OOOOOO\nOOOOOO\nXXXXXX\nXXXXXX",
+            "Size": {
+                "X": 6,
+                "Y": 4
+            },
+            "FadeWhenBehind": false,
+            "SourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 96,
+                "Height": 64
+            },
+            "SeasonOffset": {
+                "X": 96,
+                "Y": 0				
+			},
+            "DrawOffset": "0, 0",
+            "SortTileOffset": 0.0,
+            "AdditionalPlacementTiles": null,
+            "BuildingType": null,
+            "Builder": "Robin",
+            "BuildCondition": "!BUILDINGS_CONSTRUCTED All kath.cosmos_TelescopeBuilding 1",
+            "BuildDays": 5,
+            "BuildCost": 50000,
+            "BuildMaterials": [
+                {
+                "ItemId": "(O)709",
+                "Amount": 20
+                },
+                {
+                "ItemId": "(O)338",
+                "Amount": 10
+                },
+                {
+                "ItemId": "(O)122",
+                "Amount": 1
+                }
+            ],
+            "BuildingToUpgrade": null,
+            "MagicalConstruction": false,
+            "BuildMenuDrawOffset": {
+                "X": 0,
+                "Y": 0
+            },
+            "AddMailOnBuild": null,
+            "Metadata": {},
+            "ModData": {},
+            "Chests": [
+				{
+					"Id": "Input",
+					"Type": "Chest",
+					"Sound": "dwop",
+					"InvalidItemMessage": "{{i18n: InvalidItemMessage}}",
+					"ChestFullMessage": "{{i18n: ChestFullMessage}}",
+					"DisplayTile": "-1, -1",
+					"DisplayHeight": 0.0
+				},
+				{
+					"Id": "Output",
+					"Type": "Collect",
+					"Sound": "stoneCrack",
+					"InvalidItemMessage": null,
+					"ChestFullMessage": "{{i18n: ChestFullMessage}}",
+					"DisplayTile": "-1, -1",
+					"DisplayHeight": 0.0
+				}
+			],
+            "DefaultAction": null,
+            "AdditionalTilePropertyRadius": 0,
+            "AllowsFlooringUnderneath": true,
+            "ActionTiles": [
+            {
+              "Id": "Default_OpenChestInput",
+              "Tile": {
+                "X": 2,
+                "Y": 0
+              },
+              "Action": "BuildingChest Input"
+            },
+            {
+              "Id": "Default_OpenChestOuput",
+              "Tile": {
+                "X": 2,
+                "Y": 2
+              },
+              "Action": "BuildingChest Output"
+            }
+			],
+            "TileProperties": [
+			{
+				"Id": "MEEPImage",
+				"Name": "Action",
+				"Value": "MEEP_CloseupInteraction_Image Mods/kath.cosmos/Galaxy 0 0 320 208",
+				"Layer": "Building",
+				"TileArea": {"X": 2, "Y": 1, "Width": 1, "Height": 1}
+			}
+			],
+            "ItemConversions": [
+				{
+					"Id": "SpaceRock",
+					"RequiredTags": ["Cosmos_spacerock_item", "!Cosmos_starfragment_item"],
+					"SourceChest": "Input",
+					"DestinationChest": "Output",
+					"ProducedItems": [
+					{
+						"ID": "SpaceRockOutput",
+						"ItemId": "RANDOM_ITEMS (O)",
+						"PerItemCondition": "ITEM_CONTEXT_TAG Target Cosmos_spacerock_outputitem",
+						"MinStack": 1,
+						"MaxStack": 1,
+						"Chance": 0.85
+					},
+					{
+						"ID": "SpaceRockOutput",
+						"ItemId": "RANDOM_ITEMS (O)",
+						"PerItemCondition": "ITEM_CONTEXT_TAG Target Cosmos_spacerock_outputitem_mushroom",
+						"MinStack": 1,
+						"MaxStack": 1,
+						"Chance": 0.85
+					},
+					{
+						"ID": "SpaceRockOutput2",
+						"ItemId": "RANDOM_ITEMS (O)",
+						"PerItemCondition": "ITEM_CONTEXT_TAG Target starfragment_item",
+						"MinStack": 1,
+						"MaxStack": 1,
+						"Chance": 0.35
+					}
+					],
+					"RequiredCount": 1,
+					"MaxDailyConversions": 4
+				},
+                {
+					"Id": "SpaceRock2",
+					"RequiredTags": ["Cosmos_spacerock_item", "Cosmos_starfragment_item"],
+					"SourceChest": "Input",
+					"DestinationChest": "Output",
+					"ProducedItems": [
+					{
+						"ID": "SpaceRock2Output",
+						"ItemId": "RANDOM_ITEMS (O)",
+						"PerItemCondition": "ITEM_CONTEXT_TAG Target starfragment_item",
+						"MinStack": 1,
+						"MaxStack": 1,
+						"Chance": 0.85
+					}
+					],
+					"RequiredCount": 1,
+					"MaxDailyConversions": 1
+				}
+			],
+            "DrawLayers": [
+				{
+					"Id": "SignOutput",
+					"SourceRect": {
+					"X": 0,
+					"Y": 0,
+					"Width": 96,
+					"Height": 64
+						},
+					"Texture": "Mods/kath.cosmos/SignOutput",
+					"DrawPosition": "0,0",
+					"OnlyDrawIfChestHasContents": "Output"
+				},	
+				{
+					"Id": "SignInput",
+					"SourceRect": {
+					"X": 0,
+					"Y": 0,
+					"Width": 96,
+					"Height": 64
+						},
+					"Texture": "Mods/kath.cosmos/SignInput",
+					"DrawPosition": "0,0",
+					"OnlyDrawIfChestHasContents": "Input"
+				}				
+			],
+            "CustomFields": null
+            }	
+      }
+    }
+  
+//End
+]
+}

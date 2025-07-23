@@ -1,0 +1,58 @@
+{
+
+"Changes": [
+
+//Desperate proposal event, when dating multiple people
+{
+    "Action": "Include",
+    "FromFile": "data/BlackProposal.json",
+    "When": {
+        "IsEngaged": "false",
+        "HasValue: {{BlackHeartSuitor}}": true,
+        "Query: {{Count:{{Kantrip.ReverseProposals/Suitors}}}} > 1": true,
+    },
+},
+
+//The black heart event has already been seen, so just include the white events here
+{
+    "Action": "Include",
+    "FromFile": "code/vanilla.json",
+    "When": {
+        "IsEngaged": "false",
+        "HasSeenEvent |contains={{ModId}}_Proposal_Black": true,
+    },
+},
+{
+    "Action": "Include",
+    "FromFile": "data/DefaultProposal.json",
+    "When": {
+        "IsEngaged": "false",
+        "HasSeenEvent |contains={{ModId}}_Proposal_Black": true,
+        "Query: {{Count:{{Kantrip.ReverseProposals/MaxHeartSuitors:type=noevent}}}} > 0": true,
+    },
+},
+
+//The black heart event hasn't been seen, but there is only one suitor. Make sure an event is available by including the white events
+{
+    "Action": "Include",
+    "FromFile": "code/vanilla.json",
+    "When": {
+        "IsEngaged": "false",
+        "HasSeenEvent |contains={{ModId}}_Proposal_Black": false,
+        "Query: {{Count:{{Kantrip.ReverseProposals/Suitors}}}} = 1": true,
+        "Query: {{Count:{{Kantrip.ReverseProposals/MaxHeartSuitors:type=vanilla}}}} > 0": true,
+    },
+},
+{
+    "Action": "Include",
+    "FromFile": "data/DefaultProposal.json",
+    "When": {
+        "IsEngaged": "false",
+        "HasSeenEvent |contains={{ModId}}_Proposal_Black": false,
+        "Query: {{Count:{{Kantrip.ReverseProposals/Suitors}}}} = 1": true,
+        "Query: {{Count:{{Kantrip.ReverseProposals/MaxHeartSuitors:type=noevent}}}} > 0": true,
+    },
+},
+
+]
+}

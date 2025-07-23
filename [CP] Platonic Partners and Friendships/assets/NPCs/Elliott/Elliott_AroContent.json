@@ -1,0 +1,395 @@
+{
+    "Changes": [
+        // FRIENDSHIP BRACELET
+        {
+            "LogName": "Enable friendship bracelet for Elliott",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "TargetField": [
+                "{{ModID}}_FriendshipBracelet",
+                "ContextTags"
+            ],
+            "Entries": {
+                "#-2": "propose_roommate_elliott"
+            }
+        },
+        // DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "event_boat1": null,
+                "event_boat2": null,
+                "fall_Tue8": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.fall_Tue8 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "fall_Thu": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.fall_Thu}}",
+                "fall_Fri10": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.fall_Fri10 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "winter_Tue10": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.winter_Tue10}}",
+                "SpouseGiftJealous": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.SpouseGiftJealous}}",
+                "SpouseStardrop": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.SpouseStardrop |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "FlowerDance_Accept_Spouse": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.FlowerDance_Accept_SpouseRoommate}}",
+                "FlowerDance_Accept_Roommate": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.FlowerDance_Accept_SpouseRoommate}}",
+                "dating_Elliott_memory_oneday": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.dating_Elliott_memory_oneday}}",
+                "married_Elliott": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.married_Elliott}}",
+                "breakUp": "{{i18n:PPAF.Elliott.DialogueEdits.Aro{{LoveLettersToken}}.breakUp}}",                
+                "AcceptBouquet": "{{i18n:PPAF.Elliott.DialogueEdits.Aro{{LoveLettersToken}}.AcceptBouquet.{{Random:1,2}} |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "dating_Elliott": "{{i18n:PPAF.Elliott.DialogueEdits.Aro{{LoveLettersToken}}.dating_Elliott |LovePortraitsHappy={{LovePortraitsHappyToken}}}}"
+            }
+        },
+        // PLATONIC PARTNER DIALOGUE
+        {
+            "LogName": "Elliott pendant and bracelet engagement dialogue",
+            "Action": "EditData",
+            "Target": "Data/EngagementDialogue",
+            "Entries": {
+                "Elliott0": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.Elliott0 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Elliott1": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.Elliott1 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "ElliottRoommate0": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ElliottRoommate0 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "ElliottRoommate1": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ElliottRoommate1 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueElliott",
+            "Entries": {
+                "patio_Elliott": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.patio_Elliott |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Rainy_Day_3": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Rainy_Day_3 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Rainy_Night_0": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Rainy_Night_0 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Rainy_Night_2": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Rainy_Night_2}}",
+                "Indoor_Day_0": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Indoor_Day_0 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Indoor_Night_0": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Indoor_Night_0 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Indoor_Night_3": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Indoor_Night_3 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Indoor_Night_4": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Indoor_Night_4}}",
+                "Outdoor_4": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Outdoor_4}}",
+                "Good_0": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Good_0 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "Good_1": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Good_1 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "Good_2": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Good_2 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Good_3": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Good_3 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "spring_23": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.spring_23 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "fall_26": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.fall_26}}",
+                "winter_7": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.winter_7 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "winter_28": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.winter_28}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries": {
+                "Outdoor_Elliott": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.Outdoor_Elliott |LovePortraitsHappy={{LovePortraitsHappyToken}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/ExtraDialogue",
+            "Entries": {
+                "SummitEvent_Dialogue3_Elliott": "{{i18n:PPAF.Elliott.SummitDialogue.Aro.SummitEvent_Dialogue3_Elliott |LovePortraitsHappy={{LovePortraitsHappyToken}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring13",
+            "Entries":
+            {
+                "Elliott_spouse": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.EggFest.Elliott_spouse |LowercaseEndearment={{LowercaseEndearmentToken}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "Entries":
+            {
+                "Elliott_spouse_y2": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.FlowerDance.Elliott_spouse_y2}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:UseLovePortraits": "False"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "Entries":
+            {
+                "Elliott_spouse_y2": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.SpiritsEve.Elliott_spouse_y2}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter8",
+            "Entries":
+            {
+                "Elliott_spouse_y2": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.IceFest.Elliott_spouse_y2}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "Entries": {
+                "Elliott_spouse": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.WinterStar.Elliott_spouse |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "Elliott_spouse_y2": "{{i18n:PPAF.Elliott.PartnerDialogue.Aro.WinterStar.Elliott_spouse_y2}}"
+            }
+        },
+        // OTHER CHARACTERS' DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "married_Elliott": "{{i18n:PPAF.Elliott.OtherDialogue.Aro.Leah.married_Elliott}}"
+            }
+        },
+        // STRINGS
+        {
+            "LogName": "Elliott pendant and bracelet proposal acceptance",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "Elliott_Engaged": "{{i18n:PPAF.Elliott.Strings.Aro.Elliott_Engaged |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Elliott_EngagedRoommate": "{{i18n:PPAF.Elliott.Strings.Aro.Elliott_EngagedRoommate |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            }
+        },
+        {
+            "LogName": "Elliott terms of endearment and other misc lines, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Elliott.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Elliott.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Elliott.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Elliott.Strings.Aro.Nickname.3}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Elliott.Strings.Aro.Nickname.3}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Elliott.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Elliott",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Elliott terms of endearment and other misc lines, poly with CFD",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Elliott.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Elliott.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Elliott.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Elliott.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Elliott.Strings.Aro.Nickname.2}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Elliott.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Elliott",
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/Characters",
+            "Entries":
+            {
+                "MovieInvite_Spouse_Elliott": "{{i18n:PPAF.Elliott.Strings.Aro.MovieInvite_Spouse_Elliott}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries":
+            {
+                "Event.cs.1629": "{{i18n:PPAF.Elliott.Strings.Aro.Event.cs.1629}}"
+            }
+        },
+        // PENDANT REJECTION
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "RejectMermaidPendant_AlreadyAccepted_Engaged": "{{i18n:PPAF.Elliott.PendantRejections.Engaged.{{Random:1,2}}}}",
+                "RejectMermaidPendant_AlreadyAccepted_Married": "{{i18n:PPAF.Elliott.PendantRejections.Married.{{Random:1,2}}}}"
+            }
+        },
+        // MAIL
+        {
+            "Action": "EditData",
+            "Target": "Data/mail",
+            "Entries":
+            {
+                "elliottLetter1": "{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter1.text}} %item conversationTopic ElliottGone2 0 %%[#]{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter1.title}}",
+                "elliottLetter2": "{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter2{{RWECompatToken}}.text}} %item conversationTopic ElliottGone3 0 %%[#]{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter2.title}}",
+                "elliottLetter3": "{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter3{{RWECompatToken}}.text}} %item conversationTopic ElliottGone4 0 %%[#]{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter3.title}}",
+                "elliottLetter4": "{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter4.text}} %item conversationTopic ElliottGone5 0 %%[#]{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter4.title}}",
+                "elliottLetter5": "{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter5{{RWECompatToken}}.text |LowercaseEndearment={{LowercaseEndearmentToken}}}} %item conversationTopic ElliottGone6 0 %%[#]{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter5.title}}",
+                "elliottLetter6": "{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter6{{RWECompatToken}}.text}} %item conversationTopic ElliottGone7 0 %%[#]{{i18n:PPAF.Elliott.Mail.Aro.elliottLetter6.title}}"
+            }
+        },
+        // EVENTS
+        {
+	        "LogName": "Elliott 8 heart event",
+            "Action": "EditData",
+            "Target": "Data/Events/ArchaeologyHouse",
+            "Fields": {
+                "1848481/f Elliott 2000/t 1300 1900/n elliottReading": {
+                    78: "speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.8Heart.Scifi |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\""
+                },
+                "mysteryBook": {
+                    35: "speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.8Heart.Mystery |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\""
+                },
+                "romanceBook": {
+                    35: "speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.8Heart.Romance |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\""
+                }
+            },
+            "When":
+            {
+                "PPAF.Core/ConfigValue:UseLovePortraits": "True",
+		        "HasMod |contains=tiakall.writerelliott": false
+            }
+        },
+        {
+	        "LogName": "Elliott 8 heart event",
+            "Action": "EditData",
+            "Target": "Data/Events/ArchaeologyHouse",
+            "Fields": {
+                "1848481/f Elliott 2000/t 1300 1900/n elliottReading": {
+                    72: "speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.8Heart.{{RWEBookGenreToken}} |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\""
+                }
+            },
+            "When":
+            {
+                "PPAF.Core/ConfigValue:UseLovePortraits": "False",
+		        "HasMod |contains=tiakall.writerelliott": true
+            }
+        },
+        {
+	        "LogName": "Elliott 10 heart event",
+            "Action": "EditData",
+            "Target": "Data/Events/Beach",
+            "Entries":
+            {
+                "43/f Elliott 2500/w sunny/t 700 1300/G !IS_PASSIVE_FESTIVAL_TODAY SquidFest": "ocean/-1000 -1000/farmer 13 16 2 Elliott 13 27 1/specificTemporarySprite elliottBoat/skippable/viewport 17 26 clamp true/move farmer 0 8 2/faceDirection Elliott 0/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.10Heart.0}}\"/move farmer 0 2 2/faceDirection Elliott 1/faceDirection farmer 1/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.10Heart.1{{RWECompatToken}}}}\"/pause 500/faceDirection Elliott 0/pause 500/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.10Heart.2 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"/faceDirection farmer 2/question fork1 \"{{i18n:PPAF.Elliott.Events.Aro.10Heart.3}}\"/fork NoToElliott/globalFade/viewport -1000 -1000/changeToTemporaryMap ElliottSea/playSound wateringCan/pause 1000/playSound wateringCan/playMusic 50s/warp farmer 26 20/positionOffset farmer 0 8/warp Elliott 26 20/showFrame Elliott 25/positionOffset Elliott 0 60/viewport 25 20 true/pause 5000/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.10Heart.4{{RWECompatToken}} |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"/pause 1000/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.10Heart.5{{RWECompatToken}}}}\"/emote Elliott 28/pause 200/emote farmer 28/pause 1000/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.10Heart.6{{RWECompatToken}} |LovePortraitsHappy={{LovePortraitsHappyToken}} |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"/emote farmer 32/pause 150/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.10Heart.7}}\"/pause 1000/emote Elliott 40/pause 500/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.10Heart.8 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}\"/playMusic elliottPiano/pause 2500/showFrame Elliott 35/screenFlash 1/warp Elliott 26 20/positionOffset Elliott 14 8/positionOffset farmer -24 16/faceDirection farmer 1 true/showFrame 101/pause 4500/globalFade/viewport -1000 -1000/pause 1000/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.10Heart.9}}\"/pause 1400/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.10Heart.10 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}\"/end"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Temp",
+            "Entries":
+            {
+                "tooBold": null
+            }
+        },
+        {
+	        "LogName": "Elliott 14 heart event",
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Entries":
+            {
+                "3912125/f Elliott 3500/O Elliott/t 500 1500/p Elliott/U 8": "continue/-10000 -1000/farmer -100 -100 2 Elliott -100 -100 2/addConversationTopic ElliottGone1 0/addConversationTopic elliottGone 6/addWorldState elliottGone/skippable/warp Elliott 63 15/warp farmer -100 -100/faceDirection Elliott 2/showFrame Elliott 38/viewport 64 15 clamp true/pause 1000/pause 2000/playSound doorClose/warp farmer 64 15/positionOffset farmer 0 16/pause 500/faceDirection farmer 3/emote farmer 8/pause 500/showFrame Elliott 39/emote Elliott 16/pause 500/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14Heart.0}}\"/pause 50/jump Elliott/pause 500/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14Heart.1{{RWECompatToken}}}}\"/emote farmer 32/showFrame Elliott 0/faceDirection Elliott 1/pause 500/emote Elliott 28/pause 400/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14Heart.2{{RWECompatToken}}}}\"/quickQuestion #{{i18n:PPAF.Elliott.Events.Aro.14Heart.2.A1}}#{{i18n:PPAF.Elliott.Events.Aro.14Heart.2.A2}}#{{i18n:PPAF.Elliott.Events.Aro.14Heart.2.A3}}(break)emote Elliott 20\\speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14Heart.3}}\"\\emote farmer 20(break)jump Elliott\\pause 500\\speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14Heart.4}}\"(break)speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14Heart.5}}\"/pause 1000/positionOffset Elliott 7 0/positionOffset farmer -7 0/animate Elliott true true 100 35/animate farmer true true 100 101/pause 2000/stopAnimation Elliott/showFrame Elliott 4/stopAnimation farmer/positionOffset Elliott -7 0/positionOffset farmer 7 0/pause 500/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14Heart.6}}\"/end dialogue Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14Heart.7}}\""
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/FarmHouse",
+            "Entries":
+            {
+                "3912132/e 3912126/O Elliott/A elliottGone/B": "spring_day_ambient/-1000 -1000/farmer 27 13 2 Elliott 25 13 1/fade unfade/makeInvisible 25 13/makeInvisible 26 13/makeInvisible 20 4/makeInvisible 22 4/eyes 1 -6000/viewport -100 -100 true unfreeze/pause 3000/emote farmer 24/pause 2000/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14HeartFollowUp.0}}\"/jump farmer/pause 1000/move farmer -1 0 3/animate Elliott true true 100 35/animate farmer true true 100 101/positionOffset farmer -16 0/positionOffset Elliott 4 0/pause 2000/stopAnimation Elliott/showFrame Elliott 4/stopAnimation farmer/positionOffset Elliott -4 0/pause 1000/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14HeartFollowUp.1 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"/emote farmer 20/pause 300/speak Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14HeartFollowUp.2}}\"/pause 1000/end dialogue Elliott \"{{i18n:PPAF.Elliott.Events.Aro.14HeartFollowUp.3}}\""
+            }
+        },
+        //COMPATIBILITY: PLATONIC RELATIONSHIPS
+        //This section prevents the dating-flag-required version of the vanilla 10 heart event added by Platonic Relationships from triggering. Thanks to Cherry for providing the event codes!
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Beach",
+            "Entries": {
+                "43/f Elliott 2500 /D Elliott/w sunny /t 700 1300": null,
+                "43/f Elliott 2500/D/Elliott/w sunny/t 700 1300/G !IS_PASSIVE_FESTIVAL_TODAY SquidFest": null
+            },
+            "When": {
+                "HasMod |contains=Cherry.PlatonicRelationships": true
+            }
+        },
+        //COMPATIBILITY: SPOUSES REACT TO PLAYER 'DEATH' v1.1.0
+        //Lines in this section are based on the original lines written by CasualInvidia, used and edited with permission. (Thank you, CasualInvidia!)
+        {
+            "LogName": "Enable Elliott's Spouses React to Player 'Death' content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Elliott/Elliott_SpousesReact.json",
+            "When": {
+                "HasMod |contains=CasualInvidia.SpousesReactToDeath": true
+            }
+        },
+        //
+        //COMPATIBILITY IMMERSIVE SPOUSES - IMPROVED SPOUSE SCHEDULES v0.5-beta
+        //Lines in this section are based on the original lines written by yeet (Someguy363), used and edited with permission. (Thank you, yeet!)
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueElliott",
+            "Entries": {
+                "funLeave_Elliott": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.{{DayOfWeek}}.funLeave_Elliott |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "funReturn_Elliott": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.{{DayOfWeek}}.funReturn_Elliott}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true,
+                "DayOfWeek": "Monday, Wednesday, Friday, Sunday"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Elliott",
+            "Entries": {
+                "summer_9": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.Sunday.summer_9 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_bus": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_bus |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_bus2": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_bus2}}",
+                "marriage_bus3": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_bus3 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "marriage_bus4": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_bus4 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_bus6": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_bus6}}",
+                "marriage_bus7": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_bus7 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_bus8": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_bus8}}",
+                "marriage_bus9": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_bus9}}",
+                "marriage_r2": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_r2 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_bridge": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_bridge}}",
+                "marriage_bridge2": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_bridge2}}",
+                "marriage_bridge3": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_bridge3}}",
+                "marriage_beach": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_beach}}",
+                "marriage_beach3": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_beach3 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_leah": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_leah}}",
+                "marriage_13": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_13 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_16": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_16 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_25": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_25}}",
+                "marriage_nm": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_nm}}",
+                "marriage_nmpre": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_nmpre |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_nmpre2": "{{i18n:PPAF.Elliott.DialogueEdits.Aro.ISS.marriage_nmpre2}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Elliott",
+            "Entries": {
+			    "marriage_docafter": "{{i18n:PPAF.Elliott.DialogueEdits.Sexual.ISS.marriage_docafter}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true,
+                "PPAF.Core/ConfigValue:ElliottRelationshipType": "SexWithoutRomance"
+            }
+        },
+        //COMPATIBILITY: PLEASE REMEMBER MY MARRIAGE v1.0.1
+        //Lines in this section are based on the original lines written by nraittanna, used and edited with permission. (Thank you, nraittanna!)
+        {
+            "LogName": "Enable Elliott's Please Remember My Marriage content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Elliott/Elliott_RememberMyMarriage.json",
+            "When": {
+                "HasMod |contains=nraittanna.RememberMyMarriage": true
+            }
+        }
+    ]
+}

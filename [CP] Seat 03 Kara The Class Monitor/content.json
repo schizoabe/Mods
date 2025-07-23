@@ -1,0 +1,118 @@
+{
+  "Format": "1.25.0",
+  "Changes": [
+    {
+      "LogName": "NPC Manifestation",
+      "Action": "EditData",
+      "Target": "data/NPCDispositions",
+      "Entries": {
+        "[65]Kara": "child/neutral/shy/positive/female/non-datable/null/Other/fall 22//Custom_Claire_WarpRoom 3 3/Kara",
+                 },
+    },
+    {
+      "LogName": "NPC Gift Tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "[65]Kara": "I love it! Thank you so much!/340,400,417,724/Thank you, I liked it!/233,595/Oh, is this a gift, @?/721,720,719,718/@, what did I do to deserve this?/728,202/Get that away from me!!!/909,910,548,552,557,560/"
+      }
+    },
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/[65]Kara",
+      "FromFile": "assets/kara-{{season}}.png"
+    },
+    {
+      "LogName": "NPC Portrait",
+      "Action": "Load",
+      "Target": "Portraits/[65]Kara",
+      "FromFile": "assets/portrait.png"
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/[65]Kara",
+      "FromFile": "assets/schedule.json"
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/[65]Kara",
+      "FromFile": "assets/Dialogue.json"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "Kara_read_left": "17/17/17",
+        "Kara_read_right": "19/19 19 19 19 22 23/19",
+        "Kara_books": "18/18/18",
+        "Kara_hamster": "21/21 21 21 21 21 21 21 20/21",
+	  "Kara_change": "24/24/24",
+	  "Kara_UpUpNAway": "24/25 25 25 26 26 26/26",
+	  "Kara_Gone": "27/27/27"
+      }
+    },
+
+// Kara joins Winter 8, Ice Festival
+	{
+   "Action": "EditData",
+   "Target": "Data/Festivals/winter8",
+   "TextOperations": [
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "[65]Kara 56 51 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Main-Event_additionalCharacters"],
+         "Value": "[65]Kara 56 51 left",
+         "Delimiter": "/"
+		},
+
+	]
+	},
+
+
+
+//Kara Overwrite after school built
+{	 "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.3":  "This is Kara's seat. Her full name is written at the top of the Desk, Kara Linda Danva."}
+},	
+{ "Action": "EditData",	 
+	"Target": "characters/schedules/[65]Kara",
+	 "Entries": {       
+  "Mon": "0 BusStop 21 23 1/610 Town 10 14 2/730 Custom_SchoolHouse 23 13 3/740 Custom_SchoolHouse 22 13 3 Kara_read_left/1150 Custom_SchoolHouse 20 5 0 Kara_hamster/1230 Custom_SchoolHouse 23 14 0/1240 Custom_SchoolHouse 23 14 3/1300 Custom_SchoolHouse 22 13 3 Kara_read_left/1530 Custom_SchoolHouse 7 5 0/1550 Custom_SchoolHouse 1 5 1 Kara_read_right/1600 BusStop 12 8 0/1800 Custom_DayEnd_WarpRoom 3 3 0",
+
+  "Tue": "0 BusStop 21 23 1/610 Town 10 14 2/730 Custom_SchoolHouse 23 13 3/740 Custom_SchoolHouse 22 13 3 Kara_read_left/1150 Custom_SchoolHouse 20 5 0 Kara_hamster/1230 Custom_SchoolHouse 23 14 0/1240 Custom_SchoolHouse 23 14 3/1300 Custom_SchoolHouse 22 13 3 Kara_read_left/1530 Custom_SchoolHouse 7 5 0/1550 Custom_SchoolHouse 1 5 1 Kara_read_right/1600 BusStop 12 8 0/1800 Custom_DayEnd_WarpRoom 3 3 0",
+
+  "Wed": "0 BusStop 21 23 1/610 Town 10 14 2/730 Custom_SchoolHouse 23 13 3/740 Custom_SchoolHouse 22 13 3 Kara_read_left/1150 Custom_SchoolHouse 20 5 0 Kara_hamster/1230 Custom_SchoolHouse 23 14 0/1240 Custom_SchoolHouse 23 14 3/1300 Custom_SchoolHouse 22 13 3 Kara_read_left/1530 Custom_SchoolHouse 7 5 0/1550 Custom_SchoolHouse 1 5 1 Kara_read_right/1600 BusStop 12 8 0/1800 Custom_DayEnd_WarpRoom 3 3 0",
+
+  "Thu": "0 BusStop 21 23 1/610 Town 10 14 2/730 Custom_SchoolHouse 23 13 3/740 Custom_SchoolHouse 22 13 3 Kara_read_left/1150 Custom_SchoolHouse 20 5 0 Kara_hamster/1220 Custom_SchoolHouse 23 14 0/1230 Custom_SchoolHouse 23 14 3/1240 Custom_SchoolHouse 22 13 3 Kara_read_left/1600 BusStop 12 8 0/1800 Custom_DayEnd_WarpRoom 3 3 0",
+
+"Fri": "0 BusStop 21 23 1/610 Town 10 14 2/730 Custom_SchoolHouse 23 13 3/740 Custom_SchoolHouse 22 13 3 Kara_read_left/1150 Custom_SchoolHouse 20 5 0 Kara_hamster/1230 Custom_SchoolHouse 23 14 0/1240 Custom_SchoolHouse 23 14 3/1300 Custom_SchoolHouse 22 13 3 Kara_read_left/1530 Custom_SchoolHouse 7 5 0/1550 Custom_SchoolHouse 1 5 1 Kara_read_right/1600 BusStop 12 8 0/1800 Custom_DayEnd_WarpRoom 3 3 0",
+
+  "Sat": "0 BusStop 21 23 1/610 Town 10 14 0/800 ArchaeologyHouse 7 16 3/1000 ArchaeologyHouse 13 9 0/1200 ArchaeologyHouse 5 10 0/1330 ArchaeologyHouse 29 14 2/1500 ArchaeologyHouse 44 9 0/1600 ArchaeologyHouse 39 18 0/1700 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+
+  "Sun": "0 BusStop 21 23 1/610 Custom_ESVetHouse 14 23 0/1100 Custom_ESBirdHide 5 4 0/1200 Custom_EastScarpe 26 37 1/1300 Custom_EastScarpe 56 89 2/1800 Custom_EastScarpe 69 74 2/1900 Custom_EastScarpe 69 74 2 Kara_change/1920 Custom_EastScarpe 69 74 2 Kara_UpUpNAway/1940 Custom_EastScarpe 69 74 2 Kara_Gone",
+
+//Festivals School is closed
+"spring_13": "0 Custom_Claire_WarpRoom 1 3 3",
+"spring_24": "0 Custom_Claire_WarpRoom 1 3 3",
+"summer_11": "0 Custom_Claire_WarpRoom 1 3 3",
+"summer_28": "0 Custom_Claire_WarpRoom 1 3 3",
+"fall_16": "0 Custom_Claire_WarpRoom 1 3 3",
+"fall_27": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_8": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_25": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_28": "0 Custom_Claire_WarpRoom 1 3 3",
+
+    },
+            	"When": {"HasSeenEvent": "9695002"},
+}
+  ]
+}

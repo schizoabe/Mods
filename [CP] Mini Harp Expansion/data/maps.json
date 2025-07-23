@@ -1,0 +1,55 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load Map - Edit Traveling Cart after Mastery",
+      "Action": "EditMap",
+      "Target": "Maps/Forest",
+      "When": {
+        "SpawnMusicBenchAfterMastery": true,
+        "HasFlag": "{{ModId}}_Harp_MASTERY",
+        "DayOfWeek": "Friday, Sunday"
+      },
+      "FromFile": "assets/MusicTravelingCart.tmx",
+      "PatchMode": "Replace",
+      "ToArea": {
+        "X": 31,
+        "Y": 11,
+        "Width": 1,
+        "Height": 2
+      }
+    },
+    {
+      "LogName": "Load Map - Edit Beach after Mastery",
+      "Action": "EditMap",
+      "Target": "Maps/Beach",
+      "When": {
+        "HasFlag": "{{ModId}}_Warp_Flag"
+      },
+      "FromFile": "assets/Beach-Harp.tmx",
+      "PatchMode": "Replace",
+      "ToArea": {
+        "X": 81,
+        "Y": 6,
+        "Width": 1,
+        "Height": 2
+      }
+    },
+    {
+      "LogName": "Trigger - Warp Flag",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "When": {
+        "HasFlag": "{{ModId}}_Harp_MASTERY",
+        "Weather": "rain, storm, GreenRain"
+      },
+      "Entries": {
+        "{{ModId}}_Warp_Flag_Trigger": {
+          "Id": "{{ModId}}_Warp_Flag_Trigger",
+          "Trigger": "DayStarted",
+          "Action": "AddMail Current {{ModId}}_Warp_Flag",
+          "MarkActionApplied": true
+        }
+      }
+    }
+  ]
+}

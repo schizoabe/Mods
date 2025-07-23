@@ -1,0 +1,30 @@
+{
+	"Changes": [
+        
+        //Jolyne
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Jolyne_{{Season}}",
+            "FromFile": "assets/{{JolynePortrait}}/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        },
+
+        //Redunant But Will Fix any issues of portraits not showing up for Temporary Actor Calls within SVE
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Jolyne",
+            "FromFile": "assets/{{JolynePortrait}}/Jolyne_{{Season}}.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        }
+
+    ]
+}

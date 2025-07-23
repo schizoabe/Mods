@@ -1,0 +1,66 @@
+{
+	"Changes": [
+		//Map set up
+		{
+			"LogName": "Shop Map Edits",
+			"Action": "EditMap",
+			"Target": "Maps/AnimalShop",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 12,
+						"Y": 15
+					},
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop AnimalShop none 0900 1700"
+					}
+				},
+				{
+					"Position": {
+						"X": 13,
+						"Y": 15
+					},
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop AnimalShop none 0900 1700"
+					}
+				}
+			],
+			"When": {
+				"DayOfWeek": "Monday, Tuesday",
+				"Weather |contains=Rain, Storm": false,
+				"HasSeenEvent |contains=233400001": true,
+				"Query: '{{Season}}' = 'winter' AND '{{Day}}' = '16'": false
+			}
+		},
+		{
+			"LogName": "Shane Runs Animal Shop",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"AnimalShop",
+				"Owners"
+			],
+			"Entries": {
+				"tenthousandcats.ShaneShop": {
+					"Name": "Shane",
+					"Condition": null,
+					"Portrait": "Shane",
+					"Dialogues": [
+						{
+							"Id": "DefaultShane",
+							"Dialogue": "{{i18n:ICS.ShopDialogue.Supplies}}"
+						}
+					]
+				}
+			},
+			"When": {
+				"DayOfWeek": "Monday, Tuesday",
+				"Weather |contains=Rain, Storm": false,
+				"HasSeenEvent |contains=233400001": true,
+				"Query: '{{Season}}' = 'winter' AND '{{Day}}' = '16'": false
+			}
+		}
+	]
+}

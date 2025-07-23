@@ -1,0 +1,59 @@
+        {
+            "Format": "2.3.0",
+
+            "ConfigSchema": {
+              "Recolor": {
+                  "Description":"Whether or not to use a recolor or the default Classic Green.",
+                  "AllowValues": "Classic_Green, Classic_Blue, Classic_Gray, Classic_Pink, Classic_SkyBlue, Marble_Green, Marble_Blue, Marble_Gray, Marble_Pink, Marble_SkyBlue, Mocha_Green, Mocha_Blue, Mocha_Gray, Mocha_Pink, Mocha_SkyBlue",
+                  "Default": "Classic_Green"
+              }
+          },
+
+            "Changes": [
+            
+              {
+                "Action": "EditData",
+                "Target": "DLX.PIF/Farms",
+                "Entries": {
+                  "HxW.SmallBusinessKitchen": {
+                    "DisplayName": "{{i18n:HxW_SmallBusinessKitchen}}",
+                    "DefaultArrivalTile": { "X": 8, "Y": 18 },
+                    "CanPlantHere": false,
+                    "ExcludeFromNpcPathfinding": true,
+                    "CreateOnLoad": {
+                    "AlwaysActive": true
+                    },
+                    "MaxDailyWeeds": 0,
+                    "InitialItems_T0": [
+                      {
+                        "Id": "Fridge",
+                        "ItemId": "(BC)216",
+                        "Tile": { "X": 7, "Y": 4 },
+                        "Indestructible": true
+                      }
+                    ],
+                    "ArrivalTile_T0": { "X": 8, "Y": 18 },
+                    "ArrivalTile_T1": { "X": 8, "Y": 18 },
+                    "ArrivalTile_T2": { "X": 8, "Y": 18 },
+                              
+                    "MapAsset_T0": "Maps/PIF/HxW.SmallBusinessKitchen",
+                    "MapAsset_T1": "Maps/PIF/HxW.SmallBusinessKitchen",
+                    "MapAsset_T2": "Maps/PIF/HxW.SmallBusinessKitchen",
+                              
+                    "Preview": "HxW.SmallBusinessKitchen_Preview"
+                  }
+                }
+              },
+              {
+                "Action": "Load",
+                "Target": "Maps/PIF/HxW.SmallBusinessKitchen",
+                "FromFile": "assets/HxW.SmallBusinessKitchen_{{Recolor}}.tmx"
+              },
+              {
+                "Action": "Load",
+                "Target": "HxW.SmallBusinessKitchen_Preview",
+                "FromFile": "assets/Preview.png"
+              }
+            ]
+          }
+    

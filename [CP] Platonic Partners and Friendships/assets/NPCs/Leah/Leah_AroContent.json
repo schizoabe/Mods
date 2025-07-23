@@ -1,0 +1,363 @@
+{
+    "Changes": [
+        // FRIENDSHIP BRACELET
+        {
+            "LogName": "Enable friendship bracelet for Leah",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "TargetField": [
+                "{{ModID}}_FriendshipBracelet",
+                "ContextTags"
+            ],
+            "Entries": {
+                "#-7": "propose_roommate_leah"
+            }
+        },
+        // DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "breakUp": "{{i18n:PPAF.Leah.DialogueEdits.Aro.breakUp}}",
+                "Wed8": "{{i18n:PPAF.Leah.DialogueEdits.Aro.Wed8}}",
+                "Sat8": "{{i18n:PPAF.Leah.DialogueEdits.Aro.Sat8}}",
+                "Sun8": "{{i18n:PPAF.Leah.DialogueEdits.Aro.Sun8}}",
+                "SpouseGiftJealous": "{{i18n:PPAF.Leah.DialogueEdits.Aro.SpouseGiftJealous}}",
+                "dating_Leah": "{{i18n:PPAF.Leah.DialogueEdits.Aro.dating_Leah}}",
+                "dating_Leah_memory_oneday": "{{i18n:PPAF.Leah.DialogueEdits.Aro.dating_Leah_memory_oneday}}",
+                "FlowerDance_Accept": "{{i18n:PPAF.Leah.DialogueEdits.Aro.FlowerDance_Accept}}",
+                "AcceptBouquet": "{{i18n:PPAF.Leah.DialogueEdits.Aro.AcceptBouquet.{{Random:1{{LoveLettersToken}},2}} |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            }
+        },
+        // PLATONIC PARTNER DIALOGUE
+        {
+            "LogName": "Leah pendant and bracelet engagement dialogue",
+            "Action": "EditData",
+            "Target": "Data/EngagementDialogue",
+            "Entries": {
+                "Leah0": "{{i18n:PPAF.Leah.EngagementDialogue.Aro.Leah0}}",
+                "LeahRoommate0": "{{i18n:PPAF.Leah.EngagementDialogue.Aro.Leah0}}",
+                "Leah1": "{{i18n:PPAF.Leah.EngagementDialogue.Aro.Leah1 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "LeahRoommate1": "{{i18n:PPAF.Leah.EngagementDialogue.Aro.Leah1 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLeah",
+            "Entries": {
+                "Good_1": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Good_1 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Good_3": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Good_3}}",
+                "Good_8": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Good_8}}",
+                "Neutral_0": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Neutral_0}}",
+                "Bad_0": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Bad_0}}",
+                "Bad_1": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Bad_1}}",
+                "Bad_5": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Bad_5}}",
+                "Bad_7": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Bad_7}}",
+                "Bad_9": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Bad_9}}",
+                "summer_9": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.summer_9}}",
+                "Rainy_Night_2": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Rainy_Night_2}}",
+                "Rainy_Night_Leah": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Rainy_Night_Leah}}",
+                "Outdoor_4": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Outdoor_4}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries": {
+                "Rainy_Night_Leah": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Rainy_Night_Leah}}",
+                "Outdoor_Leah": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Outdoor_Leah}}",
+                "summer_Leah": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.summer_Leah}}"
+            }
+        },
+        {
+            "LogName": "Leah -'Admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLeah",
+            "Entries": {
+                "Good_5": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Good_5.Pendant |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Indoor_Night_3": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Indoor_Night_3.Pendant |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            },
+            "When": {
+                "Relationship:Leah": "Married",
+                "Roommate |contains=Leah": false
+            }
+        },
+        {
+            "LogName": "Leah - Bracelet version of 'admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLeah",
+            "Entries": {
+                "Good_5": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Good_5.Bracelet |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Indoor_Night_3": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Indoor_Night_3.Bracelet |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            },
+            "When": {
+                "Roommate": "Leah"
+            }
+        },
+        {
+            "LogName": "Leah - Ambiguous version of 'admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLeah",
+            "Entries": {
+                "Good_5": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Good_5.Ambiguous |LovePortraitsNeutral={{LovePortraitsNeutralToken}} |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Indoor_Night_3": "{{i18n:PPAF.Leah.PartnerDialogue.Aro.Indoor_Night_3.Ambiguous |LovePortraitsNeutral={{LovePortraitsNeutralToken}} |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "Relationship:Leah": "Married",
+                "Roommate |contains=Leah": false,
+                "Spouse |contains=Leah": false
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/ExtraDialogue",
+            "Entries": {
+                "SummitEvent_Dialogue3_Leah": "{{i18n:PPAF.Leah.SummitDialogue.Aro.SummitEvent_Dialogue3_Leah |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            }
+        },
+        // STRINGS
+        {
+            "LogName": "Leah pendant and bracelet proposal acceptance",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "Leah_Engaged": "{{i18n:PPAF.Leah.Strings.Aro.Leah_Engaged |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Leah_EngagedRoommate": "{{i18n:PPAF.Leah.Strings.Aro.Leah_EngagedRoommate |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            }
+        },
+        {
+            "LogName": "Leah terms of endearment and other misc lines, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Leah.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Leah.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Leah.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Leah.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Leah.Strings.Aro.Nickname.2}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Leah.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Leah",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Leah terms of endearment and other misc lines, poly with CFD",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Leah.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Leah.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Leah.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Leah.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Leah.Strings.Aro.Nickname.2}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Leah.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Leah",
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/Characters",
+            "Entries": {
+                "MovieInvite_Spouse_Leah": "{{i18n:PPAF.Leah.Strings.Aro.MovieInvite_Spouse_Leah}}"
+            }
+        },
+        // PENDANT REJECTION
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "RejectMermaidPendant_AlreadyAccepted_Engaged": "{{i18n:PPAF.Leah.PendantRejections.Engaged.{{Random:1,2}}}}",
+                "RejectMermaidPendant_AlreadyAccepted_Married": "{{i18n:PPAF.Leah.PendantRejections.Married.{{Random:1,2}}}}"
+            }
+        },
+        // SPRITE EDITS
+        {
+            "Action": "EditImage",
+            "Target": "Characters/Leah",
+            "FromFile": "assets/Sprites/LeahDressRecolor.png",
+            "ToArea": {
+                "X": 0,
+                "Y": 288,
+                "Width": 48,
+                "Height": 32
+            },
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ConfigValue:EditSprites": "True",
+                "HasMod |contains=DSVTeam.DiverseSeasonalOutfits, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        // EVENTS
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/LeahHouse",
+            "Fields": {
+                "50/f Leah 500/p Leah": {
+                    50: "speak Leah \"$q -1 null#{{i18n:PPAF.Leah.Events.Aro.2Heart.50.1}}#$r -1 0 event_sculpt1#{{i18n:PPAF.Leah.Events.Aro.2Heart.50.2}}#$r -1 0 event_sculpt2#{{i18n:PPAF.Leah.Events.Aro.2Heart.50.3}}\"",
+                    51: "pause 10"
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/LeahHouse",
+            "Entries": {
+                "creepySexualPass": null
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Town",
+            "Fields": {
+                "53/e 55/t 1500 1700": {
+                    25: "speak Leah \"{{i18n:PPAF.Leah.Events.Aro.8Heart.25}}\"",
+                    83: "speak Leah \"{{i18n:PPAF.Leah.Events.Aro.8Heart.83}}\""
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Forest",
+            "Entries": {
+                "54/f Leah 2500/t 1100 1600/z winter": "50s/-1000 -1000/farmer 87 40 3 Leah 76 40 1/skippable/specificTemporarySprite leahPicnic/viewport 77 40 true/move farmer -10 0 3/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.0}}\"/faceDirection Leah 0/pause 800/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.1}}\"/pause 500/faceDirection Leah 1/pause 500/faceDirection Leah 0/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.2}}\"/pause 600/move Leah -1 0 0/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.3}}\"/pause 600/faceDirection Leah 1/move farmer -1 0 3/faceDirection Leah 0/pause 1200/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.4}}\"/faceDirection Leah 2/pause 300/faceDirection Leah 1/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.5}}\"/pause 400/showFrame Leah 25/pause 10/positionOffset Leah 2 0/pause 10/positionOffset Leah 2 0/pause 10/animate farmer true true 100 101/positionOffset farmer 16 0/positionOffset Leah 2 0/pause 10/positionOffset farmer -2 0/pause 10/positionOffset Leah 2 0/pause 10/positionOffset farmer -2 0/pause 10/positionOffset Leah 2 0/pause 10/positionOffset farmer -2 0/pause 10/positionOffset Leah 2 0/pause 10/positionOffset farmer -2 0/pause 10/positionOffset Leah 2 0/pause 10/positionOffset farmer -2 0/pause 10/positionOffset Leah 2 0/pause 10/positionOffset farmer -2 0/pause 10/positionOffset Leah 2 0/pause 10/positionOffset farmer -2 0/pause 10/positionOffset farmer -2 0/pause 500/pause 1000/stopMusic/message \"{{i18n:PPAF.Leah.Events.Aro.10Heart.6}}\"/warp LeahEx 74 29/move LeahEx 0 9 2 true/stopAnimation farmer/positionOffset farmer -16 0/faceDirection farmer 0 true/showFrame Leah 4/pause 20/positionOffset Leah -6 0/positionOffset farmer 4 0/pause 20/positionOffset Leah -4 0/positionOffset farmer 4 0/pause 20/positionOffset Leah -4 0/positionOffset farmer 4 0/pause 20/positionOffset Leah -4 0/positionOffset farmer 4 0/faceDirection Leah 0/pause 4000/showFrame LeahEx 4/move Leah -1 0 0/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.7}}\"/fork LeahInternet choseInternet/message \"{{i18n:PPAF.Leah.Events.Aro.10Heart.8}}\"/move LeahEx 0 1 2/message \"{{i18n:PPAF.Leah.Events.Aro.10Heart.9}}\"/message \"{{i18n:PPAF.Leah.Events.Aro.10Heart.10}}\"/emote Leah 12/faceDirection Leah 0/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.11}}\"/move Leah 0 2 2/showFrame LeahEx 4/message \"{{i18n:PPAF.Leah.Events.Aro.10Heart.12}}\"/speed farmer 4/move farmer -2 0 0 false/question fork1 \"{{i18n:PPAF.Leah.Events.Aro.10Heart.13}}\"/fork noPunch/pause 300/screenFlash .25/animate farmer false false 650 15/positionOffset farmer 0 -8/faceDirection Leah 0 true/playSound clubhit/showFrame LeahEx 6/jump LeahEx/positionOffset LeahEx 0 -4/pause 25/positionOffset LeahEx 0 -4/pause 25/positionOffset farmer 0 8/positionOffset LeahEx 0 -4/pause 25/positionOffset LeahEx 0 -4/pause 25/positionOffset LeahEx 0 -4/pause 25/positionOffset LeahEx 0 -4/pause 25/positionOffset LeahEx 0 -4/pause 25/positionOffset LeahEx 0 -4/pause 25/positionOffset LeahEx 0 -4/pause 25/pause 200/playSound clubSmash/showFrame LeahEx 7/shake LeahEx 1000/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.14}}\"/speed Leah 4/move Leah -1 0 0/speed Leah 4/move Leah 0 -4 1/emote Leah 40/pause 1700/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.15}}\"/faceDirection Leah 2/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.16}}\"/speed farmer 2/positionOffset farmer 2 0/move farmer -1 0 0/move Leah 0 -8 0 true/move farmer 0 -8 0 true/globalFade/viewport -1000 -1000/pause 1000/speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.17}}\"/playMusic none/pause 2000/end dialogue Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.18}}\""
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Forest",
+            "Fields": {
+                "choseInternet": {
+                    56: "speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.Internet.56}}\"",
+                    67: "speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.Internet.67}}\""
+                },
+                "noPunch": {
+                    39: "speak Leah \"{{i18n:PPAF.Leah.Events.Aro.10Heart.NoPunch.39}}\"",
+                    51: "pause 10",
+                    53: "pause 1000"
+                },
+                "3091462/e 3911124/O Leah/w sunny/t 1130 1400/A leahPaint": {
+                    96: "end dialogue Leah \"{{i18n:PPAF.Leah.Events.Aro.14Heart.96}}\""
+                }
+            }
+        },
+        //COMPATIBILITY: PLATONIC RELATIONSHIPS
+        //This section prevents the dating-flag-required version of the vanilla 10 heart event added by Platonic Relationships from triggering. Thanks to Cherry for providing the event codes!
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Forest",
+            "Entries": {
+                "54/f Leah 2500/D Leah/t 1100 1600/z winter/w sunny": null
+            },
+            "When": {
+                "HasMod |contains=Cherry.PlatonicRelationships": true
+            }
+        },
+        //COMPATIBILITY: SPOUSES REACT TO PLAYER 'DEATH' v1.1.0
+        //Lines in this section are based on the original lines written by CasualInvidia, used and edited with permission. (Thank you, CasualInvidia!)
+        {
+            "LogName": "Enable Leah's Spouses React to Player 'Death' content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Leah/Leah_SpousesReact.json",
+            "When": {
+                "HasMod |contains=CasualInvidia.SpousesReactToDeath": true
+            }
+        },
+        //
+        //COMPATIBILITY IMMERSIVE SPOUSES - IMPROVED SPOUSE SCHEDULES v0.5-beta
+        //Lines in this section are based on the original lines written by yeet (Someguy363), used and edited with permission. (Thank you, yeet!)
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLeah",
+            "Entries": {
+                "spring_16": "{{i18n:Leah.DialogueEdits.Aro.ISS.spring_16 |LowercaseEndearment={{LowercaseEndearmentToken}}}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Leah",
+            "Entries": {
+                "marriage_seedshop": "{{i18n:Leah.DialogueEdits.Aro.ISS.marriage_seedshop}}",
+                "marriage_r": "{{i18n:Leah.DialogueEdits.Aro.ISS.marriage_r |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "marriage_r2": "{{i18n:Leah.DialogueEdits.Aro.ISS.marriage_r2 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "marriage_r3": "{{i18n:Leah.DialogueEdits.Aro.ISS.marriage_r3}}",
+                "marriage_saloonm": "{{i18n:Leah.DialogueEdits.Aro.ISS.marriage_saloonm |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "marriage_drawf": "{{i18n:Leah.DialogueEdits.Aro.ISS.marriage_drawf |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "marriage_drawt3": "{{i18n:Leah.DialogueEdits.Aro.ISS.marriage_drawt3}}",
+                "marriage_saloonm2": "{{i18n:Leah.DialogueEdits.Aro.ISS.marriage_saloonm2 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_doctormarriage": "{{i18n:Leah.DialogueEdits.Aro.ISS.marriage_doctormarriage |LowercaseEndearment={{LowercaseEndearmentToken}}}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        {
+            "LogName": "Leah -'Admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Strings/schedules/Leah",
+            "Entries": {
+                "marriage_r4": "{{i18n:PPAF.Leah.DialogueEdits.Aro.ISS.marriage_r4.Pendant}}"
+            },
+            "When": {
+                "Relationship:Leah": "Married",
+                "Roommate |contains=Leah": false,
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        {
+            "LogName": "Leah - Bracelet version of 'admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Strings/schedules/Leah",
+            "Entries": {
+                "marriage_r4": "{{i18n:PPAF.Leah.DialogueEdits.Aro.ISS.marriage_r4.Bracelet}}"
+            },
+            "When": {
+                "Roommate": "Leah",
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        {
+            "LogName": "Leah - Ambiguous version of 'admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Strings/schedules/Leah",
+            "Entries": {
+                "marriage_r4": "{{i18n:PPAF.Leah.DialogueEdits.Aro.ISS.marriage_r4.Ambiguous}}"
+            },
+            "When": {
+                "Relationship:Leah": "Married",
+                "Roommate |contains=Leah": false,
+                "Spouse |contains=Leah": false,
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        //COMPATIBILITY: PLEASE REMEMBER MY MARRIAGE v1.0.1
+        //Lines in this section are based on the original lines written by nraittanna, used and edited with permission. (Thank you, nraittanna!)
+        {
+            "LogName": "Enable Leah's Please Remember My Marriage content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Leah/Leah_RememberMyMarriage.json",
+            "When": {
+                "HasMod |contains=nraittanna.RememberMyMarriage": true
+            }
+        }
+    ]
+}

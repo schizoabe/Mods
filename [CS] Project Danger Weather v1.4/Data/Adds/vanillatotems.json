@@ -1,0 +1,383 @@
+{
+	"Changes": [	
+		{
+			"LogName": "Rain Totem Change",
+			"Action": "EditImage",
+			"Target": "Maps/springobjects",
+			"FromFile": "assets/SC/Vanilla/Totems.png",
+			"FromArea": { "X": 0, "Y": 0, "Width": 16, "Height": 16 },
+			"ToArea": { "X": 144, "Y": 448, "Width": 16, "Height": 16 },
+			"When": {"ChangeRainTotem": "true", "HasMod|contains=Aimon111.WarpTotemstoMagicBookTomes": false}
+		},		
+///// Object Load
+        {
+            "LogName":"Add Totem Blank",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"Totem": "false"},
+            "Entries": {
+                "TotemBlank": {
+                    "Name": "TotemBlank",
+                    "DisplayName": "{{i18n: Totem.Name}}",
+                    "Description": "{{i18n: Totem.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/TotemBlank",
+                    "SpriteIndex": "0",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						]
+            	}
+			}
+		},
+		
+        {
+            "LogName":"Add Vanilla Totems",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "Totem.storm": {
+                    "Name": "Totem.storm",
+                    "DisplayName": "{{i18n: Totem.storm.Name}} {{TotemOrTome}}",
+                    "Description": "{{i18n: Totem.storm.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/VanillaTotems",
+                    "SpriteIndex": "1",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"Storm"}
+            	},
+				"Totem.green": {
+                    "Name": "Totem.green",
+                    "DisplayName": "{{i18n: Totem.green.Name}} {{TotemOrTome}}",
+                    "Description": "{{i18n: Totem.green.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/VanillaTotems",
+                    "SpriteIndex": "4",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"GreenRain"}
+            	},
+				"Totem.sun": {
+                    "Name": "Totem.sun",
+                    "DisplayName": "{{i18n: Totem.sun.Name}} {{TotemOrTome}}",
+                    "Description": "{{i18n: Totem.sun.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/VanillaTotems",
+                    "SpriteIndex": "2",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"Sun"}
+            	},
+				"Totem.windy": {
+                    "Name": "Totem.windy",
+                    "DisplayName": "{{i18n: Totem.windy.Name}} {{TotemOrTome}}",
+                    "Description": "{{i18n: Totem.windy.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/VanillaTotems",
+                    "SpriteIndex": "5",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"Wind"}
+            	},
+				"Totem.snow": {
+                    "Name": "Totem.snow",
+                    "DisplayName": "{{i18n: Totem.snow.Name}} {{TotemOrTome}}",
+                    "Description": "{{i18n: Totem.snow.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/VanillaTotems",
+                    "SpriteIndex": "3",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"Snow"}
+            	}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore"},
+			"Entries": {
+				"Totem.storm": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 5,
+					"CategoryTextOverride": "{{i18n: TotemCategoryVanilla}} {{TotemOrTome}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				},
+				"Totem.green": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 5,
+					"CategoryTextOverride": "{{i18n: TotemCategoryVanilla}} {{TotemOrTome}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				},
+				"Totem.sun": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 5,
+					"CategoryTextOverride": "{{i18n: TotemCategoryVanilla}} {{TotemOrTome}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				},
+				"Totem.windy": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 5,
+					"CategoryTextOverride": "{{i18n: TotemCategoryVanilla}} {{TotemOrTome}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				},
+				"Totem.snow": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 5,
+					"CategoryTextOverride": "{{i18n: TotemCategoryVanilla}} {{TotemOrTome}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "ChangeRainTotem": "true"},
+			"Entries": {
+				"681": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 5,
+					"CategoryTextOverride": "{{i18n: TotemCategoryVanilla}} {{TotemOrTome}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},			
+
+//Shop
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Traveler", "Items" ],
+            "Entries": {
+				"TotemSelling1": {
+                    "Id": "TotemSelling1",
+					"ItemId": "(O)Totem.storm",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 2500,
+					"PriceModifierMode": "Stack",
+					"PriceModifiers": [
+						{
+							"Id": "Add1",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						},
+						{
+							"Id": "Add2",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						}
+					],
+					"AvailableStock": 5,
+					"AvailableStockLimit": "Global",
+					"IsRecipe": false,
+					"Condition": "!SEASON Winter, RANDOM 0.45"
+                },
+				"TotemSelling2": {
+                    "Id": "TotemSelling2",
+					"ItemId": "(O)Totem.green",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 2500,
+					"PriceModifierMode": "Stack",
+					"PriceModifiers": [
+						{
+							"Id": "Add1",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						},
+						{
+							"Id": "Add2",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						}
+					],
+					"AvailableStock": 5,
+					"AvailableStockLimit": "Global",
+					"IsRecipe": false,
+					"Condition": "YEAR 2, SEASON Summer, RANDOM 0.45"
+                },
+				"TotemSelling3": {
+                    "Id": "TotemSelling3",
+					"ItemId": "(O)Totem.sun",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 2500,
+					"PriceModifierMode": "Stack",
+					"PriceModifiers": [
+						{
+							"Id": "Add1",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						},
+						{
+							"Id": "Add2",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						}
+					],
+					"AvailableStock": 5,
+					"AvailableStockLimit": "Global",
+					"IsRecipe": false,
+					"Condition": "RANDOM 0.45, !{{HasMod|contains=FlashShifter.StardewValleyExpandedCP}}"
+                },
+				"TotemSelling4": {
+                    "Id": "TotemSelling4",
+					"ItemId": "(O)Totem.windy",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 2500,
+					"PriceModifierMode": "Stack",
+					"PriceModifiers": [
+						{
+							"Id": "Add1",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						},
+						{
+							"Id": "Add2",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						}
+					],
+					"AvailableStock": 5,
+					"AvailableStockLimit": "Global",
+					"IsRecipe": false,
+					"Condition": "RANDOM 0.45, !{{HasMod|contains=FlashShifter.StardewValleyExpandedCP}}"
+                },
+				"TotemSelling5": {
+                    "Id": "TotemSelling5",
+					"ItemId": "(O)Totem.snow",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 2500,
+					"PriceModifierMode": "Stack",
+					"PriceModifiers": [
+						{
+							"Id": "Add1",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						},
+						{
+							"Id": "Add2",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						}
+					],
+					"AvailableStock": 5,
+					"AvailableStockLimit": "Global",
+					"IsRecipe": false,
+					"Condition": "SEASON Winter, RANDOM 0.45"
+                },
+				"TotemSelling6": {
+                    "Id": "TotemSelling6",
+					"ItemId": "(O)681",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 2500,
+					"PriceModifierMode": "Stack",
+					"PriceModifiers": [
+						{
+							"Id": "Add1",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						},
+						{
+							"Id": "Add2",
+							"Modification": "Add",
+							"RandomAmount": [ 0, 0, 250, 500, 750, 1000 ]
+						}
+					],
+					"AvailableStock": 5,
+					"AvailableStockLimit": "Global",
+					"IsRecipe": false,
+					"Condition": "!SEASON Winter, RANDOM 0.45"
+                }
+			}
+		}
+//End
+]
+}

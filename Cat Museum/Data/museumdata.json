@@ -1,0 +1,157 @@
+{
+	"Changes": [
+		{
+			"LogName": "Add Museum Data",
+			"Action": "EditData",
+            "Priority": "Early",
+			"Target": "Spiderbuttons.CMF/Museums",
+			"Entries": {
+				"KathMuseum_Mirin": {
+					"Id": "KathMuseum_Mirin",
+					"Owner": {
+						"Name": "Mirin",
+						"RequiredForDonation": true,
+						"Area": {
+							"X": 4,
+							"Y": 6,
+							"Width": 5,
+							"Height": 3
+						}
+					},
+					"Bounds": {
+						"X": 2,
+						"Y": 6,
+						"Width": 29,
+						"Height": 14
+					},
+					"ShowDonationHint": true,
+					"OverrideDescription": false,
+					"PedestalAction": {
+						"Id": "KathMuseum.PedestalAction",
+						"InteractionType": "Sign",
+						"Text": "{{i18n: pedestal.text}}"
+					},
+					"DonationRequirements": [
+						{
+							"Id": "KathMuseum.Curios",
+							"ItemIds": [
+								"(O)KathMuseum.Curio1",
+								"(O)KathMuseum.Curio2",
+								"(O)KathMuseum.Curio3",
+								"(O)KathMuseum.Curio4"
+							],
+							"MatchType": "Any"
+						}
+					],
+					"AllowRetrieval": false,
+					"Rewards": [
+						{
+							"Id": "KathMuseum.CuriosReward",
+							"Requirements": [
+								{
+									"Id": "KathMuseum.CuriosRequirement1",
+									"ItemIds": [
+										"(O)KathMuseum.Curio1"
+									],
+									"Count": 1
+								},
+								{
+									"Id": "KathMuseum.CuriosRequirement2",
+									"ItemIds": [
+										"(O)KathMuseum.Curio2"
+									],
+									"Count": 1
+								},
+								{
+									"Id": "KathMuseum.CuriosRequirement3",
+									"ItemIds": [
+										"(O)KathMuseum.Curio3"
+									],
+									"Count": 1
+								},
+								{
+									"Id": "KathMuseum.CuriosRequirement4",
+									"ItemIds": [
+										"(O)KathMuseum.Curio4"
+									],
+									"Count": 1
+								}
+							],
+							"RewardItems": [
+								{
+									"Id": "KathMuseum.Curios_Diamond",
+									"ItemId": "(O)72",
+									"MinStack": 4
+								}
+							],
+							"Actions": [
+							"AddMail All MirinCompleteCurio1 tomorrow"
+							]
+						}
+					],
+                    "CompletionNumber": 41,
+					"Milestones": [
+						1,
+						4,
+                        10,
+                        12,
+                        18,
+                        20,
+                        25,
+                        30,
+                        35,
+                        40
+					],
+					"Strings": {
+						"OnDonation": "{{i18n: donateditemconsole}}",
+						"OnMilestone": "{{i18n: milestoneconsole}}",
+						"OnCompletion": "{{i18n: completionconsole}}",
+						"MenuDonate": "{{i18n: donateitems}}",
+						"MenuCollect": "{{i18n: collectrewards}}",
+						"MenuRearrange": "{{i18n: rearrangeitems}}",
+						"MenuRetrieve": "{{i18n: retrieveitems}}",
+						"ClockedOut": "{{i18n: busycatmuseum}}",
+						"Busy_Owner": "{{i18n: busycatmuseum_mirin}}",
+						"Busy_NoOwner": "{{i18n: busycatmuseum}}",
+						"MuseumComplete_Owner": "{{i18n: completemuseum_mirin}}",
+						"MuseumComplete_NoOwner": "{{i18n: completemuseum}}",
+						"NothingToDonate_Owner": "{{i18n: nothingtogivemuseum_mirin}}",
+						"NothingToDonate_NoOwner": "{{i18n: nothingtogivemuseum}}",
+						"NoDonations_Owner": "{{i18n: nodonationsmuseum_mirin}}",
+						"NoDonations_NoOwner": "{{i18n: nodonationsmuseum}}",
+						"CanBeDonated": "{{i18n: itemhint}}" 
+					}
+				}
+			}
+		},
+		{
+			"LogName": "Define the Lost Books",
+			"Action": "EditData",
+			"Target": "Spiderbuttons.CMF/LostBooks",
+			"Entries": {
+				"KathMuseum_Mirin": [ //Museum ID
+					{
+						"Id": "KathMuseum.LostBookSet",
+						"ItemId": "(O)KathMuseum.LostBook", // Must be qualified item ID
+						"ReceiveText": "{{i18n: findbook.lostbookset}}", 
+						"BroadcastText": "{{i18n: broadcast.lostbookset}}",
+						"MissingText": "{{i18n: missing.lostbookset}}",
+						"Entries": [
+							{
+								"Id": "KathMuseum.LostBook1",
+								"InteractionType": "Message",
+								"Text": "{{i18n: lostbookset.text.1}}",
+								"Action": "If !PLAYER_HAS_MAIL Current MirinStory1 ## AddConversationTopic MirinLostBook 7 ## AddConversationTopic MirinLostBookRepeat 3"
+							},
+							{
+								"Id": "KathMuseum.LostBook2",
+								"InteractionType": "Message",
+								"Text": "{{i18n: lostbookset.text.2}}"
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}

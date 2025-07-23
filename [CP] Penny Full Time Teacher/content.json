@@ -1,0 +1,146 @@
+{
+  "Format": "1.25.0",
+  "Changes": [
+
+//Penny goes to work on all weekends except festival days and weekends
+
+{ "Action": "EditData",	 
+	"Target": "Characters/Schedules/Penny",
+	 "Entries": {  
+
+// Monday Schedules   
+"Mon": "GOTO Wed",
+"spring_1": "GOTO Wed",
+"spring_8": "GOTO Wed",
+"spring_15": "GOTO Wed",
+"spring_22": "GOTO Wed",
+"summer_1": "GOTO Wed",
+"summer_8": "GOTO Wed",
+"summer_15": "GOTO Wed",
+"summer_22": "GOTO Wed",
+"fall_1": "GOTO Wed",
+"fall_8": "GOTO Wed",
+"fall_15": "GOTO Wed",
+"fall_22": "GOTO Wed",
+"winter_1": "GOTO Wed",
+"winter_8": "GOTO Wed",
+"winter_15": "GOTO Wed",
+"winter_22": "GOTO Wed",
+
+// Tuesday Schedules
+"Tue": "0 Town 23 53 3/610 Town 23 53 3/640 Town 23 53 3 penny_wave_left/700 Town 10 13 2/750 Town 10 13 1/810 Town 10 13 2/840 Custom_SchoolHouse 15 7 2/1020 Custom_SchoolHouse 8 10 0/1040 Custom_SchoolHouse 15 7 2/1140 Town 12 13 1/1300 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 19 10 0/1500 Custom_SchoolHouse 15 7 2/1550 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 Trailer 4 9 1 penny_sleep",
+"spring_2": "GOTO Tue",
+"spring_9": "GOTO Tue",
+"spring_16": "GOTO Tue",
+"spring_23": "GOTO Tue",
+"summer_2": "GOTO Tue",
+"summer_9": "GOTO Tue",
+"summer_16": "GOTO Tue",
+"summer_23": "GOTO Tue",
+"fall_2": "GOTO Tue", // Proposed to load schedule to have Teacher's Day
+"fall_9": "GOTO Tue",
+"fall_23": "GOTO Tue",
+"winter_2": "GOTO Tue",
+"winter_16": "GOTO Tue",
+"winter_23": "GOTO Tue",
+
+
+// Wednesday Schedules. Penny is rostered to bring the kids to the Bus Stop while Flor brings Jas and Vincent back home.
+"Wed": "0 Town 23 53 3/610 Town 23 53 3/640 Town 23 53 3 penny_wave_left/700 Town 10 13 2/750 Town 10 13 1/810 Town 10 13 3/820 Town 10 13 2/840 Custom_SchoolHouse 15 7 2/1020 Custom_SchoolHouse 8 10 0/1040 Custom_SchoolHouse 15 7 2/1120 Custom_SchoolHouse 13 4 0/1140 Custom_SchoolHouse 13 4 2/1230 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 22 15 0/1500 Custom_SchoolHouse 15 7 2/1550 BusStop 14 10 3/1730 BusStop 14 10 3 penny_wave_left/1740 BusStop 14 10 3 penny_wave_left/1750 BusStop 14 10 3 penny_wave_left/1800 Trailer 4 9 1 penny_sleep",
+"winter_3": "GOTO Wed",
+"winter_10": "GOTO Wed",
+"winter_17": "GOTO Wed",
+"winter_24": "GOTO Wed",
+"winter_3": "GOTO Wed",
+"winter_10": "GOTO Wed",
+"winter_17": "GOTO Wed",
+"winter_24": "GOTO Wed",
+"winter_3": "GOTO Wed",
+"winter_10": "GOTO Wed",
+"winter_17": "GOTO Wed",
+"winter_24": "GOTO Wed",
+"winter_3": "GOTO Wed",
+"winter_10": "GOTO Wed",
+"winter_17": "GOTO Wed",
+"winter_24": "GOTO Wed",
+
+
+// Thursday Schedules. To mimic Tuesday until further fine-tuning
+"Thu": "0 Town 23 53 3/610 Town 23 53 3/640 Town 23 53 3 penny_wave_left/700 Town 10 13 2/750 Town 10 13 1/810 Town 10 13 2/840 Custom_SchoolHouse 15 7 2/1020 Custom_SchoolHouse 8 10 0/1040 Custom_SchoolHouse 15 7 2/1140 Town 12 13 1/1300 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 19 10 0/1500 Custom_SchoolHouse 15 7 2/1550 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 Trailer 4 9 1 penny_sleep",
+"spring_4": "GOTO Thu",
+"spring_11": "GOTO Thu",
+"spring_18": "GOTO Thu",
+"spring_25": "GOTO Thu",
+"summer_4": "GOTO Thu",
+"summer_18": "GOTO Thu",
+"summer_25": "GOTO Thu",
+"fall_4": "GOTO Thu",
+"fall_11": "GOTO Thu",
+"fall_18": "GOTO Thu",
+"fall_25": "GOTO Thu", // Proposed CosFest
+"winter_4": "GOTO Thu",
+"winter_11": "GOTO Thu",
+"winter_18": "GOTO Thu",
+
+
+// Friday Schedules. To mimic Wednesday until further fine-tuning
+"Fri": "0 Town 23 53 3/610 Town 23 53 3/640 Town 23 53 3 penny_wave_left/700 Town 10 13 2/750 Town 10 13 1/810 Town 10 13 3/820 Town 10 13 2/840 Custom_SchoolHouse 15 7 2/1020 Custom_SchoolHouse 8 10 0/1040 Custom_SchoolHouse 15 7 2/1120 Custom_SchoolHouse 13 4 0/1140 Custom_SchoolHouse 13 4 2/1230 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 22 15 0/1500 Custom_SchoolHouse 15 7 2/1550 BusStop 14 10 3/1730 BusStop 14 10 3 penny_wave_left/1740 BusStop 14 10 3 penny_wave_left/1750 BusStop 14 10 3 penny_wave_left/1800 Trailer 4 9 1 penny_sleep",
+"spring_5": "GOTO Wed", 
+"spring_12": "GOTO Wed",
+"spring_19": "GOTO Wed",
+"spring_26": "GOTO Wed",
+"summer_5": "GOTO Wed", // Proposed Children day celebration
+"summer_12": "GOTO Wed",
+"summer_19": "GOTO Wed",
+"summer_26": "GOTO Wed",
+"fall_5": "GOTO Wed",
+"fall_12": "GOTO Wed",
+"fall_19": "GOTO Wed",
+"fall_26": "GOTO Wed",
+"winter_5": "GOTO Wed",
+"winter_12": "GOTO Wed",
+"winter_19": "GOTO Wed",
+"winter_26": "GOTO Wed",
+
+
+// Saturday Schedule. 
+
+
+// Sunday Schedule.
+
+
+//Married Schedule. Stays home on Saturdays and Sundays
+"marriageJob": "0 Town 23 53 3/610 Town 23 53 3/640 Town 23 53 3 penny_wave_left/700 Town 10 13 2/750 Town 10 13 1/810 Town 10 13 3/820 Town 10 13 2/840 Custom_SchoolHouse 15 7 2/1020 Custom_SchoolHouse 8 10 0/1040 Custom_SchoolHouse 15 7 2 \"Strings\\schedules\\Penny:marriage_Mon.002\"/1120 Custom_SchoolHouse 13 4 0/1140 Custom_SchoolHouse 13 4 2/1230 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 22 15 0/1500 Custom_SchoolHouse 15 7 2/1550 BusStop 14 10 3/1730 BusStop 14 10 3 penny_wave_left/1740 BusStop 14 10 3 penny_wave_left/1750 BusStop 14 10 3 penny_wave_left/1830 BusStop -1 23 3", 
+
+"marriage_Mon": "0 Town 23 53 3/610 Town 23 53 3/640 Town 23 53 3 penny_wave_left/700 Town 10 13 2/750 Town 10 13 1/810 Town 10 13 3/820 Town 10 13 2/840 Custom_SchoolHouse 15 7 2/1020 Custom_SchoolHouse 8 10 0/1040 Custom_SchoolHouse 15 7 2/1120 Custom_SchoolHouse 13 4 0/1140 Custom_SchoolHouse 13 4 2/1230 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 22 15 0/1500 Custom_SchoolHouse 15 7 2/1550 BusStop 14 10 3/1730 BusStop 14 10 3 penny_wave_left/1740 BusStop 14 10 3 penny_wave_left/1750 BusStop 14 10 3 penny_wave_left/1830 BusStop -1 23 3",
+  
+"marriage_Thu": "0 Town 23 53 3/610 Town 23 53 3/640 Town 23 53 3 penny_wave_left/700 Town 10 13 2/750 Town 10 13 1/810 Town 10 13 2/840 Custom_SchoolHouse 15 7 2/1020 Custom_SchoolHouse 8 10 0/1040 Custom_SchoolHouse 15 7 2/1140 Town 12 13 1/1300 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 19 10 0/1500 Custom_SchoolHouse 15 7 2/1550 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 BusStop -1 23 3", 
+
+"marriage_spring_13": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 BusStop -1 23 3",
+"marriage_spring_24": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 BusStop -1 23 3",
+"marriage_summer_11": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 BusStop -1 23 3",
+"marriage_summer_28": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 BusStop -1 23 3",
+"marriage_fall_16": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 BusStop -1 23 3",
+"marriage_fall_27": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 BusStop -1 23 3",
+"marriage_winter_8": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 BusStop -1 23 3",
+"marriage_winter_25": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 BusStop -1 23 3",
+"marriage_winter_28": "830 SeedShop 2 26 2 \"Strings\\schedules\\Penny:marriage_Mon.000\"/1100 SeedShop 5 19 0 \"Strings\\schedules\\Penny:marriage_Mon.001\"/1130 Town 35 89 2 penny_read/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1810 BusStop -1 23 3",
+
+
+//Festivals School is closed and penny is not married
+"spring_13": "0 Trailer 4 9 1 penny_sleep",
+"spring_24": "0 Trailer 4 9 1 penny_sleep",
+"summer_11": "0 Trailer 4 9 1 penny_sleep",
+"summer_28": "0 Trailer 4 9 1 penny_sleep",
+"fall_16": "0 Trailer 4 9 1 penny_sleep",
+"fall_27": "0 Trailer 4 9 1 penny_sleep",
+"winter_8": "0 Trailer 4 9 1 penny_sleep",
+"winter_25": "0 Trailer 4 9 1 penny_sleep",
+"winter_28": "0 Trailer 4 9 1 penny_sleep",
+ 
+},
+            	"When": {"HasSeenEvent": "9695002"},}
+  ]
+}
+
+

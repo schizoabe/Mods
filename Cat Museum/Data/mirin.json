@@ -1,0 +1,184 @@
+{
+	"Changes": [
+		{
+            "LogName": "Mirin NPC Manifestation",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Mirin": {
+                    "DisplayName": "{{i18n: Name.Mirin}}",
+                    "BirthSeason": "Winter",
+                    "BirthDay": 12,
+                    "HomeRegion": "Other",
+                    "Gender": "Undefined",
+                    "Age": "Adult",
+                    "Manner": "Neutral",
+                    "SocialAnxiety": "Shy",
+                    "Optimism": "Neutral",
+					"CanSocialize": false,
+					"CanReceiveGifts": false,
+                    "CanBeRomanced": false,
+					"CanGreetNearbyCharacters": false,
+					"Calendar": "HiddenAlways",
+					"SocialTab": "HiddenAlways",
+					"EndSlideShow": "Hidden",
+					"IntroductionsQuest": false,
+					"FlowerDanceCanDance": false,
+					"WinterStarParticipant":false,
+					"FriendsAndFamily": {
+							"Wizard": "{{i18n: Relationship.Mirin.Wizard}}"
+						},	
+					"DumpsterDiveEmote":20,
+					"DumpsterDiveFriendshipEffect":5,	
+					"Breather": false,
+					"SpawnIfMissing": true,
+                    "Home": [
+                        {
+                            "Id": "ColdMirin",
+                            "Location": "KathMuseum_Mirin",
+                            "Tile": {
+                                "X": 28,
+                                "Y": 7
+                            },
+                            "Direction": "Down",
+                            "Condition": "SEASON Fall Winter, PLAYER_HAS_SEEN_EVENT Any KathMuseum.Expansion, {{HasMod|contains=kath.wth.holidays}}"
+                        },
+                       /*{
+                            "Id": "RainMirin",
+                            "Location": "KathMuseum_Mirin",
+                            "Tile": {
+                                "X": 28,
+                                "Y": 7
+                            },
+                            "Direction": "Down",
+                            "Condition": "WEATHER Town Rain GreenRain, PLAYER_HAS_SEEN_EVENT Any KathMuseum.Expansion, {{HasMod|contains=kath.wth.holidays}}"
+                        },*/
+                        {
+                            "Id": "Default",
+                            "Location": "KathMuseum_Mirin",
+                            "Tile": {
+                                "X": 8,
+                                "Y": 8
+                            },
+                            "Direction": "Down"
+                        }
+                    ],
+					"Appearance": [
+                        {
+							"Id": "Mirin_BlanketWinter",
+							"Portrait": "Portraits/Mirin_Winter",
+							"Sprite": "Characters/Mirin_BlanketWinter",
+                            "Condition": "SEASON Winter, PLAYER_HAS_SEEN_EVENT Any KathMuseum.WTHCompleted"
+						},
+                        {
+							"Id": "Mirin_Blanket",
+							"Portrait": "Portraits/Mirin",
+							"Sprite": "Characters/Mirin_Blanket",
+                            "Condition": "!SEASON Winter, PLAYER_HAS_SEEN_EVENT Any KathMuseum.WTHCompleted"
+						},
+                        {
+							"Id": "Mirin_Winter",
+							"Portrait": "Portraits/Mirin_Winter",
+							"Sprite": "Characters/Mirin_Winter",
+                            "Condition": "SEASON Winter"
+						},
+                        {
+							"Id": "MirinDefault",
+							"Portrait": "Portraits/Mirin",
+							"Sprite": "Characters/Mirin"
+						}				
+					]
+                }
+			}
+		},
+		{
+			"LogName": "Mirin Animation Data",
+			"Action": "EditData",
+			"Target": "Data/animationDescriptions",
+			"Entries": {
+				"mirin_meditate": "22/22 22 22 23 23 23 23 23 22 22 22 22 22 23 23 23 23 23 23 23 22 22/22/Strings\\animationDescriptions:mirin_meditate",
+				"mirin_gone": "20/20/20/Strings\\animationDescriptions:mirin_gone",
+				"mirin_rest": "16/16 17 17 18 18 19 19 16/16/Strings\\animationDescriptions:mirin_rest",
+                "mirin_restWTH": "24/24 25 25 26 26 27 27 24/24/Strings\\animationDescriptions:mirin_rest",
+				"mirin_sleep": "16/16 17 17 18 18 19 19 16/16"
+			}
+		},		
+		{
+			"LogName": "Mirin Animation Description Strings",
+			"Action": "EditData",
+			"Target": "Strings/animationDescriptions",
+			"Entries": {
+				"mirin_meditate": "{{i18n: mirin_meditate}}",
+				"mirin_gone": "{{i18n: mirin_gone}}",
+				"mirin_rest": "{{i18n: mirin_rest}}"
+			}
+		},
+		{	
+			"Logname": "Mirin Schedule",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Mirin",
+			"Entries": {
+				//<time> 
+				// [location]  
+				// <tileX> <tileY> 
+				// [facingDirection] 0 up |1 right |2 down |3 left 
+				// [animation] ie anim key 
+				// [dialogue] ie Strings\\schedules\\Mirin:napping.000
+
+				"rain":"610 KathMuseum_Mirin 8 8 2 mirin_rest/1100 KathMuseum_Mirin 6 6 0/1240 KathMuseum_Mirin 5 7 2 mirin_meditate/1500 KathMuseum_Mirin 10 6 2/1540 KathMuseum_Mirin 8 7 1/1630 KathMuseum_Mirin 6 9 3/1700 KathMuseum_Mirin 3 8 0/1750 KathMuseum_Mirin 7 6 2 mirin_meditate/2030 KathMuseum_Mirin 8 8 2 mirin_sleep",
+				"summer":"610 KathMuseum_Mirin 8 8 2 mirin_rest/930 KathMuseum_Mirin 5 7 2/1110 KathMuseum_Mirin 6 6 0/1420 KathMuseum_Mirin 4 6 2 mirin_meditate/1540 KathMuseum_Mirin 5 7 2/1800 KathMuseum_Mirin 10 5 2 mirin_gone/2040 KathMuseum_Mirin 10 6 2/2100 KathMuseum_Mirin 4 8 2/2130 KathMuseum_Mirin 7 6 0/2200 KathMuseum_Mirin 8 7 1/2230 KathMuseum_Mirin 8 8 2 mirin_sleep",
+				"fall":"610 KathMuseum_Mirin 8 8 2 mirin_rest/930 KathMuseum_Mirin 5 7 2/1110 KathMuseum_Mirin 6 6 0/1420 KathMuseum_Mirin 4 6 2 mirin_meditate/1540 KathMuseum_Mirin 5 7 2/1800 KathMuseum_Mirin 10 5 2 mirin_gone/2040 KathMuseum_Mirin 10 6 2/2100 KathMuseum_Mirin 4 8 2/2130 KathMuseum_Mirin 7 6 0/2200 KathMuseum_Mirin 8 7 1/2230 KathMuseum_Mirin 8 8 2 mirin_sleep",
+				"winter":"610 KathMuseum_Mirin 8 8 2 mirin_rest/1100 KathMuseum_Mirin 6 6 0/1240 KathMuseum_Mirin 5 7 2 mirin_meditate/1500 KathMuseum_Mirin 10 6 2/1540 KathMuseum_Mirin 8 7 1/1630 KathMuseum_Mirin 6 9 3/1700 KathMuseum_Mirin 3 8 0/1750 KathMuseum_Mirin 7 6 2 mirin_meditate/2030 KathMuseum_Mirin 8 8 2 mirin_sleep",
+				"GreenRain":"610 KathMuseum_Mirin 8 8 2 mirin_rest/800 KathMuseum_Mirin 5 6 2 mirin_meditate/1200 KathMuseum_Mirin 8 7 1/1350 KathMuseum_Mirin 5 7 2/1500 KathMuseum_Mirin 8 8 2 mirin_rest/1700 KathMuseum_Mirin 7 6 0/1800 KathMuseum_Mirin 5 8 2/1840 KathMuseum_Mirin 3 8 0/1910 KathMuseum_Mirin 11 6 3/2030 KathMuseum_Mirin 8 8 2 mirin_sleep",
+				"spring":"610 KathMuseum_Mirin 8 8 2 mirin_rest/930 KathMuseum_Mirin 5 7 2/1110 KathMuseum_Mirin 6 6 0/1420 KathMuseum_Mirin 4 6 2 mirin_meditate/1540 KathMuseum_Mirin 5 7 2/1800 KathMuseum_Mirin 10 5 2 mirin_gone/2040 KathMuseum_Mirin 10 6 2/2100 KathMuseum_Mirin 4 8 2/2130 KathMuseum_Mirin 7 6 0/2200 KathMuseum_Mirin 8 7 1/2230 KathMuseum_Mirin 8 8 2 mirin_sleep"
+			
+            }
+		
+		},
+        {	
+			"Logname": "Mirin Schedule",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Mirin",
+            "When": {"HasSeenEvent|contains=KathMuseum.Expansion":true, "HasMod|contains=kath.wth.holidays": true},
+			"Entries": {
+				//"rain":"610 KathMuseum_Mirin 28 7 2 mirin_rest/1100 KathMuseum_Mirin 6 6 0/1240 KathMuseum_Mirin 5 7 2 mirin_meditate/1500 KathMuseum_Mirin 10 6 2/1540 KathMuseum_Mirin 8 7 1/1630 KathMuseum_Mirin 6 9 3/1700 KathMuseum_Mirin 3 8 0/1750 KathMuseum_Mirin 7 6 2 mirin_meditate/2030 KathMuseum_Mirin 28 7 2 mirin_sleep",
+				"fall":"610 KathMuseum_Mirin 28 7 2 mirin_rest/930 KathMuseum_Mirin 5 7 2/1110 KathMuseum_Mirin 6 6 0/1420 KathMuseum_Mirin 4 6 2 mirin_meditate/1540 KathMuseum_Mirin 5 7 2/1800 KathMuseum_Mirin 10 5 2 mirin_gone/2040 KathMuseum_Mirin 10 6 2/2100 KathMuseum_Mirin 4 8 2/2130 KathMuseum_Mirin 7 6 0/2200 KathMuseum_Mirin 8 7 1/2230 KathMuseum_Mirin 28 7 2 mirin_sleep",
+				"winter":"610 KathMuseum_Mirin 28 7 2 mirin_rest/1100 KathMuseum_Mirin 6 6 0/1240 KathMuseum_Mirin 5 7 2 mirin_meditate/1500 KathMuseum_Mirin 10 6 2/1540 KathMuseum_Mirin 8 7 1/1630 KathMuseum_Mirin 6 9 3/1700 KathMuseum_Mirin 3 8 0/1750 KathMuseum_Mirin 7 6 2 mirin_meditate/2030 KathMuseum_Mirin 28 7 2 mirin_sleep"
+				//"GreenRain":"610 KathMuseum_Mirin 28 7 2 mirin_rest/800 KathMuseum_Mirin 5 6 2 mirin_meditate/1200 KathMuseum_Mirin 8 7 1/1350 KathMuseum_Mirin 5 7 2/1500 KathMuseum_Mirin 8 8 2 mirin_rest/1700 KathMuseum_Mirin 7 6 0/1800 KathMuseum_Mirin 5 8 2/1840 KathMuseum_Mirin 3 8 0/1910 KathMuseum_Mirin 11 6 3/2030 KathMuseum_Mirin 28 7 2 mirin_sleep"
+            }
+		},
+		{	
+			"Logname": "Mirin Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Mirin",
+			"Entries": {
+				"Introduction": "{{i18n: dialogue.intro}}",
+				
+				"Mon": "{{i18n: dialogue.mon}}",
+				"Tue": "{{i18n: dialogue.tue}}",
+				"Wed": "{{i18n: dialogue.wed}}",
+				"Thu": "{{i18n: dialogue.thu}}",
+				"Fri": "{{i18n: dialogue.fri.{{Random: 2,2,2,2,1}} }}",
+				"Sat": "{{i18n: dialogue.sat}}",
+				"Sun": "{{i18n: dialogue.sun}}.{{Random: 1,1,1,{{MirinExtras}} }}",
+
+				"DumpsterDiveComment": "{{i18n: dialogue.dumpsterdive}}",
+
+				"GreenRain": "{{i18n: dialogue.greenrain}}",
+				"GreenRainFinished": "{{i18n: dialogue.greenrainfinished}}",
+				"GreenRain_2": "{{i18n: dialogue.greenrain2}}",
+
+				"MirinLostBook": "{{i18n: mirinct}}#$action AddMail Current MirinStory1 received",
+				"MirinLostBookRepeat": "{{i18n: mirinctrepeat}}"
+			}
+		},
+		{
+			"Logname": "Rainy Days Mirin Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/rainy",
+			"Entries": {
+				"Mirin": "{{i18n: dialogue.rain}}"
+			}
+		}
+	]
+}

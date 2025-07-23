@@ -1,0 +1,88 @@
+{    
+	"Changes": 
+    [        
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 38, "Y": 54 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristRailroad01"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 54, "Y": 50 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristRailroad02"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 15, "Y": 40 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristRailroad03"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 39, "Y": 41 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristRailroad04"
+                  }
+               }
+            ],
+            "When":
+            {
+               "TouristNumbersRailroad |contains= medium, large": true
+            }
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Railroad",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 7, "Y": 57 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristRailroad05"
+                  }
+               }
+            ],
+            "When":
+            {
+               "TouristNumbersRailroad |contains= large": true
+            }
+         }
+    ]
+}

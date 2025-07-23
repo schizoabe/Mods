@@ -1,0 +1,1129 @@
+{
+ "Changes": [
+ 
+ //standard
+ 
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Saloon",
+    "Items"
+  ],
+  "Entries": {
+	 "(O)346": null,
+	 "(O)196": null,
+	 "(O)216": null,
+	 "(O)224": null,
+	 "(O)206": null,
+	 "(O)395": null,
+	 
+    "boringvlln.rshops_AlcoholMany": {
+      "RandomItemId": [ "(O)346", "FLAVORED_ITEM Wine (O)398", "(O)903" ],
+	  "Id": "boringvlln.rshops_AlcoholMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_AlcoholFew": {
+		 "Condition": "DAY_OF_WEEK Friday Saturday Sunday",
+      "RandomItemId": [ "(O)903", "(O)346", "FLAVORED_ITEM Wine (O)398" ],
+	  "Id": "boringvlln.rshops_AlcoholFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_AlcoholWineComm": {
+		 "Condition": "DAY_OF_WEEK Friday Saturday Sunday, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "FLAVORED_ITEM Wine (O)398", "FLAVORED_ITEM Wine (O)638", "FLAVORED_ITEM Wine (O)400", "FLAVORED_ITEM Wine (O)406", "FLAVORED_ITEM Wine (O)634", "FLAVORED_ITEM Wine (O)410" ],
+	  "Id": "boringvlln.rshops_AlcoholWineComm",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+	  
+    },
+	"boringvlln.rshops_CaffeinMany": {
+      "RandomItemId": [ "(O)253", "(O)395", "(O)614" ],
+	  "Id": "boringvlln.rshops_CaffeinMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_CaffeinFew": {
+		"Condition": "DAY_OF_WEEK Friday Saturday Sunday",
+      "RandomItemId": [ "(O)395", "(O)614", "(O)253" ],
+	  "Id": "boringvlln.rshops_CaffeinFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 8,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },	
+	"boringvlln.rshops_SpringSatuaWE": {
+      "Condition": "SEASON spring, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207" ],
+	  "Id": "boringvlln.rshops_SpringSatuaWE",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SummerSatuaWE": {
+      "Condition": "SEASON summer, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)198", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907" ],
+	  "Id": "boringvlln.rshops_SummerSatuaWE",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FallSatuaWE": {
+      "Condition": "SEASON fall, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607" ],
+	  "Id": "boringvlln.rshops_FallSatuaWE",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_WinterSoupWE": {
+      "Condition": "SEASON winter, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_WinterSoupWE",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+	  
+    },
+	"boringvlln.rshops_OffSeasonSatuaCommSpring": {
+      "Condition": "SEASON spring, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 191393",
+	  "RandomItemId": [ "(O)198", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607", "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaCommSpring",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaCommSummer": {
+      "Condition": "SEASON summer, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 191393",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607", "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaCommSummer",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaCommFall": {
+      "Condition": "SEASON fall, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 191393",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaCommFall",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaCommWinter": {
+      "Condition": "SEASON winter, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 191393",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaCommWinter",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaJojaSpring": {
+      "Condition": "SEASON spring, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 502261",
+	  "RandomItemId": [ "(O)198", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607", "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaJojaSpring",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,				
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaJojaSummer": {
+      "Condition": "SEASON summer, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 502261",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607", "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaJojaSummer",
+	  "AvoidRepeat": true,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaJojaFall": {
+      "Condition": "SEASON fall, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 502261",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaJojaFall",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaJojaWinter": {
+      "Condition": "SEASON winter, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 502261",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaJojaWinter",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SpringSatua": {
+      "Condition": "SEASON spring",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207" ],
+	  "Id": "boringvlln.rshops_SpringSatua",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },	
+	"boringvlln.rshops_SummerSatua": {
+      "Condition": "SEASON summer",
+	  "RandomItemId": [ "(O)198", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907" ],
+	  "Id": "boringvlln.rshops_SummerSatua",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },	
+	"boringvlln.rshops_FallSatua": {
+      "Condition": "SEASON fall",
+	  "RandomItemId": [ "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607" ],
+	  "Id": "boringvlln.rshops_FallSatua",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },	
+	"boringvlln.rshops_WinterSoup": {
+      "Condition": "SEASON winter",
+	  "RandomItemId": [ "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_WinterSoup",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Satua": {
+      "RandomItemId": [ "(O)194", "(O)195", "(O)727" ],
+	  "Id": "boringvlln.rshops_Satua",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SpringSweets": {
+      "Condition": "SEASON spring",
+	  "RandomItemId": [ "(O)201", "(O)210", "(O)222", "(O)240" ],
+	  "Id": "boringvlln.rshops_SpringSweets",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SummerSweets": {
+      "Condition": "SEASON summer",
+	  "RandomItemId": [ "(O)221", "(O)234", "(O)610", "(O)618", "(O)648", "(O)651", "(O)904", "(O)905", "(O)303" ],
+	  "Id": "boringvlln.rshops_SummerSweets",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FallSweets": {
+      "Condition": "SEASON fall",
+	  "RandomItemId": [ "(O)604", "(O)208", "(O)237", "(O)238", "(O)608", "(O)611", "(O)612" ],
+	  "Id": "boringvlln.rshops_FallSweets",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SpringSweetsWE": {
+      "Condition": "SEASON spring, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)201", "(O)210", "(O)222", "(O)240" ],
+	  "Id": "boringvlln.rshops_SpringSweetsWE",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SummerSweetsWE": {
+      "Condition": "SEASON summer, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)221", "(O)234", "(O)610", "(O)618", "(O)648", "(O)651", "(O)904", "(O)905", "(O)303" ],
+	  "Id": "boringvlln.rshops_SummerSweetsWE",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FallSweetsWE": {
+      "Condition": "SEASON fall, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)604", "(O)208", "(O)237", "(O)238", "(O)608", "(O)611", "(O)612" ],
+	  "Id": "boringvlln.rshops_FallSweetsWE",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Sweets": {
+		"Condition": "SYNCED_RANDOM day boringvlln.rshops_Sweets 0.6", 
+      "RandomItemId": [ "(O)211", "(O)220", "(O)223", "(O)233", "(O)731" ],
+	  "Id": "boringvlln.rshops_Sweets",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 1,	
+    },
+	"boringvlln.rshops_SweetsWE": {
+		"Condition": "DAY_OF_WEEK Friday Saturday Sunday",
+      "RandomItemId": [ "(O)211", "(O)220", "(O)223", "(O)233", "(O)731" ],
+	  "Id": "boringvlln.rshops_SweetsWE",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 5,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+    }
+  },
+  "When": { "Saloon": "standard" }
+},
+
+//hardmode
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Saloon",
+    "Items"
+  ],
+  "Entries": {
+	 "(O)346": null,
+	 "(O)196": null,
+	 "(O)216": null,
+	 "(O)224": null,
+	 "(O)206": null,
+	 "(O)395": null,
+	 
+    "boringvlln.rshops_AlcoholMany": {
+      "RandomItemId": [ "(O)346", "FLAVORED_ITEM Wine (O)398", "(O)903" ],
+	  "Id": "boringvlln.rshops_AlcoholMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_AlcoholFew": {
+		 "Condition": "DAY_OF_WEEK Friday Saturday Sunday",
+      "RandomItemId": [ "(O)903", "(O)346", "FLAVORED_ITEM Wine (O)398" ],
+	  "Id": "boringvlln.rshops_AlcoholFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_AlcoholWineComm": {
+		 "Condition": "DAY_OF_WEEK Friday Saturday Sunday, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "FLAVORED_ITEM Wine (O)398", "FLAVORED_ITEM Wine (O)638", "FLAVORED_ITEM Wine (O)400", "FLAVORED_ITEM Wine (O)406", "FLAVORED_ITEM Wine (O)634", "FLAVORED_ITEM Wine (O)410" ],
+	  "Id": "boringvlln.rshops_AlcoholWineComm",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,				
+              ]
+            }
+          ],
+	  
+    },
+	"boringvlln.rshops_CaffeinMany": {
+      "RandomItemId": [ "(O)253", "(O)395", "(O)614" ],
+	  "Id": "boringvlln.rshops_CaffeinMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_CaffeinFew": {
+		"Condition": "DAY_OF_WEEK Friday Saturday Sunday",
+      "RandomItemId": [ "(O)395", "(O)614", "(O)253" ],
+	  "Id": "boringvlln.rshops_CaffeinFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 8,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },	
+	"boringvlln.rshops_SpringSatuaWE": {
+      "Condition": "SEASON spring, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207" ],
+	  "Id": "boringvlln.rshops_SpringSatuaWE",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SummerSatuaWE": {
+      "Condition": "SEASON summer, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)198", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907" ],
+	  "Id": "boringvlln.rshops_SummerSatuaWE",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FallSatuaWE": {
+      "Condition": "SEASON fall, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607" ],
+	  "Id": "boringvlln.rshops_FallSatuaWE",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_WinterSoupWE": {
+      "Condition": "SEASON winter, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_WinterSoupWE",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+	  
+    },
+	"boringvlln.rshops_OffSeasonSatuaCommSpring": {
+      "Condition": "SEASON spring, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 191393",
+	  "RandomItemId": [ "(O)198", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607", "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaCommSpring",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaCommSummer": {
+      "Condition": "SEASON summer, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 191393",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607", "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaCommSummer",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaCommFall": {
+      "Condition": "SEASON fall, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 191393",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaCommFall",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaCommWinter": {
+      "Condition": "SEASON winter, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 191393",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaCommWinter",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaJojaSpring": {
+      "Condition": "SEASON spring, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 502261",
+	  "RandomItemId": [ "(O)198", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607", "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaJojaSpring",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaJojaSummer": {
+      "Condition": "SEASON summer, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 502261",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607", "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaJojaSummer",
+	  "AvoidRepeat": true,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaJojaFall": {
+      "Condition": "SEASON fall, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 502261",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaJojaFall",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_OffSeasonSatuaJojaWinter": {
+      "Condition": "SEASON winter, DAY_OF_WEEK Monday, PLAYER_HAS_SEEN_EVENT Any 502261",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907", "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607" ],
+	  "Id": "boringvlln.rshops_OffSeasonSatuaJojaWinter",
+	  "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SpringSatua": {
+      "Condition": "SEASON spring",
+	  "RandomItemId": [ "(O)196", "(O)197", "(O)198", "(O)199", "(O)207" ],
+	  "Id": "boringvlln.rshops_SpringSatua",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },	
+	"boringvlln.rshops_SummerSatua": {
+      "Condition": "SEASON summer",
+	  "RandomItemId": [ "(O)198", "(O)206", "(O)213", "(O)215", "(O)224", "(O)230", "(O)609", "(O)728", "(O)907" ],
+	  "Id": "boringvlln.rshops_SummerSatua",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },	
+	"boringvlln.rshops_FallSatua": {
+      "Condition": "SEASON fall",
+	  "RandomItemId": [ "(O)200", "(O)235", "(O)236", "(O)239", "(O)605", "(O)607" ],
+	  "Id": "boringvlln.rshops_FallSatua",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },	
+	"boringvlln.rshops_WinterSoup": {
+      "Condition": "SEASON winter",
+	  "RandomItemId": [ "(O)202", "(O)219", "(O)218", "(O)730" ],
+	  "Id": "boringvlln.rshops_WinterSoup",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Satua": {
+      "RandomItemId": [ "(O)194", "(O)195", "(O)727" ],
+	  "Id": "boringvlln.rshops_Satua",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SpringSweets": {
+      "Condition": "SEASON spring",
+	  "RandomItemId": [ "(O)201", "(O)210", "(O)222", "(O)240" ],
+	  "Id": "boringvlln.rshops_SpringSweets",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SummerSweets": {
+      "Condition": "SEASON summer",
+	  "RandomItemId": [ "(O)221", "(O)234", "(O)610", "(O)618", "(O)648", "(O)651", "(O)904", "(O)905", "(O)303" ],
+	  "Id": "boringvlln.rshops_SummerSweets",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FallSweets": {
+      "Condition": "SEASON fall",
+	  "RandomItemId": [ "(O)604", "(O)208", "(O)237", "(O)238", "(O)608", "(O)611", "(O)612" ],
+	  "Id": "boringvlln.rshops_FallSweets",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SpringSweetsWE": {
+      "Condition": "SEASON spring, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)201", "(O)210", "(O)222", "(O)240" ],
+	  "Id": "boringvlln.rshops_SpringSweetsWE",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SummerSweetsWE": {
+      "Condition": "SEASON summer, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)221", "(O)234", "(O)610", "(O)618", "(O)648", "(O)651", "(O)904", "(O)905", "(O)303" ],
+	  "Id": "boringvlln.rshops_SummerSweetsWE",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FallSweetsWE": {
+      "Condition": "SEASON fall, DAY_OF_WEEK Friday Saturday Sunday",
+	  "RandomItemId": [ "(O)604", "(O)208", "(O)237", "(O)238", "(O)608", "(O)611", "(O)612" ],
+	  "Id": "boringvlln.rshops_FallSweetsWE",
+	   "AvoidRepeat": true,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Sweets": {
+		"Condition": "SYNCED_RANDOM day boringvlln.rshops_Sweets 0.3", 
+      "RandomItemId": [ "(O)211", "(O)220", "(O)223", "(O)233", "(O)731" ],
+	  "Id": "boringvlln.rshops_Sweets",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 1,	
+    },
+	"boringvlln.rshops_SweetsWE": {
+		"Condition": "DAY_OF_WEEK Friday Saturday Sunday",
+      "RandomItemId": [ "(O)211", "(O)220", "(O)223", "(O)233", "(O)731" ],
+	  "Id": "boringvlln.rshops_SweetsWE",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 5,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    }
+  },
+  "When": { "Saloon": "hardmode" }
+},
+]
+}

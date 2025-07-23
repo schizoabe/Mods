@@ -1,0 +1,2420 @@
+{
+  "$id": "1",
+  "ForageSpawnEnabled": true,
+  "LargeObjectSpawnEnabled": true,
+  "OreSpawnEnabled": false,
+  "MonsterSpawnEnabled": false,
+  "Forage_Spawn_Settings": {
+    "$id": "2",
+    "Areas": [
+      {
+        "$id": "3",
+        "SpringItemIndex": [
+          "White Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Waifs Bonnet Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Forest West -- White Mushrooms",
+        "MapName": "Custom_ForestWest",
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 4,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "149,132;8,35",
+          "152,35,76,5",
+          "151,37;80,9",
+          "65,150;57,144",
+          "81,148;73,142"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "4",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "5",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "6"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "7",
+        "SpringItemIndex": [
+          "Dew Cup Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Muffin Button Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Forest West -- Dew Cup and Muffin Button Mushrooms",
+        "MapName": "Custom_ForestWest",
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 4,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "149,132;8,35",
+          "152,35,76,5",
+          "151,37;80,9",
+          "65,150;57,144",
+          "81,148;73,142"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "8",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "9",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "10"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "11",
+        "SpringItemIndex": [
+          "Woodland Stool Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Plump Belly Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Forest West -- Woodland Stool and Plump Belly Mushrooms",
+        "MapName": "Custom_ForestWest",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "149,132;8,35",
+          "152,35,76,5",
+          "151,37;80,9",
+          "65,150;57,144",
+          "81,148;73,142"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "12",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "13",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "14"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "15",
+        "SpringItemIndex": [],
+        "SummerItemIndex": [
+          "Woodland Stool Mushroom",
+          "Plump Belly Mushroom",
+          "Dew Cup Mushroom",
+          "Muffin Button Mushroom"
+        ],
+        "FallItemIndex": [],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Forest West -- Green Rain Day",
+        "MapName": "Custom_ForestWest",
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 15,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [
+          "Diggable",
+          "Quarry",
+          "Stone",
+          "Wood"
+        ],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "16",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "17",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "18"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 2
+      },
+      {
+        "$id": "19",
+        "SpringItemIndex": [
+          "White Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Waifs Bonnet Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Junimo Woods -- White Mushrooms",
+        "MapName": "Custom_JunimoWoods",
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 4,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "91,17;91,17",
+          "87,50;87,50",
+          "88,52;88,52",
+          "58,33;58,33",
+          "29,36;29,36",
+          "61,14;61,14",
+          "70,10;0,0",
+          "93,15;79,3",
+          "41,47;32,30",
+          "27,35;18,35",
+          "31,31;5,12",
+          "26,38;10,32",
+          "13,63;6,49",
+          "28,73;16,57",
+          "16,98;0,74",
+          "28,81;17,78",
+          "84,96;75,90",
+          "71,91;70,85",
+          "89,88;87,78",
+          "82,82;74,78",
+          "70,78;62,77",
+          "61,109;14,81",
+          "46,81;33,59",
+          "85,68;77,67",
+          "69,74;65,73",
+          "73,72;69,71",
+          "76,70;73,69",
+          "90,95;86,95",
+          "73,98;67,98",
+          "75,85;72,85",
+          "66,67;64,58",
+          "85,54;70,49",
+          "89,63;87,55",
+          "93,72;92,71",
+          "57,46;50,37",
+          "61,54;30,52",
+          "51,42;42,23",
+          "57,31;51,12",
+          "95,36;87,29",
+          "58,47;51,38",
+          "66,35;61,33",
+          "84,39;72,36",
+          "88,19;82,16",
+          "84,36;75,27",
+          "74,30;58,25",
+          "61,19;58,18",
+          "47,22;41,21",
+          "77,19;69,18",
+          "35,32;33,23",
+          "32,59;9,38",
+          "74,59;58,44",
+          "69,25;55,18",
+          "57,68;37,56",
+          "49,25;23,10",
+          "82,18;64,8",
+          "91,42;79,27",
+          "36,26;22,17",
+          "62,83;58,65",
+          "94,84;77,58",
+          "76,75;59,62",
+          "65,84;60,63",
+          "52,51;35,38"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "20",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "21",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "22"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "23",
+        "SpringItemIndex": [
+          "Dew Cup Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Muffin Button Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Junimo Woods -- Dew Cup and Muffin Button Mushrooms",
+        "MapName": "Custom_JunimoWoods",
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 4,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "91,17;91,17",
+          "87,50;87,50",
+          "88,52;88,52",
+          "58,33;58,33",
+          "29,36;29,36",
+          "61,14;61,14",
+          "70,10;0,0",
+          "93,15;79,3",
+          "41,47;32,30",
+          "27,35;18,35",
+          "31,31;5,12",
+          "26,38;10,32",
+          "13,63;6,49",
+          "28,73;16,57",
+          "16,98;0,74",
+          "28,81;17,78",
+          "84,96;75,90",
+          "71,91;70,85",
+          "89,88;87,78",
+          "82,82;74,78",
+          "70,78;62,77",
+          "61,109;14,81",
+          "46,81;33,59",
+          "85,68;77,67",
+          "69,74;65,73",
+          "73,72;69,71",
+          "76,70;73,69",
+          "90,95;86,95",
+          "73,98;67,98",
+          "75,85;72,85",
+          "66,67;64,58",
+          "85,54;70,49",
+          "89,63;87,55",
+          "93,72;92,71",
+          "57,46;50,37",
+          "61,54;30,52",
+          "51,42;42,23",
+          "57,31;51,12",
+          "95,36;87,29",
+          "58,47;51,38",
+          "66,35;61,33",
+          "84,39;72,36",
+          "88,19;82,16",
+          "84,36;75,27",
+          "74,30;58,25",
+          "61,19;58,18",
+          "47,22;41,21",
+          "77,19;69,18",
+          "35,32;33,23",
+          "32,59;9,38",
+          "74,59;58,44",
+          "69,25;55,18",
+          "57,68;37,56",
+          "49,25;23,10",
+          "82,18;64,8",
+          "91,42;79,27",
+          "36,26;22,17",
+          "62,83;58,65",
+          "94,84;77,58",
+          "76,75;59,62",
+          "65,84;60,63",
+          "52,51;35,38"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "24",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "25",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "26"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "27",
+        "SpringItemIndex": [
+          "Woodland Stool Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Plump Belly Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Junimo Woods -- Woodland Stool and Plump Belly Mushrooms",
+        "MapName": "Custom_JunimoWoods",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "91,17;91,17",
+          "87,50;87,50",
+          "88,52;88,52",
+          "58,33;58,33",
+          "29,36;29,36",
+          "61,14;61,14",
+          "70,10;0,0",
+          "93,15;79,3",
+          "41,47;32,30",
+          "27,35;18,35",
+          "31,31;5,12",
+          "26,38;10,32",
+          "13,63;6,49",
+          "28,73;16,57",
+          "16,98;0,74",
+          "28,81;17,78",
+          "84,96;75,90",
+          "71,91;70,85",
+          "89,88;87,78",
+          "82,82;74,78",
+          "70,78;62,77",
+          "61,109;14,81",
+          "46,81;33,59",
+          "85,68;77,67",
+          "69,74;65,73",
+          "73,72;69,71",
+          "76,70;73,69",
+          "90,95;86,95",
+          "73,98;67,98",
+          "75,85;72,85",
+          "66,67;64,58",
+          "85,54;70,49",
+          "89,63;87,55",
+          "93,72;92,71",
+          "57,46;50,37",
+          "61,54;30,52",
+          "51,42;42,23",
+          "57,31;51,12",
+          "95,36;87,29",
+          "58,47;51,38",
+          "66,35;61,33",
+          "84,39;72,36",
+          "88,19;82,16",
+          "84,36;75,27",
+          "74,30;58,25",
+          "61,19;58,18",
+          "47,22;41,21",
+          "77,19;69,18",
+          "35,32;33,23",
+          "32,59;9,38",
+          "74,59;58,44",
+          "69,25;55,18",
+          "57,68;37,56",
+          "49,25;23,10",
+          "82,18;64,8",
+          "91,42;79,27",
+          "36,26;22,17",
+          "62,83;58,65",
+          "94,84;77,58",
+          "76,75;59,62",
+          "65,84;60,63",
+          "52,51;35,38"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "28",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "29",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "30"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "31",
+        "SpringItemIndex": [],
+        "SummerItemIndex": [
+          "Woodland Stool Mushroom",
+          "Plump Belly Mushroom",
+          "Dew Cup Mushroom",
+          "Muffin Button Mushroom"
+        ],
+        "FallItemIndex": [],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Junimo Woods -- Green Rain Day",
+        "MapName": "Custom_JunimoWoods",
+        "MinimumSpawnsPerDay": 6,
+        "MaximumSpawnsPerDay": 7,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "91,17;91,17",
+          "87,50;87,50",
+          "88,52;88,52",
+          "58,33;58,33",
+          "29,36;29,36",
+          "61,14;61,14",
+          "70,10;0,0",
+          "93,15;79,3",
+          "41,47;32,30",
+          "27,35;18,35",
+          "31,31;5,12",
+          "26,38;10,32",
+          "13,63;6,49",
+          "28,73;16,57",
+          "16,98;0,74",
+          "28,81;17,78",
+          "84,96;75,90",
+          "71,91;70,85",
+          "89,88;87,78",
+          "82,82;74,78",
+          "70,78;62,77",
+          "61,109;14,81",
+          "46,81;33,59",
+          "85,68;77,67",
+          "69,74;65,73",
+          "73,72;69,71",
+          "76,70;73,69",
+          "90,95;86,95",
+          "73,98;67,98",
+          "75,85;72,85",
+          "66,67;64,58",
+          "85,54;70,49",
+          "89,63;87,55",
+          "93,72;92,71",
+          "57,46;50,37",
+          "61,54;30,52",
+          "51,42;42,23",
+          "57,31;51,12",
+          "95,36;87,29",
+          "58,47;51,38",
+          "66,35;61,33",
+          "84,39;72,36",
+          "88,19;82,16",
+          "84,36;75,27",
+          "74,30;58,25",
+          "61,19;58,18",
+          "47,22;41,21",
+          "77,19;69,18",
+          "35,32;33,23",
+          "32,59;9,38",
+          "74,59;58,44",
+          "69,25;55,18",
+          "57,68;37,56",
+          "49,25;23,10",
+          "82,18;64,8",
+          "91,42;79,27",
+          "36,26;22,17",
+          "62,83;58,65",
+          "94,84;77,58",
+          "76,75;59,62",
+          "65,84;60,63",
+          "52,51;35,38"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "32",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "33",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "34"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 2
+      },
+      {
+        "$id": "35",
+        "SpringItemIndex": [
+          "White Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Waifs Bonnet Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Blue Moon Vineyard -- White Mushrooms",
+        "MapName": "Custom_BlueMoonVineyard",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "56,58;0,47"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "36",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "37",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "38"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "39",
+        "SpringItemIndex": [
+          "Dew Cup Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Muffin Button Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Blue Moon Vineyard -- Dew Cup and Muffin Button Mushrooms",
+        "MapName": "Custom_BlueMoonVineyard",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "56,58;0,47"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "40",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "41",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "42"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "43",
+        "SpringItemIndex": [
+          "Tooting Funnel Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Spring Cap Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Blue Moon Vineyard -- Tooting Funnel and Spring Cap Mushrooms",
+        "MapName": "Custom_BlueMoonVineyard",
+        "MinimumSpawnsPerDay": -1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "56,58;0,47"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "44",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "45",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "46"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "47",
+        "SpringItemIndex": [],
+        "SummerItemIndex": [
+          "Tooting Funnel Mushroom",
+          "Spring Cap Mushroom",
+          "Dew Cup Mushroom",
+          "Muffin Button Mushroom"
+        ],
+        "FallItemIndex": [],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Blue Moon Vineyard -- Green Rain Day",
+        "MapName": "Custom_BlueMoonVineyard",
+        "MinimumSpawnsPerDay": 4,
+        "MaximumSpawnsPerDay": 5,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "56,58;0,47"
+        ],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "48",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "49",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "50"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 2
+      },
+      {
+        "$id": "51",
+        "SpringItemIndex": [
+          "White Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Waifs Bonnet Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Custom Garden -- White Mushrooms",
+        "MapName": "Custom_Garden",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "32,27;13,13"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "52",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "53",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "54"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "55",
+        "SpringItemIndex": [
+          "Dew Cup Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Muffin Button Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Garden -- Dew Cup and Muffin Button Mushrooms",
+        "MapName": "Custom_Garden",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "32,27;13,13"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "56",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "57",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "58"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "59",
+        "SpringItemIndex": [
+          "Tooting Funnel Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Spring Cap Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Custom Garden -- Tooting Funnel and Spring Cap Mushrooms",
+        "MapName": "Custom_Garden",
+        "MinimumSpawnsPerDay": -1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "32,27;13,13"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "60",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "61",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "62"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "63",
+        "SpringItemIndex": [],
+        "SummerItemIndex": [
+          "Tooting Funnel Mushroom",
+          "Spring Cap Mushroom",
+          "Dew Cup Mushroom",
+          "Muffin Button Mushroom"
+        ],
+        "FallItemIndex": [],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Custom Garden -- Green Rain Day",
+        "MapName": "Custom_Garden",
+        "MinimumSpawnsPerDay": 4,
+        "MaximumSpawnsPerDay": 5,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [
+          "Diggable",
+          "Quarry",
+          "Stone",
+          "Wood"
+        ],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "64",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "65",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "66"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 2
+      },
+      {
+        "$id": "67",
+        "SpringItemIndex": [
+          "White Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Waifs Bonnet Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Shearwater Bridge -- White Mushrooms",
+        "MapName": "Custom_ShearwaterBridge",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "68",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "69",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "70"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "71",
+        "SpringItemIndex": [
+          "Dew Cup Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Muffin Button Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Shearwater Bridge -- Dew Cup and Muffin Button Mushrooms",
+        "MapName": "Custom_ShearwaterBridge",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "72",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "73",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "74"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "75",
+        "SpringItemIndex": [
+          "Tooting Funnel Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Spring Cap Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Shearwater Bridge -- Tooting Funnel and Spring Cap Mushrooms",
+        "MapName": "Custom_ShearwaterBridge",
+        "MinimumSpawnsPerDay": -1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "76",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "77",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "78"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "79",
+        "SpringItemIndex": [],
+        "SummerItemIndex": [
+          "Tooting Funnel Mushroom",
+          "Spring Cap Mushroom",
+          "Dew Cup Mushroom",
+          "Muffin Button Mushroom"
+        ],
+        "FallItemIndex": [],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Shearwater Bridge -- Green Rain Day",
+        "MapName": "Custom_ShearwaterBridge",
+        "MinimumSpawnsPerDay": 4,
+        "MaximumSpawnsPerDay": 5,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [
+          "Diggable",
+          "Quarry",
+          "Stone",
+          "Wood"
+        ],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "80",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "81",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "82"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 2
+      },
+      {
+        "$id": "83",
+        "SpringItemIndex": [
+          "White Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Waifs Bonnet Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Highlands -- White Mushrooms",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 3,
+        "MaximumSpawnsPerDay": 5,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "148,85;101,44"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "84",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "85",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "86"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "87",
+        "SpringItemIndex": [
+          "Dew Cup Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Muffin Button Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Highlands -- Dew Cup and Muffin Button Mushrooms",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 4,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "148,85;101,44"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "88",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "89",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "90"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "91",
+        "SpringItemIndex": [
+          "Ridge Puff Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Stalk Cluster Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Highlands -- Ridge Puff and Stalk Cluster Mushrooms",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "148,85;101,44"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "92",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "93",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "94"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "95",
+        "SpringItemIndex": [],
+        "SummerItemIndex": [
+          "Ridge Puff Mushroom",
+          "Stalk Cluster Mushroom",
+          "Dew Cup Mushroom",
+          "Muffin Button Mushroom"
+        ],
+        "FallItemIndex": [],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Highlands -- Green Rain Day",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 7,
+        "MaximumSpawnsPerDay": 12,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "148,85;101,44"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "96",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "97",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "98"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 2
+      },
+      {
+        "$id": "99",
+        "SpringItemIndex": [
+          "White Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Waifs Bonnet Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Summit -- White Mushrooms",
+        "MapName": "Custom_SVESummit",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "100",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "101",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "102"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "103",
+        "SpringItemIndex": [
+          "Dew Cup Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Muffin Button Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Summit -- Dew Cup and Muffin Button Mushrooms",
+        "MapName": "Custom_SVESummit",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "104",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "105",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "106"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "107",
+        "SpringItemIndex": [
+          "Ridge Puff Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Stalk Cluster Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Summit -- Ridge Puff and Stalk Cluster Mushrooms",
+        "MapName": "Custom_SVESummit",
+        "MinimumSpawnsPerDay": 0,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "20,27;6,20"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "108",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "109",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "110"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "111",
+        "SpringItemIndex": [],
+        "SummerItemIndex": [
+          "Ridge Puff Mushroom",
+          "Stalk Cluster Mushroom",
+          "Dew Cup Mushroom",
+          "Muffin Button Mushroom"
+        ],
+        "FallItemIndex": [],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "SVE Summit -- Green Rain Day",
+        "MapName": "Custom_SVESummit",
+        "MinimumSpawnsPerDay": 4,
+        "MaximumSpawnsPerDay": 6,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "20,27;6,20"
+        ],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "112",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "113",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "114"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 2
+      },
+      {
+        "$id": "115",
+        "SpringItemIndex": [
+          "White Mushroom",
+          "Dew Cup Mushroom",
+          "Muffin Button Mushroom",
+          "Plump Belly Mushroom",
+          "Stalk Cluster Mushroom",
+          "Spring Cap Mushroom",
+          "Tooting Funnel Mushroom",
+          "Woodland Stool Mushroom",
+          "Ridge Puff Mushroom",
+          "St Mayalls Mushroom",
+          "Lord Edmondsons Mushroom",
+          "Glow Cap Mushroom"
+        ],
+        "SummerItemIndex": [
+          "White Mushroom",
+          "Dew Cup Mushroom",
+          "Muffin Button Mushroom",
+          "Plump Belly Mushroom",
+          "Stalk Cluster Mushroom",
+          "Spring Cap Mushroom",
+          "Tooting Funnel Mushroom",
+          "Woodland Stool Mushroom",
+          "Ridge Puff Mushroom",
+          "St Mayalls Mushroom",
+          "Lord Edmondsons Mushroom",
+          "Glow Cap Mushroom"
+        ],
+        "FallItemIndex": [
+          "White Mushroom",
+          "Dew Cup Mushroom",
+          "Muffin Button Mushroom",
+          "Plump Belly Mushroom",
+          "Stalk Cluster Mushroom",
+          "Spring Cap Mushroom",
+          "Tooting Funnel Mushroom",
+          "Woodland Stool Mushroom",
+          "Ridge Puff Mushroom",
+          "St Mayalls Mushroom",
+          "Lord Edmondsons Mushroom",
+          "Glow Cap Mushroom"
+        ],
+        "WinterItemIndex": [
+          "White Mushroom",
+          "Dew Cup Mushroom",
+          "Muffin Button Mushroom",
+          "Plump Belly Mushroom",
+          "Stalk Cluster Mushroom",
+          "Spring Cap Mushroom",
+          "Tooting Funnel Mushroom",
+          "Woodland Stool Mushroom",
+          "Ridge Puff Mushroom",
+          "St Mayalls Mushroom",
+          "Lord Edmondsons Mushroom",
+          "Glow Cap Mushroom"
+        ],
+        "UniqueAreaID": "SVE Sprite Spring Cave -- Mushroom Cave",
+        "MapName": "Custom_SpriteSpringCave",
+        "MinimumSpawnsPerDay": -2,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "116",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "117",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "118"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": null
+      },
+      {
+        "$id": "119",
+        "SpringItemIndex": [
+          "White Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Waifs Bonnet Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "Grandpas Farm -- White Mushroom",
+        "MapName": "Farm",
+        "MinimumSpawnsPerDay": -1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [
+          "Diggable",
+          "Quarry",
+          "Stone",
+          "Wood"
+        ],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "139,49;0,0",
+          "139,96;35,0",
+          "162,155;132,83",
+          "34,96;0,78"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "$id": "120",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "121",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [
+            "FARM_TYPE Standard {{HasMod|contains=flashshifter.GrandpasFarm}}"
+          ],
+          "CPConditions": {
+            "$id": "122"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": null
+      },
+      {
+        "$id": "123",
+        "SpringItemIndex": [
+          "Dew Cup Mushroom"
+        ],
+        "SummerItemIndex": [],
+        "FallItemIndex": [
+          "Muffin Button Mushroom"
+        ],
+        "WinterItemIndex": [],
+        "UniqueAreaID": "Grandpas Farm -- Dew Cup and Muffin Buttom Mushroom",
+        "MapName": "Forest",
+        "MinimumSpawnsPerDay": -1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [
+          "Diggable",
+          "Quarry",
+          "Stone",
+          "Wood"
+        ],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "139,47;0,0",
+          "139,96;66,76"
+        ],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "124",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "125",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [
+            "FARM_TYPE Standard {{HasMod|contains=flashshifter.GrandpasFarm}}"
+          ],
+          "CPConditions": {
+            "$id": "126"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 2
+      }
+    ],
+    "PercentExtraSpawnsPerForagingLevel": 0,
+    "SpringItemIndex": [
+      16,
+      20,
+      22,
+      257
+    ],
+    "SummerItemIndex": [
+      396,
+      398,
+      402,
+      404
+    ],
+    "FallItemIndex": [
+      281,
+      404,
+      420,
+      422
+    ],
+    "WinterItemIndex": [],
+    "CustomTileIndex": []
+  },
+  "Large_Object_Spawn_Settings": {
+    "$id": "127",
+    "Areas": [
+      {
+        "$id": "128",
+        "ObjectTypes": [
+          "GiantDewCup",
+          "GiantMuffinButton",
+          "GiantPlumpBelly",
+          "GiantWoodlandStool",
+          "GiantSpringCap",
+          "GiantRidgePuff"
+        ],
+        "FindExistingObjectLocations": false,
+        "PercentExtraSpawnsPerSkillLevel": 0,
+        "RelatedSkill": "Foraging",
+        "UniqueAreaID": "SVE Forest West -- Giant Mushrooms",
+        "MapName": "Custom_ForestWest",
+        "MinimumSpawnsPerDay": 5,
+        "MaximumSpawnsPerDay": 10,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "149,132;8,35",
+          "152,35,76,5",
+          "151,37;80,9",
+          "65,150;57,144",
+          "81,148;73,142"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "129",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "130",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "131"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "132",
+        "ObjectTypes": [
+          "GiantDewCup",
+          "GiantMuffinButton",
+          "GiantPlumpBelly",
+          "GiantWoodlandStool",
+          "GiantSpringCap",
+          "GiantRidgePuff"
+        ],
+        "FindExistingObjectLocations": false,
+        "PercentExtraSpawnsPerSkillLevel": 0,
+        "RelatedSkill": "Foraging",
+        "UniqueAreaID": "SVE Junimo Woods -- Giant Mushrooms",
+        "MapName": "Custom_JunimoWoods",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "91,17;91,17",
+          "87,50;87,50",
+          "88,52;88,52",
+          "58,33;58,33",
+          "29,36;29,36",
+          "61,14;61,14",
+          "70,10;0,0",
+          "93,15;79,3",
+          "41,47;32,30",
+          "27,35;18,35",
+          "31,31;5,12",
+          "26,38;10,32",
+          "13,63;6,49",
+          "28,73;16,57",
+          "16,98;0,74",
+          "28,81;17,78",
+          "84,96;75,90",
+          "71,91;70,85",
+          "89,88;87,78",
+          "82,82;74,78",
+          "70,78;62,77",
+          "61,109;14,81",
+          "46,81;33,59",
+          "85,68;77,67",
+          "69,74;65,73",
+          "73,72;69,71",
+          "76,70;73,69",
+          "90,95;86,95",
+          "73,98;67,98",
+          "75,85;72,85",
+          "66,67;64,58",
+          "85,54;70,49",
+          "89,63;87,55",
+          "93,72;92,71",
+          "57,46;50,37",
+          "61,54;30,52",
+          "51,42;42,23",
+          "57,31;51,12",
+          "95,36;87,29",
+          "58,47;51,38",
+          "66,35;61,33",
+          "84,39;72,36",
+          "88,19;82,16",
+          "84,36;75,27",
+          "74,30;58,25",
+          "61,19;58,18",
+          "47,22;41,21",
+          "77,19;69,18",
+          "35,32;33,23",
+          "32,59;9,38",
+          "74,59;58,44",
+          "69,25;55,18",
+          "57,68;37,56",
+          "49,25;23,10",
+          "82,18;64,8",
+          "91,42;79,27",
+          "36,26;22,17",
+          "62,83;58,65",
+          "94,84;77,58",
+          "76,75;59,62",
+          "65,84;60,63",
+          "52,51;35,38"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "133",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "134",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "135"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "136",
+        "ObjectTypes": [
+          "GiantDewCup",
+          "GiantMuffinButton",
+          "GiantPlumpBelly",
+          "GiantWoodlandStool",
+          "GiantSpringCap",
+          "GiantRidgePuff"
+        ],
+        "FindExistingObjectLocations": false,
+        "PercentExtraSpawnsPerSkillLevel": 0,
+        "RelatedSkill": "Foraging",
+        "UniqueAreaID": "SVE Garden -- Giant Mushrooms",
+        "MapName": "Custom_Garden",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "32,27;13,13"
+        ],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "137",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "138",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "139"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "140",
+        "ObjectTypes": [
+          "GiantDewCup",
+          "GiantMuffinButton",
+          "GiantPlumpBelly",
+          "GiantWoodlandStool",
+          "GiantSpringCap",
+          "GiantRidgePuff"
+        ],
+        "FindExistingObjectLocations": false,
+        "PercentExtraSpawnsPerSkillLevel": 0,
+        "RelatedSkill": "Foraging",
+        "UniqueAreaID": "SVE Blue Moon Vineyard -- Giant Mushrooms",
+        "MapName": "Custom_BlueMoonVineyard",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "32,27;13,13"
+        ],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "141",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "142",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "143"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "144",
+        "ObjectTypes": [
+          "GiantDewCup",
+          "GiantMuffinButton",
+          "GiantPlumpBelly",
+          "GiantWoodlandStool",
+          "GiantSpringCap",
+          "GiantRidgePuff"
+        ],
+        "FindExistingObjectLocations": false,
+        "PercentExtraSpawnsPerSkillLevel": 0,
+        "RelatedSkill": "Foraging",
+        "UniqueAreaID": "SVE Shearwater Bridge -- Giant Mushrooms",
+        "MapName": "Custom_ShearwaterBridge",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "145",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "146",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "147"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      },
+      {
+        "$id": "148",
+        "ObjectTypes": [
+          "GiantDewCup",
+          "GiantMuffinButton",
+          "GiantPlumpBelly",
+          "GiantWoodlandStool",
+          "GiantSpringCap",
+          "GiantRidgePuff"
+        ],
+        "FindExistingObjectLocations": false,
+        "PercentExtraSpawnsPerSkillLevel": 0,
+        "RelatedSkill": "Foraging",
+        "UniqueAreaID": "SVE Highlands -- Giant Mushrooms",
+        "MapName": "Custom_Highlands",
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 5,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "148,85;101,44"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "149",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "150",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "GreenRain"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "151"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 3
+      }
+    ],
+    "CustomTileIndex": []
+  },
+  "Ore_Spawn_Settings": {
+    "$id": "152",
+    "Areas": [],
+    "PercentExtraSpawnsPerMiningLevel": 0,
+    "MiningLevelRequired": {
+      "$id": "153",
+      "Stone": 0,
+      "Geode": 0,
+      "FrozenGeode": 5,
+      "MagmaGeode": 8,
+      "OmniGeode": 0,
+      "Gem": 6,
+      "Copper": 0,
+      "Iron": 4,
+      "Gold": 7,
+      "Iridium": 9,
+      "Mystic": 10,
+      "Radioactive": 0,
+      "Diamond": 6,
+      "Ruby": 6,
+      "Jade": 6,
+      "Amethyst": 6,
+      "Topaz": 6,
+      "Emerald": 6,
+      "Aquamarine": 6,
+      "Mussel": 0,
+      "Fossil": 0,
+      "Clay": 0,
+      "CinderShard": 0
+    },
+    "StartingSpawnChance": {
+      "$id": "154",
+      "Stone": 66,
+      "Geode": 8,
+      "FrozenGeode": 4,
+      "MagmaGeode": 2,
+      "OmniGeode": 0,
+      "Gem": 5,
+      "Copper": 21,
+      "Iron": 15,
+      "Gold": 10,
+      "Iridium": 1,
+      "Mystic": 1,
+      "Radioactive": 0,
+      "Diamond": 0,
+      "Ruby": 0,
+      "Jade": 0,
+      "Amethyst": 0,
+      "Topaz": 0,
+      "Emerald": 0,
+      "Aquamarine": 0,
+      "Mussel": 0,
+      "Fossil": 0,
+      "Clay": 0,
+      "CinderShard": 0
+    },
+    "LevelTenSpawnChance": {
+      "$id": "155",
+      "Stone": 48,
+      "Geode": 2,
+      "FrozenGeode": 2,
+      "MagmaGeode": 2,
+      "OmniGeode": 0,
+      "Gem": 5,
+      "Copper": 16,
+      "Iron": 13,
+      "Gold": 10,
+      "Iridium": 1,
+      "Mystic": 1,
+      "Radioactive": 0,
+      "Diamond": 0,
+      "Ruby": 0,
+      "Jade": 0,
+      "Amethyst": 0,
+      "Topaz": 0,
+      "Emerald": 0,
+      "Aquamarine": 0,
+      "Mussel": 0,
+      "Fossil": 0,
+      "Clay": 0,
+      "CinderShard": 0
+    },
+    "CustomTileIndex": []
+  },
+  "Monster_Spawn_Settings": {
+    "$id": "156",
+    "Areas": [],
+    "CustomTileIndex": []
+  },
+  "QuarryTileIndex": [
+    556,
+    558,
+    583,
+    606,
+    607,
+    608,
+    630,
+    635,
+    636,
+    680,
+    681,
+    685
+  ],
+  "File_Conditions": {
+    "$id": "157",
+    "FarmTypes": [],
+    "FarmerNames": [],
+    "SaveFileNames": [],
+    "OtherMods": {
+      "$id": "158"
+    }
+  }
+}

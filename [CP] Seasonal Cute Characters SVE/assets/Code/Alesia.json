@@ -1,0 +1,56 @@
+{
+	"Changes": [
+
+        //Alesia
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Alesia_{{Season}}",
+            "FromFile": "assets/{{AlesiaPortrait}}/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/Alesia_FlowerDance",
+            "FromFile": "assets/{{AlesiaPortrait}}/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"      
+        },
+        {
+            "LogName": "Vendor",
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Alesia_Vendor",
+            "FromFile": "assets/{{AlesiaPortrait}}/Alesia_{{Season}}.png",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 64,
+                "Height": 64
+
+            },
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        },
+
+        //Redunant But Will Fix any issues of portraits not showing up for Temporary Actor Calls within SVE
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Alesia",
+            "FromFile": "assets/{{AlesiaPortrait}}/Alesia_{{Season}}.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        }
+
+    ]
+}

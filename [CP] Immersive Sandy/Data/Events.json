@@ -1,0 +1,96 @@
+{
+	"Changes":[
+		
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Events/BusStop",
+			"Entries": {  "13609000/n ccVault/f Emily 500/f Sandy 500/w sunny/t 1000 1700": "playful/13 14/farmer 24 20 0 Emily 23 12 0 Sandy -30 -30 2/skippable/addConversationTopic SandyComesToTown 7/pause 1000/move farmer 0 -8 3/faceDirection Emily 1/pause 200/emote farmer 32/speak Emily \"Oh, hi, @!\"/pause 200/emote farmer 40/pause 200/speak Emily \"Oh, I was just thinking about going to the desert to try and convince Sandy that she should come visit Pelican Town more.$h#$b#She's always talking about how lonely things are over there, but I can't seem to persuade her that it would be worthwhile to make the trip here.$s\"/pause 200/emote farmer 28/pause 500/emote Emily 16/pause 200/speak Emily \"Hey! Maybe if you came along, we could talk to her together. What do you say, @?$h\"/pause 500/emote farmer 56/pause 200/textAboveHead Emily \"Great! Let's go.\"/move Emily -1 0 3/move Emily 0 -2 0/warp Emily -30 -30/move farmer -2 0 3/move farmer 0 -2 0/warp farmer -30 -30/globalFade/viewport -1000 -1000/changeLocation SandyHouse/warp Sandy 2 5/pause 500/fade/viewport 8 5/pause 500/warp Emily 4 8/playSound doorClose/move Emily 0 -3 3/faceDirection Sandy 1 true/textAboveHead Sandy \"Hi, Em!\"/pause 1000/warp farmer 4 8/playSound doorClose/pause 100/move farmer 0 -2 3/pause 200/speak Sandy \"Oh, hi, sweetie! Did you tag along with Emily, or are you here to buy seeds?$h\"/pause 200/speak Emily \"No, @'s here with me.$3#$b#We wanted to talk to you about visiting Pelican Town more often.$3\"/pause 200/emote farmer 32/pause 200/speak Sandy \"Oh, so you two are ganging up on me, huh?$h\"/pause 500/speak Emily \"You're always going on and on about how bored you are out here in the desert.$3\"/pause 200/emote Sandy 28/pause 200/speak Sandy \"That's true... but who will manage the store when I'm not here?$s\"/pause 200/speak Emily \"You don't even get that many customers. You can afford to take a break now and again.$3#$b#It's not good for you to be cooped up in here all the time.$s\"/pause 500/emote Sandy 28/pause 200/speak Sandy \"Okay, Emily, you win.#$b#I'll visit on Sundays, sound good?\"/pause 200/emote farmer 56/pause 100/emote Emily 32/pause 200/speak Emily \"Oh, this is going to be so great Sandy! We'll be able to spend more time together.$h#$b#You'll be joining our aerobics class in no time!\"/pause 200/jump Sandy 4/emote farmer 28/pause 200/globalFade/viewport -1000 -1000/end dialogueWarpout Emily \"Thanks again for coming with me @!\""
+					}
+		},
+
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Entries": {  "13609001/f Sandy 1000/e 13609000/d Mon Tue Wed Thu Sat Sun/t 1800 2200": "Saloon1/7 20/farmer 12 20 3 Elliott 4 19 2 Leah 2 20 1 Lewis 5 22 1 Marnie 6 22 3 Clint 9 22 1 Pam 7 18 1 Pierre 16 20 0 Gus 14 18 2 Emily 15 17 0 Sandy 2 18 0/skippable/addConversationTopic SandyVisitsTheSaloon 4/animate Gus false true 200 18 18 19 19 20 20/animate Elliott false true 500 16 16 16 17 17 18 18 18 19 19 19/advancedMove Emily true -3 0 4 5000 3 0 4 5000/pause 1000/move farmer -6 0 3/pause 200/emote farmer 16/pause 200/move farmer 0 -2 0/move farmer -3 0 3/pause 200/faceDirection Sandy 1/pause 200/emote Sandy 32/pause 200/speak Sandy \"Oh, hi sweetie! Didn't expect to see me here on a Friday night, huh?$h\"/pause 200/emote farmer 8/pause 200/speak Sandy \"Well, I've been thinking more about what you and Emily said... how I should be more sociable and not lock myself in the store all the time.#$b#So here I am trying to be more sociable! You should've seen Emily's face when I walked in.$h\"/pause 200/emote farmer 32/pause 200/speak Sandy \"Unfortunately I don't know many people here...$s\"/pause 500/emote farmer 40/pause 200/emote Sandy 16/pause 200/speak Sandy \"Sure, if it's not too much trouble, I'd love it if you could introduce me to some of the people here!$h\"/pause 200/emote farmer 32/pause 200/advancedMove farmer false 2 0 0 3 3 1000/advancedMove Sandy false 3 0 0 2 3 1000/pause 2500/stopAdvancedMoves/emote farmer 40/pause 300/speak Leah \"Nice to meet you, Sandy!$h#$b#I'm an artist, and Elliott here is a writer.\"/pause 200/emote Elliott 32/speak Elliott \"You'll find Leah and me here most Friday nights.$h\"/pause 200/emote Sandy 32/faceDirection farmer 2/pause 200/move Sandy 1 0 2/move Sandy 0 1 2/pause 200/faceDirection Lewis 0 true/faceDirection Marnie 0/textAboveHead Marnie \"Hi, I'm Marnie!\"/pause 1200/speak Lewis \"Why, hello, Sandy! It's good to see you mingling with the townsfolk.$h#$b#Does this mean we'll be seeing you here more often at the Saloon?\"/pause 200/speak Sandy \"Well, anything's possible now that the bus is back in service.$h\"/pause 200/emote Lewis 32/pause 200/speak Lewis \"I want you to know that you're always welcome to join our festivals. We want you to feel like you're a part of this community too!\"/pause 200/speak Sandy \"Why, thank you! I'll keep that in mind.$h\"/pause 500/move Sandy 2 0 1/move farmer 2 0 2/move farmer 0 1 1/move farmer 1 0 1/emote farmer 40/pause 200/jump Clint 5/faceDirection Clint 3/pause 200/emote Clint 16/pause 200/speak Sandy \"Oh, you must be Clint! Emily's told me a lot about you.$h\"/pause 200/speak Clint \"*gulp*$4\"/pause 1000/emote farmer 28/pause 100/speak Sandy \"Uh... well, nice to meet you.$s\"/pause 200/faceDirection Sandy 2 true/faceDirection farmer 0/pause 200/speak Sandy \"Well, I think that's enough new people for one evening.#$b#Why don't you help me pick a song to dance to on the jukebox? This music is a little...1800s for my taste.$h\"/pause 200/emote farmer 56/pause 200/advancedMove farmer false -1 0 0 -2 -2 0 0 -1/advancedMove Sandy false -2 0 0 -2/pause 500/globalFade/viewport -1000 -1000/speak Sandy \"Thanks for introducing me to your friends, @. I can't wait to come back next week!$h\"/pause 200/end"
+					}
+		},
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Entries": {
+                "13609002/f Sandy 1500/x SandyNeedsAdvice": "null"
+        	}	
+        },	 
+
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Events/SandyHouse",
+			"Entries": {  "13609003/n SandyNeedsAdvice/t 900 2400": "distantBanjo/8 5/farmer 4 8 0 Sandy 2 5 2/skippable/pause 500/move farmer 0 -3 3/faceDirection Sandy 1/pause 500/speak Sandy \"Thanks for stopping by @!\"/pause 200/emote farmer 8/pause 200/speak Sandy \"So Emily keeps trying to get me to join Caroline's aerobics class, but I'm really not into that sort of thing.$s#$b#But I do think that I need some sort of hobby, wouldn't you agree?\"/pause 200/emote farmer 32/pause 200/faceDirection Sandy 2/pause 200/speak Sandy \"Here, sweetie, I want you take a look at these sketches.\"/pause 100/move farmer -1 0 2/pause 700/emote farmer 16/pause 300/speak Sandy \"Pretty good, huh?$h#$b#Of course, you know I love flowers, so I was thinking maybe I could start making either flower crowns or hairpieces to sell.#$b#The problem is I can't decide on which.$s\"/pause 200/question fork1 \"#Flower crowns!#Hairpieces!\"/fork hairpieces/speak Sandy \"Flower crowns it is then! Thanks, @, that's just the kind of decisiveness I needed!$h\"/pause 200/faceDirection Sandy 1/pause 200/faceDirection farmer 3/pause 200/emote Sandy 32/emote farmer 32/pause 500/globalFade/viewport -1000 -1000/addMailReceived SandyFlowerCrowns/end dialogue Sandy \"Thanks again, @. Now I have something to focus on!\"",
+			"hairpieces": "speak Sandy \"Hairpieces it is then! Thanks, @, that's just the kind of decisiveness I needed!$h\"/pause 200/addMailReceived SandyHairpieces/faceDirection Sandy 1/pause 200/faceDirection farmer 3/pause 200/emote Sandy 32/emote farmer 32/pause 500/globalFade/viewport -1000 -1000/end dialogue Sandy \"Thanks again, @. Now I have something to focus on!\""
+					}
+		},
+
+		{
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Entries": {
+                "13609004/f Sandy 2000/n SandyFlowerCrowns/z spring/z winter/t 600 900": "continue/64 15/farmer 64 16 2 Sandy 64 18 0/pause 1200/emote farmer 16/pause 200/speak Sandy \"Didn't expect to see me so early, huh?$h\"/pause 200/emote farmer 32/pause 200/speak Sandy \"I'll cut right to the chase, @.#$b#Remember how I wanted to start making flower crowns?#$b#Well, Haley has agreed to try out a prototype, and if she likes it, she's going to recommend Mayor Lewis buy some for the Flower Dance Festival. Isn't that great?$h\"/pause 200/emote farmer 16/pause 200/speak Sandy \"Now, as you know, sunflowers are Haley's favorite, so I want to make a good impression on her. But they don't really grow in the desert.$s\"/pause 200/emote farmer 28/pause 200/speak Sandy \"I was wondering if you'd be able to grow some for me? I'd pay you of course!\"/pause 200/emote farmer 32/pause 200/emote Sandy 20/speak Sandy \"Ah, @, you're the best!$h#$b#Thank you so much! You won't regret this.\"/pause 200/speak Sandy \"I'd better head back to the store now. See ya later!~\"/pause 200/addQuest 13609005/end"
+        			}	
+        },
+
+		{
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Entries": {
+                "13609006/f Sandy 2000/n SandyHairpieces/z spring/z summer/z winter/t 600 900": "continue/64 15/farmer 64 16 2 Sandy 64 18 0/pause 1200/emote farmer 16/pause 200/speak Sandy \"Didn't expect to see me so early, huh?$h\"/pause 200/emote farmer 32/pause 200/speak Sandy \"I'll cut right to the chase, @.#$b#Remember how I wanted to start making floral hairpieces?#$b#Well, Haley, Evelyn, and Penny have all agreed to model some samples for me so I can start selling them.#$b#Even Marnie agreed to let Jas have one as well.$h\"/pause 200/emote farmer 16/pause 200/speak Sandy \"The problem is I want to use fairy rose, and those don't really grow in the desert.$s\"/pause 200/emote farmer 28/pause 200/speak Sandy \"I was wondering if you'd be able to grow them for me? I'd pay you of course!\"/pause 200/emote farmer 32/pause 200/emote Sandy 20/speak Sandy \"Ah, @, you're the best!$h#$b#Thank you so much! You won't regret this.\"/pause 200/speak Sandy \"I'd better head back to the store now. See ya later!~\"/pause 200/addQuest 13609007/end"
+        			}
+		},
+		
+		{
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Entries": {
+                "13609008/e 13609004/n QuestADone/x SandyTYcrowns": "null"
+        	}
+        },
+
+		{
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Entries": {
+                "13609009/e 13609006/n QuestBDone/x SandyTYhairpieces": "null"
+        	}
+        },
+
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {  "13609010/f Sandy 2500/w sunny/d Mon Tue Wed Thu Fri Sat/t 600 900": "continue/64 15/farmer 64 16 2 Emily 64 18 0/pause 1200/emote Emily 32/speak Emily \"Good morning, @!#$b#I'm sorry to drop by so early, but I just wanted to invite you to join Sandy and me for brunch today.\"/pause 300/emote farmer 32/pause 200/speak Emily \"Great! Just stop by anytime before 3 since I have to head out to work after that.\"/pause 200/emote farmer 56/pause 200/globalFade/viewport -1000 -1000/end"
+					},
+					"When": {
+						"HasReadLetter": "SandyTYcrowns, SandyTYhairpieces",
+						"EnableRivalHearts": false
+					 } 
+		},
+
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Events/HaleyHouse",
+			"Entries": {  "13609011/e 13609010/d Mon Tue Wed Thu Fri Sat/p Sandy/t 1000 1500": "sam_acoustic1/16 16/farmer 16 20 0 Emily 16 8 0 Sandy 19 16 0/skippable/pause 500/move farmer 0 -4 0/move farmer 2 0 1/pause 200/faceDirection Sandy 3/pause 200/speak Sandy \"Oh, hi, sweetie! I'm just finishing up these deviled eggs.$h\"/pause 500/emote farmer 40/pause 200/speak Sandy \"Oh, don't trouble yourself, you're a guest!$h\"/faceDirection Sandy 0/playSound furnace/pause 200/playSound clank/pause 200/speak Sandy \"You know, @, I just wanted to thank you.\"/pause 200/emote farmer 8/pause 500/speak Sandy \"Oh, you know, for joining forces with Emily and encouraging me to get out more.#$b#And of course, for helping me with my little side project, which I couldn't have gotten off the ground without you.$h\"/pause 200/playSound clank/playSound furnace/pause 200/speak Sandy \"I'm just really grateful. You've been a good friend, @.$h\"/pause 200/emote farmer 32/move Emily 0 3 2/doAction 16 12/move Emily 0 5 1/pause 200/faceDirection farmer 3/emote Emily 32/playSound clank/speak Emily \"Hello, @, I thought I heard you come in!$h#$b#Wait until you taste these deviled eggs Sandy's making. She's a great cook.$h\"/pause 200/speak Sandy \"Oh, you know, just one of my many hidden talents.$h\"/pause 200/emote farmer 56/pause 200/globalFade/viewport -1000 -1000/message \"Emily was right, the eggs were delicious!\"/end"
+					},
+					"When": {
+						"EnableRivalHearts": false
+					 } 
+		},
+
+		{
+            "Action": "EditData",
+            "Target": "Data/Mail",	
+            "Entries": {
+                "SandyNeedsAdvice":  "Hi, @,^^Can you stop by the Oasis when you get a chance? I need your opinion on something! :)^^-Sandy [letterbg 1]",
+                "SandyTYcrowns":  "Hi, @^^ Thank you so much for your help with the sunflowers. Haley loved her crown and told Mayor Lewis about it and he's agreed to order my crowns for future Flower Dances! This means you'll be seeing more flower orders from me in the future, so keep an eye out! :D ^^-Sandy [letterbg 1]",
+                "SandyTYhairpieces":  "Hi, @^^ Thank you so much for your help with the flowers. Everyone loved their hairpieces, and Haley took a bunch of photographs so that I can sell them online. This means you'll be seeing more flower orders from me in the future, so keep an eye out! :D ^^-Sandy [letterbg 1]"
+            }
+        }	
+	]
+}

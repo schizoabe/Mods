@@ -1,0 +1,264 @@
+{
+  "Format": "1.25.0",
+  "Changes": [
+
+//Jas full day school schedule
+{ "Action": "EditData",	 
+	"Target": "characters/schedules/Jas",
+	 "Entries": {     
+"Mon": "0 Forest 111 25 1/610 Custom_SchoolHouse 20 8 3/730 Custom_SchoolHouse 19 8 3 jas_read/1130 Town 24 12 jas_jumprope/1250 Custom_SchoolHouse 20 8 3/1300 Custom_SchoolHouse 19 8 3 jas_read/1550 Town 16 91 0/1750 AnimalShop 1 7 3 jas_sleep",
+
+"Tue": "0 Forest 111 25 1/610 Custom_SchoolHouse 20 8 3/730 Custom_SchoolHouse 19 8 3 jas_read/1130 Town 24 12 jas_jumprope/1250 Custom_SchoolHouse 20 8 3/1300 Custom_SchoolHouse 19 8 3 jas_read/1550 Town 16 91 0/1750 AnimalShop 1 7 3 jas_sleep",
+
+"Wed": "0 Forest 111 25 1/610 Custom_SchoolHouse 20 8 3/730 Custom_SchoolHouse 19 8 3 jas_read/1130 Town 24 12 jas_jumprope/1250 Custom_SchoolHouse 20 8 3/1300 Custom_SchoolHouse 19 8 3 jas_read/1550 Town 16 91 0/1750 AnimalShop 1 7 3 jas_sleep",
+
+"Thu": "0 Forest 111 25 1/610 Custom_SchoolHouse 20 8 3/730 Custom_SchoolHouse 19 8 3 jas_read/1130 Town 24 12 jas_jumprope/1250 Custom_SchoolHouse 20 8 3/1300 Custom_SchoolHouse 19 8 3 jas_read/1550 Town 16 91 0/1750 AnimalShop 1 7 3 jas_sleep",
+
+"Fri": "0 Forest 111 25 1/610 Custom_SchoolHouse 20 8 3/730 Custom_SchoolHouse 19 8 3 jas_read/1130 Town 24 12 jas_jumprope/1250 Custom_SchoolHouse 20 8 3/1300 Custom_SchoolHouse 19 8 3 jas_read/1550 Town 16 91 0/1750 AnimalShop 1 7 3 jas_sleep",
+
+"Sat": "1000 Town 31 89 1/1200 Town 24 12 jas_jumprope/1700 Town 28 90 1/2000 AnimalShop 1 7 3 jas_sleep",
+
+"Sun": "1000 Town 31 89 1/1200 Town 24 12 jas_jumprope/1700 Town 28 90 1/2000 AnimalShop 1 7 3 jas_sleep",
+
+//Festivals School is closed
+"spring_13": "GOTO Sun",
+"spring_24": "GOTO Sun",
+"summer_11": "GOTO Sun",
+"summer_28": "GOTO Sun",
+"fall_16": "GOTO Sun",
+"fall_27": "GOTO Sun",
+"winter_8": "GOTO Sun",
+"winter_25": "GOTO Sun",
+"winter_28": "GOTO Sun",
+
+     },"When": {"HasSeenEvent": "9695002"},},
+
+
+
+//Vincent full day school schedule
+{ "Action": "EditData",	 
+	"Target": "characters/schedules/Vincent",
+	 "Entries": {     
+"Mon": "630 Custom_SchoolHouse 8 11 3 vincent_read_right/1130 Town 16 11 1 square_5_3/1250 Custom_SchoolHouse 8 11 3 vincent_read_right/1550 Town 15 90 1/1740 SamHouse 4 8 0/2000 SamHouse 8 22 3 vincent_sleep",  
+
+"Tue": "630 Custom_SchoolHouse 8 11 3 vincent_read_right/1130 Town 16 11 1 square_5_3/1250 Custom_SchoolHouse 8 11 3 vincent_read_right/1550 Town 15 90 1/1740 SamHouse 4 8 0/2000 SamHouse 8 22 3 vincent_sleep",  
+
+"Wed": "630 Custom_SchoolHouse 8 11 3 vincent_read_right/1130 Town 16 11 1 square_5_3/1250 Custom_SchoolHouse 8 11 3 vincent_read_right/1550 Town 15 90 1/1740 SamHouse 4 8 0/2000 SamHouse 8 22 3 vincent_sleep", 
+
+"Thu": "630 Custom_SchoolHouse 8 11 3 vincent_read_right/1130 Town 16 11 1 square_5_3/1250 Custom_SchoolHouse 8 11 3 vincent_read_right/1550 Town 15 90 1/1740 SamHouse 4 8 0/2000 SamHouse 8 22 3 vincent_sleep", 
+
+"Fri": "630 Custom_SchoolHouse 8 11 3 vincent_read_right/1130 Town 16 11 1 square_5_3/1250 Custom_SchoolHouse 8 11 3 vincent_read_right/1550 Town 15 90 1/1740 SamHouse 4 8 0/2000 SamHouse 8 22 3 vincent_sleep",    
+
+"Sat": "1010 Town 31 90 1/1200 Town 16 11 1 square_5_3/1700 Town 28 91 1/2000 SamHouse 8 22 3 vincent_sleep",
+
+"Sun": "1010 Town 31 90 1/1200 Town 16 11 1 square_5_3/1700 Town 28 91 1/2000 SamHouse 8 22 3 vincent_sleep",
+
+"winter_16": "800 Custom_SchoolHouse 8 11 3 vincent_read_right/1130 Town 16 11 1 square_5_3/1250 Custom_SchoolHouse 8 11 3 vincent_read_right/1540 Town 15 90 1/1630 Beach 19 24 2 \"Strings\\schedules\\Vincent:winter_16.000\"/2330 SamHouse 8 22 3 vincent_sleep",
+
+//Festivals School is closed
+"spring_13": "GOTO Sun",
+"spring_24": "GOTO Sun",
+"summer_11": "GOTO Sun",
+"summer_28": "GOTO Sun",
+"fall_16": "GOTO Sun",
+"fall_27": "GOTO Sun",
+"winter_8": "GOTO Sun",
+"winter_25": "GOTO Sun",
+"winter_28": "GOTO Sun",
+
+	 },"When": {"HasSeenEvent": "9695002"},},
+
+
+
+//Leo after moving into the town 
+{ "Action": "EditData",	 
+	"Target": "characters/schedules/Leo",
+	 "Entries": {     
+"Mon": "0 IslandHut 7 7 0/930 IslandSouth 7 9 2/1400 IslandEast 21 11 2/1700 IslandHut 6 6 0/2100 IslandHut 11 10 1 leo_sleep",
+
+"Tue": "0 LeoTreeHouse 2 2 0/900 ArchaeologyHouse 18 12 0 leo_sit_up \"Strings\\schedules\\Leo:school\"/1400 Town 91 104 2/1620 Mountain 30 9 3 \"Strings\\schedules\\Leo:dinner\"/2000 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+
+"Wed": "GOTO Tue",
+
+"Thu": "0 LeoTreeHouse 2 2 0/630 Custom_SchoolHouse 20 13 3/800 Custom_SchoolHouse 19 13 3 leo_sit/1600 Mountain 30 9 3/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+
+"Fri": "0 LeoTreeHouse 2 2 0/630 Custom_SchoolHouse 20 13 3/800 Custom_SchoolHouse 19 13 3 leo_sit/1600 Mountain 30 9 3/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+
+"Sat": "940 Town 34 90 2/1200 Town 19 14 2 square_5_1/1700 Mountain 30 9 3/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+
+"Sun": "610 IslandHut 7 7 0/1030 IslandSouth 38 31 2/1330 IslandEast 7 44 2/1700 IslandNorth 53 71 2/2000 IslandHut 11 10 1 leo_sleep",
+
+"winter_15": "1100 Mountain 30 9 3/1600 Beach 21 4 2 \"Strings\\schedules\\Leo:winter_15.000\"/2330 LeoTreeHouse 5 4 1 leo_sleep",
+
+//Festivals School is closed
+"spring_13": "630 LeoTreeHouse 2 2 0/700 Mountain 30 9 3/930 Mountain 44 18 1/1400 Mountain 30 9 3/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+"spring_24": "630 LeoTreeHouse 2 2 0/700 Mountain 30 9 3/930 Mountain 44 18 1/1400 Mountain 30 9 3/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+"summer_11": "630 Mountain 35 15 2/940 Mountain 48 24 1/1300 Mountain 49 31 1 square_1_3/1600 Mountain 30 9 3/2000 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+"summer_28": "630 Mountain 35 15 2/940 Mountain 48 24 1/1300 Mountain 49 31 1 square_1_3/1600 Mountain 30 9 3/2000 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep",
+"fall_16": "700 LeoTreeHouse 2 2 0/740 Mountain 30 9 3/900 Town 65 48 2/1400 Mountain 43 17 1/2000 LeoTreeHouse 4 2 1/2200 LeoTreeHouse 5 4 1 leo_sleep",
+"fall_27": "700 LeoTreeHouse 2 2 0/740 Mountain 30 9 3/900 Town 65 48 2/1400 Mountain 43 17 1/2000 LeoTreeHouse 4 2 1/2200 LeoTreeHouse 5 4 1 leo_sleep",
+"winter_8": "1100 Mountain 30 9 3/1400 ArchaeologyHouse 12 9 0 \"Strings\\schedules\\Leo:winter.000\"/2000 LeoTreeHouse 2 2 0/2200 LeoTreeHouse 5 4 1 leo_sleep",
+"winter_25": "1100 Mountain 30 9 3/1400 ArchaeologyHouse 12 9 0 \"Strings\\schedules\\Leo:winter.000\"/2000 LeoTreeHouse 2 2 0/2200 LeoTreeHouse 5 4 1 leo_sleep",
+"winter_28": "1100 Mountain 30 9 3/1400 ArchaeologyHouse 12 9 0 \"Strings\\schedules\\Leo:winter.000\"/2000 LeoTreeHouse 2 2 0/2200 LeoTreeHouse 5 4 1 leo_sleep",
+
+
+	 },"When": {"HasSeenEvent": "9695002,6497428"},},
+
+{	 "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.7": "This is Leo's seat" },
+"When": {"HasSeenEvent": "9695002,6497428" }
+},
+
+//insert siting sprite	
+{
+"Action": "EditImage",
+"Target": "Characters/ParrotBoy",
+"FromFile": "Characters/leo_sit.png",
+"When": {"HasSeenEvent": "9695002"}
+},
+    {
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+"Entries": {
+"leo_sit": "25/25/25",
+"leo_sleep": "23/23/23",
+"leo_sit_up": "24/24/24",
+           },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+
+// ES Eloise Seat Text
+
+{	 "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.6": "This is Eloise's seat" },
+"When": {"HasSeenEvent": "9695002" }
+},
+
+
+//Keahi RSV full day school schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Keahi",
+		"Entries": { 
+"Mon": "0 Custom_Ridgeside_RSVCableCar 20 13 2/610 Custom_SchoolHouse 23 17 3/620 Custom_SchoolHouse 22 16 3 keahi_read/1130 Town 19 14 2 keahi_dance/1250 Custom_SchoolHouse 23 17 3/1300 Custom_SchoolHouse 22 16 3 keahi_read/1550 Custom_Ridgeside_RidgesideVillage 98 38 2/1800 Custom_Ridgeside_PikaHouse 7 10 3/2200 Custom_Ridgeside_PikaHouse 26 5 0 keahi_sleep",	
+
+"Tue": "0 Custom_Ridgeside_RSVCableCar 20 13 2/610 Custom_SchoolHouse 23 17 3/620 Custom_SchoolHouse 22 16 3 keahi_read/1130 Town 19 14 2 keahi_dance/1250 Custom_SchoolHouse 23 17 3/1300 Custom_SchoolHouse 22 16 3 keahi_read/1550 Custom_Ridgeside_RidgesideVillage 98 38 2/1800 Custom_Ridgeside_PikaHouse 7 10 3/2200 Custom_Ridgeside_PikaHouse 26 5 0 keahi_sleep",
+
+"Wed": "0 Custom_Ridgeside_RSVCableCar 20 13 2/610 Custom_SchoolHouse 23 17 3/620 Custom_SchoolHouse 22 16 3 keahi_read/1130 Town 19 14 2 keahi_dance/1250 Custom_SchoolHouse 23 17 3/1300 Custom_SchoolHouse 22 16 3 keahi_read/1550 Custom_Ridgeside_RidgesideVillage 98 38 2/1800 Custom_Ridgeside_PikaHouse 7 10 3/2200 Custom_Ridgeside_PikaHouse 26 5 0 keahi_sleep",
+
+"Thu": "0 Custom_Ridgeside_RSVCableCar 20 13 2/610 Custom_SchoolHouse 23 17 3/620 Custom_SchoolHouse 22 16 3 keahi_read/1130 Town 19 14 2 keahi_dance/1250 Custom_SchoolHouse 23 17 3/1300 Custom_SchoolHouse 22 16 3 keahi_read/1550 Custom_Ridgeside_RidgesideVillage 98 38 2/1800 Custom_Ridgeside_PikaHouse 7 10 3/2200 Custom_Ridgeside_PikaHouse 26 5 0 keahi_sleep",
+
+"Fri": "0 Custom_Ridgeside_RSVCableCar 20 13 2/610 Custom_SchoolHouse 23 17 3/620 Custom_SchoolHouse 22 16 3 keahi_read/1130 Town 19 14 2 keahi_dance/1250 Custom_SchoolHouse 23 17 3/1300 Custom_SchoolHouse 22 16 3 keahi_read/1550 Custom_Ridgeside_RidgesideVillage 98 38 2/1800 Custom_Ridgeside_PikaHouse 7 10 3/2200 Custom_Ridgeside_PikaHouse 26 5 0 keahi_sleep",
+
+"summer_19": "610 Custom_Ridgeside_PikaHouse 7 10 3/a1200 Custom_Ridgeside_PaulaClinic 18 5 3 \"Strings\\schedules\\Keahi:checkup\"/1330 Custom_Ridgeside_PaulaClinic 15 6 0 \"Strings\\schedules\\Keahi:checkup_waiting\"/1420 Custom_Ridgeside_PaulaClinic 17 6 0 keahi_jump/1450 Custom_Ridgeside_PaulaClinic 14 6 2 \"Strings\\schedules\\Keahi:checkup_waiting_2\"/1530 Custom_Ridgeside_PikaHouse 7 10 3/2200 Custom_Ridgeside_PikaHouse 19 15 0 keahi_sleep",
+
+"winter_15": "610 Custom_Ridgeside_PikaHouse 7 10 3/800 Custom_Ridgeside_RidgesideVillage 98 38 2/1200 Beach 13 22 0/2600 Custom_Ridgeside_PikaHouse 19 15 0 keahi_sleep",
+
+"Sat": "610 Custom_Ridgeside_PikaHouse 7 10 3/900 Custom_Ridgeside_RidgesideVillage 98 38 2/1400 Custom_Ridgeside_RidgesideVillage 62 119 3 square_10_2_1/1800 Custom_Ridgeside_PikaHouse 7 10 3/2200 Custom_Ridgeside_PikaHouse 19 15 0 keahi_sleep",
+
+"Sun": "610 Custom_Ridgeside_PikaHouse 7 10 3/800 Custom_Ridgeside_RidgesideVillage 98 38 2/1100 Custom_Ridgeside_RidgesideVillage 74 42 3 keahi_jump/1800 Custom_Ridgeside_PikaHouse 7 10 3/2200 Custom_Ridgeside_PikaHouse 19 15 0 keahi_sleep",
+
+//Festivals School is closed
+"spring_13": "GOTO Sun",
+"spring_24": "GOTO Sun",
+"summer_11": "GOTO Sun",
+"summer_28": "GOTO Sun",
+"fall_16": "GOTO Sun",
+"fall_27": "GOTO Sun",
+"winter_8": "GOTO Sun",
+"winter_25": "GOTO Sun",
+"winter_28": "GOTO Sun",
+
+	 },"When": {"HasSeenEvent": "9695002"},},	
+
+{	 "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.4": "This is Keahi's seat" }
+},
+
+
+
+//Trinnie RSV full day school schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Trinnie",
+		"Entries": { 
+
+"Mon": "0 Custom_Ridgeside_RSVCableCar 20 15 2/610 Custom_SchoolHouse 11 13 1 trinnie_read/1140 Town 9 17 1 trinnie_jump/1250 Custom_SchoolHouse 11 13 1 trinnie_read/1550 Custom_Ridgeside_BertHouse 13 5 3/2100 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+
+"Tue": "0 Custom_Ridgeside_RSVCableCar 20 15 2/610 Custom_SchoolHouse 11 13 1 trinnie_read/1140 Town 9 17 1 trinnie_jump/1250 Custom_SchoolHouse 11 13 1 trinnie_read/1550 Custom_Ridgeside_BertHouse 13 5 3/2100 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+
+"Wed": "0 Custom_Ridgeside_RSVCableCar 20 15 2/610 Custom_SchoolHouse 11 13 1 trinnie_read/1140 Town 9 17 1 trinnie_jump/1250 Custom_SchoolHouse 11 13 1 trinnie_read/1550 Custom_Ridgeside_BertHouse 13 5 3/2100 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+
+"Thu": "0 Custom_Ridgeside_RSVCableCar 20 15 2/610 Custom_SchoolHouse 11 13 1 trinnie_read/1140 Town 9 17 1 trinnie_jump/1250 Custom_SchoolHouse 11 13 1 trinnie_read/1550 Custom_Ridgeside_BertHouse 13 5 3/2100 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+
+"Fri": "0 Custom_Ridgeside_RSVCableCar 20 15 2/610 Custom_SchoolHouse 11 13 1 trinnie_read/1140 Town 9 17 1 trinnie_jump/1250 Custom_SchoolHouse 11 13 1 trinnie_read/1550 Custom_Ridgeside_BertHouse 13 5 3/2100 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+
+"Sat": "900 Custom_Ridgeside_RidgesideVillage 12 96 1 square_1_5_1/1400 Custom_Ridgeside_RidgesideVillage 71 119 square_10_2_3/1800 Custom_Ridgeside_BertHouse 13 5 3/2100 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+
+"Sun": "900 Custom_Ridgeside_RidgesideVillage 12 96 1 square_1_5_1/1100 Custom_Ridgeside_RidgesideVillage 71 42 1 trinnie_jump/1800 Custom_Ridgeside_BertHouse 13 5 3/2100 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+
+"summer_26": "800 Custom_Ridgeside_BertHouse 13 5 3/a1030 Custom_Ridgeside_PaulaClinic 18 5 3 \"Strings\\schedules\\Trinnie:checkup\"/1200 Custom_Ridgeside_PaulaClinic 20 14 3 \"Strings\\schedules\\Trinnie:checkup_waiting\"/1600 Custom_Ridgeside_BertHouse2ndFloor 13 6 3/1800 Custom_Ridgeside_BertHouse 13 5 3/2100 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+
+"winter_15": "900 Custom_Ridgeside_RidgesideVillage 12 96 1 square_1_5_1/1100 Beach 13 20 2/2600 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+
+//Festivals School is closed
+"spring_13": "GOTO Sun",
+"spring_24": "GOTO Sun",
+"summer_11": "GOTO Sun",
+"summer_28": "GOTO Sun",
+"fall_16": "GOTO Sun",
+"fall_27": "GOTO Sun",
+"winter_8": "GOTO Sun",
+"winter_25": "GOTO Sun",
+"winter_28": "GOTO Sun",
+
+	 },"When": {"HasSeenEvent": "9695002"},},	
+	
+{	 "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.12": "This is Trinnie's seat" }
+},
+
+//Yuuma RSV full day school schedule. Well not really full day....
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Yuuma",
+		"Entries": { 
+"Mon": "900 Custom_Ridgeside_ShiroHouse 22 12 0 square_3_1_0/1030 Custom_Ridgeside_RSVCliff 22 23 3/1200 Town 16 53 3/1400 Town 27 30 0/1500 Town 60 28 0/1600 Town 42 80 1/1800 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+
+"Tue": "610 Custom_SchoolHouse 4 4 2 yuuma_read/1130 Town 13 18 square_2_2_0/1240 Custom_SchoolHouse 4 4 2 yuuma_read/1400 Hospital 13 17 1/1600 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+
+"Wed": "610 Custom_SchoolHouse 4 4 2 yuuma_read/1130 Town 13 18 square_2_2_0/1240 Custom_SchoolHouse 4 4 2 yuuma_read/1400 Hospital 13 17 1/1600 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+
+"Thu": "900 Custom_Ridgeside_ShiroHouse 22 12 0 square_3_1_0/1400 AnimalShop 11 17 1/1600 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+
+"Fri": "610 Custom_SchoolHouse 4 4 2 yuuma_read/1130 Town 13 18 square_2_2_0/1240 Custom_SchoolHouse 4 4 2 yuuma_read/1400 Hospital 13 17 1/1600 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+
+"Sat": "900 Custom_Ridgeside_ShiroHouse 22 12 0 square_3_1_0/1400 Custom_Ridgeside_LennyHouse 7 9 1/1600 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+
+"Sun": "900 Custom_Ridgeside_ShiroHouse 22 12 0 square_3_1_0/1400 Blacksmith 2 16 1/1600 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+
+"summer_12": "700 Custom_Ridgeside_ShiroHouse 3 5 0/a1100 Custom_Ridgeside_PaulaClinic 20 14 3 \"Strings\\schedules\\Yuuma:checkup_waiting\"/1200 Custom_Ridgeside_PaulaClinic 18 5 3 \"Strings\\schedules\\Yuuma:checkup\"/1330 Custom_Ridgeside_PaulaClinic 20 14 3 \"Strings\\schedules\\Yuuma:checkup_waiting\"/1530 Custom_Ridgeside_ShiroHouse 4 9 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+
+"winter_16": "900 Custom_Ridgeside_ShiroHouse 22 12 0 square_3_1_0/1200 Beach 13 22 0/2600 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+
+//Festivals School is closed
+"spring_13": "GOTO Sun",
+"spring_24": "GOTO Sun",
+"summer_11": "GOTO Sun",
+"summer_28": "GOTO Sun",
+"fall_16": "GOTO Sun",
+"fall_27": "GOTO Sun",
+"winter_8": "GOTO Sun",
+"winter_25": "GOTO Sun",
+"winter_28": "GOTO Sun",
+
+	 },"When": {"HasSeenEvent": "9695002"},},	
+
+
+  ]
+}
+

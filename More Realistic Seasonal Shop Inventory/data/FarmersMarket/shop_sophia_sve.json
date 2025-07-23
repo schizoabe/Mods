@@ -1,0 +1,155 @@
+{
+    "Changes": [
+    //Sophia Standard
+    {
+  "LogName": "MRSSI_Sophia_TownFair",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": ["br93.FarmersMarket_Sophia_TownFair", "Items"],
+  "When": {
+            "HasMod": "FlashShifter.StardewValleyExpandedCP",
+            "Sophia's grange display": "Standard"
+            },
+  "Fields": 
+    {
+    "br93.FarmersMarket_Sophia_BlueMoonWine":{
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Set",
+                    "RandomAmount": [5, 6, 7, 8]
+                    }
+            ],
+          },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWine":{
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Set",
+                    "RandomAmount": [5, 6, 7, 8]
+                    }
+            ],
+          },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWineSilver":{
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Set",
+                    "RandomAmount": [1, 2, 3, 4]
+                    }
+            ],
+        "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Sophia_AgedBlueMoonWineSilver 0.8, PLAYER_FRIENDSHIP_POINTS Any Sophia 500"
+        },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWineGold":{
+        "Condition": "PLAYER_FRIENDSHIP_POINTS Any Sophia 1000"
+          },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWineIridium":{
+        "Condition": "PLAYER_FRIENDSHIP_POINTS Any Sophia 1500"
+          },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWineGold":{
+        "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Sophia_AgedBlueMoonWineGold 0.6, PLAYER_FRIENDSHIP_POINTS Any Sophia 1000, YEAR 4"
+          },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWineIridium":{
+        "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Sophia_AgedBlueMoonWineIridium 0.6, PLAYER_FRIENDSHIP_POINTS Any Sophia 1500, YEAR 5"
+          }
+    }
+},
+    /*{
+  "LogName": "MRSSI_Sophia_TownFair",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": ["br93.FarmersMarket_Sophia_TownFair", "Items"],
+  "When": {"Sophia": "Standard", "Year": "4"},
+  "Fields":
+    {"br93.FarmersMarket_Sophia_AgedBlueMoonWineGold":{
+        "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Sophia_AgedBlueMoonWineGold 0.6, PLAYER_FRIENDSHIP_POINTS Any Sophia 1000"
+          }
+      }   
+    },
+    {
+  "LogName": "MRSSI_Sophia_TownFair",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": ["br93.FarmersMarket_Sophia_TownFair", "Items"],
+  "When": {"Sophia": "Standard", "Year": "5"},
+  "Fields":
+        {"br93.FarmersMarket_Sophia_AgedBlueMoonWineIridium":{
+        "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Sophia_AgedBlueMoonWineIridium 0.6, PLAYER_FRIENDSHIP_POINTS Any Sophia 1500"
+          }
+      }
+    },*/
+    
+    //Sophia Hardmode
+    {
+  "LogName": "MRSSI_Sophia_TownFair",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": ["br93.FarmersMarket_Sophia_TownFair", "Items"],
+  "When": {
+            "HasMod": "FlashShifter.StardewValleyExpandedCP",
+            "Sophia's grange display": "Hardmode"
+            },
+  "Fields": 
+    {
+    "br93.FarmersMarket_Sophia_BlueMoonWine":{
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Set",
+                    "RandomAmount": [1, 2, 3, 4]
+                    }
+            ],
+          },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWine":{
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Set",
+                    "RandomAmount": [1, 2, 3, 4]
+                    }
+            ],
+          },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWineSilver":{
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Set",
+                    "RandomAmount": [1, 2, 3, 4]
+                    }
+            ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Sophia_AgedBlueMoonWineSilver 0.5, PLAYER_FRIENDSHIP_POINTS Any Sophia 1000"
+        },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWineGold":{
+        "Condition": "PLAYER_FRIENDSHIP_POINTS Any Sophia 1500"
+          },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWineIridium":{
+        "Condition": "PLAYER_FRIENDSHIP_POINTS Any Sophia 2000"
+          },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWineGold":{
+        "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Sophia_AgedBlueMoonWineGold 0.3, PLAYER_FRIENDSHIP_POINTS Any Sophia 1500, YEAR 4"
+              },
+    "br93.FarmersMarket_Sophia_AgedBlueMoonWineIridium":{
+        "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Sophia_AgedBlueMoonWineIridium 0.3, PLAYER_FRIENDSHIP_POINTS Any Sophia 2000, YEAR 5"
+          }
+    }
+},
+    /*{
+      "LogName": "MRSSI_Sophia_TownFair",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["br93.FarmersMarket_Sophia_TownFair", "Items"],
+      "When": {"Sophia": "Hardmode", "Year": "4"},
+      "Fields":
+        {"br93.FarmersMarket_Sophia_AgedBlueMoonWineGold":{
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Sophia_AgedBlueMoonWineGold 0.3, PLAYER_FRIENDSHIP_POINTS Any Sophia 1500"
+              }
+          }
+    },
+    {
+  "LogName": "MRSSI_Sophia_TownFair",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": ["br93.FarmersMarket_Sophia_TownFair", "Items"],
+  "When": {"Sophia": "Hardmode", "Year": "5"},
+  "Fields":
+       {"br93.FarmersMarket_Sophia_AgedBlueMoonWineIridium":{
+        "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Sophia_AgedBlueMoonWineIridium 0.3, PLAYER_FRIENDSHIP_POINTS Any Sophia 2000"
+          }
+      }, 
+    }*/
+    ]
+}

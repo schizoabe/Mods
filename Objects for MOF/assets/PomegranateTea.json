@@ -1,0 +1,84 @@
+{
+    "Changes": [
+	{
+		"Action": "EditData", 
+		"Target": "Data/Objects",
+		"Entries": {
+			"PomegranateTea": {
+				"Name": "PomegranateTea",
+				"DisplayName": "Pomegranate Tea",
+				"Description": "The fragrance of tea paired with the sweet and sour taste of pomegranate, rich in vitamins.",
+				"Type": "Basic",
+				"Category": -7,
+				"Price": 365,
+				"Texture": "Mods/{{ModId}}/objects14px",
+				"SpriteIndex": 16, 
+				"Edibility": 70, 
+				"IsDrink": true,
+				"ExcludeFromFishingCollection": true,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Buffs": [
+				  {
+					"Duration": 300,
+					"CustomAttributes": {
+						"LuckLevel": 1,
+						"MaxStamina": 80,
+						"Speed": 1
+					}
+				  }
+				]
+			}
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/CookingRecipes", 
+		"Entries": {
+			"PomegranateTea": "637 1 815 1/1 1/PomegranateTea"
+			}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/NPCGiftTastes",
+		"TextOperations": [
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Vincent", 9],
+				"Value": "PomegranateTea",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Jas", 9],
+				"Value": "PomegranateTea",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Claire", 1],
+				"Value": "PomegranateTea",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Elliott", 1],
+				"Value": "PomegranateTea",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Caroline", 1],
+				"Value": "PomegranateTea",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Lewis", 1],
+				"Value": "PomegranateTea",
+				"Delimiter": " "
+			}
+		]
+	}
+    ]
+}

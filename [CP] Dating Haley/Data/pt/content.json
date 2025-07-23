@@ -1,0 +1,192 @@
+{
+    "Changes": [
+        {
+			"LogName": "Namorando a Haley Dialogos",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries": {
+				"datingHaley_Anivesary1": "Oh... Entendi...%fork$s",
+				"datingHaley_Anivesary2": "Oh, @! Nós vamos ser tão felizes!$l",	
+				"eventQuietHaley1": "...$s",
+				"eventQuietHaley2": "...$s",			
+				"eventAfterDateHaley1": "Espere...%fork$l",
+				"eventAfterDateHaley2": "Você quer entrar?...#$b#É que eu nunca deixei ninguém entrar em casa tão tarde...#$b#Mas você é diferente... Eu confio em você!$l",			
+			},
+			"When": {
+				"Relationship:Haley": "Dating",
+				}
+		},
+		{
+			"LogName": "Dating Haley Beach 1",
+			"Action": "EditData",
+			"Target": "Data/Events/Beach",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"Season": "Summer",
+				"DayOfWeek": "Monday, Tuesday, Wednesday, Thursday"
+				},
+			"Entries": {									
+				"78734101/f Haley 2000/A dumped_Girls/t 1000 1700/w sunny": "ragtime/-1000 -1000/Haley 9 13 3 farmer 14 13 3/changeSprite Haley Beach/changePortrait Haley Beach/skippable/viewport -100 -100 true unfreeze/pause 1500/speak Haley \"Olha amor! Encontrei uma conchinha!#$b#É bonita!$h\"/pause 500/faceDirection Haley 2/pause 40/faceDirection Haley 1/pause 200/speak Haley \"@, vem cá!\"/move farmer -4 0 3/pause 500/playMusic sadpiano/pause 1000/speak Haley \"Olha... é para você.$l\"/playSound coin/showFrame Haley 7/pause 500/showFrame Haley 4/pause 300/speak Haley \"É para você se lembrar desse dia.$l#$b#...$s#$b#E pra eu te pedir desculpas por ter sido tão rude antes...$s#$b#E ter te tratado tão mal.$s#$b#Se eu soubesse que um dia eu ia me apaixon...$l#$b#!$8\"/emote Haley 60/pause 1500/showFrame farmer 35 true/positionOffset farmer -2 0/pause 40/positionOffset farmer -2 0/pause 40/positionOffset farmer -2 0/pause 40/positionOffset farmer -2 0/pause 40/eyes 1 -5000/positionOffset farmer -2 0/pause 40/positionOffset farmer -2 0/pause 40/positionOffset farmer -2 0/pause 40/positionOffset farmer -2 0/pause 40/positionOffset farmer -2 0/pause 40/positionOffset farmer -2 0/pause 40/positionOffset farmer -2 0/pause 40/positionOffset farmer -2 0/pause 40/positionOffset farmer -2 0/positionOffset Haley 0 4/animate Haley true true 100 16/pause 250/specificTemporarySprite heart 10 12/pause 1000/globalFade/viewport -1000 -1000/pause 2000/end",
+			}
+		},		
+		{
+			"LogName": "Dating Haley Beach 2",
+			"Action": "EditData",
+			"Target": "Data/Events/Beach",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"Season": "Summer",
+				"DayOfWeek": "Friday, Saturday, Sunday",
+				"HasSeenEvent": "78734101",
+				},
+			"Entries": {
+				"78734102/f Haley 2250/A dumped_Girls/t 1000 1700/w sunny": "ragtime/-1000 -1000/Haley 16 10 1 farmer 26 10 3/changeSprite Haley Beach/changePortrait Haley Beach/skippable/viewport -100 -100 true unfreeze/pause 1500/move farmer -8 0 3/pause 500/speak Haley \"Oi @!\"/pause 500/speak Haley \"Ah, está na hora de reaplicar o protetor solar. Pode me ajudar?$h#$b#Passe nas minhas costas.\"/faceDirection Haley 2/pause 500/faceDirection Haley 3/pause 500/move farmer -1 0 3/pause 400/positionOffset farmer -20 0/pause 400/showframe farmer 89 true/playsound slimeHit/pause 600/showFrame farmer 35 true/playsound slimeHit/pause 600/showframe farmer 89 true/playsound slimeHit/pause 600/showFrame farmer 35 true/playsound slimeHit/pause 600/showframe farmer 89 true/playsound slimeHit/pause 600/showFrame farmer 35 true/playsound slimeHit/pause 600/showFrame farmer 89 true/playsound slimeHit/pause 300/showFrame farmer 35 true/playsound slimeHit/pause 100/speak Haley \"Ops!$8#$b#Hum, @... Já está bom!#l\"/showframe farmer 6 true/positionOffset farmer 20 0/faceDirection Haley 1/emote farmer 60/pause 1500/speak Haley \"Até que é bom ter um namorado, pra me ajudar em coisas que preciso, como abrir potes ou consertar tudo em casa!$h^Até que é bom ter uma namorada, pra me ajudar em coisas que preciso!$h\"/pause 500/playMusic sadpiano/pause 1000/speak Haley \"E... para outras coisas também...$l\"/animate Haley true true 100 16/positionOffset Haley 2 1/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 1/pause 50/positionOffset Haley 2 1/pause 50/positionOffset Haley 2 1/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/animate farmer true true 100 101/pause 500/speak Haley \"Eu já te disse o quanto eu gosto de você?$l\"/specificTemporarySprite heart 17 9/pause 1000/globalFade/viewport -1000 -1000/pause 2000/end", 
+			}
+		},
+		{
+			"LogName": "Dating Haley Beach 3",
+			"Action": "EditData",
+			"Target": "Data/Events/Beach",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"Season": "Summer",
+				"HasSeenEvent": "78734102",
+				"DayOfWeek": "Monday, Tuesday, Wednesday, Thursday"
+				},
+			"Entries": {	
+				"78734103/f Haley 2250/A dumped_Girls/t 1000 1700/w sunny": "ragtime/-1000 -1000/Haley 16 8 1 farmer 22 8 3/skippable/viewport -100 -100 true unfreeze/changeSprite Haley Beach/changePortrait Haley Beach/showFrame Haley 22/pause 1500/move farmer -5 0 3/pause 500/pause 1000/emote farmer 56/pause 500//showFrame Haley 4/speak Haley \"...$8#$b#Você me assustou, @!\"/pause 500/speak Haley \"Eu quero ficar com um lindo bronzeado nesse verão. Minha pele é bem delicada, então eu estou usando um creme excelente à noite. Eu comprei na última vez que fui ao Shopping Center em Zuzu City e...\"/faceDirection farmer 3/eyes 1 -5000/emote farmer 24/pause 2000/faceDirection Haley 2/emote Haley 12/pause 1000/speak Haley \"Se eu não sou interessante para você, saiba que tem um monte de rapazes que sabem apreciar a minha companhia.$3^Se eu não sou interessante para você, saiba que tem um monte de garotas que sabem apreciar a minha companhia.$3\"/faceDirection Haley 3/emote farmer 28/pause 1500/faceDirection Haley 1/speak Haley \"O quê? $3#\"/showFrame farmer 60 true/addObject 17 6 421 1/playsound coin/pause 800/speak Haley \"#Oh!$8\"/animate farmer true true 300 6/removeObject 17 6/emote Haley 20/speak Haley \"São lindas!$l\"/animate Haley true true 100 16/positionOffset Haley 2 1/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 1/pause 50/positionOffset Haley 2 1/pause 50/positionOffset Haley 2 1/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/animate farmer true true 300 101/positionOffset Haley 2 0/pause 500/speak Haley \"@, você é o melhor namorado de todos!$h^@, você é a melhor namorada de todas!$h\"/emote farmer 8/pause 1000/globalFade/viewport -1000 -1000/pause 1000/end",				
+			}
+		},
+		{
+			"LogName": "Dating Haley House 0",
+			"Action": "EditData",
+			"Target": "Data/Events/HaleyHouse",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"DayOfWeek": "Friday, Saturday, Sunday"
+				},
+			"Entries": {						
+				"78734200/f Haley 2000/A dumped_Girls/t 1200 2000": "jaunty/-1000 -1000/Haley 6 7 0 farmer 2 23 0 Wizard 1 1 0/positionOffset Wizard -1000 -1000/skippable/viewport 6 7/pause 1000/move Haley 0 -2 0/pause 300/speak Haley \"Oh. My. God!!! Ele me convidou para um encontro!$h^Oh. My. God!!! Ela me convidou para um encontro!$h#$b#Humm, que vestido eu vou usar essa noite?\"/playsound Ship/pause 800/speak Haley \"Ele deve estar gostando de mim...$11^Ela deve estar gostando de mim...$11#$b#@ não é como os outros... Eu gosto dele...^@ não é como as outras... Eu gosto dela...#$b#Muito!$l\"/globalFade/viewport 5 18/playsound doorClose/pause 1000/move farmer 0 -2 0/message \"A Haley já deve estar pronta!\"/playSound wand/screenFlash 3/showFrame Wizard 16/warp Wizard 4 20/showFrame 94/stopmusic/pause 1000/faceDirection farmer 1/pause 1500/showFrame Wizard 0/pause 500/faceDirection Wizard 3/pause 1000/speak Wizard \"As forças estão em desalinho nas profundezas das minas. Devemos ir!\"/message \"Mas... Espere...\"/playSound wand/screenFlash 3/positionOffset Wizard -2000 -2000/positionOffset farmer -2000 -2000/viewport move 0 -5 2500/faceDirection Haley 2/pause 3000/emote Haley 8/pause 1000/faceDirection Haley 0/pause 400/playsound Ship/pause 800/globalFade/viewport -1000 -1000/warp Haley 4 20/faceDirection Haley 2/viewport 5 18/message \"Depois de algumas horas...\"/pause 500/emote Haley 12/pause 1000/playSound woodyStep/pause 200/playSound woodyStep/pause 200/playSound woodyStep/pause 200/pause 800/speak Haley \"Vai embora! Eu não quero ver você nunca mais!!!$5\"/playSound doorClose/faceDirection farmer 0/warp farmer 2 24/pause 800/playMusic sadpiano/emote farmer 28/pause 1000/speak Haley \"Oh!$8\"/pause 1000/speed Haley 4/move Haley -2 0 2/speak Haley \"Você está todo machucado! O que aconteceu?$8\"/move Haley 0 3 2/pause 500/speak Haley \"Vem aqui @, eu vou cuidar de você.$s\"/move Haley 0 -3 0 true/move farmer 0 -2 0 true/pause 3000/faceDirection Haley 2/speak Haley \"Mas não pense que eu não estou mais brava com você!$3\"/pause 1000/end",
+			},
+		},
+		{
+			"LogName": "Dating Haley House 1",
+			"Action": "EditData",
+			"Target": "Data/Events/HaleyHouse",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"DayOfWeek": "Monday, Tuesday, Wednesday, Thursday",
+				"HasSeenEvent": "78734200"
+				},
+			"Entries": {	
+				"78734210/f Haley 2000/A dumped_Girls/t 1200 2000": "EmilyTheme/-1000 -1000/Emily 6 20 3 farmer 4 20 2 Haley 4 32 0/skippable/viewport 	-100 -100 true unfreeze/showFrame 87/pause 100/animate farmer false true 200 86 87/pause 500/emote Emily 32/pause 500/warp Haley 2 24/playSound doorClose/emote Haley 16/faceDirection farmer 3/emote farmer 16/pause 1000/move Haley 0 -4 1/emote Haley 12/pause 200/speak Haley \"Desculpem ter interrompido vocês...$3#$b#Você não está atrasada para ir trabalhar, Emily?$5\"/pause 100/faceDirection Haley 0/speak Haley \"Bom...$3#$b#Não vou mais atrapalhar vocês. Estou com dor de cabeça.$3\"/emote Haley 12 true/pause 200/move Haley 0 -2 0 true/faceDirection farmer 0/emote farmer 8 true/emote Emily 8 true/move Haley 3 0 0/faceDirection Emily 0/move Haley 0 -4 0/playSound doorOpen/pause 700/globalFade/viewport -2000 -2000/warp farmer 5 10/faceDirection farmer 0/warp Haley 3 6/faceDirection Haley 1/viewport -100 -100 true unfreeze/pause 500/emote farmer 40/pause 600/faceDirection Haley 2/speak Haley \"Você aqui? Já terminou de flertar com a Emily?$3\"/pause 200/move farmer 0 -4 3/faceDirection Haley 1/move farmer -1 0 3/playMusic sadpiano/pause 1000/speak Haley \"...$s#$b#Eu sei que estou sendo infantil...$s\"/speak Haley \"É que... eu... nunca...$s\"/pause 100/faceDirection Haley 2/pause 1000/faceDirection Haley 1/speak Haley \"Me senti assim por nenhuma pessoa antes...$s#$b#Até eu encontrar você!$l\"/pause 200/emote farmer 20/animate farmer true true 100 101/positionOffset farmer -2 0/pause 10/positionOffset farmer -2 0/pause 10/positionOffset farmer -2 0/pause 10/positionOffset farmer -2 0/pause 30/positionOffset farmer -2 1/pause 30/positionOffset farmer -2 1/pause 50/positionOffset farmer -2 1/pause 50/positionOffset farmer -2 1/positionOffset farmer -2 0/pause 50/positionOffset farmer -2 0/pause 50/positionOffset farmer -2 0/showFrame Haley 28/pause 250/emote Haley 20/pause 1000/globalFade/viewport -1000 -1000/pause 2000/end",			
+			},
+		},
+		{
+			"LogName": "Dating Haley House 2",
+			"Action": "EditData",
+			"Target": "Data/Events/HaleyHouse",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"DayOfWeek": "Friday, Saturday, Sunday",
+				"HasSeenEvent": "78734210"
+				},
+			"Entries": {					
+				"78734220/f Haley 2250/A dumped_Girls/t 1200 2000": "jaunty/-1000 -1000/farmer 8 23 3 Haley 5 15 0/skippable/showframe farmer 106 true/positionOffset farmer -20 -30/viewport 6 20/pause 1000/move Haley 0 2 2/speak Haley \"... e o que você acha desse vestido?\"/emote farmer 20/faceDirection Haley 1/speak Haley \"Humm...$s#$b#Acho que não...$s#$b#Mas eu prometo experimentar só mais um!$h\"/move Haley 0 -2 0/globalFade/viewport -2000 -2000/pause 300/warp Haley 4 17/faceDirection Haley 1/warp farmer 7 17/faceDirection farmer 3/positionOffset farmer 0 25/faceDirection farmer 3/faceDirection Haley 1/viewport -100 -100 true unfreeze/pause 300/speak Haley \"E esse aqui? Não é bonito?#$b#Nossa...$s#$b#Já está tão tarde assim?$s\"/playMusic sadpiano/pause 1000/move Haley 2 0 1/speak Haley \"Desculpa... Eu só queria ficar bonita para o nosso primeiro encontro.$s\"/pause 300/speak Haley \"Bem... e agora, o que você gostaria de fazer então, @?#l\"/emote farmer 20/pause 2000/animate farmer true true 100 101/showFrame Haley 28/positionOffset farmer -2 0/positionOffset Haley 2 0/positionOffset farmer -2 0/positionOffset Haley 2 0/positionOffset farmer -2 0/positionOffset Haley 2 0/positionOffset farmer -2 0/positionOffset Haley 2 0/positionOffset farmer -2 0/positionOffset Haley 2 0/positionOffset farmer -2 0/positionOffset Haley 2 0/specificTemporarySprite heart 7 16/pause 1500/stopAnimation farmer 6/showframe Haley 4/pause 100/speak Haley \"Eu poderia ficar aqui em casa com você a noite toda. Seria um ótimo encontro!$l\"/pause 200/eyes 1 -5000/animate farmer true true 100 101/showFrame Haley 28/specificTemporarySprite heart 7 16/pause 1000/globalFade/viewport -1000 -1000/pause 1000/end",				
+			},
+		},
+		{
+			"LogName": "Dating Haley House 3",
+			"Action": "EditData",
+			"Target": "Data/Events/HaleyHouse",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"DayOfWeek": "Monday, Tuesday, Wednesday, Thursday",
+				"HasSeenEvent": "78734220",
+				},
+			"Entries": {								
+				"78734230/f Haley 2500/A dumped_Girls/t 1200 2000": "ragtime/-1000 -1000/Haley 7 5 0 farmer 5 11 0/skippable/viewport 5 8/pause 1000/faceDirection Haley 2/pause 300/speak Haley \"@!$h#$b#Que saudades! Porquê você demorou tanto para me visitar?\"/emote farmer 40/speak Haley \"Porquê você tem que trabalhar tanto?#$b#Bom... Deixa te mostrar umas roupinhas que eu comprei!$h\"/globalFade/viewport -2000 -2000/warp farmer 5 6/faceDirection farmer 1/faceDirection Haley 3/faceDirection farmer 1/viewport -100 -100 true unfreeze/message \"Horas depois...\"/pause 300/speak Haley \"...e este aqui acho que vou usar no Festival da Estrela Invernal...$11#$b#Oi?#$b#Você já tem que ir?$s\"/playMusic musicboxsong/speak Haley \"Fica um pouquinho mais!$s#$b#Deixe-me te mostrar uma coisa...$l\"/move Haley -3 0 0/textAboveHead Haley \"Entra aqui!\"/faceDirection farmer 0/move Haley 0 -1 0/playSound doorOpen/pause 1000/globalFade 0.2/viewport -2000 -2000/changeToTemporaryMap Darkroom/warp Haley 1 5/warp farmer 3 7/viewport 4 4 true/pause 800/faceDirection Haley 2/move farmer 0 -1 3/move farmer -1 0 0/move farmer 0 -1 3/faceDirection Haley 1/speak Haley \"Eu revelei essas fotos que tiramos.#$b#E eu quero te dar esse retrato.\"/playSound coin/showFrame Haley 23/pause 500/showFrame Haley 4/pause 250/emote farmer 20/pause 1000/speak Haley \"Hum... @?$l#$b#Foi aqui onde a gente se beijou pela primeira vez...$l#$b#E... eu queria te dizer uma coisa que eu... não consigo esconder mais...$l\"/pause 1000/speak Haley \"@... eu te amo!$l\"/pause 500/emote farmer 20/emote Haley 20/pause 500/positionOffset farmer 16 0 true/animate farmer true true 100 101/positionOffset farmer -2 0/pause 50/positionOffset farmer -2 0/pause 50/positionOffset farmer -2 0/pause 50/positionOffset farmer -2 0/pause 50/showFrame Haley 28/pause 500/positionOffset Haley 2 0/pause 50/positionOffset farmer -2 0/positionOffset Haley 2 0/pause 50/positionOffset farmer -2 0/positionOffset Haley 2 0/pause 50/positionOffset farmer -2 0/positionOffset Haley 2 0/pause 50/positionOffset farmer -2 0/positionOffset Haley 2 0/pause 50/positionOffset farmer -2 0/positionOffset Haley 2 0/pause 50/positionOffset farmer -2 0/positionOffset Haley 2 0/pause 50/positionOffset farmer -2 0/positionOffset Haley 2 0/pause 50/pause 700/playSound dwop/specificTemporarySprite heart 2 4/pause 3000/speak Haley \"Um momento...$l\"/pause 400/showFrame Haley 4/stopAnimation farmer/faceDirection farmer 3/pause 600/showFrame Haley 29/pause 300/playSound openBox/ambientLight 255 180 180/pause 500/faceDirection Haley 1/pause 1000/showFrame Haley 28/positionOffset farmer 16 0 true/animate farmer true true 100 101/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/pause 3000/globalFade/viewport -1000 -1000/pause 2000/end dialogue Haley \"Aquilo foi bom!$l\"",
+			},
+		},
+		{
+			"LogName": "Dating Haley House 4",
+			"Action": "EditData",
+			"Target": "Data/Events/HaleyHouse",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"DayOfWeek": "Friday, Saturday, Sunday",
+				"HasSeenEvent": "78734230"
+				},
+			"Entries": {																
+				"78734240/f Haley 2000/A dumped_Girls/t 1200 2000": "desolate/-1000 -1000/farmer 2 23 0 Haley 4 20 2/skippable/viewport -100 -100 true unfreeze/pause 2000/message \"De repente, um dia, ela se torna quieta.\"/pause 500/emote Haley 28/pause 1000/emote farmer 8/pause 500/move farmer 0 -3 1/speak Haley \"$q -1 null#...$s#$r -1 0 eventQuietHaley1#O que aconteceu?#$r -1 0 eventQuietHaley2#(Tente fazer ela rir)\"/pause 1000/message \"Então você entende o que isso significa.\"/pause 1000/message \"Oh... Está bom, querida... Eu já entendi...\"/move farmer 0 4 2/playSound doorOpen/pause 1500/globalFade 0.2/viewport -2000 -2000/pause 1500/faceDirection farmer 0/playMusic ragtime/viewport -100 -100 true unfreeze/move farmer 0 -4 1/move farmer 1 0 1/faceDirection Haley 3/pause 300/showFrame farmer 60/addObject 3 18 221 1/playsound coin/pause 800/speak Haley \"Oh!$8#$b#@, isso é exatamente o que eu preciso!$h\"/animate farmer false true 100 101/removeObject 3 18/positionOffset Haley -2 0/positionOffset Haley -2 0/positionOffset Haley -2 0/positionOffset Haley -2 0/positionOffset Haley -2 0/positionOffset Haley -2 0/positionOffset Haley -2 0/positionOffset Haley -2 0/positionOffset Haley -2 0/positionOffset Haley -2 0/positionOffset Haley -2 0/showframe Haley 21/speak Haley \"Você é o melhor namorado que uma garota poderia querer!$11^Você é a melhor namorada que uma garota poderia querer!$11\"/playsound slimeHit/specificTemporarySprite heart 4 19/pause 1000/globalFade/viewport -1000 -1000/pause 1000/end",
+			},
+		},
+		{
+			"LogName": "Dating Haley House 5",
+			"Action": "EditData",
+			"Target": "Data/Events/HaleyHouse",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"DayOfWeek": "Monday, Tuesday, Wednesday, Thursday",
+				"HasSeenEvent": "78734240"
+				},
+			"Entries": {												
+				"78734250/f Haley 2500/A dumped_Girls/t 1200 2000":  "ragtime/-1000 -1000/Haley 18 18 1 farmer 22 18 3/skippable/addObject 20 18 221 1/viewport -100 -100 true unfreeze/pause 1000/speak Haley \"@, eu não acredito que já é o nosso aniversário de namoro!$h#$b#Eu fiz esse bolo para a gente.#$b#Experimente!$h\"/pause 500/farmerEat 221/pause 2000/faceDirection farmer 3/pause 300/emote farmer 32/pause 500/playMusic sadpiano/pause 500/speak Haley \"Você me faz querer ser uma pessoa melhor, em todos os aspectos.#$b#Eu até estou tentando melhorar na cozinha e em outras tarefas domésticas...$11#$b#Isso vai ser útil quando a gente... humm... se a gente...$l\"/speak Haley \"$q -1 null#...$l#$r -1 -250 datingHaley_Anivesary1#... (não responda nada)#$r -1 0 datingHaley_Anivesary2#Eu quero viver com você, um dia!\"/fork haleyHeartbroken/move Haley 0 -1 1/move farmer 0 -1 3/move farmer -3 0 3/animate farmer true true 100 101/showFrame Haley 28/positionOffset farmer -2 0/positionOffset Haley 2 0/positionOffset farmer -2 0/positionOffset Haley 2 0/positionOffset farmer -2 0/positionOffset Haley 2 0/positionOffset farmer -2 0/positionOffset Haley 2 0/positionOffset farmer -2 0/eyes 1 -5000/positionOffset Haley 2 0/positionOffset farmer -2 0/positionOffset Haley 2 0/pause 300/pause 200/specificTemporarySprite heart 19 16/globalFade/viewport -1000 -1000/pause 2000/end dialogue Haley \"Eu estou tão contente!$h\"",
+				
+				"haleyHeartbroken": "emote farmer 28/pause 2000/speak Haley \"Bom... Vamos comer!$s\"/pause 1000/end",			
+			},
+		},
+		{
+			"LogName": "Dating Haley Town 1",
+			"Action": "EditData",
+			"Target": "Data/Events/Town",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"DayOfWeek": "Monday, Tuesday, Wednesday, Thursday",
+				},
+			"Entries": {						
+				"78734300/f Haley 2000/t 1200 2000/w sunny":  "jaunty/-1000 -1000/farmer 84 94 1 Haley 90 94 1 Alex 91 94 3/skippable/viewport 88 97/pause 1000/message \"Opa... Melhor ir embora.\"/pause 100/faceDirection farmer 3/textAboveHead Alex \"Até mais, Haley...\"/emote farmer 28/move Alex 0 -3 0 true/move farmer -1 0 3/warp Alex 40 89/faceDirection Haley 3/speak Haley \"Ah, @!$h\"/pause 100/faceDirection farmer 2/faceDirection farmer 1/speak Haley \"Ei, para onde você está indo? Eu estou aqui!\"/pause 200/viewport move 0 -2 1500/move farmer 8 0 1/emote farmer 28/speak Haley \"O quê?#$b#Não seja bobinho!$h^Não seja bobinha!$h#$b#Eu e o Alex somos apenas amigos agora.\"/move Haley -1 0 3/speak Haley \"Nós tivemos um caso... mas isso está no passado...\"/playMusic sadpiano/speak Haley \"Para dizer a verdade... é até bonitinho você ficar com ciúmes...$l#$b#Mas... você não precisa se preocupar... eu sou sua agora...$l\"/emote farmer 20/showFrame 35/showFrame Haley 21/positionOffset farmer 2 0/positionOffset Haley -2 0/positionOffset farmer 2 0/positionOffset Haley -2 0/positionOffset farmer 2 0/positionOffset Haley -2 0/positionOffset farmer 2 0/positionOffset Haley -2 0/positionOffset farmer 2 0/positionOffset Haley -2 0/positionOffset farmer 2 0/positionOffset Haley -2 0/positionOffset farmer 2 0/positionOffset Haley -2 0/positionOffset farmer 2 0/positionOffset Haley -2 0/pause 300/pause 200/specificTemporarySprite heart 89 93/globalFade/viewport -1000 -1000/pause 2000/end",
+			},
+		},
+		{
+			"LogName": "Dating Haley Town 2",
+			"Action": "EditData",
+			"Target": "Data/Events/Town",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"DayOfWeek": "Friday, Saturday, Sunday",
+				},			 
+			"Entries": {
+				"78734310/f Haley 2250/t 1900 2600/e 78734220/w sunny": "sadpiano/-1000 -1000/farmer 23 91 3 Haley 23 90 3 Emily 31 90 3/skippable/viewport 15 90/pause 1000/move farmer -3 0 3 true/move Haley -3 0 3 true/pause 1000/message \"Uau, que noite! E como ela está bonita hoje!\"/move farmer -1 0 1/move farmer 0 -1 1/pause 1000/speak Haley \"Foi um encontro incrível...$l#$b#Vamos sair outras vezes!$h\"/speak Haley \"$q -1 null#Humm... então... boa noite...$l#$r -1 0 eventAfterDateHaley1#Boa noite!#$r -1 0 eventAfterDateHaley2#Peça para entrar e tomarem um café...\"/fork eventAfterDateHaleyGoodNight/move Emily -9 0 3/speak Emily \"Oi, o que vocês estão fazendo aqui a essa hora?$3\"/stopmusic/faceDirection Haley 1/emote Haley 12/pause 500/speak Haley \"Emily, você não é a minha mãe!$5\"/pause 300/textAboveHead Emily \"Ok, Ok...\"/move Emily -2 0 0/move Emily 0 -1 0/playsound doorOpen/pause 300/faceDirection Haley 2/faceDirection Haley 3/warp Emily 0 0/pause 1000/speak Haley \"*Suspiro*... Acho que acabou o clima...$s\"/emote farmer 28/pause 2000/end",
+				 
+				"eventAfterDateHaleyGoodNight": "pause 1000/textAboveHead Haley \"*Smack*\"/positionOffset Haley -4 0/positionOffset Haley -4 0/positionOffset Haley -4 0/pause 50/positionOffset Haley -4 0/pause 50/positionOffset Haley -4 0/pause 50/animate Haley true true 100 28/animate farmer false true 100 101/positionOffset Haley -2 0/pause 400/specificTemporarySprite heart 20 89/pause 400/globalFade/viewport -1000 -1000/pause 2000/end",
+			},
+		},
+		{
+			"LogName": "Dating Haley Town 3",
+			"Action": "EditData",
+			"Target": "Data/Events/Town",
+			"When": {
+				"Relationship:Haley": "Dating",
+				"DayOfWeek": "Monday, Tuesday, Wednesday, Thursday",
+				"HasSeenEvent": "78734310"
+				},
+			"Entries": {				
+				"78734330/f Haley 2000/t 1700 2300/w sunny": "jaunty/-1000 -1000/farmer 37 70 0 Haley 36 70 0 Lewis 33 61 2 Emily 31 69 0 Marnie 30 65 0 Clint 34 65 0 Jodi 36 66 0 Shane 28 65 0 Robin 32 67 0 Demetrius 33 67 0/skippable/viewport 33 65/ambientLight 130 130 130/pause 2000/speak Lewis \"... e nos próximos anos, nós vamos fazer várias melhorias na Vila Pelicanos!\"/pause 300/faceDirection Haley 1/pause 300/speak Haley \"Qual é a lógica do Sr. Lewis fazer esses comícios?\"/pause 300/faceDirection Haley 0/pause 100/faceDirection Haley 1/pause 100/speak Haley \"Ele é sempre o único candidato a prefeito!$h\"/pause 100/faceDirection Haley 0/pause 200/speak Lewis \"Nós também planejamos...\"/playSound thunder_small/stopMusic/pause 100/globalFade 0.5/viewport -2000 -2000/pause 300/speak Haley \"Nossa! A energia caiu...$8\"/pause 200/playMusic sadpiano/speak Haley \"Humm... e se a gente...$l\"/playsound slimeHit/pause 500/message \"*Smack*\"/playsound slimeHit/faceDirection Clint 2/faceDirection Jodi 2/faceDirection Shane 2/playsound slimeHit/faceDirection Emily 1/faceDirection Marnie 2/faceDirection Robin 2/faceDirection Demetrius 2/faceDirection farmer 3/positionOffset Haley 30 0/showFrame Haley 28/showFrame farmer 35 true/eyes 1 -5000/stopMusic/viewport 33 65/textAboveHead Haley \"*Smack* *Smack* *Smaaaaaaack!!!*\"/playsound slimeHit/pause 600/playsound slimeHit/pause 600/playsound slimeHit/pause 1000/speak Haley \"Ahh!!!$8\"/faceDirection Haley 0/positionOffset Haley -15 0/faceDirection farmer 0/textAboveHead Jodi \"*Hi hi*\"/textAboveHead Marnie \"*Hi hi*\"/pause 200/emote Haley 60 true/emote farmer 60/pause 1000/speak Lewis \"CAHAM...$5\"/pause 2000/end",
+			},
+		},
+		{
+			"LogName": "Dating Haley Winter Star Eve",
+			"Action": "EditData",
+			"Target": "Data/Events/Town",
+			"When": {
+				"Relationship:Haley": "Dating, Engaged, Married",
+				"Season": "Winter",
+				},
+			"Entries": {		 							 		
+				"78734340/f Haley 2000/t 1500 2600/u 24": "musicboxsong/-1000 -1000/farmer 35 79 3 Haley 31 79 1/skippable/viewport -100 -100 true unfreeze/pause 1000/move Haley 3 0 1/pause 1000/speak Haley \"Feliz Festival da Estrela Invernal meu amor... é para você.\"/pause 900/playsound coin/showFrame Haley 23/pause 500/showframe Haley 4/pause 500/speak Haley \"Abra!$h\"/pause 800/message \"Oh, é um creme para as mãos!\"/pause 1000/playsound coin/showframe farmer 35 true/pause 500/showframe farmer 6/pause 1000/speak Haley \"Oh!...$8#$b#Um anel de diamantes... é maravilhoso!$h\"/emote Haley 20/pause 1000/speak Haley \"@... Eu nunca havia sentido algo tão lindo assim antes...#$b#Estar com você foi a melhor coisa que aconteceu comigo.#$b#Foi tão bom a gente ter se encontrado!$l\"/showFrame Haley 23/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/animate farmer true true 100 101/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 1/pause 50/positionOffset Haley 2 1/pause 50/positionOffset Haley 2 1/pause 50/eyes 1 -5000/positionOffset Haley 2 1/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/positionOffset Haley 2 0/pause 50/emote Haley 20/globalFade/viewport -1000 -1000/pause 2000/end",				
+			 },
+		},		
+	]
+}
+		 

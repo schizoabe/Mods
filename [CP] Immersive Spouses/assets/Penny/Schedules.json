@@ -1,0 +1,76 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				"marriage_Sun": "730 CommunityCenter 23 17 2 penny_read \"Strings\\schedules\\Penny:marriage_{{Random:cc, r, r2}}\"/1200 BusStop 10 10 2 \"Strings\\schedules\\Penny:marriage_{{Random:bus, bus2, bus3, bus4}}\"/1530 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1830 BusStop 9 23 3"
+			},
+			"When": {
+				"IsCommunityCenterComplete": true
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				"marriage_Sun": "800 Town 96 18 3 \"Strings\\schedules\\Penny:marriage_{{Random:spot, spot2}}\"/1130 Town 23 17 2 penny_read \"Strings\\schedules\\Penny:marriage_{{Random:r, r2}}\"/1530 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1830 BusStop 9 23 3"
+			},
+			"When": {
+				"IsCommunityCenterComplete": false
+			}
+		},
+
+		//Raining Schedule
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				"marriageJob": "800 Town 104 89 2 \"Strings\\schedules\\Penny:rain2.000\"/1300 ArchaeologyHouse 20 5 0 \"Strings\\schedules\\Penny:marriage_{{Random:museum, museum2, museum3}}\"/1800 BusStop 9 23 3"
+			},
+			"When": {
+				"Weather": "Rain, Storm"
+			}
+		},
+
+		//Schedule 9 or 23
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				"marriageJob": "800 Town 96 18 3 \"Strings\\schedules\\Penny:marriage_{{Random:spot, spot2}}\"/1130 Town 23 17 2 penny_read \"Strings\\schedules\\Penny:marriage_{{Random:r, r2}}\"/1530 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_Mon.002\"/1830 BusStop 9 23 3"
+			},
+			"When": {
+				"Day": "9, 23"
+			}
+		},
+
+		//Schedule 9 or 23 Rain
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				"marriageJob": "800 Town 104 89 2 \"Strings\\schedules\\Penny:rain2.000\"/1300 ArchaeologyHouse 20 5 0 \"Strings\\schedules\\Penny:marriage_{{Random:museum, museum2, museum3}}\"/1800 BusStop 9 23 3"
+			},
+			"When": {
+				"Day": "9, 23",
+				"Weather": "Rain, Storm"
+			}
+		},
+		
+		//DOCTORS CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Penny",
+			"Entries": {
+				"marriage_Thu": "1000 Hospital 4 17 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_doctormarriage\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Penny:marriage_doctorextra\"/1600 Town 44 77 2 penny_sit_down \"Strings\\schedules\\Penny:marriage_doctorafter\"/1830 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "4"
+			}
+		},
+
+		//NIGHT MARKET
+	]
+}

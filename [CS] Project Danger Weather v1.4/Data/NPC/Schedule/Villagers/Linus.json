@@ -1,0 +1,18 @@
+{
+	"Changes": [
+    {
+		"Action": "EditData",
+		"Target": "Characters/schedules/Linus",
+		"Priority": "Late",
+		"When": {"Weather": "kath.weathering_Darkness, kath.weathering_HeavyRain, kath.weathering_Locust, kath.weathering_Blizzard, kath.weathering_Hail"},
+      "Entries": {
+		  "rain": "700 Tent 2 2 0/930 Mountain 25 5 1/1010 Tent 3 2 2/1500 Mountain 17 8 2/1900 Tent 2 2 2",
+		  "summer": "GOTO rain",
+		  "fall": "GOTO rain",
+		  "winter": "GOTO rain",
+		  "spring": "700 Tent 2 2 0/930 Mountain 25 5 1/1010 Tent 3 2 2/1500 Mountain 17 8 2/1900 Tent 2 2 2"
+      },
+    },
+
+]
+}

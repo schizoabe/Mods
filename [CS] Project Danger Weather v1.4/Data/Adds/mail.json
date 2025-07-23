@@ -1,0 +1,422 @@
+{
+	"Changes": [
+//Main
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+			"kath.weathering_AcidRainSoil": {
+				"Id": "kath.weathering_AcidRainSoil",
+                "Trigger": "DayStarted",
+                "Condition": "WEATHER Town kath.weathering_AcidRain",
+                "Actions": [
+                    "If !PLAYER_HAS_MAIL Current AcidRainSoil ## AddMail Current AcidRainSoil now",
+					"MarkActionApplied Current kath.weathering_AcidRainSoil_RemoveFlag false"
+                    ]
+				},
+			"kath.weathering_AcidRainSoil_RemoveFlag": {
+				"Id": "kath.weathering_AcidRainSoil_RemoveFlag",
+                "Trigger": "DayEnding",
+                "Condition": "!PLAYER_HAS_MAIL Current AcidRainSoil, !WEATHER Here kath.weathering_AcidRain",
+                "Actions": [
+                    "MarkActionApplied Current kath.weathering_AcidRainSoil false"
+                    ]
+				},
+			"kath.weathering_MudRainSoil": {
+				"Id": "kath.weathering_MudRainSoil",
+                "Trigger": "DayStarted",
+                "Condition": "WEATHER Town kath.weathering_MudRain",
+                "Actions": [
+                    "If !PLAYER_HAS_MAIL Current MudRainSoil ## AddMail Current MudRainSoil now",
+					"MarkActionApplied Current kath.weathering_MudRainSoil_RemoveFlag false"
+                    ]
+				},
+			"kath.weathering_MudRainSoil_RemoveFlag": {
+				"Id": "kath.weathering_MudRainSoil_RemoveFlag",
+                "Trigger": "DayEnding",
+                "Condition": "!PLAYER_HAS_MAIL Current MudRainSoil, !WEATHER Here kath.weathering_MudRain",
+                "Actions": [
+                    "MarkActionApplied Current kath.weathering_MudRainSoil false"
+                    ]
+				}					
+			}
+		},
+//For Drought
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {
+					"SprinklerDrought": "maps, damage",
+					"AddWeather": "heat"
+				},
+            "Entries": {
+			"kath.weathering_NoSprinklers": {
+				"Id": "kath.weathering_NoSprinklers",
+                "Trigger": "LocationChanged",
+                "Condition": "WEATHER Here kath.weathering_HeatWave, YEAR 1",
+                "Actions": [
+                    "AddMail Current NoSprinklersToday"
+                    ]
+				},			
+			"kath.weathering_NoSprinklersSubsidy": {
+				"Id": "kath.weathering_NoSprinklersSubsidy",
+                "Trigger": "DayEnding",
+                "Condition": "SEASON summer, DAY_OF_MONTH 23, YEAR 2",
+                "Actions": [
+                    "AddMail Current NoSprinklersSub",
+					"AddConversationTopic WCDFarmerAid1 3"
+                    ]
+				},	
+			"kath.weathering_NoSprinklersSubsidyLong": {
+				"Id": "kath.weathering_NoSprinklersSubsidyLong",
+                "Trigger": "DayEnding",
+                "Condition": "SEASON summer, DAY_OF_MONTH 16, YEAR 4",
+                "Actions": [
+					"If PLAYER_HAS_MAIL Current NoSprinklersSub ## AddMail Current NoSprinklersSubAgain ## AddMail Current NoSprinklersSub",
+					"AddConversationTopic WCDFarmerAid2 3"
+                    ]
+				},					
+			"kath.weathering_NoSprinklersLong": {
+				"Id": "kath.weathering_NoSprinklersLong",
+                "Trigger": "LocationChanged",
+                "Condition": " ANY \"WEATHER Here kath.weathering_HeatWave, !YEAR 1 4, RANDOM 0.1\" \"!WEATHER Here kath.weathering_HeatWave, CS_WEATHER Town -1 kath.weathering_HeatWave, !YEAR 1 4\"",
+				"MarkActionApplied": false,
+                "Actions": [
+                    "If PLAYER_HAS_MAIL Current NoSprinklersToday ## AddMail Current NoSprinklersAgain ## AddMail Current NoSprinklersToday"
+                    ]
+				}
+			}
+		},
+		
+//Nado first call
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {
+					"AddWeather": "nado",
+					"NightEvents": "true"
+				},
+            "Entries": {		
+			"kath.weathering_NadoOnce": {
+				"Id": "kath.weathering_NadoOnce",
+                "Trigger": "DayStarted",
+                "Condition": "CS_WEATHER Town -1 kath.weathering_Tornado",
+                "Actions": [
+					"AddMail All {{NadoOnce}} received"
+                    ]
+				}
+			}
+		},
+		
+//For Earthquake (THIS ONE made my head hurt)
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {
+					"AddWeather": "ash",
+					"NightEvents": "true",
+					"PretendLava": "true"
+				},
+            "Entries": {
+			"kath.weathering_EarthquakeStart": {
+				"Id": "kath.weathering_EarthquakeStart",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_VISITED_LOCATION Current IslandNorth IslandWest, RANDOM 0.125, !YEAR 1 4, !IS_PASSIVE_FESTIVAL_TODAY SquidFest, !IS_PASSIVE_FESTIVAL_TODAY DesertFestival, !IS_PASSIVE_FESTIVAL_TODAY TroutDerby, !IS_PASSIVE_FESTIVAL_TODAY NightMarket",
+                "Actions": [
+					"MarkActionApplied All kath.weathering_EarthquakeVolcano_Stop false",
+					"AddMail All EarthquakeIslandStart now"
+                    ]
+				},
+			"kath.weathering_EarthquakeFlag": {
+				"Id": "kath.weathering_EarthquakeFlag",
+                "Trigger": "DayEnding",
+                "Condition": "!PLAYER_HAS_MAIL Current SummonByTotem, PLAYER_HAS_MAIL Current SummonAsh, RANDOM 0.85, !YEAR 1 4, !IS_PASSIVE_FESTIVAL_TODAY SquidFest, !IS_PASSIVE_FESTIVAL_TODAY DesertFestival, !IS_PASSIVE_FESTIVAL_TODAY TroutDerby, !IS_PASSIVE_FESTIVAL_TODAY NightMarket",
+                "Actions": [
+                    "AddMail Current VolcanoEruption received",
+					"AddConversationTopic WCDEruption 4"
+                    ]
+				},
+			"kath.weathering_EarthquakeVolcano_Stop": {
+				"Id": "kath.weathering_EarthquakeVolcano_Stop",
+                "Trigger": "DayEnding",
+                "Condition": "!PLAYER_HAS_MAIL Current SummonByTotem, PLAYER_HAS_MAIL Current VolcanoEruption, RANDOM 0.85, !YEAR 1 4, !IS_PASSIVE_FESTIVAL_TODAY SquidFest, !IS_PASSIVE_FESTIVAL_TODAY DesertFestival, !IS_PASSIVE_FESTIVAL_TODAY TroutDerby, !IS_PASSIVE_FESTIVAL_TODAY NightMarket",
+                "Actions": [
+					"MarkActionApplied All kath.weathering_EarthquakeStart false",
+					"RemoveMail Current VolcanoEruption All",
+					"RemoveMail Current SummonAsh All",
+					"RemoveMail Current EarthquakeIsland All"
+                    ]
+				},
+
+	//Special
+			"kath.weathering_EarthquakeStartOnce1": {
+				"Id": "kath.weathering_EarthquakeStartOnce1",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_VISITED_LOCATION Current IslandNorth IslandWest, PLAYER_STAT Any boatRidesToIsland 5 99, !IS_PASSIVE_FESTIVAL_TODAY SquidFest, !IS_PASSIVE_FESTIVAL_TODAY DesertFestival, !IS_PASSIVE_FESTIVAL_TODAY TroutDerby, !IS_PASSIVE_FESTIVAL_TODAY NightMarket",
+                "Actions": [
+					"AddMail All EarthquakeIslandOnce now"
+                    ]
+				},
+			"kath.weathering_EarthquakeVolcano": {
+				"Id": "kath.weathering_EarthquakeVolcano",
+                "Trigger": "DayEnding",
+                "Condition": "!PLAYER_HAS_MAIL Current SummonByTotem, PLAYER_HAS_MAIL Current SummonAsh, WEATHER IslandNorth kath.weathering_Ash",
+                "Actions": [
+					"RemoveMail All EarthquakeIslandOnce"
+                    ]
+				},
+			"kath.weathering_Volcano": {
+				"Id": "kath.weathering_Volcano",
+                "Trigger": "DayEnding",
+                "Condition": "!PLAYER_HAS_MAIL Current SummonByTotem, PLAYER_HAS_MAIL Current SummonAsh, CS_WEATHER IslandNorth -1 kath.weathering_Ash",
+                "Actions": [
+					"AddConversationTopic WCDEruption 4",
+					"AddMail All VolcanoEruption received"
+                    ]
+				},				
+			"kath.weathering_EarthquakeVolcanoEruption": {
+				"Id": "kath.weathering_EarthquakeVolcanoEruption",
+                "Trigger": "DayEnding",
+                "Condition": "!PLAYER_HAS_MAIL Current SummonByTotem, PLAYER_HAS_MAIL Current VolcanoEruption, CS_WEATHER IslandNorth -2 kath.weathering_Ash",
+                "Actions": [
+					"AddMail All TriggerStop1 received",
+					"RemoveMail All EarthquakeIslandOnce",
+					"RemoveMail All SummonAsh"
+                    ]
+				},
+			"kath.weathering_EarthquakeStartOnce_Stop": {
+				"Id": "kath.weathering_EarthquakeStartOnce_Stop",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_HAS_MAIL Current TriggerStop1",
+                "Actions": [
+					"RemoveMail All SummonAsh",
+					"RemoveMail All VolcanoEruption",
+					"RemoveMail All TriggerStop1"					
+                    ]
+				},
+			"kath.weathering_Earthquake_Stop": {
+				"Id": "kath.weathering_Earthquake_Stop",
+                "Trigger": "DayStarted",
+                "Condition": "PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_EarthquakeStartOnce_Stop",
+				"MarkActionApplied": false,
+                "Actions": [
+					"MarkActionApplied All kath.weathering_EarthquakeStartOnce_Stop false",
+					"MarkActionApplied All kath.weathering_EarthquakeVolcanoEruption false"
+                    ]
+				}
+			}
+		},
+//Just a comment
+{
+	"Action": "EditData",
+	"Target": "Data/TriggerActions",
+	"When": {
+			"AddWeather": "north",
+			"JustNorthernLights": "true"
+		},
+	"Entries": {
+		"kath.weathering_JustNorthernLights": {
+			"Id": "kath.weathering_JustNorthernLights",
+			"Trigger": "Esca.EMP_OneSecondUpdateTicked",
+			"Condition": "TIME 1900 2600, LOCATION_NAME Here FarmHouse, WEATHER Town kath.weathering_NorthernLights",
+			"Actions": [
+				"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:JustNorthernLights.message}}\" (O)TotemBlank"
+				]
+			},		
+		"kath.weathering_JustNorthernLightsRESET": {
+			"Id": "kath.weathering_JustNorthernLightsRESET",
+			"Trigger": "DayEnding",
+			"Condition": "!WEATHER Town kath.weathering_NorthernLights",
+			"Actions": [
+				"MarkActionApplied All kath.weathering_JustNorthernLights false"
+				]
+			}				
+	}
+},
+//Sending Mail from 1_3
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {
+					"Aids": "buildings"
+				},
+            "Entries": {
+			"kath.weathering_SendArrayLetter": {
+				"Id": "kath.weathering_SendArrayLetter",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_FRIENDSHIP_POINTS Current Wizard 2500, DAYS_PLAYED 56, IS_COMMUNITY_CENTER_COMPLETE",
+				"Actions": [
+					"AddMail Current Wizard.ArrayBuild now",
+					"MarkActionApplied All kath.weathering_LetterBuildings1 false"
+                    ]
+				},
+			"kath.weathering_SendStationLetter": {
+				"Id": "kath.weathering_SendStationLetter",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_FRIENDSHIP_POINTS Current Robin 1250, DAYS_PLAYED 56",
+                "Actions": [
+					"AddMail Current Robin.StationBuild now",
+					"MarkActionApplied All kath.weathering_LetterBuildings2 false"
+                    ]
+				},
+			"kath.weathering_LetterBuildings1": {
+				"Id": "kath.weathering_LetterBuildings1",
+                "Trigger": "DayEnding",
+                "Condition": "!PLAYER_HAS_MAIL Current Wizard.ArrayBuild any",
+                "Actions": [
+					"MarkActionApplied All kath.weathering_SendArrayLetter false"
+                    ]
+				},
+			"kath.weathering_LetterBuildings2": {
+				"Id": "kath.weathering_LetterBuildings2",
+                "Trigger": "DayEnding",
+                "Condition": "!PLAYER_HAS_MAIL Current Robin.StationBuild any",
+                "Actions": [
+					"MarkActionApplied All kath.weathering_SendStationLetter false"
+                    ]
+				}
+			}
+		},
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {
+					"Aids": "objects"
+				},
+            "Entries": {
+			"kath.weathering_SendFertiLetter": {
+				"Id": "kath.weathering_SendFertiLetter",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_FRIENDSHIP_POINTS Current Wizard 1500, DAYS_PLAYED 56, !PLAYER_HAS_MAIL Current Wizard.ArrayBuild any",
+                "Actions": [
+					"If !PLAYER_HAS_MAIL Current Wizard.FertiStart ## AddMail Current Wizard.FertiStart"
+                    ]
+				},
+			"kath.weathering_RecFertiLetter": {
+				"Id": "kath.weathering_RecFertiLetter",
+                "Trigger": "DayStarted",
+                "Condition": "PLAYER_HAS_MAIL Current Wizard.FertiStart any, PLAYER_FRIENDSHIP_POINTS Current Wizard 2000, RANDOM 0.15, !PLAYER_HAS_MAIL Current Wizard.ArrayBuild any",
+				"MarkActionApplied": false,
+                "Actions": [
+					"AddMail Current Wizard.FertiRec now"
+                    ]
+				}
+			}
+		},
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {
+					"Aids": "clothes",
+					"HasFlag |contains=jojaMember": false
+				},
+            "Entries": {
+			"kath.weathering_SendClothesLetter": {
+				"Id": "kath.weathering_SendClothesLetter",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_FRIENDSHIP_POINTS Current Emily 1750, DAYS_PLAYED 56",
+                "Actions": [
+					"AddMail Current Emily.ClothesStart now",
+					"MarkActionApplied All kath.weathering_Letterclothes1 false"
+                    ]
+				},
+			"kath.weathering_Letterclothes1": {
+				"Id": "kath.weathering_Letterclothes1",
+                "Trigger": "DayEnding",
+                "Condition": "!PLAYER_HAS_MAIL Current Emily.ClothesStart any",
+                "Actions": [
+					"MarkActionApplied All kath.weathering_SendClothesLetter false"
+                    ]
+				}
+			}
+		},
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {
+					"Aids": "clothes",
+					"HasFlag |contains=jojaMember": true
+				},
+            "Entries": {
+			"kath.weathering_SendClothesLetter": {
+				"Id": "kath.weathering_SendClothesLetter",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_FRIENDSHIP_POINTS Current Emily 1750, DAYS_PLAYED 56",
+                "Actions": [
+					"AddMail Current Emily.ClothesJoja now",
+					"MarkActionApplied All kath.weathering_Letterclothes1 false"
+                    ]
+				},
+			"kath.weathering_Letterclothes1": {
+				"Id": "kath.weathering_Letterclothes1",
+                "Trigger": "DayEnding",
+                "Condition": "!PLAYER_HAS_MAIL Current Emily.ClothesJoja any",
+                "Actions": [
+					"MarkActionApplied All kath.weathering_SendClothesLetter false"
+                    ]
+				}
+			}
+		},
+		
+		{
+		"Action": "EditData",
+    	"Target": "Data/mail",
+    	"Entries":{ 
+			"NoSprinklersToday": "{{i18n: No.Sprinklers1.LetterText}}[letterbg Mods/kath.weathering/Letters 0][textcolor black][#]{{i18n: No.Sprinklers1.LetterTitle}}",
+			"NoSprinklersSub": "{{i18n: No.Sprinklers2.LetterText}}[letterbg Mods/kath.weathering/Letters 0][textcolor black]%item money 2000 3500 %%[#]{{i18n: No.Sprinklers2.LetterTitle}}",
+			"NoSprinklersAgain": "{{i18n: No.Sprinklers3.LetterText}}[letterbg Mods/kath.weathering/Letters 0][textcolor black]%item money 800 2000 %%[#]{{i18n: No.Sprinklers3.LetterTitle}}",
+			"NoSprinklersSubAgain": "{{i18n: No.Sprinklers4.LetterText}}[letterbg Mods/kath.weathering/Letters 0][textcolor black]%item money 3500 8000 %%[#]{{i18n: No.Sprinklers4.LetterTitle}}",
+			"AcidRainSoil": "{{i18n: AcidRain.Soil.LetterText}}[letterbg Mods/kath.weathering/Letters 0][textcolor black][#]{{i18n: AcidRain.Soil.LetterTitle}}",
+			"MudRainSoil": "{{i18n: MudRain.Soil.LetterText.Modified}}[letterbg Mods/kath.weathering/Letters 0][textcolor black][#]{{i18n: MudRain.Soil.LetterTitle}}",
+			"EarthquakeIsland": null,
+			"SummonAsh": null,
+			"VolcanoEruption": null,
+			"TriggerStop1": null,
+			"TriggerStop2": "{{i18n: Volcano.Lava.LetterText}}[letterbg Mods/kath.weathering/Letters 0][textcolor black][#]{{i18n: Volcano.Lava.LetterTitle}}",
+			"NadoOnce": null,
+			"TriggerStopNadoOnce": null,
+			"BuiltArray": null,
+			"BuiltStation": null,
+			"Emily.ClothesStart": "{{i18n: Emily.Clothes.LetterText}}[letterbg 0][#]{{i18n: Emily.Clothes.LetterTitle}}",
+			"Emily.ClothesJoja": "{{i18n: Emily.Joja.LetterText}}[letterbg 0][#]{{i18n: Emily.Joja.LetterTitle}}",
+			"Wizard.FertiStart": "{{i18n: Wizard.Ferti.LetterText1}}[letterbg 2]%item object ManaFertilizer 50 %%[#]{{i18n: Wizard.Ferti.LetterTitle1}}",
+			"Wizard.FertiRec": "{{i18n: Wizard.Ferti.LetterText2}}[letterbg 2]%item object ManaFertilizer 5 %%[#]{{i18n: Wizard.Ferti.LetterTitle2}}",
+			"Robin.StationBuild": "{{i18n: Robin.Station.LetterText}}[letterbg 0][#]{{i18n: Robin.Station.LetterTitle}}",
+			"Wizard.ArrayBuild": "{{i18n: Wizard.Array.LetterText.Modified}}[letterbg 2][#]{{i18n: Wizard.Array.LetterTitle}}",
+			"Wizard.SummonMNE": "{{i18n: Wizard.Summon.LetterText}}[letterbg 2]%item object ManaFertilizer 5 %%[#]{{i18n: Wizard.Summon.LetterTitle}}",
+			"SummonByTotem": null,
+			"SummonStop": null,
+			"CoinStart": "{{i18n: WeatherToken.LetterText}}[letterbg 0]%item object WeatherToken 1 %%[#]{{i18n: WeatherToken.LetterTitle}}",
+			"algaebloom": null,
+			"algaebloomrepeat": null,
+			"algaebloomPOST": "{{i18n: Willy.SpecialOrder.LetterText}}[letterbg Mods/kath.weathering/Letters 0][textcolor black]%item money 10000 %%[#]{{i18n: Willy.SpecialOrder.LetterTitle}}",
+			"PDWThanksLetter": "{{i18n: PDWThanksLetter.LetterText}}[letterbg Mods/kath.weathering/Letters 0][textcolor black[#]{{i18n: PDWThanksLetter.LetterTitle}}",			
+			//MNE
+			"NadoPassingDanger": null,
+			"NadoPassingSafe": null,
+			"NadoPassingNULL": null,
+			"NadoSummonedDanger": null,
+			"NadoSummonedSafe": null,
+			"EarthquakeSummonedDanger": null,
+			"EarthquakeSummonedSafe": null,
+			"VolcanoSummonDanger": null,
+			"VolcanoSummonSafe": null,			
+			"EarthquakeIslandOnce": null,
+			"EarthquakeIslandStart": null,
+			"SummonAsh2": null,
+			//Flag
+			"SprinklerMalfuntionFlag": null,
+			"HeavyRainMonsoonMapFlag": null,
+			"MonsoonMapFlag": null,
+			"MonsoonNPCYeet": null,
+			"RandomNPCYeet.Elliott": null,
+			"RandomNPCYeet.Alex": null,
+			"RandomNPCYeet.Abigail": null,
+			"RandomNPCYeet.Pam": null,
+			"RandomNPCYeet.Lewis": null,
+			"RandomNPCYeet.Pierre": null,
+			"PierreExtraMoneyMonsoon": null
+			}
+		}
+]
+}

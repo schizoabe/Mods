@@ -1,0 +1,25 @@
+{
+
+"Changes": [
+
+//Standard events for the 12 vanilla bachelors/bachelorettes
+{
+  "Action": "Include",
+  "FromFile": "code/vanilla.json",
+  "When": {
+      "IsEngaged": "false",
+  },
+},
+
+//Default event for custom (non-vanilla) NPCs, if enabled
+{
+    "Action": "Include",
+    "FromFile": "data/DefaultProposal.json",
+    "When": {
+        "IsEngaged": "false",
+        "Query: {{Count:{{Kantrip.ReverseProposals/MaxHeartSuitors:type=noevent}}}} > 0": true,
+    },
+},
+
+]
+}

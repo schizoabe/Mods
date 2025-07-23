@@ -1,0 +1,16 @@
+{ // Mine Death - Krobus
+  "Changes": [
+    {
+      "LogName": "KO Mines - Krobus",
+      "Action": "EditData",
+      "Target": "Data/Events/Mine",
+      "When": {
+        "Roommate": "Krobus",
+        "DayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Saturday, Sunday",
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 20 10 2 Krobus 19 10 1/skippable/pause 1500/showFrame 5/message \" ...{2}?\"/pause 1000/message \"{{i18n:Island.Wake}}\"/viewport 19 10 true/pause 1500/speak Krobus \"{{i18n:MineKilled.Krobus.01}}\"/pause 500/emote farmer 40/pause 500/faceDirection farmer 1/faceDirection farmer 3/pause 500/emote farmer 8/pause 1000/speak Krobus \"{{i18n:MineKilled.Krobus.02}}\"/emote farmer 16/pause 1000/speak Krobus \"{{i18n:MineKilled.Krobus.03}}\"/emote Krobus 40/speak Krobus \"{{i18n:MineKilled.Krobus.04}}\"/pause 500/emote farmer 20/faceDirection farmer 2/showFrame 0/pause 500/minedeath/end dialogue Krobus \"{{i18n:MineEnd.Krobus.01}}#$c 0.7#{{i18n:MineEnd.Krobus.02}}\""
+      }
+    }
+  ]
+}

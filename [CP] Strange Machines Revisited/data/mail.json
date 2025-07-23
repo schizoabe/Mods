@@ -1,0 +1,37 @@
+{
+   "Changes":
+   [
+    //Letter Content
+    {
+        "Action": "EditData",
+        "Target": "Data/Mail",
+        "Entries": {
+            "sm.AF": "{{i18n: Alchemical Fuser.text}}%item craftingRecipe {{ModId}}_AF_Nickel %%[#]{{i18n: Alchemical Fuser Recipe.title}}",
+            "sm.BF": "{{i18n: BrazierFurnace.text}}%item craftingRecipe {{ModId}}_BF %%[#]{{i18n: BrazierFurnace.title}}",
+            // "sm.AF_Extra": "{{i18n: Alchemical Fuser Extra.text}}%item craftingRecipe {{ModId}}_BF %%[#]{{i18n: Alchemical Fuser Extra.title}}",
+            "sm.CZ": "{{i18n: Carbonizer.text}}%item craftingRecipe {{ModId}}_CZ %%[#]{{i18n: Carbonizer.title}}",
+            // "sm.FM": "{{i18n: Fertilizer Maker and Recipes.text}}%item craftingRecipe {{ModId}}_FM %%[#]{{i18n: Fertilizer Maker and Recipes.title}}",
+            "sm.GP": "{{i18n: Gourmet Cheese Press.text}}%item craftingRecipe {{ModId}}_GP %%[#]{{i18n: Gourmet Cheese Press Recipe.title}}",
+            "sm.GM": "{{i18n: Gourmet Mayo Machine.text}}%item craftingRecipe {{ModId}}_GM %%[#]{{i18n: Gourmet Mayo Machine Recipe.title}}",
+            "sm.RF": "{{i18n: RainbowFragments.text}}%item object {{ModId}}_RainbowFragment 1%%[#]{{i18n: RainbowFragments.title}}",
+            "sm.LL": "{{i18n: LiquidLuck.text}}%item object {{ModId}}_LiquidLuck 1%%[#]{{i18n: LiquidLuck.title}}"
+        }
+    },
+    // Add Letter Event
+    {
+        "Action": "EditData",
+        "Target": "Data/Events/Farm",
+        "Entries": {
+            "sm.AF.send/dayofweek monday/season winter/skill farming 10/friendship Maru 1250/sendmail sm.AF": "null",
+            // "sm.AF_Extra.send/dayofweek thursday/season winter/sawevent sm.AF_Extra.send/friendship maru 1500/year 1/sendmail sm.AF_Extra": "null",
+            "sm.BF.send/dayofweek thursday/friendship Clint 1500/sendmail sm.BF": "null",
+            "sm.CZ.send/dayofweek tuesday/season spring/year 2/sendmail sm.CZ": "null",
+            // "sm.FM.send/skill farming 1/friendship Pierre 500/year 2/sendmail sm.FM": "null",
+            "sm.GP.send/dayofweek sunday/friendship Marnie 2000/season spring/year 2/sendmail sm.GP": "null",
+            "sm.GM.send/dayofweek friday/friendship Marnie 1500/season summer/year 2/sendmail sm.GM": "null",
+            "sm.RF.send/dayofweek sunday/skill mining 10/season spring/year 2/sendmail sm.GP": "null",
+            "sm.LL.send/dayofweek friday/skill fishing 5/season summer/year 2/sendmail sm.GM": "null"
+        }
+    }
+    ]
+}

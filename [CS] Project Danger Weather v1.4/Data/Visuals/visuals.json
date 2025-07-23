@@ -1,0 +1,286 @@
+{
+	"Changes": [
+//Buff Icons
+		{
+      		"LogName": "Load Icon Buff",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Buffs",
+			"FromFile": "assets/Textures/Icon/Buffs.png"
+		},
+//Mini Clock Icons
+		{
+      		"LogName": "Load Icon Clock",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Icons",
+			"FromFile": "assets/Textures/Icon/Icons.png"
+		},
+		{
+      		"LogName": "Load Icon Clock - Vanilla",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/IconsVanilla",
+			"FromFile": "assets/Textures/Icon/vanillaicons.png"
+		},		
+		{
+      		"LogName": "Load Icon Clock Festivals",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/IconsFestival",
+			"FromFile": "assets/1_3/vanillafestival.png"
+		},
+//TV Channel
+		{
+      		"LogName": "Load Icon TV",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/TV",
+			"FromFile": "assets/Textures/Icon/TV.png"
+		},
+		{
+			"LogName": "Load Icon TV",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/WindVanilla",
+			"FromFile": "assets/Textures/Icon/wind.png"
+		},		
+//Weather Textures
+		{
+      		"LogName": "Load Textures Weathers",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Blizzard",
+			"FromFile": "assets/Textures/Weather/snow.png"
+		},
+		{
+      		"LogName": "Load Textures Leaf",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/LeafColour",
+			"FromFile": "assets/1_3/leafcolour2.png"
+		},	
+		{
+      		"LogName": "Load Textures Rain",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/MayoRain",
+			"FromFile": "assets/1_3/mayorain.png"
+		},		
+//Fog Textures
+		{
+      		"LogName": "Load Fog Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Fog",
+			"FromFile": "assets/Textures/Weather/fog.png"
+		},
+		{
+      		"LogName": "Load THE Fog Texture1",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/HadiFogBlue",
+			"FromFile": "assets/HadiFog/FogBlue.png"
+		},	
+		{
+      		"LogName": "Load THE Fog Texture2",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/HadiFogGray",
+			"FromFile": "assets/HadiFog/FogGray.png"
+		},		
+		{
+      		"LogName": "Load THE Fog Texture3",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/HadiFogWhite",
+			"FromFile": "assets/HadiFog/FogWhite.png"
+		},	
+//Rainbow Texture
+		{
+      		"LogName": "Load Rainbow Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Rainbow",
+			"FromFile": "assets/Textures/Rainbow/Rainbow.png"
+		},								
+//Northern Light Texture
+		{
+      		"LogName": "Load Lights Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Lights",
+			"FromFile": "assets/Textures/lights/Lights.png"
+		},
+//Heart TV Texture
+		{
+      		"LogName": "Load Heart TV Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Hearts",
+			"FromFile": "assets/1_3/heartTV.png"
+		},
+//Objects
+		{
+      		"LogName": "Load Objects Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Objects",
+			"FromFile": "assets/1_3/Objects.png"
+		},
+		{
+			"LogName": "Load Objects Texture - Error Item",
+		 	"Action": "Load",
+		 	"Target": "Mods/kath.weathering/ErrorObject",
+			"FromFile": "assets/SC/Error/Error_Object.png"
+	  	},
+		{
+      		"LogName": "Load Weather Token Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/WeatherToken",
+			"FromFile": "assets/1_3/WeatherToken.png"
+		},		
+		{
+      		"LogName": "Load Totems Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Totems",
+			"FromFile": "assets/1_3/Totems.png"
+		},
+		{
+      		"LogName": "Load Totems Texture Blank",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/TotemBlank",
+			"FromFile": "assets/1_3/TotemBlank.png"
+		},
+		{
+      		"LogName": "Load Mayo Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Mayo",
+			"FromFile": "assets/1_3/mayo.png"
+		},
+		{
+			"LogName": "Load Vanilla Totems Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/VanillaTotems",
+			"FromFile": "assets/SC/Vanilla/Totems.png"
+		},		
+		{
+			"LogName": "Totems to Tomes",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/VanillaTotems",
+			"FromFile": "assets/SC/Vanilla/Tomes.png",
+			"When": {"HasMod|contains=Aimon111.WarpTotemstoMagicBookTomes": true}
+		},
+		//
+		{
+			"LogName": "Load Cloud Particle",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Cloud",
+			"FromFile": "assets/Textures/Icon/CloudParticle.png"
+		},			
+		{
+			"LogName": "Load Vanilla Totem Particle",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/TotemParticle",
+			"FromFile": "assets/Textures/Icon/TotemParticle.png"
+		},		
+		{
+			"LogName": "Totems to Tomes",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/TotemParticle",
+			"FromFile": "assets/Textures/Icon/TotemParticle.png",
+			"When": {"HasMod|contains=Aimon111.WarpTotemstoMagicBookTomes": true}
+		},		
+		
+//Clothes
+		{
+      		"LogName": "Load Hats Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Hats",
+			"FromFile": "assets/1_3/hats.png"
+		},
+		{
+      		"LogName": "Load Icon Buff Hats",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Buffs_2",
+			"FromFile": "assets/1_3/Buffs_2.png"
+		},
+//Building		
+		{
+      		"LogName": "Load Buildings Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Buildings",
+			"FromFile": "assets/1_3/Buildings.png"
+		},	
+//Buildings2
+		{
+      		"LogName": "Load Buildings Texture2",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Buildings_2",
+			"FromFile": "assets/1_3/Buildings_2.png"
+		},		
+//Changes to EndDay Screen
+	//Moon Removal
+		{
+      		"LogName": "Edit for No Moon",
+			"Action": "EditImage",
+			"Target": "LooseSprites/Cursors",
+			"FromFile": "assets/Textures/lights/NightSky_Lights.png",
+			"FromArea": { "X": 0, "Y": 198, "Width": 62, "Height": 41 },
+			"ToArea": { "X": 642, "Y": 836, "Width": 62, "Height": 41 },
+			"When":{
+			"Weather |contains=kath.weathering_NorthernLights, kath.weathering_StarFalling": true
+			}
+		},
+		{
+      		"LogName": "Edit for No Moon",
+			"Action": "EditImage",
+			"Target": "LooseSprites/Cursors",
+			"FromFile": "assets/Textures/lights/NightSky_Lights.png",
+			"FromArea": { "X": 0, "Y": 264, "Width": 21, "Height": 13 },
+			"ToArea": { "X": 683, "Y": 877, "Width": 21, "Height": 13 },
+			"When":{
+			"Weather |contains=kath.weathering_NorthernLights, kath.weathering_StarFalling": true
+			}
+		},
+	//Lights
+		{
+      		"LogName": "Edit for Lights",
+			"Action": "EditImage",
+			"Target": "LooseSprites/Cursors",
+			"FromFile": "assets/Textures/lights/NightSky_Lights.png",
+			"Priority": "Late",
+			"FromArea": { "X": 0, "Y": 0, "Width": 640, "Height": 195 },
+			"ToArea": { "X": 0, "Y": 1453, "Width": 640, "Height": 195 },
+			"When":{
+			"Weather |contains=kath.weathering_NorthernLights": true
+			}
+		},	
+	//Meteors
+		{
+      		"LogName": "Edit for Meteors",
+			"Action": "EditImage",
+			"Target": "LooseSprites/Cursors",
+			"FromFile": "assets/Textures/lights/NightSky_Meteor.png",
+			"Priority": "Late",
+			"FromArea": { "X": 0, "Y": 0, "Width": 640, "Height": 195 },
+			"ToArea": { "X": 0, "Y": 1453, "Width": 640, "Height": 195 },
+			"When":{
+			"Weather |contains=kath.weathering_StarFalling": true
+			}
+		},	
+//Letters
+		{
+      		"LogName": "Load LetterBG Blank",
+			"Action": "Load",
+			"Target": "Mods/kath.weathering/Letters",
+			"FromFile": "assets/Textures/LetterBG/letterBG_Blank.png"
+		},
+		{
+      		"LogName": "Edit LetterBG for Language",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/Letters",
+			"FromFile": "assets/Textures/LetterBG/Languages/letterBG_en.png",
+			"When": {"Language": "en"}
+		},		
+		{
+      		"LogName": "Edit LetterBG for Language",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/Letters",
+			"FromFile": "assets/Textures/LetterBG/Languages/letterBG_{{language}}.png",
+			"When": {"HasFile:assets/Textures/LetterBG/Languages/letterBG_{{{language}}.png": "true"}
+		}
+	//The Fernigll Weather Climate and Disaster Center	
+	//Centro de Climatología y Desastres de Ferngill
+	//芬吉尔气候天气灾害中心
+    //펀길 기상 기후 위기 센터
+    //Centre de climatologie et de catastrophe de Ferngill
+    //Centro de Climatologia e Desastres de Ferngill
+    //ศูนย์ภูมิอากาศและภัยพิบัติของเฟิร์นกิลล์
+    //芬吉尔氣候天氣災害中心
+
+]
+}

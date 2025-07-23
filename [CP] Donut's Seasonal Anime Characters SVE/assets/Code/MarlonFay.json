@@ -1,0 +1,26 @@
+{
+	"Changes": [
+        
+        //MarlonFay
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/MarlonFay_{{Season}}",
+            "FromFile": "assets/{{MarlonPortrait}}/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/MarlonFay_FlowerDance",
+            "FromFile": "assets/{{MarlonPortrait}}/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"      
+        }
+
+    ]
+}

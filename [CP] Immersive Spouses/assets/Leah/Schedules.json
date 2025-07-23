@@ -1,0 +1,30 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",
+			"Entries": {
+				"marriage_Mon": "800 SeedShop 11 23 0 \"Strings\\schedules\\Leah:marriage_seedshop\"/1200 Forest 63 50 2 \"Strings\\schedules\\Leah:marriage_Mon.000\"/1500 LeahHouse 3 7 3 leah_sculpt \"Strings\\schedules\\Leah:marriage_sculptmarriage\"/1800 BusStop 9 23 3",
+				"marriage_Tue": "900 Forest 33 25 2 leah_draw \"Strings\\schedules\\Leah:marriage_{{Random:drawf, drawf2, drawf3}}\"/1600 Forest 21 29 1 \"Strings\\schedules\\Leah:marriage_{{Random:r, r2, r3, r4}}\"/1800 BusStop 9 23 3",
+				"marriage_Fri": "900 Town 18 30 leah_draw \"Strings\\schedules\\Leah:marriage_{{Random:drawt, drawt2, drawt3}}\"/1400 Town 18 24 1/1600 Saloon 2 20 1 \"Strings\\schedules\\Leah:marriage_{{Random:saloonm, saloonm2, saloonm3}}\"/2100 BusStop 9 23 3",
+				"marriage_Sun": "MAIL beachBridgeFixed/GOTO marriage_Sun_noBridge/900 Beach 72 18 2 leah_draw \"Strings\\schedules\\Leah:marriage_drawmarriage3\"/1500 LeahHouse 3 7 3 leah_sculpt \"Strings\\schedules\\Leah:marriage_sculptmarriage\"/1930 BusStop 9 23 3",
+				"marriage_Sun_noBridge": "900 Beach 38 24 2 leah_draw \"Strings\\schedules\\Leah:marriage_drawmarriage3\"/1500 LeahHouse 3 7 3 leah_sculpt \"Strings\\schedules\\Leah:marriage_sculptmarriage\"/1930 BusStop 9 23 3"
+			}
+		},
+
+		// DOCTORS CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Leah",
+			"Entries": {
+				"marriage_Tue": "1000 Hospital 12 14 0 \"Strings\\schedules\\Leah:marriage_doctormarriage\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Leah:spring_16.001\"/1600 Saloon 2 20 1 \"Strings\\schedules\\Leah:marriage_doctorafter\"/2100 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Spring",
+				"Day": "16"
+			}
+		},
+		
+		//NIGHT MARKET
+	]
+}

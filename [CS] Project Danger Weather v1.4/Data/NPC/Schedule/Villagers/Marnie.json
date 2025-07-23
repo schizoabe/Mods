@@ -1,0 +1,23 @@
+{
+	"Changes": [
+    {
+		"Action": "EditData",
+		"Target": "Characters/schedules/Marnie",
+		"Priority": "Late",
+		"When": {"Weather": "kath.weathering_Darkness, kath.weathering_HeavyRain, kath.weathering_Locust, kath.weathering_Blizzard, kath.weathering_Hail, kath.weathering_Wildfire"},
+      "Entries": {
+		  "rain": "GOTO spring",
+		  "winter_18": "GOTO spring",
+		  "fall_18": "GOTO spring",
+		  "Tue": "GOTO spring",
+		  "Mon": "810 SeedShop 11 20 0/1200 AnimalShop 24 15 0/2100 AnimalShop 12 5 3 marnie_sleep",
+		  "Wed": "GOTO spring",
+		  "Fri": "GOTO spring",
+		  "Sat": "GOTO spring",
+		  "Sun": "GOTO spring",
+		  "spring": "830 AnimalShop 17 5 0/850 AnimalShop 12 14 2/1600 AnimalShop 24 15 0/1800 AnimalShop 17 8 1/2100 AnimalShop 12 5 3 marnie_sleep"
+      },
+    },
+
+]
+}

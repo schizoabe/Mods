@@ -1,0 +1,24 @@
+{
+	"Changes": [
+    {
+		"Action": "EditData",
+		"Target": "Characters/schedules/Harvey",
+		"Priority": "Late",
+		"When": {"Weather": "kath.weathering_Darkness, kath.weathering_HeavyRain, kath.weathering_Locust, kath.weathering_Blizzard, kath.weathering_Hail"},
+      "Entries": {
+  "rain": "GOTO winter",
+  "marriageJob": "630 Hospital 1 5 0 \"Strings\\schedules\\Harvey:marriageJob.000\"/1250 Hospital 10 14 2/1330 Hospital 5 5 2/1410 Hospital 5 6 3 harvey_examine_left/1550 Hospital 5 5 2/1610 Hospital 4 5 0/1630 Hospital 3 15 0/1800 bed",
+  "marriage_Mon": "GOTO rain",
+  "Tue": "GOTO rain",
+  "Thu": "GOTO rain",
+  "Fri": "GOTO rain",
+  "Sat": "GOTO rain",
+  "winter": "800 HarveyRoom 19 7 0/840 Hospital 6 15 2/1200 HarveyRoom 4 5 1 harvey_radio/1600 HarveyRoom 11 5 3 harvey_read/2200 HarveyRoom 13 4 1 harvey_sleep",
+  "fall": "GOTO rain",
+  "summer": "GOTO rain",
+  "spring": "700 HarveyRoom 21 7 0/830 Hospital 6 15 2/1730 Hospital 9 15 3/1840 HarveyRoom 11 5 3 harvey_read/2200 HarveyRoom 13 4 1 harvey_sleep"
+      },
+    },
+
+]
+}

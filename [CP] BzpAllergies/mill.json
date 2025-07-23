@@ -1,0 +1,63 @@
+{
+  "Changes": [
+    {
+      "LogName": "Add gluten free flour to the mill",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [ "Mill", "ItemConversions" ],
+      "Entries": {
+        "BarleyZP.BzpAllergies_HazelnutGfFlour": {
+          "Id": "BarleyZP.BzpAllergies_HazelnutGfFlour",
+          "RequiredTags": [
+            "id_o_408"
+          ],
+          "MaxDailyConversions": -1,
+          "SourceChest": "Input",
+          "DestinationChest": "Output",
+          "ProducedItems": [
+            {
+              "ItemId": "(O)BarleyZP.BzpAllergies_GfFlour",
+              "ModData": {
+                "BarleyZP.BzpAllergies_MadeWith": "treenuts"
+              }
+            }
+          ]
+        },
+        "BarleyZP.BzpAllergies_AmaranthGfFlour": {
+          "Id": "BarleyZP.BzpAllergies_AmaranthGfFlour",
+          "RequiredTags": [
+            "id_o_300"
+          ],
+          "MaxDailyConversions": -1,
+          "SourceChest": "Input",
+          "DestinationChest": "Output",
+          "ProducedItems": [
+            {
+              "ItemId": "(O)BarleyZP.BzpAllergies_GfFlour",
+              "ModData": {
+                "BarleyZP.BzpAllergies_MadeWith": ""
+              }
+            }
+          ]
+        },
+        "BarleyZP.BzpAllergies_RiceGfFlour": {
+          "Id": "BarleyZP.BzpAllergies_RiceGfFlour",
+          "RequiredTags": [
+            "id_o_423"
+          ],
+          "MaxDailyConversions": -1,
+          "SourceChest": "Input",
+          "DestinationChest": "Output",
+          "ProducedItems": [
+            {
+              "ItemId": "(O)BarleyZP.BzpAllergies_GfFlour",
+              "ModData": {
+                "BarleyZP.BzpAllergies_MadeWith": ""
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

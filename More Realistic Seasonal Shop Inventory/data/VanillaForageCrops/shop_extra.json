@@ -1,0 +1,473 @@
+{
+	"CHanges": [
+	//Entries Dwarf
+	{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+  				"HasValue: ZoeyHoshi.ForageCrops_RedMushroomSeeds": true,
+  				"HasMod |contains=boringvlln.rshops": false
+  				},
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_RedMushroomSeeds", "AfterID": "(O)243" }
+      ]
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+  				"HasValue: ZoeyHoshi.ForageCrops_PurpleMushroomSeeds": true,
+  				"HasMod |contains=boringvlln.rshops": false
+  				},
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_PurpleMushroomSeeds", "AfterID": "(O)243" }
+      ]
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+  				"HasValue: ZoeyHoshi.ForageCrops_WinterRootSeeds": true,
+  				"HasMod |contains=boringvlln.rshops": false
+  				},
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_WinterRootSeeds", "AfterID": "(O)243" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+  				"HasValue: ZoeyHoshi.ForageCrops_RedMushroomSeeds": true,
+  				"HasMod |contains=boringvlln.rshops": true
+  				},
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_RedMushroomSeeds", "AfterID": "boringvlln.rshops_DwarfFood" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+  				"HasValue: ZoeyHoshi.ForageCrops_PurpleMushroomSeeds": true,
+  				"HasMod |contains=boringvlln.rshops": true
+  				},
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_PurpleMushroomSeeds", "AfterID": "boringvlln.rshops_DwarfFood" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+  				"HasValue: ZoeyHoshi.ForageCrops_WinterRootSeeds": true,
+  				"HasMod |contains=boringvlln.rshops": true
+  				},
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_WinterRootSeeds", "AfterID": "boringvlln.rshops_DwarfFood" }
+      ]
+    },
+	//Entries Joja
+	{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": ["Joja","Items"],
+  "When": {
+          "HasValue: ZoeyHoshi.ForageCrops_DaffodilSeeds": true,
+          "HasMod |contains=boringvlln.rshops": false,
+          },
+  "MoveEntries": [
+      { "ID": "ZoeyHoshi.ForageCrops_DaffodilSeeds", "BeforeId": "(O)297" }
+  ]
+},
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_LeekSeeds": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_LeekSeeds", "BeforeId": "(O)297" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_FiddleheadFernSeeds": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              "HasVisitedLocation": "Woods",
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_FiddleheadFernSeeds", "BeforeId": "(O)297" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_SnowYamSeeds": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_SnowYamSeeds", "BeforeId": "(O)297" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Late",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_DaffodilSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_DaffodilSeeds", "BeforeId": "boringvlln.rshops_JFarmingRelatedBasic" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Late",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_LeekSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_LeekSeeds", "BeforeId": "boringvlln.rshops_JFarmingRelatedBasic" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Late",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_FiddleheadFernSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasVisitedLocation": "Woods",
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_FiddleheadFernSeeds", "BeforeId": "boringvlln.rshops_JFarmingRelatedBasic" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Late",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_SnowYamSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_SnowYamSeeds", "BeforeId": "boringvlln.rshops_JFarmingRelatedBasic" }
+      ]
+    },
+    //Entries Marnie
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["AnimalShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_CaveCarrotSeeds": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_CaveCarrotSeeds", "ToPosition": "Top" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["AnimalShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_CaveCarrotSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_CaveCarrotSeeds", "BeforeID": "boringvlln.rshops_MFloof" }
+      ]
+    },
+	//Entries Pierre
+	{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "SeedShop", "Items" ],
+			"When": {
+              "HasValue: MRSSI_ZoeyHoshi.ForageCrops_saplings": true,
+              "HasMod |contains=boringvlln.rshops": false
+              },
+			"MoveEntries": [
+				{
+					"Id": "MRSSI_ZoeyHoshi.ForageCrops_saplings",
+					"BeforeId": "(O)628"
+				}
+			],
+		},
+	{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_DaffodilSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_DaffodilSeeds", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_DaffodilSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_DaffodilSeeds", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_DandelionSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_DandelionSeeds", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_DandelionSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_DandelionSeeds", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_LeekSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_LeekSeeds", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_LeekSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_LeekSeeds", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_WildHorseradishSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_WildHorseradishSeeds", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_WildHorseradishSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_WildHorseradishSeeds", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_FiddleheadFernSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+			  "HasVisitedLocation": "Woods",
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_FiddleheadFernSeeds", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_FiddleheadFernSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+			  "HasSeenEvent: AnyPlayer": "191393",
+			  "HasVisitedLocation": "Woods",
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_FiddleheadFernSeeds", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+	{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_SnowYamSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_SnowYamSeeds", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ZoeyHoshi.ForageCrops_SnowYamSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "ZoeyHoshi.ForageCrops_SnowYamSeeds", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_ZoeyHoshi.ForageCrops_saplings": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_ZoeyHoshi.ForageCrops_saplings", "AfterId": "boringvlln.rshops_Saplings" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_ZoeyHoshi.ForageCrops_saplings": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_ZoeyHoshi.ForageCrops_saplings", "AfterId": "boringvlln.rshops_SaplingsComm" }
+      ]
+    },
+    //Entries Willy
+    {
+    	"Action": "EditData",
+		"Target": "Data/Shops",
+		"TargetField": [ "FishShop", "Items" ],
+		"When":{
+			"HasValue: ZoeyHoshi.ForageCrops_SeaweedSeeds": true,
+            "HasMod |contains=boringvlln.rshops": false
+		},
+		"MoveEntries":[
+			{"ID": "ZoeyHoshi.ForageCrops_SeaweedSeeds", "ToPosition": "Top"}
+		]
+    },
+    {
+    	"Action": "EditData",
+		"Target": "Data/Shops",
+		"TargetField": [ "FishShop", "Items" ],
+		"When":{
+			"HasValue: ZoeyHoshi.ForageCrops_SeaweedSeeds": true,
+            "HasMod |contains=boringvlln.rshops": true
+		},
+		"MoveEntries":[
+			{"ID": "ZoeyHoshi.ForageCrops_SeaweedSeeds", "AfterID": "boringvlln.rshops_CrabPot"}
+		]
+    },
+    //Shop Data
+    {
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "SeedShop", "Items" ],
+			"When": {"Pierre": "Standard, Hardmode"},
+			"Entries": {
+
+				"ZoeyHoshi.ForageCrops_SpiceBerrySeeds": null,
+				"ZoeyHoshi.ForageCrops_CrystalFruitSeeds": null,
+				"ZoeyHoshi.ForageCrops_WildPlumSapling": null
+			}
+		},
+	//Shop tweaks
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"When": {"Pierre": "Standard, Hardmode", "Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, SpiceBerryBush": true},
+		"Fields": {
+			"ZoeyHoshi.ForageCrops_SpiceBerrySeeds": {
+				"ContextTags": [
+            "ZoeyHoshi.ForageCrops_saplings"
+        ]
+			}
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"When": {"Pierre": "Standard, Hardmode", "Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, CrystalFruitBush": true},
+		"Fields": {
+			"ZoeyHoshi.ForageCrops_CrystalFruitSeeds": {
+				"ContextTags": [
+            "ZoeyHoshi.ForageCrops_saplings"
+        ]
+			}
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"When": {"Pierre": "Standard, Hardmode", "Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, WildPlumTree": true},
+		"Fields": {
+			"ZoeyHoshi.ForageCrops_WildPlumSapling": {
+				"ContextTags": [
+            "ZoeyHoshi.ForageCrops_saplings"
+        ]
+			}
+		}
+	},
+	]
+}

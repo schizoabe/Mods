@@ -1,0 +1,102 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data Smog",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Smog": {
+					"Id": "kath.weathering_Smog",
+					"DisplayName": "{{i18n: Weather.Smog}}",
+
+					"Forecast": "{{i18n: Weather.Smog.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Smog.ForecastIsland}}", "Desert": "{{i18n: Weather.Smog.ForecastDesert}}",},
+					
+					"UseNightTiles": false,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"IsLightning": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": true,
+					"SpawnFrogs": true,
+					"SpawnClouds": false,
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 12, "Y": 32},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 52, "Y": 52},			
+					"TVFrames": 4,		
+
+					"TotemMessage": "{{i18n: Weather.SmogTotem}}",
+					"TotemScreenTint": "gray",
+					"TotemSound": "wind",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDSmogJoja 3",
+							],
+						},					
+					],//close effect
+
+					"Layers": [
+						{
+							"Id": "cloudymaybe1",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Fog",
+							"Source": {"X": 0, "Y": 0, "Width": 1200, "Height": 1200 },
+							"Color": "gray",
+							"Opacity": 0.41,
+							"Speed": "0.05, 0.15",
+							"ViewSpeed": "-1, -1",
+							"Scale": 2,
+						},
+						{
+							"Id": "LightingDarken",
+							"TargetMapType": "Outdoors",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "27, 44, 126",
+							"Opacity": 0.2
+						},
+						{
+							"Id": "LightingOrange",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "255, 163, 16",
+							"Opacity": 0.28
+						},
+						{
+							"Id": "LightingGreen",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "0, 101, 1",
+							"Opacity": 0.23
+						},
+						{
+							"Id": "Blurry",
+							"TargetMapType": "Outdoors",
+							"Type": "Shader",
+							"Shader": "Blur",
+							"Distance": 1.0,
+							"UseWeights": false,
+						},	
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

@@ -1,0 +1,32 @@
+{
+	"Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "EmilyPotteryLetter": "{{i18n:EmilyPotteryLetter}}",		
+                "EmilyPotteryReward": "{{i18n:EmilyPotteryReward}}",
+                "KrobusPotteryLetter": "{{i18n:KrobusPotteryLetter}}",
+                "KrobusPotteryReward": "{{i18n:KrobusPotteryReward}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "EmilyPotteryLetter": {
+                    "Id": "EmilyPotteryLetter",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_SHIPPED_BASIC_ITEM Current birdb.workshop_ClayPot 8",
+                    "Action": "AddMail Current EmilyPotteryLetter now"
+                },
+                "KrobusPotteryLetter": {
+                    "Id": "KrobusPotteryLetter",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_SHIPPED_BASIC_ITEM Current birdb.workshop_KrobusMug 5",
+                    "Action": "AddMail Current KrobusPotteryLetter now"
+                }
+            }
+        }
+    ]
+}

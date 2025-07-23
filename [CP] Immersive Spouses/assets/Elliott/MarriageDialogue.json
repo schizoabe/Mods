@@ -1,0 +1,67 @@
+{
+	"Changes": [
+	//STANDARD LEAVE/RETURN DIALOGUE
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries": {
+				"funLeave_Elliott": "#$c .5#How are you, dear? Did you sleep well?#I wrote some more poetry this morning. I'll share it with you sometime.$h#$e#$c .5#We appear to be running low on groceries. I'll stop by Pierre's later today.#I know Mondays can get busy so don't overwork yourself, my dear.$l",
+				"funReturn_Elliott": "#$c .5#Hey... I'm very proud of everything you've done today. You've worked hard.$l#My day was nothing special, my dear.#$e#$c .7#Let's continue the book I was reading for you. You'll find me in bed.#Tonight marks the thrilling conclusion of our book! I hope you're just as excited as I am.$h"
+			},
+			"When": {
+				"DayOfWeek": "Monday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries": {
+				"funLeave_Elliott": "#$c .5#Good morning. It is an amazing feeling to be able to wake up beside someone...$l#Hello, @. Waking up to silence instead of seagulls is an absolute wonder, is it not?#$e#$c .5#Maybe I'll stay in bed sometime to give you that pleasure.$h#This life with you... It is truly a life anyone would seek.$h#$b#Stay safe. I love you, my dear.$l",
+				"funReturn_Elliott": "#$c .5#Welcome back. You must be starving. Don't worry, I have just the thing for you. Enjoy.[213 212 244 198 214]#You look tired, @. Do you need a massage?$h#$e#Let's head to bed soon."
+			},
+			"When": {
+				"DayOfWeek": "Wednesday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries": {
+				"funLeave_Elliott": "#$c .5#What are you up to today, my dear? I think I've read enough literature this week.#I made us some breakfast, my dear. Here you are.[194 195 211 201 241]#$e#$c .5#I'll be down at the beach today. It's always nice to see the ocean again.#I'll be using this day to relax. Make sure you do the same sometime.",
+				"funReturn_Elliott": "#$c .5#Sorry I'm home late. But I bought some fresh fish from Willy today, I'll cook you dinner sometime to make up for it.#Oh! You frightened me, my dear. I'm surprised you're still up at this hour.$8#$e#Would you like to continue our book tonight? Is that why you were waiting for me?#$b#Then let's proceed to bed.$h"
+			},
+			"When": {
+				"DayOfWeek": "Friday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries": {
+				"funLeave_Elliott": "#$c .5#Good morning. It's time for another day.$h#Ah, you're awake. Did you sleep well?$h#$e#$c .5#The library is usually unoccupied on Sundays so that's where I'll be today.#I'll be out in town today. You know where to find me, my dear.",
+				"funReturn_Elliott": "#$c .5#I'm just sipping on some water. I didn't drink much at the saloon but I'd prefer not to take any chances.$l#@! My, you look absolutely marvelous tonight!$l#$e#Are you ready for bed, my dear? Or do you still need to attend to the farm?#$b#If so, be careful, it's hard to see out in the dark.$h"
+			},
+			"When": {
+				"DayOfWeek": "Sunday"
+			}
+		},
+	//SPECIFIC DAYS
+
+		//DOCTOR CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries": {
+				"summer_9": "I have to visit Dr. Harvey today, my dear.#$b#Don't worry about me.$h"
+			}
+		},
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueElliott",
+			"Entries": {
+				"winter_17": "Today's the last day to attend the Night Market. I suppose I shouldn't miss it.#$e#Truthfully I've grown sick of it, too many sleepless nights back when I still lived at my old home.$s"
+			}
+		},
+	]
+}

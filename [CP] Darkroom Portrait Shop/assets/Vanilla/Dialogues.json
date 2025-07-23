@@ -1,0 +1,936 @@
+{	
+	
+	"Changes":[
+	
+	//Reject from any NPC without a portrait
+	
+	    {
+            "LogName": "Reject Ticket",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Caroline, Characters/Dialogue/Clint, Characters/Dialogue/Demetrius, Characters/Dialogue/Dwarf, Characters/Dialogue/Evelyn, Characters/Dialogue/George, Characters/Dialogue/Gus, Characters/Dialogue/Jas, Characters/Dialogue/Jodi, Characters/Dialogue/Kent, Characters/Dialogue/Leo, Characters/Dialogue/Lewis, Characters/Dialogue/Linus, Characters/Dialogue/Marnie, Characters/Dialogue/Pam, Characters/Dialogue/Pierre, Characters/Dialogue/Robin, Characters/Dialogue/Vincent, Characters/Dialogue/Willy",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.GlobalReject}}",
+			},
+			"When": {
+				"HasMod |contains=spacechase0.SpaceCore": false, //If true, it should be using the SpaceCore block instead.
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket - Sandy Special",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Sandy",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.GlobalReject}}",
+			},
+			"When": {
+				"HasMod |contains=spacechase0.SpaceCore": false, //If true, it should be using the SpaceCore block instead. Sandy gets her own in case she becomes romanceable.
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket - Wizard Withdrawn Without Magnus Madness",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Wizard",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.GlobalReject}}",
+			},
+			"When": {
+				"HasMod |contains=spacechase0.SpaceCore": false, //If true, it should be using the SpaceCore block instead.
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false, //Remove this if Wizard is Magnus
+			},
+        },
+		
+	// Reject Dialogue if Portrait is in Progress
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Abigail",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.AbigailStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.LeahStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Penny",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.PennyStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Maru",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.MaruStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.HaleyStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Emily",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.EmilyStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.SebastianStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.ElliottStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Sam",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.SamStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.HarveyStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Alex",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.AlexStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.ShaneStealthFlag",
+			},
+        },
+		
+		{
+            "LogName": "Reject Ticket If Stealth Flag Active - Krobus",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Krobus",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.PortraitInProgress}}",
+			},
+			"When": {
+				"HasFlag": "AgentLyoko.KrobusStealthFlag",
+			},
+        },
+	
+	//Reject Dialogues if not at 8 hearts
+		
+		{
+            "LogName": "Abigail Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Abigail",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Abigail.Reject}}",
+			},
+			"When": {
+				"Hearts:Abigail": "0, 1, 2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Leah Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Leah.Reject}}",
+			},
+			"When": {
+				"Hearts:Leah": "0, 1, 2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Penny Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Penny",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Penny.Reject}}",
+			},
+			"When": {
+				"Hearts:Penny": "0, 1, 2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Maru Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Maru",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Maru.Reject}}",
+			},
+			"When": {
+				"Hearts:Maru": "0, 1, 2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Haley Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Haley.Reject}}",
+			},
+			"When": {
+				"Hearts:Haley": "2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Haley Ticket Rejection (Below Haley Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Haley.Reject.Low}}",
+			},
+			"When": {
+				"Hearts:Haley": "0, 1, 2, 3",
+				"UnlockCondition": "hearts",
+			},
+        },
+		
+		{
+            "LogName": "Haley Ticket Rejection (Below Haley Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Haley.Reject.Low}}",
+			},
+			"When": {
+				"Hearts:Haley": "0, 1",
+				"UnlockCondition": "always",
+			},
+        },
+		
+		{
+            "LogName": "Emily Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Emily",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Emily.Reject}}",
+			},
+			"When": {
+				"Hearts:Emily": "0, 1, 2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Sebastian Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Sebastian.Reject}}",
+			},
+			"When": {
+				"Hearts:Sebastian": "0, 1, 2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Elliott Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Elliott.Reject}}",
+			},
+			"When": {
+				"Hearts:Elliott": "0, 1, 2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Sam Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Sam",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Sam.Reject}}",
+			},
+			"When": {
+				"Hearts:Sam": "0, 1, 2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Harvey Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Harvey.Reject}}",
+			},
+			"When": {
+				"Hearts:Harvey": "0, 1, 2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Alex Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Alex",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Alex.Reject}}",
+			},
+			"When": {
+				"Hearts:Alex": "0, 1, 2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Shane Ticket Rejection (Not 8 Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Shane.Reject}}",
+			},
+			"When": {
+				"Hearts:Shane": "4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Shane Ticket Rejection (Low Hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Shane.Reject.Low}}",
+			},
+			"When": {
+				"Hearts:Shane": "0, 1, 2, 3",
+			},
+        },
+		
+		{
+            "LogName": "Krobus Ticket Rejection",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Krobus",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Krobus.Reject}}",
+			},
+			"When": {
+				"Hearts:Krobus": "0, 1, 2, 3, 4, 5, 6, 7",
+			},
+        },
+		
+		{
+            "LogName": "Krobus Ticket Rejection - Silent Fridays",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Krobus",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Krobus.Reject.Friday}}",
+			},
+			"When": {
+				"Hearts:Krobus": "0, 1, 2, 3, 4, 5, 6, 7",
+				"DayOfWeek": "Friday",
+			},
+        },
+		
+		//Birthday Rejections
+		
+		{
+            "LogName": "Abigail Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Abigail",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "fall",
+				"Day": "13",
+			},
+        },
+		
+		{
+            "LogName": "Leah Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "23",
+			},
+        },
+		
+		{
+            "LogName": "Penny Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Penny",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "fall",
+				"Day": "2",
+			},
+        },
+		
+		{
+            "LogName": "Maru Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Maru",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "10",
+			},
+        },
+		
+		{
+            "LogName": "Haley Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "14",
+			},
+        },
+		
+		{
+            "LogName": "Emily Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Emily",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "27",
+			},
+        },
+		
+		{
+            "LogName": "Sebastian Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "10",
+			},
+        },
+		
+		{
+            "LogName": "Elliott Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "fall",
+				"Day": "5",
+			},
+        },
+		
+		{
+            "LogName": "Sam Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Sam",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "17",
+			},
+        },
+		
+		{
+            "LogName": "Harvey Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "14",
+			},
+        },
+		
+		{
+            "LogName": "Alex Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Alex",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "summer",
+				"Day": "13",
+			},
+        },
+		
+		{
+            "LogName": "Shane Ticket Rejection (Birthday)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "spring",
+				"Day": "20",
+			},
+        },
+		
+		{
+            "LogName": "Krobus Ticket Rejection",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Krobus",
+            "Entries": {
+                "RejectItem_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.BirthdayPrevent}}",
+			},
+			"When": {
+				"Season": "winter",
+				"Day": "1",
+			},
+        },
+		
+		//Accept (8 Hearts or more)
+		
+		{
+            "LogName": "Abigail Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Abigail",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Abigail.Accept}}#$action AddMail Current AgentLyoko.AbigailStealthFlag received",
+			},
+			"When": {
+				"Hearts:Abigail": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Leah Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Leah.Accept}}#$action AddMail Current AgentLyoko.LeahStealthFlag received",
+			},
+			"When": {
+				"Hearts:Leah": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Penny Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Penny",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Penny.Accept}}#$action AddMail Current AgentLyoko.PennyStealthFlag received",
+			},
+			"When": {
+				"Hearts:Penny": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Maru Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Maru",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Maru.Accept}}#$action AddMail Current AgentLyoko.MaruStealthFlag received",
+			},
+			"When": {
+				"Hearts:Maru": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Haley Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Haley.Accept}}#$action AddMail Current AgentLyoko.HaleyStealthFlag received",
+			},
+			"When": {
+				"Hearts:Haley": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Emily Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Emily",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Emily.Accept}}#$action AddMail Current AgentLyoko.EmilyStealthFlag received",
+			},
+			"When": {
+				"Hearts:Emily": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Sebastian Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Sebastian.Accept}}#$action AddMail Current AgentLyoko.SebastianStealthFlag received",
+			},
+			"When": {
+				"Hearts:Sebastian": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Elliott Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Elliott.Accept}}#$action AddMail Current AgentLyoko.ElliottStealthFlag received",
+			},
+			"When": {
+				"Hearts:Elliott": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Sam Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Sam",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Sam.Accept}}#$action AddMail Current AgentLyoko.SamStealthFlag received",
+			},
+			"When": {
+				"Hearts:Sam": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Harvey Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Harvey.Accept}}#$action AddMail Current AgentLyoko.HarveyStealthFlag received",
+			},
+			"When": {
+				"Hearts:Harvey": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Alex Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Alex",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Alex.Accept}}#$action AddMail Current AgentLyoko.AlexStealthFlag received",
+			},
+			"When": {
+				"Hearts:Alex": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Shane Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Shane.Accept}}#$action AddMail Current AgentLyoko.ShaneStealthFlag received",
+			},
+			"When": {
+				"Hearts:Shane": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Krobus Ticket Acceptance (8 or more hearts)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Krobus",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Krobus.Accept}}#$action AddMail Current AgentLyoko.KrobusStealthFlag received",
+			},
+			"When": {
+				"Hearts:Krobus": "8, 9, 10",
+			},
+        },
+		
+		{
+            "LogName": "Krobus Ticket Acceptance (8 or more hearts) - Silent Fridays",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Krobus",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Krobus.Accept.Friday}}#$action AddMail Current AgentLyoko.KrobusStealthFlag received",
+			},
+			"When": {
+				"Hearts:Krobus": "8, 9, 10",
+				"DayOfWeek": "Friday",
+			},
+        },
+		
+		//Accept (Marriage)
+		
+		{
+            "LogName": "Abigail Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Abigail",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Abigail.Accept.Spouse}}#$action AddMail Current AgentLyoko.AbigailStealthFlag received",
+			},
+			"When": {
+				"relationship:Abigail": "married",
+			},
+        },
+		
+		{
+            "LogName": "Leah Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Leah.Accept.Spouse}}#$action AddMail Current AgentLyoko.LeahStealthFlag received",
+			},
+			"When": {
+				"relationship:Leah": "married",
+			},
+        },
+		
+		{
+            "LogName": "Penny Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Penny",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Penny.Accept.Spouse}}#$action AddMail Current AgentLyoko.PennyStealthFlag received",
+			},
+			"When": {
+				"relationship:Penny": "married",
+			},
+        },
+		
+		{
+            "LogName": "Maru Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Maru",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Maru.Accept.Spouse}}#$action AddMail Current AgentLyoko.MaruStealthFlag received",
+			},
+			"When": {
+				"relationship:Maru": "married",
+			},
+        },
+		
+		{
+            "LogName": "Haley Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Haley.Accept.Spouse}}#$action AddMail Current AgentLyoko.HaleyStealthFlag received",
+			},
+			"When": {
+				"relationship:Haley": "married",
+			},
+        },
+		
+		{
+            "LogName": "Emily Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Emily",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Emily.Accept.Spouse}}#$action AddMail Current AgentLyoko.EmilyStealthFlag received",
+			},
+			"When": {
+				"relationship:Emily": "married",
+			},
+        },
+		
+		{
+            "LogName": "Sebastian Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Sebastian.Accept.Spouse}}#$action AddMail Current AgentLyoko.SebastianStealthFlag received",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+			},
+        },
+		
+		{
+            "LogName": "Elliott Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Elliott.Accept.Spouse}}#$action AddMail Current AgentLyoko.ElliottStealthFlag received",
+			},
+			"When": {
+				"relationship:Elliott": "married",
+			},
+        },
+		
+		{
+            "LogName": "Sam Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Sam",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Sam.Accept.Spouse}}#$action AddMail Current AgentLyoko.SamStealthFlag received",
+			},
+			"When": {
+				"relationship:Sam": "married",
+			},
+        },
+		
+		{
+            "LogName": "Harvey Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Harvey.Accept.Spouse}}#$action AddMail Current AgentLyoko.HarveyStealthFlag received",
+			},
+			"When": {
+				"relationship:Harvey": "married",
+			},
+        },
+		
+		{
+            "LogName": "Alex Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Alex",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Alex.Accept.Spouse}}#$action AddMail Current AgentLyoko.AlexStealthFlag received",
+			},
+			"When": {
+				"relationship:Alex": "married",
+			},
+        },
+		
+		{
+            "LogName": "Shane Ticket Acceptance (Married)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Shane.Accept.Spouse}}#$action AddMail Current AgentLyoko.ShaneStealthFlag received",
+			},
+			"When": {
+				"relationship:Shane": "married",
+			},
+        },
+		
+		{
+            "LogName": "Krobus Ticket Acceptance (Roommate)",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Krobus",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Krobus.Accept.Roommate}}#$action AddMail Current AgentLyoko.KrobusStealthFlag received",
+			},
+			"When": {
+				"relationship:Krobus": "married",
+			},
+        },
+		
+		{
+            "LogName": "Krobus Ticket Acceptance (Roommate) - Haley living with Player",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Krobus",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Krobus.Accept.Roommate.HaleyMarried}}#$action AddMail Current AgentLyoko.KrobusStealthFlag received",
+			},
+			"When": {
+				"relationship:Krobus": "married",
+				"HaleyRelationship": "Married, Housemate",
+			},
+        },
+		
+		{
+            "LogName": "Krobus Ticket Acceptance (Roommate) - Silent Fridays",
+			"Action": "EditData",
+            "Target": "Characters/Dialogue/Krobus",
+            "Entries": {
+                "AcceptGift_(O)AgentLyoko.PortraitShop_PortraitTicket": "{{i18n:PortraitShop.Krobus.Accept.Friday}}#$action AddMail Current AgentLyoko.KrobusStealthFlag received",
+			},
+			"When": {
+				"relationship:Krobus": "married",
+				"DayOfWeek": "Friday",
+			},
+        },
+    ]
+}

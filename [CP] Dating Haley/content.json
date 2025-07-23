@@ -1,0 +1,23 @@
+{
+    "Format": "1.19.0",
+	"Changes": [
+        {
+            "LogName": "Default Language",
+            "Action": "Include",
+            "FromFile": "Data/default/content.json",
+			"When":
+			{
+				"Language": "de,en,es,fr,hu,it,ja,ko,ru,tr,zh",
+			}
+        },        
+        {
+            "LogName": "Translations",
+            "Action": "Include",
+            "FromFile": "Data/{{language}}/content.json",
+			"When":
+			{
+				"HasFile:{{FromFile}}": true,
+			}
+        },
+	]
+}

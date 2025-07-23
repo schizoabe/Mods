@@ -1,0 +1,761 @@
+{
+	"Format": "2.0.0",
+    
+    "ConfigSchema": 
+    {
+		"TouristTextPreface": 
+        {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles whether tourist dialogue will be prefaced by the word 'Tourist:' to match the vanilla tourist dialogue from the Stardew Valley Fair."
+		},
+        "OnlyAfterBusOrRailroadAccess": 
+        {
+			"AllowValues": "Bus, Railroad, False",
+			"Default": "False",
+			"Description": "Toggles whether tourists will only visit Pelican Town after the bus has been fixed or railroad is accessible. 'False' will allow them to visit from the start of the game."
+		},
+        "TouristsLeaveAtNight":
+        {
+            "AllowValues": "true, false",
+            "Default": "false",
+            "Description": "Toggles whether tourists will disappear at night or be around all day. Setting this to 'true' may have a performance impact."
+        },
+        "AllowTouristsAtStardewFair":
+        {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Description": "Toggles whether this mod's tourists will be present at the Stardew Fair. Does not affect the vanilla tourists."
+        },
+        "MarketTourists":
+        {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Description": "Toggles whether additional tourists will visit the town markets if the mod Market Day is installed."
+        },
+        "TouristsInRidgeside":
+        {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Description": "Toggles whether tourists will visit Ridgeside Village."
+        },
+        "TouristsInEastScarp":
+        {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Description": "Toggles whether tourists will visit East Scarp."
+        },
+        "NumberOfTouristsInTown":
+        {
+            "AllowValues": "none, small, medium, large, seasonal",
+            "Default": "seasonal",
+            "Description": "Selects the maximum amount of tourists that will be present in the town map. With the seasonal setting, more tourists will visit during summer and less during winter. This setting also affects Market Day and Stardew Valley Fair tourists."
+        },
+        "NumberOfTouristsInForest":
+        {
+            "AllowValues": "none, small, medium, large, seasonal",
+            "Default": "seasonal",
+            "Description": "Selects the maximum amount of tourists that will be present in the forest map. With the seasonal setting, more tourists will visit during summer and less during winter."
+        },
+        "NumberOfTouristsInMountain":
+        {
+            "AllowValues": "none, small, medium, large, seasonal",
+            "Default": "seasonal",
+            "Description": "Selects the maximum amount of tourists that will be present in the forest map. With the seasonal setting, more tourists will visit during summer and less during winter."
+        },
+        "NumberOfTouristsInBeach":
+        {
+            "AllowValues": "none, small, medium, large, seasonal",
+            "Default": "seasonal",
+            "Description": "Selects the maximum amount of tourists that will be present in the beach map. With the seasonal setting, more tourists will visit during summer and less during winter."
+        },
+        "NumberOfTouristsInRailroad":
+        {
+            "AllowValues": "none, small, medium, large, seasonal",
+            "Default": "seasonal",
+            "Description": "Selects the maximum amount of tourists that will be present in the railroad map. With the seasonal setting, more tourists will visit during summer and less during winter."
+        },
+        "NumberOfTouristsInDesert":
+        {
+            "AllowValues": "none, small, medium, large, seasonal",
+            "Default": "seasonal",
+            "Description": "Selects the maximum amount of tourists that will be present in the desert map. With the seasonal setting, more tourists will visit during summer and less during winter."
+        },
+        "NumberOfTouristsInRidgeside":
+        {
+            "AllowValues": "none, small, medium, large, seasonal",
+            "Default": "seasonal",
+            "Description": "Selects the maximum amount of tourists that will be present in Ridgeside Village. With the seasonal setting, more tourists will visit during summer and less during winter. Does nothing if 'TouristsInRidgeside' is set to 'false'."
+        },
+        "NumberOfTouristsInEastScarp":
+        {
+            "AllowValues": "none, small, medium, large, seasonal",
+            "Default": "seasonal",
+            "Description": "Selects the maximum amount of tourists that will be present in East Scarp. With the seasonal setting, more tourists will visit during summer and less during winter. Does nothing if 'East Scarp' is set to 'false'."
+        }
+    },
+    
+    "DynamicTokens": 
+    [
+        {
+			"Name": "TouristPreface",
+			"Value": "",
+            "When":
+                {
+                    "TouristTextPreface": "false"
+                }
+		},
+        {
+			"Name": "TouristPreface",
+			"Value": "Tourist: ",
+            "When":
+                {
+                    "TouristTextPreface": "true"
+                }
+		},
+        {
+			"Name": "BusCheck",
+			"Value": "false"
+		},
+        {
+			"Name": "BusCheck",
+			"Value": "true",
+            "When":
+                {
+                    "OnlyAfterBusOrRailroadAccess": "false"
+                }
+		},
+        {
+			"Name": "BusCheck",
+			"Value": "true",
+            "When":
+                {
+                    "OnlyAfterBusOrRailroadAccess": "Bus",
+                    "HasFlag |contains= ccVault, jojaVault": true
+                }
+		},
+        {
+			"Name": "BusCheck",
+			"Value": "true",
+            "When":
+                {
+                    "OnlyAfterBusOrRailroadAccess": "Railroad",
+                    "HasFlag |contains= summer_3_1": true
+                }
+		},
+        {
+			"Name": "TouristsAtNightCheck",
+			"Value": "Day",
+            "When":
+                {
+                    "TouristsLeaveAtNight": "false"
+                }
+		},
+        {
+			"Name": "TouristsAtNightCheck",
+			"Value": "Night",
+            "When":
+                {
+                    "TouristsLeaveAtNight": "true"
+                }
+		},
+
+// TouristNumbersTown
+
+        {
+            "Name": "TouristNumbersTown",
+            "Value": "none"
+        },
+        {
+            "Name": "TouristNumbersTown",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInTown": "small"
+            }
+        },
+        {
+            "Name": "TouristNumbersTown",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInTown": "seasonal",
+                "Season": "winter"
+            }
+        },
+        {
+            "Name": "TouristNumbersTown",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInTown": "medium"
+            }
+        },
+        {
+            "Name": "TouristNumbersTown",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInTown": "seasonal",
+                "Season": "spring, fall"
+            }
+        },
+        {
+            "Name": "TouristNumbersTown",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInTown": "large"
+            }
+        },
+        {
+            "Name": "TouristNumbersTown",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInTown": "seasonal",
+                "Season": "summer"
+            }
+        },
+
+// TouristNumbersForest
+
+        {
+            "Name": "TouristNumbersForest",
+            "Value": "none"
+        },
+        {
+            "Name": "TouristNumbersForest",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInForest": "small"
+            }
+        },
+        {
+            "Name": "TouristNumbersForest",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInForest": "seasonal",
+                "Season": "winter"
+            }
+        },
+        {
+            "Name": "TouristNumbersForest",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInForest": "medium"
+            }
+        },
+        {
+            "Name": "TouristNumbersForest",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInForest": "seasonal",
+                "Season": "spring, fall"
+            }
+        },
+        {
+            "Name": "TouristNumbersForest",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInForest": "large"
+            }
+        },
+        {
+            "Name": "TouristNumbersForest",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInForest": "seasonal",
+                "Season": "summer"
+            }
+        },
+
+// TouristNumbersMountain
+
+        {
+            "Name": "TouristNumbersMountain",
+            "Value": "none"
+        },
+        {
+            "Name": "TouristNumbersMountain",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInMountain": "small"
+            }
+        },
+        {
+            "Name": "TouristNumbersMountain",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInMountain": "seasonal",
+                "Season": "winter"
+            }
+        },
+        {
+            "Name": "TouristNumbersMountain",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInMountain": "medium"
+            }
+        },
+        {
+            "Name": "TouristNumbersMountain",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInMountain": "seasonal",
+                "Season": "spring, fall"
+            }
+        },
+        {
+            "Name": "TouristNumbersMountain",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInMountain": "large"
+            }
+        },
+        {
+            "Name": "TouristNumbersMountain",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInMountain": "seasonal",
+                "Season": "summer"
+            }
+        },
+
+// TouristNumbersBeach
+
+        {
+            "Name": "TouristNumbersBeach",
+            "Value": "none"
+        },
+        {
+            "Name": "TouristNumbersBeach",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInBeach": "small"
+            }
+        },
+        {
+            "Name": "TouristNumbersBeach",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInBeach": "seasonal",
+                "Season": "winter"
+            }
+        },
+        {
+            "Name": "TouristNumbersBeach",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInBeach": "medium"
+            }
+        },
+        {
+            "Name": "TouristNumbersBeach",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInBeach": "seasonal",
+                "Season": "spring, fall"
+            }
+        },
+        {
+            "Name": "TouristNumbersBeach",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInBeach": "large"
+            }
+        },
+        {
+            "Name": "TouristNumbersBeach",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInBeach": "seasonal",
+                "Season": "summer"
+            }
+        },
+
+// TouristNumbersRailroad
+
+        {
+            "Name": "TouristNumbersRailroad",
+            "Value": "none"
+        },
+        {
+            "Name": "TouristNumbersRailroad",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInRailroad": "small"
+            }
+        },
+        {
+            "Name": "TouristNumbersRailroad",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInRailroad": "seasonal",
+                "Season": "winter"
+            }
+        },
+        {
+            "Name": "TouristNumbersRailroad",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInRailroad": "medium"
+            }
+        },
+        {
+            "Name": "TouristNumbersRailroad",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInRailroad": "seasonal",
+                "Season": "spring, fall"
+            }
+        },
+        {
+            "Name": "TouristNumbersRailroad",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInRailroad": "large"
+            }
+        },
+        {
+            "Name": "TouristNumbersRailroad",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInRailroad": "seasonal",
+                "Season": "summer"
+            }
+        },
+
+// TouristNumbersDesert
+
+        {
+            "Name": "TouristNumbersDesert",
+            "Value": "none"
+        },
+        {
+            "Name": "TouristNumbersDesert",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInDesert": "small"
+            }
+        },
+        {
+            "Name": "TouristNumbersDesert",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInDesert": "seasonal",
+                "Season": "winter"
+            }
+        },
+        {
+            "Name": "TouristNumbersDesert",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInDesert": "medium"
+            }
+        },
+        {
+            "Name": "TouristNumbersDesert",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInDesert": "seasonal",
+                "Season": "spring, fall"
+            }
+        },
+        {
+            "Name": "TouristNumbersDesert",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInDesert": "large"
+            }
+        },
+        {
+            "Name": "TouristNumbersDesert",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInDesert": "seasonal",
+                "Season": "summer"
+            }
+        },
+
+// TouristNumbersEastScarp
+
+        {
+            "Name": "TouristNumbersEastScarp",
+            "Value": "none"
+        },
+        {
+            "Name": "TouristNumbersEastScarp",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInEastScarp": "small"
+            }
+        },
+        {
+            "Name": "TouristNumbersEastScarp",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInEastScarp": "seasonal",
+                "Season": "winter"
+            }
+        },
+        {
+            "Name": "TouristNumbersEastScarp",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInEastScarp": "medium"
+            }
+        },
+        {
+            "Name": "TouristNumbersEastScarp",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInEastScarp": "seasonal",
+                "Season": "spring, fall"
+            }
+        },
+        {
+            "Name": "TouristNumbersEastScarp",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInEastScarp": "large"
+            }
+        },
+        {
+            "Name": "TouristNumbersEastScarp",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInEastScarp": "seasonal",
+                "Season": "summer"
+            }
+        },
+
+// TouristNumbersRidgeside
+
+        {
+            "Name": "TouristNumbersRidgeside",
+            "Value": "none"
+        },
+        {
+            "Name": "TouristNumbersRidgeside",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInRidgeside": "small"
+            }
+        },
+        {
+            "Name": "TouristNumbersRidgeside",
+            "Value": "small",
+            "When":
+            {
+                "NumberOfTouristsInRidgeside": "seasonal",
+                "Season": "winter"
+            }
+        },
+        {
+            "Name": "TouristNumbersRidgeside",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInRidgeside": "medium"
+            }
+        },
+        {
+            "Name": "TouristNumbersRidgeside",
+            "Value": "medium",
+            "When":
+            {
+                "NumberOfTouristsInRidgeside": "seasonal",
+                "Season": "spring, fall"
+            }
+        },
+        {
+            "Name": "TouristNumbersRidgeside",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInRidgeside": "large"
+            }
+        },
+        {
+            "Name": "TouristNumbersRidgeside",
+            "Value": "large",
+            "When":
+            {
+                "NumberOfTouristsInRidgeside": "seasonal",
+                "Season": "summer"
+            }
+        }
+    ],
+
+    "Changes": 
+    [
+        {
+            "LogName": "Ferngill Tourists Load Default",
+            "Action": "Load",
+            "Target": "Characters/FerngillTouristTown01, Characters/FerngillTouristTown02, Characters/FerngillTouristTown03, Characters/FerngillTouristTown04, Characters/FerngillTouristTown05, Characters/FerngillTouristTown06, Characters/FerngillTouristTown07, Characters/FerngillTouristTown08, Characters/FerngillTouristTown09, Characters/FerngillTouristTown10, Characters/FerngillTouristForest01, Characters/FerngillTouristForest02, Characters/FerngillTouristForest03, Characters/FerngillTouristForest04, Characters/FerngillTouristForest05, Characters/FerngillTouristBeach01, Characters/FerngillTouristBeach02, Characters/FerngillTouristBeach03, Characters/FerngillTouristBeach04, Characters/FerngillTouristBeach05, Characters/FerngillTouristBeach06, Characters/FerngillTouristBeach07, Characters/FerngillTouristMountain01, Characters/FerngillTouristMountain02, Characters/FerngillTouristMountain03, Characters/FerngillTouristMountain04, Characters/FerngillTouristRailroad01, Characters/FerngillTouristRailroad02, Characters/FerngillTouristRailroad03, Characters/FerngillTouristRailroad04, Characters/FerngillTouristRailroad05, Characters/FerngillTouristDesert01, Characters/FerngillTouristDesert02, Characters/FerngillTouristDesert03, Characters/FerngillTouristDesert04, Characters/FerngillTouristDesert05, Characters/FerngillTouristEastScarp01, Characters/FerngillTouristEastScarp02, Characters/FerngillTouristEastScarp03, Characters/FerngillTouristEastScarp04, Characters/FerngillTouristEastScarp05, Characters/FerngillTouristEastScarp06, Characters/FerngillTouristEastScarp07, Characters/FerngillTouristEastScarp08, Characters/FerngillTouristEastScarp09, Characters/FerngillTouristEastScarp10, Characters/FerngillTouristRidgeside01, Characters/FerngillTouristRidgeside02, Characters/FerngillTouristRidgeside03, Characters/FerngillTouristRidgeside04, Characters/FerngillTouristRidgeside05, Characters/FerngillTouristRidgeside06, Characters/FerngillTouristRidgeside07, Characters/FerngillTouristRidgeside08, Characters/FerngillTouristRidgeside09, Characters/FerngillTouristRidgeside10, Characters/FerngillTouristMarket01, Characters/FerngillTouristMarket02, Characters/FerngillTouristMarket03, Characters/FerngillTouristMarket04, Characters/FerngillTouristMarket05, Characters/FerngillTouristMarket06, Characters/FerngillTouristMarket07, Characters/FerngillTouristMarket08, Characters/FerngillTouristMarket09, Characters/FerngillTouristMarket10",
+            "FromFile": "Assets/DefaultTourist.png"
+        },
+        {
+            "LogName": "Ferngill Tourists Town Code",
+            "Action": "Include",
+            "FromFile": "Code/Town/TouristAppearanceTown.json, Code/Town/TouristDialogueTown.json, Code/Town/TouristMapSpawnPointsTown.json, Code/Town/TouristMapSpawnPointsTown{{TouristsAtNightCheck}}.json",
+            "When":
+            {
+                "NumberOfTouristsInTown |contains= none": false,
+                "Weather |contains= storm": false,
+                "BusCheck": "true",
+				"HasFile:{{FromFile}}": true,
+                "DayEvent |contains= stardew valley fair": false
+            }
+        },
+        {
+            "LogName": "Ferngill Tourists Forest Code",
+            "Action": "Include",
+            "FromFile": "Code/Forest/TouristAppearanceForest.json, Code/Forest/TouristDialogueForest.json, Code/Forest/TouristMapSpawnPointsForest.json, Code/Forest/TouristMapSpawnPointsForest{{TouristsAtNightCheck}}.json",
+            "When":
+            {
+                "NumberOfTouristsInForest |contains= none": false,
+                "Weather |contains= storm": false,
+                "BusCheck": "true",
+				"HasFile:{{FromFile}}": true
+            }
+        },
+        {
+            "LogName": "Ferngill Tourists Mountain Code",
+            "Action": "Include",
+            "FromFile": "Code/Mountain/TouristAppearanceMountain.json, Code/Mountain/TouristDialogueMountain.json, Code/Mountain/TouristMapSpawnPointsMountain.json, Code/Mountain/TouristMapSpawnPointsMountain{{TouristsAtNightCheck}}.json",
+            "When":
+            {
+                "NumberOfTouristsInMountain |contains= none": false,
+                "Weather |contains= storm": false,
+                "BusCheck": "true",
+				"HasFile:{{FromFile}}": true
+            }
+        },
+        {
+            "LogName": "Ferngill Tourists Beach Code",
+            "Action": "Include",
+            "FromFile": "Code/Beach/TouristAppearanceBeach.json, Code/Beach/TouristDialogueBeach.json, Code/Beach/TouristMapSpawnPointsBeach.json, Code/Beach/TouristMapSpawnPointsBeach{{TouristsAtNightCheck}}.json",
+            "When":
+            {
+                "NumberOfTouristsInBeach |contains= none": false,
+                "Weather |contains= snow, storm": false,
+                "BusCheck": "true",
+				"HasFile:{{FromFile}}": true
+            }
+        },
+        {
+            "LogName": "Ferngill Tourists Railroad Code",
+            "Action": "Include",
+            "FromFile": "Code/Railroad/TouristAppearanceRailroad.json, Code/Railroad/TouristDialogueRailroad.json, Code/Railroad/TouristMapSpawnPointsRailroad.json, Code/Railroad/TouristMapSpawnPointsRailroad{{TouristsAtNightCheck}}.json",
+            "When":
+            {
+                "NumberOfTouristsInRailroad |contains= none": false,
+                "Weather |contains= storm": false,
+                "BusCheck": "true",
+				"HasFile:{{FromFile}}": true
+            }
+        },
+        {
+            "LogName": "Ferngill Tourists Desert Code",
+            "Action": "Include",
+            "FromFile": "Code/Desert/TouristAppearanceDesert.json, Code/Desert/TouristDialogueDesert.json, Code/Desert/TouristMapSpawnPointsDesert.json, Code/Desert/TouristMapSpawnPointsDesert{{TouristsAtNightCheck}}.json",
+            "When":
+            {
+                "NumberOfTouristsInDesert |contains= none": false,
+                "BusCheck": "true",
+				"HasFile:{{FromFile}}": true
+            }
+        },
+        {
+            "LogName": "Ferngill Tourists SV Fair Code",
+            "Action": "Include",
+            "FromFile": "Code/Town/TouristAppearanceTown.json, Code/SVFair/TouristDialogueSVFair.json, Code/SVFair/TouristMapSpawnPointsSVFair.json",
+            "When":
+            {
+                "AllowTouristsAtStardewFair": "true",
+				"HasFile:{{FromFile}}": true,
+                "DayEvent |contains= stardew valley fair": true
+            }
+        },
+        {
+            "LogName": "Ferngill Tourists Market Code",
+            "Action": "Include",
+            "FromFile": "Code/Market/TouristAppearanceMarket.json, Code/Market/TouristDialogueMarket.json, Code/Market/TouristMapSpawnPointsMarket.json, Code/Market/TouristMapSpawnPointsEastScarp{{TouristsAtNightCheck}}.json",
+            "When":
+            {
+                "Weather |contains= rain, snow, storm": false,
+                "BusCheck": "true",
+				"HasFile:{{FromFile}}": true,
+                "MarketTourists": "true",
+                "HasMod |contains= ceruleandeep.MarketDay": true
+            }
+        },
+        {
+            "LogName": "Ferngill Tourists East Scarp Code",
+            "Action": "Include",
+            "FromFile": "Code/EastScarp/TouristAppearanceEastScarp.json, Code/EastScarp/TouristDialogueEastScarp.json, Code/EastScarp/TouristMapSpawnPointsEastScarp.json, Code/EastScarp/TouristMapSpawnPointsEastScarp{{TouristsAtNightCheck}}.json",
+            "When":
+            {
+                "NumberOfTouristsInEastScarp |contains= none": false,
+                "Weather |contains= storm": false,
+                "BusCheck": "true",
+				"HasFile:{{FromFile}}": true,
+                "TouristsInEastScarp": "true",
+                "HasMod |contains= LemurKat.EastScarpe.CP": true
+            }
+        },
+        {
+            "LogName": "Ferngill Tourists Ridgeside Code",
+            "Action": "Include",
+            "FromFile": "Code/Ridgeside/TouristAppearanceRidgeside.json, Code/Ridgeside/TouristDialogueRidgeside.json, Code/Ridgeside/TouristMapSpawnPointsRidgeside.json, Code/Ridgeside/TouristMapSpawnPointsRidgeside{{TouristsAtNightCheck}}.json",
+            "When":
+            {
+                "NumberOfTouristsInRidgeside |contains= none": false,
+                "Weather |contains= storm": false,
+                "BusCheck": "true",
+				"HasFile:{{FromFile}}": true,
+                "TouristsInEastScarp": "true",
+                "HasMod |contains= Rafseazz.RSVCP": true
+            }
+        }
+    ]
+}

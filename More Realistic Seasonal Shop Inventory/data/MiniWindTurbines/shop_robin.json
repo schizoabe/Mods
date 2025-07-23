@@ -1,0 +1,36 @@
+{
+  "Changes": [
+    //Standard
+ 		{
+        "LogName": "MRSSI Mini Wind Turbine",
+	    	"Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [ "Carpenter", "Items" ],
+        "When": { "Carpenter": "Standard" },
+        "Fields": {
+
+			"Dora.MiniWindTurbines_MiniWindTurbineSold": 
+			{
+				"AvailableStock": 1,
+				"Condition": "SYNCED_RANDOM day Dora.MiniWindTurbines_MiniWindTurbineSold 0.8, DAY_OF_WEEK Sunday, PLAYER_HAS_MAIL Any Dora.MiniWindTurbines_Letter"
+				}
+			}
+		},
+		//Hardmode
+		{
+        "LogName": "MRSSI Mini Wind Turbine",
+	    	"Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [ "Carpenter", "Items" ],
+        "When": { "Carpenter": "Hardmode" },
+        "Fields": {
+
+			"Dora.MiniWindTurbines_MiniWindTurbineSold": 
+			{
+				"AvailableStock": 1,
+				"Condition": "SYNCED_RANDOM day Dora.MiniWindTurbines_MiniWindTurbineSold 0.5, DAY_OF_WEEK Sunday, PLAYER_HAS_MAIL Any Dora.MiniWindTurbines_Letter"
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,74 @@
+{
+  // See the wiki for all hat properties: https://github.com/Floogen/FashionSense/wiki/Hat-Model-Properties
+
+  "Name": "冬季围巾1棕红色（长发）",
+    
+    "FrontHat": {
+
+    "StartingPosition": {
+      "X": 0,
+      "Y": 0
+    },
+    "HeadPosition": {
+      "X": -4,
+      "Y": -15
+    },
+    "HatSize": {
+      "Width": 12,
+      "Length": 7
+    }
+  },
+  "RightHat": {
+      
+    "StartingPosition": {
+      "X": 0,
+      "Y": 19
+    },
+    "HeadPosition": {
+      "X": -3,
+      "Y": -15
+    },
+    "HatSize": {
+      "Width": 11,
+      "Length": 6
+    }
+  },
+  "LeftHat": {
+     
+    "StartingPosition": {
+      "X": 1,
+      "Y": 39
+    },
+    "HeadPosition": {
+      "X": -6,
+      "Y": -15
+    },
+    "HatSize": {
+      "Width": 11,
+      "Length": 6
+    } 
+  },
+  "BackHat": {
+
+//让头发显示在前面，围巾在后面
+    "DrawOrderOverride":  {  //更改外观顺序的代码，编辑
+    "Preposition":"Before",   //位置是在前
+    "AppearanceType":"Hair",  //需要在前面的是头发
+
+    },
+
+//
+    "StartingPosition": {
+      "X": 1,
+      "Y": 60
+    },
+    "HeadPosition": {
+      "X": -5,
+      "Y": -15
+    },
+    "HatSize": {
+      "Width": 11,
+      "Length": 6
+    }
+  }
+}

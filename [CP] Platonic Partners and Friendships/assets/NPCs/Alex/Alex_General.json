@@ -1,0 +1,121 @@
+{
+    "Changes": [
+        // CONTENT INCLUDES
+        {
+            "LogName": "Enable Alex's aromantic content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Alex/Alex_AroContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, SexWithoutRomance"
+            }
+        },
+        // ACE CONTENT
+        {
+            "LogName": "Alex ace dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Alex",
+            "Entries": {
+                "SpouseStardrop": "{{i18n:PPAF.Alex.DialogueEdits.Romance.SpouseStardrop |LovePortraitsHappy={{LovePortraitsHappyToken}}}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:AlexRelationshipType": "RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Alex ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueAlex",
+            "Entries": {
+                "winter_28": "{{i18n:PPAF.Alex.PartnerDialogue.Ace.winter_28}}",
+                "Indoor_Day_2": "{{i18n:PPAF.Alex.PartnerDialogue.Ace.Indoor_Day_2}}",
+                "Indoor_Night_3": "{{i18n:PPAF.Alex.PartnerDialogue.Ace.Indoor_Night_3}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Alex ace marriage Winter Star dialogue edit",
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "Entries": {
+                "Alex_spouse": "{{i18n:PPAF.Alex.PartnerDialogue.Romance.WinterStar.Alex_spouse |LovePortraitsHappy={{LovePortraitsHappyToken}}}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:AlexRelationshipType": "RomanceWithoutSex"
+            }
+        },
+        // TERMS OF ENDEARMENT
+        {
+            "LogName": "Alex terms of endearment, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Alex",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Alex terms of endearment, poly with CFD",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Alex",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": true,
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // NO BLUSH EDITS
+        {
+            "LogName": "Alex no blush edit",
+            "Action": "EditImage",
+            "Target": "Portraits/Alex, Portraits/Alex_Winter, Portraits/Alex_Beach",
+            "FromFile": "assets/Portraits/{{TargetWithoutPath}}_NoBlush.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Alex": true,
+                "HasMod |contains=DSVTeam.DiverseStardewValley, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        {
+            "LogName": "Alex no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Alex_Spring, Portraits/Alex_Summer, Portraits/Alex_Fall, Portraits/Alex_Winter_Outdoor, Portraits/Alex_Winter_Indoor, Portraits/Alex_FlowerDance, Portraits/Alex_SpiritsEve, Portraits/Alex_EggF, Portraits/Alex_Fair, Portraits/Alex_Jellies, Portraits/Alex_Luau, Portraits/Alex_Winter_IceF, Portraits/Alex_Winter_WinterStar, Portraits/Alex_Beach",
+            "FromFile": "assets/Portraits/Alex_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Alex": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        },
+        // COMPATIBILITY
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Alex",
+            "Entries": {
+                "marriage_beach4": "{{i18n:PPAF.Alex.DialogueEdits.Ace.ISS.marriage_beach4.{{Random:1,2}}}}",
+                "marriage_beach5": "{{i18n:PPAF.Alex.DialogueEdits.Ace.ISS.marriage_beach5.{{Random:1,2}}}}",
+                "marriage_beach7": "{{i18n:PPAF.Alex.DialogueEdits.Ace.ISS.marriage_beach7}}",
+                "marriage_bh2": "{{i18n:PPAF.Alex.DialogueEdits.Ace.ISS.marriage_bh2}}",
+                "marriage_bh3": "{{i18n:PPAF.Alex.DialogueEdits.Ace.ISS.marriage_bh3}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, RomanceWithoutSex",
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        }
+    ]
+}

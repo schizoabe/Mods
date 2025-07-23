@@ -1,0 +1,28 @@
+{
+    "Changes": [
+        {
+            "LogName": "lao_portraits texture",
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/sdvhead.LawAndOrderSV/lao_portraits",
+            "FromFile": "assets/Textures/lao_portraits.png"
+        },
+
+		{
+            "Action": "Load", "Priority": "Low",
+            "Target": "Mods/sdvhead.LawAndOrderSV/lao_furniture_tilesheet",
+            "FromFile": "assets/Textures/lao_furniture_tilesheet.png"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Furniture",
+            "Entries": {
+                "sdvhead.LawAndOrderSV_ShannonPortrait": "ShannonPortrait/painting/2 2/2 2/1/999/-1/{{i18n:ShannonPortrait}}/2/Mods\\sdvhead.LawAndOrderSV\\lao_portraits/true",
+		"sdvhead.LawAndOrderSV_RussellPortrait": "RussellPortrait/painting/2 2/2 2/1/999/-1/{{i18n:RussellPortrait}}/4/Mods\\sdvhead.LawAndOrderSV\\lao_portraits/true",
+            /*
+			  furniture entry template for future use:
+			  //sdvhead.LawAndOrderSV_[furniture_name]": "[furniture name]/[decor painting / sconce / dresser / table]/x y/x y/ROTATIONS/500/-1/NAME/INDEX/Mods\\sdvhead.LawAndOrderSV\\lao_furniture_tilesheet/[true or furnitureCatalogueName]",
+            */
+            }
+        }
+    ]
+}

@@ -1,0 +1,171 @@
+{
+	"Changes": [
+		{
+			"LogName": "CFD Marriage",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {				
+				"NPC.cs.3980": "{{i18n:ICS.SpecialDialogue.Dating.AcceptGift_(O)460.{{NoProfanity}}}}",
+				"NPC.cs.3972": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.3972}}",
+				"NPC.cs.3973": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.3973}}",
+				"NPC.cs.4439": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4439}}",
+				"NPC.cs.4440": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4440}}",
+				"NPC.cs.4441": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4441}}",
+				"NPC.cs.4444": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4444}}",
+				"NPC.cs.4447": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4447}}",
+				"NPC.cs.4448": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4448.{{NoProfanity}}}}",
+				"NPC.cs.4449": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4449.{{NoProfanity}}}}",
+				"NPC.cs.4462": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4462}}",
+				"NPC.cs.4463": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4463}}",
+				"NPC.cs.4465": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4465}}",
+				"NPC.cs.4466": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4466}}",
+				"NPC.cs.4470": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4470}}",
+				"NPC.cs.4474": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4474}}",
+				"NPC.cs.4481": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4481}}",
+				"ExtraDialogue_NewChild_SecondChild1": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_NewChild_SecondChild1}}",
+				"ExtraDialogue_NewChild_SecondChild2": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_NewChild_SecondChild2}}",
+				"ExtraDialogue_NewChild_Adoption": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_NewChild_Adoption}}",
+				"ExtraDialogue_NewChild_FirstChild": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_NewChild_FirstChild}}",
+				"ExtraDialogue_Mines_PlayerKilled_Spouse_PlayerMale": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_Mines_PlayerKilled_Spouse_Player.{{NoProfanity}}}}",
+				"ExtraDialogue_Mines_PlayerKilled_Spouse_PlayerFemale": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_Mines_PlayerKilled_Spouse_Player.{{NoProfanity}}}}"
+			},
+			"When": {
+				"Relationship:Shane": "Dating, Engaged, Married"
+			}
+		},
+//FLOWER DANCE
+		{
+			"LogName": "CFD Flower Dance Friendly",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Event.cs.1736": "{{i18n:ICS.CFD.FlowerDance.0-3.AskToDance}}",
+				"Event.cs.1738": "{{i18n:ICS.CFD.FlowerDance.0-3.AskToDance}}",
+				"Event.cs.1635": "{{i18n:ICS.CFD.FlowerDance.0-3.Reject}}"
+			},
+			"When": {
+				"Relationship:Shane": "Unmet, Friendly",
+				"Hearts:Shane": "0, 1, 2, 3"
+			}
+		},
+		{
+			"LogName": "CFD Flower Dance Friendlier",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Event.cs.1736": "{{i18n:ICS.CFD.FlowerDance.4-5.AskToDance}}",
+				"Event.cs.1738": "{{i18n:ICS.CFD.FlowerDance.4-5.AskToDance}}",
+				"Event.cs.1635": "{{i18n:ICS.CFD.FlowerDance.4-5.Reject}}"
+			},
+			"When": {
+				"Relationship:Shane": "Friendly",
+				"Hearts:Shane": "4, 5"
+			}
+		},
+		{
+			"LogName": "CFD Flower Dance Friendliest",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Event.cs.1736": "{{i18n:ICS.CFD.FlowerDance.6-14.AskToDance}}",
+				"Event.cs.1738": "{{i18n:ICS.CFD.FlowerDance.6-14.AskToDance}}",
+				"Event.cs.1635": "{{i18n:ICS.CFD.FlowerDance.6-14.Reject}}"
+			},
+			"When": {
+				"Relationship:Shane": "Friendly",
+				"Hearts:Shane": "6, 7, 8, 9, 10, 11, 14"
+			}
+		},
+		{
+			"LogName": "CFD Flower Dance Romantic",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Event.cs.1736": "{{i18n:ICS.CFD.FlowerDance.DatingMarried.AskToDance}}",
+				"Event.cs.1738": "{{i18n:ICS.CFD.FlowerDance.DatingMarried.AskToDance}}",
+				"Event.cs.1635": "{{i18n:ICS.CFD.FlowerDance.DatingMarried.Reject}}"
+			},
+			"When": {
+				"Relationship:Shane": "Dating, Engaged, Married"
+			}
+		},
+//CHARACTERS STRINGS
+	//Movies
+		{
+			"LogName": "CFD Movie Invitation Reactions 0-3",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Characters_MovieInvite_Invited": "{{i18n:ICS.CFD.MovieInvite.0-3.Characters_MovieInvite_Invited}}",
+				"Characters_MovieInvite_Invited_Rude": "{{i18n:ICS.CFD.MovieInvite.0-3.Characters_MovieInvite_Invited}}"
+			},
+			"When": {
+				"Hearts:Shane": "0, 1, 2, 3"
+			}
+		},
+		{
+			"LogName": "CFD Movie Invitation Reactions 4-5",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Characters_MovieInvite_Invited": "{{i18n:ICS.CFD.MovieInvite.4-5.Characters_MovieInvite_Invited}}",
+				"Characters_MovieInvite_Invited_Rude": "{{i18n:ICS.CFD.MovieInvite.4-5.Characters_MovieInvite_Invited}}"
+			},
+			"When": {
+				"Hearts:Shane": "4, 5"
+			}
+		},
+		{
+			"LogName": "CFD Movie Invitation Reactions 6-7",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Characters_MovieInvite_Invited": "{{i18n:ICS.CFD.MovieInvite.6-7.Characters_MovieInvite_Invited}}",
+				"Characters_MovieInvite_Invited_Rude": "{{i18n:ICS.CFD.MovieInvite.6-7.Characters_MovieInvite_Invited}}"
+			},
+			"When": {
+				"Hearts:Shane": "6, 7"
+			}
+		},
+		{
+			"LogName": "CFD Movie Invitation Reactions 8",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Characters_MovieInvite_Invited": "{{i18n:ICS.CFD.MovieInvite.8.Characters_MovieInvite_Invited}}",
+				"Characters_MovieInvite_Invited_Rude": "{{i18n:ICS.CFD.MovieInvite.8.Characters_MovieInvite_Invited}}"
+			},
+			"When": {
+				"Hearts:Shane": "8"
+			}
+		},
+		{
+			"LogName": "CFD Movie Invitation Reactions 9+",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Characters_MovieInvite_Invited": "{{i18n:ICS.CFD.MovieInvite.9-14.Characters_MovieInvite_Invited}}",
+				"Characters_MovieInvite_Invited_Rude": "{{i18n:ICS.CFD.MovieInvite.9-14.Characters_MovieInvite_Invited}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 9, 15}}",
+				"Relationship:Shane |contains= divorced": false
+			}
+		},
+		{
+			"LogName": "CFD Movie Invitation Reactions Divorced",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Characters_MovieInvite_InvitedBySomeoneElse": "{{i18n:ICS.CFD.MovieInvite.Divorced.Characters_MovieInvite_InvitedBySomeoneElse.{{NoProfanity}}}}",
+				"Characters_MovieInvite_AlreadySeen": "{{i18n:ICS.CFD.MovieInvite.Divorced.Characters_MovieInvite_AlreadySeen.{{NoProfanity}}}}",
+				"Characters_MovieInvite_Invited": "{{i18n:ICS.CFD.MovieInvite.Divorced.Characters_MovieInvite_Invited}}",
+				"Characters_MovieInvite_Invited_Rude": "{{i18n:ICS.CFD.MovieInvite.Divorced.Characters_MovieInvite_Invited_Rude}}",
+				"Characters_MovieInvite_Reject": "{{i18n:ICS.CFD.MovieInvite.Divorced.Characters_MovieInvite_Reject}}"
+			},
+			"When": {
+				"Relationship:Shane": "divorced"
+			}
+		}
+	]
+}

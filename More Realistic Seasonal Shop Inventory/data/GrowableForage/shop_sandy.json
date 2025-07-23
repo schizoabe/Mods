@@ -1,0 +1,30 @@
+{
+    "Changes": [
+    //Sandy Standard
+    {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "When": {"Sandy": "Standard", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Coconut Tree": true},
+            "TargetField": ["Sandy", "Items"],
+            "Fields": {
+                "Cornucopia_CoconutSapling": {
+                    "AvailableStock": 1,
+                    "Condition": "SYNCED_RANDOM Day Cornucopia_CoconutSapling 0.6, WORLD_STATE_FIELD WeatherForTomorrow Sun"
+                }
+            }
+        },   
+    //Sandy Hardmode
+    {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "When": {"Sandy": "Hardmode", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Coconut Tree": true},
+            "TargetField": ["Sandy", "Items"],
+            "Fields": {
+                "Cornucopia_CoconutSapling": {
+                    "AvailableStock": 1,
+                    "Condition": "SYNCED_RANDOM Day Cornucopia_CoconutSapling 0.3, WORLD_STATE_FIELD WeatherForTomorrow Sun"
+                }
+            }
+        }
+    ]
+}

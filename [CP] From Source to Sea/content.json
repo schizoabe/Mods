@@ -1,0 +1,14 @@
+{
+    "Format": "2.0.0",
+    "Changes": [
+ 		{
+			"Action": "Include",
+			"FromFile": "data/Objects.json, data/GiftTastes.json, data/MealsandRecipes.json, data/Shops.json, data/Fishing.json, data/FishPonds.json, data/Machines.json"
+		},
+		{ 
+            "Action": "Load",
+			"Target": "StunkyMcDoo.FromSourceToSea.cp/01_Objects, StunkyMcDoo.FromSourceToSea.cp/02_Meals,",
+            "FromFile": "assets/{{TargetWithoutPath}}.png"
+        }
+    ]
+}

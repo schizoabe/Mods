@@ -1,0 +1,128 @@
+{
+  "Format": "1.26.0",
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/PeacefulEnd/FashionSense/AppearanceData",
+      "TargetField": [ "PeacefulEnd.FashionSense.HoodsAndHoodies/Hat/Dynamic Hood (Rain or Snow)" ],  
+      "Fields": {
+        "FrontHat": {          
+          "HideHair": false
+        },
+        "BackHat": {          
+          "HideHair": false,
+          "DrawOrderOverride": {
+            "Preposition": "Before",
+            "AppearanceType": "Hair"
+          }
+        },
+        "LeftHat": {          
+          "HideHair": false,
+          "DrawOrderOverride": {
+            "Preposition": "Before",
+            "AppearanceType": "Player"
+          }
+        },
+        "RightHat": {          
+          "HideHair": false,
+          "DrawOrderOverride": {
+            "Preposition": "Before",
+            "AppearanceType": "Player"
+          }
+        }
+      },
+      "When": {
+        "Query: {{IsOutdoors}} = false OR '{{Weather}}' NOT IN ('Snow', 'Rain', 'Storm')": true
+      },
+      "Update": "OnDayStart, OnLocationChange"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/PeacefulEnd/FashionSense/AppearanceData",
+      "TargetField": [ "PeacefulEnd.FashionSense.HoodsAndHoodies/Hat/Dynamic Hood (Rain or Snow)" ],  
+      "Fields": {
+        "FrontHat": {          
+          "HideHair": true
+        },
+        "BackHat": {          
+          "HideHair": true,
+          "DrawOrderOverride": null
+        },
+        "LeftHat": {          
+          "HideHair": true,
+          "DrawOrderOverride": null
+        },
+        "RightHat": {          
+          "HideHair": true,
+          "DrawOrderOverride": null
+        }
+      },
+      "When": {
+        "IsOutdoors": true,
+        "Weather": "Rain, Storm, Snow"
+      },
+      "Update": "OnDayStart, OnLocationChange"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/PeacefulEnd/FashionSense/AppearanceData",
+      "TargetField": [ "PeacefulEnd.FashionSense.HoodsAndHoodies/Hat/Dynamic Hood (Outdoors)" ],  
+      "Fields": {
+        "FrontHat": {          
+          "HideHair": false
+        },
+        "BackHat": {          
+          "HideHair": false,
+          "DrawOrderOverride": {
+            "Preposition": "Before",
+            "AppearanceType": "Hair"
+          }
+        },
+        "LeftHat": {          
+          "HideHair": false,
+          "DrawOrderOverride": {
+            "Preposition": "Before",
+            "AppearanceType": "Player"
+          }
+        },
+        "RightHat": {          
+          "HideHair": false,
+          "DrawOrderOverride": {
+            "Preposition": "Before",
+            "AppearanceType": "Player"
+          }
+        }
+      },
+      "When": {
+        "IsOutdoors": false
+      },
+      "Update": "OnDayStart, OnLocationChange"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/PeacefulEnd/FashionSense/AppearanceData",
+      "TargetField": [ "PeacefulEnd.FashionSense.HoodsAndHoodies/Hat/Dynamic Hood (Outdoors)" ],  
+      "Fields": {
+        "FrontHat": {          
+          "HideHair": true
+        },
+        "BackHat": {          
+          "HideHair": true,
+          "DrawOrderOverride": null
+        },
+        "LeftHat": {          
+          "HideHair": true,
+          "DrawOrderOverride": null
+        },
+        "RightHat": {          
+          "HideHair": true,
+          "DrawOrderOverride": null
+        }
+      },
+      "When": {
+        "IsOutdoors": true
+      },
+      "Update": "OnDayStart, OnLocationChange"
+    }
+  ]
+}

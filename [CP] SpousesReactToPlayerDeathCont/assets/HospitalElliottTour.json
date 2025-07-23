@@ -1,0 +1,15 @@
+{ // Hospital Death - Elliott on Book Tour
+  "Changes": [
+    {
+      "LogName": "KO Generic - Elliott Tour",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "When": {
+        "HasConversationTopic": "elliotGone",
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 12 3/skippable/pause 1500/showFrame 5/message \"{{i18n:PlayerKilled.doctor.01}}\"/pause 1000/message \"{{i18n:PlayerKilled.doctor.02}}\"/viewport 20 12 true/pause 1000/speak Harvey \"{{i18n:PlayerKilled.doctor.03}}\"/emote farmer 16/faceDirection farmer 1/pause 500/speak Harvey \"{{i18n:PlayerKilled.doctor.05}}\"/pause 500/speak Harvey \"{{i18n:PlayerKilled.doctor.12}}$2\"/pause 500/emote farmer 60/pause 1000/speak Harvey \"{{i18n:PlayerKilled.doctor.06}}\"/pause 500/speak Harvey \"{{i18n:PlayerKilled.doctor.13}}\"/textAboveHead Harvey \"{{i18n:PlayerKilled.doctor.14}}\"/move Harvey 1 0 0/move Harvey 0 -4 0/move Harvey -8 0 0 true/move Harvey 0 -1 0/move Harvey -4 0 0/move Harvey 0 -1 0/playSound doorClose/warp Harvey -100 -100/emote farmer 40/pause 500/message \"{{i18n:PlayerKilled.Elliott.01}}\"/pause 1000/emote farmer 28/message \"{{i18n:PlayerKilled.Elliott.02}}\"/mail ElliottReactionHospital/hospitaldeath/end"
+      }
+    }
+  ]
+}

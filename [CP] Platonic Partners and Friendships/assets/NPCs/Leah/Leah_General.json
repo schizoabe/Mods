@@ -1,0 +1,102 @@
+{
+    "Changes": [
+        // CONTENT INCLUDES
+        {
+            "LogName": "Enable Leah's aromantic content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Leah/Leah_AroContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance"
+            }
+        },
+        // ACE CONTENT
+        {
+            "LogName": "Leah shared dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries":
+            {
+                "SpouseStardrop": "{{i18n:PPAF.Leah.DialogueEdits.Shared.SpouseStardrop |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            }
+        },
+        {
+            "LogName": "Leah ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueLeah",
+            "Entries":
+            {
+                "Good_4": "{{i18n:PPAF.Leah.DialogueEdits.Ace.Good_4}}",
+                "spring_1": "{{i18n:PPAF.Leah.DialogueEdits.Ace.spring_1}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        // TERMS OF ENDEARMENT
+        {
+            "LogName": "Leah terms of endearment, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Leah",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Leah terms of endearment",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // NO BLUSH EDITS
+        {
+            "LogName": "Leah no blush edit",
+            "Action": "EditImage",
+            "Target": "Portraits/Leah, Portraits/Leah_Winter, Portraits/Leah_Beach",
+            "FromFile": "assets/Portraits/{{TargetWithoutPath}}_NoBlush.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Leah": true,
+                "HasMod |contains=DSVTeam.DiverseStardewValley, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        {
+            "LogName": "Leah no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Leah_Spring, Portraits/Leah_Summer, Portraits/Leah_Fall, Portraits/Leah_Winter_Outdoor, Portraits/Leah_Winter_Indoor, Portraits/Leah_SpiritsEve, Portraits/Leah_EggF, Portraits/Leah_Jellies, Portraits/Leah_Luau, Portraits/Leah_Winter_IceF, Portraits/Leah_Winter_WinterStar, Portraits/Leah_Beach",
+            "FromFile": "assets/Portraits/Leah_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Leah": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        },
+        {
+            "LogName": "Leah no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Leah_FlowerDance, Portraits/Leah_Fair",
+            "FromFile": "assets/Portraits/{{TargetWithoutPath}}_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Leah": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        }
+    ]
+}

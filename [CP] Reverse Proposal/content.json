@@ -1,0 +1,231 @@
+{
+   "Format": "2.2.0",
+   "Changes": [
+   
+   //Events
+      {
+         "Action": "EditData",
+         "Target": "Data/Events/Farm",
+         "Entries": {
+			"77771/f Sebastian 2000/w sunny/e 29/o Sebastian/t 600 1500": "moonlightJellies/7 9/farmer 64 15 2 Sebastian 64 14 0/Skippable/pause 500/speak Sebastian \"Hey @! Nice day isn't?\"/faceDirection Sebastian 3/pause 500/emote Sebastian 28/speak Sebastian \"*mumbles* I'm so nervous... $4#$b#*mumbles* Okay, I can do this. $4\" /emote farmer 8/faceDirection Sebastian 0/pause 500/speak Sebastian \"@, I am so happy that you came into my life, and you're the only one who made me feel like this. $4#$b#I always longed to get out of the valley, but now leaving you here breaks my heart. $4#$b# I could never leave you. I decided to stay.$4\"/pause 500/speak Sebastian \"$q 751912 null#Will you be my boyfriend? ^ Will you be my girlfriend?#$r 751911 10 accepted_Sebastian#Yes, I thought you'll never ask!#$r 751912 -500 rejected_Sebastian#No, I'm sorry\"/fork forkProposalNoSebastian/emote Sebastian 20/speak Sebastian \"Dang! I don't know what will I feel if you said 'No'.$h#$b#Thank you for listening!$4\" /end warpout",
+			
+			"forkProposalNoSebastian": "speak Sebastian \"Oh. I'm sorry if I waste your time. I'm going now. $s\" /end warpout", 
+		 },
+		 
+		 "When":{
+			"HasValue:{{spouse}}": "false",
+		 }
+      },
+	  
+	  {
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			"77772/f Alex 2000/w sunny/e 288847/o Alex/t 600 1500": "moonlightJellies/7 9/farmer 64 15 2 Alex 64 14 0/Skippable/pause 500/speak Alex \"Hey @! Phew! This is a good day for an exercise right?\"/pause 500/faceDirection Alex 3/pause 500/speak Alex \"Dang! I feel like my heart will burst! I'm too nervous.$4\"/pause 500/emote Alex 28/faceDirection Alex 0/speak Alex \"After my Mom died, I never expect to like another guy in my whole life. $4 ^ After my Mom died, I never expect to like another girl in my whole life. $4#$b#But when you came to town, everything changed. You became a part of my life. $4#$b#@, you're my rock and I want you there by my side.$4\"/pause 500/speak Alex \"$q 751914 null#Will you be my boyfriend? ^ Will you be my girlfriend?#$r 751913 10 accepted_Alex#Yes, I will stay by your side!#$r 751914 -500 rejected_Alex#No, I'm sorry.\"/fork forkProposalNoAlex/emote Alex 20/speak Alex \"I'll See ya later! $4\" /end warpout",
+			
+			"forkProposalNoAlex": "speak Alex \"Well, walking to your farm was still a great exercise. Later! $s\" /end warpout",		
+		},
+		
+		 "When":{
+			"HasValue:{{spouse}}": "false",
+		 }
+		 
+	  },
+	  
+	  {
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			"77773/f Harvey 2000/w sunny/e 571102/o Harvey/t 600 1500": "moonlightJellies/7 9/farmer 64 15 2 Harvey 64 14 0/Skippable/pause 500/speak Harvey \"Hey @! Just came by to talk with you... $3#$b#Uhm... Don't forget to eat apple a day! $4\"/faceDirection Harvey 3/pause 500/emote Harvey 12/faceDirection Harvey 0/pause 500/speak Harvey \"Sorry, I'm super nervous.$4#$b#@, what I'm trying to say is... I always look forward to your visits to the clinic.$h\" /emote farmer 16/pause 500/speak Harvey \"Wait! not like that, I mean... not when you come in battered and bruised!$7#$b# Let me start over... $4\"s/pause 500/speak Harvey \"@, I look forward to every moment with you and I can't bear the thought of not having you in my life.$4\"/pause 500/speak Harvey \"$q 751916 null#Will you be my boyfriend? ^ Will you be my girlfriend?#$r 751915 10 accepted_Harvey#Yes, I will!#$r 751916 -500 rejected_Harvey#No, I'm sorry.\"/fork forkProposalNoHarvey/emote Harvey 20/speak Harvey \"Don't forget what I said, okay? Take care and have a nice day! $4\" /end warpout",
+			
+			"forkProposalNoHarvey": "speak Harvey \"Uhm... Sorry to bother you. Take care, okay? $s\" /end warpout",	
+		},
+		
+		 "When":{
+			"HasValue:{{spouse}}": "false",
+		 }
+		 
+	  },
+	  
+	  {
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			"77774/f Shane 2000/w sunny/e 3900074/o Shane/t 600 1500": "moonlightJellies/7 9/farmer 64 15 2 Shane 64 14 0/Skippable/pause 500/speak Shane \"Hey @! I took a walk and decided to drop by.$h#$b#My therapist said that I should take a walk in the mountains for a change.\"/faceDirection Shane 3/pause 500/emote Shane 12/faceDirection Shane 0/pause 500/speak Shane \"Sorry, I'm kind of nervous.$4\" /emote Shane 28/speak Shane \"I thought my life will never change.$s#$b#That my life will be forever a mess... $s\"/pause 500/speak Shane \"Until I meet you. $4\" /pause 500/speak Shane \"You showed me that there's still hope for me. That you're there for me. $4#$b#@, you're the reason why I am still here...\" /pause 500/speak Shane \"I really like you. $4\"/pause 500/speak Shane \"$q 751918 null#Will you be my boyfriend? ^ Will you be my girlfriend?#$r 751917 10 accepted_Shane#Yes, I will continue to stay with you!#$r 751918 -500 rejected_Shane#No, I'm sorry.\"/fork forkProposalNoShane/emote Shane 20/speak Shane \"Well, time to go! You have a long day ahead of you. See you later at the saloon.$h\" /end warpout",
+			
+			"forkProposalNoShane": "speak Shane \"Uhm... Sorry to bother you. Take care, okay? $s\" /end warpout",
+		},
+		
+		"When":{
+			"HasValue:{{spouse}}": "false",
+		 }
+		 
+	  },
+	  
+	   {
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			"77775/f Sam 2000/w sunny/e 4081148/o Sam/t 600 1500": "moonlightJellies/7 9/farmer 64 15 2 Sam 64 14 0/Skippable/pause 500/speak Sam \"Yo, @! I decided to take a ride with my skateboard to your farm.$h#$b#It was rocky because there is no pavements but it's fine.$h\" /faceDirection Sam 3/pause 500/emote Sam 40/faceDirection Sam 0/pause 500/speak Sam \"Sorry, I suddenly got nervous.$4\"/emote Sam 28/speak Sam \"Y'know @, I aim high for myself and the band. Thinking that there will be a life for me in the city if our band become well-known. #$b#But I guess... City life is not for me, and leaving you here makes my heart hurt so bad. $s#$b#I can't leave you alone. $4\" /pause 500/speak Sam \"I really like you, @! $4\"/pause 500/speak Sam \"$q 751920 null#Will you be my boyfriend? ^ Will you be my girlfriend?#$r 751919 10 accepted_Sam#Yes, of course I will!#$r 751920 -500 rejected_Sam#No, I'm sorry.\"/fork forkProposalNoSam/emote Sam 20/speak Sam \"See you when I see you! Laters!$4\" /end warpout",
+			
+			"forkProposalNoSam": "speak Sam \"I understand. Well, See you later. $s\" /end warpout",
+		},
+		
+		 "When":{
+			"HasValue:{{spouse}}": "false",
+		 }
+		 
+	  },
+	  
+	  {
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			"77776/f Elliott 2000/w sunny/e 1848481/o Elliott/t 600 1500": "moonlightJellies/7 9/farmer 64 15 2 Elliott 64 14 0/Skippable/pause 500/speak Elliott \"@, what a pleasant morning to start a new day don't you think?$h#$b#I was thinking about you so I decided to visit you.$h#$b#I hope you don't mind.\" /faceDirection Elliott 3/pause 500/emote Elliott 40/speak Elliott \"... $s\"/emote farmer 8/faceDirection Elliott 0/pause 500/speak Elliott \"OOh! There is nothing wrong. It's just that...$4\"/emote Elliott 12/speak Elliott \"It got me thinking about the past weeks that we are together.$h\" /pause 500/speak Elliott \"I suddenly realize how I'm happy that I have someone I can share all of my thoughts with.$h#$b#You've become someone special to me, @!\"/pause 500 speak Elliott \"I like you. These words perfectly express my feelings for you.$h\" /Pause 500/speak Elliott \"$q 751922 null#Will you be my boyfriend? ^ Will you be my girlfriend?#$r 751921 10 accepted_Elliott#Yes, I would love to!#$r 751922 -500 rejected_Elliott#No, I'm sorry.\"/fork forkProposalNoElliott/emote Elliott 20/speak Elliott \"It would be lovely to spend a whole day with you but I must restrain myself for now. I'll see you soon.$h\" /end warpout",
+			
+			"forkProposalNoElliott": "speak Elliott \"I see. Well, I guess we don't feel the same way.$s\" /pause 500/speak Elliott \"...$s#$b#See you around, @.$3\" /end warpout",
+		},
+		
+		 "When":{
+			"HasValue:{{spouse}}": "false",
+		 }
+		 
+	  },
+	  
+		//DateBeforeProposal
+
+
+	{
+		"Action": "EditData",
+        "Target": "Data/Events/Farm",
+        "Entries": {
+			"77777/f Sebastian 2250/w Sunny/e 77771/o Sebastian/t 600 1000": "moonlightJellies/7 9/farmer 64 15 2 Sebastian 64 14 0/Skippable/pause 500/speak Sebastian \"@! It's been a while.\" /emote farmer 20/pause 500/speak Sebastian \"Well, since it was a good day today I wanna ask if you want to hangout with me or something? $4#$b# I just want to spend time with you, y'know.$h\"/pause 500/speak Sebastian \"Since we started dating, we haven't spend enough time with each other, I'm busy working all day in front of the computer while you tend your farm, $4#$b#So I am hoping we can have time today together. $4\"/pause 500/speak Sebastian \"$q 751923 null#What do you think?#$r 751924 100 DateAccepted_Sebastian#Sure why not?#$r 751923 -100 DateRejected_Sebastian#No, I'm sorry, I'm busy.\"/fork forkNoDateSebastian/emote Sebastian 20/speak Sebastian \"Come to my house at 5 PM after your work is done. Can't wait to see you! $h\" /end warpout",
+			"forkNoDateSebastian": "speak Sebastian \"Well, I guess you really doesn't have time for me.$s\" /pause 500/speak Sebastian \"...$s#$b#Sorry to bother you.$3\" /end warpout",
+			"forkNoWedPropSebastian": "speak Sebastian \"Well, if that's what you want. $s\" /pause 500/speak Sebastian \"Then I'll wait until you're ready. See you and goodnight. $h\" /end newDay",
+		}
+	},
+	
+	{
+		"Action": "EditData",	
+		"Target": "Data/Events/SebastianRoom",
+        "Entries":{
+				"77778/f Sebastian 2350/w sunny/q 751924/o Sebastian/t 1700 1900": "moonlightJellies/7 9/farmer 1 4 2 Sebastian 5 6 3/Skippable/move farmer 0 2 2/move farmer 2 0 1/pause 500/emote Sebastian 20/speak Sebastian \"@, glad you came. I was worried you'll not come since there is so much on your plate.$h#$b#But I am happy that you're here with me. Come, I prepared some things to do. I hope you like it. $h\" /globalFade/viewport -1000 -1000/message \"Watching movies with your love ones is the best.\" /changeLocation Farm/viewport 64 15/faceDirection farmer 2/warp farmer 64 15 2/faceDirection Sebastian 0/warp Sebastian 64 16 0/emote farmer 20/emote Sebastian 20/pause 500/textAboveHead Sebastian \"Thanks for tonight.\" /pause 500/speak Sebastian \"I really enjoyed our time today. I hope I can spend some time with you again. $h\" /pause 500/speak Sebastian \"Uhm...\" /emote farmer 8/emote Sebastian 28/speak Sebastian \"I want to ask something... Do you want to... take our relationship to next level? $4\" /emote farmer 16/pause 500/speak Sebastian \"I am serious when I said that I want to stay with you. I just want to know if you feel the same way as I am. $4\" /pause 500/speak Sebastian \"$q 751925 null#Do you want to?#$r 751926 100 NextLevelAccepted_Sebastian#I would love to!#$r 751925 -100 NextLevelRejected_Sebastian#I don't want to.\" /fork forkNoWedPropSebastian/pause 500/speak Sebastian \"Good night and sleep tight, @. $4\" /globalFade/viewport -1000 -1000/message \"Good night and sleep tight too. Sebastian.\" /end newDay",
+			}
+	},
+	
+	
+	{
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			"77779/f Alex 2250/w sunny/e 77772/o Alex/t 600 1000": "moonlightJellies/7 9/farmer 64 15 2 Alex 64 14 0/Skippable/pause 500/speak Alex \"@! Hey, I just having an exercise right now and I suddenly want to... visit you. $h\" /emote farmer 20/pause 500/emote Alex 28/speak Alex \"Well... Actually... The truth is... I want to see you so I came to your farm, @. $4\" /pause 500/speak Alex \"Say... Are you busy? I want to spend some time with you. $4\" /pause 500/speak Alex \"$q 751927 null#What can you say?#$r 751928 100 DateAccepted_Alex#Sure! I'll come to you.#$r 751927 -100 DateRejected_Alex#Sorry, I can't. Busy.\" /fork forkNoDateAlex/pause 500/speak Alex \"See you later in front of my house at 3PM! $h\" /end warpout",
+			
+			"forkNoDateAlex": "speak Alex \"Well, maybe we can do it next time\" /pause 500/speak Alex \"Hopefully... Well, see you around. Gonna run for awhile before going home. #$b#Later @!\" /end warpout",
+			"forkNoWedPropAlex": "speak Alex \"Well. If that's what you want then I won't force you. But in case you change your mind, you can see me anytime. Catch you later.\" /end newDay",
+		}
+	},
+	
+	{
+		"Action": "EditData",
+		"Target": "Data/Events/Town",
+		"Entries": {
+			"777710/f Alex 2350/w sunny/o Alex/t 1500 1700": "moonlightJellies/64 64/farmer 59 64 1 Alex 64 64 3/move farmer 3 0 1/skippable/pause 500/emote Alex 20/speak Alex \"I'm glad you made it! I was wondering where you are! $h#$b#Thanks for being here with me today. I hope you enjoyed your time with me. C'mon, let's go to the beach and let's play some gridball. $h#$b#I'll teach you myself! I hope you don't mind having a teacher like me. $h\" /emote farmer 20/globalFade/viewport -1000 -1000/message \"Learning how to play grindball from Alex is so enjoyable. Spending time with him makes time flew too fast.\" /changeLocation Beach/viewport 42 24/faceDirection farmer 2/warp farmer 40 24/faceDirection Alex 2/warp Alex 41 24/textAboveHead Alex \"That made me tired.\" /pause 700/speak Alex \"Thanks @. Thanks for spending time with me. $4#$b#I read from the internet that sometimes you need to spend some time with your love ones. $4#$b#I am so happy that you agreed to be with me today. Hope you enjoyed our time as much as I do.\" /showFrame Alex 38/pause 500/showFrame Alex 37/pause 500/speak Alex \"You know... @. I want to spend the rest of my days with you. $4#$b#I am serious about what I said.\" /faceDirection farmer 1/pause 500/showFrame Alex 12/speak Alex \"Here, let me take you home. $h\" /globalFade/viewport -1000 -1000/changeLocation Farm/viewport 64 15/faceDirection farmer 2/warp farmer 64 15 2/faceDirection Alex 0/warp Alex 64 16 0/emote farmer 20/pause 500/speak Alex \"Touch down. Thanks again, @!\" /pause 500/emote Alex 12/emote farmer 8/pause 500/speak Alex \"Well... I want to ask you something. I just want to make sure that... You're really serious about our relationship.\" /pause 500/speak Alex \"$q 751929 null#What do you think about taking our relationship to next level?#$r 751930 100 NextLevelAccepted_Alex#I would love to!#$r 751729 -100 NextLevelRejected_Alex#No. I'm sorry.\" /fork forkNoWedPropAlex/pause 500/emote farmer 20/emote Alex 20/showFrame Alex 12/pause 500/speak Alex \"See you around. Good night and Dream of me.$4#$b#Kidding. Laters! $h\" /end newDay",
+		}
+	},
+	  
+	//WeddingProposal
+	
+	
+	
+	
+	
+	  
+	//SDialogues
+		{
+			"LogName": "Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sebastian",
+			"Entries": {
+				"accepted_Sebastian": "Phew! That was nerve wracking!$h",
+				"rejected_Sebastian": "... $s%fork",
+			},
+		},
+		
+		{
+			"LogName": "Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex",
+			"Entries":{
+				"accepted_Alex": "Oh! That made me very happy! $h",
+				"rejected_Alex": "... $s%fork",
+			},
+		},
+		
+		{
+			"LogName": "Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Harvey",
+			"Entries":{
+				"accepted_Harvey": "You made my day today, @! $h",
+				"rejected_Harvey": "... $s%fork",
+			},
+		},
+		
+		{
+			"LogName": "Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"accepted_Shane": "I'm happy to hear that from you! $h",
+				"rejected_Shane": "... $s%fork",
+			},
+		},
+		
+		{
+			"LogName": "Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sam",
+			"Entries":{
+				"accepted_Sam": "I'll make sure you won't regret your decision, @! $h",
+				"rejected_Sam": "... $s%fork",
+			},
+		},
+		
+		{
+			"LogName": "Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Elliott",
+			"Entries":{
+				"accepted_Elliott": "You made me that happiest man on earth.$h",
+				"rejected_Elliott": "... $s%fork",
+			},
+		},
+	
+	//DatingDialogue
+	
+	{
+			"LogName": "Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sebastian",
+			"Entries": {
+				"DateAccepted_Sebastian": "Well, see you later then? $h",
+				"DateRejected_Sebastian": "I see. $s%fork",
+				"NextLevelAccepted_Sebastian": "You always makes me smile, y'know that? Thank you, @!$h",
+				"NextLevelRejected_Sebastian": "I see...$s%fork",
+			}
+	},
+			
+	{
+		"LogName": "Dialogue",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Alex",
+		"Entries":{
+			"DateAccepted_Alex": "Nice! I can't wait to see you $h",
+			"DateRejected_Alex": "I see...%fork",
+			"NextLevelAccepted_Alex": "You don't know how much you made me happy. $h",
+			"NextLevelRejected_Alex": "I see...%fork",
+		}
+	},
+	
+	]
+}

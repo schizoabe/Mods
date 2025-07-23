@@ -1,0 +1,385 @@
+{
+    "Changes": [
+
+
+//NPC (Fields: 1 love, 3 like, 5 disllike, 7 hate, 9 neutral)
+        {
+			  "LogName": "QL - Flower Garden 2 NPC Gift Taste",
+              "Action": "EditData",
+              "Target": "Data/NPCGiftTastes",
+              "TextOperations": [
+//ABIGAIL
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Abigail", 1],
+                      "Value": "QL_LilacBouquet",
+                      "Delimiter": " "
+                  },
+//Neutral
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Abigail", 9],
+                      "Value": "QL_CallaLilyBouquet",
+                      "Delimiter": " "
+                  },
+
+
+//ALEX
+//Dislike
+                  {
+                      	"Operation": "Append",
+                     	"Target": ["Fields", "Alex",5],
+						"Value": "QL_DelphiniumBouquet",
+                      	"Delimiter": " "
+                  },
+//Hate
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Alex", 7],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+
+//CAROLINE
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Caroline", 1],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_RoseBouquet QL_GardeniaBouquet QL_LilacBouquet",
+                      "Delimiter": " "
+                  },
+
+//DEMETRIUS
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Demetrius", 1],
+                      "Value": "QL_TulipBouquet QL_BlueJazzBouquet QL_FritillariaBouquet QL_OrchidBouquet",
+                      "Delimiter": " "
+                  },
+
+//ELLIOTT
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Elliott", 1],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_PoppyBouquet QL_BlueJazzBouquet QL_RoseBouquet QL_AmaryllisBouquet",
+                      "Delimiter": " "
+                  },
+//EMILY
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Emily", 1],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_ZinniaBouquet",
+                      "Delimiter": " "
+                  },
+//Like
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Emily", 3],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+
+//EVELYN
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Evelyn", 1],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_TulipBouquet QL_GardeniaBouquet QL_PeonyBouquet QL_PansyBouquet",
+                      "Delimiter": " "
+                  },
+//George
+//Dislike
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "George", 5],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_TulipBouquet QL_AmaryllisBouquet QL_CallaLilyBouquet QL_CarnationBouquet QL_DahliaBouquet QL_DelphiniumBouquet QL_FritillariaBouquet QL_JasmineBouquet QL_IrisBouquet QL_PeonyBouquet QL_OrchidBouquet QL_PansyBouquet QL_RoseBouquet QL_LilyBouquet QL_StripedSquillBouquet QL_SnapdragonBouquet QL_ZinniaBouquet QL_GardeniaBouquet QL_Lilac",
+                      "Delimiter": " "
+                  },
+//Hate
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "George", 7],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+
+//HALEY
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Haley", 1],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_TulipBouquet QL_PoppyBouquet QL_DahliaBouquet QL_LilyBouquet QL_RoseBouquet QL_OrchidBouquet",
+                      "Delimiter": " "
+                  },
+//Hate
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Haley", 7],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+
+//JAS
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Jas", 1],
+                      "Value": "QL_SweetPeaBouquet QL_BlueJazzBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_DelphiniumBouquet QL_OrchidBouquet",
+                      "Delimiter": " "
+                  },
+//Hate
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Jas", 7],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+
+//JODI
+//Hate
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Jodi", 7],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+//KENT
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Kent", 1],
+                      "Value": "QL_BlueJazzBouquet QL_PoppyBouquet",
+                      "Delimiter": " "
+                  },
+//Dislike
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Kent", 5],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+//Hate
+//LEAH
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Leah", 1],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_IrisBouquet QL_LilacBouquet QL_OrchidBouquet",
+                      "Delimiter": " "
+                  },
+
+//LEWIS
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Lewis", 1],
+                      "Value": "QL_BlueJazzBouquet QL_DaffodilBouquet QL_TulipBouquet QL_CallaLilyBouquet QL_OrchidBouquet",
+                      "Delimiter": " "
+                  },
+//Hate
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Lewis", 7],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+
+//LINUS
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Linus", 1],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_PoppyBouquet QL_DahliaBouquet QL_StripedSquillBouquet",
+                      "Delimiter": " "
+                  },
+//Like
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Linus", 3],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+
+//MARNIE
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Marnie", 1],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_PoppyBouquet QL_GardeniaBouquet QL_RoseBouquet",
+                      "Delimiter": " "
+                  },
+
+//MARU
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Maru", 1],
+                      "Value": "QL_ZinniaBouquet QL_LilacBouquet",
+                      "Delimiter": " "
+                  },
+
+//PAM
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Pam", 1],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_OrchidBouquet QL_RoseBouquet",
+                      "Delimiter": " "
+                  }, 
+
+//PENNY
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Penny", 1],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_PoppyBouquet QL_OrchidBouquet QL_PeonyBouquet",
+                      "Delimiter": " "
+                  },
+
+//PIERRE
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Pierre", 1],
+                      "Value": "QL_OrchidBouquet",
+                      "Delimiter": " "
+                  },
+//Dislike
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Pierre", 5],
+                      "Value": "QL_GardeniaBouquet",
+                      "Delimiter": " "
+                  },
+//Hate
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Pierre", 7],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  }, 
+
+//SAM
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Sam", 1],
+                      "Value": "QL_ZinniaBouquet",
+                      "Delimiter": " "
+                  },
+//Neutral
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Sam", 9],
+                      "Value": "QL_CallaLilyBouquet QL_PeonyBouquet",
+                      "Delimiter": " "
+                  },
+//Dislike
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Sam", 5],
+                      "Value": "QL_AmaryllisBouquet QL_DahliaBouquet QL_LilyBouquet",
+                      "Delimiter": " "
+                  },
+//Hate
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Sam", 7],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+
+//SANDY
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Sandy", 1],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_TulipBouquet QL_OrchidBouquet QL_RoseBouquet QL_LilyBouquet",
+                      "Delimiter": " "
+                  },
+
+//SEBASTIAN
+//Neutral
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Sebastian", 9],
+                      "Value": "QL_SnapdragonBouquet",
+                      "Delimiter": " "
+                  },
+//Dislike
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Sebastian", 5],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_TulipBouquet QL_CallaLilyBouquet QL_DahliaBouquet QL_FreesiaBouquet QL_DelphiniumBouquet QL_FritillariaBouquet QL_IrisBouquet QL_PeonyBouquet QL_OrchidBouquet QL_PansyBouquet QL_RoseBouquet QL_LilyBouquet QL_StripedSquillBouquet QL_ZinniaBouquet QL_GardeniaBouquet QL_LilacBouquet",
+                      "Delimiter": " "
+                  },
+//Hate
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Sebastian", 7],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+
+//SHANE 
+//Dislike
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Shane", 5],
+                      "Value": "QL_CallaLilyBouquet",
+                      "Delimiter": " "
+                  },
+
+//VINCENT
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Vincent", 1],
+                      "Value": "QL_DahliaBouquet QL_SnapdragonBouquet QL_ZinniaBouquet",
+                      "Delimiter": " "
+                  },
+//Neutral
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Vincent", 9],
+                      "Value": "QL_AmaryllisBouquet QL_CallaLilyBouquet",
+                      "Delimiter": " "
+                  },
+//Hate
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Vincent", 7],
+                      "Value": "QL_FritillariaBouquet",
+                      "Delimiter": " "
+                  },
+
+//WILLY
+//Dislike
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Willy", 5],
+                      "Value": "QL_SweetPeaBouquet QL_CrocusBouquet QL_DaffodilBouquet QL_FairyRoseBouquet QL_SummerSpangleBouquet QL_SunflowerBouquet QL_TulipBouquet QL_AmaryllisBouquet QL_CallaLilyBouquet QL_CarnationBouquet QL_DahliaBouquet QL_DelphiniumBouquet QL_FritillariaBouquet QL_JasmineBouquet QL_IrisBouquet QL_PeonyBouquet QL_OrchidBouquet QL_PansyBouquet QL_RoseBouquet QL_LilyBouquet QL_StripedSquillBouquet QL_SnapdragonBouquet QL_ZinniaBouquet QL_GardeniaBouquet QL_Lilac",
+                      "Delimiter": " "
+                  },
+
+//WIZARD
+//Love
+                  {
+                      "Operation": "Append",
+                      "Target": ["Fields", "Wizard", 1],
+                      "Value": "QL_SnapdragonBouquet",
+                      "Delimiter": " "
+                  }
+              ]
+          }, 
+
+
+
+
+
+           ]
+}

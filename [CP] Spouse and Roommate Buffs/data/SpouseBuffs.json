@@ -1,0 +1,386 @@
+{
+	"Changes": [
+		{
+			"LogName": "Generic Spouse/Roommate Buff",
+			"Action": "EditData",
+			"Target": "Data/Buffs",
+			"Entries": {
+				"{{ModID}}_GenericSpouseBuff": {
+					"DisplayName": "{{i18n:SpouseRoommate.Buff.Name}}",
+					"Description": "{{i18n:Spouse.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 13,
+					"Effects": {
+						"{{GenericSpouseRoommateBuff}}": 3
+					}
+				},
+				"{{ModID}}_GenericRoommateBuff": {
+					"DisplayName": "{{i18n:SpouseRoommate.Buff.Name}}",
+					"Description": "{{i18n:Roommate.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 14,
+					"Effects": {
+						"{{GenericSpouseRoommateBuff}}": 3
+					}
+				}
+			},
+			"When": {
+				"BuffStrength": "Average",
+				"GenericSpouseRoommateBuff |contains= Off": false
+			}
+		},
+		{
+			"LogName": "Generic Spouse/Roommate Buff",
+			"Action": "EditData",
+			"Target": "Data/Buffs",
+			"Entries": {
+				"{{ModID}}_GenericSpouseBuff": {
+					"DisplayName": "{{i18n:SpouseRoommate.Buff.Name}}",
+					"Description": "{{i18n:Spouse.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 13,
+					"Effects": {
+						"{{GenericSpouseRoommateBuff}}": 1
+					}
+				},
+				"{{ModID}}_GenericRoommateBuff": {
+					"DisplayName": "{{i18n:SpouseRoommate.Buff.Name}}",
+					"Description": "{{i18n:Roommate.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 14,
+					"Effects": {
+						"{{GenericSpouseRoommateBuff}}": 1
+					}
+				}
+			},
+			"When": {
+				"BuffStrength": "Weak",
+				"GenericSpouseRoommateBuff |contains= Off": false
+			}
+		},
+		{
+			"LogName": "Generic Spouse/Roommate Buff",
+			"Action": "EditData",
+			"Target": "Data/Buffs",
+			"Entries": {
+				"{{ModID}}_GenericSpouseBuff": {
+					"DisplayName": "{{i18n:SpouseRoommate.Buff.Name}}",
+					"Description": "{{i18n:Spouse.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 13,
+					"Effects": {
+						"{{GenericSpouseRoommateBuff}}": 5
+					}
+				},
+				"{{ModID}}_GenericRoommateBuff": {
+					"DisplayName": "{{i18n:SpouseRoommate.Buff.Name}}",
+					"Description": "{{i18n:Roommate.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 14,
+					"Effects": {
+						"{{GenericSpouseRoommateBuff}}": 5
+					}
+				}
+			},
+			"When": {
+				"BuffStrength": "Strong",
+				"GenericSpouseRoommateBuff |contains= Off": false
+			}
+		},
+		{
+			"LogName": "Generic Spouse/Roommate Buff Trigger",
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+                "{{ModId}}_GenericSpouseBuffTrigger": {
+                    "Id": "{{ModId}}_GenericSpouseBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "ANY \"PLAYER_PLAYER_RELATIONSHIP Current Any Married\" \"PLAYER_NPC_RELATIONSHIP Current Any Married, !PLAYER_NPC_RELATIONSHIP Current Abigail Married, !PLAYER_NPC_RELATIONSHIP Current Alex Married, !PLAYER_NPC_RELATIONSHIP Current Elliott Married, !PLAYER_NPC_RELATIONSHIP Current Emily Married, !PLAYER_NPC_RELATIONSHIP Current Haley Married, !PLAYER_NPC_RELATIONSHIP Current Harvey Married, !PLAYER_NPC_RELATIONSHIP Current Leah Married, !PLAYER_NPC_RELATIONSHIP Current Maru Married, !PLAYER_NPC_RELATIONSHIP Current Penny Married, !PLAYER_NPC_RELATIONSHIP Current Sam Married, !PLAYER_NPC_RELATIONSHIP Current Sebastian Married, !PLAYER_NPC_RELATIONSHIP Current Shane Married, !PLAYER_NPC_RELATIONSHIP Current Alissa Married, !PLAYER_NPC_RELATIONSHIP Current Anton Married, !PLAYER_NPC_RELATIONSHIP Current Blair Married, !PLAYER_NPC_RELATIONSHIP Current Bryle Married, !PLAYER_NPC_RELATIONSHIP Current Corine Married, !PLAYER_NPC_RELATIONSHIP Current Daia Married, !PLAYER_NPC_RELATIONSHIP Current Faye Married, !PLAYER_NPC_RELATIONSHIP Current Flor Married, !PLAYER_NPC_RELATIONSHIP Current Ian Married, !PLAYER_NPC_RELATIONSHIP Current Irene Married, !PLAYER_NPC_RELATIONSHIP Current Jeric Married, !PLAYER_NPC_RELATIONSHIP Current Jio Married, !PLAYER_NPC_RELATIONSHIP Current June Married, !PLAYER_NPC_RELATIONSHIP Current Kenneth Married, !PLAYER_NPC_RELATIONSHIP Current Kiarra Married, !PLAYER_NPC_RELATIONSHIP Current Maddie Married, !PLAYER_NPC_RELATIONSHIP Current Paula Married, !PLAYER_NPC_RELATIONSHIP Current Philip Married, !PLAYER_NPC_RELATIONSHIP Current Sean Married, !PLAYER_NPC_RELATIONSHIP Current Shiro Married, !PLAYER_NPC_RELATIONSHIP Current Ysabelle Married, !PLAYER_NPC_RELATIONSHIP Current Zayne Married\"",
+                    "Actions": [
+                        "AddBuff {{ModID}}_GenericSpouseBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_GenericRoommateBuffTrigger": {
+                    "Id": "{{ModId}}_GenericRoommateBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Any Roommate, !PLAYER_NPC_RELATIONSHIP Current Abigail Roommate, !PLAYER_NPC_RELATIONSHIP Current Alex Roommate, !PLAYER_NPC_RELATIONSHIP Current Elliott Roommate, !PLAYER_NPC_RELATIONSHIP Current Emily Roommate, !PLAYER_NPC_RELATIONSHIP Current Haley Roommate, !PLAYER_NPC_RELATIONSHIP Current Harvey Roommate, !PLAYER_NPC_RELATIONSHIP Current Leah Roommate, !PLAYER_NPC_RELATIONSHIP Current Maru Roommate, !PLAYER_NPC_RELATIONSHIP Current Penny Roommate, !PLAYER_NPC_RELATIONSHIP Current Sam Roommate, !PLAYER_NPC_RELATIONSHIP Current Sebastian Roommate, !PLAYER_NPC_RELATIONSHIP Current Shane Roommate, !PLAYER_NPC_RELATIONSHIP Current Alissa Roommate, !PLAYER_NPC_RELATIONSHIP Current Anton Roommate, !PLAYER_NPC_RELATIONSHIP Current Blair Roommate, !PLAYER_NPC_RELATIONSHIP Current Bryle Roommate, !PLAYER_NPC_RELATIONSHIP Current Corine Roommate, !PLAYER_NPC_RELATIONSHIP Current Daia Roommate, !PLAYER_NPC_RELATIONSHIP Current Faye Roommate, !PLAYER_NPC_RELATIONSHIP Current Flor Roommate, !PLAYER_NPC_RELATIONSHIP Current Ian Roommate, !PLAYER_NPC_RELATIONSHIP Current Irene Roommate, !PLAYER_NPC_RELATIONSHIP Current Jeric Roommate, !PLAYER_NPC_RELATIONSHIP Current Jio Roommate, !PLAYER_NPC_RELATIONSHIP Current June Roommate, !PLAYER_NPC_RELATIONSHIP Current Kenneth Roommate, !PLAYER_NPC_RELATIONSHIP Current Kiarra Roommate, !PLAYER_NPC_RELATIONSHIP Current Maddie Roommate, !PLAYER_NPC_RELATIONSHIP Current Paula Roommate, !PLAYER_NPC_RELATIONSHIP Current Philip Roommate, !PLAYER_NPC_RELATIONSHIP Current Sean Roommate, !PLAYER_NPC_RELATIONSHIP Current Shiro Roommate, !PLAYER_NPC_RELATIONSHIP Current Ysabelle Roommate, !PLAYER_NPC_RELATIONSHIP Current Zayne Roommate\"",
+                    "Actions": [
+                        "AddBuff {{ModID}}_GenericRoommateBuff"
+                    ],
+					"MarkActionApplied": false
+                }
+			},
+			"When": {
+				"GenericSpouseRoommateBuff |contains= Off": false
+			}
+		},
+		{
+			"LogName": "Vanilla Spouse Buffs",
+			"Action": "EditData",
+			"Target": "Data/Buffs",
+			"Entries": {
+				"{{ModID}}_AbigailBuff": {
+					"DisplayName": "{{i18n:Abigail.Buff.Name}}",
+					"Description": "{{i18n:Abigail.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 0,
+					"Effects": {
+						"Attack": "{{BuffSkillToken}}"
+					}
+				},
+				"{{ModID}}_AlexBuff": {
+					"DisplayName": "{{i18n:Alex.Buff.Name}}",
+					"Description": "{{i18n:Alex.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 1,
+					"Effects": {
+						"MiningLevel": "{{BuffSkillToken}}"
+					}
+				},
+				"{{ModID}}_ElliottBuff": {
+					"DisplayName": "{{i18n:Elliott.Buff.Name}}",
+					"Description": "{{i18n:Elliott.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 2,
+					"Effects": {
+						"FishingLevel": "{{BuffSkillToken}}"
+					}
+				},
+				"{{ModID}}_EmilyBuff": {
+					"DisplayName": "{{i18n:Emily.Buff.Name}}",
+					"Description": "{{i18n:Emily.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 3,
+					"Effects": {
+						"MiningLevel": "{{BuffSkillToken}}"
+					}
+				},
+				"{{ModID}}_HaleyBuff": {
+					"DisplayName": "{{i18n:Haley.Buff.Name}}",
+					"Description": "{{i18n:Haley.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 4,
+					"Effects": {
+						"MaxStamina": "{{BuffEnergyMagnetismToken}}"
+					}
+				},
+				"{{ModID}}_HarveyBuff": {
+					"DisplayName": "{{i18n:Harvey.Buff.Name}}",
+					"Description": "{{i18n:Harvey.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 5,
+					"Effects": {
+						"Defense": "{{BuffSkillToken}}"
+					}
+				},
+				"{{ModID}}_LeahBuff": {
+					"DisplayName": "{{i18n:Leah.Buff.Name}}",
+					"Description": "{{i18n:Leah.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 7,
+					"Effects": {
+						"ForagingLevel": "{{BuffSkillToken}}"
+					}
+				},
+				"{{ModID}}_MaruBuff": {
+					"DisplayName": "{{i18n:Maru.Buff.Name}}",
+					"Description": "{{i18n:Maru.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 8,
+					"Effects": {
+						"MagneticRadius": "{{BuffEnergyMagnetismToken}}"
+					}
+				},
+				"{{ModID}}_PennyBuff": {
+					"DisplayName": "{{i18n:Penny.Buff.Name}}",
+					"Description": "{{i18n:Penny.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 9,
+					"Effects": {
+						"LuckLevel": "{{BuffSkillToken}}"
+					}
+				},
+				"{{ModID}}_SamBuff": {
+					"DisplayName": "{{i18n:Sam.Buff.Name}}",
+					"Description": "{{i18n:Sam.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 10,
+					"Effects": {
+						"Speed": "{{BuffSpeedToken}}"
+					}
+				},
+				"{{ModID}}_SebastianBuff": {
+					"DisplayName": "{{i18n:Sebastian.Buff.Name}}",
+					"Description": "{{i18n:Sebastian.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 11,
+					"Effects": {
+						"ForagingLevel": "{{BuffSkillToken}}"
+					}
+				},
+				"{{ModID}}_ShaneBuff": {
+					"DisplayName": "{{i18n:Shane.Buff.Name}}",
+					"Description": "{{i18n:Shane.Buff.Description}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 12,
+					"Effects": {
+						"FarmingLevel": "{{BuffSkillToken}}"
+					}
+				},
+				"{{ModID}}_KrobusBuff": {
+					"DisplayName": "{{i18n:Krobus.Buff.Name}}",
+					"Description": "{{i18n:Krobus.Buff.Description.{{KrobusBuff}}}}",
+					"Duration": -2,
+					"IconTexture": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+					"IconSpriteIndex": 6,
+                    "ActionsOnApply": [
+                        "AddBuff {{KrobusBuffType}}"
+                    ]
+				}
+			}
+		},
+		{
+			"LogName": "Vanilla Spouse Buff Trigger",
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+                "{{ModId}}_AbigailBuffTrigger": {
+                    "Id": "{{ModId}}_AbigailBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Abigail Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_AbigailBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_AlexBuffTrigger": {
+                    "Id": "{{ModId}}_AlexBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Alex Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_AlexBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_ElliottBuffTrigger": {
+                    "Id": "{{ModId}}_ElliottBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Elliott Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_ElliottBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_EmilyBuffTrigger": {
+                    "Id": "{{ModId}}_EmilyBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Emily Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_EmilyBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_HaleyBuffTrigger": {
+                    "Id": "{{ModId}}_HaleyBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Haley Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_HaleyBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_HarveyBuffTrigger": {
+                    "Id": "{{ModId}}_HarveyBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_HarveyBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_LeahBuffTrigger": {
+                    "Id": "{{ModId}}_LeahBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Leah Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_LeahBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_MaruBuffTrigger": {
+                    "Id": "{{ModId}}_MaruBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Maru Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_MaruBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_PennyBuffTrigger": {
+                    "Id": "{{ModId}}_PennyBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Penny Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_PennyBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_SamBuffTrigger": {
+                    "Id": "{{ModId}}_SamBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Sam Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_SamBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_SebastianBuffTrigger": {
+                    "Id": "{{ModId}}_SebastianBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Sebastian Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_SebastianBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_ShaneBuffTrigger": {
+                    "Id": "{{ModId}}_ShaneBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Shane Married Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_ShaneBuff"
+                    ],
+					"MarkActionApplied": false
+                },
+                "{{ModId}}_KrobusBuffTrigger": {
+                    "Id": "{{ModId}}_KrobusBuffTrigger",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_NPC_RELATIONSHIP Current Krobus Roommate",
+                    "Actions": [
+                        "AddBuff {{ModID}}_KrobusBuff"
+                    ],
+					"MarkActionApplied": false
+                }
+			}
+		}
+    ]
+}

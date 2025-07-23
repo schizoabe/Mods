@@ -1,0 +1,260 @@
+{
+	"Changes":[
+	    {
+			"LogName": "Load Large Objects",
+		  	"Action": "Load",
+		  	"Target": "Mods/kath.cosmos/LargeObjects",
+		  	"FromFile": "assets/Items/largeobjects.png"
+	    },
+	//Adding the spawns
+		{
+			"LogName": "Add Spawn Data",
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/SpawnableDefinitions",
+			"Entries": {
+				"Cosmos.LargeMeteorite.Cosmos": {
+                    "Type": "LargeMinable",
+                    "Condition": "TRUE",
+                    "LargeMinableTool": "Pickaxe",
+                    "LargeMinableRequiredToolTier": 4,
+                    "LargeMinableHealth": 100,
+                    "LargeMinableSizeX": 3,
+                    "LargeMinableSizeY": 2,
+                    "LargeMinableTexture": "Mods\\kath.cosmos\\LargeObjects",
+                    "LargeMinableSpriteIndex": 0,
+                    "LargeMinableDrops": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"Condition": "TRUE",
+									"PerItemCondition": "ITEM_CONTEXT_TAG Target Cosmos_spacerock_item",
+									"MaxItems": 2,
+                                    "MinStack": 1,
+                                    "MaxStack": -1
+                                }
+                            }
+                        ],
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)Cosmos.Mushroom",
+									"Condition": "PLAYER_BASE_FORAGING_LEVEL All 2",
+                                    "MinStack": 1,
+                                    "MaxStack": 5
+                                }
+                            },
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"Condition": "TRUE",
+									"PerItemCondition": "ITEM_CONTEXT_TAG Target Cosmos_spacerock_outputitem",
+									"MaxItems": 2,
+                                    "MinStack": 1,
+                                    "MaxStack": 2
+                                }
+                            }
+                        ],
+                        [
+							{
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"Condition": "{{HasMod|contains=Airyn.StarFragments}}",
+									"PerItemCondition": "ITEM_CONTEXT_TAG Target starfragment_item",
+									"MaxItems": 1,
+                                    "MinStack": 1,
+                                    "MaxStack": -1
+                                }
+                            }
+                        ],
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)749",
+									"Condition": "MINE_LOWEST_LEVEL_REACHED 40",
+                                    "MinStack": 2,
+                                    "MaxStack": 5
+                                }
+                            },
+							{
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 10,
+                                    "MaxStack": 20
+                                }
+                            }
+                        ],
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)386",
+									"Condition": "MINE_LOWEST_LEVEL_REACHED 110",
+                                    "MinStack": 5,
+                                    "MaxStack": 25
+                                }
+                            },
+							{
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 5,
+                                    "MaxStack": 15
+                                }
+                            }
+                        ]
+                    ],
+                    "LargeMinableShavingDrop": [
+                        {
+                            "Weight": 1.0,
+                            "Value": {
+                                "ItemId": "(O)390",
+                                "MinStack": 1,
+                                "MaxStack": 3
+                            }
+                        },
+						{
+                            "Weight": 1.0,
+                            "Value": {
+                                "ItemId": "(O)386",
+								"Condition": "MINE_LOWEST_LEVEL_REACHED 110",
+                                "MinStack": 1,
+                                "MaxStack": 5
+                            }
+                        }
+                    ],
+                    "LargeMinableExperienceGranted": 850
+                },
+				"Cosmos.LargeMeteorite.Vanilla": {
+                    "Type": "LargeMinable",
+                    "Condition": "TRUE",
+                    "LargeMinableTool": "Pickaxe",
+                    "LargeMinableRequiredToolTier": 3,
+                    "LargeMinableHealth": 50,
+                    "LargeMinableSizeX": 2,
+                    "LargeMinableSizeY": 2,
+                    "LargeMinableTexture": "Maps\\springobjects",
+                    "LargeMinableSpriteIndex": 622,
+                    "LargeMinableDrops": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)749",
+									"Condition": "MINE_LOWEST_LEVEL_REACHED 40",
+                                    "MinStack": 2,
+                                    "MaxStack": 5
+                                }
+                            },
+							{
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 10,
+                                    "MaxStack": 20
+                                }
+                            }
+                        ],
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)386",
+                                    "MinStack": 5,
+                                    "MaxStack": 20
+                                }
+                            }
+						],
+						[
+							{
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)390",
+                                    "MinStack": 5,
+                                    "MaxStack": 15
+                                }
+                            }
+                        ]
+                    ],
+                    "LargeMinableShavingDrop": [
+                        {
+                            "Weight": 1.0,
+                            "Value": {
+                                "ItemId": "(O)390",
+                                "MinStack": 1,
+                                "MaxStack": 3
+                            }
+                        },
+						{
+                            "Weight": 1.0,
+                            "Value": {
+                                "ItemId": "(O)386",
+								"Condition": "MINE_LOWEST_LEVEL_REACHED 110",
+                                "MinStack": 1,
+                                "MaxStack": 5
+                            }
+                        }
+                    ],
+                    "LargeMinableExperienceGranted": 500
+                }	
+			}
+		},
+	//Adding the spawn groups	
+		{
+			"LogName": "Add Spawn Data Groups",
+			"Action": "EditData",
+			"Update": "OnLocationChange",
+			"Target":"spacechase0.SpaceCore/SpawningGroups",
+			"Entries": {
+				"Cosmos.Mineable": {
+                    "SpawnablesToSpawn": [
+                        {
+                            "SpawnableIds": [
+								{
+                                    "Weight": 1.0,
+                                    "Value": "Cosmos.LargeMeteorite.Cosmos"
+                                },
+								{
+                                    "Weight": 1.0,
+                                    "Value": "Cosmos.LargeMeteorite.Vanilla"
+                                }
+                            ],
+                            "Minimum": 1,
+                            "Maximum": 1
+                        }
+					]
+				},
+				"Cosmos.Mineable.Power": {
+                    "SpawnablesToSpawn": [
+                        {
+                            "SpawnableIds": [
+								{
+                                    "Weight": 1.0,
+                                    "Value": "Cosmos.LargeMeteorite.Cosmos"
+                                }
+                            ],
+                            "Minimum": 1,
+                            "Maximum": 2
+                        },
+						{
+                            "SpawnableIds": [
+								{
+                                    "Weight": 1.0,
+                                    "Value": "Cosmos.LargeMeteorite.Vanilla"
+                                }
+                            ],
+                            "Minimum": 1,
+                            "Maximum": 1
+                        }
+					]
+				}
+			}		
+		}      		
+	]
+}

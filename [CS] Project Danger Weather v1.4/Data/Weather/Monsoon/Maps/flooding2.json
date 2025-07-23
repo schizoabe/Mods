@@ -1,0 +1,39 @@
+{
+	"Changes": [
+//Bus Stop
+        {
+      	    "LogName": "Add Flood Maps Valley - Bus Stop",
+            "Action": "EditMap",
+            "Target": "Maps/BusStop",
+			"FromFile": "assets/Maps/Vanilla/monsoon/monsoon/Stage1/{{TargetWithoutPath}}.tmx",
+			"Priority": "Late"
+		},
+//Desert
+        {
+      	    "LogName": "Add Flood Maps Valley - Backwoods",
+            "Action": "EditMap",
+            "Target": "Maps/Backwoods",
+			"FromFile": "assets/Maps/Vanilla/monsoon/monsoon/Stage1/{{TargetWithoutPath}}.tmx",
+			"Priority": "Late"
+		},
+//Forest
+        {
+      	    "LogName": "Add Flood Maps Valley - Forest",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/monsoon/monsoon/Stage1/{{TargetWithoutPath}}.tmx",
+			"Priority": "Late"
+		},
+		{
+      	    "LogName": "Add Flood Maps Valley - Forest",
+            "Action": "EditMap",
+			"PatchMode": "Overlay",
+			"When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true},
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/monsoon/monsoon/Stage1/{{TargetWithoutPath}}.tmx",
+			"Priority": "Late"
+		}
+		
+//End
+]
+}

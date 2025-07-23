@@ -1,0 +1,38 @@
+{
+	"Changes": [
+//Heat Wave	
+    {
+      	    "LogName": "Add Dry Maps",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/dry/{{TargetWithoutPath}}Overlay.tmx",
+			"PatchMode": "Overlay",
+			"FromArea": { "X": 0, "Y": 0, "Width": 30, "Height": 26 },
+			"ToArea": { "X": 22, "Y": 15, "Width": 30, "Height": 26 },
+			"Priority": "Default + 2",
+			"When": {
+				"Weather": "kath.weathering_HeatWave",
+				"PretendHeatWave": "true,",				
+			},
+	},
+    {
+      	    "LogName": "Add Post Dry Maps",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/dry/{{TargetWithoutPath}}Overlay.tmx",
+			"PatchMode": "Overlay",
+			"FromArea": { "X": 0, "Y": 0, "Width": 30, "Height": 26 },
+			"ToArea": { "X": 22, "Y": 15, "Width": 30, "Height": 26 },
+			"Priority": "Default + 2",
+			"When": {
+				"PretendHeatWave": "true,",				
+				"HasFlag |contains=HeatWaveMapFlag": true,
+			},
+	},	
+
+//Wildfires
+
+
+//End
+]
+}

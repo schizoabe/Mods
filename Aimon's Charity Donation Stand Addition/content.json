@@ -1,0 +1,242 @@
+{
+   "Format": "2.0.0", 
+   "Changes": [
+   
+   
+   //----------------EVENT
+   {
+      "Action": "EditData",
+      "Target": "Data/Events/SeedShop",
+      "Entries": {
+	   "Aimon111.DonationBoxIntro/M 1000": 
+  
+ "distantBanjo/-1000 -1000/farmer 26 21 1 Caroline 32 21 0/skippable/--
+  /viewport 31 20 true/move farmer 4 0 1 true/pause 1000/playSound newRecipe/shake Caroline 300/pause 1500/playSound newRecipe/shake Caroline 300/pause 1500/emote farmer 40/faceDirection Caroline 3/pause 800/speak Caroline \"Oh hey, @!\"/emote farmer 8/pause 500/textAboveHead Caroline \"Ah, this...\"/pause 500/faceDirection Caroline 0/pause 1000/viewport move 0 -1 1000/pause 500/speak Caroline \"It's an idea Pierre and I have had for a while now.\"/speak Caroline \"It's a Donation Box!$1\"/faceDirection Caroline 3/pause 800/speak Caroline \"It's a common practice for store owners to place these in their shops.\"/speak Caroline \"And we finally decided to add one in our shop too!$1\"/pause 500/speak Caroline \"There's tons of charities out there that help people all across the country.\"/speak Caroline \"And, of course, they accept monetary donations from anyone who'd like to help their cause.\"/faceDirection Caroline 3/pause 900/speak Caroline \"Aside from just being a good thing to do, it's a great way to show how much you care for others! People tend to notice that.$1\"/pause 500/speak Caroline \"Also, making a donation in someone else's name is a great gift! You even get a little certificate you can give them!\"/speak Caroline \"So, if you have any extra $, feel free to come here and donate through this box.\"/speak Caroline \"It will help lots of people, for sure!$1\"/playSound money/emote farmer 32/pause 1000/faceDirection Caroline 0/globalFade/viewport -1000 -1000/pause 1000/end",
+  }
+},
+ 
+  
+
+   
+   
+       //----------------TILESHEETS
+        {
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/certificates",
+            "FromFile": "assets/certificates.png"  
+        },
+		{
+            "Action": "Load",
+            "Target": "Maps/zzz_aimon_donatestand",
+            "FromFile": "assets/zzz_aimon_donatestand.png"  
+        },
+   
+   //--------------donation stand pierre's shop map edit
+   
+   { //vanilla map shop add
+    	"Action": "EditMap",
+    	"Target": "Maps/SeedShop", 
+    	"FromFile": "assets/DonationStand.tmx",
+		"PatchMode": "Overlay",
+    	"ToArea": {
+        		"X": 31,
+        		"Y": 18,
+        		"Width": 3,
+        		"Height": 4
+    			},
+		
+		},		
+   
+   
+  { //vanilla shops
+    	"Action": "Include",
+   
+    	"FromFile": "assets/shopsVanilla.json",
+ "When": { "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod |contains=Rafseazz.RSVCP": false
+		},
+		
+		},		
+   { //sve shops
+    	"Action": "Include",
+    	"FromFile": "assets/shopsSVE.json",
+ "When": { "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod |contains=Rafseazz.RSVCP": false },
+		
+		},
+		{ //rsv shops
+    	"Action": "Include",
+    	"FromFile": "assets/shopsRSV.json",
+ "When": { "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod |contains=Rafseazz.RSVCP": true },
+		
+		},
+		
+		{ //rsv +sve
+    	"Action": "Include",
+    	"FromFile": "assets/shopsSVERSV.json",
+ "When": { "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod |contains=Rafseazz.RSVCP": true },
+		
+		},
+		
+
+	 
+   //----------------OBJECTS
+			{
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+					"{{ModId}}_Cert_FeedingFerngil": {
+                    "Name": "Feeding Ferngil Certificate",
+                    "Displayname": "Feeding Ferngil Certificate",
+                    "Description": "Proof that you have donated to the 'Feeding Ferngil' charity organization.",
+                    "Type": "Quest",
+                    "Category": 0,
+					"Price": 0,
+					"Edibility": -300,
+                    "Texture": "Mods/{{ModId}}/certificates",
+                    "SpriteIndex": 1,
+					 "ExcludeFromRandomSale": true,
+					  "ExcludeFromFishingCollection": true,
+					   "ExcludeFromShippingCollection": true,
+					  
+					   "ContextTags": [ "prevent_loss_on_death" ], 
+							},	
+							
+							//
+					"{{ModId}}_Cert_CenterforCommunityCenters": {
+                    "Name": "Center for Community Centers Certificate",
+                    "Displayname": "Center for Community Centers Certificate",
+                    "Description": "Proof that you have donated to the 'Center for Community Centers' charity organization.",
+                    "Type": "Quest",
+                    "Category": 0,
+					"Price": 0,
+					"Edibility": -300,
+                    "Texture": "Mods/{{ModId}}/certificates",
+                    "SpriteIndex": 2,
+					 "ExcludeFromRandomSale": true,
+					  "ExcludeFromFishingCollection": true,
+					   "ExcludeFromShippingCollection": true,
+					  
+					    "ContextTags": [ "prevent_loss_on_death" ], 
+							},
+							
+							// 
+						"{{ModId}}_Cert_PreventionofCrueltytoSlimes": {
+                    "Name": "Society for the Prevention of Cruelty to Slimes Certificate",
+                    "Displayname": "Society for the Prevention of Cruelty to Slimes Certificate",
+                    "Description": "Proof that you have donated to the 'Society for the Prevention of Cruelty to Slimes' charity organization.",
+                    "Type": "Quest",
+                    "Category": 0,
+					"Price": 0,
+					"Edibility": -300,
+                    "Texture": "Mods/{{ModId}}/certificates",
+                    "SpriteIndex": 3,
+					 "ExcludeFromRandomSale": true,
+					  "ExcludeFromFishingCollection": true,
+					   "ExcludeFromShippingCollection": true,
+					  
+					    "ContextTags": [ "prevent_loss_on_death" ], 
+							},
+							
+							// 
+							"{{ModId}}_Cert_GreenCross": {
+                    "Name": "Green Cross Certificate",
+                    "Displayname": "Green Cross Certificate",
+                    "Description": "Proof that you have donated to the 'Green Cross' charity organization.",
+                    "Type": "Quest",
+                    "Category": 0,
+					"Price": 0,
+					"Edibility": -300,
+                    "Texture": "Mods/{{ModId}}/certificates",
+                    "SpriteIndex": 4,
+					 "ExcludeFromRandomSale": true,
+					  "ExcludeFromFishingCollection": true,
+					   "ExcludeFromShippingCollection": true,
+					  
+					    "ContextTags": [ "prevent_loss_on_death" ], 
+							},
+							//
+							"{{ModId}}_Cert_FarmersWithoutBorders": {
+                    "Name": "Farmers Without Borders Certificate",
+                    "Displayname": "Farmers Without Borders Certificate",
+                    "Description": "Proof that you have donated to the 'Farmers Without Borders' charity organization.",
+                    "Type": "Quest",
+                    "Category": 0,
+					"Price": 0,
+					"Edibility": -300,
+                    "Texture": "Mods/{{ModId}}/certificates",
+                    "SpriteIndex": 5,
+					 "ExcludeFromRandomSale": true,
+					  "ExcludeFromFishingCollection": true,
+					   "ExcludeFromShippingCollection": true,
+					  
+					    "ContextTags": [ "prevent_loss_on_death" ], 
+							},	
+							// 
+								"{{ModId}}_Cert_MissingandDovedChildren": {
+                    "Name": "National Center for Missing and Doved Children Certificate",
+                    "Displayname": "National Center for Missing and Doved Children Certificate",
+                    "Description": "Proof that you have donated to the 'National Center for Missing and Doved Children' charity organization.",
+                    "Type": "Quest",
+                    "Category": 0,
+					"Price": 0,
+					"Edibility": -300,
+                    "Texture": "Mods/{{ModId}}/certificates",
+                    "SpriteIndex": 6,
+					 "ExcludeFromRandomSale": true,
+					  "ExcludeFromFishingCollection": true,
+					   "ExcludeFromShippingCollection": true,
+					  
+					    "ContextTags": [ "prevent_loss_on_death" ], 
+							},	
+							
+							// 
+								"{{ModId}}_Cert_SavethePufferchicks": {
+                    "Name": "Save the Pufferchicks Certificate",
+                    "Displayname": "Save the Pufferchicks Certificate",
+                    "Description": "Proof that you have donated to the 'Save the Pufferchicks' charity organization.",
+                    "Type": "Quest",
+                    "Category": 0,
+					"Price": 0,
+					"Edibility": -300,
+                    "Texture": "Mods/{{ModId}}/certificates",
+                    "SpriteIndex": 7,
+					 "ExcludeFromRandomSale": true,
+					  "ExcludeFromFishingCollection": true,
+					   "ExcludeFromShippingCollection": true,
+					  
+					    "ContextTags": [ "prevent_loss_on_death" ], 
+							},
+							
+							
+							
+			},
+	
+	},
+	
+//gifttastes
+
+// {{ModId}}_Cert_FeedingFerngil {{ModId}}_Cert_CenterforCommunityCenters {{ModId}}_Cert_PreventionofCrueltytoSlimes {{ModId}}_Cert_GreenCross {{ModId}}_Cert_FarmersWithoutBorders {{ModId}}_Cert_MissingandDovedChildren {{ModId}}_Cert_SavethePufferchicks
+   
+   
+			{
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                { //universal 
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Like"],
+                    "Value": "{{ModId}}_Cert_FeedingFerngil {{ModId}}_Cert_CenterforCommunityCenters",
+                    "Delimiter": " " 
+                },
+				{ //universal 
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Love"],
+                    "Value": "{{ModId}}_Cert_PreventionofCrueltytoSlimes {{ModId}}_Cert_GreenCross {{ModId}}_Cert_FarmersWithoutBorders {{ModId}}_Cert_MissingandDovedChildren {{ModId}}_Cert_SavethePufferchicks",
+                    "Delimiter": " " 
+                },
+					],
+			 },
+   
+   
+   
+   ]
+}

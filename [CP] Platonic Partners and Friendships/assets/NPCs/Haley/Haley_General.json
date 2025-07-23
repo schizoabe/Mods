@@ -1,0 +1,115 @@
+{
+    "Changes": [
+        // CONTENT INCLUDES
+        {
+            "LogName": "Enable Haley's aromantic content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Haley/Haley_AroContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance"
+            }
+        },
+        // ACE CONTENT
+        {
+            "LogName": "Haley ace dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries":
+            {
+                "SpouseStardrop": "{{i18n:PPAF.Haley.DialogueEdits.Romance.SpouseStardrop |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:HaleyRelationshipType": "RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Haley ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueHaley",
+            "Entries":
+            {
+                "Indoor_Night_Haley": "{{i18n:PPAF.Haley.DialogueEdits.Ace.Indoor_Night_Haley}}",
+                "Rainy_Night_0": "{{i18n:PPAF.Haley.DialogueEdits.Ace.Rainy_Night_0}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "Entries": {
+                "Haley_spouse": "{{i18n:PPAF.Haley.PartnerDialogue.Romance.WinterStar.Haley_spouse}}"
+            }
+        },
+        // TERMS OF ENDEARMENT
+        {
+            "LogName": "Haley terms of endearment, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Haley",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Haley terms of endearment",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // NO BLUSH EDITS
+        {
+            "LogName": "Haley no blush edit",
+            "Action": "EditImage",
+            "Target": "Portraits/Haley, Portraits/Haley_Winter, Portraits/Haley_Beach",
+            "FromFile": "assets/Portraits/Haley_NoBlush.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Haley": true,
+                "HasMod |contains=DSVTeam.DiverseStardewValley, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        {
+            "LogName": "Haley no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Haley_Spring, Portraits/Haley_Summer, Portraits/Haley_Fall, Portraits/Haley_Winter_Outdoor, Portraits/Haley_Winter_Indoor, Portraits/Haley_FlowerDance, Portraits/Haley_SpiritsEve, Portraits/Haley_EggF, Portraits/Haley_Fair, Portraits/Haley_Jellies, Portraits/Haley_Luau, Portraits/Haley_Winter_IceF, Portraits/Haley_Winter_WinterStar, Portraits/Haley_Beach",
+            "FromFile": "assets/Portraits/Haley_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Haley": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        },
+        // COMPATIBILITY
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Haley",
+            "Entries": {
+                "funLeave_Haley": "{{i18n:PPAF.Haley.DialogueEdits.{{PPAF.Core/ConfigValue:HaleyRelationshipType}}.ISS.funLeave_Haley}}",
+                "funReturn_Haley": "{{i18n:PPAF.Haley.DialogueEdits.{{PPAF.Core/ConfigValue:HaleyRelationshipType}}.ISS.funReturn_Haley}}"
+            },
+            "When": {
+                "Season": "Spring, Summer",
+                "DayOfWeek": "Thursday",
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        }
+    ]
+}

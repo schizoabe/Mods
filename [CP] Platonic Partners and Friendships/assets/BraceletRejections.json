@@ -1,0 +1,349 @@
+{
+      "Changes": [
+            {
+                  "Action": "EditData",
+                  "Target": "Data/NpcGiftTastes",
+                  "TextOperations": [
+                        {
+                              "Operation": "Append",
+                              "Target": [ "Entries", "Universal_Neutral" ],
+                              "Value": "{{ModID}}_FriendshipBracelet",
+                              "Delimiter": " "
+                        }
+                  ]
+            },
+            //
+            //Generic rejections
+            //
+            {
+                  "LogName": "Generic bracelet rejection for vanilla NPCs without unique response",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Caroline, Characters/Dialogue/Clint, Characters/Dialogue/Demetrius, Characters/Dialogue/Dwarf, Characters/Dialogue/Evelyn, Characters/Dialogue/George, Characters/Dialogue/Gil, Characters/Dialogue/Gus, Characters/Dialogue/Jas, Characters/Dialogue/Krobus, Characters/Dialogue/Jodi, Characters/Dialogue/Kent, Characters/Dialogue/Leo, Characters/Dialogue/LeoMainland, Characters/Dialogue/Lewis, Characters/Dialogue/Linus, Characters/Dialogue/Marnie, Characters/Dialogue/Pam, Characters/Dialogue/Pierre, Characters/Dialogue/Mister Qi, Characters/Dialogue/Robin, Characters/Dialogue/Sandy, Characters/Dialogue/Vincent, Characters/Dialogue/Willy, Characters/Dialogue/Wizard",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  }
+            },
+            {
+                  "LogName": "Generic bracelet rejection for RSV NPCs if not using Platonic RSV",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Acorn, Characters/Dialogue/Aguar, Characters/Dialogue/Alissa, Characters/Dialogue/Anton, Characters/Dialogue/Ariah, Characters/Dialogue/Belinda, Characters/Dialogue/Bert, Characters/Dialogue/Blair, Characters/Dialogue/Bliss, Characters/Dialogue/Bryle, Characters/Dialogue/Carmen, Characters/Dialogue/Corine, Characters/Dialogue/Daia, Characters/Dialogue/Ezekiel, Characters/Dialogue/Faye, Characters/Dialogue/Flor, Characters/Dialogue/Freddie, Characters/Dialogue/Helen, Characters/Dialogue/Ian, Characters/Dialogue/Irene, Characters/Dialogue/Jeric, Characters/Dialogue/Jio, Characters/Dialogue/Keahi, Characters/Dialogue/Kenneth, Characters/Dialogue/Kiarra, Characters/Dialogue/Kimpoi, Characters/Dialogue/Kiwi, Characters/Dialogue/Lenny, Characters/Dialogue/Lola, Characters/Dialogue/Maddie, Characters/Dialogue/Maive, Characters/Dialogue/Malaya, Characters/Dialogue/Naomi, Characters/Dialogue/Olga, Characters/Dialogue/Paula, Characters/Dialogue/Philip, Characters/Dialogue/Pika, Characters/Dialogue/Pipo, Characters/Dialogue/Raeriyala, Characters/Dialogue/RelicSpirit, Characters/Dialogue/Richard, Characters/Dialogue/Sari, Characters/Dialogue/Sean, Characters/Dialogue/Shanice, Characters/Dialogue/Shiro, Characters/Dialogue/Sonny, Characters/Dialogue/TreehouseGirl, Characters/Dialogue/Trinnie, Characters/Dialogue/Undreya, Characters/Dialogue/Ysabelle, Characters/Dialogue/Yuuma, Characters/Dialogue/Zayne",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "HasMod |contains=Rafseazz.RSVCP": "true"
+                  }
+            },
+            {
+                  "LogName": "Generic bracelet rejection for vanilla NPCs without unique response",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Alissa, Characters/Dialogue/Corine, Characters/Dialogue/Flor, Characters/Dialogue/Ian, Characters/Dialogue/Jeric",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "HasMod |contains=Rafseazz.RSVCP": true,
+                        "HasMod |contains=Amaranthacyan.PlatonicRidgeside": false
+                  }
+            },
+            {
+                  "LogName": "Generic bracelet rejection for SVE NPCs",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Brianna, Characters/Dialogue/Brock, Characters/Dialogue/Cassandra, Characters/Dialogue/Cordelia, Characters/Dialogue/Drake, Characters/Dialogue/Edmund, Characters/Dialogue/Emin, Characters/Dialogue/Freya, Characters/Dialogue/Gale, Characters/Dialogue/Gertrude, Characters/Dialogue/Sawyer, Characters/Dialogue/Alesia, Characters/Dialogue/Andy, Characters/Dialogue/Apples, Characters/Dialogue/Camilla, Characters/Dialogue/Charlie, Characters/Dialogue/Claire, Characters/Dialogue/Dusty, Characters/Dialogue/Gunther, Characters/Dialogue/HighlandsDwarf, Characters/Dialogue/Isaac, Characters/Dialogue/Jadu, Characters/Dialogue/Jolyne, Characters/Dialogue/Lance, Characters/Dialogue/Magnus, Characters/Dialogue/Marlon, Characters/Dialogue/Martin, Characters/Dialogue/Morgan, Characters/Dialogue/Morris, Characters/Dialogue/Olivia, Characters/Dialogue/Peaches, Characters/Dialogue/Scarlett, Characters/Dialogue/Sophia, Characters/Dialogue/Susan, Characters/Dialogue/Victor",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+                  }
+            },
+            //
+            //Abigail and family
+            //
+            {
+                  "LogName": "Bracelet rejection for non platonic Abigail",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Abigail",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:AbigailRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for Caroline and Pierre when Abigail is your housemate",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Caroline, Characters/Dialogue/Pierre",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.{{Random:1,2}}}}"
+                  },
+                  "When": {
+                        "SpouseOrRoommateToken": "Abigail"
+                  }
+            },
+            //
+            //Alex and family
+            //
+            {
+                  "LogName": "Bracelet rejection for non platonic Alex",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Alex",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:AlexRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for Evelyn and George when Alex is your housemate",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Evelyn, Characters/Dialogue/George",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.{{Random:1,2}}}}"
+                  },
+                  "When": {
+                        "SpouseOrRoommateToken": "Alex"
+                  }
+            },
+            //
+            //Elliott
+            //
+            {
+                  "LogName": "Bracelet rejection for non platonic Elliott",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Elliott",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:ElliottRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            //
+            //Emily and Haley
+            //
+            {
+                  "LogName": "Bracelet rejection for non platonic Emily",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Emily",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:EmilyRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for Haley when Emily is your housemate and no Free Love",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Haley",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.{{Random:1,2}}}}"
+                  },
+                  "When": {
+                        "SpouseOrRoommateToken": "Emily",
+                        "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for non platonic Haley",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Haley",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:HaleyRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for Emily when Haley is your housemate and no Free Love",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Emily",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.{{Random:1,2}}}}"
+                  },
+                  "When": {
+                        "SpouseOrRoommateToken": "Haley",
+                        "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+                  }
+            },
+            //
+            //Harvey
+            //
+            {
+                  "LogName": "Bracelet rejection for non platonic Harvey",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Harvey",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:HarveyRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            //
+            //Leah
+            //
+            {
+                  "LogName": "Bracelet rejection for non platonic Leah",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Leah",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:LeahRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            //
+            //Maru and Sebastian family
+            //
+            {
+                  "LogName": "Bracelet rejection for non platonic Maru",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Maru",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:MaruRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for Sebastian when Maru is your housemate and no Free Love",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Sebastian",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.{{Random:1,2}}}}"
+                  },
+                  "When": {
+                        "SpouseOrRoommateToken": "Maru",
+                        "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for non platonic Sebastian",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Sebastian",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:SebastianRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for Maru when Sebastian is your housemate and no Free Love",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Maru",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.{{Random:1,2}}}}"
+                  },
+                  "When": {
+                        "SpouseOrRoommateToken": "Sebastian",
+                        "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for Robin and Demetrius when Maru or Sebastian is your housemate",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Robin, Characters/Dialogue/Demetrius",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.{{SpouseOrRoommateToken}}.{{Random:1,2}}}}"
+                  },
+                  "When": {
+                        "SpouseOrRoommateToken |contains= Maru, Sebastian": true
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for Robin and Demetrius when Maru and Sebastian are both your housemates",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Robin, Characters/Dialogue/Demetrius",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.Kids.{{Random:1,2}}}}"
+                  },
+                  "When": {
+                        "Relationship:Maru": "Engaged, Married",
+                        "Relationship:Sebastian": "Engaged, Married"
+                  }
+            },
+            //
+            //Penny and family
+            //
+            {
+                  "LogName": "Bracelet rejection for non platonic Penny",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Penny",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:PennyRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for Pam when Penny is your housemate",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Pam",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.{{Random:1,2}}}}"
+                  },
+                  "When": {
+                        "Relationship:Penny": "Engaged, Married"
+                  }
+            },
+            //
+            //Sam and family
+            //
+            {
+                  "LogName": "Bracelet rejection for non platonic Sam",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Sam",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:SamRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for Jodi and Kent when Sam is your housemate",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Jodi, Characters/Dialogue/Kent",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.{{Random:1,2}}}}"
+                  },
+                  "When": {
+                        "Relationship:Sam": "Engaged, Married"
+                  }
+            },
+            //
+            //Shane and family
+            //
+            {
+                  "LogName": "Bracelet rejection for non platonic Shane",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Shane",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.Generic}}"
+                  },
+                  "When": {
+                        "PPAF.Core/ConfigValue:ShaneRelationshipType": "RomanceWithoutSex, RomanceAndSex"
+                  }
+            },
+            {
+                  "LogName": "Bracelet rejection for Marnie when Shane is your housemate",
+                  "Action": "EditData",
+                  "Target": "Characters/Dialogue/Marnie",
+                  "Entries": {
+                        "RejectItem_(O){{ModID}}_FriendshipBracelet": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.{{Random:1,2}}}}"
+                  },
+                  "When": {
+                        "Relationship:Shane": "Engaged, Married"
+                  }
+            }
+      ]
+}

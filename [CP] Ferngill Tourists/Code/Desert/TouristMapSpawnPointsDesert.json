@@ -1,0 +1,88 @@
+{    
+	"Changes": 
+    [        
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 3, "Y": 54 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristDesert01"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 42, "Y": 52 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristDesert02"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 29, "Y": 13 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristDesert03"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 4, "Y": 12 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristDesert04"
+                  }
+               }
+            ],
+            "When":
+            {
+               "TouristNumbersDesert |contains= medium, large": true
+            }
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 19, "Y": 36 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristDesert05"
+                  }
+               }
+            ],
+            "When":
+            {
+               "TouristNumbersDesert |contains= large": true
+            }
+         }
+    ]
+}

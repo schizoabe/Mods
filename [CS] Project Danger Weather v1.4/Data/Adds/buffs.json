@@ -1,0 +1,748 @@
+{
+	"Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+			"kath.weathering_ShardBuff": {
+				"Id": "kath.weathering_ShardBuff",
+                "Trigger": "LocationChanged",
+                "Condition": "!YEAR 1 1, PLAYER_HAS_BUFF Current FeelingLucky, RANDOM 0.05", 
+                "Actions": [
+                    "AddItem 74 1 0"
+                    ]
+				},	
+			"kath.weathering_ShardBuff_RemoveFlag": {
+				"Id": "kath.weathering_ShardBuff_RemoveFlag",
+                "Trigger": "DayStarted",
+                "Condition": "!PLAYER_HAS_BUFF Current FeelingLucky, WEATHER Here kath.weathering_StarFalling", 
+                "Actions": [
+                    "MarkActionApplied Current kath.weathering_ShardBuff false"
+                    ],
+				"MarkActionApplied": false
+				},
+			"kath.weathering_ShardBuff2": {
+				"Id": "kath.weathering_ShardBuff2",
+                "Trigger": "LocationChanged",
+                "Condition": "!YEAR 1 1, PLAYER_HAS_BUFF Current FeelingLucky3, RANDOM 0.01", 
+                "Actions": [
+                    "AddItem 74 1 0"
+                    ]
+				},	
+			"kath.weathering_ShardBuff2_RemoveFlag": {
+				"Id": "kath.weathering_ShardBuff2_RemoveFlag",
+                "Trigger": "DayStarted",
+                "Condition": "!PLAYER_HAS_BUFF Current FeelingLucky3, WEATHER Here kath.weathering_Rainbow", 
+                "Actions": [
+                    "MarkActionApplied Current kath.weathering_ShardBuff2 false"
+                    ],
+				"MarkActionApplied": false
+				},	
+			"kath.weathering_SoulBuff": {
+				"Id": "kath.weathering_SoulBuff",
+                "Trigger": "LocationChanged",
+                "Condition": "!YEAR 1 2, PLAYER_HAS_BUFF Current FeelingLucky3, RANDOM 0.001", 
+                "Actions": [
+                    "AddItem 896 1 0"
+                    ]
+				},	
+			"kath.weathering_SoulBuff_RemoveFlag": {
+				"Id": "kath.weathering_SoulBuff_RemoveFlag",
+                "Trigger": "DayStarted",
+                "Condition": "!PLAYER_HAS_BUFF Current FeelingLucky3, WEATHER Here kath.weathering_Rainbow", 
+                "Actions": [
+                    "MarkActionApplied Current kath.weathering_SoulBuff false"
+                    ],
+				"MarkActionApplied": false
+				},				
+			"kath.weathering_RemoveColdWeather": {
+				"Id": "kath.weathering_RemoveColdWeather",
+                "Trigger": "Esca.EMP_SaveLoaded Esca.EMP_TimeChanged",
+                "Condition": "!PLAYER_HAS_BUFF Current PDWKittyMuffs, {{HasMod|contains=Dolly.ColdWeather}}", 
+                "Actions": [
+                    "RemoveBuff Dolly.ColdWeather_WarmBuff"
+                    ],
+				"MarkActionApplied": false
+				}			
+			}
+	    },
+        {
+      	    "LogName": "Add Buffs and Debuffs",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+				//Food
+				"BugBGone": {
+    			"DisplayName": "{{i18n:BugBGone.Buff.Name}}",
+    			"Description": "{{i18n:BugBGone.Buff.Desc}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": 120000,
+    			"MaxDuration": 240000,
+    			"IconTexture": "Mods/kath.weathering/Objects",
+    			"IconSpriteIndex": 9,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": 2.0,
+      				"Defense": 5.0,
+      				"Attack": 0.0,
+					"Immunity": 1				
+				},
+    			"ActionsOnApply": ["spacechase0.SpaceCore_ShowHudMessage \"{{i18n: EatenBBG{{Random: 1,2,3,4}} }}\" (O)SprayBug"],
+    			"CustomFields": null
+                	},				
+				"SPF50": {
+    			"DisplayName": "{{i18n:SPF.Buff.Name}}",
+    			"Description": "{{i18n:SPF.Buff.Desc}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": -2,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Objects",
+    			"IconSpriteIndex": 5,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 25.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": 0.0,
+      				"Defense": 0.0,
+      				"Attack": 0.0,
+					"Immunity": 1						
+				},
+    			"ActionsOnApply": ["spacechase0.SpaceCore_ShowHudMessage \"{{i18n:EatenSPF50{{Random: 1,2,3,4}} }}\" (O)SPF"],
+    			"CustomFields": null
+                	},
+
+				//Reapplied by weather so times are @-@
+				"FeelingLucky3": {
+    			"DisplayName": "{{i18n: Buff.Rainbow}}",
+    			"Description": "{{i18n: Buff.Rainbow.description}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": 10000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 12,
+    			"Effects":  {
+      				"FarmingLevel": 1.0,
+      				"FishingLevel": 1.0,
+      				"MiningLevel": 1.0,
+      				"LuckLevel": 4.0,
+      				"ForagingLevel": 1.0,
+      				"MaxStamina": 20.0,
+      				"MagneticRadius": 4.0,
+      				"Speed": 1.0,
+      				"Defense": 5.0,
+      				"Attack": 5.0,
+					"Immunity": 5.0	
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},	
+				"ExistentialDread": {
+    			"DisplayName": "{{i18n: Debuff.Weathering12}}",
+    			"Description": "{{i18n: Debuff.Weathering12.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 6000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 11,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": -2.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": 0.0,
+      				"Defense": -50.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"Badbugs": {
+    			"DisplayName": "{{i18n: Debuff.Weathering11}}",
+    			"Description": "{{i18n: Debuff.Weathering11.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 6000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 9,
+    			"Effects":  {
+      				"FarmingLevel": -2.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": -2.0,
+      				"Defense": -5.0,
+      				"Attack": 3.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"SmoggySinging2": {
+    			"DisplayName": "{{i18n: Debuff.Weathering10}}",
+    			"Description": "{{i18n: Debuff.Weathering10.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 6000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 7,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": -30.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": -1.5,
+      				"Defense": 0.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"SmoggySinging1": {
+    			"DisplayName": "{{i18n: Debuff.Weathering10}}",
+    			"Description": "{{i18n: Debuff.Weathering10.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 6000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 7,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": -10.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": -0.5,
+      				"Defense": 0.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"SmokeySinging": {
+    			"DisplayName": "{{i18n: Debuff.Weathering9}}",
+    			"Description": "{{i18n: Debuff.Weathering9.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 6000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 7,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": -20.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": -1.0,
+      				"Defense": 0.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"AshLungVolcano": {
+    			"DisplayName": "{{i18n: Debuff.Weathering7}}",
+    			"Description": "{{i18n: Debuff.Weathering8.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 6000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 7,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": -2.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": -40.0,
+      				"MagneticRadius": -2.0,
+      				"Speed": -2.0,
+      				"Defense": -10.0,
+      				"Attack": -10.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"AshLung": {
+    			"DisplayName": "{{i18n: Debuff.Weathering7}}",
+    			"Description": "{{i18n: Debuff.Weathering7.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 6000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 7,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": -1.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": -30.0,
+      				"MagneticRadius": -1.0,
+      				"Speed": -2.0,
+      				"Defense": -8.0,
+      				"Attack": -8.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"DarkFear": {
+    			"DisplayName": "{{i18n: Debuff.Weathering6}}",
+    			"Description": "{{i18n: Debuff.Weathering6.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 6000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 6,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": -0.5,
+      				"Defense": -5.0,
+      				"Attack": -5.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"Firerain": {
+    			"DisplayName": "{{i18n: Debuff.Weathering5}}",
+    			"Description": "{{i18n: Debuff.Weathering5.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 3000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 5,
+    			"Effects":  {
+      				"FarmingLevel": -1.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": -1.0,
+      				"Defense": -3.0,
+      				"Attack": -5.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"YummyWeather": {
+    			"DisplayName": "{{i18n: Buff.Weathering3}}",
+    			"Description": "{{i18n: Buff.Weathering3.description}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": 10000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 10,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 2.0,
+      				"MaxStamina": 40.0,
+      				"MagneticRadius": 2.0,
+      				"Speed": 3.0,
+      				"Defense": 5.0,
+      				"Attack": 5.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"FeelingLucky2": {
+    			"DisplayName": "{{i18n: Buff.Weathering2}}",
+    			"Description": "{{i18n: Buff.Weathering2.description}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": 10000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 8,
+    			"Effects":  {
+      				"FarmingLevel": 1.0,
+      				"FishingLevel": 1.0,
+      				"MiningLevel": 1.0,
+      				"LuckLevel": 4.0,
+      				"ForagingLevel": 1.0,
+      				"MaxStamina": 20.0,
+      				"MagneticRadius": 2.0,
+      				"Speed": 1.0,
+      				"Defense": 3.0,
+      				"Attack": 3.0,
+					"Immunity": 5.0	
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"FeelingLucky": {
+    			"DisplayName": "{{i18n: Buff.Weathering}}",
+    			"Description": "{{i18n: Buff.Weathering.description}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": 10000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 2,
+    			"Effects":  {
+      				"FarmingLevel": 1.0,
+      				"FishingLevel": 1.0,
+      				"MiningLevel": 1.0,
+      				"LuckLevel": 6.0,
+      				"ForagingLevel": 1.0,
+      				"MaxStamina": 30.0,
+      				"MagneticRadius": 4.0,
+      				"Speed": 1.0,
+      				"Defense": 3.0,
+      				"Attack": 3.0,
+					"Immunity": 5.0	
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"AngryWeather1": {
+    			"DisplayName": "{{i18n: Debuff.Weathering3}}",
+    			"Description": "{{i18n: Debuff.Weathering3.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 50,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 3,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": -1.0,
+      				"Defense": -4.0,
+      				"Attack": -4.0
+    				},
+    			"ActionsOnApply": null,
+    			"CustomFields": null
+                	},
+				"AngryWeather2": {
+    			"DisplayName": "{{i18n: Debuff.Weathering4}}",
+    			"Description": "{{i18n: Debuff.Weathering4.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 60000,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 1,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": -80.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": -1.0,
+      				"Defense": -3.0,
+      				"Attack": -2.0
+    				},
+    			"ActionsOnApply": null,
+    			"CustomFields": null
+                	},
+                "SomeWeather1": {
+    			"DisplayName": "{{i18n: Debuff.Weathering1}}",
+    			"Description": "{{i18n: Debuff.Weathering1.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 30,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 0,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": -2.0,
+      				"Defense": 0.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": null,
+    			"CustomFields": null
+                	},
+                "SomeWeather2": {
+    			"DisplayName": "{{i18n: Debuff.Weathering2}}",
+    			"Description": "{{i18n: Debuff.Weathering2.description}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 30,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 0,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": -2.0,
+      				"Defense": 0.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": null,
+    			"CustomFields": null
+                	},
+                "FestivalJoy": {
+    			"DisplayName": "{{i18n: Buff.FestivalJoy}}",
+    			"Description": "{{i18n: Buff.FestivalJoy.description}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": -2,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs_2",
+    			"IconSpriteIndex": 6,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 5.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 25.0,
+      				"MagneticRadius": 2.0,
+      				"Speed": 1.0,
+      				"Defense": 0.0,
+      				"Attack": 0.0,
+					"Immunity": 1.0	
+    				},
+    			"ActionsOnApply": null,
+    			"CustomFields": null
+                	}
+			}
+		},
+		
+        {
+      	    "LogName": "Add Buffs and Debuffs",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+			"When":{
+			"PretendHeatWave": "true"
+				},
+            "Entries": {
+				"Notthefish1": {
+    			"DisplayName": "{{i18n: Rot.1}}",
+    			"Description": "{{i18n: Rot.2}}",
+    			"IsDebuff": true,
+    			"GlowColor": null,
+    			"Duration": 50,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs",
+    			"IconSpriteIndex": 4,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": -4.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": -10.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": 0.5,
+      				"Defense": 0.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": ["AddBuff 25 5000"],
+    			"CustomFields": null
+                	}
+			}
+		},
+       {
+      	    "LogName": "Add Buffs and Debuffs",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+			"When":{
+			"Aids": "clothes"
+				},
+            "Entries": {
+				"PDWKittyMuffs": {
+    			"DisplayName": "{{i18n: PDWKittyMuffs.Buff.Name}}",
+    			"Description": "{{i18n: PDWKittyMuffs.Buff.Desc}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": -2,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs_2",
+    			"IconSpriteIndex": 0,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": 0.0,
+      				"Defense": 0.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": ["{{ColdWeatherCompat}}"],
+    			"CustomFields": null
+                	},
+				"PDWShader": {
+    			"DisplayName": "{{i18n: PDWShader.Buff.Name}}",
+    			"Description": "{{i18n: PDWShader.Buff.Desc}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": -2,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs_2",
+    			"IconSpriteIndex": 1,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": 0.0,
+      				"Defense": 0.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"PDWMask": {
+    			"DisplayName": "{{i18n: PDWMask.Buff.Name}}",
+    			"Description": "{{i18n: PDWMask.Buff.Desc}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": -2,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs_2",
+    			"IconSpriteIndex": 2,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": 0.0,
+      				"Defense": 0.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"PDWUVGoggles": {
+    			"DisplayName": "{{i18n: PDWUVGoggles.Buff.Name}}",
+    			"Description": "{{i18n: PDWUVGoggles.Buff.Desc}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": -2,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs_2",
+    			"IconSpriteIndex": 3,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": 0.0,
+      				"Defense": 0.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	},
+				"PDWBugNet": {
+    			"DisplayName": "{{i18n: PDWBugNet.Buff.Name}}",
+    			"Description": "{{i18n: PDWBugNet.Buff.Desc}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": -2,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs_2",
+    			"IconSpriteIndex": 4,
+    			"Effects":  {
+      				"FarmingLevel": 0.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": 0.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": 0.0,
+      				"Speed": 0.0,
+      				"Defense": 0.0,
+      				"Attack": 0.0
+    				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	}
+			}
+		}
+		
+///////		
+	/*{
+		"LogName": "Remove Colour",
+		"Action": "EditData",
+		"Target": "Data/Buffs",
+		"TargetField": [ "25" ],
+		"Entries": {
+			"GlowColor": null,
+		},
+		"When":{
+			"LocationName": "Forest",
+			"PretendHeatWave": "true",
+		},
+	},*/
+
+//End
+]
+}

@@ -1,0 +1,210 @@
+{
+  /////////////////
+  // Setup Stuff //
+  /////////////////
+
+  "Format": "2.0",
+  "ConfigSchema": {
+    "Ex-Involvement": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "{{i18n:ExInvolvement.Description}}"
+    },
+  },
+
+  ////////////////////////////////
+  // Establish Condition Tokens //
+  ////////////////////////////////
+
+  "DynamicTokens": [
+    { // Fallback token for spouses not explicitly declared
+      "Name": "SpouseName",
+      "Value": "default",
+      "When": {
+        "HasValue: {{Spouse}}": "true",
+        "Query: '{{Spouse}}' NOT IN ('Abigail', 'Emily', 'Haley', 'Leah', 'Maru', 'Penny', 'Alex', 'Elliott', 'Harvey', 'Sam', 'Sebastian', 'Shane', 'Krobus', 'Clint', 'Pam', 'Willy', 'Wizard', 'Claire', 'Olivia', 'Sophia', 'Lance', 'Victor', 'Aideen', 'Juliet', 'Kataryna')": true
+      },
+    },
+    { // Catch-all token for spouses, oof long list - Finally got permission for all of these characters!
+      "Name": "SpouseName",
+      "Value": "{{Spouse}}",
+      "When": {
+        "Spouse": "Abigail, Emily, Haley, Leah, Maru, Penny, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Krobus, Clint, Pam, Willy, Wizard, Claire, Olivia, Sophia, Lance, Victor, Aideen, Juliet, Kataryna",
+        // Scarlett, Tristan, Alissa, Blair, Corine, Flor, Kiarra, Maddie, Ysabelle, Ian, Jeric, June, Kenneth, Philip, Sean, Shiro"
+      },
+    },
+    //{
+    //  "Name": "MinesCourageSpouse",
+    //  "Value": "MCrgSpouse",
+    //  "When": {
+    //    "Spouse": "Abigail, Emily, Maru, Alex, Sam, Sebastian, Shane, Clint, Lance, Victor, Kataryna"
+    //    //, Tristan?, Maddie, Kenneth, Philip, Shiro",
+    //  },
+    //},
+    //{
+    //  "Name": "MinesCompassionSpouse",
+    //  "Value": "MCmpsnSpouse",
+    //  "When": {
+    //    "Spouse": "Haley, Leah, Penny, Elliott, Harvey, Pam, Willy, Claire, Olivia, Sophia, Aideen, Juliet"
+    //    //, Alissa, Blair, Corine, Flor, Kiarra, Ysabelle, Ian, Jeric, June, Sean",
+    //  },
+    //},
+    // I know this formatting is generally bad form, but it becomes vertically LORGE otherwise :'(
+
+    // Base-game marriage-able Characters
+    {
+      "Name": "ExSpouse", "Value": "Abigail",   "When": { "Relationship:Abigail":   "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Emily",     "When": { "Relationship:Emily":     "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Haley",     "When": { "Relationship:Haley":     "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Leah",      "When": { "Relationship:Leah":      "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Maru",      "When": { "Relationship:Maru":      "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Penny",     "When": { "Relationship:Penny":     "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Alex",      "When": { "Relationship:Alex":      "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Elliott",   "When": { "Relationship:Elliott":   "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Harvey",    "When": { "Relationship:Harvey":    "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Sam",       "When": { "Relationship:Sam":       "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Sebastian", "When": { "Relationship:Sebastian": "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Shane",     "When": { "Relationship:Shane":     "Divorced" }, },
+
+    // Base-game Characters but marriageable via mods
+    {
+      "Name": "ExSpouse", "Value": "Clint",     "When": { "Relationship:Clint":     "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Pam",       "When": { "Relationship:Pam":       "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Willy",     "When": { "Relationship:Willy":     "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Wizard",    "When": { "Relationship:Wizard":    "Divorced" }, },
+
+    // Stardew Valley Expanded Characters
+    {
+      "Name": "ExSpouse", "Value": "Claire",    "When": { "Relationship:Claire":    "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Olivia",    "When": { "Relationship:Olivia":    "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Sophia",    "When": { "Relationship:Sophia":    "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Lance",     "When": { "Relationship:Lance":     "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Victor",    "When": { "Relationship:Victor":    "Divorced" }, },
+    //{
+    //  "Name": "ExSpouse", "Value": "Scarlett",  "When": { "Relationship:Scarlett":  "Divorced" }, }, // Dialogue TODO
+
+    // East Scarp Characters
+    {
+      "Name": "ExSpouse", "Value": "Aideen",    "When": { "Relationship:Aideen":    "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Juliet",    "When": { "Relationship:Juliet":    "Divorced" }, },
+    {
+      "Name": "ExSpouse", "Value": "Kataryna",  "When": { "Relationship:Kataryna":  "Divorced" }, },
+    //{
+    //  "Name": "ExSpouse", "Value": "Tristan",   "When": { "Relationship:Tristan":   "Divorced" }, }, // Dialogue TODO 
+
+    // Ridgeside Characters
+    //{
+    //  "Name": "ExSpouse", "Value": "Alissa",    "When": { "Relationship:Alissa":    "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Blair",     "When": { "Relationship:Blair":     "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Corine",    "When": { "Relationship:Corine":    "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Flor",      "When": { "Relationship:Flor":      "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Kiarra",    "When": { "Relationship:Kiarra":    "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Maddie",    "When": { "Relationship:Maddie":    "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Ysabelle",  "When": { "Relationship:Ysabelle":  "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Ian",       "When": { "Relationship:Ian":       "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Jeric",     "When": { "Relationship:Jeric":     "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "June",      "When": { "Relationship:June":      "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Kenneth",   "When": { "Relationship:Kenneth":   "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Philip",    "When": { "Relationship:Philip":    "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Sean",      "When": { "Relationship:Sean":      "Divorced" }, }, // Dialogue TODO 
+    //{
+    //  "Name": "ExSpouse", "Value": "Shiro",     "When": { "Relationship:Shiro":     "Divorced" }, }, // Dialogue TODO 
+
+    // Misc Characters
+    //{
+    //  "Name": "ExSpouse", "Value": "",  "When": { "Relationship:":  "Divorced" }, }, // Dialogue TODO
+  ],
+
+  /////////////////////////////////////
+  // Call the Delegate Content Files //
+  /////////////////////////////////////
+
+  "Changes": [
+    // // // Hospital Death Events // // //
+    {
+      "Action": "Include", "FromFile": "assets/HospitalAll.json" },
+    {
+      "Action": "Include", "FromFile": "assets/HospitalElliottTour.json" },
+    {
+      "Action": "Include", "FromFile": "assets/HospitalHarvey.json" },
+    {
+      "Action": "Include", "FromFile": "assets/HospitalMaru.json" },
+    {
+      "Action": "Include", "FromFile": "assets/HospitalKrobus.json" },
+    {
+      "Action": "Include", "FromFile": "assets/HospitalKrobusFri.json" },
+
+    // // // Mine Death Events // // //
+    {
+      "Action": "Include", "FromFile": "assets/MinesAll.json" },
+    {
+      "Action": "Include", "FromFile": "assets/MinesGroupCourage.json" },
+    {
+      "Action": "Include", "FromFile": "assets/MinesGroupCompassion.json" },
+    {
+      "Action": "Include", "FromFile": "assets/MinesElliottTour.json" },
+    {
+      "Action": "Include", "FromFile": "assets/MinesKrobus.json" },
+    {
+      "Action": "Include", "FromFile": "assets/MinesKrobusFri.json" },
+    {
+      "Action": "Include", "FromFile": "assets/MinesWizard.json" },
+
+    // // // Island Death Events // // //
+    {
+      "Action": "Include", "FromFile": "assets/IslandB4LAll.json" },
+    {
+      "Action": "Include", "FromFile": "assets/IslandB4LKrobusFri.json" },
+    {
+      "Action": "Include", "FromFile": "assets/IslandLAll.json" },
+    {
+      "Action": "Include", "FromFile": "assets/IslandLKrobusFri.json" },
+    {
+      "Action": "Include", "FromFile": "assets/IslandPLAll.json" },
+    {
+      "Action": "Include", "FromFile": "assets/IslandPLKrobusFri.json" },
+    {
+      "Action": "Include", "FromFile": "assets/IslandWilly.json" },
+
+    // // // Ex-Spouse Events // // //
+    {
+      "Action": "Include", "FromFile": "assets/HospitalExAll.json" },
+    {
+      "Action": "Include", "FromFile": "assets/HospitalExHarvey.json" },
+
+    // // // Elliott's Letters // // //
+    {
+    "Action": "Include", "FromFile": "assets/ElliottLetters.json" }
+  ],
+}

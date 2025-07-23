@@ -1,0 +1,185 @@
+{
+	"Format": "2.0.0",
+	"ConfigSchema": {
+		"soft skincolors":{
+			"AllowValues": "true,false","Default": "true"},
+		"fitted hair":{
+			"AllowValues": "true,false","Default": "true"},
+		"fitted pants":{
+			"AllowValues": "true,false","Default": "true"},
+		"fitted shirts":{
+			"AllowValues": "true,false","Default": "true"},
+		"showhead":{
+			"AllowValues": "true,false","Default": "true"},
+		"showshoes":{
+			"AllowValues": "true,false","Default": "true"},
+		"showeyes":{
+			"AllowValues": "true,false","Default": "true"},
+		"body":{
+			"AllowValues": "normal,transparency","Default": "normal"},
+		"face":{
+			"AllowValues": "normal,no nose","Default": "normal"},
+		"eyes":{
+			"AllowValues": "normal,half-open,close","Default": "normal"},
+		"shoes":{
+			"AllowValues": "normal,with socks","Default": "normal"},
+		"sleeve":{
+				"AllowValues": "normal,long,big,none","Default": "normal"},
+		"bathrobe":{
+			"AllowValues": "1,2,3","Default": "3"}
+                        },
+"Changes": [
+	    {
+		"Action": "load",
+		"Target": "Characters/Farmer/skinColors",
+		"FromFile": "assets/misc/skinColors.png",
+		"When":{
+			"Soft skincolors": "true"}
+	    },
+		{
+			"Action": "load",
+			"Target": "Characters/Farmer/hairstyles",
+			"FromFile": "assets/misc/hairstyles.png",
+			"When":{
+				"fitted hair": "true"}
+		},
+		{
+			"Action": "load",
+			"Target": "Characters/Farmer/hairstyles2",
+			"FromFile": "assets/misc/hairstyles2.png",
+			"When":{
+				"fitted hair": "true"}
+		},
+		{
+			"Action": "load",
+			"Target": "Characters/Farmer/pants",
+			"FromFile": "assets/misc/pants.png",
+			"When":{
+				"fitted pants":"true"}
+		},
+//Female（女性相关）
+		{
+			"Action": "load",
+			"Target": "Characters/Farmer/shirts",
+			"FromFile": "assets/misc/F-shirts.png",
+			"When":{
+				"fitted shirts":"true",
+				"PlayerGender":"Female"                      
+			}
+		},
+	    {
+	      "Action": "EditImage",
+	      "Target": "Characters/Farmer/farmer_girl_base",
+	      "FromFile": "assets/Female/body//{{body}}.png",
+          "FromArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+	      "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 }
+        }, 
+		{
+          "Action": "EditImage",
+	      "Target": "Characters/Farmer/farmer_girl_base",
+	      "FromFile": "assets/Female/sleeve/{{sleeve}}.png",
+	      "FromArea": { "X": 0, "Y": 0, "Width": 192, "Height": 672 },
+	      "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 }
+        },
+        {
+	      "Action": "EditImage",
+	      "PatchMode": "Overlay",
+		  "Target": "Characters/Farmer/farmer_girl_base",
+	      "FromFile": "assets/Female/bathrobe/{{bathrobe}}.png",
+          "FromArea": { "X": 0, "Y": 0, "Width": 48, "Height": 96 },
+	      "ToArea": { "X": 0, "Y": 576, "Width": 48, "Height": 96 }
+        }, 
+		{
+	      "Action": "EditImage",
+	      "Target": "Characters/Farmer/farmer_girl_base",
+		  "PatchMode": "Overlay",
+	      "FromFile": "assets/Female/face/{{face}}.png",
+          "FromArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+	      "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "When":{
+			"showhead":"true"}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Farmer/farmer_girl_base",
+			"PatchMode": "Overlay",
+			"FromFile": "assets/Female/eyes/{{eyes}}.png",
+			"FromArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+			"When":{
+				"showeyes":"true"}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Farmer/farmer_girl_base",
+			"PatchMode": "Overlay",
+			"FromFile": "assets/Female/shoes/{{shoes}}.png",
+			"FromArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+			"When":{
+				"showshoes":"true"}
+		},
+//Male(男性相关)
+		{
+			"Action": "load",
+			"Target": "Characters/Farmer/shirts",
+			"FromFile": "assets/misc/M-shirts.png",
+			"When":{
+				"fitted shirts":"true",
+				"PlayerGender":"Male"                      
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Farmer/farmer_base",
+			"FromFile": "assets/Male/body/{{body}}.png",
+			"FromArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 }
+		  }, 
+		  {
+			"Action": "EditImage",
+			"Target": "Characters/Farmer/farmer_base",
+			"FromFile": "assets/Male/sleeve/{{sleeve}}.png",
+			"FromArea": { "X": 0, "Y": 0, "Width": 192, "Height": 672 },
+			"ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 }
+		  },
+		  {
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Characters/Farmer/farmer_base",
+			"FromFile": "assets/Male/bathrobe/{{bathrobe}}.png",
+			"FromArea": { "X": 0, "Y": 0, "Width": 48, "Height": 96 },
+			"ToArea": { "X": 0, "Y": 576, "Width": 48, "Height": 96 }
+		  }, 
+		  {
+			"Action": "EditImage",
+			"Target": "Characters/Farmer/farmer_base",
+			"PatchMode": "Overlay",
+			"FromFile": "assets/Male/face/{{face}}.png",
+			"FromArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+			"When":{
+				"showhead":"true"}
+		  },
+		  {
+			  "Action": "EditImage",
+			  "Target": "Characters/Farmer/farmer_base",
+			  "PatchMode": "Overlay",
+			  "FromFile": "assets/Male/eyes/{{eyes}}.png",
+			  "FromArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+			  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+			  "When":{
+				  "showeyes":"true"}
+		  },
+		  {
+			  "Action": "EditImage",
+			  "Target": "Characters/Farmer/farmer_base",
+			  "PatchMode": "Overlay",
+			  "FromFile": "assets/Male/shoes/{{shoes}}.png",
+			  "FromArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+			  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+			  "When":{
+				  "showshoes":"true"}
+		  }
+	]
+}

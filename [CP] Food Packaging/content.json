@@ -1,0 +1,275 @@
+{
+  "Format": "2.0.0",
+  "Changes": [
+    //Objects 
+    {
+      "LogName": "Food Packaging Objects",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "Dolly.FoodPackaging_FoodPackage": {
+          "Name": "Dolly.FoodPackaging_FoodPackage",
+          "DisplayName": "{{i18n: Dolly.FoodPackaging_FoodPackageName}}",
+          "Description": "{{i18n: Dolly.FoodPackaging_FoodPackageDescription}}",
+          "Edibility": "-300",
+          "Type": "Artisan Goods",
+          "Category": -26,
+          "Price": 0,
+          "Texture": "Mods/Dolly.FoodPackaging/objects",
+          "SpriteIndex": 0
+        },
+        "Dolly.FoodPackaging_PackagingPaper": {
+          "Name": "Dolly.FoodPackaging_PackagingPaper",
+          "DisplayName": "{{i18n: Dolly.FoodPackaging_PackagingPaperName}}",
+          "Description": "{{i18n: Dolly.FoodPackaging_PackagingPaperDescription}}",
+          "Edibility": "-300",
+          "Type": "Trash",
+          "Category": -20,
+          "Price": 15,
+          "Texture": "Mods/Dolly.FoodPackaging/objects",
+          "SpriteIndex": 1
+        }
+      }
+    },
+    //Gift Tastes 
+    {
+      "LogName": "Food Packaging Gift Tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Universal_Like"
+          ],
+          "Value": "Dolly.FoodPackaging_FoodPackage",
+          "Delimiter": " "
+        }
+      ]
+    },
+    //Custom Categories 
+    {
+      "LogName": "Food Packaging Custom Categories",
+      "Action": "EditData",
+      "Target": "spacechase0.SpaceCore/ObjectExtensionData",
+      "Entries": {
+        "Dolly.FoodPackaging_FoodPackage": {
+          "CategoryTextOverride": "{{i18n: Dolly.FoodPackaging_FoodPackageCategory}}"
+        },
+        "Dolly.FoodPackaging_PackagingPaper": {
+          "CategoryTextOverride": "{{i18n: Dolly.FoodPackaging_ResourceCategory}}"
+        }
+      }
+    },
+    //Craftables 
+    {
+      "LogName": "Food Packaging Craftables",
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+        "Dolly.FoodPackaging_PackagingMachine": {
+          "Name": "Dolly.FoodPackaging_PackagingMachine",
+          "DisplayName": "{{i18n: Dolly.FoodPackaging_PackagingMachineName}}",
+          "Description": "{{i18n: Dolly.FoodPackaging_PackagingMachineDescription}}",
+          "Price": 500,
+          "Fragility": 0,
+          "CanBePlacedOutdoors": true,
+          "CanBePlacedIndoors": true,
+          "IsLamp": false,
+          "Texture": "Mods/Dolly.FoodPackaging/craftables",
+          "SpriteIndex": 0
+        }
+      }
+    },
+    //Crafting Recipes 
+    {
+      "LogName": "Food Packaging Crafting Recipes",
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "Dolly.FoodPackaging_PackagingMachine": "709 10 335 3 336 1 787 1/Home/Dolly.FoodPackaging_PackagingMachine/true/null/{{i18n: Dolly.FoodPackaging_PackagingMachineName}}"
+      }
+    },
+    //Shops 
+    {
+      "LogName": "Food Packaging Gus Shop",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Saloon",
+        "Items"
+      ],
+      "Entries": {
+        "Dolly.FoodPackaging_GusShop.PackagingMachine": {
+          "Id": "Dolly.FoodPackaging_GusShop.PackagingMachine",
+          "ItemId": "(BC)Dolly.FoodPackaging_PackagingMachine",
+          "Condition": "PLAYER_HEARTS Current Gus 3",
+          "IsRecipe": true,
+          "Price": 10000
+        }
+      }
+    },
+    {
+      "LogName": "Food Packaging Pierre Shop",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "SeedShop",
+        "Items"
+      ],
+      "Entries": {
+        "Dolly.FoodPackaging_PierreShop.PackagingPaper": {
+          "Id": "Dolly.FoodPackaging_PierreShop.PackagingPaper",
+          "ItemId": "(O)Dolly.FoodPackaging_PackagingPaper",
+          "Price": 35,
+          "IgnoreShopPriceModifiers": true
+        }
+      }
+    },
+    //Machine Rules 
+    {
+      "LogName": "Food Packaging Wood To Paper",
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "TargetField": [
+        "(BC)20",
+        "OutputRules"
+      ],
+      "Entries": {
+        "Dolly.FoodPackaging_WoodToPaper": {
+          "Id": "Dolly.FoodPackaging_WoodToPaper",
+          "Triggers": [
+            {
+              "Trigger": "ItemPlacedInMachine",
+              "Condition": "ITEM_ID Input (O)388",
+              "RequiredCount": 10
+            }
+          ],
+          "OutputItem": [
+            {
+              "ItemId": "(O)Dolly.FoodPackaging_PackagingPaper"
+            }
+          ],
+          "MinutesUntilReady": 60
+        },
+        "Dolly.FoodPackaging_HardwoodToPaper": {
+          "Id": "Dolly.FoodPackaging_HardwoodToPaper",
+          "Triggers": [
+            {
+              "Trigger": "ItemPlacedInMachine",
+              "Condition": "ITEM_ID Input (O)709",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "ItemId": "(O)Dolly.FoodPackaging_PackagingPaper"
+            }
+          ],
+          "MinutesUntilReady": 60
+        }
+      }
+    },
+    {
+      "LogName": "Food Packaging Food To Package",
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "Entries": {
+        "(BC)Dolly.FoodPackaging_PackagingMachine": {
+          "OutputRules": [
+            {
+              "Id": "Dolly.FoodPackaging_FoodToPackage",
+              "Triggers": [
+                {
+                  "Id": "Dolly.FoodPackaging_FoodPlacedinMachine",
+                  "RequiredTags": [
+                    "category_cooking"
+                  ],
+                  "RequiredCount": 1
+                }
+              ],
+              "OutputItem": [
+                {
+                  "PreserveId": "DROP_IN",
+                  "PriceModifierMode": "Stack",
+                  "CopyPrice": true,
+                  "CopyQuality": true,
+                  "PriceModifiers": [
+                    {
+                      "Id": "(O)Dolly.FoodPackaging_PriceMultiply",
+                      "Modification": "Multiply",
+                      "Amount": 2
+                    },
+                    {
+                      "Id": "(O)Dolly.FoodPackaging_PriceIncrement",
+                      "Modification": "Add",
+                      "Amount": 30
+                    }
+                  ],
+                  "ItemId": "(O)Dolly.FoodPackaging_FoodPackage",
+                  "ObjectInternalName": "Packaged {0}",
+                  "ObjectDisplayName": "{{i18n: Dolly.FoodPackaging_PackagedFood}} %PRESERVED_DISPLAY_NAME"
+                }
+              ],
+              "MinutesUntilReady": 60
+            }
+          ],
+          "AdditionalConsumedItems": [
+            {
+              "ItemId": "(O)Dolly.FoodPackaging_PackagingPaper",
+              "RequiredCount": 1,
+              "InvalidCountMessage": "{{i18n: Dolly.FoodPackaging_MachineRequest}}"
+            }
+          ],
+          "LoadEffects": [
+            {
+              "Id": "Dolly.FoodPackaging_PackagingMachineSound",
+              "Sounds": [
+                {
+                  "Id": "newRecipe",
+                  "Delay": 0
+                }
+              ]
+            }
+          ],
+          "WobbleWhileWorking": false,
+          "ShowNextIndexWhileWorking": true,
+          "AllowFairyDust": true
+        }
+      }
+    },
+    //Add Mails 
+    {
+      "LogName": "Food Packaging Mails",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "Dolly.FoodPackaging_GusMail": "{{i18n: Dolly.FoodPackaging_GusMailText}}%item object (O)Dolly.FoodPackaging_PackagingPaper 3 %%[#]{{i18n: Dolly.FoodPackaging_GusMailTitle}}"
+      }
+    },
+    //Send Mails 
+    {
+      "LogName": "Food Packaging Trigger Actions",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "Dolly.FoodPackaging_SendGusMail": {
+          "Id": "Dolly.FoodPackaging_SendGusMail",
+          "Trigger": "DayEnding",
+          "Condition": "PLAYER_HEARTS Current Gus 3",
+          "Actions": [
+            "AddMail Current Dolly.FoodPackaging_GusMail"
+          ]
+        }
+      }
+    },
+    //Load Assets 
+    {
+      "LogName": "Food Packaging Assets",
+      "Action": "Load",
+      "Target": "Mods/Dolly.FoodPackaging/objects, Mods/Dolly.FoodPackaging/craftables",
+      "FromFile": "assets/{{TargetWithoutPath}}.png"
+    }
+  ]
+}

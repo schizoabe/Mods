@@ -1,0 +1,43 @@
+{
+    "Format": "2.3.0",
+    "ConfigSchema": {
+     "Premium Barn":{
+             "AllowValues": "true, false",
+             "Default": true,
+             "Description": "Allows you to change the texture of the Premium Barn" 
+         },
+    "Premium Coop":{
+             "AllowValues": "true, false",
+             "Default": true,
+			 "Description": "Allows you to change the texture of the Premium Coop"
+         },
+    "Winery":{
+            "AllowValues": "true, false",
+            "Default": true,
+            "Description": "Allows you to change the texture of the Winery" 
+        }
+     },
+     "Changes": [
+ {
+         "LogName": "Premium Barn Season Retexture",
+         "Action": "EditImage",
+         "Target": "Buildings/SVE_PremiumBarn, Buildings/SVE_PremiumBarn_PaintMask",
+         "FromFile": "assets/{{TargetWithoutPath}}_{{season}}.png",
+         "When": {"Premium Barn": true}
+         },	 
+    {
+         "LogName": "Premium Coop Season Retexture",
+         "Action": "EditImage",
+         "Target": "Buildings/SVE_PremiumCoop, Buildings/SVE_PremiumCoop_PaintMask",
+          "FromFile": "assets/{{TargetWithoutPath}}_{{season}}.png",
+         "When": {"Premium Coop": true}
+        },		
+    {
+         "LogName": "Winery Season Retexture",
+         "Action": "EditImage",
+         "Target": "Buildings/SVE_Winery, Buildings/SVE_Winery_PaintMask",
+         "FromFile": "assets/{{TargetWithoutPath}}_{{season}}.png",
+        "When": {"Winery": true}
+        }		
+ ]
+ }

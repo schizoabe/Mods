@@ -1,0 +1,88 @@
+{    
+	"Changes": 
+    [        
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 64, "Y": 38 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristForest01"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 31, "Y": 59 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristForest02"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 80, "Y": 72 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristForest03"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 27, "Y": 96 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristForest04"
+                  }
+               }
+            ],
+            "When":
+            {
+               "TouristNumbersForest |contains= medium, large": true
+            }
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 19, "Y": 15 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristForest05"
+                  }
+               }
+            ],
+            "When":
+            {
+               "TouristNumbersForest |contains= large": true
+            }
+         }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+	"Changes": [
+
+        //Wizard
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Wizard_{{Season}}",
+            "FromFile": "assets/fifadog/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter",
+                "Rasmodia Patch": "false"
+            }            
+        },
+        
+        //Rasmodia
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Wizard_{{Season}}",
+            "FromFile": "assets/KlevLovins/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter",
+                "Rasmodia Patch": "true"
+            }            
+        },
+
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Characters/Wizard_{{Season}}",
+            "FromFile": "assets/KlevLovins/Sprites/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter",
+                "Rasmodia Patch": "true"
+            }            
+        }
+
+    ]
+}

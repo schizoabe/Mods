@@ -1,0 +1,1819 @@
+{
+
+"Format": "2.0.0",
+
+ "ConfigSchema": {
+    "Colour Scheme": {
+	"AllowValues": "Vanilla, DaisyNiko, Starblue, WittilyNamed, VibrantPastoralOrange, VibrantPastoralGreen, EemieOrange, EemieGreen, FoliageRedone, SeasideValley",
+	"Default": "Vanilla",
+        "Section": "Settings"
+   },
+    "Town DogHouse Snow Roof": {
+	"AllowValues": "True, False",
+	"Default": "False",
+        "Section": "DogHouseSettingsTown"
+   },
+    "Farm DogHouse Seasonal Changes": {
+	"AllowValues": "True, False",
+	"Default": "False",
+        "Section": "DogHouseSettingsFarm"
+   },
+    "Farm DogHouse Winter Roof": {
+	"AllowValues": "Snow, Ice",
+	"Default": "Ice",
+        "Section": "DogHouseSettingsFarm"
+   }
+
+ },
+
+
+
+
+
+ "DynamicTokens": [
+
+
+
+
+
+
+
+
+
+//EDITING ANY TOKENS BEYOND THIS POINT WILL BREAK THINGS
+
+
+
+//Farm
+
+      {
+         "Name": "DustyOnFarm",
+         "Value": false,
+       },
+      {
+         "Name": "DustyOnFarm",
+         "Value": true,
+         "When": {
+            "CF.SMAPI.DustyOverhaulSVE/AnyMarriedToAlex": "True",
+            "CF.SMAPI.DustyOverhaulSVE/DoghouseBuilt": "True"
+          }
+       },
+
+
+//Town
+
+      {
+         "Name": "TownPosX",
+         "Value": "{{Random: 54, {{CF.SMAPI.DustyOverhaulSVE/PosX}} |key=postown}}",
+         "When": {
+            "HasSeenEvent: AnyPlayer |contains=777111": false
+          }
+       },
+      {
+         "Name": "TownPosY",
+         "Value": "{{Random: 69, {{CF.SMAPI.DustyOverhaulSVE/PosY}} |key=postown}}",
+         "When": {
+            "HasSeenEvent: AnyPlayer |contains=777111": false
+          }
+       },
+      {
+         "Name": "TownPosX",
+         "Value": "{{Random: 4, {{CF.SMAPI.DustyOverhaulSVE/PosX}} |key=postown}}",
+         "When": { 
+            "HasSeenEvent: AnyPlayer": 777111
+          }
+       },
+      {
+         "Name": "TownPosY",
+         "Value": "{{Random: 5, {{CF.SMAPI.DustyOverhaulSVE/PosY}} |key=postown}}",
+         "When": { 
+            "HasSeenEvent: AnyPlayer": 777111
+          }
+       },
+       {
+         "Name": "FarmMapName",
+         "Value": "Farm",
+         "When": {
+            "FarmType": "Standard"
+          }
+       },
+       {
+         "Name": "FarmMapName",
+         "Value": "Farm_Combat",
+         "When": {
+            "FarmType": "Wilderness"
+          }
+       },
+       {
+         "Name": "FarmMapName",
+         "Value": "Farm_Fishing",
+         "When": {
+            "FarmType": "Riverland"
+          }
+       },
+       {
+         "Name": "FarmMapName",
+         "Value": "Farm_Foraging",
+         "When": {
+            "FarmType": "Forest"
+          }
+       },
+       {
+         "Name": "FarmMapName",
+         "Value": "Farm_FourCorners",
+         "When": {
+            "FarmType": "FourCorners"
+          }
+       },
+       {
+         "Name": "FarmMapName",
+         "Value": "Farm_Island",
+         "When": {
+            "FarmType": "Beach"
+          }
+       },
+       {
+         "Name": "FarmMapName",
+         "Value": "Farm_Mining",
+         "When": {
+            "FarmType": "Hilltop"
+          }
+       },
+      {
+         "Name": "FarmHouseMapName",
+         "Value": "FarmHouse1_marriage",
+         "When": {
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "True",
+            "FarmhouseUpgrade: HostPlayer": "1",
+            "DustyOnFarm": true
+          }
+       },
+      {
+         "Name": "FarmHouseMapName",
+         "Value": "FarmHouse2_marriage",
+         "When": {
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "True",
+            "FarmhouseUpgrade: HostPlayer": "2, 3",
+            "DustyOnFarm": true
+          }
+       },
+
+      {
+         "Name": "TownMapName",
+         "Value": "Town",
+         "When": {
+            "HasSeenEvent: AnyPlayer |contains=777111": false
+          }
+       },
+      {
+         "Name": "TownMapName",
+         "Value": "{{Random: Town-DogHouse, Town, Town, Town |key=postown}}",
+         "When": { 
+            "HasSeenEvent: AnyPlayer": 777111
+         }
+       },
+      {
+         "Name": "DustyTileSheet",
+         "Value": "DustyDO.png",
+         "When": { 
+            "HasMod |contains=Gweniaczek.WayBackPT": false
+         }
+       },
+      {
+         "Name": "DustyTileSheet",
+         "Value": "DustyWBPT.png",
+         "When": { 
+            "HasMod": "Gweniaczek.WayBackPT"
+         }
+       },
+      {
+         "Name": "Folder",
+         "Value": "earthy",
+         "When": { 
+            "Colour Scheme": "DaisyNiko"
+         }
+       },
+      {
+         "Name": "Folder",
+         "Value": "vibrant/green",
+         "When": { 
+            "Colour Scheme": "VibrantPastoralGreen"
+         }
+       },
+      {
+         "Name": "Folder",
+         "Value": "vibrant/orange",
+         "When": { 
+            "Colour Scheme": "VibrantPastoralOrange"
+         }
+       },
+      {
+         "Name": "Folder",
+         "Value": "wittily",
+         "When": { 
+            "Colour Scheme": "WittilyNamed"
+         }
+       },
+      {
+         "Name": "Folder",
+         "Value": "starblue",
+         "When": { 
+            "Colour Scheme": "Starblue"
+         }
+       },
+      {
+         "Name": "Folder",
+         "Value": "eemie/green",
+         "When": { 
+            "Colour Scheme": "EemieGreen"
+         }
+       },
+      {
+         "Name": "Folder",
+         "Value": "eemie/orange",
+         "When": { 
+            "Colour Scheme": "EemieOrange"
+         }
+       },
+      {
+         "Name": "Folder",
+         "Value": "foliage",
+         "When": { 
+            "Colour Scheme": "FoliageRedone"
+         }
+       },
+      {
+         "Name": "Folder",
+         "Value": "seaside",
+         "When": { 
+            "Colour Scheme": "SeasideValley"
+         }
+       }
+    ],
+
+
+
+ "Changes": [
+
+
+ //LOAD CHARACTER/PORTRAIT/TILESHEETS
+        {
+         "LogName": "Load Dusty Portrait",
+	 "Action": "Load",
+	 "Target": "Portraits/DustyDO",
+	 "FromFile": "assets/{{Target}}.png",
+         },
+        {
+         "LogName": "Load Dusty HD Portrait",
+	 "Action": "Load",
+	 "Target": "Mods/DustyOverhaulSVE/DustyDO, Mods/DustyOverhaulSVE/DustySVERoam",
+	 "FromFile": "assets/Portraits/DustyHD.png",
+         },
+        {
+         "LogName": "Load Dusty HD Portrait 2",
+	 "Action": "Load",
+	 "Target": "Mods/HDPortraits/DustyDO, Mods/HDPortraits/DustySVERoam",
+	 "FromFile": "assets/hdportrait.json",
+         },
+        {
+         "LogName": "Load Dusty HD Portrait 3",
+	 "Action": "EditData",
+	 "Target": "Mods/HDPortraits/DustyDO, Mods/HDPortraits/DustySVERoam",
+	 "Entries": {
+                      "Portrait": "Mods/DustyOverhaulSVE/{{TargetWithoutPath}}",
+                  },
+         },
+         {
+         "LogName": "Load Dusty Character Tilesheet",
+	 "Action": "Load",
+	 "Target": "Characters/DustyDO",
+         "FromFile": "assets/{{Target}}.png",
+         "When": {
+            "HasMod |contains=Gweniaczek.WayBackPT": false
+	    }
+         },
+         {
+         "LogName": "Load Dusty Character Tilesheet WBPT",
+	 "Action": "Load",
+	 "Target": "Characters/DustyDO",
+         "FromFile": "assets/Characters/DustyWBPT.png",
+         "When": {
+            "HasMod": "Gweniaczek.WayBackPT"
+	    }
+         },
+	 {
+          "LogName": "Load Tilesheets for Modders (Vanilla)",
+          "Action": "Load",
+          "Target": "Maps/spring_z_overhaul,Maps/summer_z_overhaul,Maps/fall_z_overhaul,Maps/winter_z_overhaul",
+          "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+         "When": {
+            "Colour Scheme": "Vanilla"
+	    }
+         },
+	 {
+          "LogName": "Load Tilesheets for Modders (Recolours)",
+          "Action": "Load",
+          "Target": "Maps/spring_z_overhaul,Maps/summer_z_overhaul,Maps/fall_z_overhaul,Maps/winter_z_overhaul",
+          "FromFile": "assets/TileSheets/{{Folder}}/{{TargetWithoutPath}}.png",
+         "When": {
+            "Colour Scheme |contains=Vanilla": false
+	    }
+         },
+        {
+         "LogName": "Load Small Doghouse Exterior",
+	 "Action": "Load",
+	 "Target": "Buildings/DOSVESmlDoghouseExterior",
+	 "FromFile": "assets/Tilesheets/buildingsml.png",
+         },
+        {
+         "LogName": "Load Large Doghouse Exterior",
+	 "Action": "Load",
+	 "Target": "Buildings/DOSVELrgDoghouseExterior",
+	 "FromFile": "assets/Tilesheets/buildinglrg.png",
+         },
+        {
+         "LogName": "Load Small Doghouse Dusty",
+	 "Action": "Load",
+	 "Target": "Buildings/DOSVESmlDusty",
+	 "FromFile": "assets/Tilesheets/FarmDoghouseDusty/Sml/Dusty.png",
+         },
+        {
+         "LogName": "Load Small Doghouse Dusty (MB)",
+	 "Action": "Load",
+	 "Target": "Buildings/DOSVESmlDustyMB",
+	 "FromFile": "assets/Tilesheets/FarmDoghouseDusty/Sml/DustyMB.png",
+         },
+        {
+         "LogName": "Load Large Doghouse Dusty",
+	 "Action": "Load",
+	 "Target": "Buildings/DOSVELrgDusty",
+	 "FromFile": "assets/Tilesheets/FarmDoghouseDusty/Lrg/Dusty.png",
+         },
+        {
+         "LogName": "Load Large Doghouse Dusty (MB)",
+	 "Action": "Load",
+	 "Target": "Buildings/DOSVELrgDustyMB",
+	 "FromFile": "assets/Tilesheets/FarmDoghouseDusty/Lrg/DustyMB.png",
+         },
+        {
+         "LogName": "Load Doghouse Eyes",
+	 "Action": "Load",
+	 "Target": "Buildings/DOSVEDustyEyes",
+	 "FromFile": "assets/Tilesheets/FarmDoghouseDusty/Eyes.png",
+         },
+        {
+         "LogName": "Load Doghouse Eyes (MB)",
+	 "Action": "Load",
+	 "Target": "Buildings/DOSVEDustyEyesMB",
+	 "FromFile": "assets/Tilesheets/FarmDoghouseDusty/EyesMB.png",
+         },
+        {
+         "LogName": "Load Doghouse Eyes (Seaside Valley)",
+	 "Action": "Load",
+	 "Target": "Buildings/DOSVEDustyEyesSeaside",
+	 "FromFile": "assets/Tilesheets/FarmDoghouseDusty/EyesSeaside.png",
+         },
+        {
+         "LogName": "Load Doghouse zzz",
+	 "Action": "Load",
+	 "Target": "Buildings/DOSVEDustyzzz",
+	 "FromFile": "assets/Tilesheets/FarmDoghouseDusty/zzz.png",
+         },
+         {
+         "LogName": "Load DustySVERoam Blank Schedule",
+	 "Action": "Load",
+	 "Target": "Characters/schedules/DustySVERoam",
+         "FromFile": "assets/Characters/schedule/blank.json",
+         },
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Dusty": {
+                    "DisplayName": "{{i18n:Dusty.Portrait.Name}}",
+
+                    "SocialTab": "HiddenAlways",
+                    "CanSocialize": "FALSE",
+                    "CanBeRomanced": false,
+                    "CanReceiveGifts": false,
+                    "CanCommentOnPurchasedShopItems": false,
+                    "CanGreetNearbyCharacters": false,
+                    "CanVisitIsland": "FALSE",
+                    "IntroductionsQuest": false,
+                    "PerfectionScore": false,
+                    "EndSlideShow": "Hidden",
+                    "SpawnIfMissing": false,
+                    "UnlockConditions": "FALSE",
+                    "Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "Town",
+                            "Tile": { "X": 200, "Y": 200 },
+                            "Direction": "Down"
+                        }
+                    ]
+                }
+             }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Mods/Bouhm.NPCMapLocations/NPCs",
+            "Entries": {
+                "DustySVERoam": {
+                    "Exclude": true
+                },
+                "DustyDO": {
+                    "Exclude": true
+                },
+            },
+            "When": {
+	       "HasMod": "Bouhm.NPCMapLocations"
+	       },
+        },
+
+
+
+ //DOG PEN MAP CHANGES
+    {
+      "LogName": "Dog Pen non-festival non-joja",
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/DogPen-TownSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 8 },
+      "ToArea": { "X": 51, "Y": 65, "Width": 9, "Height": 8 },
+      "When": {
+            "Season": "Spring, Summer, Fall, Winter",
+            "HasSeenEvent |contains=5553210": false,
+	    }
+    },
+{
+      "LogName": "Dog Pen non-festival joja",
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/DogPen-Town-JojaSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 8 },
+      "ToArea": { "X": 51, "Y": 65, "Width": 9, "Height": 8 },
+      "When": {
+            "Season": "Spring, Summer, Fall, Winter",
+            "HasSeenEvent": "5553210",
+	    }
+    },
+    {
+      "LogName": "Dog pen winter star non-joja", 
+      "Action": "EditMap",
+      "Target": "Maps/Town-Christmas",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/DogPen-ChristmasSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 8 },
+      "ToArea": { "X": 51, "Y": 65, "Width": 9, "Height": 8 },
+      "When": {
+	    "DayEvent": "feast of the winter star",
+            "HasSeenEvent |contains=5553210": false,
+	    }
+    },
+    {
+      "LogName": "Dog pen winter star joja", 
+      "Action": "EditMap",
+      "Target": "Maps/Town-Christmas",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/DogPen-Christmas-JojaSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 8 },
+      "ToArea": { "X": 51, "Y": 65, "Width": 9, "Height": 8 },
+      "When": {
+	    "DayEvent": "feast of the winter star",
+            "HasSeenEvent": "5553210",
+	    }
+    },
+    {
+      "LogName": "Dog pen spirits eve non-joja",
+      "Action": "EditMap",
+      "Target": "Maps/Town-Halloween",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/DogPen-HalloweenSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 8 },
+      "ToArea": { "X": 51, "Y": 65, "Width": 9, "Height": 8 },
+      "When": {
+	    "DayEvent": "spirit's eve",
+            "HasSeenEvent |contains=5553210": false,
+	    }
+    },
+    {
+      "LogName": "Dog pen spirits eve joja",
+      "Action": "EditMap",
+      "Target": "Maps/Town-Halloween",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/DogPen-Halloween-JojaSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 8 },
+      "ToArea": { "X": 51, "Y": 65, "Width": 9, "Height": 8 },
+      "When": {
+	    "DayEvent": "spirit's eve",
+            "HasSeenEvent": "5553210",
+	    }
+    },
+    {
+      "LogName": "Dog pen egg festival non-joja",
+      "Action": "EditMap",
+      "Target": "Maps/Town-EggFestival",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/DogPen-EggFestivalSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 8 },
+      "ToArea": { "X": 51, "Y": 65, "Width": 9, "Height": 8 },
+      "When": {
+	    "DayEvent": "egg festival",
+            "HasSeenEvent |contains=5553210": false,
+	    }
+    },
+    {
+      "LogName": "Dog pen egg festival joja",
+      "Action": "EditMap",
+      "Target": "Maps/Town-EggFestival",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/DogPen-EggFestival-JojaSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 8 },
+      "ToArea": { "X": 51, "Y": 65, "Width": 9, "Height": 8 },
+      "When": {
+	    "DayEvent": "egg festival",
+            "HasSeenEvent": "5553210",
+	    }
+    },
+    {
+      "LogName": "Dog pen valley fair non-joja",
+      "Action": "EditMap",
+      "Target": "Maps/Town-Fair",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/DogPen-FairSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 17, "Height": 9 },
+      "ToArea": { "X": 51, "Y": 65, "Width": 17, "Height": 9 },
+      "When": {
+	    "DayEvent": "stardew valley fair",
+            "HasSeenEvent |contains=5553210": false,
+	    }
+    },
+    {
+      "LogName": "Dog pen valley fair joja",
+      "Action": "EditMap",
+      "Target": "Maps/Town-Fair",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/DogPen-Fair-JojaSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 17, "Height": 9 },
+      "ToArea": { "X": 51, "Y": 65, "Width": 17, "Height": 9 },
+      "When": {
+	    "DayEvent": "stardew valley fair",
+            "HasSeenEvent": "5553210",
+	    }
+    },
+     {
+      "LogName": "Dog pen trash bear non-festival",
+      "Action": "EditMap",
+      "Target": "Maps/Town-DogHouse",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/Town-DogHouseSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 7, "Height": 7 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 7, "Height": 7 },
+      "When": {
+            "Season": "Spring, Summer, Fall, Winter",
+            "HasSeenEvent: AnyPlayer": 777111,
+	    },
+      "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "Dog pen trash bear egg festival",
+      "Action": "EditMap",
+      "Target": "Maps/Town-DogHouse",
+      "FromFile": "assets/Maps/Town-DogHouse-EggFestivalSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 7, "Height": 7 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 7, "Height": 7 },
+      "When": {
+	    "DayEvent": "egg festival",
+            "Time": "{{Range: 0900, 1350}}",
+            "HasSeenEvent: AnyPlayer": 777111,
+	    },
+      "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "Dog pen trash bear winter star",
+      "Action": "EditMap",
+      "Target": "Maps/Town-DogHouse",
+      "FromFile": "assets/Maps/Town-DogHouse-ChristmasSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 7, "Height": 7 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 7, "Height": 7 },
+      "When": {
+	    "DayEvent": "feast of the winter star",
+            "Time": "{{Range: 0900, 1350}}",
+            "HasSeenEvent: AnyPlayer": 777111,
+	    },
+      "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "Dog pen trash bear spirits eve",
+      "Action": "EditMap",
+      "Target": "Maps/Town-DogHouse",
+      "PatchMode": "Replace",
+      "FromFile": "assets/Maps/Town-DogHouse-HalloweenSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 7, "Height": 7 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 7, "Height": 7 },
+      "When": {
+	    "DayEvent": "spirit's eve",
+            "Time": "{{Range: 2200, 2350}}",
+            "HasSeenEvent: AnyPlayer": 777111,
+	    },
+      "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "Dog pen trash bear trashgone",
+      "Action": "EditMap",
+      "Target": "Maps/Town-TrashGone",
+      "FromFile": "assets/Maps/Town-TrashGoneSVE.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 18, "Height": 5 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 18, "Height": 5 },
+      "When": {
+	    "Year |contains=1,2": false,
+	    },
+    },
+
+
+ //DOG PEN MISC
+    {
+      "LogName": "WBPT Compat Non-Festival",
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "MapTiles": [ 
+    {
+     "Position": { "X": 53, "Y": 67 },
+     "Layer": "Buildings",
+     "SetTilesheet": "Town",
+     "SetIndex": "45",
+    },
+    {
+     "Position": { "X": 53, "Y": 68 },
+     "Layer": "Back2",
+     "SetTilesheet": "z_spring_overhaul",
+     "SetIndex": "12",
+    },
+    {
+     "Position": { "X": 54, "Y": 68 },
+     "Layer": "Buildings",
+     "SetTilesheet": "z_spring_overhaul",
+     "SetIndex": "13",
+    },
+    {
+     "Position": { "X": 53, "Y": 66 },
+     "Layer": "Front",
+     "SetTilesheet": "Town",
+     "SetIndex": "13",
+    },
+    {
+     "Position": { "X": 53, "Y": 70 },
+     "Layer": "AlwaysFront",
+     "SetTilesheet": "Town",
+     "SetIndex": "1681",
+    },
+    {
+     "Position": { "X": 53, "Y": 71 },
+     "Layer": "Front",
+     "SetTilesheet": "Town",
+     "SetIndex": "1681",
+    },
+  ],	
+      "When": {
+            "HasSeenEvent: AnyPlayer |contains=777111": false,
+	    "HasMod": "Gweniaczek.WayBackPT"
+            },
+            "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "WBPT Compat Festival",
+      "Action": "EditMap",
+      "Target": "Maps/Town-EggFestival, Maps/Town-Fair, Maps/Town-Halloween, Maps/Town-Christmas",
+      "MapTiles": [ 
+    {
+     "Position": { "X": 53, "Y": 67 },
+     "Layer": "Buildings",
+     "SetTilesheet": "Town",
+     "SetIndex": "45",
+    },
+    {
+     "Position": { "X": 53, "Y": 68 },
+     "Layer": "Back2",
+     "SetTilesheet": "z_{{season}}_overhaul",
+     "SetIndex": "12",
+    },
+    {
+     "Position": { "X": 54, "Y": 68 },
+     "Layer": "Buildings",
+     "SetTilesheet": "z_{{season}}_overhaul",
+     "SetIndex": "13",
+    },
+    {
+     "Position": { "X": 53, "Y": 66 },
+     "Layer": "Front",
+     "SetTilesheet": "Town",
+     "SetIndex": "13",
+    },
+    {
+     "Position": { "X": 53, "Y": 70 },
+     "Layer": "AlwaysFront",
+     "SetTilesheet": "Town",
+     "SetIndex": "1681",
+    },
+    {
+     "Position": { "X": 53, "Y": 71 },
+     "Layer": "Front",
+     "SetTilesheet": "Town",
+     "SetIndex": "1681",
+    },
+  ],	
+      "When": {
+            "HasSeenEvent: AnyPlayer |contains=777111": false,
+	    "HasMod": "Gweniaczek.WayBackPT"
+            },
+            "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "WBPT Compat Halloween",
+      "Action": "EditMap",
+      "Target": "Maps/Town-Halloween",
+      "MapTiles": [ 
+    {
+     "Position": { "X": 52, "Y": 69 },
+     "Layer": "Front2",
+     "SetTilesheet": "Town",
+     "SetIndex": "1681",
+    },
+  ],	
+      "When": {
+            "DayEvent": "spirit's eve",
+            "HasSeenEvent: AnyPlayer |contains=777111": false,
+	    "HasMod": "Gweniaczek.WayBackPT"
+            },
+            "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "WBPT Compat Trash Bear",
+      "Action": "EditMap",
+      "Target": "Maps/Town-DogHouse",
+      "MapTiles": [ 
+    {
+     "Position": { "X": 2, "Y": 5 },
+     "Layer": "AlwaysFront",
+     "SetTilesheet": "Town",
+     "SetIndex": "1681",
+    },
+    {
+     "Position": { "X": 2, "Y": 6 },
+     "Layer": "Front",
+     "SetTilesheet": "Town",
+     "SetIndex": "1681",
+    },
+    {
+     "Position": { "X": 4, "Y": 2 },
+     "Layer": "Back2",
+     "SetTilesheet": "Landscape",
+     "SetIndex": "1699",
+    },
+  ],	
+      "When": {
+            "Year |contains=1,2": false,
+	    "HasMod": "Gweniaczek.WayBackPT"
+            },
+            "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "WBPT Compat Trash Bear Halloween",
+      "Action": "EditMap",
+      "Target": "Maps/Town-DogHouse",
+      "MapTiles": [ 
+    {
+     "Position": { "X": 1, "Y": 5 },
+     "Layer": "Front2",
+     "SetTilesheet": "Town",
+     "SetIndex": "1681",
+    },
+  ],	
+      "When": {
+            "DayEvent": "spirit's eve",
+            "Time": "{{Range: 2200, 2350}}",
+            "HasSeenEvent: AnyPlayer": 777111,
+	    "HasMod": "Gweniaczek.WayBackPT"
+            },
+            "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "Dog pen night collision",
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "MapTiles": [ 
+     {
+     "Position": { "X": 53, "Y": 68 },
+     "Layer": "Buildings",
+      "SetProperties": {
+            "Passable": null
+	}
+      }
+    ],	
+      "When": {
+            "Season": "Spring, Summer, Fall",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "Time": "{{Range: 2000, 2550}}",
+            "DustyOnFarm": false
+            },
+            "Update": "OnLocationChange"
+    },
+        {
+          "LogName": "MSVE Dusty Fix 1",
+          "Action": "EditImage",
+          "Target": "Maps/{{season}}_town",
+          "FromFile": "assets/TileSheets/msvedustyfix1.png",
+		  "FromArea": { "X": 0, "Y": 0, "Width": 22, "Height": 16 },
+		  "ToArea": { "X": 333, "Y": 1024, "Width": 22, "Height": 16 },
+		  "PatchMode": "Replace",
+		  "When": {
+                        "HasMod": "Gweniaczek.MSVE"
+			},
+       },
+        {
+          "LogName": "MSVE Dusty Fix 2",
+          "Action": "EditImage",
+          "Target": "Maps/{{season}}_town",
+          "FromFile": "assets/TileSheets/msvedustyfix2.png",
+		  "FromArea": { "X": 0, "Y": 0, "Width": 18, "Height": 12 },
+		  "ToArea": { "X": 383, "Y": 992, "Width": 18, "Height": 12 },
+		  "PatchMode": "Replace",
+		  "When": {
+                        "HasMod": "Gweniaczek.MSVE"
+			},
+       },
+    {
+      "LogName": "Dog pen trash bear night collision",
+      "Action": "EditMap",
+      "Target": "Maps/Town-DogHouse",
+      "MapTiles": [ 
+     {
+     "Position": { "X": 2, "Y": 3 },
+     "Layer": "Buildings",
+      "SetProperties": {
+            "Passable": null
+	}
+      }
+    ],	
+      "When": {
+            "Season": "Spring, Summer, Fall",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "Time": "{{Range: 2000, 2550}}",
+            "HasSeenEvent: AnyPlayer": 777111,
+            "DustyOnFarm": false
+            },
+            "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "Valley fair animal adjustment",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "Fields": {
+	   "set-up": { 
+                 17: "addTemporaryActor BabyPig 32 32 66 68 2 false Animal",
+                 18: "addTemporaryActor Pig 32 32 66 70 3 false Animal",
+                 19: "addTemporaryActor White_Chicken 16 16 61 67 2 false Animal",
+                 20: "addTemporaryActor Brown_Chicken 16 16 63 67 2 false Animal",
+                 21: "addTemporaryActor White_Cow 32 32 60 72 0 false Animal",
+                 22: "addTemporaryActor BabyWhite_Cow 32 32 62 72 1 false Animal"
+               }
+            },
+      "When": {
+	    "DayEvent": "stardew valley fair",
+	    }
+    },
+        {
+            "Action": "EditData",
+            "Target": "Data/WorldMap",
+            "TargetField": [ "Valley", "MapAreas" ],
+            "Entries": {
+                "DustyPen": {
+                            "Id": "DustyPen",
+                            "PixelArea": { "X": 185, "Y": 94, "Width": 6, "Height": 4 },
+
+                            "Tooltips": [
+                                {
+                                    "Id": "DustyPen",
+                                    "Text": "{{i18n:DustyPen.name}}"
+                                }
+                            ]
+                        }
+                   }
+         },
+
+
+  //SCHEDULE / HEART EVENT EDITS
+
+
+
+ //ALEX VANILLA / SVE SCHEDULE
+
+{
+	 "Action": "EditData",
+	 "Target": "characters/schedules/Alex",
+	 "Entries": {
+     "rain": "800 JoshHouse 8 19 2 alex_football/1300 JoshHouse 14 5 2 alex_lift_weights/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 1 alex_sleep",
+     "marriage_Sun": "MAIL saloonSportsRoom/GOTO NO_SCHEDULE/800 Town 64 64 2 alex_football/1100 Saloon 32 7 0 \"Strings\\schedules\\Alex:Sun.000_married\"/1730 Town 53 69 0/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 BusStop -1 23 3",
+     "winter": "900 BathHouse_MensLocker 3 5 2 alex_lift_weights/1500 JoshHouse 14 5 2/1930 JoshHouse 8 19 2/2100 JoshHouse 17 5 0/2240 JoshHouse 21 4 1 alex_sleep",
+     "Wed": "NOT friendship Haley 6/800 Town 64 64 2 alex_football/1200 HaleyHouse 7 23 3 alex_sit_left/1730 Town 53 69 0/1840 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 1 alex_sleep",
+     "Sun": "MAIL saloonSportsRoom/GOTO Sun_normal/800 Town 64 64 2 alex_football/1100 Saloon 32 7 0 \"Strings\\schedules\\Alex:Sun.000\"/1730 Town 53 69 0/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 1 alex_sleep",
+     "spring": "800 Town 64 64 2 alex_football/1300 JoshHouse 14 5 2 alex_lift_weights/1730 Town 53 69 0/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 1 alex_sleep"
+	  },
+},
+{       //ALEX SCHEDULE - Haley
+	 "Action": "EditData",
+	 "Target": "characters/schedules/Alex",
+	 "When": { "Weather": "Sun" },
+	 "Entries": {
+	 "6": "800 JoshHouse 5 17 0/900 JoshHouse 17 5 0/1030 JoshHouse 10 19 2/1330 Town 22 25 1/1730 53 69 0/1830 Saloon 34 18 0/2110 JoshHouse 21 4 3 alex_sleep",
+	 "20": "800 JoshHouse 5 17 0/900 JoshHouse 17 5 0/1030 JoshHouse 10 19 2/1330 Town 22 25 1/1730 53 69 0/1830 Saloon 34 18 0/2110 JoshHouse 21 4 3 alex_sleep",
+	  },
+},
+{       //HALEY SCHEDULE - Alex
+	 "Action": "EditData",
+	 "Target": "characters/schedules/Haley",
+	 "When": { "Weather": "Sun" },
+	 "Entries": {
+	 "6": "800 HaleyHouse 19 16 0/930 JoshHouse 10 21 0/1330 Town 22 26 1/1730 52 69 0/1830 Saloon 32 18 1/2110 HaleyHouse 1 5 3 haley_sleep",
+	 "20": "800 HaleyHouse 19 16 0/930 JoshHouse 10 21 0/1330 Town 22 26 1/1730 52 69 0/1830 Saloon 32 18 1/2110 HaleyHouse 1 5 3 haley_sleep",
+	  },
+},
+{       //HALEY SCHEDULE - Alex married
+	 "Action": "EditData",
+	 "Target": "characters/schedules/Haley",
+	 "When": { "CF.SMAPI.DustyOverhaulSVE/AnyMarriedToAlex": "True" },
+	 "Entries": {
+	 "6": null,
+	 "20": null
+	  },
+},
+
+
+ //ALEX IMMERSIVE SPOUSES SCHEDULE
+
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Alex",
+			"Entries": {
+				"marriage_Mon": "830 JoshHouse 6 18 2 \"Strings\\schedules\\Alex:marriage_{{Random:Mon.000, josh, josh2, josh3, josh4, josh5, josh6, josh7, josh8}}\"/1800 BusStop -1 23 3",
+				"marriage_Wed": "800 BusStop 17 22 2 alex_football \"Strings\\schedules\\Alex:marriage_{{Random:bus, bus2, bus3, bus4, bus5, bus6, bus7, bus8}}\"/1500 JoshHouse 13 21 1 \"Strings\\schedules\\Alex:marriage_{{Random:Mon.000, josh, josh2, josh3, josh4, josh5, josh6, josh7, josh8}}\"/1800 Town 64 64 2 \"Strings\\schedules\\Alex:marriage_{{Random:tree, tree2, tree3, tree4, tree5}}\"/1930 BusStop -1 23 3",
+				"marriage_Thu": "800 Town 54 30 2 alex_football \"Strings\\schedules\\Alex:marriage_{{Random:town, town2, town3, town4, town5, town6, town7, town8, town9}}\"/1100 Town 61 30 2 alex_football \"Strings\\schedules\\Alex:marriage_{{Random:town, town2, town3, town4, town5, town6, town7, town8, town9}}\"/1230 BathHouse_MensLocker 3 5 2 alex_lift_weightsm \"Strings\\schedules\\Alex:marriage_{{Random:bh, bh2, bh3, bh4, bh5}}\"/1800 BusStop -1 23 3",
+				"marriage_Sun": "MAIL saloonSportsRoom/GOTO marriage_SunNoSaloon/800 SeedShop 9 26 1 \"Strings\\schedules\\Alex:marriage_shop\"/1100 Saloon 32 7 0 \"Strings\\schedules\\Alex:Sun.000_married\"/1500 Town 50 68 1/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 BusStop -1 23 3",
+				"marriage_SunNoSaloon": "830 SeedShop 9 26 1 \"Strings\\schedules\\Alex:marriage_shop\"/1400 JoshHouse 13 21 1 \"Strings\\schedules\\Alex:marriage_{{Random:Mon.000, josh, josh2, josh3, josh4, josh5, josh6, josh7, josh8}}\"/1600 Town 64 64 2 \"Strings\\schedules\\Alex:marriage_{{Random:tree, tree2, tree3, tree4, tree5}}\"/1800 BusStop -1 23 3"
+			},
+			"When": {
+                                "DustyOnFarm": true,
+				"HasMod": "iss.immersivespouses"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Alex",
+			"Entries": {
+				"marriage_Mon": "800 JoshHouse 6 18 2 \"Strings\\schedules\\Alex:marriage_{{Random:Mon.000, josh, josh2, josh3, josh4, josh5, josh6, josh7, josh8}}\"/1200 Town 88 91 2 \"Strings\\schedules\\Alex:marriage_{{Random:sum, sum2, sum3, sum4, sum5, sum6, sum7}}\"/2000 BusStop -1 23 3",
+				"marriage_Wed": "700 Beach 30 13 2 square_7_7 \"Strings\\schedules\\Alex:marriage_{{Random:beach, beach2, beach3, beach4, beach5, beach6, beach7}}\"/1200 Town 88 91 2 \"Strings\\schedules\\Alex:marriage_{{Random:sum, sum2, sum3, sum4, sum5, sum6, sum7}}\"/1600 JoshHouse 13 21 1 \"Strings\\schedules\\Alex:marriage_{{Random:Mon.000, josh, josh2, josh3, josh4, josh5, josh6, josh7, josh8}}\"/1800 Town 64 64 2 \"Strings\\schedules\\Alex:marriage_{{Random:tree, tree2, tree3, tree4, tree5}}\"/1930 BusStop -1 23 3",
+				"marriage_Thu": "700 Beach 30 13 2 square_7_7 \"Strings\\schedules\\Alex:marriage_{{Random:beach, beach2, beach3, beach4, beach5, beach6, beach7}}\"/1200 Town 88 91 2 \"Strings\\schedules\\Alex:marriage_{{Random:sum, sum2, sum3, sum4, sum5, sum6, sum7}}\"/1600 JoshHouse 14 5 2 alex_lift_weightsm \"Strings\\schedules\\Alex:marriage_{{Random:bh3, bh4, bh5}}\"/1930 BusStop -1 23 3",
+				"marriage_SunNoSaloon": "830 SeedShop 9 26 1 \"Strings\\schedules\\Alex:marriage_shop\"/1200 Town 88 91 2 \"Strings\\schedules\\Alex:marriage_{{Random:sum, sum2, sum3, sum4, sum5, sum6, sum7}}\"/2000 BusStop -1 23 3"
+			},
+			"When": {
+                                "Season": "Summer",
+                                "DustyOnFarm": true,
+				"HasMod": "iss.immersivespouses"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Alex",
+			"Entries": {
+				"marriage_Wed": "800 BathHouse_MensLocker 3 5 2 alex_lift_weightsm \"Strings\\schedules\\Alex:marriage_{{Random:bh, bh2, bh3, bh4, bh5, bh6, bh7}}\"/1400 JoshHouse 6 18 2 \"Strings\\schedules\\Alex:marriage_{{Random:Mon.000, josh, josh2, josh3, josh4, josh5, josh6, josh7, josh8}}\"/2000 BusStop -1 23 3",
+				"marriage_Thu": "800 BathHouse_MensLocker 3 5 2 alex_lift_weightsm \"Strings\\schedules\\Alex:marriage_{{Random:bh, bh2, bh3, bh4, bh5, bh6, bh7}}\"/1400 JoshHouse 6 18 2 \"Strings\\schedules\\Alex:marriage_{{Random:Mon.000, josh, josh2, josh3, josh4, josh5, josh6, josh7, josh8}}\"/1800 Town 64 64 2 \"Strings\\schedules\\Alex:marriage_{{Random:tree, tree2, tree3, tree4, tree5}}\"/2000 BusStop -1 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+                                "DustyOnFarm": true,
+				"HasMod": "iss.immersivespouses"
+			}
+		},
+
+		// DOCTORS CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Alex",
+			"Entries": {
+				"marriage_Tue": "1000 Hospital 15 15 3 alex_sit_left \"Strings\\schedules\\Alex:summer_16.000\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Alex:summer_16.001\"/1800 BusStop -1 23 3"
+			},
+			"When": {
+				"Season": "Summer",
+				"Day": "16",
+                                "DustyOnFarm": true,
+				"HasMod": "iss.immersivespouses"
+			}
+		},
+		
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Alex",
+			"Entries": {
+				"marriage_Wed": "800 BusStop 17 22 2 alex_football \"Strings\\schedules\\Alex:marriage_nmpre\"/1500 JoshHouse 6 18 2 \"Strings\\schedules\\Alex:marriage_nmpre3\"/1630 Beach 27 24 1 \"Strings\\schedules\\Alex:marriage_nm\"/2300 BusStop -1 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "17",
+                                "DustyOnFarm": true,
+				"HasMod": "iss.immersivespouses"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "characters/schedules/Alex",
+			"Entries": {
+				"marriage_Mon": "1030 CommunityCenter 36 12 2/1810 CommunityCenter 34 10 0/1910 BusStop -1 23 3"
+			},
+			"When": {"HasSeenEvent": "191393", "Day": "22", "DustyOnFarm": true, "HasMod": "iss.immersivespouses"
+			}
+		},
+
+
+
+{       //ALEX 4 HEART EVENT ALTERATION W/ DUSTY PORTRAIT
+	 "Action": "EditData",
+	 "Target": "Data/Events/Town",
+	 "Fields": {
+     "2481135/f Alex 1000/t 900 1600": {
+         4: "addTemporaryActor DustyDO 16 32 53 68 0 false/hideShadow DustyDO true/animate DustyDO false true 6000 0 1/positionOffset Alex -30 0",
+                   }
+              },
+         "Update": "OnDayStart, OnLocationChange"
+},
+
+	{ //Town - 4 heart - The Doctor Appointment
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+	"When": { "CF.SMAPI.DustyOverhaulSVE/AnyMarriedToAlex": "False" },
+      "Fields": {
+    "8185292/t 900 1500/w sunny/f Sophia 1000/e 8185291": { 
+         4: "addTemporaryActor Dusty 16 32 -600 -600 2/addTemporaryActor DustyDO 16 32 53 68 0 false/hideShadow DustyDO true",
+                   },
+    "8185292_Dusty": {
+         18: "animate DustyDO false true 6000 0 1/positionOffset Sophia -10 -18",
+                   }
+              },
+         "Update": "OnDayStart, OnLocationChange"
+        },
+
+	{ //Town - 8 heart - Living Life
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Fields": {
+    "8185295/f Sophia 2000/e 8185298/t 1000 1700/w sunny/d Mon Tue Wed Thu": {
+         4: "addTemporaryActor DustyDO 16 32 53 68 0 false/hideShadow DustyDO true/animate DustyDO false true 6000 0 1/showFrame Penny 18",
+         163: "animate DustyDO false true 6000 0 1/warp Gus -205 -205",
+         190: "move Sophia 0 2 2",
+         204: "move Sophia 0 -2 0",         
+	           }
+             },
+        "Update": "OnDayStart, OnLocationChange"
+        },
+
+{        //DUSTY CUTSCENE
+	 "Action": "EditData",
+	 "Target": "data/events/town",
+	 "Fields": {
+     "5532011/f Alex 125/w sunny/t 900 1600": {
+         4: "addTemporaryActor DustyDO 16 32 53 68 0 false/hideShadow DustyDO true/animate DustyDO false true 6000 0 1/showFrame Penny 34 true",
+                   }
+             },
+        "Update": "OnDayStart, OnLocationChange"
+},
+{      //MORRIS 2 HEART EVENT
+    "Action": "EditData",
+    "Target": "Data/Events/town",
+	"When": { "HasSeenEvent |contains=191393": false, "CF.SMAPI.DustyOverhaulSVE/AnyMarriedToAlex": "False" },
+    "Fields": {
+    "6663501/k 191393/y 1/w sunny/t 900 1600/f MorrisTod 500": {
+        4: "addTemporaryActor DustyDO 16 32 53 68 0 false/hideShadow DustyDO true/animate DustyDO false true 6000 0 1/viewport 31 73 true",
+             } 
+         },
+        "Update": "OnDayStart, OnLocationChange"
+},
+{   //Claire 6 heart event - joja uniform
+	"Action": "EditData",
+	"Target": "data/events/town",
+	"When": { "HasSeenEvent": "3219872", "HasSeenEvent |contains=191393": false, "HasFlag |contains=ccMovieTheater": false, "CF.SMAPI.DustyOverhaulSVE/AnyMarriedToAlex": "False" },
+	"Fields": {
+        "3219873/e 3219871/f Claire 1500/w sunny/t 1100 1500": {
+            4: "showFrame ClaireJoja 35/addTemporaryActor DustyDO 16 32 53 68 0 false/hideShadow DustyDO true/animate DustyDO false true 6000 0 1",
+            114: "animate DustyDO false true 6000 0 1/viewport 43 59 true",
+            }
+	},
+        "Update": "OnDayStart"
+},
+{   //Claire 6 heart event - theater uniform
+	"Action": "EditData",
+	"Target": "data/events/town",
+	"When": { "HasSeenEvent": "3219872", "HasFlag": "ccMovieTheater", "CF.SMAPI.DustyOverhaulSVE/AnyMarriedToAlex": "False" },
+	"Fields": {
+        "3219873/e 3219871/e 191393/f Claire 1500/w sunny/t 1100 1500": {
+            4: "showFrame ClaireTheater 35/addTemporaryActor DustyDO 16 32 53 68 0 false/hideShadow DustyDO true/animate DustyDO false true 6000 0 1",
+            114: "animate DustyDO false true 6000 0 1/viewport 43 59 true",
+            }
+	},
+        "Update": "OnDayStart"
+},
+
+	{ 
+		"LogName": "Penny 2 Heart Event",
+                "Action": "EditData",
+                "Target": "Data/Events/Town",
+                "Fields": {
+                      "34/f Penny 500/t 900 1400/w sunny": {
+                          8: "move Penny 0 0 0",
+                          10: "move Penny -4 0 3",
+                          },
+                      },
+                "Update": "OnDayStart, OnLocationChange"
+        },
+
+
+
+
+
+ //OPTIONAL SNOW ROOF
+        {
+          "LogName": "Dusty DogHouse Snow Roof (Vanilla/Eemie)",
+          "Action": "EditImage",
+          "Target": "Maps/winter_z_overhaul",
+          "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+		  "FromArea": { "X": 48, "Y": 34, "Width": 16, "Height": 14 },
+		  "ToArea": { "X": 48, "Y": 3, "Width": 16, "Height": 14 },
+		  "PatchMode": "Overlay",
+		  "When": {
+                        "Colour Scheme": "Vanilla, EemieOrange, EemieGreen",
+			"Season": "Winter",
+			"Town DogHouse Snow Roof": "True", 
+                        "HasMod |contains=Gweniaczek.WayBackPT": false
+			},
+		  "Update": "OnLocationChange"
+       },
+        {
+          "LogName": "Dusty DogHouse Snow Roof (Recolours)",
+          "Action": "EditImage",
+          "Target": "Maps/winter_z_overhaul",
+          "FromFile": "assets/TileSheets/{{Folder}}/{{TargetWithoutPath}}.png",
+		  "FromArea": { "X": 48, "Y": 34, "Width": 16, "Height": 14 },
+		  "ToArea": { "X": 48, "Y": 3, "Width": 16, "Height": 14 },
+		  "PatchMode": "Overlay",
+		  "When": {
+                        "Colour Scheme |contains=Vanilla, EemieOrange, EemieGreen": false,
+			"Season": "Winter",
+			"Town DogHouse Snow Roof": "True",
+                        "HasMod |contains=Gweniaczek.WayBackPT": false
+			},
+		  "Update": "OnLocationChange"
+       },
+
+
+ //DIALOGUE / COMPANION SETTINGS
+	{ 
+		"LogName": "Dusty Dialogue & Portrait DogHouse",
+                "Action": "EditData",
+                "Target": "Strings/StringsFromMaps",
+                "Entries": { "dustyInteraction": "{{i18n:Dusty.Interaction.{{Random: 1,2,3,4 |key=interaction}}}}"
+                           },
+                "Update": "OnDayStart, OnLocationChange"
+        },
+	{ 
+		"LogName": "Dusty Festival Dialogue 1",
+                "Action": "EditData",
+                "Target": "Strings/StringsFromMaps",
+                "Entries": { "dustyFairInteraction": "{{i18n:Dusty.FairInteraction.{{Year}}}}",
+                             "dustyEggFestivalInteraction": "{{i18n:Dusty.EggFestInteraction.{{Year}}}}",
+			},
+                  "When": {
+                      "Year": "1,2",
+                  },
+                "Update": "OnDayStart, OnLocationChange"
+	},
+	{ 
+		"LogName": "Dusty Festival Dialogue 2",
+                "Action": "EditData",
+                "Target": "Strings/StringsFromMaps",
+                "Entries": { "dustyFairInteraction": "{{i18n:Dusty.FairInteraction.{{Random: 1,2}}}}",
+                             "dustyEggFestivalInteraction": "{{i18n:Dusty.EggFestInteraction.{{Random: 1,2}}}}",
+			},
+                  "When": {
+                      "Year |contains=1,2": false,
+                  },
+                "Update": "OnDayStart, OnLocationChange"
+	},                                                
+
+	{
+		"LogName": "Dusty Awake Settings",
+		"Action": "EditData",
+		"Target": "{{PeacefulEnd.CustomCompanions/Companions:CF.CC.DustyOverhaulSVE.DustySVERoam}}",
+		"Entries": {
+		  "Companion": {
+			"TravelSpeed": 2,
+                        "IdleBehavior": "Wander",
+                        "InspectionDialogue": "[LocalizedText Strings\\StringsFromMaps:dustyInteraction]",
+
+
+                          "UpAnimation": {
+                            "StartingFrame": 8,
+                            "NumberOfFrames": 4,
+                            "Duration": 125,
+
+                            "IdleAnimation": {
+                            "ManualFrames": [
+                              {
+                              "Frame": 8,
+                              "Duration": 400
+                              },
+                              {
+                              "Frame": 10,
+                              "Duration": 400
+                              },
+                            ],
+                          }
+                       },
+
+                          "DownAnimation": {
+                            "StartingFrame": 0,
+                            "NumberOfFrames": 4,
+                            "Duration": 125,
+                            
+                            "IdleAnimation": {
+                              "StartingFrame": 16,
+                              "NumberOfFrames": 3,
+                              "Duration": 250
+                            }
+                         },
+
+                          "LeftAnimation": {
+                            "StartingFrame": 12,
+                            "NumberOfFrames": 4,
+                            "Duration": 125,
+
+                            "IdleAnimation": {
+                            "ManualFrames": [
+                              {
+                              "Frame": 20,
+                              "Duration": 100,
+                              "Flip": true,
+                              "PlayOnlyOnce": true,
+                              },
+                              {
+                              "Frame": 21,
+                              "Duration": 100,
+                              "Flip": true,
+                              "PlayOnlyOnce": true,
+                              },
+                              {
+                              "Frame": 22,
+                              "Duration": 100,
+                              "Flip": true,
+                              "PlayOnlyOnce": true,
+                              },
+                              {
+                              "Frame": 23,
+                              "Duration": 100,
+                              "Flip": true,
+                              "PlayOnlyOnce": true,
+                              },
+                              {
+                              "Frame": "{{Random: 26, 24 |key={{Time}} }}",
+                              "Duration": "{{Random: 250, 500 |key={{Time}} }}",
+                              "Flip": true
+                              },
+                              {
+                              "Frame": "{{Random: 25, 23 |key={{Time}} }}",
+                              "Duration": "{{Random: 250, 500 |key={{Time}} }}",
+                              "Flip": true
+                              },
+                              {
+                              "Frame": "{{Random: 27, 23 |key={{Time}} }}",
+                              "Duration": "{{Random: 250, 0 |key={{Time}} }}",
+                              "Flip": true
+                              }
+                            ],
+                          }
+                       },
+
+                          "RightAnimation": {
+                            "StartingFrame": 4,
+                            "NumberOfFrames": 4,
+                            "Duration": 125,
+
+                            "IdleAnimation": {
+                            "ManualFrames": [
+                              {
+                              "Frame": 20,
+                              "Duration": 100,
+                              "PlayOnlyOnce": true,
+                              },
+                              {
+                              "Frame": 21,
+                              "Duration": 100,
+                              "PlayOnlyOnce": true,
+                              },
+                              {
+                              "Frame": 22,
+                              "Duration": 100,
+                              "PlayOnlyOnce": true,
+                              },
+                              {
+                              "Frame": 23,
+                              "Duration": 100,
+                              "PlayOnlyOnce": true,
+                              },
+                              {
+                              "Frame": "{{Random: 26, 24 |key={{Time}} }}",
+                              "Duration": "{{Random: 250, 500 |key={{Time}} }}",
+                              },
+                              {
+                              "Frame": "{{Random: 25, 23 |key={{Time}} }}",
+                              "Duration": "{{Random: 250, 500 |key={{Time}} }}",
+                              },
+                              {
+                              "Frame": "{{Random: 27, 23 |key={{Time}} }}",
+                              "Duration": "{{Random: 250, 0 |key={{Time}} }}",
+                              }
+                            ],
+                          }
+                       },
+
+
+                        "Sounds": [
+                           {
+                             "SoundName": "dog_pant",
+                             "WhenToPlay": "Idle",
+                             "TimeBetweenSound": 5000,
+                             "ChanceOfPlaying": 0.3
+                           },
+                           {
+                             "SoundName": "dog_bark",
+                             "WhenToPlay": "Moving",
+                             "TimeBetweenSound": 8000,
+                             "ChanceOfPlaying": 0.4
+                           }
+                         ],
+
+
+                       "Portrait": {
+			  "PortraitDisplayName": "{{i18n:Dusty.Portrait.Name}}",
+                          "FrameIndex": "{{Random: 0,1,4,4 |key=interaction}}",
+                        }
+		      }
+                   },
+		"When": {
+			"Time": "{{Range: 0600, 1950}}",
+			},
+			"Update": "OnDayStart, OnTimeChange, OnLocationChange"
+		},
+	{
+		"LogName": "Dusty Sleep Settings",
+		"Action": "EditData",
+		"Target": "{{PeacefulEnd.CustomCompanions/Companions:CF.CC.DustyOverhaulSVE.DustySVERoam}}",
+		"Entries": {
+		  "Companion": {
+			"TravelSpeed": 0,
+                        "IdleBehavior": "Nothing",
+                        "InspectionDialogue": "",
+
+
+                          "UniformAnimation": {
+                            "StartingFrame": 28,
+                            "NumberOfFrames": 2,
+                            "Duration": 1500,
+ 
+                            "IdleAnimation": {
+                            "StartingFrame": 28,
+                            "NumberOfFrames": 2,
+                            "Duration": 1500
+                          }
+                        },
+
+                          "UpAnimation": null,
+                          "DownAnimation": null,
+                          "LeftAnimation": null,
+                          "RightAnimation": null,
+
+
+                        "Sounds": [
+                           {
+                             "SoundName": "dog_pant",
+                             "WhenToPlay": "Idle",
+                             "TimeBetweenSound": 8000,
+                             "ChanceOfPlaying": 0.0
+                           },
+                           {
+                             "SoundName": "dog_bark",
+                             "WhenToPlay": "Idle",
+                             "TimeBetweenSound": 8000,
+                             "ChanceOfPlaying": 0.0
+                           }
+                         ]
+			}
+                      },
+		"When": {
+			"Time": "{{Range: 2000, 2550}}",
+                        "LocationName: AnyPlayer |contains=FarmHouse, JoshHouse": false,
+                        "DustyOnFarm": false,
+			},
+			"Update": "OnTimeChange, OnLocationChange"
+		},
+                          
+
+ //DOG FREE ROAM SPAWNS
+	{
+		"LogName": "Spawn Alex's dog in town",
+		"Action": "EditMap",
+		"Target": "Maps/{{TownMapName}}",
+		"MapTiles": [
+            {
+               "Position": {
+		 "X": "{{Query: {{TownPosX}}}}", 
+		 "Y": "{{Query: {{TownPosY}}}}"
+		},
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 CF.CC.DustyOverhaulSVE.DustySVERoam"
+               },
+            },
+         ],
+		"When": {
+                        "IsMainPlayer": true,
+			"Season": "Spring, Summer, Fall",
+			"Time": "{{Range: 0600, 1650}}",
+                        "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+                        "DustyOnFarm": false,
+			},
+		"Update": "OnTimeChange, OnLocationChange",
+                "Priority": "Late"
+	},
+	{
+		"LogName": "Spawn Alex's dog in his home (weather)",
+		"Action": "EditMap",
+		"Target": "Maps/JoshHouse",
+		"MapTiles": [
+            {
+               "Position": {
+                 "X": "{{Query: {{CF.SMAPI.DustyOverhaulSVE/PosX}}}}",
+                 "Y": "{{Query: {{CF.SMAPI.DustyOverhaulSVE/PosY}}}}"
+                },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 CF.CC.DustyOverhaulSVE.DustySVERoam"
+               },
+            },
+         ],
+		"When": {
+                        "IsMainPlayer": true,
+			"Season": "Spring, Summer, Fall",
+			"Weather": "Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash",
+                        "DustyOnFarm": false,
+			},
+		"Update": "OnDayStart, OnLocationChange",
+                "Priority": "Late"
+	},
+	{
+		"LogName": "Spawn Alex's dog in his home (winter)",
+		"Action": "EditMap",
+		"Target": "Maps/JoshHouse",
+		"MapTiles": [
+            {
+               "Position": {
+                 "X": "{{Query: {{CF.SMAPI.DustyOverhaulSVE/PosX}}}}",
+                 "Y": "{{Query: {{CF.SMAPI.DustyOverhaulSVE/PosY}}}}"
+                },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 CF.CC.DustyOverhaulSVE.DustySVERoam"
+               },
+            },
+         ],
+		"When": {
+                        "IsMainPlayer": true,
+			"Season": "Winter",
+                        "DustyOnFarm": false,
+			},
+		"Update": "OnDayStart, OnLocationChange",
+                "Priority": "Late"
+	},
+	{
+		"LogName": "Spawn Alex's dog on farm when married",
+		"Action": "EditMap",
+		"Target": "Maps/{{FarmMapName}}",
+		"MapTiles": [
+            {
+               "Position": {
+                 "X": "{{Query: {{CF.SMAPI.DustyOverhaulSVE/PosX}}}}",
+                 "Y": "{{Query: {{CF.SMAPI.DustyOverhaulSVE/PosY}}}}"
+                 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 CF.CC.DustyOverhaulSVE.DustySVERoam"
+               },
+            },
+         ],
+		"When": {
+                        "IsMainPlayer": true,
+			"Season": "Spring, Summer, Fall, Winter",
+			"Time": "{{Range: 0600, 1650}}",
+                        "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+                        "DustyOnFarm": true,
+			},
+		"Update": "OnTimeChange, OnLocationChange",
+                "Priority": "Late"
+	},
+	{
+		"LogName": "Spawn Alex's dog in farmhouse when married (weather)",
+		"Action": "EditMap",
+		"Target": "Maps/{{FarmHouseMapName}}, Maps/FarmHouse_CornerRoom_Add, Maps/FarmHouse_SouthernRoom_Add, Maps/FarmHouse_DiningRoom_Add, Maps/FarmHouse_Cubby_Add, Maps/FarmHouse_ExtendedCornerRoom_Add, Maps/FarmHouse_FarUpperRoom_Add",
+		"MapTiles": [
+            {
+               "Position": { 
+		 "X": "{{Query: {{CF.SMAPI.DustyOverhaulSVE/PosX}}}}", 
+		 "Y": "{{Query: {{CF.SMAPI.DustyOverhaulSVE/PosY}}}}"
+		 },
+               "SetIndex": 1422,
+               "SetTilesheet": "indoor",
+               "Layer": "Front",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 CF.CC.DustyOverhaulSVE.DustySVERoam"
+               },
+            },
+         ],
+		"When": {
+                        "IsMainPlayer": true,
+			"Season": "Spring, Summer, Fall",
+			"Weather": "Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash",
+                        "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "True", 
+                        "DustyOnFarm": true
+			},
+		"Update": "OnDayStart, OnLocationChange",
+                "Priority": "Late"
+	},
+	{
+		"LogName": "Spawn Alex's dog in farmhouse when married (winter)",
+		"Action": "EditMap",
+		"Target": "Maps/{{FarmHouseMapName}}, Maps/FarmHouse_CornerRoom_Add, Maps/FarmHouse_SouthernRoom_Add, Maps/FarmHouse_DiningRoom_Add, Maps/FarmHouse_Cubby_Add, Maps/FarmHouse_ExtendedCornerRoom_Add, Maps/FarmHouse_FarUpperRoom_Add",
+		"MapTiles": [
+            {
+               "Position": { 
+		 "X": "{{Query: {{CF.SMAPI.DustyOverhaulSVE/PosX}}}}", 
+		 "Y": "{{Query: {{CF.SMAPI.DustyOverhaulSVE/PosY}}}}"
+		 },
+               "SetIndex": 1422,
+               "SetTilesheet": "indoor",
+               "Layer": "Front",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 CF.CC.DustyOverhaulSVE.DustySVERoam"
+               },
+            },
+         ],
+		"When": {
+                        "IsMainPlayer": true,
+			"Season": "Winter",
+                        "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "True", 
+                        "DustyOnFarm": true
+			},
+		"Update": "OnDayStart, OnLocationChange",
+                "Priority": "Late"
+	},
+	{
+		"LogName": "Load Farm DogHouse Patches",
+		"Action": "Include",
+		"FromFile": "assets/farm_doghouse.json",
+        },
+
+
+ //DOG BARK / INTERACTION
+
+    {
+      "LogName": "Dog pen non-festival bark/interaction",
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "MapTiles": [
+     {
+      "Position": { "X": 53, "Y": 68 },
+      "Layer": "Buildings",
+      "SetProperties": {
+            "Action": "NPCSpeechMessageNoRadius DustyDO dustyInteraction"
+	}
+      }, 
+     {
+      "Position": { "X": 53, "Y": 69 },
+      "Layer": "Back",
+      "SetProperties": {
+            "TouchAction": "CF.DustyOverhaulSVE_PlayDogBark"
+	}
+      }
+    ],	
+      "When": {
+            "Season": "Spring, Summer, Fall",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "Time": "{{Range: 1700, 1950}}",
+            "DustyOnFarm": false,
+            },
+	    "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "Dog pen egg festival bark/interaction",
+       "Action": "EditMap",
+      "Target": "Maps/Town-EggFestival",
+      "MapTiles": [ 
+     {
+      "Position": { "X": 53, "Y": 68 },
+      "Layer": "Buildings",
+      "SetProperties": {
+            "Action": "Message dustyEggFestivalInteraction"
+	}
+      },
+     {
+      "Position": { "X": 53, "Y": 69 },
+      "Layer": "Back",
+      "SetProperties": {
+            "TouchAction": "CF.DustyOverhaulSVE_PlayDogBark"
+	}
+      }
+    ],	
+      "When": {
+	    "DayEvent": "egg festival",
+	    "HasSeenEvent: AnyPlayer |contains=777111": false,
+	    },
+    },
+    {
+      "LogName": "Dog pen valley fair bark/interaction",
+      "Action": "EditMap",
+      "Target": "Maps/Town-Fair",
+      "MapTiles": [ 
+     {
+      "Position": { "X": 53, "Y": 68 },
+      "Layer": "Buildings",
+      "SetProperties": {
+            "Action": "Message dustyFairInteraction"
+	}
+      },
+     {
+      "Position": { "X": 53, "Y": 69 },
+      "Layer": "Back",
+      "SetProperties": {
+            "TouchAction": "CF.DustyOverhaulSVE_PlayDogBark"
+	}
+      }
+    ],	
+      "When": {
+	    "DayEvent": "stardew valley fair",
+	    "HasSeenEvent: AnyPlayer |contains=777111": false,
+	    },
+    },
+    {
+      "LogName": "Dog pen winter star collision",
+      "Action": "EditMap",
+      "Target": "Maps/Town-Christmas",
+      "MapTiles": [ 
+     {
+      "Position": { "X": 53, "Y": 68 },
+      "Layer": "Buildings",
+      "SetProperties": {
+            "Passable": null
+	}
+      }
+    ],	
+      "When": {
+	    "DayEvent": "feast of the winter star",
+            "HasSeenEvent: AnyPlayer |contains=777111": false,
+	    },
+    },
+  {
+      "LogName": "Dog pen trash bear non-festival bark/interaction",
+      "Action": "EditMap",
+      "Target": "Maps/Town-DogHouse",
+      "MapTiles": [ 
+     {
+     "Position": { "X": 2, "Y": 3 },
+      "Layer": "Buildings",
+      "SetProperties": {
+            "Action": "NPCSpeechMessageNoRadius DustyDO dustyInteraction"
+	}
+      },
+     {
+      "Position": { "X": 2, "Y": 4 },
+      "Layer": "Back",
+      "SetProperties": {
+            "TouchAction": "CF.DustyOverhaulSVE_PlayDogBark"
+	}
+      }
+    ],	
+      "When": {
+            "Season": "Spring, Summer, Fall",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "Time": "{{Range: 1700, 1950}}",
+	    "HasSeenEvent: AnyPlayer": 777111,
+            "DustyOnFarm": false,
+	    },
+         "Update": "OnLocationChange"
+    },
+  {
+      "LogName": "Dog pen trash bear egg festival bark/interaction",
+      "Action": "EditMap",
+      "Target": "Maps/Town-DogHouse",
+      "MapTiles": [ 
+     {
+     "Position": { "X": 2, "Y": 3 },
+      "Layer": "Buildings",
+      "SetProperties": {
+            "Action": "Message dustyEggFestivalInteraction"
+	}
+      },
+     {
+      "Position": { "X": 2, "Y": 4 },
+      "Layer": "Back",
+      "SetProperties": {
+            "TouchAction": "CF.DustyOverhaulSVE_PlayDogBark"
+	}
+      }
+    ],	
+      "When": {
+	    "DayEvent": "egg festival",
+            "Time": "{{Range: 0900, 1350}}",
+	    "HasSeenEvent: AnyPlayer": 777111,
+	    },
+         "Update": "OnTimeChange, OnLocationChange"
+    },
+  {
+      "LogName": "Dog pen trash bear valley fair bark/interaction",
+      "Action": "EditMap",
+      "Target": "Maps/Town-DogHouse",
+      "MapTiles": [ 
+     {
+     "Position": { "X": 2, "Y": 3 },
+      "Layer": "Buildings",
+      "SetProperties": {
+            "Action": "Message dustyFairInteraction"
+	}
+      },
+     {
+      "Position": { "X": 2, "Y": 4 },
+      "Layer": "Back",
+      "SetProperties": {
+            "TouchAction": "CF.DustyOverhaulSVE_PlayDogBark"
+	}
+      }
+    ],	
+      "When": {
+	    "DayEvent": "stardew valley fair",
+            "Time": "{{Range: 0900, 1450}}",
+	    "HasSeenEvent: AnyPlayer": 777111,
+	    },
+         "Update": "OnTimeChange, OnLocationChange"
+    },
+  {
+      "LogName": "Dog pen trash bear winter star collision",
+      "Action": "EditMap",
+      "Target": "Maps/Town-DogHouse",
+      "MapTiles": [ 
+     {
+     "Position": { "X": 2, "Y": 3 },
+      "Layer": "Buildings",
+      "SetProperties": {
+            "Passable": null
+	}
+      }
+    ],	
+      "When": {
+	    "DayEvent": "feast of the winter star",
+            "Time": "{{Range: 0900, 1350}}",
+            "HasSeenEvent: AnyPlayer": 777111,
+	    },
+         "Update": "OnTimeChange, OnLocationChange"
+    },
+{
+    "Action": "EditData",
+    "Target": "Data/Mail",
+    "Entries": {
+        "{{ModId}}_DoghouseBuildable": "{{i18n:DoghouseBuildable.Text}}[letterbg 0]"
+    }
+},
+{
+    "Action": "EditData",
+    "Target": "Data/TriggerActions",
+    "Entries": {
+        "{{ModId}}_SendDoghouseBuildableMail": {
+            "Id": "{{ModId}}_SendDoghouseBuildableMail",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_NPC_RELATIONSHIP Current Alex Married, PLAYER_HAS_SEEN_EVENT Current 8185295, PLAYER_HAS_SEEN_EVENT Current 3219873",
+            "Actions": [
+                "AddMail Current {{ModId}}_DoghouseBuildable now"
+            ]
+        }
+    }
+}
+
+  ]
+}

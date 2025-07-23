@@ -1,0 +1,17 @@
+{
+	"Changes":[
+		//Entries
+		{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Carpenter","Items"],
+      "When": {
+      			"HasValue: Dora.MiniWindTurbines_MiniWindTurbineSold": true,
+      			"HasMod |contains=boringvlln.rshops": false,
+      			},
+      "MoveEntries": [
+          { "ID": "Dora.MiniWindTurbines_MiniWindTurbineSold", "BeforeID": "(BC)208" }
+      ]
+    }
+	]
+}

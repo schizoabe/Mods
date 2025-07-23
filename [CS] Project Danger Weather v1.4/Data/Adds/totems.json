@@ -1,0 +1,2477 @@
+{
+	"Changes": [	
+///// Object Load
+        {
+            "LogName":"Add Totem Blank",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "TotemBlank": {
+                    "Name": "TotemBlank",
+                    "DisplayName": "{{i18n: Totem.Name}}",
+                    "Description": "{{i18n: Totem.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/TotemBlank",
+                    "SpriteIndex": "0",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						]
+            	}
+			}
+		},
+	
+		
+        {
+            "LogName":"Add Totem Heavy Rain",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "rainy"},
+            "Entries": {
+                "Totem.rainy": {
+                    "Name": "Totem.rainy",
+                    "DisplayName": "{{i18n: Totem.rainy.Name}}",
+                    "Description": "{{i18n: Totem.rainy.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "0",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_HeavyRain"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Sandstorm",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "sandy"},
+            "Entries": {
+                "Totem.sandy": {
+                    "Name": "Totem.sandy",
+                    "DisplayName": "{{i18n: Totem.sandy.Name}}",
+                    "Description": "{{i18n: Totem.sandy.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "1",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Sandstorm"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Heatwave",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "heat"},
+            "Entries": {
+                "Totem.heat": {
+                    "Name": "Totem.heat",
+                    "DisplayName": "{{i18n: Totem.heat.Name}}",
+                    "Description": "{{i18n: Totem.heat.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "2",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_HeatWave"}
+            	}
+			}
+		},		
+        {
+            "LogName":"Add Totem Hail",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "hail"},
+            "Entries": {
+                "Totem.hail": {
+                    "Name": "Totem.hail",
+                    "DisplayName": "{{i18n: Totem.hail.Name}}",
+                    "Description": "{{i18n: Totem.hail.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "3",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Hail"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Eclipse",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "dark"},
+            "Entries": {
+                "Totem.dark": {
+                    "Name": "Totem.dark",
+                    "DisplayName": "{{i18n: Totem.dark.Name}}",
+                    "Description": "{{i18n: Totem.dark.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "4",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Darkness"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Ash Fall",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "ash"},
+            "Entries": {
+                "Totem.ash": {
+                    "Name": "Totem.ash",
+                    "DisplayName": "{{i18n: Totem.ash.Name}}",
+                    "Description": "{{i18n: Totem.ash.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "5",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Ash"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Northern Lights",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "north"},
+            "Entries": {
+                "Totem.north": {
+                    "Name": "Totem.north",
+                    "DisplayName": "{{i18n: Totem.north.Name}}",
+                    "Description": "{{i18n: Totem.north.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "6",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_NorthernLights"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Meatball Rain",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "meatball"},
+            "Entries": {
+                "Totem.meatball": {
+                    "Name": "Totem.meatball",
+                    "DisplayName": "{{i18n: Totem.meatball.Name}}",
+                    "Description": "{{i18n: Totem.meatball.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "7",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Meatball"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Swarm Locust",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "locust"},
+            "Entries": {
+                "Totem.locust": {
+                    "Name": "Totem.locust",
+                    "DisplayName": "{{i18n: Totem.locust.Name}}",
+                    "Description": "{{i18n: Totem.locust.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "8",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Locust"}
+            	}
+			}
+		},	
+        {
+            "LogName":"Add Totem Dry Lightning",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "dry"},
+            "Entries": {
+                "Totem.dry": {
+                    "Name": "Totem.dry",
+                    "DisplayName": "{{i18n: Totem.dry.Name}}",
+                    "Description": "{{i18n: Totem.dry.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "9",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_DryLightning"}
+            	}
+			}
+		},	
+        {
+            "LogName":"Add Totem Wildfire",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "wildfire"},
+            "Entries": {
+                "Totem.wildfire": {
+                    "Name": "Totem.wildfire",
+                    "DisplayName": "{{i18n: Totem.wildfire.Name}}",
+                    "Description": "{{i18n: Totem.wildfire.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "10",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Wildfire"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Blizzard",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "blizzy"},
+            "Entries": {
+                "Totem.blizzy": {
+                    "Name": "Totem.blizzy",
+                    "DisplayName": "{{i18n: Totem.blizzy.Name}}",
+                    "Description": "{{i18n: Totem.blizzy.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "11",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Blizzard"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Starfall Meteor Shower",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "starry"},
+            "Entries": {
+                "Totem.starry": {
+                    "Name": "Totem.starry",
+                    "DisplayName": "{{i18n: Totem.starry.Name}}",
+                    "Description": "{{i18n: Totem.starry.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "12",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_StarFalling"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Smog Normal",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "smog", "HasFlag |contains=jojaMember": false},
+            "Entries": {
+                "Totem.smog": {
+                    "Name": "Totem.smog",
+                    "DisplayName": "{{i18n: Totem.smog.Name}}",
+                    "Description": "{{i18n: Totem.smog.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "13",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Smog"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Smog Joja",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "smog", "HasFlag |contains=jojaMember": true},
+            "Entries": {
+                "Totem.smog": {
+                    "Name": "Totem.smog",
+                    "DisplayName": "{{i18n: Totem.smog.Name}}",
+                    "Description": "{{i18n: Totem.smog.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "13",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_SmogJoja"}
+            	}
+			}
+		},
+
+        {
+            "LogName":"Add Totem Acid Rain",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "firerain"},
+            "Entries": {
+                "Totem.firerain": {
+                    "Name": "Totem.firerain",
+                    "DisplayName": "{{i18n: Totem.firerain.Name}}",
+                    "Description": "{{i18n: Totem.firerain.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "14",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_AcidRain"}
+            	}
+			}
+		},		
+        {
+            "LogName":"Add Totem Mud Rain",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "muddy"},
+            "Entries": {
+                "Totem.muddy": {
+                    "Name": "Totem.muddy",
+                    "DisplayName": "{{i18n: Totem.muddy.Name}}",
+                    "Description": "{{i18n: Totem.muddy.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "15",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_MudRain"}
+            	}
+			}
+		},			
+        {
+            "LogName":"Add Totem Tornado Watch",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "nado"},
+            "Entries": {
+                "Totem.nado": {
+                    "Name": "Totem.nado",
+                    "DisplayName": "{{i18n: Totem.nado.Name}}",
+                    "Description": "{{i18n: Totem.nado.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "16",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Tornado"}
+            	}
+			}
+		},		
+        {
+            "LogName":"Add Totem Hurricane Watch",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "hurry"},
+            "Entries": {
+                "Totem.hurry": {
+                    "Name": "Totem.hurry",
+                    "DisplayName": "{{i18n: Totem.hurry.Name}}",
+                    "Description": "{{i18n: Totem.hurry.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "17",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Hurry"}
+            	}
+			}
+		},			
+		
+        {
+            "LogName":"Add Totem Earthquake MNE",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"HasMod": "leclair.morenightlyevents", "NightEvents": "true"},
+            "Entries": {
+                "Totem.earthquake": {
+                    "Name": "Totem.earthquake",
+                    "DisplayName": "{{i18n: Totem.earthquake.Name}}",
+                    "Description": "{{i18n: Totem.earthquake.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "18",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Tornado MNE",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "nado", "HasMod": "leclair.morenightlyevents", "NightEvents": "true"},
+            "Entries": {
+                "Totem.tornado": {
+                    "Name": "Totem.tornado",
+                    "DisplayName": "{{i18n: Totem.tornado.Name}}",
+                    "Description": "{{i18n: Totem.tornado.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "19",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {}
+            	}
+			}
+		},		
+        {
+            "LogName":"Add Totem Eruption Map and AshFall",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "ash", "HasMod": "leclair.morenightlyevents", "NightEvents": "true", "PretendLava": "true"},
+            "Entries": {
+                "Totem.eruption": {
+                    "Name": "Totem.eruption",
+                    "DisplayName": "{{i18n: Totem.eruption.Name}}",
+                    "Description": "{{i18n: Totem.eruption.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "20",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {}
+            	}
+			}
+		},
+
+        {
+            "LogName":"Add Totem Foggy",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "fog", "ChangeVanilla": "true"},
+            "Entries": {
+                "Totem.fog": {
+                    "Name": "Totem.fog",
+                    "DisplayName": "{{i18n: Totem.fog.Name}}",
+                    "Description": "{{i18n: Totem.fog.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "{{Random: 21,22,22 |key=fogoutcome}}",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_{{Random: SunFog,RainFog,StormFog |key=fogoutcome}}"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Sleet",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "sleet", "ChangeVanilla": "true", "HasMod |contains=Kana.WeatherWonders": false},
+            "Entries": {
+                "Totem.sleet": {
+                    "Name": "Totem.sleet",
+                    "DisplayName": "{{i18n: Totem.sleet.Name}}",
+                    "Description": "{{i18n: Totem.sleet.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "23",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Sleet"}
+            	}
+			}
+		},	
+        {
+            "LogName":"Add Totem Mayo",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "mayo", "NoDanger": "true"},
+            "Entries": {
+                "Totem.mayo": {
+                    "Name": "Totem.mayo",
+                    "DisplayName": "{{i18n: Totem.mayo.Name}}",
+                    "Description": "{{i18n: Totem.mayo.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Mayo",
+                    "SpriteIndex": "0",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Mayo"}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Totem Mayo",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "mayo", "NoDanger": "false"},
+            "Entries": {
+                "Totem.mayo": {
+                    "Name": "Totem.mayo",
+                    "DisplayName": "{{i18n: Totem.mayo.Name}}",
+                    "Description": "{{i18n: Totem.mayo.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 2,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Mayo",
+                    "SpriteIndex": "2",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Mayo"}
+            	}
+			}
+		},
+		{
+            "LogName":"Add Totem Error Weather",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "surprise"},
+            "Entries": {
+                "Totem.error": {
+                    "Name": "Totem.error",
+                    "DisplayName": "???",
+                    "Description": "???",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "24",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Error"}
+            	}
+			}
+		},
+		{
+            "LogName":"Add Totem NoVis Weather",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "novisibility"},
+            "Entries": {
+                "Totem.novisibility": {
+                    "Name": "Totem.novisibility",
+                    "DisplayName": "{{i18n: Totem.novisibility.Name}}",
+                    "Description": "{{i18n: Totem.novisibility.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "26",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_NoVis"}
+            	}
+			}
+		},
+		{
+            "LogName":"Add Totem Rainbow Weather",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "rainbow"},
+            "Entries": {
+                "Totem.rainbow": {
+                    "Name": "Totem.rainbow",
+                    "DisplayName": "{{i18n: Totem.rainbow.Name}}",
+                    "Description": "{{i18n: Totem.rainbow.Desc}}",
+                    "Type": "Basic",          
+                    "Category": 0,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Totems",
+                    "SpriteIndex": "25",
+					"ContextTags": [
+					    "not_placeable",
+						"totem_item",
+						"not_giftable",
+						"not_museum_donatable"
+						],
+					"CustomFields": {"leclair.cloudyskies/WeatherTotem":"kath.weathering_Rainbow"}
+            	}
+			}
+		},				
+//Override Stuff
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore"},
+			"Entries": {
+				"Totem.Blank": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "rainy"},
+			"Entries": {
+				"Totem.rainy": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "sandy"},
+			"Entries": {
+				"Totem.sandy": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "blizzy"},
+			"Entries": {
+				"Totem.blizzy": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "dry"},
+			"Entries": {
+				"Totem.dry": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "hail"},
+			"Entries": {
+				"Totem.hail": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "heat"},
+			"Entries": {
+				"Totem.heat": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "starry"},
+			"Entries": {
+				"Totem.starry": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "hurry"},
+			"Entries": {
+				"Totem.hurry": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "firerain"},
+			"Entries": {
+				"Totem.firerain": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "dark"},
+			"Entries": {
+				"Totem.dark": {
+					"CanBeShipped": false,
+					"CanBeTrashed": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategoryDark}}",
+					"CategoryColorOverride": {
+						"R": 9,
+						"G": 43,
+						"B": 59,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "muddy"},
+			"Entries": {
+				"Totem.muddy": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "ash"},
+			"Entries": {
+				"Totem.ash": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "north"},
+			"Entries": {
+				"Totem.north": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "wildfire"},
+			"Entries": {
+				"Totem.wildfire": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},		
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "meatball"},
+			"Entries": {
+				"Totem.meatball": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},	
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "locust"},
+			"Entries": {
+				"Totem.locust": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},	
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "nado"},
+			"Entries": {
+				"Totem.nado": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},	
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "smog"},
+			"Entries": {
+				"Totem.smog": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},	
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore, leclair.morenightlyevents", "NightEvents": "true"},
+			"Entries": {
+				"Totem.earthquake": {
+					"CanBeShipped": false,
+					"CanBeTrashed": false,
+					"UseForTriggerAction": true,
+					"ConsumeForTriggerAction": true,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategoryDark}}",
+					"CategoryColorOverride": {
+						"R": 9,
+						"G": 43,
+						"B": 59,
+						"A": 255
+					}
+				}
+			}
+		},	
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore, leclair.morenightlyevents", "AddWeather": "nado", "NightEvents": "true"},
+			"Entries": {
+				"Totem.tornado": {
+					"CanBeShipped": false,
+					"CanBeTrashed": false,
+					"UseForTriggerAction": true,
+					"ConsumeForTriggerAction": true,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategoryDark}}",
+					"CategoryColorOverride": {
+						"R": 9,
+						"G": 43,
+						"B": 59,
+						"A": 255
+					}
+				}
+			}
+		},	
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore, leclair.morenightlyevents", "AddWeather": "ash", "NightEvents": "true", "PretendLava": "true"},
+			"Entries": {
+				"Totem.eruption": {
+					"CanBeShipped": false,
+					"CanBeTrashed": false,					
+					"UseForTriggerAction": true,
+					"ConsumeForTriggerAction": true,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategoryDark}}",
+					"CategoryColorOverride": {
+						"R": 9,
+						"G": 43,
+						"B": 59,
+						"A": 255
+					}
+				}
+			}
+		},
+		
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "fog", "ChangeVanilla": "true"},
+			"Entries": {
+				"Totem.fog": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "sleet", "ChangeVanilla": "true", "HasMod |contains=Kana.WeatherWonders": false},
+			"Entries": {
+				"Totem.sleet": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "mayo"},
+			"Entries": {
+				"Totem.mayo": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "surprise"},
+			"Entries": {
+				"Totem.error": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "???",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},	
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "novisibility"},
+			"Entries": {
+				"Totem.novisibility": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},	
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore", "AddWeather": "rainbow"},
+			"Entries": {
+				"Totem.rainbow": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: TotemCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				}
+			}
+		},	
+//SC
+
+{
+  "Action": "EditData",
+  "Target": "Data/TriggerActions",
+  "When": {"HasMod": "spacechase0.SpaceCore, leclair.morenightlyevents", "NightEvents": "true"},
+  "Entries": {
+			"kath.weathering_EarthquakeSummoned": {
+				"Id": "kath.weathering_EarthquakeSummoned",
+                "Trigger": "spacechase0.SpaceCore_OnItemUsed",
+                "Condition": "ITEM_ID Input Totem.earthquake",
+				"MarkActionApplied": false,
+                "Actions": [
+					"AddMail All {{EarthquakeSummonPower}} received",
+					"spacechase0.SpaceCore_PlaySound KathQuake local",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: Totembroken}}\" (O)TotemBlank"
+                    ]
+				},	
+			"kath.weathering_NadoSummoned": {
+				"Id": "kath.weathering_NadoSummoned",
+                "Trigger": "spacechase0.SpaceCore_OnItemUsed",
+                "Condition": "ITEM_ID Input Totem.tornado",
+				"MarkActionApplied": false,
+                "Actions": [
+					"AddMail All {{NadoSummonedPower}} received",
+					"spacechase0.SpaceCore_PlaySound thunder local",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: Totembroken}}\" (O)TotemBlank"
+                    ]
+				}				
+  }
+},
+{
+  "Action": "EditData",
+  "Target": "Data/TriggerActions",
+  "When": {"HasMod": "spacechase0.SpaceCore, leclair.morenightlyevents", "NightEvents": "true", "AddWeather": "ash"},
+  "Entries": {
+			"kath.weathering_VolcanoSummon": {
+				"Id": "kath.weathering_VolcanoSummon",
+                "Trigger": "spacechase0.SpaceCore_OnItemUsed",
+                "Condition": "ITEM_ID Input Totem.eruption",
+				"MarkActionApplied": false,
+                "Actions": [
+					"AddMail All {{VolcanoSummonPower}} received",
+					"AddMail All SummonAsh2 received",
+					"spacechase0.SpaceCore_PlaySound KathQuake local",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: Totembroken}}\" (O)TotemBlank"
+                    ]
+				}				
+  }
+},
+
+
+
+//Change when trigger action MNE is revised/////////////////////////////////////////////////////////////////
+/*{
+  "Action": "EditData",
+  "Target": "Data/TriggerActions",
+  "When": {"HasMod": "spacechase0.SpaceCore, leclair.morenightlyevents", "NightEvents": "true"},
+  "Entries": {
+			"kath.weathering_EarthquakeSummoned": {
+				"Id": "kath.weathering_EarthquakeSummoned",
+                "Trigger": "spacechase0.SpaceCore_OnItemUsed",
+                "Condition": "ITEM_ID Input Totem.earthquake",
+				"MarkActionApplied": false,
+                "Actions": [
+					"leclair.morenightlyevents_ForceEvent kath.weathering_{{EarthquakeSummonPower}}",
+					"spacechase0.SpaceCore_PlaySound KathQuake local",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: Totembroken}}\" (O)TotemBlank",
+                    ],
+				},	
+			"kath.weathering_NadoSummoned": {
+				"Id": "kath.weathering_NadoSummoned",
+                "Trigger": "spacechase0.SpaceCore_OnItemUsed",
+                "Condition": "ITEM_ID Input Totem.tornado",
+				"MarkActionApplied": false,
+                "Actions": [
+					"leclair.morenightlyevents_ForceEvent kath.weathering_{{NadoSummonedPower}}",
+					"spacechase0.SpaceCore_PlaySound thunder local",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: Totembroken}}\" (O)TotemBlank",
+                    ],
+				},				
+  },
+},
+{
+  "Action": "EditData",
+  "Target": "Data/TriggerActions",
+  "When": {"HasMod": "spacechase0.SpaceCore, leclair.morenightlyevents", "NightEvents": "true", "AddWeather": "ash"},
+  "Entries": {
+			"kath.weathering_VolcanoSummon": {
+				"Id": "kath.weathering_VolcanoSummon",
+                "Trigger": "spacechase0.SpaceCore_OnItemUsed",
+                "Condition": "ITEM_ID Input Totem.eruption",
+				"MarkActionApplied": false,
+                "Actions": [
+					"leclair.morenightlyevents_ForceEvent kath.weathering_{{VolcanoSummonPower}}",
+					"spacechase0.SpaceCore_PlaySound KathQuake local",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: Totembroken}}\" (O)TotemBlank",
+                    ],
+				},				
+  },
+},*/
+//Change when trigger action MNE is revised/////////////////////////////////////////////////////////////////
+
+
+
+
+
+//Shop
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Festival_StardewValleyFair_StarTokens", "Items" ],
+            "Entries": {
+                "TotemSelling1": {
+                    "Id": "TotemSelling1",
+					"ItemId": "(O)Totem.rainy",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=rainy}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling2": {
+                    "Id": "TotemSelling2",
+					"ItemId": "(O)Totem.sandy",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=sandy}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling3": {
+                    "Id": "TotemSelling3",
+					"ItemId": "(O)Totem.blizzy",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=blizzy}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling4": {
+                    "Id": "TotemSelling4",
+					"ItemId": "(O)Totem.dry",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=dry}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling5": {
+                    "Id": "TotemSelling5",
+					"ItemId": "(O)Totem.hail",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=hail}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling6": {
+                    "Id": "TotemSelling6",
+					"ItemId": "(O)Totem.heat",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=heat}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling7": {
+                    "Id": "TotemSelling7",
+					"ItemId": "(O)Totem.muddy",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, {{AddWeather|contains=muddy}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling8": {
+                    "Id": "TotemSelling8",
+					"ItemId": "(O)Totem.ash",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=ash}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling9": {
+                    "Id": "TotemSelling9",
+					"ItemId": "(O)Totem.wildfire",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=wildfire}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling10": {
+                    "Id": "TotemSelling",
+					"ItemId": "(O)Totem.meatball",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=meatball}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling11": {
+                    "Id": "TotemSelling11",
+					"ItemId": "(O)Totem.locust",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=locust}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling12": {
+                    "Id": "TotemSelling12",
+					"ItemId": "(O)Totem.nado",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=nado}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling13": {
+                    "Id": "TotemSelling13",
+					"ItemId": "(O)Totem.north",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 7500,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=north}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling14": {
+                    "Id": "TotemSelling14",
+					"ItemId": "(O)Totem.starry",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 7500,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.85, {{AddWeather|contains=starry}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSelling15": {
+                    "Id": "TotemSelling15",
+					"ItemId": "(O)Totem.mayo",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 1000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, {{AddWeather|contains=mayo}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },		
+				"TotemSelling16": {
+                    "Id": "TotemSelling16",
+					"ItemId": "(O)Totem.error",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 1000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.9, {{AddWeather|contains=surprise}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },	
+				"TotemSelling17": {
+                    "Id": "TotemSelling17",
+					"ItemId": "(O)Totem.novisibility",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 1000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, {{AddWeather|contains=novisibility}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },	
+				"TotemSelling18": {
+                    "Id": "TotemSelling18",
+					"ItemId": "(O)Totem.rainbow",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 1000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.5, {{AddWeather|contains=rainbow}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },		
+                "TotemSellingDark1": {
+                    "Id": "TotemSellingDark1",
+					"ItemId": "(O)Totem.dark",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 2500,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.05, {{AddWeather|contains=dark}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSellingDark2": {
+                    "Id": "TotemSellingDark2",
+					"ItemId": "(O)Totem.earthquake",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 2500,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.05, {{NightEvents|contains=true}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSellingDark3": {
+                    "Id": "TotemSellingDark3",
+					"ItemId": "(O)Totem.tornado",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 2500,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.05, {{AddWeather|contains=nado}}, {{NightEvents|contains=true}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+								]
+                },
+				"TotemSellingDark4": {
+                    "Id": "TotemSellingDark4",
+					"ItemId": "(O)Totem.eruption",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 2500,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 1 4, RANDOM 0.05, {{AddWeather|contains=ash}}, {{NightEvents|contains=true}}, {{HasMod|contains=leclair.morenightlyevents}}, {{PretendLava|contains=true}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+								]
+                }
+			}
+		},		
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+			"When": {"AddWeather": "fog", "ChangeVanilla": "true"}, 
+            "TargetField": [ "Festival_StardewValleyFair_StarTokens", "Items" ],
+            "Entries": {
+                "TotemSellingFog": {
+                    "Id": "TotemSellingFog",
+					"ItemId": "(O)Totem.fog",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 1000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Player",
+					"Condition": "YEAR 1 4",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                		}
+			}
+		},
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+			"When": {"AddWeather": "sleet", "ChangeVanilla": "true", "HasMod |contains=Kana.WeatherWonders": false}, 
+            "TargetField": [ "Festival_StardewValleyFair_StarTokens", "Items" ],
+            "Entries": {
+                "TotemSellingSleet": {
+                    "Id": "TotemSellingSleet",
+					"ItemId": "(O)Totem.sleet",
+					"TradeItemID": null,
+                    "TradeItemAmount": 1,
+                    "Price": 1000,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Player",
+					"Condition": "YEAR 1 4",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                		}
+			}
+		},		
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "DesertTrade", "Items" ],
+			"Entries": {
+				"TotemSelling1": {
+					"Id": "TotemSelling1",
+					"ItemId": "(O)Totem.rainy",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 5,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=rainy}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling2": {
+					"Id": "TotemSelling2",
+					"ItemId": "(O)Totem.sandy",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 5,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=sandy}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling3": {
+					"Id": "TotemSelling3",
+					"ItemId": "(O)Totem.blizzy",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 5,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=blizzy}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling4": {
+					"Id": "TotemSelling4",
+					"ItemId": "(O)Totem.heat",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 5,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=heat}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling5": {
+					"Id": "TotemSelling5",
+					"ItemId": "(O)Totem.hail",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 5,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=hail}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling6": {
+					"Id": "TotemSelling6",
+					"ItemId": "(O)Totem.wildfire",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 5,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=wildfire}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling7": {
+					"Id": "TotemSelling7",
+					"ItemId": "(O)Totem.meatball",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 5,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=meatball}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling8": {
+					"Id": "TotemSelling8",
+					"ItemId": "(O)Totem.smog",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 5,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=smog}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling9": {
+					"Id": "TotemSelling9",
+					"ItemId": "(O)Totem.locust",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 5,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=locust}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling10": {
+					"Id": "TotemSelling10",
+					"ItemId": "(O)Totem.nado",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 5,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=nado}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling11": {
+					"Id": "TotemSelling11",
+					"ItemId": "(O)Totem.mayo",				
+					"TradeItemId": "(O)769",
+                    "TradeItemAmount": 50,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=mayo}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling12": {
+					"Id": "TotemSelling12",
+					"ItemId": "(O)Totem.error",				
+					"TradeItemId": "(O)769",
+                    "TradeItemAmount": 50,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65, {{AddWeather|contains=surprise}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSelling17": {
+                    "Id": "TotemSelling17",
+					"ItemId": "(O)Totem.novisibility",
+					"TradeItemID": "(O)769",
+                    "TradeItemAmount": 50,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.95, {{AddWeather|contains=novisibility}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },	
+	/////////////
+	// D A R K //
+	/////////////						
+				"TotemSellingRandomDark1": {
+					"Id": "TotemSellingRandomDark1",
+					"ItemId": "(O)Totem.dark",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 2,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, RANDOM 0.05, DAY_OF_WEEK Wednesday Sunday, {{AddWeather|contains=dark}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSellingRandomDark2": {
+					"Id": "TotemSellingRandomDark2",
+					"ItemId": "(O)Totem.earthquake",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 2,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, RANDOM 0.05, DAY_OF_WEEK Wednesday Sunday, {{NightEvents|contains=true}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSellingRandomDark3": {
+					"Id": "TotemSellingRandomDark3",
+					"ItemId": "(O)Totem.tornado",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 2,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, RANDOM 0.05, DAY_OF_WEEK Wednesday Sunday, {{AddWeather|contains=nado}}, {{NightEvents|contains=true}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+								]
+				},
+				"TotemSellingRandomDark4": {
+					"Id": "TotemSellingRandomDark4",
+					"ItemId": "(O)Totem.eruption",
+					"TradeItemId": "(O)797",
+                    "TradeItemAmount": 2,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "YEAR 6, RANDOM 0.05, DAY_OF_WEEK Wednesday Sunday, {{AddWeather|contains=ash}}, {{NightEvents|contains=true}}, {{HasMod|contains=leclair.morenightlyevents}}, {{PretendLava|contains=true}}",
+					"AvoidRepeat": true,
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+								]
+				}								
+			//
+			}
+		},				
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+			"When": {"AddWeather": "fog", "ChangeVanilla": "true"}, 
+            "TargetField": [ "DesertTrade", "Items" ],
+            "Entries": {
+                "TotemSellingFog": {
+                    "Id": "TotemSellingFog",
+					"ItemId": "(O)Totem.fog",
+					"TradeItemId": "(O)769",
+                    "TradeItemAmount": 50,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Player",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                		}
+			}
+		},
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+			"When": {"AddWeather": "sleet", "ChangeVanilla": "true", "HasMod |contains=Kana.WeatherWonders": false}, 
+            "TargetField": [ "DesertTrade", "Items" ],
+            "Entries": {
+                "TotemSellingSleet": {
+                    "Id": "TotemSellingSleet",
+					"ItemId": "(O)Totem.sleet",
+					"TradeItemId": "(O)769",
+                    "TradeItemAmount": 50,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Player",
+					"Condition": "YEAR 6, DAY_OF_WEEK Wednesday Sunday, RANDOM 0.65",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                		}
+			}
+		},	
+	////////////////////////////
+	// I S L A N D  T R A D E //
+	////////////////////////////
+	{
+		"Action": "EditData",
+		"Target": "Data/Shops",
+		"When": {"AddWeather": "fog", "ChangeVanilla": "true"}, 
+		"TargetField": [ "IslandTrade", "Items" ],
+		"Entries": {
+			"TotemSellingFog": {
+				"Id": "TotemSellingFog",
+				"ItemId": "(O)Totem.fog",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 1,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+					}
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/Shops",
+		"When": {"AddWeather": "sleet", "ChangeVanilla": "true", "HasMod |contains=Kana.WeatherWonders": false}, 
+		"TargetField": [ "IslandTrade", "Items" ],
+		"Entries": {
+			"TotemSellingSleet": {
+				"Id": "TotemSellingSleet",
+				"ItemId": "(O)Totem.sleet",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 1,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+					}
+		}
+	},	
+	{
+		"Action": "EditData",
+		"Target": "Data/Shops",
+		"TargetField": [ "IslandTrade", "Items" ],
+		"When": {"Year |contains=1,2":false},
+		"Entries": {
+			"TotemSelling1": {
+				"Id": "TotemSelling1",
+				"ItemId": "(O)Totem.hurry",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 5,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=hurry}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSelling2": {
+				"Id": "TotemSelling2",
+				"ItemId": "(O)Totem.rainy",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 5,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=rainy}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSelling3": {
+				"Id": "TotemSelling3",
+				"ItemId": "(O)Totem.blizzy",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 5,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=blizzy}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSelling4": {
+				"Id": "TotemSelling4",
+				"ItemId": "(O)Totem.firerain",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 5,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=firerain}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSelling5": {
+				"Id": "TotemSelling5",
+				"ItemId": "(O)Totem.ash",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 5,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=ash}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSelling6": {
+				"Id": "TotemSelling6",
+				"ItemId": "(O)Totem.wildfire",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 5,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=wildfire}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSelling7": {
+				"Id": "TotemSelling7",
+				"ItemId": "(O)Totem.meatball",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 5,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=meatball}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSelling8": {
+				"Id": "TotemSelling8",
+				"ItemId": "(O)Totem.smog",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 5,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=smog}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSelling9": {
+				"Id": "TotemSelling9",
+				"ItemId": "(O)Totem.locust",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 5,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=locust}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSelling10": {
+				"Id": "TotemSelling10",
+				"ItemId": "(O)Totem.nado",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 5,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=nado}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSelling11": {
+				"Id": "TotemSelling11",
+				"ItemId": "(O)Totem.mayo",				
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 5,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=mayo}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSelling12": {
+				"Id": "TotemSelling12",
+				"ItemId": "(O)Totem.error",				
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 3,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.45, {{AddWeather|contains=surprise}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+				"TotemSelling17": {
+                    "Id": "TotemSelling17",
+					"ItemId": "(O)Totem.novisibility",
+					"TradeItemID": "(O)WeatherToken",
+                    "TradeItemAmount": 1,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"Condition": "PLAYER_HAS_MAIL Any CoinStart received, {{AddWeather|contains=novisibility}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                },			
+/////////////
+// D A R K //
+/////////////						
+			"TotemSellingRandomDark1": {
+				"Id": "TotemSellingRandomDark1",
+				"ItemId": "(O)Totem.dark",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 2,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.65, {{AddWeather|contains=dark}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSellingRandomDark2": {
+				"Id": "TotemSellingRandomDark2",
+				"ItemId": "(O)Totem.earthquake",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 2,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.65, {{NightEvents|contains=true}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSellingRandomDark3": {
+				"Id": "TotemSellingRandomDark3",
+				"ItemId": "(O)Totem.tornado",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 2,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.65, {{AddWeather|contains=nado}}, {{NightEvents|contains=true}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+							]
+			},
+			"TotemSellingRandomDark4": {
+				"Id": "TotemSellingRandomDark4",
+				"ItemId": "(O)Totem.eruption",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 2,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.65, {{AddWeather|contains=ash}}, {{NightEvents|contains=true}}, {{HasMod|contains=leclair.morenightlyevents}}, {{PretendLava|contains=true}}",
+				"AvoidRepeat": true,
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.PurchaseDark}}\" (O)TotemBlank"
+							]
+			},
+///////////////////
+// S P E C I A L //
+///////////////////					
+			"TotemSellingSpecial1": {
+				"Id": "TotemSellingSpecial1",
+				"ItemId": "(O)Totem.starry",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 10,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"AvoidRepeat": true,
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.35, {{AddWeather|contains=starry}}",					
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},	
+			"TotemSellingSpecial2": {
+				"Id": "TotemSellingSpecial2",
+				"ItemId": "(O)Totem.muddy",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 10,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"AvoidRepeat": true,
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.35, {{AddWeather|contains=muddy}}",					
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},	
+			"TotemSellingSpecial3": {
+				"Id": "TotemSellingSpecial3",
+				"ItemId": "(O)Totem.north",
+				"TradeItemID": "(O)WeatherToken",
+				"TradeItemAmount": 10,
+				"AvailableStock": 1,
+				"AvailableStockLimit": "Global",
+				"AvoidRepeat": true,
+				"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.35, {{AddWeather|contains=north}}",					
+				"IsRecipe": false,
+				"ActionsOnPurchase": [
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+							]
+			},
+				"TotemSellingSpecial4": {
+                    "Id": "TotemSellingSpecial4",
+					"ItemId": "(O)Totem.rainbow",
+					"TradeItemID": "(O)WeatherToken",
+                    "TradeItemAmount": 10,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Global",
+					"AvoidRepeat": true,
+					"Condition": "PLAYER_HAS_MAIL Any CoinStart received, RANDOM 0.35, {{AddWeather|contains=rainbow}}",
+					"IsRecipe": false,
+					"ActionsOnPurchase": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Totem.Purchase}}\" (O)TotemBlank"
+								]
+                }												
+		//
+		}
+	}		
+//End
+]
+}

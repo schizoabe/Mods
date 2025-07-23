@@ -1,0 +1,129 @@
+{
+    "Changes": [
+        // CONTENT INCLUDES
+        {
+            "LogName": "Enable Elliott's aromantic content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Elliott/Elliott_AroContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance"
+            }
+        },
+        // ACE CONTENT
+        {
+            "LogName": "Elliott ace dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries":
+            {
+                "SpouseStardrop": "{{i18n:PPAF.Elliott.DialogueEdits.Romance.SpouseStardrop |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:ElliottRelationshipType": "RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Elliott ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries":
+            {
+                "Indoor_Night_Elliott": "{{i18n:PPAF.Elliott.DialogueEdits.Ace.Indoor_Night_Elliott}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Elliott ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueElliott",
+            "Entries":
+            {
+                "Rainy_Night_1": "{{i18n:PPAF.Elliott.DialogueEdits.Ace.Rainy_Night_1}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer11",
+            "Entries":
+            {
+                "Elliott_spouse_y2": "{{i18n:PPAF.Elliott.DialogueEdits.Ace.Luau.Elliott_spouse_y2}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        // TERMS OF ENDEARMENT
+        {
+            "LogName": "Elliott terms of endearment, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Elliott",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Elliott terms of endearment, poly with CFD",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": true,
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // NO BLUSH EDITS
+        {
+            "LogName": "Elliott no blush edit",
+            "Action": "EditImage",
+            "Target": "Portraits/Elliott, Portraits/Elliott_Winter, Portraits/Elliott_Beach",
+            "FromFile": "assets/Portraits/Elliott_NoBlush.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Elliott": true,
+                "HasMod |contains=DSVTeam.DiverseStardewValley, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        {
+            "LogName": "Elliott no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Elliott_Spring, Portraits/Elliott_Summer, Portraits/Elliott_Fall, Portraits/Elliott_Winter_Outdoor, Portraits/Elliott_Winter_Indoor, Portraits/Elliott_FlowerDance, Portraits/Elliott_SpiritsEve, Portraits/Elliott_EggF, Portraits/Elliott_Fair, Portraits/Elliott_Jellies, Portraits/Elliott_Luau, Portraits/Elliott_Winter_IceF, Portraits/Elliott_Winter_WinterStar, Portraits/Elliott_Beach",
+            "FromFile": "assets/Portraits/Elliott_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Elliott": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        },
+        // COMPATIBILITY
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Elliott",
+            "Entries": {
+                "marriage_docafter": "{{i18n:PPAF.Elliott.DialogueEdits.Ace.ISS.marriage_docafter}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, RomanceWithoutSex",
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        }
+    ]
+}

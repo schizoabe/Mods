@@ -1,0 +1,23 @@
+{
+	"Changes": [
+    {
+		"Action": "EditData",
+		"Target": "Characters/schedules/Leah",
+		"Priority": "Late",
+		"When": {"Weather": "kath.weathering_Darkness, kath.weathering_HeavyRain, kath.weathering_Locust, kath.weathering_Blizzard, kath.weathering_Hail, kath.weathering_Wildfire"},
+      "Entries": {
+  "rain": "GOTO Fri",
+  "marriage_Mon": "GOTO Fri",
+  "winter": "GOTO rain",
+  "fall": "GOTO Fri",
+  "Mon": "GOTO Fri",
+  "Fri": "900 LeahHouse 3 7 3 leah_sculpt/1200 LeahHouse 6 5 0/1400 LeahHouse 9 5 0/2340 LeahHouse 2 4 3 leah_sleep",
+  "Sat": "GOTO Fri",
+  "summer": "GOTO Fri",
+  "summer_noBridge": "GOTO Fri",
+  "spring": "900 LeahHouse 3 7 3 leah_sculpt/1200 LeahHouse 6 5 0/1400 LeahHouse 9 5 0/2340 LeahHouse 2 4 3 leah_sleep"
+      },
+    },
+
+]
+}

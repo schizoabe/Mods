@@ -1,0 +1,440 @@
+{
+	"Changes": [
+	//Lock In		
+		{
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {"RandomNPCYeet": "Abigail"},
+            "Entries": {
+			"ChoiceLockInYeet": {
+				"Id": "ChoiceLockInYeet",
+                "Trigger": "DayStarted",
+                "Condition": "SEASON Summer, DAY_OF_MONTH 7",
+                "Actions": [
+					"AddMail All RandomNPCYeet.Abigail received"
+                    ]
+				}
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {"RandomNPCYeet": "Alex"},
+            "Entries": {
+			"ChoiceLockInYeet": {
+				"Id": "ChoiceLockInYeet",
+                "Trigger": "DayStarted",
+                "Condition": "SEASON Summer, DAY_OF_MONTH 7",
+                "Actions": [
+					"AddMail All RandomNPCYeet.Alex received"
+                    ]
+				}
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {"RandomNPCYeet": "Pam"},
+            "Entries": {
+			"ChoiceLockInYeet": {
+				"Id": "ChoiceLockInYeet",
+                "Trigger": "DayStarted",
+                "Condition": "SEASON Summer, DAY_OF_MONTH 7",
+                "Actions": [
+					"AddMail All RandomNPCYeet.Pam received"
+                    ]
+				}
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {"RandomNPCYeet": "Lewis"},
+            "Entries": {
+			"ChoiceLockInYeet": {
+				"Id": "ChoiceLockInYeet",
+                "Trigger": "DayStarted",
+                "Condition": "SEASON Summer, DAY_OF_MONTH 7",
+                "Actions": [
+					"AddMail All RandomNPCYeet.Lewis received"
+                    ]
+				}
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {"RandomNPCYeet": "Pierre"},
+            "Entries": {
+			"ChoiceLockInYeet": {
+				"Id": "ChoiceLockInYeet",
+                "Trigger": "DayStarted",
+                "Condition": "SEASON Summer, DAY_OF_MONTH 7",
+                "Actions": [
+					"AddMail All RandomNPCYeet.Pierre received"
+                    ]
+				}
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {"RandomNPCYeet": "Elliott"},
+            "Entries": {
+			"ChoiceLockInYeet": {
+				"Id": "ChoiceLockInYeet",
+                "Trigger": "DayStarted",
+                "Condition": "SEASON Summer, DAY_OF_MONTH 7",
+                "Actions": [
+					"AddMail All RandomNPCYeet.Elliott received"
+                    ]
+				}
+			}
+		},		
+	//Trigger to Yeet
+ 		{
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+			"MonsoonNPCYeet": {
+				"Id": "MonsoonNPCYeet",
+                "Trigger": "DayEnding",
+                //"Condition": "WEATHER Town kath.weathering_Monsoon, RANDOM 0.85",
+				"Condition": "SEASON Summer Fall, WEATHER Town kath.weathering_Monsoon",
+                "Actions": [
+					"AddMail All MonsoonNPCYeet received",
+					"SetNpcInvisible {{NPCYeet}} 14",
+					"MarkActionApplied All MonsoonNPCUnYeet false",
+					"MarkActionApplied All MonsoonNPCUnYeet2 false"
+                    ]
+				},
+			"MonsoonNPCUnYeet": {
+				"Id": "MonsoonNPCUnYeet",
+                "Trigger": "DayEnding",
+                "Condition": "ANY \"YEAR 2 2, SEASON summer, DAY_OF_MONTH 24 25 26, RANDOM 0.75, PLAYER_HAS_MAIL Any MonsoonNPCYeet\" \"YEAR 4, SEASON fall, DAY_OF_MONTH 13 14, RANDOM 0.75, PLAYER_HAS_MAIL Any MonsoonNPCYeet\"",
+                "Actions": [
+					"RemoveMail All MonsoonNPCYeet all",
+					"AddConversationTopic MonsoonNPCYeetTalk.{{NPCYeet}} 7",
+					"SetNpcVisible {{NPCYeet}}"
+                    ]
+				},
+			"MonsoonNPCUnYeet2": {
+				"Id": "MonsoonNPCUnYeet2",
+                "Trigger": "DayEnding",
+                "Condition": "ANY \"YEAR 2 4, SEASON summer, DAY_OF_MONTH 27, PLAYER_HAS_MAIL Any MonsoonNPCYeet\" \"YEAR 4 999, SEASON fall, DAY_OF_MONTH 15, PLAYER_HAS_MAIL Any MonsoonNPCYeet\"",
+                "Actions": [
+					"RemoveMail All MonsoonNPCYeet all",
+					"AddConversationTopic MonsoonNPCYeetTalk.{{NPCYeet}} 5",
+					"SetNpcVisible {{NPCYeet}}"
+                    ]
+				},		
+			"MonsoonNPCYeetRESET": {
+				"Id": "MonsoonNPCYeetRESET",
+                "Trigger": "DayEnding",
+                "Condition": "ANY \"YEAR 2 4, SEASON Fall, DAY_OF_MONTH 1, !WEATHER Town kath.weathering_Monsoon kath.weathering_HeavyRainMonsoon Rain\" \"YEAR 4 999, SEASON Fall, DAY_OF_MONTH 21, !WEATHER Town kath.weathering_Monsoon kath.weathering_HeavyRainMonsoon Rain\"",
+				"MarkActionApplied": false,
+                "Actions": [
+					"If PLAYER_HAS_MAIL Any RandomNPCYeet.Elliott ## RemoveMail All RandomNPCYeet.Elliott all",
+					"If PLAYER_HAS_MAIL Any RandomNPCYeet.Alex ## RemoveMail All RandomNPCYeet.Alex all",
+					"If PLAYER_HAS_MAIL Any RandomNPCYeet.Abigail ## RemoveMail All RandomNPCYeet.Abigail all",
+					"If PLAYER_HAS_MAIL Any RandomNPCYeet.Pam ## RemoveMail All RandomNPCYeet.Pam all",
+					"If PLAYER_HAS_MAIL Any RandomNPCYeet.Lewis ## RemoveMail All RandomNPCYeet.Lewis all",
+					"If PLAYER_HAS_MAIL Any RandomNPCYeet.Pierre ## RemoveMail All RandomNPCYeet.Pierre all",
+					"MarkActionApplied All MonsoonNPCYeet false"
+                    ]
+				}	
+			}
+		},
+	
+	//Extra
+		//Yeeted in from Maps
+		{
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"Fields": {
+				"Elliott": {
+					"Home": [
+						{
+                            "Id": "MonsoonYeet",
+                            "Location": "Beach",
+                            "Tile": {
+                                "X": 1000,
+                                "Y": 1000
+                            },
+                            "Direction": "right",
+                            "Condition": "PLAYER_HAS_MAIL Any RandomNPCYeet.Elliott, PLAYER_HAS_MAIL Any MonsoonNPCYeet"
+						}
+					]
+				},
+                "Alex": {
+					"Home": [
+						{
+                            "Id": "MonsoonYeet",
+                            "Location": "Beach",
+                            "Tile": {
+                                "X": 1000,
+                                "Y": 1000
+                            },
+                            "Direction": "right",
+                            "Condition": "PLAYER_HAS_MAIL Any RandomNPCYeet.Alex, PLAYER_HAS_MAIL Any MonsoonNPCYeet"
+						}
+					]
+				},
+                "Abigail": {
+					"Home": [
+						{
+                            "Id": "MonsoonYeet",
+                            "Location": "Beach",
+                            "Tile": {
+                                "X": 1000,
+                                "Y": 1000
+                            },
+                            "Direction": "right",
+                            "Condition": "PLAYER_HAS_MAIL Any RandomNPCYeet.Abigail, PLAYER_HAS_MAIL Any MonsoonNPCYeet"
+						}
+					]
+				},
+                "Lewis": {
+					"Home": [
+						{
+                            "Id": "MonsoonYeet",
+                            "Location": "Beach",
+                            "Tile": {
+                                "X": 1000,
+                                "Y": 1000
+                            },
+                            "Direction": "right",
+                            "Condition": "PLAYER_HAS_MAIL Any RandomNPCYeet.Lewis, PLAYER_HAS_MAIL Any MonsoonNPCYeet"
+						}
+					]
+				},
+                "Pam": {
+					"Home": [
+						{
+                            "Id": "MonsoonYeet",
+                            "Location": "Beach",
+                            "Tile": {
+                                "X": 1000,
+                                "Y": 1000
+                            },
+                            "Direction": "right",
+                            "Condition": "PLAYER_HAS_MAIL Any RandomNPCYeet.Pam, PLAYER_HAS_MAIL Any MonsoonNPCYeet"
+						}
+					]
+				},
+                "Pierre": {
+					"Home": [
+						{
+                            "Id": "MonsoonYeet",
+                            "Location": "Beach",
+                            "Tile": {
+                                "X": 1000,
+                                "Y": 1000
+                            },
+                            "Direction": "right",
+                            "Condition": "PLAYER_HAS_MAIL Any RandomNPCYeet.Pierre, PLAYER_HAS_MAIL Any MonsoonNPCYeet"
+						}
+					]
+				}
+			}
+		},
+		//Yeeted Temp No Social
+		{
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"When": {"HasFlag": "RandomNPCYeet.Pierre"},
+			"Fields": {
+				"Pierre": {
+					"ItemDeliveryQuests": false,
+					"SocialTab": "HiddenAlways",
+					"Calendar": "HiddenAlways"
+				}
+			}
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"When": {"HasFlag": "RandomNPCYeet.Lewis"},
+			"Fields": {
+				"Lewis": {
+					"ItemDeliveryQuests": false,
+					"SocialTab": "HiddenAlways",
+					"Calendar": "HiddenAlways"
+				}
+			}
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"When": {"HasFlag": "RandomNPCYeet.Alex"},
+			"Fields": {
+				"Alex": {
+					"ItemDeliveryQuests": false,
+					"SocialTab": "HiddenAlways",
+					"Calendar": "HiddenAlways"
+				}
+			}
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"When": {"HasFlag": "RandomNPCYeet.Abigail"},
+			"Fields": {
+				"Abigail": {
+					"ItemDeliveryQuests": false,
+					"SocialTab": "HiddenAlways",
+					"Calendar": "HiddenAlways"
+				}
+			}
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"When": {"HasFlag": "RandomNPCYeet.Elliott"},
+			"Fields": {
+				"Elliott": {
+					"ItemDeliveryQuests": false,
+					"SocialTab": "HiddenAlways",
+					"Calendar": "HiddenAlways"
+				}
+			}
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"When": {"HasFlag": "RandomNPCYeet.Pam"},
+			"Fields": {
+				"Pam": {
+					"ItemDeliveryQuests": false,
+					"SocialTab": "HiddenAlways",
+					"Calendar": "HiddenAlways"
+				}
+			}
+		},
+	
+	//Returned Dialogue
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Priority": "Late + 10",
+			"When": {"HasFlag": "RandomNPCYeet.Elliott"},
+			"Entries": {
+				"Elliott": "{{i18n:ReturnFromSea.Elliott }}",
+				"Elliott_y2": "{{i18n:ReturnFromSea.Elliott }}",
+				"Elliott_spouse": "{{i18n:ReturnFromSea.Elliott }}"
+			}
+		},
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Priority": "Late + 10",
+			"When": {"HasFlag": "RandomNPCYeet.Alex"},
+			"Entries": {
+				"Alex": "{{i18n:ReturnFromSea.Alex }}",
+				"Alex_y2": "{{i18n:ReturnFromSea.Alex }}",
+				"Alex_spouse": "{{i18n:ReturnFromSea.Alex }}"
+			}
+		},
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Priority": "Late + 10",
+			"When": {"HasFlag": "RandomNPCYeet.Abigail"},
+			"Entries": {
+				"Abigail": "{{i18n:ReturnFromSea.Abigail }}",
+				"Abigail_y2": "{{i18n:ReturnFromSea.Abigail }}",
+				"Abigail_spouse": "{{i18n:ReturnFromSea.Abigail }}"
+			}
+		},
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Priority": "Late + 10",
+			"When": {"HasFlag": "RandomNPCYeet.Pam"},
+			"Entries": {
+				"Pam": "{{i18n:ReturnFromSea.Pam }}",
+				"Pam_y2": "{{i18n:ReturnFromSea.Pam }}"
+			}
+		},
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Priority": "Late + 10",
+			"When": {"HasFlag": "RandomNPCYeet.Lewis"},
+			"Entries": {
+				"Lewis": "{{i18n:ReturnFromSea.Lewis }}",
+				"Lewis_y2": "{{i18n:ReturnFromSea.Lewis }}"
+			}
+		},
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Priority": "Late + 10",
+			"When": {"HasFlag": "RandomNPCYeet.Pierre"},
+			"Entries": {
+				"Pierre": "{{i18n:ReturnFromSea.Pierre }}",
+				"Pierre_y2": "{{i18n:ReturnFromSea.Pierre }}"
+			}
+		},
+		//
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex, Characters/Dialogue/MarriageDialogueAlex",
+			"Entries": {
+				  "MonsoonNPCYeetTalk.Alex": "{{i18n: ReturnFromSea.Alex}}"
+			}
+		},	
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Elliott, Characters/Dialogue/MarriageDialogueElliott",
+			"Entries": {
+				  "MonsoonNPCYeetTalk.Elliott": "{{i18n: ReturnFromSea.Elliott}}"
+			}
+		},	
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Abigail, Characters/Dialogue/MarriageDialogueAbigail",
+			"Entries": {
+				  "MonsoonNPCYeetTalk.Abigail": "{{i18n: ReturnFromSea.Abigail}}"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Pierre",
+			"Entries": {
+				  "MonsoonNPCYeetTalk.Pierre": "{{i18n: MonsoonNPCYeetTalk.Pierre}}"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Lewis",
+			"Entries": {
+				  "MonsoonNPCYeetTalk.Lewis": "{{i18n: MonsoonNPCYeetTalk.Lewis |FlowerItemGiven={{FlowerItemGiven}} }}"
+			}
+		},	
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Pam",
+			"Entries": {
+				  "MonsoonNPCYeetTalk.Pam": "{{i18n: MonsoonNPCYeetTalk.Pam}}"
+			}
+		},
+	//Pierre Extra
+		{
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+			"RemovingThePierreMail": {
+				"Id": "RemovingThePierreMail",
+				"Trigger": "DayStarted",
+				"Condition": "RANDOM 0.1",
+				"Actions": [
+					"RemoveMail All PierreExtraMoneyMonsoon all"
+					]
+				}
+			}
+		}
+
+//End
+]
+}

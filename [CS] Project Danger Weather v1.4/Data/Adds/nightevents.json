@@ -1,0 +1,525 @@
+{
+	"Changes": [
+	{
+	"LogName": "The Weather Tornado Event Damaging",
+	"Action": "EditData",
+	"Target": "Mods/leclair.morenightlyevents/Events",
+	"When": {"AddWeather": "nado", "NoDanger": "false", "DangerWeather": "true",},
+	"Entries": {	
+	"kath.weathering_NadoPassingNULL": {
+		"Id": "kath.weathering_NadoPassingNULL",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "ANY \"CS_WEATHER Town -1 kath.weathering_Tornado, LOCATION_CONTEXT Here Default, PLAYER_HAS_MAIL Any BuiltArray\" \"PLAYER_HAS_MAIL Any NadoPassingNULL\"", "Chance": "{{ChanceChange}}" } ],
+		"TargetMap": "Town",
+		"SoundName": "KathSiren",
+		"Message": "{{i18n: TornadoPass}}",
+		"MessageDelay": 26000,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"388",
+					"390",
+					"142",
+				],
+				"MinStack": 50,
+				"MaxStack": 75,
+				"SpawnAreas":[],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDTornadoH 5",
+			"If PLAYER_HAS_MAIL Any NadoPassingNULL ## RemoveMail All NadoPassingNULL",
+			]
+		}
+		]
+		},
+	
+	"kath.weathering_NadoPassingDanger": {
+		"Id": "kath.weathering_NadoPassingDanger",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "ANY \"CS_WEATHER Town -1 kath.weathering_Tornado, LOCATION_CONTEXT Here Default, !PLAYER_HAS_MAIL Any BuiltArray\" \"PLAYER_HAS_MAIL Any NadoPassingDanger\"", "Chance": "{{ChanceChange}}" } ],
+		"TargetMap": "Town",
+		"SoundName": "KathSiren",
+		"Message": "{{i18n: TornadoPass}}",
+		"MessageDelay": 26000,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"388",
+					"390",
+					"142",
+				],
+				"MinStack": 50,
+				"MaxStack": 75,
+				"SpawnAreas":[],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"leclair.cloudyskies_KillCrops --fertilizer-query \"!ITEM_ID Input (O)ManaFertilizer\" Context Default",
+			"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:PlantDeath.Check}}\" (O)PlantDeath",
+			"AddConversationTopic WCDTornadoH 5",
+			"If PLAYER_HAS_MAIL Any NadoPassingDanger ## RemoveMail All NadoPassingDanger",	
+			]
+		}
+		]
+		},
+	},
+	},
+	
+	{
+	"LogName": "The Weather Tornado Event NOT Damaging",
+	"Action": "EditData",
+	"Target": "Mods/leclair.morenightlyevents/Events",
+	"When": {"AddWeather": "nado", "NoDanger": "true"},
+	"Entries": {	
+	"kath.weathering_NadoPassingSafe": {
+		"Id": "kath.weathering_NadoPassingSafe",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "ANY \"CS_WEATHER Town -1 kath.weathering_Tornado, LOCATION_CONTEXT Here Default\" \"PLAYER_HAS_MAIL Any NadoPassingSafe\"", "Chance": "{{ChanceChange}}" } ],
+		"TargetMap": "Town",
+		"SoundName": "KathSiren",
+		"Message": "{{i18n: TornadoPass}}",
+		"MessageDelay": 26000,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"388",
+					"390",
+					"142",
+				],
+				"MinStack": 50,
+				"MaxStack": 75,
+				"SpawnAreas":[],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDTornadoH 5",
+			"If PLAYER_HAS_MAIL Any NadoPassingSafe ## RemoveMail All NadoPassingSafe",	
+			]
+		}
+		]
+		},
+	},
+	},	
+	
+	//
+	{
+	"LogName": "The Weather Data Nightly Events",
+	"Action": "EditData",
+	"Target": "Mods/leclair.morenightlyevents/Events",
+	"Entries": {	
+	"kath.weathering_Wildfire.Coal": {
+		"Id": "kath.weathering_Wildfire.Coal",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "CS_WEATHER Town -3 kath.weathering_Wildfire", "Chance": 0.95 } ],
+		"TargetMap": "Woods",
+		"SoundName": "cracklingFire",
+		"Message": "{{i18n: WeatherCoal}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"382",
+					"382",
+				],
+				"MinStack": 40,
+				"MaxStack": 75,
+				"SpawnAreas":[],
+			}
+		],
+		"SideEffects": [
+		]
+	},
+	"kath.weathering_Hurry.Fish": {
+		"Id": "kath.weathering_Hurry.Fish",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "WEATHER Here kath.weathering_Hurry, LOCATION_CONTEXT Here Island", "Chance": 0.35 } ],
+		"TargetMap": "IslandSouth",
+		"SoundName": "rainsound",
+		"Message": "{{i18n: WeatherFishy}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"267",
+					"128",
+					"701",
+					"130",
+					"836",
+					"838",
+					"837",
+					"269",
+					"149",
+					"372",
+					"715",
+					"717",
+				],
+				"MinStack": 8,
+				"MaxStack": 12,
+				"SpawnAreas":[{"X": 9, "Y": 23, "Width": 23, "Height": 9}],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDFish 3",
+			]
+		}
+		]
+	},
+	"kath.weathering_MudRain.Giants": {
+		"Id": "kath.weathering_MudRain.Giants",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "CS_WEATHER Town -1 kath.weathering_MudRain, LOCATION_CONTEXT Here Default", "Chance": 0.15 } ],
+		"TargetMap": "Backwoods",
+		"SoundName": "rainsound",
+		"Message": "{{i18n: BigCrops}}",
+		"MessageDelay": 1500,
+		"Output": [ {
+			"Type": "GiantCrop",
+			"RandomItemId": [
+				"Pumpkin",
+			],
+			"MinStack": 2,
+			"MaxStack": 8,
+			"SpawnAreas":[{"X": 21, "Y": 10, "Width": 29, "Height": 9}, {"X": 12, "Y": 13, "Width": 9, "Height": 8}, {"X": 11, "Y": 22, "Width": 5, "Height": 8}],
+		} ],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDBigCrop 3",
+			]
+		}
+		]
+	},
+	"kath.weathering_MudRain.Giants2": {
+		"Id": "kath.weathering_MudRain.Giants2",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "CS_WEATHER Town -1 kath.weathering_MudRain, LOCATION_CONTEXT Here Default", "Chance": 0.05 } ],
+		"TargetMap": "Farm",
+		"SoundName": "rainsound",
+		"Message": "{{i18n: BigCrops}}",
+		"MessageDelay": 1500,
+		"Output": [ {
+			"Type": "GiantCrop",
+			"RandomItemId": [
+				"Cauliflower",
+				"Melon",
+				"Pumpkin",
+				"Powdermelon"
+			],
+			"MinStack": 2,
+			"MaxStack": 8,
+			"SpawnAreas":[{"X": 21, "Y": 10, "Width": 29, "Height": 9}, {"X": 12, "Y": 13, "Width": 9, "Height": 8}, {"X": 11, "Y": 22, "Width": 5, "Height": 8}],
+		} ],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDBigCrop 3",
+			]
+		}
+		]
+	},	
+	//GEODE CONDITION WILL BE MINE LEVELS FOR NOW
+	"kath.weathering_Hail.Mountain": {
+		"Id": "kath.weathering_Hail.Mountain",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "WEATHER Here kath.weathering_Hail, LOCATION_CONTEXT Here Default, MINE_LOWEST_LEVEL_REACHED 100", "Chance": 0.45 } ],
+		"TargetMap": "Mountain",
+		"SoundName": "breakingGlass",
+		"Message": "{{i18n: HailFalling}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)535",
+					"(O)536",
+					"(O)537",
+					"(O)749",
+				],
+				"MinStack": 12,
+				"MaxStack": 18,
+				"SpawnAreas":[{"X": 4, "Y": 6, "Width": 44, "Height": 31}, {"X": 80, "Y": 20, "Width": 9, "Height": 16},],
+			}
+		],
+		"SideEffects": [
+		]
+	},
+	"kath.weathering_Sandstorm.Desert": {
+		"Id": "kath.weathering_Sandstorm.Desert",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "CS_WEATHER Town -1 kath.weathering_Sandstorm, LOCATION_CONTEXT Here Default", "Chance": 0.45 } ],
+		"TargetMap": "Desert",
+		"SoundName": "wind",
+		"Message": "{{i18n: SandstormGust}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)103",
+					"(O)105",
+					"(O)109",
+					"(O)123",
+					"(O)588",
+					"(O)583",
+					"(O)125",
+				],
+				"MinStack": 5,
+				"MaxStack": 10,
+				"SpawnAreas":[{"X": 12, "Y": 30, "Width": 18, "Height": 19}, {"X": 5, "Y": 7, "Width": 26, "Height": 12},],
+			}
+		],
+		"SideEffects": [
+		]
+	},
+	"kath.weathering_Landslide": {
+		"Id": "kath.weathering_Landslide",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "CS_WEATHER Town -1 kath.weathering_HeavyRain, LOCATION_CONTEXT Here Default", "Chance": 0.35} ],
+		"TargetMap": "Backwoods",
+		"SoundName": "KathQuake",
+		"Message": "{{i18n: Landslide2}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)747",
+					"(O)748",
+					"(O)771",
+					"(O)771",
+					"(O)330",
+					"(O)330",
+					"(O)709",
+					"(O)709",
+					"(O)388",
+					"(O)388",
+					"(O)388",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+				],
+				"MinStack": 50,
+				"MaxStack": 70,
+				"SpawnAreas":[{"X": 21, "Y": 10, "Width": 29, "Height": 9}, {"X": 12, "Y": 13, "Width": 9, "Height": 8}, {"X": 11, "Y": 22, "Width": 5, "Height": 8}],
+			},
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDLandslide 3",
+			]
+		}
+		]
+	},
+//For Volcano
+	"kath.weathering_Earthquake.Island1": {
+		"Id": "kath.weathering_Earthquake.Island1",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "PLAYER_HAS_MAIL Any EarthquakeIslandStart, PLAYER_LOCATION_CONTEXT Current Island" } ],
+		"TargetMap": "IslandNorth",
+		"SoundName": "KathQuake",
+		"Message": "{{i18n: EarthquakeIsland1}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)570",
+					"(O)575",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+				],
+				"MinStack": 10,
+				"MaxStack": 15,
+				"SpawnAreas":[{"X": 37, "Y": 72, "Width": 24, "Height": 11}, {"X": 39, "Y": 48, "Width": 26, "Height": 8}, {"X": 27, "Y": 24, "Width": 28, "Height": 7},],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"If !PLAYER_HAS_MAIL Current EarthquakeIsland ## AddMail Current EarthquakeIsland received",
+			"MarkActionApplied All kath.weathering_EarthquakeFlag false",
+			"AddConversationTopic WCDEarthquake 3",
+			"RemoveMail All EarthquakeIslandStart"
+			]
+		}
+		]
+	},
+	"kath.weathering_Earthquake.Island2": {
+		"Id": "kath.weathering_Earthquake.Island2",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "PLAYER_HAS_MAIL Current EarthquakeIsland, PLAYER_LOCATION_CONTEXT Current Island", "Chance": 0.85 } ],
+		"TargetMap": "IslandSouth",
+		"SoundName": "KathQuake",
+		"Message": "{{i18n: EarthquakeIsland2}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)589",
+					"(O)586",
+					"(O)584",
+					"(O)570",
+					"(O)575",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+				],
+				"MinStack": 10,
+				"MaxStack": 15,
+				"SpawnAreas":[{"X": 9, "Y": 23, "Width": 23, "Height": 9}],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"If !PLAYER_HAS_MAIL Any SummonAsh ## AddMail All SummonAsh received",
+			"AddConversationTopic WCDEarthquake 3",
+			],
+		},
+		]
+	},
+	"kath.weathering_Earthquake.Town": {
+		"Id": "kath.weathering_Earthquake.Town",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "WEATHER IslandNorth kath.weathering_Ash, PLAYER_LOCATION_CONTEXT Current Town", "Chance": 0.25 } ],
+		"TargetMap": "Railroad",
+		"SoundName": "KathQuake",
+		"Message": "{{i18n: EarthquakeTown}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)12",
+					"(O)14",
+					"(O)6",
+					"(O)590",
+				],
+				"MinStack": 10,
+				"MaxStack": 15,
+				"SpawnAreas":[{"X": 11, "Y": 39, "Width": 48, "Height": 19},],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDEarthquake 3",
+			]
+		}
+		]
+	},
+	"kath.weathering_Earthquake.SouthIsland": {
+		"Id": "kath.weathering_Earthquake.SouthIsland",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "WEATHER IslandNorth kath.weathering_Ash, PLAYER_LOCATION_CONTEXT Current Island", "Chance": 0.35 } ],
+		"TargetMap": "IslandSouth",
+		"SoundName": "KathQuake",
+		"Message": "{{i18n: EarthquakeTown}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)589",
+					"(O)586",
+					"(O)584",
+					"(O)570",
+					"(O)575",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+				],
+				"MinStack": 10,
+				"MaxStack": 15,
+				"SpawnAreas":[{"X": 9, "Y": 23, "Width": 23, "Height": 9}],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDEarthquake 3",
+			"AddMail All VolcanoEruption received",
+			]
+		}
+		]
+	},
+	
+//Exclusive
+	"kath.weathering_Earthquake.IslandOnce": {
+		"Id": "kath.weathering_Earthquake.IslandOnce",
+		"Type": "Placement",
+		"Conditions": [ { "Condition": "PLAYER_HAS_MAIL Any EarthquakeIslandOnce, PLAYER_LOCATION_CONTEXT Current Island" } ],
+		"TargetMap": "IslandNorth",
+		"IsExclusive": true,
+		"SoundName": "KathQuake",
+		"Message": "{{i18n: EarthquakeIsland2}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)570",
+					"(O)575",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+				],
+				"MinStack": 10,
+				"MaxStack": 15,
+				"SpawnAreas":[{"X": 37, "Y": 72, "Width": 24, "Height": 11}, {"X": 39, "Y": 48, "Width": 26, "Height": 8}, {"X": 27, "Y": 24, "Width": 28, "Height": 7},],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"If !PLAYER_HAS_MAIL Any SummonAsh ## AddMail All SummonAsh received",
+			"If WEATHER IslandNorth kath.weathering_Ash ## AddMail All VolcanoEruption received",
+			"AddConversationTopic WCDEarthquake 3",
+			"MarkActionApplied All kath.weathering_EarthquakeStartOnce_Stop false",
+			"MarkActionApplied All kath.weathering_EarthquakeVolcanoEruption false",
+			]
+		}
+		]
+	},
+	
+},
+
+	},
+
+]
+}

@@ -1,0 +1,949 @@
+{
+	"Format": "2.4.0",
+	
+	//Humble adventurer welcome to this hot mess//
+	//Could it be more organized and less superfluous? Yes.//
+	//Do I want to organize it? No, this is too wild, send help.//
+
+	"ConfigSchema": {
+		"BaseMultiplier": {
+			"AllowValues": "easy,mid,hard",
+			"Default": "easy",
+        	"AllowBlank": false,
+			"AllowMultiple": false,
+			"Section": "Maths"
+		},
+		"EvilMode": {
+			"AllowValues": "true, false",
+			"Default": "false",
+        	"AllowBlank": false,
+			"Section": "Maths"
+		},
+		"GraceEnd": {
+			"AllowValues": "Summer 28, Winter 28",
+			"Default": "Summer 28",
+        	"AllowBlank": false,
+			"Section": "Mode"
+		},		
+		"DayOfBilling": {
+			"AllowValues": "Thursday, Friday, Saturday",
+			"Default": "Thursday",
+        	"AllowBlank": false,
+			"Section": "Mode"
+		},
+		"DayofService": {
+			"AllowValues": "26,27,28",
+			"Default": "28",
+        	"AllowBlank": false,
+			"Section": "Mode"
+		},
+		"DayOfSurcharge": {
+			"AllowValues": "Tuesday, Wednesday, Thursday",
+			"Default": "Wednesday",
+        	"AllowBlank": false,
+			"Section": "Mode"
+		},						
+		"MultiplayerPlayers": {
+			"AllowValues": "1,2,3,4,5,6,7,8",
+			"Default": "1",
+        	"AllowBlank": false,
+			"Section": "Mode"
+		},
+        "ProfitMarginChange":{
+            "AllowValues": "100,75,50,25",
+			"Default": "100",
+        	"AllowBlank": false,
+			"Section": "Mode"
+        }
+	},	
+
+		"DynamicTokens": [
+		{
+			"Name": "FarmTypeNumber",
+			"Value": "0"
+		},
+		{
+			"Name": "FarmTypeNumber",
+			"Value": "1",
+			"When": {"FarmType": "Forest, Riverland"}
+		},
+		{
+			"Name": "FarmTypeNumber",
+			"Value": "3",
+			"When": {"FarmType": "FourCorners, Hilltop"}
+		},
+		{
+			"Name": "FarmTypeNumber",
+			"Value": "5",
+			"When": {"FarmType": "Wilderness, Beach"}
+		},
+
+		{
+			"Name": "FarmTypeNumber1",
+			"Value": "4"
+		},
+		{
+			"Name": "FarmTypeNumber1",
+			"Value": "3",
+			"When": {"FarmType": "Forest, Riverland"}
+		},
+		{
+			"Name": "FarmTypeNumber1",
+			"Value": "7",
+			"When": {"FarmType": "FourCorners, Hilltop"}
+		},
+		{
+			"Name": "FarmTypeNumber1",
+			"Value": "1",
+			"When": {"FarmType": "Wilderness, Beach"}
+		},
+		
+		{
+			"Name": "FarmTypeNumber2",
+			"Value": "7"
+		},		
+		{
+			"Name": "FarmTypeNumber2",
+			"Value": "2",
+			"When": {"FarmType": "Forest, Riverland"}
+		},
+		{
+			"Name": "FarmTypeNumber2",
+			"Value": "4",
+			"When": {"FarmType": "FourCorners, Hilltop"}
+		},
+		{
+			"Name": "FarmTypeNumber2",
+			"Value": "6",
+			"When": {"FarmType": "Wilderness, Beach"}
+		},
+
+		{
+			"Name": "FarmTypeNumber3",
+			"Value": "1"
+		},
+		{
+			"Name": "FarmTypeNumber3",
+			"Value": "7",
+			"When": {"FarmType": "Forest, Riverland"}
+		},
+		{
+			"Name": "FarmTypeNumber3",
+			"Value": "8",
+			"When": {"FarmType": "FourCorners, Hilltop"}
+		},
+		{
+			"Name": "FarmTypeNumber3",
+			"Value": "9",
+			"When": {"FarmType": "Wilderness, Beach"}
+		},		
+		
+		//
+		{
+			"Name": "FarmAcc",
+			"Value": "F5{{FarmTypeNumber3}}33{{FarmTypeNumber2}}{{FarmTypeNumber1}}87-0{{FarmTypeNumber}}-{{Language}}"
+		},
+		{
+			"Name": "CollectionID",
+			"Value": "1053{{Random: {{Range: 0, 9}} }}{{Random: {{Range: 0, 9}} }}{{Random: {{Range: 0, 9}} }}-{{Random: {{Range: 0, 9}} }}"
+		},
+
+        {
+			"Name": "VanillaProfitMargin",
+			"Value": "1"
+		},
+        {
+			"Name": "VanillaProfitMargin",
+			"Value": "1",
+            "When": {"ProfitMarginChange": "100"}
+		},
+        {
+			"Name": "VanillaProfitMargin",
+			"Value": "0.75",
+            "When": {"ProfitMarginChange": "75"}
+		},
+        {
+			"Name": "VanillaProfitMargin",
+			"Value": "0.5",
+            "When": {"ProfitMarginChange": "50"}
+		},
+        {
+			"Name": "VanillaProfitMargin",
+			"Value": "0.25",
+            "When": {"ProfitMarginChange": "25"}
+		},
+
+		{
+			"Name": "BaseM",
+			"Value": "{{Query: 1 * {{VanillaProfitMargin}} }}"
+		},
+		{
+			"Name": "BaseM",
+			"Value": "{{Query: 1 * {{VanillaProfitMargin}} }}",
+			"When": {"BaseMultiplier": "easy", "EvilMode": "false"}
+		},
+		{
+			"Name": "BaseM",
+			"Value": "{{Query: 2.5 * {{VanillaProfitMargin}} }}",
+			"When": {"BaseMultiplier": "mid", "EvilMode": "false"}
+		},
+		{
+			"Name": "BaseM",
+			"Value": "{{Query: 5 * {{VanillaProfitMargin}} }}",
+			"When": {"BaseMultiplier": "hard", "EvilMode": "false"}
+		},
+		{
+			"Name": "BaseM",
+			"Value": "{{Query: 10.5 * {{VanillaProfitMargin}} }}",
+			"When": {"EvilMode": "true"}
+		},
+		
+		
+//FarmBuildings
+//Multiplier number
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "1",
+			"When": {"EvilMode": "false"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "1",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 4 4": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "1.5",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 5 6": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "2",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 7 8": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "2.5",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 9 10": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "3",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 11 15": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "4",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 16 20": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "5",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 21": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "10",
+			"When": {"EvilMode": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "{{Query: 1 * 3.5 }}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 4 4": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "{{Query: 1.5 * 3.5 }}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 5 6": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "{{Query: 2 * 3.5 }}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 7 8": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "{{Query: 2.5 * 3.5 }}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 9 10": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "{{Query: 3 * 3.5 }}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 11 15": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "{{Query: 4 * 3.5 }}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 16 20": "true"}
+		},
+		{
+			"Name": "BuildingMultiplier",
+			"Value": "{{Query: 5 * 3.5 }}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: BUILDINGS_CONSTRUCTED All All 21": "true"}
+		},
+//Farm Upgrade
+//Amount
+		{
+			"Name": "BuildingUpgraded",
+			"Value": "1000",
+			"When": {"EvilMode": "false"}
+		},
+		{
+			"Name": "BuildingUpgraded",
+			"Value": "2500",
+			"When": {"EvilMode": "false", "FarmhouseUpgrade": "1"}
+		},
+		{
+			"Name": "BuildingUpgraded",
+			"Value": "5000",
+			"When": {"EvilMode": "false", "FarmhouseUpgrade": "2"}
+		},
+		{
+			"Name": "BuildingUpgraded",
+			"Value": "7500",
+			"When": {"EvilMode": "false", "FarmhouseUpgrade": "3"}
+		},
+		{
+			"Name": "BuildingUpgraded",
+			"Value": "10000",
+			"When": {"EvilMode": "false", "HasMod": "DLX.PIF", "FarmhouseUpgrade |contains=0,1,2": false}
+		},
+		{
+			"Name": "BuildingUpgraded",
+			"Value": "10000",
+			"When": {"EvilMode": "true"}
+		},	
+		{
+			"Name": "BuildingUpgraded",
+			"Value": "25000",
+			"When": {"EvilMode": "true", "FarmhouseUpgrade": "1"}
+		},
+		{
+			"Name": "BuildingUpgraded",
+			"Value": "50000",
+			"When": {"EvilMode": "true", "FarmhouseUpgrade": "2"}
+		},
+		{
+			"Name": "BuildingUpgraded",
+			"Value": "75000",
+			"When": {"EvilMode": "true", "FarmhouseUpgrade": "3"}
+		},
+		{
+			"Name": "BuildingUpgraded",
+			"Value": "100000",
+			"When": {"EvilMode": "true", "HasMod": "DLX.PIF", "FarmhouseUpgrade |contains=0,1,2": false}
+		},			
+//Crop
+//Factor
+		{
+			"Name": "BETASFactor",
+			"Value": "1"
+		},
+		{
+			"Name": "BETASFactor",
+			"Value": "2",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_TOTAL_CROPS 1 30": "true"}
+		},
+		{
+			"Name": "BETASFactor",
+			"Value": "5",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_TOTAL_CROPS 31 100": "true"}
+		},
+		{
+			"Name": "BETASFactor",
+			"Value": "10",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_TOTAL_CROPS 101": "true"}
+		},	
+		{
+			"Name": "BETASFactor",
+			"Value": "25",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_TOTAL_CROPS 0 30": "true"}
+		},
+		{
+			"Name": "BETASFactor",
+			"Value": "50",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_TOTAL_CROPS 31 100": "true"}
+		},
+		{
+			"Name": "BETASFactor",
+			"Value": "100",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_TOTAL_CROPS 101": "true"}
+		},					
+//Subsidies
+        {
+			"Name": "SolarPanelCheck",
+			"Value": "0"
+		},
+        {
+			"Name": "SolarPanelCheck",
+			"Value": "2000",
+            "When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_ITEM_IN_WORLD (BC)231": "true"}
+		},
+        {
+			"Name": "SolarPanelCheck",
+			"Value": "1000",
+            "When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_ITEM_IN_WORLD (BC)231": "true"}
+		},
+
+        {
+			"Name": "WindTurbineCheck",
+			"Value": "0"
+		},
+        {
+			"Name": "WindTurbineCheck",
+			"Value": "1000",
+            "When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_ITEM_IN_WORLD (BC)Dora.MiniWindTurbines_MiniWindTurbine": "true", "HasMod": "Dora.MiniWindTurbines"}
+		},
+        {
+			"Name": "WindTurbineCheck",
+			"Value": "500",
+            "When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_ITEM_IN_WORLD (BC)Dora.MiniWindTurbines_MiniWindTurbine": "true", "HasMod": "Dora.MiniWindTurbines"}
+		},
+
+        {
+			"Name": "TotalSubsidies",
+			"Value": "0"
+		},
+        {
+			"Name": "TotalSubsidies",
+			"Value": "{{Round: {{Query: ({{Esca.EMP/PlayerStat: piecesOfTrashRecycled}} + {{SolarPanelCheck}} + {{WindTurbineCheck}} + ({{Esca.EMP/PlayerStat: slimesKilled}} / 2)) * (({{Year}} * 1.5) - {{Year}}) }} }}",
+			"When": {"EvilMode": "false", "Year |contains=1": false}
+		},
+        {
+			"Name": "TotalSubsidies",
+			"Value": "{{Round: {{Query: {{Esca.EMP/PlayerStat: piecesOfTrashRecycled}} + {{SolarPanelCheck}} + {{WindTurbineCheck}} + ({{Esca.EMP/PlayerStat: slimesKilled}} / 2) }} }}",
+			"When": {"EvilMode": "true", "Year |contains=1": false}
+		},
+//Amount
+		{
+			"Name": "CropMultiplier",
+			"Value": "{{Round: {{Query: (({{Esca.EMP/PlayerStat: cropsShipped}} + {{Esca.EMP/PlayerStat: beveragesMade}} + {{Esca.EMP/PlayerStat: preservesMade}} + {{Esca.EMP/PlayerStat: seedsSown}} + {{Esca.EMP/PlayerStat: itemsCooked}}) / {{DaysPlayed}}) * 10 }} }}"
+		},
+		{
+			"Name": "CropMultiplier",
+			"Value": "{{Round: {{Query: (({{Esca.EMP/PlayerStat: cropsShipped}} + {{Esca.EMP/PlayerStat: beveragesMade}} + {{Esca.EMP/PlayerStat: preservesMade}} + {{Esca.EMP/PlayerStat: seedsSown}} + {{Esca.EMP/PlayerStat: itemsCooked}}) / {{DaysPlayed}}) * {{BETASFactor}} }} }}",
+			"When": {"EvilMode": "false"}
+		},				
+		{
+			"Name": "CropMultiplier",
+			"Value": "{{Round: {{Query: (({{Esca.EMP/PlayerStat: cropsShipped}} + {{Esca.EMP/PlayerStat: beveragesMade}} + {{Esca.EMP/PlayerStat: preservesMade}} + {{Esca.EMP/PlayerStat: seedsSown}} + {{Esca.EMP/PlayerStat: itemsCooked}}) / {{DaysPlayed}}) * {{BETASFactor}} }} }}",
+			"When": {"EvilMode": "true"}
+		},	
+		//
+		{
+			"Name": "GIFlag0",
+			"Value": "0"
+		},			
+		{
+			"Name": "GIFlag0",
+			"Value": "0.5",
+			"When": {"HasFlag": "Island_Turtle"}
+		},		
+		{
+			"Name": "GIFlag1",
+			"Value": "0"
+		},			
+		{
+			"Name": "GIFlag1",
+			"Value": "0.5",
+			"When": {"HasVisitedLocation": "IslandWest"}
+		},	
+		{
+			"Name": "GIFlag2",
+			"Value": "0"
+		},			
+		{
+			"Name": "GIFlag2",
+			"Value": "0.5",
+			"When": {"HasFlag": "Island_Resort"}
+		},
+		{
+			"Name": "GIFlag3",
+			"Value": "0"
+		},			
+		{
+			"Name": "GIFlag3",
+			"Value": "1",
+			"When": {"HasFlag": "Island_UpgradeHouse"}
+		},
+
+		{
+			"Name": "GIFactor",
+			"Value": "{{Query: {{GIFlag0}} + {{GIFlag1}} + {{GIFlag1}} + {{GIFlag1}} }}",
+			"When": {"EvilMode": "false"}
+		},			
+		{
+			"Name": "GIFactor",
+			"Value": "{{Query: ({{GIFlag0}} + {{GIFlag1}} + {{GIFlag1}} + {{GIFlag1}}) * 2}}",
+			"When": {"EvilMode": "true"}
+		},	
+//Weather
+//Amount
+		{
+			"Name": "WeatherFactor",
+			"Value": "500",
+			"When": {"EvilMode": "false"}
+		},
+		{
+			"Name": "WeatherFactor",
+			"Value": "900",
+			"When": {"EvilMode": "false", "HasMod": "kath.weathering, Kana.WeatherWonders", "Weather": "kath.weathering_HeatWave, Kana.WeatherWonders_Heatwave"}
+		},
+		{
+			"Name": "WeatherFactor",
+			"Value": "750",
+			"When": {"EvilMode": "false", "HasMod": "kath.weathering, Kana.WeatherWonders", "Weather": "kath.weathering_Blizzard, kath.weathering_Hail, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Hailstorm"}
+		},
+		{
+			"Name": "WeatherFactor",
+			"Value": "450",
+			"When": {"EvilMode": "false", "Weather": "Snow"}
+		},
+		{
+			"Name": "WeatherFactor",
+			"Value": "-500",
+			"When": {"EvilMode": "false", "Weather": "Rain, Storm"}
+		},
+		{
+			"Name": "WeatherFactor",
+			"Value": "1250",
+			"When": {"EvilMode": "true"}
+		},
+		{
+			"Name": "WeatherFactor",
+			"Value": "{{Query: 900 * 2.5}}",
+			"When": {"EvilMode": "true", "HasMod": "kath.weathering, Kana.WeatherWonders", "Weather": "kath.weathering_HeatWave, Kana.WeatherWonders_Heatwave"}
+		},
+		{
+			"Name": "WeatherFactor",
+			"Value": "{{Query: 750 * 2.5}}",
+			"When": {"EvilMode": "true", "HasMod": "kath.weathering, Kana.WeatherWonders", "Weather": "kath.weathering_Blizzard, kath.weathering_Hail, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Hailstorm"}
+		},
+		{
+			"Name": "WeatherFactor",
+			"Value": "{{Query: 450 * 2.5}}",
+			"When": {"EvilMode": "true", "Weather": "Snow"}
+		},
+		{
+			"Name": "WeatherFactor",
+			"Value": "{{Query: -500 * -0.5}}",
+			"When": {"EvilMode": "true", "Weather": "Rain, Storm"}
+		},
+//Multiplier
+		{
+			"Name": "WeatherFactor2",
+			"Value": "1",
+			"When": {"EvilMode": "false"}
+		},
+		{
+			"Name": "WeatherFactor2",
+			"Value": "0.5",
+			"When": {"EvilMode": "false", "Weather": "Rain, Storm"}
+		},
+		{
+			"Name": "WeatherFactor2",
+			"Value": "1.5",
+			"When": {"EvilMode": "false", "HasMod": "kath.weathering, Kana.WeatherWonders", "Weather": "kath.weathering_Blizzard, kath.weathering_Hail, Snow, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Hailstorm", "Year |contains=1": false}
+		},
+		{
+			"Name": "WeatherFactor2",
+			"Value": "2",
+			"When": {"EvilMode": "false", "HasMod": "kath.weathering, Kana.WeatherWonders", "Weather": "kath.weathering_HeatWave, Kana.WeatherWonders_Heatwave", "Year |contains=1": false}
+		},
+		{
+			"Name": "WeatherFactor2",
+			"Value": "5",
+			"When": {"EvilMode": "true"}
+		},			
+		{
+			"Name": "WeatherFactor2",
+			"Value": "{{Query: 0.5 * 3.5}}",
+			"When": {"EvilMode": "true", "Weather": "Rain, Storm"}
+		},
+		{
+			"Name": "WeatherFactor2",
+			"Value": "{{Query: 1.5 * 3.5}}",
+			"When": {"EvilMode": "true", "HasMod": "kath.weathering, Kana.WeatherWonders", "Weather": "kath.weathering_Blizzard, kath.weathering_Hail, Snow, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Hailstorm", "Year |contains=1": false}
+		},
+		{
+			"Name": "WeatherFactor2",
+			"Value": "{{Query: 2 * 3.5}}",
+			"When": {"EvilMode": "true", "HasMod": "kath.weathering, Kana.WeatherWonders", "Weather": "kath.weathering_HeatWave, Kana.WeatherWonders_Heatwave", "Year |contains=1": false}
+		},		
+//Amount
+		{
+			"Name": "RichnessFactor",
+			"Value": "1000"
+		},
+		{
+			"Name": "RichnessFactor",
+			"Value": "5500",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: PLAYER_HAS_ACHIEVEMENT Current 0": "true" }
+		},		
+		{
+			"Name": "RichnessFactor",
+			"Value": "25000",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: PLAYER_HAS_ACHIEVEMENT Current 1": "true" }
+		},	
+		{
+			"Name": "RichnessFactor",
+			"Value": "55000",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: PLAYER_HAS_ACHIEVEMENT Current 2": "true" }
+		},	
+		{
+			"Name": "RichnessFactor",
+			"Value": "150000",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: PLAYER_HAS_ACHIEVEMENT Current 3": "true" }
+		},
+		{
+			"Name": "RichnessFactor",
+			"Value": "550000",
+			"When": {"EvilMode": "false", "Esca.EMP/GameStateQuery: PLAYER_HAS_ACHIEVEMENT Current 4": "true" }
+		},
+		{
+			"Name": "RichnessFactor",
+			"Value": "{{Query: 1000 * 1.75}}",
+			"When": {"EvilMode": "true" }
+		},		
+		{
+			"Name": "RichnessFactor",
+			"Value": "{{Query: 5500 * 1.75}}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: PLAYER_HAS_ACHIEVEMENT Current 0": "true" }
+		},		
+		{
+			"Name": "RichnessFactor",
+			"Value": "{{Query: 25000 * 1.75}}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: PLAYER_HAS_ACHIEVEMENT Current 1": "true" }
+		},	
+		{
+			"Name": "RichnessFactor",
+			"Value": "{{Query: 55000 * 1.75}}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: PLAYER_HAS_ACHIEVEMENT Current 2": "true" }
+		},	
+		{
+			"Name": "RichnessFactor",
+			"Value": "{{Query: 150000 * 1.75}}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: PLAYER_HAS_ACHIEVEMENT Current 3": "true" }
+		},
+		{
+			"Name": "RichnessFactor",
+			"Value": "{{Query: 550000 * 1.75}}",
+			"When": {"EvilMode": "true", "Esca.EMP/GameStateQuery: PLAYER_HAS_ACHIEVEMENT Current 4": "true" }
+		},		
+//Fixed
+		{
+			"Name": "MarriageFactor",
+			"Value": "1"
+		},
+		{
+			"Name": "MarriageFactor",
+			"Value": "2",	
+			"When": {"HasValue:{{spouse}}": "true" }		
+		},			
+//Multiplayer
+		{
+			"Name": "MuliplayerFactor",
+			"Value": "1"
+		},
+		{
+			"Name": "MuliplayerFactor",
+			"Value": "{{MultiplayerPlayers}}",
+			"When": {"Esca.EMP/GameStateQuery: !Spiderbuttons.BETAS_USING_SEPARATE_WALLETS": "true"}
+		},	
+//
+//Base Base
+		{
+			"Name": "WinterGraceBilling",
+			"Value": "0",
+			"When": {"Season |contains=winter":false}
+		},
+		{
+			"Name": "WinterGraceBilling",
+			"Value": "125",
+			"When": {"EvilMode": "false", "Season": "winter"}
+		},
+		{
+			"Name": "WinterGraceBilling",
+			"Value": "325",
+			"When": {"EvilMode": "true", "Season": "winter"}
+		},
+		//
+		{
+			"Name": "GraceBilling",
+			"Value": "1"
+		},
+		{
+			"Name": "GraceBilling",
+			"Value": "{{Round: {{Query: (325 + {{WinterGraceBilling}}) * {{BaseM}} }} }}",
+			"When": {"EvilMode": "false"}
+		},
+		{
+			"Name": "GraceBilling",
+			"Value": "{{Round: {{Query: (675 + {{WinterGraceBilling}}) * {{BaseM}} }} }}",
+			"When": {"EvilMode": "true"}
+		},
+		//
+		{
+			"Name": "GraceEndPlus",
+			"Value": "Fall 1 1",
+			"When": {"GraceEnd": "Summer 28"}
+		},
+		{
+			"Name": "GraceEndPlus",
+			"Value": "Spring 1 2",
+			"When": {"GraceEnd": "Winter 28"}
+		},
+		//
+		{
+			"Name": "GraceExtend",
+			"Value": "Spring, Summer",
+			"When": {"GraceEnd": "Summer 28"}
+		},
+		{
+			"Name": "GraceExtend",
+			"Value": "Spring, Summer, Fall, Winter",
+			"When": {"GraceEnd": "Winter 28"}
+		},				
+//Base
+		{
+			"Name": "BaseNumber",
+			"Value": "2150",
+			"When": {"EvilMode": "false"}
+		},	
+		{
+			"Name": "BaseNumber",
+			"Value": "5675",
+			"When": {"EvilMode": "true"}
+		},	
+		{
+			"Name": "BaseNumberWinter",
+			"Value": "455",
+			"When": {"EvilMode": "false"}
+		},	
+		{
+			"Name": "BaseNumberWinter",
+			"Value": "1020",
+			"When": {"EvilMode": "true"}
+		},
+		{
+			"Name": "BaseNumberWeekly",
+			"Value": "1225",
+			"When": {"EvilMode": "false"}
+		},	
+		{
+			"Name": "BaseNumberWeekly",
+			"Value": "2525",
+			"When": {"EvilMode": "true"}
+		},			
+//Base
+//((Base + (WeatherFactor1 x WeatherFactor2) + GIFactor + CropMultiplier + (BuildingUpgraded x BuildingMultiplier) + RichnessFactor) / MarriageFactor) x BaseM
+//Evil
+//((Base + (WeatherFactor1 x WeatherFactor2) + (GIFactor x CropMultiplier) + (BuildingUpgraded x BuildingMultiplier) + RichnessFactor) / MarriageFactor) x BaseM
+//Winter changes GIFactor to fixed 1.5
+//WeatherFactor2 to fixed 2
+//2150 5675
+		{
+			"Name": "BillingServices",
+			"Value": "12345"
+		},
+		{
+			"Name": "BillingServices",
+			"Value": "{{Round: {{Query: (((({{BaseNumber}} + ({{WeatherFactor}} * {{WeatherFactor2}}) + {{GIFactor}} + {{CropMultiplier}} + ({{BuildingUpgraded}} * {{BuildingMultiplier}}) + {{RichnessFactor}}) / {{MarriageFactor}}) * {{BaseM}}) / {{MuliplayerFactor}}) - {{TotalSubsidies}} }} }}",
+			"When": {"EvilMode": "false"}
+		},
+		{
+			"Name": "BillingServices",
+			"Value": "{{Round: {{Query: (((({{BaseNumber}} + ({{WeatherFactor}} * {{WeatherFactor2}}) + ({{GIFactor}} * {{CropMultiplier}}) + ({{BuildingUpgraded}} * {{BuildingMultiplier}}) + {{RichnessFactor}}) / {{MarriageFactor}}) * {{BaseM}}) / {{MuliplayerFactor}}) - {{TotalSubsidies}} }} }}",
+			"When": {"EvilMode": "true"}
+		},
+//455 1050
+		{
+			"Name": "BillingWinter",
+			"Value": "1234"
+		},
+		{
+			"Name": "BillingWinter",
+			"Value": "{{Round: {{Query: ((((({{BaseNumberWinter}} + ({{WeatherFactor}} * {{WeatherFactor2}}) + {{GIFactor}} + {{CropMultiplier}} + ({{BuildingUpgraded}} * {{BuildingMultiplier}}) + {{RichnessFactor}}) / {{MarriageFactor}}) * {{BaseM}}) / 4) / {{MuliplayerFactor}}) - ({{TotalSubsidies}} / 4) }} }}",
+			"When": {"EvilMode": "false"}
+		},
+		{
+			"Name": "BillingWinter",
+			"Value": "{{Round: {{Query: ((((({{BaseNumberWinter}} + ({{WeatherFactor}} * {{WeatherFactor2}}) + ({{GIFactor}} * {{CropMultiplier}}) + ({{BuildingUpgraded}} * {{BuildingMultiplier}}) + {{RichnessFactor}}) / {{MarriageFactor}}) * {{BaseM}}) / 4) / {{MuliplayerFactor}}) - ({{TotalSubsidies}} / 4) }} }}",
+			"When": {"EvilMode": "true"}
+		},
+//1225 2525
+		{
+			"Name": "BillingWeekly",
+			"Value": "123"
+		},
+		{
+			"Name": "BillingWeekly",
+			"Value": "{{Round: {{Query: (({{BillingServices}} - {{BillingWinter}} + {{BaseNumberWeekly}}) / 4) / {{MuliplayerFactor}} }} }}",
+			"When": {"EvilMode": "false"}
+		},
+		{
+			"Name": "BillingWeekly",
+			"Value": "{{Round: {{Query: (({{BillingServices}} - {{BillingWinter}} + {{BaseNumberWeekly}} ) / 4) / {{MuliplayerFactor}} }} }}",
+			"When": {"EvilMode": "true"}
+		},		
+//This is cosmetic
+		{
+			"Name": "CropRange",
+			"Value": "0"
+		},
+		{
+			"Name": "CropRange",
+			"Value": "1",
+			"When": {"Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_TOTAL_CROPS 0 30": "true"}
+		},
+		{
+			"Name": "CropRange",
+			"Value": "31",
+			"When": {"Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_TOTAL_CROPS 31 100": "true"}
+		},
+		{
+			"Name": "CropRange",
+			"Value": "101",
+			"When": {"Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_TOTAL_CROPS 101": "true"}
+		},
+		//
+		{
+			"Name": "PartnershipConfirm",
+			"Value": "No"
+		},
+		{
+			"Name": "PartnershipConfirm",
+			"Value": "Yes",	
+			"When": {"HasValue:{{spouse}}": "true"}		
+		},
+		{
+			"Name": "PartnershipConfirm",
+			"Value": "No",	
+			"When": {"Esca.EMP/GameStateQuery: Spiderbuttons.BETAS_USING_SEPARATE_WALLETS": "true", "HasValue:{{spouse}}": "false"}		
+		},			
+		{
+			"Name": "PartnershipConfirm",
+			"Value": "Yes",	
+			"When": {"MultiplayerPlayers |contains=2,3,4,5,6,7,8": true, "Esca.EMP/GameStateQuery: !Spiderbuttons.BETAS_USING_SEPARATE_WALLETS": "true"}		
+		},
+		//
+		{
+			"Name": "MarriageAddition",
+			"Value": "0"
+		},
+		{
+			"Name": "MarriageAddition",
+			"Value": "1",
+			"When": {"HasValue:{{spouse}}": "true"}	
+		},				
+		//
+		{
+			"Name": "GIVisit",
+			"Value": "No"
+		},			
+		{
+			"Name": "GIVisit",
+			"Value": "Yes",
+			"When": {"HasVisitedLocation": "IslandSouth"}
+		},			
+		//
+		{
+			"Name": "CropNumber",
+			"Value": "{{i18n:CropShipped}}: {{Esca.EMP/PlayerStat: cropsShipped}}^{{i18n:BeveragesMade}}: {{Esca.EMP/PlayerStat: beveragesMade}}^{{i18n:PreservesMade}}: {{Esca.EMP/PlayerStat: preservesMade}}^{{i18n:SeedsSown}}: {{Esca.EMP/PlayerStat: seedsSown}}^{{i18n:ItemsCooked}}: {{Esca.EMP/PlayerStat: itemsCooked}}^{{i18n:CropFactor}}: {{BETASFactor}} {{i18n:Crops}} {{CropRange}}"
+		},	
+        {
+			"Name": "Subsidy",
+			"Value": "{{i18n:subsidies}}:^{{i18n:solarPanels}}: {{Query: {{SolarPanelCheck}} + {{WindTurbineCheck}} }}^{{i18n:recycling}}: {{Esca.EMP/PlayerStat: piecesOfTrashRecycled}}^{{i18n:slimesKilled}}: {{Query: {{Esca.EMP/PlayerStat: slimesKilled}} / 2 }}"
+		},	
+		{
+			"Name": "WeatherNumber",
+			"Value": "{{i18n:WeatherFactor}}: {{Query: {{WeatherFactor}} * {{WeatherFactor2}} }}"
+		},	
+		{
+			"Name": "NetProfitNumber",
+			"Value": "{{i18n:RichnessFactor}}: {{RichnessFactor}}^{{i18n: PartnershipFactor}}: {{PartnershipConfirm}}"
+		},	
+		{
+			"Name": "PartnershipNumber",
+			"Value": "{{i18n:MultiplayerPlayers}}: {{Query: {{MultiplayerPlayers}} + {{MarriageAddition}} }}"
+		},		
+		{
+			"Name": "LandNumber",
+			"Value": "{{i18n:LandUse}}: {{Query: {{BuildingMultiplier}} + {{BuildingUpgraded}} + {{GIFactor}} }}^{{i18n:GIVisit}}: {{GIVisit}}"
+		},	
+		{
+			"Name": "BaseBaseNumbers",
+			"Value": "{{i18n:BaseService}}: {{BaseNumber}}^{{i18n:BaseWeekly}}: {{BaseNumberWeekly}}"
+		},
+		{
+			"Name": "BaseBaseNumbers",
+			"Value": "{{i18n:BaseService}}: {{BaseNumber}}^{{i18n:BaseWeekly}}: {{BaseNumberWeekly}}^{{i18n:BaseWinter}}: {{BaseNumberWinter}}",
+			"When": {"Season": "winter"}
+		},
+		{
+			"Name": "BillingCharge",
+			"Value": "{{Query: ({{BillingServices}} - {{BillingWinter}}) + {{BaseNumberWeekly}} }}"
+		},		
+		{
+			"Name": "WinterSurcharge",
+			"Value": "{{i18n:NoWinterSurcharge}}"
+		},
+		{
+			"Name": "WinterSurcharge",
+			"Value": "{{i18n:WinterSurcharge}}: {{Query: {{BillingWinter}} * 4}}",
+			"When": {"Season": "winter"}
+		}						
+		],
+   
+	"Changes": [
+		
+//Visuals
+		{
+      		"LogName": "Load Buff Icon",
+			"Action": "Load",
+			"Target": "Mods/kath.billing/Buff",
+			"FromFile": "assets/Buffs.png"
+		},
+		{
+      		"LogName": "Load Mail BG",
+			"Action": "Load",
+			"Target": "Mods/kath.billing/Letters",
+			"FromFile": "assets/Letter_Blank.png"
+		},
+		{
+      		"LogName": "Edit Mail BG",
+			"Action": "EditImage",
+			"Target": "Mods/kath.billing/Letters",
+			"FromFile": "assets/Letter_en.png",
+			"When": {"Language": "en"}
+		},		
+		{
+      		"LogName": "Edit Mail BG",
+			"Action": "EditImage",
+			"Target": "Mods/kath.billing/Letters",
+			"FromFile": "assets/Letter_{{language}}.png",
+			"When": {"HasFile:assets/Letter_{{language}}.png": "true"}
+		},
+		
+	
+//Adding Loading
+        {
+      	    "LogName": "Load Mail",
+			"Action": "Include",
+			"FromFile": "Data/mail.json"
+		},
+        {
+			"LogName": "Load Furniture",
+		  	"Action": "Include",
+		  	"FromFile": "Data/furniture.json"
+	  	},		
+        {
+      	    "LogName": "Add On :3",
+			"Action": "Include",
+			"FromFile": "Data/charityaddon.json",
+			"When": {"HasMod": "Aimon111.CharityDSA"}
+		}	
+		
+//End
+    ]
+}

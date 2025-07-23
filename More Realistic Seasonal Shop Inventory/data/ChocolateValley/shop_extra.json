@@ -1,0 +1,88 @@
+{
+	"Changes": [
+		//Entries
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Traveler","Items"],
+      "When": {"HasValue: ChocoValley_RubyCacaoSeeds": "true"},
+      "MoveEntries": [
+          { "ID": "ChocoValley_RubyCacaoSeeds", "AfterID": "(O)347" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+      				"HasValue: ChocoValley_CacaoSeeds": true,
+      				"HasMod |contains=boringvlln.rshops": false,
+      				},
+      "MoveEntries": [
+          { "ID": "ChocoValley_CacaoSeeds", "ToPosition": "Top" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ChocoValley_CacaoSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "ChocoValley_CacaoSeeds", "BeforeID": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: ChocoValley_CacaoSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "ChocoValley_CacaoSeeds", "BeforeID": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+      				"HasValue: ChocoValley_Water": true,
+      				"HasMod |contains=boringvlln.rshops": false,
+      				},
+      "MoveEntries": [
+          { "ID": "ChocoValley_Water", "BeforeID": "(O)247" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+      				"HasValue: ChocoValley_Water": true,
+      				"HasMod |contains=boringvlln.rshops": true,
+      				},
+      "MoveEntries": [
+          { "ID": "ChocoValley_Water", "AfterID": "boringvlln.rshops_JuicesP" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+      				"HasValue: ChocoValley_Water": true,
+      				"HasMod |contains=boringvlln.rshops": true,
+      				"HasSeenEvent: AnyPlayer": "191393"
+      				},
+      "MoveEntries": [
+          { "ID": "ChocoValley_Water", "AfterID": "boringvlln.rshops_JuicesPComm" }
+      ]
+    }
+	]
+}

@@ -1,0 +1,31 @@
+{
+	"Changes":[
+		{
+			"LogName": "Haley - Flower Dance, Ask Dialogue, Not Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"Event.cs.1738": "{{i18n:FDAR.DSV.Haley.Ask}}",
+			},
+			"When": {
+				"HasMod": "DSV.Core",
+				"DSV.Core/FlowerQueen |contains= Haley": false,
+				"Haley": "enabled",
+			},
+		},
+		{
+			"LogName": "Haley - Flower Dance, Ask Dialogue, Not Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"Event.cs.1738": "{{i18n:FDAR.DSV.Haley.Ask.High}}",
+			},
+			"When": {
+				"HasMod": "DSV.Core",
+				"Hearts:Haley": "6, 7, 8",
+				"DSV.Core/FlowerQueen |contains= Haley": false,
+				"Haley": "enabled",
+			},
+		},
+	],
+}

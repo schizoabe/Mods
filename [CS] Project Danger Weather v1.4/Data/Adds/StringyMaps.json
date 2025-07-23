@@ -1,0 +1,257 @@
+{
+	"Changes": [	
+	{
+		"LogName": "Change message",
+		"Action": "EditData",
+		"Target": "Strings/StringsFromCSFiles",
+		"Entries": {
+		 	"Festival.Info": "{{FestivalInfo}}",
+		  	"Festival.Name": "{{FestivalName}}",
+		  	"Festival.NamePlus": "{{FestivalNamePlus}}",
+			"Wind.Forecast": "{{WindForecast}}",
+			"GreenRain.Name": "{{GreenRainName}}"
+		}
+	},	
+	{
+		"LogName": "Change Original",
+		"Action": "EditData",
+		"Target": "Strings/Objects",
+		"Entries": {
+		 	"RainTotem_Name": "{{i18n:Patch.Rain}} {{TotemOrTome}}"
+		}
+	},		
+	{
+		"LogName": "Map Strings",
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+		"Priority": "Early",
+		"Entries": {
+		"Flood.1": "{{i18n: Flooding.Message1}}",
+		"Flood.2": "{{i18n: Flooding.Message2}}",
+		
+		"Flood.Island1": "{{i18n: Flooding.Island1}}",
+		"Flood.Island2": "{{i18n: Flooding.Island2}}",
+		"Flood.Island3": "{{i18n: Flooding.Island3}}",
+		"PostFlood.Island": "{{i18n: PostFlooding.Island}}",
+		
+		"Dryness.1": "{{i18n: Dry.Message1}}",
+		"Dryness.2": "{{i18n: Dry.Message2}}",
+		"Post.Dryness": "{{i18n: PostDry.Message}}",
+
+		"Lava.Flow1": "{{i18n: Lava.Flow1}}",
+		"Lava.Flow2": "{{i18n: Lava.Flow2}}",
+		"Lava.Flow3": "{{i18n: Lava.Flow3}}",
+		
+		"Fire.Warn1": "{{i18n: Fire.Warn1}}",
+		"Fire.Warn2": "{{i18n: Fire.Warn2}}",
+		"PostFire.Warn": "{{i18n: PostFire.Warn}}",
+		
+		"BuildStationMessage2": "{{i18n: BuildStationMessage2}}",
+		"BuildStationMessage1": "{{i18n: BuildStationMessage1.Modified}}",
+		
+		"BuildArrayMessage2": "{{i18n: ManaStoneInv2}}",
+		"BuildArrayMessage1": "{{i18n: ManaStoneInv1}}",
+
+		"Monsoon.Bus": "{{i18n:Monsoon.Bus}}",
+		"Monsoon.Boat": "{{i18n:Monsoon.Boat}}",
+		"Monsoon.Sewer": "{{i18n:Monsoon.Sewer}}",
+		"Monsoon.Flood": "{{i18n:Monsoon.Flood}}",
+		"Monsoon.Notice": "{{i18n:Monsoon.Notice}}"
+		}
+	},
+	
+	{
+		"LogName": "Map Strings",
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+		"Priority": "Late",
+		"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+				"HasMod": "Esca.EMP"
+			},
+		"Entries": {
+		"Flood.2": "{{i18n: PostFlood.Message}}"
+		}
+	},
+	{
+		"LogName": "Map Strings",
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+		"Priority": "Late",
+		"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_Hurry}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_Hurry}}' = 'true'": true,
+				"HasMod": "Esca.EMP"
+			},
+		"Entries": {
+		"Flood.Island1": "{{i18n: PostFlooding.Island}}"
+		}
+	},
+	{
+		"LogName": "Map Strings",
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+		"Priority": "Late",
+		"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+				"HasMod": "Esca.EMP"
+			},
+		"Entries": {
+		"Dryness.1": "{{i18n: PostDry.Message}}"
+		}
+	},
+	{
+		"LogName": "Map Strings",
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+		"Priority": "Late",
+		"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_Wildfire}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_Wildfire}}' = 'true'": true,
+				"HasMod": "Esca.EMP"
+			},
+		"Entries": {
+		"Fire.Warn1": "{{i18n: PostFire.Warn}}",
+		"Fire.Warn2": "{{i18n: PostFire.Warn}}"
+		}
+	},
+	
+	//Jas Jump Rope Fire
+		{	
+		"LogName": "Jas Stay Home",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Jas",
+			"When": {
+			"AddWeather": "wildfire",
+			"Weather": "kath.weathering_Wildfire"
+			},		
+		"Entries": {
+			"summer": "GOTO rain",
+			"winter_15": "GOTO rain",
+			"Sat": "GOTO rain",
+			"spring": "900 AnimalShop 7 5 0/1100 AnimalShop 16 16 2 square_3_3/1500 AnimalShop 8 17 3 jas_read/1900 AnimalShop 4 7 2/2100 AnimalShop 1 7 3 jas_sleep"
+			}
+		},	
+		
+	//Pam Bus Rainy Heavy
+		{
+		"LogName": "Pam Sign Edit",
+		"Action": "EditData",
+		"Target": "Strings/1_6_Strings",
+			"When": {
+			"PretendFlooding": "true",
+			"Weather": "kath.weathering_HeavyRain"
+			},
+		"Entries": {
+		"Pam_busSign_generic": "{{i18n: Flooding.PamSign}}"
+			}
+		},
+		{	
+		"LogName": "No Bus Pam",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Pam",
+			"When": {
+			"PretendFlooding": "true",
+			"Weather": "kath.weathering_HeavyRain"
+			},		
+		"Entries": {
+			"bus": "GOTO rain"
+			}
+		},
+		
+		//Lance Lava
+	{	
+		"LogName": "Not in the lava Lance",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Lance",
+		"Priority": "Late",
+		"When": {
+				"PretendLava": "true",
+				"Query: '{{Weather |contains=kath.weathering_AshSummon}}' = 'true' OR '{{HasFlag |contains=VolcanoEruption}}' = 'true'": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			},
+		"Entries": {
+			"Thu": "GOTO Wed",
+			"Fri": "GOTO Wed"
+			}
+	},
+
+	//Monsoon Changes	
+	{
+		"LogName": "Map Strings",
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+		"Priority": "Late",
+		"When": {
+			"Day": "16,19",
+			"Season": "summer",
+			"Year": "2"
+		},
+		"Entries": {
+		"Monsoon.Notice": "{{i18n:Monsoon.Notice2}}"
+		}
+	},	
+	{
+		"LogName": "Map Strings",
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+		"Priority": "Late",
+		"When": {
+			"Day": "3,4,9,10",
+			"Season": "fall",
+			"Year": "{{Range:4,100}}"
+		},
+		"Entries": {
+		"Monsoon.Notice": "{{i18n:Monsoon.Notice2}}"
+		}
+	},
+	//
+	{
+		"LogName": "Pam Sign Edit",
+		"Action": "EditData",
+		"Target": "Strings/1_6_Strings",
+			"When": {
+			"PretendFlooding": "true",
+			"Weather": "kath.weathering_HeavyRainMonsoon"
+			},
+		"Entries": {
+		"Pam_busSign_generic": "{{i18n: Flooding.PamSign}}"
+			}
+	},
+	{	
+		"LogName": "No Bus Pam",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Pam",
+			"When": {
+			"PretendFlooding": "true",
+			"Weather": "kath.weathering_HeavyRainMonsoon"
+			},		
+		"Entries": {
+			"bus": "GOTO rain"
+			}
+	},
+	//
+	{
+		"LogName": "Pam Sign Edit",
+		"Action": "EditData",
+		"Target": "Strings/1_6_Strings",
+			"When": {
+			"PretendFlooding": "true",
+			"Weather": "kath.weathering_Monsoon"
+			},
+		"Entries": {
+		"Pam_busSign_generic": "{{i18n: Flooding.PamSign}}"
+			}
+	},
+	{	
+		"LogName": "No Bus Pam",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Pam",
+			"When": {
+			"PretendFlooding": "true",
+			"Weather": "kath.weathering_Monsoon"
+			},		
+		"Entries": {
+			"bus": "GOTO rain"
+			}
+	}
+]
+}

@@ -1,0 +1,68 @@
+{
+"Changes": [
+
+//Open the clinic for a little longer to Harvey's event easier to trigger
+{
+    "Action": "EditMap",
+    "Target": "Maps/Town",
+    "Priority": "Late",
+    "MapTiles": [
+        {
+            "Position": { "X": 36, "Y": 55 },
+            "Layer": "Buildings",
+            "SetProperties": {
+                "Action": "LockedDoorWarp 10 19 Hospital 900 2200"
+            }
+        }
+    ],
+},
+
+//Load audio
+{
+    "Action": "EditData",
+    "Target": "Data/AudioChanges",
+    "Entries": {
+        "{{ModId}}_Audio_NightMarketJazz": {
+            "ID": "{{ModId}}_NightMarketJazz",
+            "Category": "Music",
+            "FilePaths": [ "{{AbsoluteFilePath: assets/sound/TheConsouls_Night-Market-Jazz.ogg}}" ],
+            "StreamedVorbis": true,
+            "Looped": true
+        },
+    }
+},
+
+//Load map
+{
+     "Action": "Load",
+     "Priority": "Low",
+     "Target": "Maps/MM-HarveyWhite",
+     "FromFile": "assets/maps/HarveyRoom-HarveyWhite.tmx",
+},
+
+//HARVEY -- proposes in the clinic
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Hospital",
+    "Entries": {
+        "{{ModId}}_Proposal_Harvey/Dating Harvey/f Harvey 2500/t 1800 2200/c 1/LocalMail {{ModId}}_Letter_Harvey": "Hospital_Ambient/-1000 -1000/farmer -1000 -200 0 Harvey 6 6 0/--skippable/mailReceived {{ModId}}_StopBlack_Harvey/changeToTemporaryMap MM-HarveyWhite false/viewport 5 6 clamp true/pause 2000/playSound doorClose/warp farmer 6 12/move farmer 0 -3 0/faceDirection Harvey 2/speak Harvey \"{{i18n:White_Harvey.0}}\"/emote Harvey 56/speak Harvey \"{{i18n:White_Harvey.1}}\"/quickQuestion #{{i18n:White_Harvey.2}}#{{i18n:White_Harvey.3}}(break)pause 400\\speak Harvey \"{{i18n:White_Harvey.4}}\"(break)pause 100\\speak Harvey \"{{i18n:White_Harvey.5}}\"\\pause 200\\emote Harvey 60\\pause 1000\\speak Harvey \"{{i18n:White_Harvey.6}}\"/pause 200/emote farmer 32/pause 400/advancedMove farmer false 4 6000 1 2500 2 2000 5 0 0 1 2 500/advancedMove Harvey false 2 0 0 -1 4 4000 3 0 0 1 5 0 0 1 5 0 4 1000/pause 2000/playSound button_tap/pause 200/playMusic {{ModId}}_NightMarketJazz/waitForAllStationary/pause 2000/playSound doorCreak/pause 1800/playSound doorCreakReverse/pause 3000/advancedMove Harvey false -12 0 0 2 2 0 1 200/pause 2000/emote farmer 40/pause 1000/advancedMove farmer false 1 0 0 -1 3 500/waitForAllStationary/emote farmer 56/pause 1000/speak Harvey \"{{i18n:White_Harvey.7}}\"/pause 200/farmerEat 350/pause 3500/emote farmer 16/faceDirection farmer 3/pause 800/emote farmer 8/pause 800/speak Harvey \"{{i18n:White_Harvey.8}}\"/pause 800/emote farmer 32/pause 1000/faceDirection Harvey 3/pause 500/emote Harvey 60/pause 1800/faceDirection Harvey 1/speak Harvey \"{{i18n:White_Harvey.9}}\"/pause 400/faceDirection Harvey 1/stopMusic/pause 400/emote farmer 8/pause 1000/playMusic musicboxsong/pause 1800/speak Harvey \"{{i18n:White_Harvey.10}}\"/pause 100/faceDirection Harvey 2/pause 100/speak Harvey \"{{i18n:White_Harvey.11}}\"/pause 200/faceDirection Harvey 3/move Harvey -1 0 3/pause 2000/emote Harvey 40/pause 500/faceDirection Harvey 1/speak Harvey \"{{i18n:White_Harvey.12}}\"/pause 200/speed Harvey 1/move Harvey 1 0 1/pause 1800/playSound dwop/positionOffset Harvey 4 0/positionOffset Harvey 4 0/pause 800/message \"{{i18n:White_Harvey.13}}\"/pause 800/jump farmer/pause 1800/speak Harvey \"{{i18n:White_Harvey.14}}\"/pause 400/emote farmer 16/pause 200/speak Harvey \"{{i18n:White_Harvey.15}}\"/pause 800/question fork1  \"{{i18n:proposalResponse}}\"/fork {{ModId}}_Harvey_No/switchEvent {{ModId}}_Harvey_Yes",
+        }
+},
+{
+       "Action": "EditData",
+       "Target": "Data/Events/Temp",
+       "Entries": {
+           "{{ModId}}_Harvey_Yes": "emote Harvey 20/pause 200/message \"{{i18n:White_Harvey.YES.0 |Your={{Your}}}}\"/pause 200/speak Harvey \"{{i18n:White_Harvey.YES.1}}\"/positionOffset farmer -4 0/{{Farmer_Kiss_Left}}/{{Harvey_Kiss}}/emote Harvey 20/pause 200/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Harvey 4/pause 1000/pause 200/emote farmer 20/pause 1200/speak Harvey \"{{i18n:White_Harvey.YES.2}}\"/pause 400/message \"{{i18n:White_Harvey.YES.3}}\"/pause 400/speak Harvey \"{{i18n:White_Harvey.YES.4}}\"/pause 800/emote farmer 32/pause 1500/emote Harvey 32/globalFade/viewport -1000 -1000/pause 2000/action Kantrip.HeartActions_DoEngagement Harvey/action AddItem 460/pause 4000/stopMusic/end/",
+        
+        "{{ModId}}_Harvey_No": "stopAnimation Harvey 4/speed Harvey 2/jump Harvey/emote Harvey 16/pause 800/emote Harvey 28/pause 2000/speak Harvey \"{{i18n:White_Harvey.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_Harvey_notReady(break)switchEvent {{ModId}}_Harvey_noMarriage(break)switchEvent {{ModId}}_Harvey_breakup/",
+        
+        "{{ModId}}_Harvey_notReady": "pause 400/emote Harvey 60/pause 800/speak Harvey \"{{i18n:White_Harvey.NO1.0}}\"/pause 500/speak Harvey \"{{i18n:White_Harvey.NO1.1}}\"/pause 200/emote farmer 32/pause 400/emote Harvey 32/pause 200/speak Harvey \"{{i18n:White_Harvey.NO1.2}}\"/pause 200/{{Farmer_Kiss_Left}}/{{Harvey_Kiss}}/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end",
+        
+        "{{ModId}}_Harvey_noMarriage": "pause 200/speak Harvey \"{{i18n:White_Harvey.NO2.0}}\"/pause 200/faceDirection Harvey 3/emote Harvey 40/pause 2000/faceDirection Harvey 1/pause 100/speak Harvey \"{{i18n:White_Harvey.NO2.1}}\"/pause 200/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_Harvey_breakup": "pause 400/playSound dwop/positionOffset Harvey -2 0/pause 100/positionOffset Harvey -2 0/pause 100/positionOffset Harvey -2 0/pause 100/playSound dwop/positionOffset Harvey -2 0/pause 100/positionOffset Harvey -2 0/pause 100/positionOffset Harvey -2 0/pause 1500/faceDirection Harvey 2/shake Harvey 500/pause 1000/emote Harvey 28/pause 2500/faceDirection Harvey 1/speak Harvey \"{{i18n:White_Harvey.NO3.0}}\"/move Harvey -4 0 3/pause 800/shake Harvey 500/pause 3000/faceDirection Harvey 1/pause 500/speak Harvey \"{{i18n:White_Harvey.NO3.1}}\"/pause 100/faceDirection Harvey 0/pause 1000/move Harvey 0 -2 0/pause 800/shake Harvey 500/pause 1500/speak Harvey \"{{i18n:White_Harvey.NO3.2}}\"/pause 1200/advancedMove farmer false 0 1 -6 0 0 2/pause 2500/action Kantrip.HeartActions_DoBreakup Harvey/friendship Harvey -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+
+]
+}

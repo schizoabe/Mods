@@ -1,0 +1,20 @@
+{
+	"Changes": [
+    {
+		"Action": "EditData",
+		"Target": "Characters/schedules/Demetrius",
+		"Priority": "Late",
+		"When": {"Weather": "kath.weathering_Darkness, kath.weathering_HeavyRain, kath.weathering_Locust, kath.weathering_Blizzard, kath.weathering_Hail"},
+      "Entries": {
+		  "summer_25": "GOTO rain",
+		  "Fri": "GOTO rain",
+		  "winter": "GOTO rain",
+		  "fall": "GOTO rain",
+		  "summer": "GOTO rain",
+		  "spring": "750 ScienceHouse 16 19 2 demetrius_read/1100 ScienceHouse 22 20 1 demetrius_notes/1500 ScienceHouse 7 18 1/1540 ScienceHouse 22 20 1/1800 ScienceHouse 27 9 0/1920 ScienceHouse 28 9 0/2000 ScienceHouse 15 4 0/2200 ScienceHouse 19 4 11 demetrius_sleep"
+
+      },
+    },
+
+]
+}

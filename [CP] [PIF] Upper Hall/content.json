@@ -1,0 +1,40 @@
+{
+    "Format": "2.0.0",
+ 
+    "Changes": [
+		{
+			"Action": "EditData",
+			"Target": "DLX.PIF/Farms",
+			"Entries": {
+				"ESE.Hall": {
+					"DisplayName": "Upper Hall",
+					"DefaultArrivalTile": { "X": 13, "Y": 39 },
+					"CanPlantHere": true,
+					"ExcludeFromNpcPathfinding": true,
+					"MaxDailyWeeds": 0,
+					
+					"ArrivalTile_T0": { "X": 13, "Y": 39 },
+					"ArrivalTile_T1": { "X": 13, "Y": 39 },
+					"ArrivalTile_T2": { "X": 13, "Y": 39 },
+					
+					"MapAsset_T0": "Maps/PIF/ESE.HallT0",
+					"MapAsset_T1": "Maps/PIF/ESE.HallT1",
+					"MapAsset_T2": "Maps/PIF/ESE.HallT2",
+					
+					"Preview": "ESE.Hall_Preview",
+				}
+			}
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/PIF/ESE.HallT0, Maps/PIF/ESE.HallT1, Maps/PIF/ESE.HallT2",
+			"FromFile": "assets/{{TargetWithoutPath}}.tmx"
+		},
+		{
+			"Action": "Load",
+			"Target": "ESE.Hall_Preview",
+			"FromFile": "assets/Preview.png"
+		}
+
+    ]
+}

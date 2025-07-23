@@ -1,0 +1,39 @@
+﻿{
+    "Format": "2.0.0",
+    "Changes": [
+		{
+			"Action": "EditData",
+			"Target": "DLX.PIF/Farms",
+			"Entries": {
+				"LMMM.Bathroom": {
+					"DisplayName": "Simple Bathroom",
+					"DefaultArrivalTile": { "X": 2, "Y": 8 },
+					"CanPlantHere": true,
+					"ExcludeFromNpcPathfinding": true,
+					"MaxDailyWeeds": 0,
+					
+					"ArrivalTile_T0": { "X": 2, "Y": 8 },
+					"ArrivalTile_T1": { "X": 2, "Y": 8 },
+					"ArrivalTile_T2": { "X": 2, "Y": 8 },
+					
+					"MapAsset_T0": "Maps/PIF/LMMM.BathroomT0",
+					"MapAsset_T1": "Maps/PIF/LMMM.BathroomT1",
+					"MapAsset_T2": "Maps/PIF/LMMM.BathroomT1",
+
+					
+					"Preview": "LMMM.Bathroom_Preview"
+				}
+			}
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/PIF/LMMM.BathroomT0, Maps/PIF/LMMM.BathroomT1, Maps/PIF/LMMM.BathroomT2",
+			"FromFile": "assets/{{TargetWithoutPath}}.tmx"
+		},
+		{
+			"Action": "Load",
+			"Target": "LMMM.Bathroom_Preview",
+			"FromFile": "assets/Preview.png"
+		}
+    ]
+}

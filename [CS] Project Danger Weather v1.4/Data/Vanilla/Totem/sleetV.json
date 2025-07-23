@@ -1,0 +1,149 @@
+{
+	"Changes": [
+
+		{
+      		"LogName": "The Weather Data Vanilla Totem SLEET",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"When": {"HasMod |contains=Kana.WeatherWonders": false},
+			"Entries": {	
+				"kath.weathering_Sleet": {
+					"Id": "kath.weathering_Sleet",
+					"DisplayName": "{{i18n: Weather.Sleet}}",
+
+					"Forecast": "{{i18n: Weather.Sleet.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Sleet.Forecast}}", "Desert": "{{i18n: Weather.Sleet.Forecast}}",},					
+					
+					"UseNightTiles":true,
+					"IsSnowing": false,
+					"IsRaining": true,
+					"IsLightning": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": null,
+					"SpawnClouds": null,
+
+					//"LightingTint": "orangered",
+					//"LightingTintOpacity": 0.35,
+					//"PostLightingTint": "blue",
+					//"PostLightingTintOpacity": 0.16,
+
+					"MusicOverride": "rain",					
+					"MusicFrequencyOutside": 85,
+					"MusicFrequencyInside": 15,
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 104},
+					"TVFrames": 4,
+					
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 72},
+
+					"TotemMessage": "{{i18n: Weather.SleetTotem}}",
+					"TotemScreenTint": "154, 237, 237",
+					"TotemSound": "breakingGlass",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDSleet 2",
+							],
+						},		
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "SnowPart1",
+							"Condition": "LOCATION_CONTEXT Here Default Lemurkat_EastScarp, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 48, "Y": 16, "Width": 16, "Height": 16 },
+							"Speed": "-0.02, 0.03",
+							"ViewSpeed": "-1, -1",
+							"Opacity": 0.85,
+							"Scale": 5,
+						},	
+						{
+							"Id": "SnowPart2",
+							"Condition": "LOCATION_CONTEXT Here Default Lemurkat_EastScarp, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 16, "Y": 16, "Width": 16, "Height": 16 },
+							"Speed": "0.01, 0.02",
+							"ViewSpeed": "-1, -1",
+							"Opacity": 1.0,
+							"Scale": 6,
+						},	
+						{
+							"Id": "SnowPart3",
+							"Condition": "LOCATION_CONTEXT Here Default Lemurkat_EastScarp, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 16, "Y": 16, "Width": 16, "Height": 16 },
+							"Speed": "-0.02, 0.02",
+							"ViewSpeed": "-1, -1",
+							"Opacity": 0.75,
+							"Scale": 7,
+						},	
+						{
+							"Id": "SnowyPart1",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Snow",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 48, "Y": 16, "Width": 16, "Height": 16 },
+							"Speed": "0, 0.03",
+							"ViewSpeed": "-1, -1",
+							"Scale": 4,
+							"Opacity": 0.85
+						},	
+						{
+							"Id": "SnowyPart2",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Snow",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 16, "Y": 16, "Width": 16, "Height": 16 },
+							"Speed": "-0.03, 0.02",
+							"ViewSpeed": "-1, -1",
+							"Scale": 6,
+							"Opacity": 0.75
+						},	
+						{
+							"Id": "RainPart1",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Count": 30,
+						},
+						{
+							"Id": "RainPart2",
+							"Condition": "LOCATION_CONTEXT Here Default, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Count": 50,
+						},
+						{
+							"Id": "Tinting",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "41, 50, 50",
+							"Opacity": 0.63
+						}
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

@@ -1,0 +1,75 @@
+{
+   "Format": "2.0.6",
+   "Changes": [
+        {
+            "Action": "Load",
+            "Target": "Mods/BossBattles/BossSlime, Mods/BossBattles/Golem, Mods/BossBattles/AmalgKnight, Mods/BossBattles/LivingCrystal, Mods/BossBattles/BrutefulSister, Mods/BossBattles/SharpSister, Mods/BossBattles/WiseSister, Mods/BossBattles/DwarfSoldier, Mods/BossBattles/GhostLord, Mods/BossBattles/IridiumWarrior, Mods/BossBattles/Arena7, Mods/BossBattles/Arena6, Mods/BossBattles/Arena5, Mods/BossBattles/Arena0, Mods/BossBattles/Arena1,, Mods/BossBattles/Arena2, Mods/BossBattles/Arena3, Mods/BossBattles/bosshats",
+            "FromFile": "PNGs/{{TargetWithoutPath}}.png"
+        },
+{
+		"Action": "EditData",
+		"Target": "Data/Hats",
+		"Entries": {
+			"Nat121": "IridiumMask/{{i18n: IMD}}/hide/true//{{i18n: IMN}}/0/Mods\\BossBattles\\bosshats",
+			"Nat122": "DwarfWarriorHelm/{{i18n: DWHD}}/hide/true//{{i18n: DWHN}}/1/Mods\\BossBattles\\bosshats",
+			"Nat123": "SistersMask/{{i18n: SMD}}/true/true//{{i18n: SMN}}/2/Mods\\BossBattles\\bosshats",
+			"Nat124": "CrystalHelm/{{i18n: CHD}}/true/true//{{i18n: CHN}}/6/Mods\\BossBattles\\bosshats",
+			"Nat125": "GhostCrown/{{i18n: GCD}}/true/true//{{i18n: GCN}}/4/Mods\\BossBattles\\bosshats",
+			"Nat126": "DustMask/{{i18n: DMD}}/hide/true//{{i18n: DMN}}/5/Mods\\BossBattles\\bosshats",
+			"Nat127": "GemEyes/{{i18n: GED}}/true/true//{{i18n: GEN}}/8/Mods\\BossBattles\\bosshats",
+			"Nat128": "DontWorryAboutName/{{i18n: SLMD}}/true/true/Prismatic/{{i18n: SLMN}}/3/Mods\\BossBattles\\bosshats",
+		}
+	},
+        { 
+        "Action": "EditData",
+        "Target": "Data/Monsters",
+        "Entries":{
+            "LivingCrystal": "24/5/0/0/false/1000/766 .75 766 .05 153 .1 66 .015 92 .15 96 .005 99 .001/1/.01/4/2/.00/true/3/LivingCrystal",
+	    "AmalgKnight": "24/5/0/0/false/1000/766 .75 766 .05 153 .1 66 .015 92 .15 96 .005 99 .001/1/.01/4/2/.00/true/3/AmalgKnight",
+            "BossSlime": "24/5/0/0/false/1000/766 .75 766 .05 153 .1 66 .015 92 .15 96 .005 99 .001/1/.01/4/2/.00/true/3/BossSlime",
+            "Golem": "24/5/0/0/false/1000/766 .75 766 .05 153 .1 66 .015 92 .15 96 .005 99 .001/1/.01/4/2/.00/true/3/Golem",
+	    "BrutefulSister": "24/5/0/0/false/1000/766 .75 766 .05 153 .1 66 .015 92 .15 96 .005 99 .001/1/.01/4/2/.00/true/3/BrutefulSister",
+	    "WiseSister": "24/5/0/0/false/1000/766 .75 766 .05 153 .1 66 .015 92 .15 96 .005 99 .001/1/.01/4/2/.00/true/3/WiseSister",
+            "SharpSister": "24/5/0/0/false/1000/766 .75 766 .05 153 .1 66 .015 92 .15 96 .005 99 .001/1/.01/4/2/.00/true/3/SharpSister",
+	    "DwarfSoldier": "24/5/0/0/false/1000/766 .75 766 .05 153 .1 66 .015 92 .15 96 .005 99 .001/1/.01/4/2/.00/true/3/DwarfSoldier",
+	    "GhostLord": "24/5/0/0/false/1000/766 .75 766 .05 153 .1 66 .015 92 .15 96 .005 99 .001/1/.01/4/2/.00/true/3/GhostLord",
+		"IridiumWarrior": "24/5/0/0/false/1000/766 .75 766 .05 153 .1 66 .015 92 .15 96 .005 99 .001/1/.01/4/2/.00/true/3/IridiumWarrior"
+            }
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Monsters/LivingCrystal, Characters/Monsters/AmalgKnight, Characters/Monsters/BossSlime, Characters/Monsters/Golem, Characters/Monsters/Dust, Characters/Monsters/WiseSister, Characters/Monsters/BrutefulSister, Characters/Monsters/SecondTempChar, Characters/Monsters/SharpSister, Characters/Monsters/DwarfSoldier,Characters/Monsters/Brute,Characters/Monsters/Shaman,Characters/Monsters/Sniper,Characters/Monsters/GhostLord,Characters/Monsters/IridiumWarrior",
+            "FromFile": "PNGs/{{TargetWithoutPath}}.png"
+        },
+        {
+	        "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+            "NatBossArena": {
+		        "DisplayName": "Arena",
+                    "DefaultArrivalTile": {
+                        "X": 17,
+                        "Y": 20
+                    },
+                "Music": [
+                        {
+                            "Track": "cowboy_outlawsong"
+                        }
+                    ],
+                 "CreateOnLoad": {
+                        "AlwaysActive": true,
+                        "MapPath": "Maps/Mines/13"
+                    },
+                "ArtifactSpots": [
+                        {
+                            "ItemID": "(O)78",
+                            "Chance": 0.2
+                        }
+                    ],
+                "CanPlantHere": false,
+                "ExcludeFromNpcPathfinding": true
+                }
+            }
+        }
+   ]
+}

@@ -1,0 +1,523 @@
+{
+	"Changes": [	
+//Vanilla Only
+	//Post Heat Wave
+	//Mountain
+    {
+      	    "LogName": "Add Dry Maps",
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+			"FromFile": "assets/Maps/Vanilla/dry/{{TargetWithoutPath}}.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 6, "Height": 10 },
+			"ToArea": { "X": 83, "Y": 0, "Width": 6, "Height": 10 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+	//Desert
+    {
+      	    "LogName": "Add Dry Maps",
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+			"FromFile": "assets/Maps/Vanilla/dry/{{TargetWithoutPath}}_1.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 12, "Height": 10 },
+			"ToArea": { "X": 3, "Y": 11, "Width": 12, "Height": 10 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+    {
+      	    "LogName": "Add Dry Maps",
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+			"FromFile": "assets/Maps/Vanilla/dry/{{TargetWithoutPath}}_2.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 12, "Height": 10 },
+			"ToArea": { "X": 26, "Y": 50, "Width": 12, "Height": 10 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+	//Forest
+    {
+      	    "LogName": "Add Dry Maps",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/dry/{{TargetWithoutPath}}.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 30, "Height": 26 },
+			"ToArea": { "X": 22, "Y": 15, "Width": 30, "Height": 26 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+	//Island North
+    {
+      	    "LogName": "Add Dry Maps",
+            "Action": "EditMap",
+            "Target": "Maps/Island_N",
+			"FromFile": "assets/Maps/Vanilla/dry/{{TargetWithoutPath}}.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 6, "Height": 8 },
+			"ToArea": { "X": 30, "Y": 48, "Width": 6, "Height": 8 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, Lnh.IslandOverhaul": false,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+	//Post HeavyRain
+	//Mountain
+        {
+      	    "LogName": "Add Flood Maps Valley",
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+			"FromFile": "assets/Maps/Vanilla/flood/{{TargetWithoutPath}}_1.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 28, "Height": 25 },
+			"ToArea": { "X": 55, "Y": 16, "Width": 28, "Height": 25 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendFlooding": "true,",	
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+			},
+		},	
+        {
+      	    "LogName": "Add Flood Maps Valley",
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+			"FromFile": "assets/Maps/Vanilla/flood/{{TargetWithoutPath}}_2.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 21, "Height": 25 },
+			"ToArea": { "X": 83, "Y": 0, "Width": 21, "Height": 25 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendFlooding": "true,",	
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+			},
+		},	
+        {
+      	    "LogName": "Add Flood Maps Valley",
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+			"FromFile": "assets/Maps/Vanilla/flood/{{TargetWithoutPath}}_3.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 19, "Height": 17 },
+			"ToArea": { "X": 88, "Y": 24, "Width": 19, "Height": 17 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendFlooding": "true,",	
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+			},
+		},	
+        {
+      	    "LogName": "Add Flood Maps Valley",
+            "Action": "EditMap",
+            "Target": "Maps/Mountain-BridgeFixed",
+			"FromFile": "assets/Maps/Vanilla/flood/{{TargetWithoutPath}}.tmx",
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendFlooding": "true,",	
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+			},
+		},	
+	//Forest
+        {
+      	    "LogName": "Add Flood Maps Valley",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/flood/{{TargetWithoutPath}}_1.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 18, "Height": 16 },
+			"ToArea": { "X": 76, "Y": 41, "Width": 18, "Height": 16 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendFlooding": "true,",	
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+			},
+		},	
+        {
+      	    "LogName": "Add Flood Maps Valley",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/flood/{{TargetWithoutPath}}_2.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 31, "Height": 30 },
+			"ToArea": { "X": 37, "Y": 60, "Width": 31, "Height": 30 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendFlooding": "true,",	
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+			},
+		},		
+	//Desert
+        {
+      	    "LogName": "Add Flood Maps Valley",
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+			"FromFile": "assets/Maps/Vanilla/flood/{{TargetWithoutPath}}_1.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 10, "Height": 7 },
+			"ToArea": { "X": 28, "Y": 53, "Width": 10, "Height": 7 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendFlooding": "true,",	
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+			},
+		},
+	//Post Hurricane	
+    {
+      	    "LogName": "Add Flood Maps Island",
+            "Action": "EditMap",
+            "Target": "Maps/Island_N, Maps/Island_Bridge_Broken, Maps/Island_Bridge_Repaired, Maps/Island_S",
+			"FromFile": "assets/Maps/Vanilla/flood/{{TargetWithoutPath}}.tmx",
+			"Priority": "Default + 1",
+			"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_Hurry}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_Hurry}}' = 'true'": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, Lnh.IslandOverhaul": false,
+				"PretendHurricane": "true,",	
+			},
+	},	
+	//Post Wildfire
+    {
+      	    "LogName": "Add Fire",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/fire/{{TargetWithoutPath}}_PostFire.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 14, "Height": 12 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 14, "Height": 12 },
+			"Priority": "Default + 1",
+			"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_Wildfire}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_Wildfire}}' = 'true'": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, Liliet.ImprovedCindersapForest": false,
+				"PretendFire": "true,",	
+			},
+	},
+	
+	{
+      	    "LogName": "Add Light to Flame",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"When": {
+				"HasMod": "spacechase0.SpaceCore",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, Liliet.ImprovedCindersapForest": false,
+				"PretendFire": "true,",	
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_Wildfire}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_Wildfire}}' = 'true'": true,
+			},
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["MapProperties", "spacechase0.SpaceCore_ColoredLights" ],
+						"Value": "3 7 1 1 224 49 22",
+						"Delimiter": " ",
+				},
+	    ],
+	},	
+
+
+//Compats
+//ICF
+	//Post Wildfire
+    {
+      	    "LogName": "Add Fire Improved Cindersap",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/fire/{{TargetWithoutPath}}_ICF_PostFire.tmx",
+			"Priority": "Default + 1",
+			"FromArea": { "X": 0, "Y": 0, "Width": 17, "Height": 15 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 17, "Height": 15 },
+			"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_Wildfire}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_Wildfire}}' = 'true'": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendFire": "true,",	
+				"HasMod |contains=Liliet.ImprovedCindersapForest": true,
+			},
+	},
+	{
+      	    "LogName": "Add Light to Flame",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"When": {
+				"HasMod": "spacechase0.SpaceCore",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"PretendFire": "true,",	
+				"HasMod |contains=Liliet.ImprovedCindersapForest": true,
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_Wildfire}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_Wildfire}}' = 'true'": true,
+			},
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["MapProperties", "spacechase0.SpaceCore_ColoredLights" ],
+						"Value": "4 6 1 1 224 49 22",
+						"Delimiter": " ",
+				},
+	    ],
+	},	
+	//SVE
+	//Post Heat Wave
+//Desert
+    {
+      	    "LogName": "Add Dry Maps SVE Desert1",
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+			"FromFile": "assets/Maps/Compats/SVE/dry/drydesert1.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 14, "Height": 12 },
+			"ToArea": { "X": 0, "Y": 5, "Width": 14, "Height": 12 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+    {
+      	    "LogName": "Add Dry Maps SVE Desert2",
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+			"FromFile": "assets/Maps/Compats/SVE/dry/drydesert2.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 35, "Height": 11 },
+			"ToArea": { "X": 25, "Y": 0, "Width": 35, "Height": 11 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+    {
+      	    "LogName": "Add Dry Maps SVE Desert3",
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+			"FromFile": "assets/Maps/Compats/SVE/dry/drydesert3.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 5, "Height": 5 },
+			"ToArea": { "X": 52, "Y": 38, "Width": 5, "Height": 5 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+    {
+      	    "LogName": "Add Dry Maps SVE Desert4",
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+			"FromFile": "assets/Maps/Compats/SVE/dry/drydesert4.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 25, "Height": 22 },
+			"ToArea": { "X": 0, "Y": 33, "Width": 25, "Height": 22 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+//Forest
+    {
+      	    "LogName": "Add Dry Maps SVE Forest1",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Compats/SVE/dry/dryforest1.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 26, "Height": 14 },
+			"ToArea": { "X": 22, "Y": 16, "Width": 26, "Height": 14 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+    {
+      	    "LogName": "Add Dry Maps SVE Forest2",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Compats/SVE/dry/dryforest2.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 30, "Height": 12 },
+			"ToArea": { "X": 22, "Y": 30, "Width": 30, "Height": 12 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+//Mountain
+    {
+      	    "LogName": "Add Dry Maps SVE Adventurer Summit",
+            "Action": "EditMap",
+            "Target": "Maps/Custom_AdventurerSummit",
+			"FromFile": "assets/Maps/Compats/SVE/dry/dryadsumm.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 8, "Height": 24 },
+			"ToArea": { "X": 56, "Y": 2, "Width": 8, "Height": 24 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},	
+	
+    {
+      	    "LogName": "Add Dry Maps LNH Island Overhaul",
+            "Action": "EditMap",
+            "Target": "Maps/Island_N",
+			"FromFile": "assets/Maps/Compats/LNH/dry/northgap.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 6, "Height": 8 },
+			"ToArea": { "X": 30, "Y": 48, "Width": 6, "Height": 8 },
+			"Priority": "Default + 1",
+			"When": {
+				"HasMod |contains=Lnh.IslandOverhaul": true,
+				"PretendHeatWave": "true,",				
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeatWave}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeatWave}}' = 'true'": true,
+			},
+	},
+	
+
+	//Post Heavy Rain
+//Desert	
+    {
+      	    "LogName": "Add Flood Maps SVE Desert",
+            "Action": "EditMap",
+            "Target": "Maps/Desert",
+			"FromFile": "assets/Maps/Compats/SVE/flood/wetdesert.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 14, "Height": 11 },
+			"ToArea": { "X": 2, "Y": 44, "Width": 14, "Height": 11 },
+			"Priority": "Default + 1",
+			"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendFlooding": "true,",	
+			},
+	},
+//Forest
+    {
+      	    "LogName": "Add Wet Maps SVE Forest",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Compats/SVE/flood/wetforest.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 8, "Height": 9 },
+			"ToArea": { "X": 35, "Y": 79, "Width": 8, "Height": 9 },
+			"Priority": "Default + 1",
+			"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendFlooding": "true,",	
+			},
+	},
+//Mountain
+    {
+      	    "LogName": "Add Wet Maps SVE Mountain Bridge Fix",
+            "Action": "EditMap",
+            "Target": "Maps/Mountain-BridgeFixed",
+			"FromFile": "assets/Maps/Compats/SVE/flood/MtFix.tbin",
+			"Priority": "Default + 1",
+			"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendFlooding": "true,",	
+			},
+	},
+    {
+      	    "LogName": "Add Wet Maps SVE Mountain1",
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+			"FromFile": "assets/Maps/Compats/SVE/flood/wetmountain1.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 18, "Height": 15 },
+			"ToArea": { "X": 53, "Y": 16, "Width": 18, "Height": 15 },
+			"Priority": "Default + 1",
+			"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendFlooding": "true,",	
+			},
+	},
+    {
+      	    "LogName": "Add Wet Maps SVE Mountain2",
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+			"FromFile": "assets/Maps/Compats/SVE/flood/wetmountain2.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 19, "Height": 9 },
+			"ToArea": { "X": 88, "Y": 24, "Width": 19, "Height": 9 },
+			"Priority": "Default + 1",
+			"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_HeavyRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_HeavyRain}}' = 'true'": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendFlooding": "true,",	
+			},
+	},
+	
+	//Post Hurricane
+    {
+      	    "LogName": "Add Flood Maps Island",
+            "Action": "EditMap",
+            "Target": "Maps/Island_N, Maps/Island_Bridge_Broken, Maps/Island_Bridge_Repaired, Maps/Island_S",
+			"FromFile": "assets/Maps/Vanilla/flood/{{TargetWithoutPath}}.tmx",
+			"Priority": "Default + 1",
+			"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_Hurry}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_Hurry}}' = 'true'": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasMod |contains=Lnh.IslandOverhaul": false,
+				"PretendHurricane": "true,",
+			},
+	},	
+	{
+      	    "LogName": "Add Flood Maps Island LNH Island Overhaul",
+            "Action": "EditMap",
+            "Target": "Maps/Island_N, Maps/Island_Bridge_Broken, Maps/Island_Bridge_Repaired, Maps/Island_N_Road, Maps/Island_S",
+			"FromFile": "assets/Maps/Compats/LNH/flood/{{TargetWithoutPath}}.tmx",
+			"Priority": "Default + 1",
+			"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_Hurry}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_Hurry}}' = 'true'": true,
+				"HasMod |contains=Lnh.IslandOverhaul": true,
+				"PretendHurricane": "true,",
+			},
+	},	
+	//Post Wildfire
+    {
+      	    "LogName": "Add Fire",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/fire/{{TargetWithoutPath}}_SVEPostFire.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 15, "Height": 13 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 15, "Height": 13 },
+			"Priority": "Default + 1",
+			"When": {
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_Wildfire}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_Wildfire}}' = 'true'": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendFire": "true,",	
+			},
+	},
+	{
+      	    "LogName": "Add Light to Flame",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"When": {
+				"HasMod": "spacechase0.SpaceCore",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"PretendFire": "true,",	
+				"HasMod |contains=Liliet.ImprovedCindersapForest": false,
+				"Query: '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_Wildfire}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_Wildfire}}' = 'true'": true,
+			},
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["MapProperties", "spacechase0.SpaceCore_ColoredLights" ],
+						"Value": "2 7 1 1 224 49 22",
+						"Delimiter": " ",
+				},
+	    ],
+	},	
+//End
+]
+}

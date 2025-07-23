@@ -1,0 +1,202 @@
+{
+	"Changes":[
+		{
+			"LogName": "Abigail - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Abigail",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Abigail.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Abigail.Married.Ask}}", //This is in case of Free Love.
+			},
+			"When": {
+				"relationship:Abigail": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Abigail": "enabled",
+			},
+		},
+		{
+			"LogName": "Sebastian - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sebastian",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Sebastian.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Sebastian.Married.Ask}}",
+			},
+			"When": {
+				"relationship:Sebastian": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Sebastian": "enabled",
+			},
+		},
+		{
+			"LogName": "Alex - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Alex.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Alex.Married.Ask}}",
+			},
+			"When": {
+				"relationship:Alex": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AlexRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Alex": "enabled",
+			},
+		},
+		{
+			"LogName": "Haley - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Haley.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Haley.Married.Ask}}",
+			},
+			"When": {
+				"relationship:Haley": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Haley": "enabled",
+			},
+		},
+		{
+			"LogName": "Shane - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Shane.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Shane.Married.Ask}}",
+			},
+			"When": {
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": false,
+				"relationship:Shane": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Shane": "enabled",
+			},
+		},
+		{
+			"LogName": "Shane - Flower Dance, Ask Dialogue (Married), IC Shane Override",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Shane.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Shane.Married.Ask}}",
+			},
+			"When": {
+				"relationship:Shane": "married",
+				"Immersive Shane Override": "true",
+				"IC-Shane Conditional Overrides": "all",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Shane": "enabled",
+			},
+		},
+		{
+			"LogName": "Emily - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Emily",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Emily.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Emily.Married.Ask}}",
+			},
+			"When": {
+				"relationship:Emily": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:EmilyRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Emily": "enabled",
+			},
+		},
+		{
+			"LogName": "Leah - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Leah",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Leah.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Leah.Married.Ask}}",
+			},
+			"When": {
+				"relationship:Leah": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Leah": "enabled",
+			},
+		},
+		{
+			"LogName": "Elliott - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Elliott",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Elliott.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Elliott.Married.Ask}}",
+			},
+			"When": {
+				"relationship:Elliott": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Elliott": "enabled",
+			},
+		},
+		{
+			"LogName": "Penny - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Penny",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Penny.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Penny.Married.Ask}}",
+			},
+			"When": {
+				"relationship:Penny": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Penny": "enabled",
+			},
+		},
+		{
+			"LogName": "Sam - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sam",
+			"Entries":{
+				"Event.cs.1738": "{{i18n:FDAR.Sam.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Sam.Married.Ask}}",
+			},
+			"When": {
+				"relationship:Sam": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Sam": "enabled",
+			},
+		},
+		{
+			"LogName": "Harvey - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Harvey",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Harvey.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Harvey.Married.Ask}}",
+			},
+			"When": {
+				"relationship:Harvey": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HarveyRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Harvey": "enabled",
+			},
+		},
+		{
+			"LogName": "Maru - Flower Dance, Ask Dialogue (Married)",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Maru",
+			"Entries":{
+				"Event.cs.1736": "{{i18n:FDAR.Maru.Married.Ask}}",
+				"Event.cs.1738": "{{i18n:FDAR.Maru.Married.Ask}}",
+			},
+			"When": {
+				"relationship:Maru": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:MaruRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Maru": "enabled",
+			},
+		},
+	],
+}

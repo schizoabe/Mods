@@ -1,0 +1,16 @@
+{ // Island Death - Before Leo - Spouses Generic
+  "Changes": [
+    {
+      "LogName": "KO Island - B4L - Spouses Generic",
+      "Action": "EditData",
+      "Target": "Data/Events/IslandSouth",
+      "When": {
+        "HasValue: {{Spouse}}": true,
+        "Spouse": "{{Spouse}}, default",
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 13 33 2 {0} 15 33 3/skippable/pause 1500/showFrame 5/message \" ...{2}?\"/pause 1000/message \"{{i18n:Island.Wake}}\"/viewport 13 33 clamp true/pause 1000/speak {0} {1}/showFrame 0/pause 1000/emote farmer 28/minedeath/end dialogue {{Spouse}} \"{{i18n:IslandEnd.{{SpouseName}}.01}}\""
+      }
+    }
+  ]
+}

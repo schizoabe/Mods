@@ -1,0 +1,99 @@
+{
+	"Changes": [	
+    {
+      	    "LogName": "Add Fire Vanilla",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/fire/{{TargetWithoutPath}}_Fire.tmx",
+			"Priority": "Default + 1",
+			"FromArea": { "X": 0, "Y": 0, "Width": 14, "Height": 12 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 14, "Height": 12 },
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, Liliet.ImprovedCindersapForest": false,
+			},
+	},
+	{
+      	    "LogName": "Add Light to Flame",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"When": {
+				"HasMod": "spacechase0.SpaceCore",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=Liliet.ImprovedCindersapForest": false,
+			},
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["MapProperties", "spacechase0.SpaceCore_ColoredLights" ],
+						"Value": "1 5 4 1 224 49 22 4 5 4 1 224 49 22 7 8 4 1 224 49 22 11 7 4 1 224 49 22 3 8 4 1 224 49 22 3 1 1 1 224 49 22 5 2 1 1 224 49 22 7 2 1 1 224 49 22",
+						"Delimiter": " ",
+				},
+	    ],
+	},	
+	
+    {
+      	    "LogName": "Add Fire SVE",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/fire/{{TargetWithoutPath}}_SVEFire.tmx",
+			"Priority": "Default + 1",
+			"FromArea": { "X": 0, "Y": 0, "Width": 15, "Height": 13 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 15, "Height": 13 },
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+			},
+	},
+	{
+      	    "LogName": "Add Light to Flame",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"When": {
+				"HasMod": "spacechase0.SpaceCore",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasMod |contains=Liliet.ImprovedCindersapForest": false,
+			},
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["MapProperties", "spacechase0.SpaceCore_ColoredLights" ],
+						"Value": "2 5 4 1 224 49 22 4 7 4 1 224 49 22 7 9 4 1 224 49 22 12 8 4 1 224 49 22 6 6 4 1 224 49 22 4 5 4 1 224 49 22 4 1 1 1 224 49 22 10 3 1 1 224 49 22 11 0 1 1 224 49 22 8 0 1 1 224 49 22",
+						"Delimiter": " ",
+				},
+	    ],
+	},
+	
+    {
+      	    "LogName": "Add Fire Improved Cindersap",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"FromFile": "assets/Maps/Vanilla/fire/{{TargetWithoutPath}}_ICF_Fire.tmx",
+			"Priority": "Default + 1",
+			"FromArea": { "X": 0, "Y": 0, "Width": 17, "Height": 15 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 17, "Height": 15 },
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=Liliet.ImprovedCindersapForest": true,
+			},
+	},
+	{
+      	    "LogName": "Add Light to Flame",
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"When": {
+				"HasMod": "spacechase0.SpaceCore",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=Liliet.ImprovedCindersapForest": true,
+			},
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["MapProperties", "spacechase0.SpaceCore_ColoredLights" ],
+						"Value": "1 5 4 1 224 49 22 3 4 4 1 224 49 22 2 6 4 1 224 49 22 5 5 4 1 224 49 22 2 8 4 1 224 49 22 1 10 1 1 224 49 22 5 9 1 1 224 49 22 9 8 1 1 224 49 22 12 5 1 1 224 49 22 9 3 1 1 224 49 22 10 0 1 1 224 49 22 6 2 1 1 224 49 22 1 1 1 1 224 49 22",
+						"Delimiter": " ",
+				},
+	    ],
+	},
+	
+//End
+]
+}

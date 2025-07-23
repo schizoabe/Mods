@@ -1,0 +1,54 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Mon": "830 HaleyHouse 12 17 1 \"Strings\\schedules\\Emily:marriage_{{Random:haley, haley2, haley3, haley4, haley5}}\"/1100 Town 82 15 1 \"Strings\\schedules\\Emily:marriage_Mon.001\"/1500 Saloon 15 17 0 square_5_1_0 \"Strings\\schedules\\Emily:marriage_{{Random:saloon, saloon2, saloon3, saloon4}}\"/2000 BusStop 9 23 3",
+				"marriage_Tue": "930 SeedShop 27 16 2 \"Strings\\schedules\\Emily:marriage_expre\"/1300 SeedShop 26 19 2 emily_exercisemarriage \"Strings\\schedules\\Emily:marriage_{{Random:exercisem, exercisem2, exercisem3}}\"/1600 Saloon 15 17 0 square_5_1_0 \"Strings\\schedules\\Emily:marriage_{{Random:saloon, saloon2, saloon3, saloon4}}\"/2000 BusStop 9 23 3",
+				"marriage_Thu": "830 HaleyHouse 12 17 1 \"Strings\\schedules\\Emily:marriage_{{Random:haley, haley2, haley3, haley4, haley5}}\"/1100 CommunityCenter 10 25 2 \"Strings\\schedules\\Emily:marriage_cc\"/1500 Saloon 15 17 0 square_5_1_0 \"Strings\\schedules\\Emily:marriage_{{Random:saloon, saloon2, saloon3, saloon4}}\"/2000 BusStop 9 23 3",
+				"marriage_Fri": "830 Beach 10 37 3 \"Strings\\schedules\\Emily:marriage_Fri.000\"/1300 SeedShop 2 26 2 \"Strings\\schedules\\Emily:marriage_Fri.001\"/1500 Saloon 15 17 0 square_5_1_0 \"Strings\\schedules\\Emily:marriage_{{Random:saloon, saloon2, saloon3, saloon4}}\"/2000 BusStop 9 23 3"
+			},
+			"When": {
+				"IsCommunityCenterComplete": true
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Mon": "830 HaleyHouse 12 17 1 \"Strings\\schedules\\Emily:marriage_{{Random:haley, haley2, haley3, haley4, haley5}}\"/1100 Town 82 15 1 \"Strings\\schedules\\Emily:marriage_Mon.001\"/1500 Saloon 15 17 0 square_5_1_0 \"Strings\\schedules\\Emily:marriage_{{Random:saloon, saloon2, saloon3, saloon4}}\"/2000 BusStop 9 23 3",
+				"marriage_Tue": "930 SeedShop 27 16 2 \"Strings\\schedules\\Emily:marriage_expre\"/1300 SeedShop 26 19 2 emily_exercisemarriage \"Strings\\schedules\\Emily:marriage_{{Random:exercisem, exercisem2, exercisem3}}\"/1600 Saloon 15 17 0 square_5_1_0 \"Strings\\schedules\\Emily:marriage_{{Random:saloon, saloon2, saloon3, saloon4}}\"/2000 BusStop 9 23 3",
+				"marriage_Thu": "830 HaleyHouse 12 17 1 \"Strings\\schedules\\Emily:marriage_{{Random:haley, haley2, haley3, haley4, haley5}}\"/1100 Town 82 15 1 \"Strings\\schedules\\Emily:marriage_Mon.001\"/1500 Saloon 15 17 0 square_5_1_0 \"Strings\\schedules\\Emily:marriage_{{Random:saloon, saloon2, saloon3, saloon4}}\"/2000 BusStop 9 23 3",
+				"marriage_Fri": "830 Beach 10 37 3 \"Strings\\schedules\\Emily:marriage_Fri.000\"/1300 SeedShop 2 26 2 \"Strings\\schedules\\Emily:marriage_Fri.001\"/1500 Saloon 15 17 0 square_5_1_0 \"Strings\\schedules\\Emily:marriage_{{Random:saloon, saloon2, saloon3, saloon4}}\"/2000 BusStop 9 23 3"
+			},
+			"When": {
+				"IsCommunityCenterComplete": false
+			}
+		},
+		// DOCTORS CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Thu": "1000 Hospital 12 14 0 \"Strings\\schedules\\Emily:marriage_doc\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Emily:winter_11.001\"/1600 Saloon 15 17 0 square_5_1_0 \"Strings\\schedules\\Emily:marriage_docafter\"/2200 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "11"
+			}
+		},
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Emily",
+			"Entries": {
+				"marriage_Mon": "900 HaleyHouse 12 17 1 \"Strings\\schedules\\Emily:marriage_nmpre\"/1630 Beach 25 36 2 \"Strings\\schedules\\Emily:marriage_nm\"/2300 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "15"
+			}
+		},
+	]
+}

@@ -1,0 +1,109 @@
+{
+    "Changes": [
+///ADDING TO SHOPS
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Saloon",
+                "Items"
+            ],
+            "Entries": {
+                "MAAM_Garlic_Mushrooms": {
+                    "ItemId": "MAAM_Garlic_Mushrooms",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY spring 1",					
+				},
+                "MAAM_Mushroom_Omelet": {
+                    "ItemId": "MAAM_Mushroom_Omelet",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY spring 8",					
+				},
+                "MAAM_Mushroom_Vol_Au_Vents": {
+                    "ItemId": "MAAM_Mushroom_Vol_Au_Vents",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY spring 15",					
+				},
+                "MAAM_Wild_Mushroom_Soup": {
+                    "ItemId": "MAAM_Wild_Mushroom_Soup",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY spring 22",					
+				},
+                "MAAM_Stuffed_Mushrooms": {
+                    "ItemId": "MAAM_Stuffed_Mushrooms",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY summer 1",					
+				},
+                "MAAM_Mushroom_Tagliatelle": {
+                    "ItemId": "MAAM_Mushroom_Tagliatelle",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY summer 8",					
+				},
+                "MAAM_Mushroom_Pate": {
+                    "ItemId": "MAAM_Mushroom_Pate",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY summer 15",					
+				},
+                "MAAM_Fire_Spiced_Mushrooms": {
+                    "ItemId": "MAAM_Fire_Spiced_Mushrooms",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY summer 22",					
+				},
+                "MAAM_Sticky_Mushroom_Rice": {
+                    "ItemId": "MAAM_Sticky_Mushroom_Rice",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY fall 1",					
+				},
+                "MAAM_Mushroom_Tart": {
+                    "ItemId": "MAAM_Mushroom_Tart",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY fall 8",					
+				},
+                "MAAM_Mushroom_Ale_Pie": {
+                    "ItemId": "MAAM_Mushroom_Ale_Pie",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY fall 15",					
+				},
+                "MAAM_Mushroom_and_Leek_Risotto": {
+                    "ItemId": "MAAM_Mushroom_and_Leek_Risotto",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY fall 22",					
+				},
+                "FOF_Mushroom_Dishes": {
+                    "RandomItemId": ["MAAM_Garlic_Mushrooms", "MAAM_Mushroom_Omelet", "MAAM_Mushroom_Vol_Au_Vents", "MAAM_Wild_Mushroom_Soup", "MAAM_Stuffed_Mushrooms", "MAAM_Mushroom_Tagliatelle", "MAAM_Mushroom_Pate", "MAAM_Fire_Spiced_Mushrooms", "MAAM_Sticky_Mushroom_Rice", "MAAM_Mushroom_Tart", "MAAM_Mushroom_Ale_Pie", "MAAM_Mushroom_and_Leek_Risotto",],
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON Winter, DAY_OF_WEEK Monday ",	
+				}
+			}
+		},
+///ADDING TO RIDGESIDE VILLAGE PIKAS
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "When": {"HasMod |contains=Rafseazz.RSVCP": "true"},
+            "TargetField": [
+                "RSVPikaShop",
+                "Items"
+            ],
+            "Entries": {
+                "FOF_Mushroom_Dishes": {
+                    "RandomItemId": ["MAAM_Garlic_Mushrooms", "MAAM_Mushroom_Omelet", "MAAM_Mushroom_Vol_Au_Vents", "MAAM_Wild_Mushroom_Soup", "MAAM_Stuffed_Mushrooms", "MAAM_Mushroom_Tagliatelle", "MAAM_Mushroom_Pate", "MAAM_Fire_Spiced_Mushrooms", "MAAM_Sticky_Mushroom_Rice", "MAAM_Mushroom_Tart", "MAAM_Mushroom_Ale_Pie", "MAAM_Mushroom_and_Leek_Risotto",],
+					"Condition": "DAY_OF_WEEK Monday ",	
+				}
+			}
+		},
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"Changes": [
+		{
+			"LogName": "Events for Mirin Arch House",
+			"Action": "EditData",
+			"Target": "Data/Events/ArchaeologyHouse",
+            "When": {"HasMod|contains=FlashShifter.StardewValleyExpandedCP": false},
+			"Entries":{
+			"KathMuseum.OpeningRoom/LocalMail KathMuseum.StopGunther": "Upper_Ambient/-1000 -1000/farmer -100 -100 0/broadcastEvent true/pause 100/message \"{{i18n:0event.01}}\"/pause 100/message \"{{i18n:0event.02}}\"/playSound grassyStep/pause 150/message \"{{i18n:0event.02}}\"/pause 100/playSound grassyStep/playSound hoeHit/playSound grassyStep/pause 250/message \"{{i18n:0event.03}}\"/pause 250/playSound axe/message \"{{i18n:0event.04}}\"/pause 500/action MarkEventSeen All KathMuseum.OpeningRoom true/end position 27 5"
+			}
+		},
+        {
+			"LogName": "Events for Mirin Arch House SVE",
+			"Action": "EditData",
+			"Target": "Data/Events/ArchaeologyHouse",
+            "When": {"HasMod|contains=FlashShifter.StardewValleyExpandedCP": true},
+			"Entries":{
+			"KathMuseum.OpeningRoom/LocalMail KathMuseum.StopGunther": "Upper_Ambient/-1000 -1000/farmer -100 -100 0/broadcastEvent true/pause 100/message \"{{i18n:0event.01}}\"/pause 100/message \"{{i18n:0event.02}}\"/playSound grassyStep/pause 150/message \"{{i18n:0event.02}}\"/pause 100/playSound grassyStep/playSound hoeHit/playSound grassyStep/pause 250/message \"{{i18n:0event.03}}\"/pause 250/playSound axe/message \"{{i18n:0event.04}}\"/pause 500/action MarkEventSeen All KathMuseum.OpeningRoom true/end position 22 5"
+			}
+		},
+		{
+			"LogName": "Events for Mirin Curio Museum",
+			"Action": "EditData",
+			"Target": "Data/Events/KathMuseum_Mirin",
+			"Entries":{
+			"KathMuseum.MeetingMirin/SawEvent 0": "Upper_Ambient/7 5/farmer -100 -100 0 Mirin 4 8 2/skippable/broadcastEvent true/pause 1000/move Mirin 2 0 1/move Mirin 0 1 3/pause 2000/faceDirection Mirin 1/pause 3000/playSound cat/pause 1000/move Mirin 0 -2 0/move Mirin 2 0 1/pause 3000/warp farmer 9 5/pause 200/faceDirection farmer 2 true/playSound Ship/pause 500/faceDirection Mirin 0/pause 200/jump Mirin 6/playSound cat/pause 500/shake Mirin 5500/pause 1000/emote farmer 28/pause 500/move farmer 0 1 3/move farmer -1 0 2/showFrame 4/pause 500/message \"{{i18n: event.01}}\"/playMusic desolate/pause 2500/playSound cat/pause 1000/showFrame 0/emote farmer 32/pause 1000/move Mirin -3 0 3/faceDirection farmer 3/pause 2000/emote farmer 8/pause 400/playSound trashcan/pause 200/message \"{{i18n: event.02}}\"/pause 1000/move farmer -2 0 2/playSound trashcan/pause 300/playSound cat/pause 250/playSound trashcan/pause 150/faceDirection Mirin 1/pause 150/addObject 6 7 (O)842 1/playSound newRecipe/pause 250/faceDirection Mirin 0/pause 200/playSound cat/pause 150/faceDirection Mirin 1/pause 200/playSound cat/pause 200/message \"{{i18n: event.03}}\"/pause 500/showframe 4/pause 1000/message \"{{i18n: event.04}}\"/pause 250/emote farmer 8/pause 250/showframe 0/pause 1000/message \"{{i18n: event.05}}\"/pause 200/faceDirection farmer 3/pause 150/playSound cat/pause 1000/speak Mirin \"{{i18n: event.06}}\"/pause 200/jump farmer 5/pause 100/speak Mirin \"{{i18n: event.07}}\"/pause 100/emote farmer 16/pause 200/speak Mirin \"{{i18n: event.08}}\"/playSound cat/pause 500/playSound cat/pause 150/faceDirection Mirin 2/pause 200/emote Mirin 12/message \"{{i18n: event.09}}\"/emote Mirin 12/pause 100/emote Mirin 28/globalFade/viewport -1000 -1000/message \"{{i18n: event.10}}\"/action AddMail All KathMuseum_MirinMet received/action MarkEventSeen All KathMuseum.MeetingMirin true/end dialogue Mirin \"{{i18n: dialogue.event}}\"",
+			"KathMuseum.CompleteMirin/SawEvent KathMuseum.MeetingMirin/LocalMail MirinCompleteCurio1": "breezy/7 5/farmer -100 -100 0 Mirin 4 8 2/skippable/broadcastEvent true/pause 500/move Mirin 2 0 1/move Mirin 0 1 2/faceDirection Mirin 3/pause 2000/faceDirection Mirin 1/pause 3000/playSound cat/move Mirin 0 -2 0/move Mirin 2 0 1/pause 3000/warp farmer 9 5/pause 200/faceDirection farmer 2 true/playSound Ship/faceDirection Mirin 0/pause 100/jump Mirin 6/playSound cat/move Mirin 0 -1 0/move Mirin 1 0 0/playSound cat/jump Mirin 6/message \"{{i18n: 2event.01}}\"/emote farmer 32/pause 200/move Mirin 2 0 2/pause 1500/move Mirin -5 0 3/move Mirin 0 3 1/pause 1500/faceDirection Mirin 3/pause 1500/move Mirin 0 -3 0/move Mirin 3 0 1/faceDirection Mirin 2/pause 2000/faceDirection Mirin 0/playSound cat/pause 1000/speak Mirin \"{{i18n: 2event.02}}\"/move Mirin 1 0 2/move farmer 0 1 2/pause 1000/jump Mirin 6/pause 200/jump farmer 6/pause 200/faceDirection Mirin 3/pause 150/emote Mirin 32/pause 150/faceDirection Mirin 2/message \"{{i18n: 2event.03}}\"/jump Mirin 6/jump farmer 6/playSound cat/globalFade/viewport -1000 -1000/message \"{{i18n: 2event.04}}\"/action AddBuff MirinBlessing -2/action MarkEventSeen All KathMuseum.CompleteMirin true/end dialogue Mirin \"{{i18n: dialogue.2event}}\"",
+			"KathMuseum.Expansion/SawEvent KathMuseum.CompleteMirin/LocalMail KathMuseum.MirinOneDay": "breezy/7 5/farmer -100 -100 0 Mirin 9 6 0/skippable/broadcastEvent true/pause 500/move Mirin -1 0 0/pause 300/move Mirin 2 0 0/pause 300/playSound cat/faceDirection Mirin 1/pause 2000/move Mirin -1 0 0/playSound cat/pause 3000/warp farmer 9 5/pause 200/faceDirection farmer 2 true/playSound Ship/pause 100/jump Mirin 6/playSound cat/pause 250/jump Mirin 6/playSound cat/pause 300/move Mirin 2 0 3/playSound cat/pause 200/faceDirection Mirin 1/playSound cat/pause 250/faceDirection Mirin 3/playSound cat/pause 250/jump Mirin 6/playSound cat/pause 300/message \"{{i18n: exp.event.01}}\"/viewport move 6 0 2000/move farmer 0 1 1/move Mirin 5 0 2/move farmer 6 0 2/pause 500/playSound cat/jump farmer 6/pause 1000/emote farmer 32/faceDirection Mirin 3/speak Mirin \"{{i18n: exp.event.02}}\"/move Mirin 0 2 0/pause 300/playSound cat/jump Mirin 6/message \"{{i18n: exp.event.03}}\"/faceDirection Mirin 2/move farmer 0 2 2/pause 500/jump Mirin 6/jump farmer 6/playSound cat/globalFade/viewport -1000 -1000/message \"{{i18n: exp.event.04}}\"/action MarkEventSeen All KathMuseum.Expansion true/end dialogue Mirin \"{{i18n: dialogue.expevent}}\""
+			}
+		}
+	]
+}

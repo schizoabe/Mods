@@ -1,0 +1,584 @@
+{
+	"Changes": [
+/*=======================================================================================================================
+TOWN EDITS
+=======================================================================================================================*/
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Haley}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 20, "Y": 88 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 2 24 HaleyHouse {{Open}} {{Close}}" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Emily}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 20, "Y": 88 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 2 24 HaleyHouse {{Open}} {{Close}}" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Abigail}} >= {{Minimum Hearts}}": true			
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 43, "Y": 56 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 6 29 SeedShop {{Open}} {{Close}}" }
+			},
+			{
+			"Position": { "X": 44, "Y": 56 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 6 29 SeedShop {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Pierre}} >= {{Minimum Hearts}}": true				
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 43, "Y": 56 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 6 29 SeedShop {{Open}} {{Close}}" } 
+			},
+			{
+			"Position": { "X": 44, "Y": 56 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 6 29 SeedShop {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Caroline}} >= {{Minimum Hearts}}": true				
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 43, "Y": 56 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 6 29 SeedShop {{Open}} {{Close}}" } 
+			},
+			{
+			"Position": { "X": 44, "Y": 56 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 6 29 SeedShop {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Harvey}} >= {{Minimum Hearts}}": true	
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 36, "Y": 55 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 10 19 Hospital {{Open}} {{Close}}" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Clint}} >= {{Minimum Hearts}}": true	
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 94, "Y": 81 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 5 19 Blacksmith {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Kent}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 10, "Y": 85 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 4 23 SamHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Jodi}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 10, "Y": 85 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 4 23 SamHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Sam}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 10, "Y": 85 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 4 23 SamHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Lewis}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 59, "Y": 85 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 5 11 ManorHouse {{Open}} {{Close}}" } 
+			},
+			{
+			"Position": { "X": 58, "Y": 85 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 4 11 ManorHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Penny}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 72, "Y": 68 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 12 9 Trailer {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Pam}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 72, "Y": 68 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 12 9 Trailer {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Alex}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 57, "Y": 63 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 9 24 JoshHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:George}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 57, "Y": 63 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 9 24 JoshHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Evelyn}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 57, "Y": 63 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 9 24 JoshHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Gus}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 45, "Y": 70 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 14 24 Saloon {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Olivia}} >= {{Minimum Hearts}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 59, "Y": 51 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 20 41 Custom_JenkinsHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Victor}} >= {{Minimum Hearts}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 59, "Y": 51 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 20 41 Custom_JenkinsHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+/*=======================================================================================================================
+MOUNTAIN EDITS
+=======================================================================================================================*/
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Mountain",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Robin}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 12, "Y": 25 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 6 24 ScienceHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Mountain",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Demetrius}} >= {{Minimum Hearts}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 12, "Y": 25 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 6 24 ScienceHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Mountain",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Maru}} >= {{Minimum Hearts}}": true			
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 12, "Y": 25 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 6 24 ScienceHouse {{Open}} {{Close}}" } 
+			},
+			{
+			"Position": { "X": 8, "Y": 20 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 3 8 ScienceHouse {{Open}} {{Close}}" } 
+			},
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Mountain",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Sebastian}} >= {{Minimum Hearts}}": true			
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 12, "Y": 25 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 6 24 ScienceHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+/*=======================================================================================================================
+FOREST EDITS
+=======================================================================================================================*/	
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Forest",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Marnie}} >= {{Minimum Hearts}}": true				
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 90, "Y": 15 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 13 19 AnimalShop {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Forest",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Shane}} >= {{Minimum Hearts}}": true				
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 90, "Y": 15 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 13 19 AnimalShop {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Forest",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Leah}} >= {{Minimum Hearts}}": true	
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 104, "Y": 32 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 7 9 LeahHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Forest",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Andy}} >= {{Minimum Hearts}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 62, "Y": 66 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 12 22 Custom_AndyHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+/*=======================================================================================================================
+BEACH EDITS
+=======================================================================================================================*/	
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Beach",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Elliott}} >= {{Minimum Hearts}}": true	
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 49, "Y": 10 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 3 9 ElliottHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Beach",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Willy}} >= {{Minimum Hearts}}": true	
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 30, "Y": 33 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 5 9 FishShop {{Open}} {{Close}}" } 
+			}
+		]
+	},
+/*=======================================================================================================================
+DESERT EDITS
+=======================================================================================================================*/	
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Desert",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Sandy}} >= {{Minimum Hearts}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 20, "Y": 14 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 4 9 SandyHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Desert",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Sandy}} >= {{Minimum Hearts}}": true,
+			"SDV-E": false
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 6, "Y": 51 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 4 9 SandyHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+/*=======================================================================================================================
+RAILROAD EDITS
+=======================================================================================================================*/	
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Railroad",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Susan}} >= {{Minimum Hearts}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 38, "Y": 50 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 10 21 Custom_SusanHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+/*=======================================================================================================================
+CUSTOM MAP EDITS
+=======================================================================================================================*/
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Countryside_ClaireHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Claire}} >= {{Minimum Hearts}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 31, "Y": 16 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 7 17 Custom_ClaireHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_BlueMoonVineyard",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Sophia}} >= {{Minimum Hearts}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 28, "Y": 31 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 17 28 Custom_SophiaHouse {{Open}} {{Close}}" } 
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_AdventurerSummit",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Marlon}} >= {{Minimum Hearts}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 32, "Y": 21 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "LockedDoorWarp 6 19 AdventureGuild {{Open}} {{Close}}" } 
+			}
+		]
+	}
+	]
+}

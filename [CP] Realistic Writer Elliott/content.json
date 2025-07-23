@@ -1,0 +1,403 @@
+{
+	
+	"Format": "2.0.0",
+	
+	"DynamicTokens": [
+		
+		{
+			"Name": "ElliottBook",
+			"Value": "{{i18n:Booktitles.ElliottBook_default}}", 
+		},
+		
+		{
+			"Name": "ElliottBook",
+			"Value": "{{i18n:Booktitles.ElliottBook_mystery}}", 
+			"When":
+			{
+				"HasFlag": "ElliottWritesMystery",
+			}
+		},
+		{
+			"Name": "ElliottBook",
+			"Value": "{{i18n:Booktitles.ElliottBook_romance}}", 
+			"When":
+			{
+				"HasFlag": "ElliottWritesRomance",
+			}
+		},
+		{
+			"Name": "ElliottBook",
+			"Value": "{{i18n:Booktitles.ElliottBook_horror}}", 
+			"When":
+			{
+				"HasFlag": "ElliottWritesHorror",
+			}
+		},
+		{
+			"Name": "ElliottBook",
+			"Value": "{{i18n:Booktitles.ElliottBook_default}}", 
+			"When":
+			{
+				"HasFlag": "ElliottWritesScifi",
+			}
+		},
+		
+		{
+			"Name": "eventbook",
+			"Value": "Scifi", 
+		},
+		
+		{
+			"Name": "eventbook",
+			"Value": "Mystery", 
+			"When":
+			{
+				"HasFlag": "ElliottWritesMystery",
+			}
+		},
+		{
+			"Name": "eventbook",
+			"Value": "Romance", 
+			"When":
+			{
+				"HasFlag": "ElliottWritesRomance",
+			}
+		},
+		{
+			"Name": "eventbook",
+			"Value": "Horror", 
+			"When":
+			{
+				"HasFlag": "ElliottWritesHorror",
+			}
+		},
+		{
+			"Name": "eventbook",
+			"Value": "Scifi", 
+			"When":
+			{
+				"HasFlag": "ElliottWritesScifi",
+			}
+		},
+		
+		{
+			"Name": "PoliteCompat",
+			"Value": "pause 1", 
+		},
+		
+		{
+			"Name": "PoliteCompat",
+			"Value": "quickQuestion #{{i18n:PoliteCompat.1}}#{{i18n:PoliteCompat.2}}#{{i18n:PoliteCompat.3}}#{{i18n:PoliteCompat.4}}(break)speak Elliott \"{{i18n:PoliteCompat.5}}\"(break)speak Elliott \"{{i18n:PoliteCompat.6}}\"(break)speak Elliott \"{{i18n:PoliteCompat.7}}\"(break)speak Elliott \"{{i18n:PoliteCompat.8}}\"", 
+				"When": { "HasMod: |contains=MV.ElliotPolite": true, }, 
+		},
+	],
+	
+	"Changes": [
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				//Triggers for penpal letters
+				"10243001/f Elliott 500/x elliott_penpal1": "null",
+				"10243002/f Elliott 1000/x elliott_penpal2": "null",
+				"10243003/f Elliott 1500/x elliott_penpal3": "null",
+			"10243004/f Elliott 2000/x elliott_penpal4": "null", }	
+		},
+		
+		{ 
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Elliott",
+			"Entries": { 
+				// Vanilla tweaks 
+				"Thu2": "{{i18n:elliott.Thu2}}",
+				"summer_Tue6": "{{i18n:elliott.summer_Tue6}}",
+				"event_toast1": "{{i18n:elliott.event_toast1}}",
+				"event_toast2": "{{i18n:elliott.event_toast2}}",
+				"event_toast3": "{{i18n:elliott.event_toast3}}",
+			},
+		},
+		
+		
+		//Locational dialogue
+		{ 
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Elliott",
+			"Entries": { 
+				//Writing at home
+				"ElliottHouse2": "{{i18n:ElliottWriting2.{{Random: {{Range: 1,10}} }} }}",
+				"ElliottHouse4": "{{i18n:ElliottWriting4.{{Random: {{Range: 1,10}} }} }}",
+				"ElliottHouse6": "{{i18n:ElliottWriting6.{{Random: {{Range: 1,10}} }} }}",
+				"ElliottHouse8": "{{i18n:ElliottWriting8.{{Random: {{Range: 1,10}} }} }}",
+				"ElliottHouse10": "{{i18n:ElliottWriting10.{{Random: {{Range: 1,10}} }} }}", 
+				//Writing at the Saloon
+				"Saloon": "{{i18n:ElliottWriting2.{{Random: {{Range: 1,10}} }} }}",
+				"Saloon2": "{{i18n:ElliottWriting2.{{Random: {{Range: 1,10}} }} }}",
+				"Saloon4": "{{i18n:ElliottWriting4.{{Random: {{Range: 1,10}} }} }}",
+				"Saloon6": "{{i18n:ElliottWriting6.{{Random: {{Range: 1,10}} }} }}",
+				"Saloon8": "{{i18n:ElliottWriting8.{{Random: {{Range: 1,10}} }} }}",
+				"Saloon10": "{{i18n:ElliottWriting10.{{Random: {{Range: 1,10}} }} }}", 
+				//Reading in the library
+				"ArchaeologyHouse": "{{i18n:ElliottReading.{{Random: {{Range: 1,20}} }} }}",
+				
+			} 
+		},
+		
+		
+		// Penpals CTs
+		{ 
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Leah",
+			"Entries": { "elliott_writing_letter1": "{{i18n:CT.Leah.elliott_writing_letter1}}",
+				"elliott_writing_letter2": "{{i18n:CT.Leah.elliott_writing_letter2}}",
+				"elliott_writing_letter3": "{{i18n:CT.Leah.elliott_writing_letter3}}",
+				"elliott_writing_letter4": "{{i18n:CT.Leah.elliott_writing_letter4}}",
+			},
+		},	
+		
+		{ 
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/George",
+			"Entries": { "elliott_writing_letter1": "{{i18n:CT.George.elliott_writing_letter1}}",
+				"elliott_writing_letter2": "{{i18n:CT.George.elliott_writing_letter2}}",
+				"elliott_writing_letter3": "{{i18n:CT.George.elliott_writing_letter3}}",
+				"elliott_writing_letter4": "{{i18n:CT.George.elliott_writing_letter4}}",
+			},
+		},
+		
+		{ 
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Willy",
+			"Entries": { "elliott_writing_letter1": "{{i18n:CT.Willy.elliott_writing_letter1}}",
+				"elliott_writing_letter2": "{{i18n:CT.Willy.elliott_writing_letter2}}",
+				"elliott_writing_letter3": "{{i18n:CT.Willy.elliott_writing_letter3}}",
+				"elliott_writing_letter4": "{{i18n:CT.Willy.elliott_writing_letter4}}",
+			},
+		},
+		
+		{ 
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Lenny",
+			"When": { "HasMod |contains=Rafseazz.RSVCP": true, },
+			"Entries": { "elliott_writing_letter1": "{{i18n:CT.Lenny.elliott_writing_letter1}}",
+				"elliott_writing_letter2": "{{i18n:CT.Lenny.elliott_writing_letter2}}",
+				"elliott_writing_letter3": "{{i18n:CT.Lenny.elliott_writing_letter3}}",
+				"elliott_writing_letter4": "{{i18n:CT.Lenny.elliott_writing_letter4}}",
+			},
+		},
+		
+		{ 
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Flor",
+			"When": { "HasMod |contains=Rafseazz.RSVCP": true, },
+			"Entries": { "elliott_writing_letter1": "{{i18n:CT.Flor.elliott_writing_letter1}}",
+				"elliott_writing_letter2": "{{i18n:CT.Flor.elliott_writing_letter2}}",
+				"elliott_writing_letter3": "{{i18n:CT.Flor.elliott_writing_letter3}}",
+				"elliott_writing_letter4": "{{i18n:CT.Flor.elliott_writing_letter4}}",
+			},
+		},
+		
+		{ 
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/EliasSBV",
+			"When": { "HasMod |contains=skellady.SBVCP": true, },
+			"Entries": { "elliott_writing_letter1": "{{i18n:CT.Elias.elliott_writing_letter1}}",
+				"elliott_writing_letter2": "{{i18n:CT.Elias.elliott_writing_letter2}}",
+				"elliott_writing_letter3": "{{i18n:CT.Elias.elliott_writing_letter3}}",
+				"elliott_writing_letter4": "{{i18n:CT.Elias.elliott_writing_letter4}}",
+			},
+		},
+		
+		//Book titles
+		{ 
+			"Action": "EditData",
+			"Target": "Strings/Events",
+			"Entries": { "ElliottBook_mystery": "{{ElliottBook}}",
+				"ElliottBook_romance": "{{ElliottBook}}",
+				"ElliottBook_default": "{{ElliottBook}}",
+			},
+		},
+		
+		//Map string for Book
+		
+		{
+            "Action": "EditMap",
+            "Target": "Maps/ElliottHouse",
+			
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 14,
+						"Y": 7
+					},
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message ElliottBookOnMap"
+					}
+				},
+			]
+		},
+		
+		{ 
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+		"Entries": { "ElliottBookOnMap": "{{i18n:ElliottBookOnMap.{{Random: {{Range: 1,10}} }} |book={{ElliottBook}} }}",
+			},
+		},
+		
+		// 4 heart tweaks	
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Entries": {  "40/f Elliott 1000/p Gus/t 1500 2200": "playful/11 20/farmer 14 24 0 Elliott -30 -30 0 Clint 18 22 2 Marnie 9 22 3 Pam 7 18 1 Lewis 8 22 1 Pierre 4 22 2 Demetrius 3 23 1 Gus 14 18 2 Emily 16 18 3/skippable/move farmer 0 -3 3/faceDirection Pierre 1 true/move farmer -3 0 0/faceDirection Pierre 2 true/move farmer 0 -1 0/faceDirection Marnie 0 true/faceDirection Gus 3/speak Gus \"{{i18n:40.0}}\"/faceDirection Gus 2/move Emily 2 0 1/faceDirection Marnie 3 true/pause 800/move Emily -2 0 0/pause 1000/faceDirection Clint 3 true/move Emily 2 0 1/warp Elliott 14 24/playSound doorClose/pause 500/move Elliott 0 -3 3/faceDirection farmer 2 true/move Elliott -2 0 0/move Elliott 0 -1 0/faceDirection farmer 1/faceDirection Elliott 3/speak Elliott \"{{i18n:40.1}}\"/pause 400/faceDirection Elliott 1/speak Elliott \"{{i18n:40.2}}\"/faceDirection Gus 3/faceDirection farmer 0/speak Gus \"{{i18n:40.3}}\"/move Gus 3 0 0/{{PoliteCompat}}/move Gus 0 -1 0/faceDirection Emily 2/playSound openBox/pause 400/playSound Milking/move Pam -6 0 0/move Gus 0 1 3/move Gus -5 0 2/faceDirection Elliott 0/pause 500/speak Gus \"{{i18n:40.4}}\"/pause 500/faceDirection Elliott 3/faceDirection farmer 1/speak Elliott \"$q 28376 null#{{i18n:40.5.1}}#$r 28376 25 event_toast4#{{i18n:40.5.2}}#$r 28376 50 event_toast2#{{i18n:40.5.3}}#$r 28376 10 event_toast1#{{i18n:40.5.4}}#$r 28376 -50 event_toast3#{{i18n:40.5.5}}\"/faceDirection Elliott 2/faceDirection farmer 2/pause 900/showFrame Elliott 16/animate Elliott false false 120 16 17 18 19 19 18 18 19 19 18 18 19 19 18 18 19 19 18 18 17 16/pause 500/farmerEat 346/pause 900/pause 1100/stopAnimation farmer/faceDirection farmer 1/speak Elliott \"{{i18n:40.6}}\"/pause 800/animate Elliott false false 400 20 21 22 21 20 21 22 21 20 21 22 21 20 21 22 21 16/pause 1000/faceDirection farmer 1/pause 800/faceDirection farmer 2/animate farmer false true 100 102 103/pause 1000/globalFade/viewport -1000 -1000/pause 600/stopAnimation farmer/end warpOut",
+				
+				//3 heart event (brainstorming)
+				
+				"tiakall.writerelliott.h3/A ElliottGenre/f Elliott 750/e 39/t 1200 2200": "movieTheater/4 19/farmer -999 -999 0 Elliott 3 19 2 Clint 18 22 2 Marnie 9 22 3 Pam 7 18 1 Lewis 12 21 3 Gus 13 18 2 Emily 16 18 3 Shane 20 18 2 JortsCat? 16 20 2 JeanCat? 17 20 2 SBVElias? 17 20 3/skippable/animate Gus false true 100 18 18 19 19 20 20 19 19/animate Shane false true 100 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 24 24 24 23 22 21/animate Marnie false true 100 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 23 23 23 23 23 23 23 22 21/animate JortsCat? false true 150 44 45 46 47 47/animate JeanCat? false true 150 36 37 38 39 39/pause 1000/warp farmer 14 23/playSound doorClose/pause 500/emote Elliott 16/pause 450/speak Elliott \"{{i18n:elliott.h3.1}}\"/pause 100/emote farmer 32/move farmer -10 0 0/move farmer 0 -2 0/speak Elliott \"{{i18n:elliott.h3.2.{{eventbook}} }}\"/emote farmer 20/pause 450/quickQuestion {{i18n:elliott.h3.q1.{{eventbook}}}}#{{i18n:elliott.h3.q1a1.{{eventbook}}}}#{{i18n:elliott.h3.q1a2.{{eventbook}}}}#{{i18n:elliott.h3.q1a3.{{eventbook}}}}(break)speak Elliott \"{{i18n:elliott.h3.q1r1.{{eventbook}}}}\"(break)speak Elliott \"{{i18n:elliott.h3.q1r2.{{eventbook}}}}\"(break)speak Elliott \"{{i18n:elliott.h3.q1r3.{{eventbook}}}}\"(break)/pause 300/move Emily -2 0 0/move Emily 0 -1 0/speak Elliott \"{{i18n:elliott.h3.3.{{eventbook}}}}\"/quickQuestion {{i18n:elliott.h3.q2.{{eventbook}}}}#{{i18n:elliott.h3.q2a1.{{eventbook}}}}#{{i18n:elliott.h3.q2a2.{{eventbook}}}}#{{i18n:elliott.h3.q2a3.{{eventbook}}}}#{{i18n:elliott.h3.q2a4.{{eventbook}}}}(break)speak Elliott \"{{i18n:elliott.h3.q2r1.{{eventbook}}}}\"(break)speak Elliott \"{{i18n:elliott.h3.q2r2.{{eventbook}}}}\"(break)speak Elliott \"{{i18n:elliott.h3.q2r3.{{eventbook}}}}\"(break)speak Elliott \"{{i18n:elliott.h3.q2r4.{{eventbook}}}}\"(break)/speak Elliott \"{{i18n:elliott.h3.4}}\"/pause 300/emote Elliott 40/pause 450/quickQuestion {{i18n:elliott.h3.q3.{{eventbook}}}}#{{i18n:elliott.h3.q3a1.{{eventbook}}}}#{{i18n:elliott.h3.q3a2.{{eventbook}}}}#{{i18n:elliott.h3.q3a3.{{eventbook}}}}#{{i18n:elliott.h3.q3a4.{{eventbook}}}}#{{i18n:elliott.h3.q3a5.{{eventbook}}}}(break)speak Elliott \"{{i18n:elliott.h3.q3r1.{{eventbook}}}}\"(break)speak Elliott \"{{i18n:elliott.h3.q3r2.{{eventbook}}}}\"(break)speak Elliott \"{{i18n:elliott.h3.q3r3.{{eventbook}}}}\"(break)speak Elliott \"{{i18n:elliott.h3.q3r4.{{eventbook}}}}\"(break)speak Elliott \"{{i18n:elliott.h3.q3r5.{{eventbook}}}}\"(break)/pause 300/emote Elliott 20/pause 450/speak Elliott \"{{i18n:elliott.h3.5}}\"/emote farmer 32/pause 1000/end",
+			},
+		},
+		
+		
+		// 2 and 6 heart event tweaks
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Events/ElliottHouse",
+			"Entries": {  
+				
+				"39/f Elliott 500/p Elliott": "50s/2 5/farmer 3 9 0 Elliott 1 5 0/addConversationTopic ElliottGenre 1/move farmer 0 -1 0/pause 400/faceDirection Elliott 2/emote Elliott 16/speak Elliott \"{{i18n:39.0}}\"/pause 500/move farmer 0 -2 3/move farmer -2 0 0/pause 500/speak Elliott \"{{i18n:39.1}}\"/faceDirection Elliott 0/speak Elliott \"{{i18n:39.2}}\"/pause 500/faceDirection Elliott 2/speak Elliott \"{{i18n:39.3}}\"/faceDirection Elliott 1/speak Elliott \"{{i18n:39.4}}\"/pause 700/faceDirection Elliott 2/speak Elliott \"{{i18n:39.5}}\"/pause 500/emote Elliott 16/quickQuestion {{i18n:39.6}}#{{i18n:39.6.1}}#{{i18n:39.6.2}}#{{i18n:39.6.3}}#{{i18n:39.6.4}}(break)addMailReceived ElliottWritesMystery(break)addMailReceived ElliottWritesRomance(break)addMailReceived ElliottWritesScifi(break)addMailReceived ElliottWritesHorror(break)/skippable/pause 500/speak Elliott \"{{i18n:39.7}}\"/pause 400/emote Elliott 16/speak Elliott \"{{i18n:39.8}}\"/pause 500/faceDirection Elliott 1/speak Elliott \"{{i18n:39.9}}\"/pause 400/move farmer 2 0 0/move farmer 0 -2 3/pause 400/animate farmer true true 100 35/pause 200/end dialogue Elliott \"{{i18n:39.10}}\"",
+				
+				
+				"423502/f Elliott 1500/p Elliott": "elliottPiano/-200 -1000/farmer 3 9 0 Elliott 8 4 0/skippable/positionOffset Elliott 32 16/animate Elliott false true 400 25 26 26 27 27 26 26 25 26 27 27 26 26 25/pause 1000/viewport 8 4 true/pause 24000/stopAnimation Elliott/showFrame Elliott 24/move farmer 0 -3 0/move farmer 4 0 0/showFrame Elliott 28/pause 1000/speak Elliott \"{{i18n:423502.0}}\"/pause 1000/showFrame Elliott 30/animate Elliott false false 200 28 29 30/playSound dwop/pause 1000/question fork1 \"{{i18n:423502.1}}\"/fork howLong/pause 500/emote Elliott 32/speak Elliott \"{{i18n:423502.2}}\"/switchEvent elliottPianoJoin",
+				
+				"howLong": "pause 500/resetVariable/speak Elliott \"{{i18n:howLong.0}}\"/switchEvent elliottPianoJoin",
+				
+				"elliottPianoJoin": "pause 800/showFrame Elliott 0/animate Elliott false true 220 0 1 2 3/playSound woodyStep/positionOffset Elliott 0 8/pause 120/positionOffset Elliott 0 8/pause 120/positionOffset Elliott 0 8/pause 120/positionOffset Elliott 0 8/pause 120/positionOffset Elliott 0 8/pause 120/positionOffset Elliott 0 8/stopAnimation Elliott/faceDirection Elliott 2/pause 500/move Elliott 1 0 1 true/faceDirection farmer 1/pause 1500/showFrame Elliott 31/pause 800/emote Elliott 28/pause 800/speak Elliott \"{{i18n:elliottPianoJoin.0}}\"/showFrame Elliott 4/pause 800/move Elliott -2 0 0/pause 800/speak Elliott \"{{i18n:elliottPianoJoin.1}}\"/pause 600/faceDirection Elliott 2/speak Elliott \"{{i18n:elliottPianoJoin.2}}\"/pause 300/faceDirection farmer 0/question fork1 \"{{i18n:elliottPianoJoin.3}}\"/fork extraHelp/pause 500/emote Elliott 16/speak Elliott \"{{i18n:elliottPianoJoin.4}}\"/move Elliott 0 1 3/faceDirection farmer 1/speak Elliott \"{{i18n:elliottPianoJoin.5}}\"/animate Elliott true true 100 31/pause 800/emote Elliott 28/pause 500/speak Elliott \"{{i18n:elliottPianoJoin.6}}\"/pause 500/stopAnimation Elliott/showFrame Elliott 4/pause 600/faceDirection Elliott 3/globalFade/viewport -1000 -1000/end",
+				
+				"extraHelp": "pause 500/emote Elliott 16/speak Elliott \"{{i18n:extraHelp.0}}\"/faceDirection Elliott 1/pause 400/speak Elliott \"{{i18n:extraHelp.1}}\"/animate Elliott true true 100 31/pause 800/emote Elliott 28/pause 500/speak Elliott \"{{i18n:extraHelp.2}}\"/pause 500/stopAnimation Elliott/showFrame Elliott 4/pause 600/faceDirection Elliott 3/globalFade/viewport -.1000 -1000/end"
+				
+			},
+		},
+		
+		
+		// 8 heart event tweaks
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Events/ArchaeologyHouse",
+			"Entries": { "1848481/f Elliott 2000/t 1300 1900/n elliottReading": "breezy/14 11/Elliott 14 9 2 Pierre 10 13 1 Caroline 11 13 3 Marnie 11 15 1 Lewis 12 15 3 Sebastian 11 17 2 Abigail 12 18 3 Sam 10 18 1 Leah 15 15 0 Emily 16 16 2 Clint 15 17 1 Jodi 19 13 2 Robin 20 14 3 Demetrius 20 11 3 Maru 10 10 1 Penny 11 9 1 Gus 18 16 0 Shane 19 16 0 Willy 21 11 3 farmer 6 14 1/skippable/move farmer 6 0 0/move farmer 0 -1 0/move Elliott 0 4 3/faceDirection farmer 1/speak Elliott \"{{i18n:1848481.0}}\"/pause 800/faceDirection Elliott 2/pause 500/faceDirection Elliott 1/pause 500/faceDirection Elliott 3/pause 500/speak Elliott \"{{i18n:1848481.1}}\"/pause 700/move Elliott 0 -4 2/faceDirection farmer 0/pause 500/faceDirection Elliott 1/faceDirection Elliott 2/faceDirection Elliott 3/faceDirection Elliott 2/speak Elliott \"{{i18n:1848481.2}}\"/pause 500/faceDirection Caroline 0 true/faceDirection Emily 0 true/textAboveHead Emily \"{{i18n:1848481.3}}\"/faceDirection Abigail 0/faceDirection Sebastian 0 true/faceDirection Lewis 0/faceDirection Sam 0 true/faceDirection Marnie 0/faceDirection Pierre 0 true/faceDirection Jodi 0/faceDirection Clint 0/speak Elliott \"{{i18n:1848481.4}}\"/showFrame Elliott 32/pause 200/showFrame Elliott 34/pause 1/pause 1/speak Elliott \"{{i18n:1848481.5.{{eventbook}} }}\"/animate Elliott false true 1000 33 33 34/pause 500/speak Elliott \"{{i18n:1848481.6.{{eventbook}} }}\"/playMusic none/globalFade/viewport -100 -100/pause 1000/warp Jodi -1000 -1000/warp Robin -1000 -1000/warp Pierre -1000 -1000/warp Caroline -1000 -1000/viewport 14 11 true/pause 1000/speak Elliott \"{{i18n:1848481.7.{{eventbook}} }}\"/stopAnimation Elliott/showFrame Elliott 34/pause 800/speak Elliott \"{{i18n:1848481.8.{{eventbook}} }}\"/faceDirection Lewis 3/faceDirection Marnie 1/faceDirection Emily 2 true/faceDirection Clint 1/move Elliott 0 4 3/faceDirection farmer 1/pause 600/speak Elliott \"{{i18n:1848481.9.{{eventbook}} }}\"/emote farmer 32/speak Elliott \"{{i18n:1848481.10.{{eventbook}} }}\"/move Elliott -1 0 3/emote Elliott 32/pause 1000/end",
+				
+			},
+		},
+		
+		// 10 heart tweaks
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Events/Beach",
+			"Entries": { "43/f Elliott 2500/w sunny/t 700 1300": "ocean/-1000 -1000/farmer 13 16 2 Elliott 13 27 1/specificTemporarySprite elliottBoat/skippable/viewport 17 26 clamp true/move farmer 0 8 2/faceDirection Elliott 0/speak Elliott \"{{i18n:43.0}}\"/move farmer 0 2 2/faceDirection Elliott 1/faceDirection farmer 1/speak Elliott \"{{i18n:43.1}}\"/pause 500/faceDirection Elliott 0/pause 500/speak Elliott \"{{i18n:43.2}}\"/faceDirection farmer 2/question fork1 \"{{i18n:43.3}}\"/fork NoToElliott/globalFade/viewport -1000 -1000/changeToTemporaryMap ElliottSea/playSound wateringCan/pause 1000/playSound wateringCan/playMusic 50s/warp farmer 26 20/positionOffset farmer 0 8/warp Elliott 26 20/showFrame Elliott 25/positionOffset Elliott 0 60/viewport 25 20 true/pause 5000/speak Elliott \"{{i18n:43.4}}\"/pause 1000/speak Elliott \"{{i18n:43.5}}\"/pause 500/speak Elliott \"{{i18n:43.6}}\"/emote Elliott 40/speak Elliott \"{{i18n:43.7}}\"/emote farmer 16/speak Elliott \"{{i18n:43.8}}\"/pause 1000/emote Elliott 40/pause 500/speak Elliott \"{{i18n:43.9}}\"/playMusic elliottPiano/pause 2500/showFrame Elliott 35/screenFlash 1/warp Elliott 26 20/positionOffset Elliott 24 8/positionOffset farmer -20 16/faceDirection farmer 1 true/showFrame 101/specificTemporarySprite heart 26 20/playSound dwop/pause 1500/startJittering/pause 700/speak Elliott \"$q -1 null#{{i18n:43.10.1}}#$r -1 50 event_boat1#{{i18n:43.10.2}}#$r -1 -50 event_boat2#{{i18n:43.10.3}}\"/stopJittering/fork tooBold/pause 1800/globalFade/viewport -1000 -1000/speak Elliott \"{{i18n:43.11}}\"/pause 1400/speak Elliott \"{{i18n:43.12}}\"/pause 4000/speak Elliott \"{{i18n:43.13}}\"/end",
+				
+				"NoToElliott": "emote Elliott 16/pause 800/faceDirection Elliott 1/showFrame Elliott 31/pause 1000/emote Elliott 28/pause 600/speak Elliott \"{{i18n:NoToElliott.0}}\"/move farmer 0 -10 0 true/pause 800/end dialogue Elliott \"{{i18n:NoToElliott.1}}\"",
+			},
+		},
+		
+		// 14 heart event tweaks
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+			"Entries": {
+				
+				"3912125/f Elliott 3500/O Elliott/t 500 1500/p Elliott/U 8": "continue/-10000 -1000/farmer -100 -100 2 Elliott -100 -100 2/addConversationTopic ElliottGone1 0/addConversationTopic elliottGone 6/addWorldState elliottGone/skippable/warp Elliott 63 15/warp farmer -100 -100/faceDirection Elliott 2/showFrame Elliott 38/viewport 64 15 clamp true/pause 1000/pause 2000/playSound doorClose/warp farmer 64 15/positionOffset farmer 0 16/pause 500/faceDirection farmer 3/emote farmer 8/pause 500/showFrame Elliott 39/emote Elliott 16/pause 500/speak Elliott \"{{i18n:3912125.0}}\"/pause 50/jump Elliott/pause 500/speak Elliott \"{{i18n:3912125.1}}\"/emote farmer 32/showFrame Elliott 0/faceDirection Elliott 1/pause 500/emote Elliott 28/pause 400/speak Elliott \"{{i18n:3912125.2}}\"/quickQuestion {{i18n:3912125.3}}(break)emote Elliott 20\\speak Elliott \"{{i18n:3912125.4}}\"\\emote farmer 20(break)jump Elliott\\pause 500\\speak Elliott \"{{i18n:3912125.5}}\"(break)speak Elliott \"{{i18n:3912125.6}}\"/pause 1000/animate Elliott true true 100 35/animate farmer true true 100 101/specificTemporarySprite heart 63 15/pause 2000/stopAnimation Elliott/showFrame Elliott 4/stopAnimation farmer/pause 500/speak Elliott \"{{i18n:3912125.7}}\"/end dialogue Elliott \"{{i18n:3912125.8}}\"",
+				
+			},				
+		},
+		
+		{
+			"Action": "EditData",
+			"Target": "data/mail",	
+			"Entries": {
+				// 14 heart letter tweaks
+				"elliottLetter2": "{{i18n:elliott.h14.elliottLetter2.text}} %item conversationTopic ElliottGone3 0 %%[#]{{i18n:elliott.h14.elliottLetter2.title}}",
+				"elliottLetter3": "{{i18n:elliott.h14.elliottLetter3.text}} %item conversationTopic ElliottGone4 0 %%[#]{{i18n:elliott.h14.elliottLetter3.title}}",
+				"elliottLetter5": "{{i18n:elliott.h14.elliottLetter5.text}} %item conversationTopic ElliottGone6 0 %%[#]{{i18n:elliott.h14.elliottLetter5.title}}",
+				"elliottLetter6": "{{i18n:elliott.h14.elliottLetter6.text}} %item conversationTopic ElliottGone7 0 %%[#]{{i18n:elliott.h14.elliottLetter6.title}}",
+				
+				//Penpal letters
+				"elliott_penpal1":  "{{i18n:elliott_penpal1.text}}%item conversationTopic elliott_writing_letter1 7 %%[#]{{i18n:elliott_penpal1.title}}",
+				"elliott_penpal2": "{{i18n:elliott_penpal2.text}}%item conversationTopic elliott_writing_letter2 7 %%[#]{{i18n:elliott_penpal2.title}}",
+				"elliott_penpal3": "{{i18n:elliott_penpal3.text}}%item conversationTopic elliott_writing_letter3 7 %%[#]{{i18n:elliott_penpal3.title}}",
+				"elliott_penpal4": "{{i18n:elliott_penpal4.text}}%item conversationTopic elliott_writing_letter4 7 %%[#]{{i18n:elliott_penpal4.title}}"
+				
+			},
+		},
+		
+				//5 heart event (beta-reading in Sunberry)
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/Custom_SBV_SunberryLibrary",
+			"When": { "HasMod: |contains=skellady.SBVCP": true, },
+			"Entries": {
+				
+				"tiakall.writerelliott.h5/f Elliott 1250/e 39/A ElliottGenre": "kindadumbautumn/32 10/farmer 999 999 0 EliasSBV 34 10 1 Elliott -1000 -1000 0/skippable/pause 1000/warp Elliott 20 12/playSound doorClose/pause 500/speak Elliott \"{{i18n:tiakall.writerelliott.h5.0}}\"/faceDirection EliasSBV 3/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.1}}\"/emote Elliott 16/pause 450/speed Elliott 4/move Elliott 0 -1 0/speed Elliott 4/move Elliott 12 0 1/speak Elliott \"{{i18n:tiakall.writerelliott.h5.2}}\"/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.3}}\"/speak Elliott \"{{i18n:tiakall.writerelliott.h5.4}}\"/pause 500/emote EliasSBV 40/pause 450/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.5}}\"/pause 1000/emote Elliott 40/pause 450/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.6}}\"/speak Elliott \"{{i18n:tiakall.writerelliott.h5.7}}\"/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.8}}\"/pause 500/emote Elliott 40/pause 450/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.9}}\"/speak Elliott \"{{i18n:tiakall.writerelliott.h5.10}}\"/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.11}}\"/pause 100/emote Elliott 16/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.12}}\"/textAboveHead Elliott \"{{i18n:tiakall.writerelliott.h5.13}}\"/pause 2200/speak Elliott \"{{i18n:tiakall.writerelliott.h5.14}}\"/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.15}}\"/speak Elliott \"{{i18n:tiakall.writerelliott.h5.16}}\"/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.17}}\"/speak Elliott \"{{i18n:tiakall.writerelliott.h5.18}}\"/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.19}}\"/speak Elliott \"{{i18n:tiakall.writerelliott.h5.20}}\"/pause 100/emote EliasSBV 60/pause 450/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.21}}\"/speak Elliott \"{{i18n:tiakall.writerelliott.h5.22}}\"/speak EliasSBV \"{{i18n:tiakall.writerelliott.h5.23}}\"/emote Elliott 20/pause 1000/end",
+
+			},				
+		},
+		
+		//Secret Notes
+		
+		{
+			"Target": "Mods/{{ModId}}/ElliottCharaMap",
+			"Action": "Load",
+			"FromFile": "diagram.png"
+		},
+		
+		{
+			"Target": "Mods/{{ModId}}/ElliottOutline",
+			"Action": "Load",
+			"FromFile": "notes.png"
+		},
+		
+		{
+			"Target": "Mods/ichortower.SecretNoteFramework/Notes",
+			"Action": "EditData",
+			"Entries": {
+				"Elliott.secretnote.ocean": {
+					"Contents": "{{i18n:elliott.secretnote.ocean.{{eventbook}} |book={{ElliottBook}} }}",
+					"Title": "{{i18n:elliott.secretnote.ocean.title}}",
+					"Conditions": "PLAYER_HEARTS Current Elliott 3",
+				},
+				
+				"Elliott.secretnote.femalemain": {
+					"Contents": "{{i18n:elliott.secretnote.femalemain}}",
+					"Title": "{{i18n:elliott.secretnote.femalemain.title}}",
+					"Conditions": "PLAYER_HEARTS Current Elliott 2",
+				},
+				
+				"Elliott.secretnote.main": {
+					"Contents": "{{i18n:elliott.secretnote.main.{{eventbook}} }}",
+					"Title": "{{i18n:elliott.secretnote.main.title}}",
+					"Conditions": "PLAYER_HEARTS Current Elliott 4",
+				},
+				
+				"Elliott.secretnote.charamap": {
+					"Title": "{{i18n:elliott.secretnote.charamap.title}}",
+					"Contents": "{{i18n:elliott.secretnote.charamap}}",
+					"NoteImageTexture": "Mods/{{ModId}}/ElliottCharaMap",
+					"NoteImageTextureIndex": 0,
+					"Conditions": "PLAYER_HEARTS Current Elliott 5",
+				},
+				
+				"Elliott.secretnote.outline": {
+					"Title": "{{i18n:elliott.secretnote.outline.title}}",
+					"Contents": "{{i18n:elliott.secretnote.outline}}",
+					"NoteImageTexture": "Mods/{{ModId}}/ElliottOutline",
+					"NoteImageTextureIndex": 0,
+					"Conditions": "PLAYER_HEARTS Current Elliott 6",
+				},
+				
+				"Elliott.secretnote.scene": {
+					"Contents": "{{i18n:elliott.secretnote.scene.{{eventbook}} }}",
+					"Title": "{{i18n:elliott.secretnote.scene.title}}",
+					"Conditions": "PLAYER_HEARTS Current Elliott 7",
+				},				
+			}
+		}
+	]
+}

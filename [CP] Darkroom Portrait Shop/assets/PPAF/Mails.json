@@ -1,0 +1,166 @@
+{
+	"Changes":[
+		
+		{
+            "LogName": "PPAF Mail Variants if Haley is a Housemate but the others are not",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+				
+					//Spouse Mail Variants
+					
+				"AgentLyoko.AbigailSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Abigail.Intro}}^^{{i18n:Haley.SpousePortrait.Abigail}}^^{{i18n:Haley.SpouseLetterEnd.Housemate |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)AbigailPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Abigail}}",
+				"AgentLyoko.LeahSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Leah.Intro}}^^{{i18n:Haley.SpousePortrait.Leah}}^^{{i18n:Haley.SpouseLetterEnd.Housemate |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)LeahPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Leah}}",
+				"AgentLyoko.PennySpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Penny.Intro}}^^{{i18n:Haley.SpousePortrait.Penny}}^^{{i18n:Haley.SpouseLetterEnd.Housemate |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)PennyPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Penny}}",
+				"AgentLyoko.MaruSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Maru.Intro}}^^{{i18n:Haley.SpousePortrait.Maru}}^^{{i18n:Haley.SpouseLetterEnd.Housemate |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)MaruPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Maru}}",
+				
+				"AgentLyoko.EmilySpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Emily.Intro}}^^{{i18n:Haley.SpousePortrait.Emily |FarmName={{FarmName}} }}%item id (F)EmilyPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Emily}}",
+				
+				"AgentLyoko.SebastianSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Sebastian.Intro}}^^{{i18n:Haley.SpousePortrait.Sebastian}}^^{{i18n:Haley.SpouseLetterEnd.Housemate |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)SebastianPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Sebastian}}",
+				"AgentLyoko.ElliottSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Elliott.Intro}}^^{{i18n:Haley.SpousePortrait.Elliott}}^^{{i18n:Haley.SpouseLetterEnd.Housemate |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)ElliottPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Elliott}}",
+				"AgentLyoko.SamSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Sam.Intro}}^^{{i18n:Haley.SpousePortrait.Sam}}^^{{i18n:Haley.SpouseLetterEnd.Housemate |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)SamPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Sam}}",
+				"AgentLyoko.HarveySpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Harvey.Intro}}^^{{i18n:Haley.SpousePortrait.Harvey}}^^{{i18n:Haley.SpouseLetterEnd.Housemate |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)HarveyPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Harvey}}",
+				"AgentLyoko.AlexSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Alex.Intro}}^^{{i18n:Haley.SpousePortrait.Alex}}^^{{i18n:Haley.SpouseLetterEnd.Housemate |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)AlexPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Alex}}",
+				"AgentLyoko.ShaneSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Shane.Intro}}^^{{i18n:Haley.SpousePortrait.Shane}}^^{{i18n:Haley.SpouseLetterEnd.Housemate |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)ShanePortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Shane}}",
+				
+				"AgentLyoko.HaleySpousePortraitMail": "{{i18n:Emily.SpousePortrait}}%item id (F)HaleyPortrait 1 %%[#]{{i18n:Emily.SpousePortraitTitle}}",
+				
+			},
+			"When": {
+				"HaleyRelationship": "Housemate",
+			},
+        },
+		
+		{
+            "LogName": "Abigail is Platonic",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {				
+				"AgentLyoko.AbigailSpousePortraitMail": "{{i18n:Haley.SpousePortrait.PPAF.Abigail.Intro}}^^{{i18n:Haley.SpousePortrait.Abigail}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)AbigailPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Abigail}}",
+			},
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+        },
+		
+		{
+            "LogName": "Leah is Platonic",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {				
+				"AgentLyoko.LeahSpousePortraitMail": "{{i18n:Haley.SpousePortrait.PPAF.Leah.Intro}}^^{{i18n:Haley.SpousePortrait.Leah}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)LeahPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Leah}}",
+			},
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:LeahRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+        },
+		
+		{
+            "LogName": "Penny is Platonic",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {				
+				"AgentLyoko.PennySpousePortraitMail": "{{i18n:Haley.SpousePortrait.PPAF.Penny.Intro}}^^{{i18n:Haley.SpousePortrait.Penny}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)PennyPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Penny}}",
+			},
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+        },
+		
+		{
+            "LogName": "Maru is Platonic",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {				
+				"AgentLyoko.MaruSpousePortraitMail": "{{i18n:Haley.SpousePortrait.PPAF.Maru.Intro}}^^{{i18n:Haley.SpousePortrait.Maru}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)MaruPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Maru}}",
+			},
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:MaruRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+        },
+		
+		//Haley's is not necessary to patch - writing for it works regardless. Same for Emily.
+		
+		{
+            "LogName": "Sebastian is Platonic",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {				
+				"AgentLyoko.SebastianSpousePortraitMail": "{{i18n:Haley.SpousePortrait.PPAF.Sebastian.Intro}}^^{{i18n:Haley.SpousePortrait.Sebastian}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)SebastianPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Sebastian}}",
+			},
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+        },
+		
+		{
+            "LogName": "Elliott is Platonic",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {				
+				"AgentLyoko.ElliottSpousePortraitMail": "{{i18n:Haley.SpousePortrait.PPAF.Elliott.Intro}}^^{{i18n:Haley.SpousePortrait.Elliott}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)ElliottPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Elliott}}",
+			},
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ElliottRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+        },
+		
+		{
+            "LogName": "Sam is Platonic",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {				
+				"AgentLyoko.SamSpousePortraitMail": "{{i18n:Haley.SpousePortrait.PPAF.Sam.Intro}}^^{{i18n:Haley.SpousePortrait.Sam}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)SamPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Sam}}",
+			},
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+        },
+		
+		{
+            "LogName": "Harvey is Platonic",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {				
+				"AgentLyoko.HarveySpousePortraitMail": "{{i18n:Haley.SpousePortrait.PPAF.Harvey.Intro}}^^{{i18n:Haley.SpousePortrait.Harvey}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)HarveyPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Harvey}}",
+			},
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HarveyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+        },
+		
+		{
+            "LogName": "Alex is Platonic",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {				
+				"AgentLyoko.AlexSpousePortraitMail": "{{i18n:Haley.SpousePortrait.PPAF.Alex.Intro}}^^{{i18n:Haley.SpousePortrait.Alex}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)AlexPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Alex}}",
+			},
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:AlexRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+        },
+		
+		{
+            "LogName": "Shane is Platonic",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {				
+				"AgentLyoko.ShaneSpousePortraitMail": "{{i18n:Haley.SpousePortrait.PPAF.Shane.Intro}}^^{{i18n:Haley.SpousePortrait.Shane}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} |termofEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} }}%item id (F)ShanePortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Shane}}",
+			},
+			"When": {
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+        },
+    ]
+}

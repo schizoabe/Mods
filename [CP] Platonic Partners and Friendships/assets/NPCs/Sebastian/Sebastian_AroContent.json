@@ -1,0 +1,303 @@
+{
+    "Changes": [
+        // FRIENDSHIP BRACELET
+        {
+            "LogName": "Enable friendship bracelet for Sebastian",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "TargetField": [
+                "{{ModID}}_FriendshipBracelet",
+                "ContextTags"
+            ],
+            "Entries": {
+                "#-11": "propose_roommate_sebastian"
+            }
+        },
+        // DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "Wed10": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Wed10 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "Sun10": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Sun10}}",
+                "summer_Wed10": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.summer_Wed10}}",
+                "summer_Thu10": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.summer_Thu10}}",
+                "fall_Fri6": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.fall_Fri6}}",
+                "winter_Tue10": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.winter_Tue10 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "Wed2": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Wed2}}",
+                "SpouseGiftJealous": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.SpouseGiftJealous}}",
+                "SpouseStardrop": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.SpouseStardrop |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "dating_Sebastian": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.dating_Sebastian |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "dating_Sebastian_memory_oneday": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.dating_Sebastian_memory_oneday |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "dating_Sebastian_memory_oneyear": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.dating_Sebastian_memory_oneyear |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "FlowerDance_Accept": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.FlowerDance_Accept}}",
+                "AcceptBouquet": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.AcceptBouquet.{{Random:1,2}}}}"
+            }
+        },
+        // PLATONIC PARTNER DIALOGUE
+        {
+            "LogName": "Sebastian pendant and bracelet engagement dialogue",
+            "Action": "EditData",
+            "Target": "Data/EngagementDialogue",
+            "Entries": {
+                "Sebastian0": "{{i18n:PPAF.Sebastian.EngagementDialogue.Aro.Sebastian0 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "SebastianRoommate0": "{{i18n:PPAF.Sebastian.EngagementDialogue.Aro.Sebastian0 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "Sebastian1": "{{i18n:PPAF.Sebastian.EngagementDialogue.Aro.Sebastian1 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "SebastianRoommate1": "{{i18n:PPAF.Sebastian.EngagementDialogue.Aro.Sebastian1 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueSebastian",
+            "Entries": {
+                "Rainy_Day_2": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Rainy_Day_2}}",
+                "Rainy_Night_0": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Rainy_Night_0 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Indoor_Day_2": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Indoor_Day_2 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Indoor_Day_3": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Indoor_Day_3}}",
+                "Outdoor_3": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Outdoor_3}}",
+                "Good_0": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Good_0 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "Good_1": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Good_1 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "Good_2": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Good_2}}",
+                "Good_3": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Good_3 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "Good_9": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Good_9}}",
+                "Neutral_2": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Neutral_2}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries": {
+                "Outdoor_Sebastian": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.Outdoor_Sebastian |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/ExtraDialogue",
+            "Entries": {
+                "SummitEvent_Dialogue3_Sebastian": "{{i18n:PPAF.Sebastian.SummitDialogue.Aro.SummitEvent_Dialogue3_Sebastian.1}}\"/faceDirection Sebastian 3/pause 500/speak Sebastian \"{{i18n:PPAF.Sebastian.SummitDialogue.Aro.SummitEvent_Dialogue3_Sebastian.2 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "Entries": {
+                "Sebastian_spouse_y2": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.MoonlightJellies.Sebastian_spouse_y2 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "Entries": {
+                "Sebastian_spouse_y2": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.WinterStar.Sebastian_spouse_y2 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}"
+            }
+        },
+        // OTHER CHARACTERS' DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Abigail",
+            "Entries": {
+                "dating_Sebastian_memory_oneday": "{{i18n:PPAF.Sebastian.OtherDialogue.Aro.Abigail.dating_Sebastian_memory_oneday}}",
+                "married_Sebastian": "{{i18n:PPAF.Sebastian.OtherDialogue.Aro.Abigail.married_Sebastian}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sam",
+            "Entries": {
+                "dating_Sebastian": "{{i18n:PPAF.Sebastian.OtherDialogue.Aro.Sam.dating_Sebastian}}",
+                "married_Sebastian": "{{i18n:PPAF.Sebastian.OtherDialogue.Aro.Sam.married_Sebastian |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            }
+        },
+        {
+            "LogName": "Maru dialogue about Sebastian",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Maru, Characters/Dialogue/Demetrius, Characters/Dialogue/Robin",
+            "Entries": {
+                "married_Sebastian": "{{i18n:PPAF.Sebastian.OtherDialogue.Aro.{{TargetWithoutPath}}.married_Sebastian |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            }
+        },
+        // STRINGS
+        {
+            "LogName": "Sebastian pendant and bracelet proposal acceptance",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "Sebastian_Engaged": "{{i18n:PPAF.Sebastian.Strings.Aro.Sebastian_Engaged |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "Sebastian_EngagedRoommate": "{{i18n:PPAF.Sebastian.Strings.Aro.Sebastian_EngagedRoommate |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}"
+            }
+        },
+        {
+            "LogName": "Sebastian post-ceremony line",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "Game1.cs.2782": "{{i18n:PPAF.Sebastian.Strings.Aro.Game1.cs.2782}}" //credit to SarahSyna for this line!
+            },
+            "When": {
+                "Spouse": "Sebastian"
+            }
+        },
+        {
+            "LogName": "Sebastian terms of endearment and other misc lines, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Sebastian.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Sebastian.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Sebastian.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Sebastian.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Sebastian.Strings.Aro.Nickname.1}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Sebastian.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Sebastian",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Sebastian terms of endearment and other misc lines, poly with CFD",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Sebastian.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Sebastian.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Sebastian.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Sebastian.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Sebastian.Strings.Aro.Nickname.2}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Sebastian.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Sebastian",
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // PENDANT REJECTION
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "RejectMermaidPendant_AlreadyAccepted_Engaged": "{{i18n:PPAF.Sebastian.PendantRejections.Engaged.{{Random:1,2}}}}",
+                "RejectMermaidPendant_AlreadyAccepted_Married": "{{i18n:PPAF.Sebastian.PendantRejections.Married.{{Random:1,2}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Demetrius, Characters/Dialogue/Robin, Characters/Dialogue/Maru",
+            "Entries": {
+                "RejectMermaidPendant_PlayerWithSomeoneElse": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.Sebastian.{{Random:1,2}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Sebastian"
+            }
+        },
+        // EVENTS
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Mountain",
+            "Fields": {
+                "384882/f Sebastian 2500/t 2000 2400": {
+                    52: "speak Sebastian \"{{i18n:PPAF.Sebastian.Events.Aro.10Heart.52 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}\"",
+                    59: "pause 10",
+                    60: "pause 10",
+                    62: "pause 80",
+                    64: "pause 80",
+                    66: "pause 80",                    
+                    68: "pause 80",
+                    74: "pause 80",
+                    76: "pause 80",
+                    78: "pause 80",
+                    80: "pause 80",
+                    82: "pause 80",
+                    84: "pause 800/showFrame Sebastian 40/pause 400"
+                }
+            }
+        },
+        //COMPATIBILITY: PLATONIC RELATIONSHIPS
+        //This section prevents the dating-flag-required version of the vanilla 10 heart event added by Platonic Relationships from triggering. Thanks to Cherry for providing the event codes!
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Mountain",
+            "Entries": {
+                "384882/f Sebastian 2500/D Sebastian/t 2000 2400": null
+            },
+            "When": {
+                "HasMod |contains=Cherry.PlatonicRelationships": true
+            }
+        },
+        //COMPATIBILITY: SPOUSES REACT TO PLAYER 'DEATH' v1.1.0
+        //Lines in this section are based on the original lines written by CasualInvidia, used and edited with permission. (Thank you, CasualInvidia!)
+        {
+            "LogName": "Enable Sebastian's Spouses React to Player 'Death' content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Sebastian/Sebastian_SpousesReact.json",
+            "When": {
+                "HasMod |contains=CasualInvidia.SpousesReactToDeath": true
+            }
+        },
+        //
+        //COMPATIBILITY IMMERSIVE SPOUSES - IMPROVED SPOUSE SCHEDULES v0.5-beta
+        //Lines in this section are based on the original lines written by yeet (Someguy363), used and edited with permission. (Thank you, yeet!)
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueSebastian",
+            "Entries": {
+                "funLeave_Sebastian": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.ISS.{{DayOfWeek}}.funLeave_Sebastian |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "funReturn_Sebastian": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.ISS.{{DayOfWeek}}.funReturn_Sebastian |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Sebastian",
+            "Entries": {
+                "marriage_bus2": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.ISS.marriage_bus2 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "marriage_bus3": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.ISS.marriage_bus3}}",
+                "marriage_sam4": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.ISS.marriage_sam4 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "marriage_band": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.ISS.marriage_band}}",
+                "marriage_nm": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.ISS.marriage_nm |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "marriage_comp": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.ISS.marriage_comp |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "marriage_comp3": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.ISS.marriage_comp3 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "marriage_r3": "{{i18n:PPAF.Sebastian.DialogueEdits.Aro.ISS.marriage_r3 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        {
+            "LogName": "Sebastian dialogue, aro yes, ace no, Immersive Spouses",
+            "Action": "EditData",
+            "Target": "Strings/schedules/Sebastian",
+            "Entries": {
+                "marriage_doc2": "{{i18n:PPAF.Sebastian.DialogueEdits.Sexual.ISS.marriage_doc2}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:SebastianRelationshipType": "SexWithoutRomance",
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        //COMPATIBILITY: PLEASE REMEMBER MY MARRIAGE v1.0.1
+        //Lines in this section are based on the original lines written by nraittanna, used and edited with permission. (Thank you, nraittanna!)
+        {
+            "LogName": "Enable Sebastian's Please Remember My Marriage content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Sebastian/Sebastian_RememberMyMarriage.json",
+            "When": {
+                "HasMod |contains=nraittanna.RememberMyMarriage": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+  "Format": "1.25.0",
+  "Changes": [
+    {
+      "LogName": "NPC Manifestation",
+      "Action": "EditData",
+      "Target": "data/NPCDispositions",
+      "Entries": {
+        "[65]Beng": "child/rude/outgoing/negative/male/non-datable/null/Other/summer 16//Custom_Claire_WarpRoom 3 3/Beng"
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "NPC Gift Tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "[65]Beng": "Ok lor, I am keeping this./74/Yeah yeah bery good./233/Why you give me this?/260/Don't come, go away./444/Ok lor/426/"
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/[65]Beng",
+      "FromFile": "assets/spritesheet.png",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "NPC Portrait",
+      "Action": "Load",
+      "Target": "Portraits/[65]Beng",
+      "FromFile": "assets/portrait.png",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/[65]Beng",
+      "FromFile": "assets/schedule.json"
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/[65]Beng",
+      "FromFile": "assets/Dialogue.json",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "beng_read_left": "20/21 21 21 22 22/20",	
+        "beng_sit_wake": "20/20 20 20 20 21/20",
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+{	 "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.15":  "This is Beng's seat. Its rather untidy..."},
+	"When": {"HasSeenEvent": "9695002"}
+},
+
+// Replacement of desk test
+{
+         "Action": "EditImage",
+         "Target": "Maps/Custom_SchoolHouse",
+         "FromFile": "assets/table.png",
+         "ToArea": { "X": 9, "Y": 9, "Width": 15, "Height": 20 } // optional, defaults to source size from top-left
+      },
+
+//If SKE is installed Beng will go to the playground after class
+	
+{ "Action": "EditData",	 
+	"Target": "characters/schedules/[65]Beng",
+	 "Entries": {       
+  "Mon": "0 BusStop 14 22 1/610 Town 16 11 3/800 Custom_SchoolHouse 7 8 3/840 Custom_SchoolHouse 8 8 3 beng_read_left/1030 Custom_SchoolHouse 8 8 3 beng_sit_wake/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Tue": "0 BusStop 14 22 1/610 Town 20 9 2/800 Custom_SchoolHouse 7 8 3/840 Custom_SchoolHouse 8 8 3 beng_read_left/1030 Custom_SchoolHouse 8 8 3 beng_sit_wake/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Tue2": "0 BusStop 14 22 1/610 Town 18 12 0/800 Custom_SchoolHouse 7 8 3/840 Custom_SchoolHouse 8 8 3 beng_read_left/1030 Custom_SchoolHouse 8 8 3 beng_sit_wake/1600 Town 22 14 0/1740 BusStop 12 8 0/1930 Custom_DayEnd_WarpRoom 3 3 0",
+  "Wed": "0 BusStop 14 22 1/610 Town 20 10 2/800 Custom_SchoolHouse 7 8 3/840 Custom_SchoolHouse 8 8 3 beng_read_left/1030 Custom_SchoolHouse 8 8 3 beng_sit_wake/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Wed2": "0 BusStop 14 22 1/610 Town 21 15 2/800 Custom_SchoolHouse 7 8 3/840 Custom_SchoolHouse 8 8 3 beng_read_left/1030 Custom_SchoolHouse 8 8 3 beng_sit_wake/1600 Town 22 14 0/1740 BusStop 12 8 0/1930 Custom_DayEnd_WarpRoom 3 3 0",
+  "Thu": "0 BusStop 14 22 1/610 Town 16 10 2/800 Custom_SchoolHouse 7 8 3/840 Custom_SchoolHouse 8 8 3 beng_read_left/1020 Custom_SchoolHouse 8 8 3 beng_sit_wake/1030 Custom_SchoolHouse 8 8 3/1040 Custom_SchoolHouse 8 8 1/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Fri": "0 BusStop 14 22 1/610 Town 21 9 3/800 Custom_SchoolHouse 7 8 3/840 Custom_SchoolHouse 8 8 3 beng_read_left/1030 Custom_SchoolHouse 8 8 3 beng_sit_wake/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Sat": "0 Custom_Claire_WarpRoom 1 3 3",
+  "Sun": "0 Custom_Claire_WarpRoom 1 3 3",
+
+//Festivals School is closed
+"spring_13": "0 Custom_Claire_WarpRoom 1 3 3",
+"spring_24": "0 Custom_Claire_WarpRoom 1 3 3",
+"summer_11": "0 Custom_Claire_WarpRoom 1 3 3",
+"summer_28": "0 Custom_Claire_WarpRoom 1 3 3",
+"fall_16": "0 Custom_Claire_WarpRoom 1 3 3",
+"fall_27": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_8": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_25": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_28": "0 Custom_Claire_WarpRoom 1 3 3",
+
+    },
+            	"When": {"HasSeenEvent": "9695002","HasMod": "BURAKMESE.SKE"},
+}
+
+  ]
+}
+
+

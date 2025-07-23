@@ -1,0 +1,492 @@
+{
+//WARNING!! Do NOT make edits to any file in this mod unless you know what you're doing, you can easily break things by accidentally deleting a symbol. I am not responsible for breaks caused by editing and I don't provide coding instruction. There is a Wiki for that.
+
+//IF YOU CHOOSE TO EDIT THE DIALOGUE - You may edit your personal copy only. You do not have permission to make edits and re-post or share this mod. The dialogue is my own writing and I worked very hard on this. Contact MaggPlays directly if you have any questions.
+
+    "Format": "2.4.0",
+	"ConfigSchema": {
+		"SebSpectrum": {
+			"AllowValues": "yes, no",
+			"Default": "yes",
+			"Description": "Sebastian's vanilla character demonstrates hints of mild autism. Select 'Yes' to enable dialogue developing this character aspect at a high level.",
+			},
+		"Smoking": {
+			"AllowValues": "quitsmoking, keepsmoking, nonsmoking",
+			"Default": "quitsmoking",
+			"Description": "'Quit Smoking' follows the standard storyline. Select Keep Smoking to remove 'quitting smoking' dialogue from this mod. Select Non-smoking if you're running Magg's Non-Smoking Sebastian (or a simiar mod) and you want no references to smoking at all.",
+			},
+		"FarmerPronouns": {
+			"AllowValues": "yes, no",
+			"Default": "no",
+			"Description": "Select 'Yes' to use gender neutral pronouns for farmer.",
+			},
+		"BluFroggies": {
+			"AllowValues": "yes, no",
+			"Default": "yes",
+			"Description": "Select 'Yes' to keep the frog aquarium in Seb's room after the relevant event (this is not the same aquarium as his 14 heart event).",
+			},
+		"SamCustomSprites": {
+			"AllowValues": "yes, no",
+			"Default": "yes",
+			"Description": "Select 'Yes' to enable Sam's custom sprites for a few small events, only works if you have Magg's Emo Sebastian Sprites or Maggs Slightly Cuter sprite patch installed.",
+			},
+		"MiscSprites": {
+			"AllowValues": "yes, no",
+			"Default": "yes",
+			"Description": "Select 'Yes' to add Seb's slippers and different pictures in his room.",
+			},
+		},
+"DynamicTokens": [
+//DIALOGUE tokens
+{
+	"Name": "FarmerGender",
+	"Value": "female",
+	"When": {
+		"PlayerGender": "female",
+		"FarmerPronouns": "no",
+		}
+	},
+{
+	"Name": "FarmerGender",
+	"Value": "male",
+	"When": {
+		"PlayerGender": "male",
+		"FarmerPronouns": "no",
+		}
+	},
+{
+	"Name": "FarmerGender",
+	"Value": "neutral",
+	"When": {
+		"FarmerPronouns": "yes",
+		}
+	},
+{
+	"Name": "SebAutism",
+	"Value": "typical",
+	},
+{
+	"Name": "SebAutism",
+	"Value": "autism",
+	"When": {
+		"SebSpectrum": "yes"
+        }
+    },
+//Custom portrait calls
+{
+	//suspicious
+	"Name": "mp10",
+	"Value": "$10",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": true
+        }
+	},
+{
+	"Name": "mp10",
+	"Value": "$5",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": false
+        }
+    },
+{
+	//smirk
+	"Name": "mp11",
+	"Value": "$11",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": true
+        }
+	},
+{
+	"Name": "mp11",
+	"Value": "$7",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": false
+        }
+    },
+{
+	//sad sneer
+	"Name": "mp12",
+	"Value": "$12",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": true
+        }
+	},
+{
+	"Name": "mp12",
+	"Value": "$2",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": false
+        }
+    },
+{
+	//surprise
+	"Name": "mp13",
+	"Value": "$13",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": true
+        }
+	},
+{
+	"Name": "mp13",
+	"Value": "$4",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": false
+        }
+    },
+	//Relationship Tokens
+{
+	"Name": "SebHearts",
+	"Value": "lowhearts",
+	"When": {
+		"Hearts:Sebastian": "0, 1, 2"
+		}
+	},
+{
+	"Name": "SebHearts",
+	"Value": "medhearts",
+	"When": {
+		"Hearts:Sebastian": "3, 4, 5"
+		}
+	},
+{
+	"Name": "SebHearts",
+	"Value": "highhearts",
+	"When": {
+		"Hearts:Sebastian": "6, 7, 8"
+		}
+	},
+//SVE COMPATIBILITY
+{
+	"Name": "Vanilla6Places",
+	"Value": "farmer 1 1 2 Sebastian 5 9 3 Sam 3 7 2",
+	},
+{
+	"Name": "Vanilla6Places",
+	"Value": "farmer 1 1 2 Sebastian 5 8 3 Sam 3 7 2",
+	"When": {
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+		}
+	},
+{
+	"Name": "GossipPlaces",
+	"Value": "Sam 1 1 2 Sebastian 5 9 3 Abigail 3 7 2 farmer -100 -100 0",
+	},
+{
+	"Name": "GossipPlaces",
+	"Value": "Sam 1 1 2 Sebastian 5 8 3 Abigail 3 7 2 farmer -100 -100 0 Victor 3 10 0",
+	"When": {
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+		}
+	},
+//Custom Sprite tokens
+{
+	"Name": "FrogsBlueSprite",
+	"Value": "/",
+	},
+{
+	"Name": "FrogsBlueSprite",
+	"Value": "/showFrame Sebastian 120/",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites,maggplays.SOspritespatchSeb": true,
+		}
+	},
+{
+	"Name": "LevelUpSprite1",
+	"Value": "warp Sebastian 6 6/faceDirection Sebastian 3",
+	},
+{
+	"Name": "LevelUpSprite1",
+	"Value": "warp Sebastian 6 6/showFrame Sebastian 76/animate Sebastian false true 200 76 77 78 79 79 78 77 76",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites,maggplays.SOspritespatchSeb": true,
+		}
+	},
+{
+	"Name": "LevelUpSprite2",
+	"Value": "pause 100",
+	},
+{
+	"Name": "LevelUpSprite2",
+	"Value": "stopAnimation Sebastian/showFrame Sebastian 89",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites,maggplays.SOspritespatchSeb": true,
+		}
+	},
+{
+	"Name": "LevelUpSprite3",
+	"Value": "showFrame Sebastian 40",
+	},
+{
+	"Name": "LevelUpSprite3",
+	"Value": "showFrame Sebastian 88",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites,maggplays.SOspritespatchSeb": true,
+		}
+	},
+{
+	"Name": "MaruBdaySprite3",
+	"Value": "emote farmer 56 true/emote Sebastian 56",
+	},
+{
+	"Name": "MaruBdaySprite3",
+	"Value": "animate farmer false true 100 102 103/pause 1500/animate Sebastian false true 100 71 72/pause 1500/stopAnimation farmer 0/stopAnimation Sebastian 0",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites,maggplays.SOspritespatchSeb": true,
+		}
+	},
+],
+"Changes": [
+//MAPS
+{
+	"Action": "Load",
+	"Target": "Maps/Magg_Seb_MaruSecretLab, Maps/Magg_Seb_MaruSecretLab2, Maps/Magg_Seb_TownSmallTable",
+	"FromFile": "assets/maps/{{TargetWithoutPath}}.tmx",
+	},
+{
+	"Action": "Load",
+	"Target": "Maps/MaggsSpriteTiles",
+	"FromFile": "assets/maps/MaggsSpriteTiles.png",
+	},
+//DIALOGUE and EVENTS
+{
+	"LogName": "Dialogue and Events load",
+	"Action": "Include",
+	"FromFile": "code/NPC_dialogue.json, code/Sebastian_events.json",
+	"When": {
+		"HasMod |contains=maggplays.immersivesebastian, maggplays.immersivesebastiansweet": false,
+        }
+	},
+{
+	"LogName": "Dialogue load",
+	"Action": "Include",
+	"FromFile": "code/Sebastian_dialogue.json",
+	"When": {
+		"HasMod |contains=maggplays.immersivesebastian, maggplays.immersivesebastiansweet, maggplays.immersivesam": false,
+        }
+	},
+{
+	"LogName": "Dialogue load Immersive Sam compat",
+	"Action": "Include",
+	"FromFile": "code/Sebastian_dialogue_ImmersiveSam.json",
+	"When": {
+		"HasMod |contains=maggplays.immersivesebastian, maggplays.immersivesebastiansweet": false,
+		"HasMod |contains=maggplays.immersivesam": true,
+        }
+	},
+{
+	"LogName": "Seb's slippers",
+	"Action": "EditMap",
+	"Target": "Maps/SebastianRoom",
+	"FromFile": "assets/maps/Magg_Seb_SebRoomEdit.tmx",
+	"FromArea": { "X": 9, "Y": 8, "Width": 1, "Height": 1 },
+	"ToArea": { "X": 9, "Y": 8, "Width": 1, "Height": 1 },
+	"PatchMode": "Replace",
+	"When": {
+		"MiscSprites": "yes",
+		}
+	},
+{
+	"LogName": "Radio return SVE",
+	"Action": "EditMap",
+	"Target": "Maps/SebastianRoom",
+	"FromFile": "assets/maps/Magg_Seb_SebRoomEdit.tmx",
+	"FromArea": { "X": 3, "Y": 3, "Width": 1, "Height": 1 },
+	"ToArea": { "X": 3, "Y": 3, "Width": 1, "Height": 1 },
+	"PatchMode": "Replace",
+	"When": {
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+		"MiscSprites": "yes",
+		},
+	},
+{
+	"LogName": "Blu Tadpole Aquarium",
+	"Action": "EditMap",
+	"Target": "Maps/SebastianRoom",
+	"FromFile": "assets/maps/Magg_Seb_SebRoomEdit.tmx",
+	"FromArea": { "X": 4, "Y": 7, "Width": 1, "Height": 2 },
+	"ToArea": { "X": 4, "Y": 7, "Width": 1, "Height": 2 },
+	"PatchMode": "Replace",
+	"When": {
+		"HasSeenEvent |contains=MaggBlueFrogs207082025": true,
+		"HasSeenEvent |contains=MaggBlueFrogs407082025": false,
+		}
+	},
+{
+	"LogName": "Blu Frog Aquarium",
+	"Action": "EditMap",
+	"Target": "Maps/SebastianRoom",
+	"FromFile": "assets/maps/Magg_Seb_SebRoomEdit2.tmx",
+	"FromArea": { "X": 11, "Y": 3, "Width": 1, "Height": 3 },
+	"ToArea": { "X": 11, "Y": 3, "Width": 1, "Height": 3 },
+	"PatchMode": "Replace",
+	"When": {
+		"Query: ('{{HasSeenEvent |contains=MaggBlueFrogs407082025}}' = 'true' AND '{{HasSeenEvent |contains=MaggBlueFrogs607082025}}' = 'false') OR ('{{HasSeenEvent |contains=MaggBlueFrogs607082025}}' = 'true' AND '{{BluFroggies}}' = 'yes')": true,
+		}
+	},
+{
+	"LogName": "Blu Frog Porthos",
+	"Action": "EditMap",
+	"Target": "Maps/SebastianRoom",
+	"FromFile": "assets/maps/Magg_Seb_SebRoomEdit2.tmx",
+	"FromArea": { "X": 7, "Y": 3, "Width": 1, "Height": 1 },
+	"ToArea": { "X": 7, "Y": 3, "Width": 1, "Height": 1 },
+	"PatchMode": "Replace",
+	"When": {
+		"Query: ('{{HasSeenEvent |contains=MaggBlueFrogs407082025}}' = 'true' AND '{{HasSeenEvent |contains=MaggBlueFrogs607082025}}' = 'false') OR ('{{HasSeenEvent |contains=MaggBlueFrogs607082025}}' = 'true' AND '{{BluFroggies}}' = 'yes')": true,
+		}
+	},
+{
+	"LogName": "Kid Sebby picture",
+	"Action": "EditImage",
+	"Target": "Maps/townInterior",
+	"FromFile": "assets/sprites/SebbyFrog.png",
+	"ToArea": { "X": 240, "Y": 80, "Width": 16, "Height": 16 },
+	"PatchMode": "Replace",
+	"When": {
+		"LocationName": "ScienceHouse",
+		"MiscSprites": "yes",
+		},
+	"Update": "OnLocationChange",
+	},
+{
+	"LogName": "Seb room pics",
+	"Action": "EditImage",
+	"Target": "Maps/townInterior",
+	"FromFile": "assets/sprites/SebRoomPics.png",
+	"ToArea": { "X": 288, "Y": 160, "Width": 32, "Height": 16 },
+	"PatchMode": "Replace",
+	"When": {
+		"LocationName": "SebastianRoom",
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+		"MiscSprites": "yes",
+		},
+	"Update": "OnLocationChange",
+	},
+{
+	"LogName": "Frog picture",
+	"Action": "EditImage",
+	"Target": "Maps/townInterior_2",
+	"FromFile": "assets/sprites/SebRoomFrogPic.png",
+	"ToArea": { "X": 224, "Y": 583, "Width": 16, "Height": 16 },
+	"PatchMode": "Replace",
+	"When": {
+		"LocationName": "SebastianRoom",
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+		"MiscSprites": "yes",
+		},
+	"Update": "OnLocationChange",
+	},
+{
+	"LogName": "Frog picture",
+	"Action": "EditImage",
+	"Target": "Maps/townInterior",
+	"FromFile": "assets/sprites/SebRoomFrogPic.png",
+	"ToArea": { "X": 352, "Y": 160, "Width": 16, "Height": 16 },
+	"PatchMode": "Replace",
+	"When": {
+		"LocationName": "SebastianRoom",
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+		"MiscSprites": "yes",
+		},
+	"Update": "OnLocationChange",
+	},
+{
+	"LogName": "Friends picture",
+	"Action": "EditImage",
+	"Target": "Maps/townInterior_2",
+	"FromFile": "assets/sprites/SebRoomFriendsPic.png",
+	"ToArea": { "X": 192, "Y": 581, "Width": 16, "Height": 16 },
+	"PatchMode": "Replace",
+	"When": {
+		"LocationName": "SebastianRoom",
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+		"MiscSprites": "yes",
+		},
+	"Update": "OnLocationChange",
+	},
+//Sam Sprites
+{
+	"Action": "EditImage",
+	"Target": "Characters/Sam",
+	"FromFile": "assets/sprites/Sam_patch.png",
+	"ToArea": { "X": 0, "Y": 448, "Width": 64, "Height": 480 },
+	"PatchMode": "Replace",
+	"When": {
+		"SamCustomSprites": "yes",
+		"HasMod |contains=maggplays.sebastiansprites,maggplays.SOspritespatchSeb": true,
+		}
+	},
+{
+	"Action": "EditImage",
+	"Target": "Characters/Sam_Winter",
+	"FromFile": "assets/sprites/Sam_winter_patch.png",
+	"ToArea": { "X": 0, "Y": 448, "Width": 64, "Height": 480 },
+	"PatchMode": "Replace",
+	"When": {
+		"SamCustomSprites": "yes",
+		"HasMod |contains=maggplays.sebastiansprites,maggplays.SOspritespatchSeb": true,
+		}
+	},
+//TEMPORARY ACTORS
+{
+	"Action": "Load",
+	"Target": "Characters/Froggy, Characters/LilFroggy, Characters/FroggyToo, Characters/LilFroggyBlu, Characters/MaruBot, Characters/DredgeNetPile, Characters/DredgeNetFlat, Characters/sebastian_game, Characters/alex_game, Characters/abigail_game, Characters/penny_game, Characters/maru_game, Characters/sam_game, Characters/farmer_game, Characters/BdayParty, Characters/MaruBot",
+	"FromFile": "assets/sprites/{{TargetWithoutPath}}.png"
+    },
+//MAIL
+{
+	"Action": "EditData",
+	"Target": "Data/TriggerActions",
+	"Entries": {
+		"{{ModId}}_MaggSebastianMail1": {
+			"Id": "{{ModId}}_MaggSebastianMail1",
+			"Trigger": "DayEnding",
+			"Condition": "PLAYER_HAS_SEEN_EVENT Current MaggSayThatAgain07082025, !PLAYER_NPC_RELATIONSHIP Current Sebastian Married",
+			"Actions": [
+				"AddMail Current MaggSebastianMail1 tomorrow"
+                    ]
+                },
+		"{{ModId}}_MaggSebastianMail2": {
+			"Id": "{{ModId}}_MaggSebastianMail2",
+			"Trigger": "DayEnding",
+			"Condition": "PLAYER_HAS_SEEN_EVENT Current MaggNewJam07082025, !PLAYER_NPC_RELATIONSHIP Current Sebastian Married",
+			"Actions": [
+				"AddMail Current MaggSebastianMail2 tomorrow"
+                    ]
+				},
+		"{{ModId}}_MaggSebastianMail3": {
+			"Id": "{{ModId}}_MaggSebastianMail3",
+			"Trigger": "DayEnding",
+			"Condition": "PLAYER_HAS_SEEN_EVENT Current MaggPeas07072025, !PLAYER_NPC_RELATIONSHIP Current Sebastian Married",
+			"Actions": [
+				"AddMail Current MaggSebastianMail3 tomorrow"
+                    ]
+                },
+        "{{ModId}}_MaggSebastianMail4": {
+			"Id": "{{ModId}}_MaggSebastianMail4",
+			"Trigger": "DayEnding",
+			"Condition": "PLAYER_HAS_SEEN_EVENT Current MaggBones07082025, !PLAYER_NPC_RELATIONSHIP Current Sebastian Married",
+			"Actions": [
+				"AddMail Current MaggSebastianMail4 tomorrow"
+                    ]
+				},
+		"{{ModId}}_MaggSebastianMail5": {
+			"Id": "{{ModId}}_MaggSebastianMail5",
+			"Trigger": "DayEnding",
+			"Condition": "PLAYER_HAS_SEEN_EVENT Current MaggBlueFrogs607082025, !PLAYER_NPC_RELATIONSHIP Current Sebastian Married",
+			"Actions": [
+				"AddMail Current MaggSebastianMail5 tomorrow"
+                    ]
+				},
+		"{{ModId}}_MaggLaunchPartyInvite": {
+			"Id": "{{ModId}}_MaggLaunchPartyInvite",
+			"Trigger": "DayEnding",
+			"Condition": "PLAYER_HAS_SEEN_EVENT Current MaggSebGame207092025",
+			"Actions": [
+				"AddMail Current MaggLaunchPartyInvite tomorrow"
+                    ]
+				},
+		}
+	}
+]
+}

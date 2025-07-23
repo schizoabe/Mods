@@ -1,0 +1,29 @@
+{
+  "Changes": [
+    //Entries
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+      				"HasValue: Dolly.RadiantWaterLily_SandyShop.PinkRadiantSeeds": true,
+      				"HasMod |contains=boringvlln.rshops": false
+      				},
+      "MoveEntries": [
+          { "ID": "Dolly.RadiantWaterLily_SandyShop.PinkRadiantSeeds", "AfterID": "(O)494" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+      				"HasValue: Dolly.RadiantWaterLily_SandyShop.PinkRadiantSeeds": true,
+      				"HasMod |contains=boringvlln.rshops": true
+      				},
+      "MoveEntries": [
+          { "ID": "Dolly.RadiantWaterLily_SandyShop.PinkRadiantSeeds", "BeforeID": "boringvlln.rshops_Sandysnack" }
+      ]
+    }
+  ]
+}

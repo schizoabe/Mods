@@ -1,0 +1,142 @@
+{
+	"Format": "1.29.0",
+	"ConfigSchema": {
+		"NoNoseGuy": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Removes the nose from the male farmer."
+		},
+		"NoNoseGirl": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Removes the nose from the female farmer."
+		},
+		"CuteEyesGuy": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Rounds out the male farmer's eyes to be more like the female farmer."
+		},
+		"ChinGuy": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Make the male farmer's face a bit more oval."
+		},
+	},
+	"Changes": [
+	{
+		"LogName": "No Nose Guy Farmer",
+		"Action": "EditImage",
+		"Target": "Characters/Farmer/farmer_base",
+		"FromFile": "assets/noseguy.png",
+		"When": { "NoNoseGuy": true },
+		"FromArea":
+		{
+			"X": 0,
+			"Y": 0,
+			"Width": 96,
+			"Height": 672
+		},
+		"ToArea":
+		{
+			"X": 0,
+			"Y": 0,
+			"Width": 96,
+			"Height": 672
+		},
+	},
+	{
+		"LogName": "No Nose Guy Farmer Bald",
+		"Action": "EditImage",
+		"Target": "Characters/Farmer/farmer_base_bald",
+		"FromFile": "assets/noseguybald.png",
+		"When": { "NoNoseGuy": true },
+		"FromArea":
+		{
+			"X": 0,
+			"Y": 0,
+			"Width": 96,
+			"Height": 672
+		},
+		"ToArea":
+		{
+			"X": 0,
+			"Y": 0,
+			"Width": 96,
+			"Height": 672
+		},
+	},
+	{
+		"LogName": "No Nose Girl Farmer",
+		"Action": "EditImage",
+		"Target": "Characters/Farmer/farmer_girl_base",
+		"FromFile": "assets/nosegirl.png",
+		"When": { "NoNoseGirl": true },
+		"FromArea":
+		{
+			"X": 0,
+			"Y": 0,
+			"Width": 96,
+			"Height": 672
+		},
+		"ToArea":
+		{
+			"X": 0,
+			"Y": 0,
+			"Width": 96,
+			"Height": 672
+		},
+	},
+	{
+		"LogName": "No Nose Girl Farmer Bald",
+		"Action": "EditImage",
+		"Target": "Characters/Farmer/farmer_girl_base_bald",
+		"FromFile": "assets/nosegirlbald.png",
+		"When": { "NoNoseGirl": true },
+		"FromArea":
+		{
+			"X": 0,
+			"Y": 0,
+			"Width": 96,
+			"Height": 672
+		},
+		"ToArea":
+		{
+			"X": 0,
+			"Y": 0,
+			"Width": 96,
+			"Height": 672
+		},
+	},
+	{
+		"LogName": "Cute Eyes Guy Farmer",
+		"Action": "EditImage",
+		"Target": "Characters/Farmer/farmer_base",
+		"FromFile": "assets/eyesguy.png",
+		"When": { "CuteEyesGuy": true },
+		"PatchMode": "Overlay",
+	},
+	{
+		"LogName": "Cute Eyes Guy Farmer Bald",
+		"Action": "EditImage",
+		"Target": "Characters/Farmer/farmer_base_bald",
+		"FromFile": "assets/eyesguy.png",
+		"When": { "CuteEyesGuy": true },
+		"PatchMode": "Overlay",
+	},
+	{
+		"LogName": "Chin Guy Farmer",
+		"Action": "EditImage",
+		"Target": "Characters/Farmer/farmer_base",
+		"FromFile": "assets/chinguy.png",
+		"When": { "ChinGuy": true },
+		"PatchMode": "Overlay",
+	},
+	{
+		"LogName": "Chin Guy Farmer Bald",
+		"Action": "EditImage",
+		"Target": "Characters/Farmer/farmer_base_bald",
+		"FromFile": "assets/chinguy.png",
+		"When": { "ChinGuy": true },
+		"PatchMode": "Overlay",
+	},]
+}

@@ -1,0 +1,42 @@
+{
+	"Changes":[
+	//Entries
+  {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+      			"HasValue: Dolly.FoodPackaging_PierreShop.PackagingPaper": true,
+      			"HasMod |contains=boringvlln.rshops": false,
+      		  },
+      "MoveEntries": [
+          { "ID": "Dolly.FoodPackaging_PierreShop.PackagingPaper", "BeforeID": "(O)245" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: Dolly.FoodPackaging_PierreShop.PackagingPaper": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "Dolly.FoodPackaging_PierreShop.PackagingPaper", "AfterID": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: Dolly.FoodPackaging_PierreShop.PackagingPaper": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393",
+              },
+      "MoveEntries": [
+          { "ID": "Dolly.FoodPackaging_PierreShop.PackagingPaper", "AfterID": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+	]
+}

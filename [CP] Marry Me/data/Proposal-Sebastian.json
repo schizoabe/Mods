@@ -1,0 +1,86 @@
+{
+"Changes": [
+
+//"HasMod": "Kantrip.OlderSebastian"
+    
+//Load images
+{
+    "Action": "Load",
+    "Target": "Tilesheets/{{ModId}}-frog1",
+    "FromFile": "assets/img/frog1-sheet.png"
+},
+{
+    "Action": "Load",
+    "Target": "Tilesheets/{{ModId}}-frog2",
+    "FromFile": "assets/img/frog2-sheet.png"
+},
+{
+    "Action": "Load",
+    "Target": "Tilesheets/{{ModId}}-frog2-motion",
+    "FromFile": "assets/img/frog2.png"
+},
+
+//Load audio
+{
+    "Action": "EditData",
+    "Target": "Data/AudioChanges",
+    "Entries": {
+       
+        "{{ModId}}_Audio_Frogs": {
+            "ID": "{{ModId}}_Frogs",
+            "Category": "Ambient",
+            "FilePaths": [ "{{AbsoluteFilePath: assets/sound/frogs-croaking.ogg}}" ],
+            "StreamedVorbis": true,
+            "Looped": true
+        },
+    }
+},
+
+//SEBASTIAN -- proposes in the middle of the mountain lake, at night
+
+//Vanilla
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Mountain",
+    "When": {
+        "HasMod |contains=Kantrip.OlderSebastian": false,
+    },
+    "Entries": {
+        "{{ModId}}_Proposal_Sebastian/Dating Sebastian/f Sebastian 2500/t 1900 2200/w sunny/z winter/c 1/LocalMail {{ModId}}_Letter_Sebastian": "nightTime/-1000 -1000/farmer 57 32 0 Sebastian 64 21 2/mailReceived {{ModId}}_StopBlack_Sebastian/removeObject 57 20/addLantern 735 57 20 1/removeObject 67 21/addLantern 735 67 21 2/removeObject 60 20/addLantern 735 60 20 1/--skippable/speed farmer 1/advancedMove farmer false 0 -9 1 0 0 -2 2 0 1 1000/viewport 63 21 clamp true/pause 3000/--switchEvent {{ModId}}_Sebastian_Yes/faceDirection Sebastian 3/pause 100/textAboveHead Sebastian \"{{i18n:White_Sebastian.0}}\"/pause 4000/faceDirection farmer 3/pause 400/emote farmer 40/pause 400/faceDirection farmer 1/pause 200/quickQuestion #{{i18n:White_Sebastian.1}}#{{i18n:White_Sebastian.2}}(break)speak Sebastian \"{{i18n:White_Sebastian.3}}\"(break)speak Sebastian \"{{i18n:White_Sebastian.4}}\"/pause 1000/advancedMove farmer false 2 0 1 500/waitForAllStationary/pause 1200/emote farmer 8/pause 800/speak Sebastian \"{{i18n:White_Sebastian.5}}\"/pause 400/quickQuestion #{{i18n:White_Sebastian.6}}#{{i18n:White_Sebastian.7}}(break)speak Sebastian \"{{i18n:White_Sebastian.8}}\"(break)speak Sebastian \"{{i18n:White_Sebastian.9}}\"/pause 800/speak Sebastian \"{{i18n:White_Sebastian.10}}\"/pause 1000/faceDirection Sebastian 2/pause 500/faceDirection farmer 2/pause 3000/speak Sebastian \"{{i18n:White_Sebastian.11}}\"/pause 400/speak Sebastian \"{{i18n:White_Sebastian.12}}\"/faceDirection farmer 1/pause 400/faceDirection Sebastian 3/pause 200/emote Sebastian 40/pause 1800/speak Sebastian \"{{i18n:White_Sebastian.13}}\"/pause 400/faceDirection Sebastian 2/emote Sebastian 60/pause 2000/playMusic echos/pause 3000/speak Sebastian \"{{i18n:White_Sebastian.14}}\"/emote farmer 16/pause 1400/emote Sebastian 40/pause 400/speak Sebastian \"{{i18n:White_Sebastian.15}}\"/faceDirection Sebastian 3/pause 400/speak Sebastian \"{{i18n:White_Sebastian.16}}\"/pause 400/emote farmer 40 true/speed Sebastian 1/move Sebastian -1 0 3/pause 600/speak Sebastian \"{{i18n:White_Sebastian.17}}\"/pause 1200/playSound dwop/animate Sebastian false true 100 54/pause 600/message \"{{i18n:White_Sebastian.18 |You={{You}}}}\"/pause 600/jump farmer/pause 1800/speak Sebastian \"{{i18n:White_Sebastian.19}}\"/pause 400/emote farmer 16/pause 200/question fork1 \"{{i18n:proposalResponse}}\"/fork {{ModId}}_Sebastian_No/switchEvent {{ModId}}_Sebastian_Yes",
+        
+        "{{ModId}}_Sebastian_Yes": "stopAnimation Sebastian 12/emote Sebastian 20/pause 1200/playSound dwop/positionOffset Sebastian -2 0/pause 100/positionOffset Sebastian -2 0/pause 100/positionOffset Sebastian -2 0/pause 1000/message \"{{i18n:White_Sebastian.YES.0 |Your={{Your}}}}\"/pause 200/speak Sebastian \"{{i18n:White_Sebastian.YES.1}}\"/pause 200/emote farmer 32/pause 200/positionOffset farmer 4 0/positionOffset Sebastian -4 0/{{Farmer_Kiss}}/{{Sebastian_Kiss}}/emote Sebastian 20/pause 200/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Sebastian 12/pause 1000/speak Sebastian \"{{i18n:White_Sebastian.YES.2}}\"/stopMusic/pause 800/playMusic {{ModId}}_Frogs/faceDirection Sebastian 0/pause 800/faceDirection farmer 0/pause 3000/playSound dropItemInWater/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog2-motion 0 0 16 16 80 5 5 69 19 false true 1 0.004 1 0 0 0 motion -2 0/pause 6000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog2 0 0 48 16 150 6 1 55 18 false true 1 0 1 0 0 0/pause 750/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog2 0 16 48 16 150 9 100 55 18 false true 1 0 1 0 0 0/pause 10000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog2 0 0 48 16 150 6 1 67 19 false false 1 0 1 0 0 0/pause 750/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog2 0 16 48 16 150 9 100 67 19 false false 1 0 1 0 0 0/pause 2000/emote Sebastian 32/pause 7000/playSound leafrustle/pause 3000/playSound leafrustle/pause 300/playSound leafrustle/pause 2000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog1 0 0 48 16 150 6 1 58 19 false false 1 0 1 0 0 0/pause 750/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog1 0 16 48 16 150 9 100 58 19 false false 1 0 1 0 0 0/pause 2000/emote farmer 32/pause 3000/globalFade/viewport -1000 -1000/pause 2000/action Kantrip.HeartActions_DoEngagement Sebastian/action AddItem 460/pause 1000/stopMusic/end",
+        
+        "{{ModId}}_Sebastian_No": "stopAnimation Sebastian 12/speed Sebastian 2/jump Sebastian/emote Sebastian 16/pause 800/emote Sebastian 28/pause 2000/speak Sebastian \"{{i18n:White_Sebastian.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_Sebastian_notReady(break)switchEvent {{ModId}}_Sebastian_noMarriage(break)switchEvent {{ModId}}_Sebastian_breakup/",
+        
+        "{{ModId}}_Sebastian_notReady": "pause 400/emote Sebastian 60/pause 800/speak Sebastian \"{{i18n:White_Sebastian.NO1.0}}\"/pause 500/speak Sebastian \"{{i18n:White_Sebastian.NO1.1}}\"/pause 200/emote farmer 32/pause 400/emote Sebastian 32/pause 200/speak Sebastian \"{{i18n:White_Sebastian.NO1.2}}\"/pause 200/positionOffset farmer 4 -4/positionOffset Sebastian -4 0/{{Farmer_Kiss}}/{{Sebastian_Kiss}}/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end",
+        
+        "{{ModId}}_Sebastian_noMarriage": "pause 200/speak Sebastian \"{{i18n:White_Sebastian.NO2.0}}\"/pause 200/faceDirection Sebastian 1/emote Sebastian 40/pause 2000/faceDirection Sebastian 3/speak Sebastian \"{{i18n:White_Sebastian.NO2.1}}\"/pause 1000/faceDirection Sebastian 2/message \"{{i18n:White_Sebastian.NO2.2}}\"/pause 800/playSound dropItemInWater/pause 200/emote farmer 16/pause 800/faceDirection Sebastian 3/pause 1000/speak Sebastian \"{{i18n:White_Sebastian.NO2.3}}\"/pause 800/emote farmer 32/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_Sebastian_breakup": "pause 400/playSound dwop/positionOffset Sebastian 2 0/pause 100/positionOffset Sebastian 2 0/pause 100/positionOffset Sebastian 2 0/pause 100/playSound dwop/positionOffset Sebastian 2 0/pause 100/positionOffset Sebastian 2 0/pause 100/positionOffset Sebastian 2 0/pause 1500/faceDirection Sebastian 2/shake Sebastian 500/pause 1000/emote Sebastian 28/pause 2500/faceDirection Sebastian 3/speak Sebastian \"{{i18n:White_Sebastian.NO3.0}}\"/move Sebastian 2 0 1/pause 800/shake Sebastian 500/pause 3000/faceDirection Sebastian 3/pause 500/speak Sebastian \"{{i18n:White_Sebastian.NO3.1}}\"/pause 100/faceDirection Sebastian 2/pause 1000/shake Sebastian 500/pause 1500/faceDirection Sebastian 3/pause 600/speak Sebastian \"{{i18n:White_Sebastian.NO3.2}}\"/pause 200/faceDirection Sebastian 1/pause 1200/speak Sebastian \"{{i18n:White_Sebastian.NO3.3}}\"/pause 1200/advancedMove farmer false -4 0 0 6/pause 2500/action Kantrip.HeartActions_DoBreakup Sebastian/friendship Sebastian -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+
+//Older Sebastian
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Mountain",
+    "When": {
+        "HasMod": "Kantrip.OlderSebastian",
+    },
+    "Entries": {
+        "{{ModId}}_Proposal_Sebastian/Dating Sebastian/f Sebastian 2500/t 1900 2200/w sunny/z winter/c 1/LocalMail {{ModId}}_Letter_Sebastian": "nightTime/-1000 -1000/farmer 57 32 0 Sebastian 64 21 2/mailReceived {{ModId}}_StopBlack_Sebastian/removeObject 57 20/addLantern 735 57 20 1/removeObject 67 21/addLantern 735 67 21 2/removeObject 60 20/addLantern 735 60 20 1/--skippable/speed farmer 1/advancedMove farmer false 0 -9 1 0 0 -2 2 0 1 1000/viewport 63 21 clamp true/pause 3000/--switchEvent {{ModId}}_Sebastian_Yes/faceDirection Sebastian 3/pause 100/textAboveHead Sebastian \"{{i18n:White_OlderSeb.0}}\"/pause 4000/faceDirection farmer 3/pause 400/emote farmer 40/pause 400/faceDirection farmer 1/pause 200/quickQuestion #{{i18n:White_OlderSeb.1}}#{{i18n:White_OlderSeb.2}}(break)speak Sebastian \"{{i18n:White_OlderSeb.3}}\"(break)emote Sebastian 32\\pause 800\\speak Sebastian \"{{i18n:White_OlderSeb.4}}\"/pause 1000/advancedMove farmer false 2 0 1 500/waitForAllStationary/pause 1200/emote farmer 8/pause 800/speak Sebastian \"{{i18n:White_OlderSeb.5}}\"/pause 400/quickQuestion #{{i18n:White_OlderSeb.6}}#{{i18n:White_OlderSeb.7}}(break)pause 200\\emote Sebastian 60\\pause 800\\speak Sebastian \"{{i18n:White_OlderSeb.8}}\"(break)speak Sebastian \"{{i18n:White_OlderSeb.9}}\"/pause 800/speak Sebastian \"{{i18n:White_OlderSeb.10}}\"/pause 1000/faceDirection Sebastian 2/pause 500/faceDirection farmer 2/pause 3000/speak Sebastian \"{{i18n:White_OlderSeb.11}}\"/pause 400/speak Sebastian \"{{i18n:White_OlderSeb.12}}\"/faceDirection farmer 1/pause 400/faceDirection Sebastian 3/pause 200/emote Sebastian 40/pause 1800/speak Sebastian \"{{i18n:White_OlderSeb.13}}\"/pause 400/faceDirection Sebastian 2/emote Sebastian 60/pause 2000/playMusic echos/pause 3000/speak Sebastian \"{{i18n:White_OlderSeb.14}}\"/emote farmer 16/pause 1400/emote Sebastian 40/pause 400/speak Sebastian \"{{i18n:White_OlderSeb.15}}\"/faceDirection Sebastian 3/pause 400/speak Sebastian \"{{i18n:White_OlderSeb.16}}\"/pause 400/emote farmer 40 true/speed Sebastian 1/move Sebastian -1 0 3/pause 600/speak Sebastian \"{{i18n:White_OlderSeb.17}}\"/pause 1200/playSound dwop/animate Sebastian false true 100 54/pause 600/message \"{{i18n:White_OlderSeb.18 |You={{You}}}}\"/pause 600/jump farmer/pause 1800/speak Sebastian \"{{i18n:White_OlderSeb.19}}\"/pause 400/emote farmer 40/pause 800/speak Sebastian \"{{i18n:White_OlderSeb.20}}\"/pause 400/emote farmer 16/pause 200/question fork1 \"{{i18n:proposalResponse}}\"/fork {{ModId}}_Sebastian_No/switchEvent {{ModId}}_Sebastian_Yes",
+        
+        "{{ModId}}_Sebastian_Yes": "stopAnimation Sebastian 12/emote Sebastian 20/pause 1200/playSound dwop/positionOffset Sebastian -2 0/pause 100/positionOffset Sebastian -2 0/pause 100/positionOffset Sebastian -2 0/pause 1000/message \"{{i18n:White_OlderSeb.YES.0 |Your={{Your}}}}\"/pause 200/speak Sebastian \"{{i18n:White_OlderSeb.YES.1}}\"/pause 200/emote farmer 32/pause 200/positionOffset farmer 4 0/positionOffset Sebastian -4 0/{{Farmer_Kiss}}/{{Sebastian_Kiss}}/emote Sebastian 20/pause 200/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Sebastian 12/pause 1000/speak Sebastian \"{{i18n:White_OlderSeb.YES.2}}\"/pause 600/emote farmer 8/stopMusic/pause 800/playMusic {{ModId}}_Frogs/faceDirection Sebastian 0/pause 800/faceDirection farmer 0/pause 3000/playSound dropItemInWater/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog2-motion 0 0 16 16 80 5 5 69 19 false true 1 0.004 1 0 0 0 motion -2 0/pause 6000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog2 0 0 48 16 150 6 1 55 18 false true 1 0 1 0 0 0/pause 750/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog2 0 16 48 16 150 9 100 55 18 false true 1 0 1 0 0 0/pause 10000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog2 0 0 48 16 150 6 1 67 19 false false 1 0 1 0 0 0/pause 750/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog2 0 16 48 16 150 9 100 67 19 false false 1 0 1 0 0 0/pause 2000/emote Sebastian 32/pause 7000/playSound leafrustle/pause 3000/playSound leafrustle/pause 300/playSound leafrustle/pause 2000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog1 0 0 48 16 150 6 1 58 19 false false 1 0 1 0 0 0/pause 750/temporaryAnimatedSprite Tilesheets\\{{ModId}}-frog1 0 16 48 16 150 9 100 58 19 false false 1 0 1 0 0 0/pause 2000/emote farmer 32/pause 3000/globalFade/viewport -1000 -1000/pause 2000/action Kantrip.HeartActions_DoEngagement Sebastian/action AddItem 460/pause 1000/stopMusic/end newDay",
+        
+        "{{ModId}}_Sebastian_No": "stopAnimation Sebastian 12/speed Sebastian 2/jump Sebastian/emote Sebastian 16/pause 800/emote Sebastian 28/pause 2000/speak Sebastian \"{{i18n:White_OlderSeb.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_Sebastian_notReady(break)switchEvent {{ModId}}_Sebastian_noMarriage(break)switchEvent {{ModId}}_Sebastian_breakup/",
+        
+        "{{ModId}}_Sebastian_notReady": "pause 400/emote Sebastian 60/pause 800/speak Sebastian \"{{i18n:White_OlderSeb.NO1.0}}\"/pause 500/speak Sebastian \"{{i18n:White_OlderSeb.NO1.1}}\"/pause 200/emote farmer 32/pause 400/emote Sebastian 32/pause 200/speak Sebastian \"{{i18n:White_OlderSeb.NO1.2}}\"/pause 200/positionOffset farmer 4 -4/positionOffset Sebastian -4 0/{{Farmer_Kiss}}/{{Sebastian_Kiss}}/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end",
+        
+        "{{ModId}}_Sebastian_noMarriage": "pause 200/speak Sebastian \"{{i18n:White_OlderSeb.NO2.0}}\"/pause 200/faceDirection Sebastian 1/emote Sebastian 40/pause 2000/faceDirection Sebastian 3/speak Sebastian \"{{i18n:White_OlderSeb.NO2.1}}\"/pause 1000/faceDirection Sebastian 2/message \"{{i18n:White_OlderSeb.NO2.2}}\"/pause 800/playSound dropItemInWater/pause 200/emote farmer 16/pause 800/faceDirection Sebastian 3/pause 1000/speak Sebastian \"{{i18n:White_OlderSeb.NO2.3}}\"/pause 800/emote farmer 32/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_Sebastian_breakup": "pause 400/playSound dwop/positionOffset Sebastian 2 0/pause 100/positionOffset Sebastian 2 0/pause 100/positionOffset Sebastian 2 0/pause 100/playSound dwop/positionOffset Sebastian 2 0/pause 100/positionOffset Sebastian 2 0/pause 100/positionOffset Sebastian 2 0/pause 1500/faceDirection Sebastian 2/shake Sebastian 500/pause 1000/emote Sebastian 28/pause 2500/faceDirection Sebastian 3/speak Sebastian \"{{i18n:White_OlderSeb.NO3.0}}\"/move Sebastian 2 0 1/pause 800/shake Sebastian 500/pause 3000/faceDirection Sebastian 3/pause 500/speak Sebastian \"{{i18n:White_OlderSeb.NO3.1}}\"/pause 100/faceDirection Sebastian 2/pause 1000/shake Sebastian 500/pause 1500/faceDirection Sebastian 3/pause 600/speak Sebastian \"{{i18n:White_OlderSeb.NO3.2}}\"/pause 200/faceDirection Sebastian 1/pause 1200/speak Sebastian \"{{i18n:White_OlderSeb.NO3.3}}\"/pause 1200/advancedMove farmer false -4 0 0 6/pause 2500/action Kantrip.HeartActions_DoBreakup Sebastian/friendship Sebastian -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+
+]
+}

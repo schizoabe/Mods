@@ -1,0 +1,37 @@
+{
+	"Changes": [
+        
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/GuntherSilvian_{{Season}}",
+            "FromFile": "assets/{{GuntherPortrait}}/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/GuntherSilvian_SpiritsEve , Portraits/GuntherSilvian_FlowerDance",
+            "FromFile": "assets/{{GuntherPortrait}}/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"      
+        },
+
+        //Redunant But Will Fix any issues of portraits not showing up for Temporary Actor Calls within SVE
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Gunther",
+            "FromFile": "assets/{{GuntherPortrait}}/GuntherSilvian_{{Season}}.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        }
+
+    ]
+}

@@ -1,0 +1,23 @@
+{
+	"Format": "1.19.0",
+	
+	"ConfigSchema": {
+		"LeahDialogueChange": {
+			"AllowValues": "false, true",
+			"Default": "true"
+		},
+		
+	},
+	
+	
+	"Changes": [
+		{
+			"Action": "Include",
+			"FromFile": "assets/Leah.json",
+			"When": {
+				"LeahDialogueChange": "true",
+			}
+		},
+
+	]
+}

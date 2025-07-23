@@ -1,0 +1,273 @@
+{
+	"Changes": [
+	    {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {"PretendLava": "true", "NightEvents": "false"},
+            "Entries": {
+			"kath.weathering_VolcanoEruptionStart": {
+				"Id": "kath.weathering_VolcanoEruptionStart",
+                "Trigger": "DayStarted",
+                "Condition": "WEATHER IslandNorth kath.weathering_Ash, RANDOM 0.35",
+                "Actions": [
+					"AddMail All VolcanoEruption now",
+					"MarkActionApplied All kath.weathering_VolcanoEruptionStop false",
+                    ],
+				},
+			"kath.weathering_VolcanoEruptionStop": {
+				"Id": "kath.weathering_VolcanoEruptionStop",
+                "Trigger": "DayStarted",
+                "Condition": "PLAYER_HAS_MAIL Any VolcanoEruption, CS_WEATHER IslandNorth -2 kath.weathering_Ash",
+                "Actions": [
+					"RemoveMail All VolcanoEruption",
+					"MarkActionApplied All kath.weathering_VolcanoEruptionStart false",
+                    ],
+				},				
+			}
+		},
+		{
+      		"LogName": "The Weather Data Ash",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Ash": {
+					"Id": "kath.weathering_Ash",
+					"DisplayName": "{{i18n: Weather.Ash}}",
+
+					"Forecast": "{{i18n: Weather.Ash.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Ash.ForecastIsland}}", "Desert": "{{i18n: Weather.Ash.ForecastDesert}}",},
+					
+					"UseNightTiles": true,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"IsLightning": true,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+
+					"MusicOverride": "KathAsh",					
+					"MusicFrequencyOutside": 75,
+					"MusicFrequencyInside": 10,
+					"SoftMusicOverrides": [
+					    {
+							"Id": "LavaTime",
+							"Condition": "LOCATION_CONTEXT Here Island, PLAYER_HAS_MAIL Current VolcanoEruption",
+							"Track": "KathLava"
+						},
+					    {
+							"Id": "LavaTime",
+							"Condition": "LOCATION_CONTEXT Here Island, PLAYER_HAS_MAIL Current VolcanoEruptionOnce",
+							"Track": "KathLava"
+						}
+					],
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 80},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 130},
+					"TVFrames": 4,
+
+
+					"TotemMessage": "{{i18n: Weather.AshTotem}}",
+					"TotemScreenTint": "gray",
+					"TotemSound": "KathQuake",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDVolcanicAsh 3",
+							],
+						},					
+					],//close effect
+
+					"Lighting": [
+						{
+							"Id": "morning",
+							"TimeOfDay": "600",
+							"Condition": "!LOCATION_CONTEXT Here Desert",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0",
+							"LightingTint": "16, 48, 148",
+							"LightingTintOpacity": "0",
+						},						
+						{
+							"Id": "morningphase",
+							"TimeOfDay": "800",
+							"Condition": "!LOCATION_CONTEXT Here Desert",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.2",
+							"LightingTint": "16, 48, 148",
+							"LightingTintOpacity": "0.3",
+						},
+						{
+							"Id": "initialphase",
+							"TimeOfDay": "900",
+							"Condition": "!LOCATION_CONTEXT Here Desert",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.3",
+							"LightingTint": "57, 85, 174",
+							"LightingTintOpacity": "0.5",			
+						},
+						{
+							"Id": "midphase",
+							"TimeOfDay": "1200",
+							"Condition": "!LOCATION_CONTEXT Here Desert",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.55",
+							"LightingTint": "104, 146, 194",
+							"LightingTintOpacity": "0.6",							
+						},
+						{
+							"Id": "beforepeakphase",
+							"TimeOfDay": "1500",
+							"Condition": "!LOCATION_CONTEXT Here Desert",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.6",
+							"LightingTint": "203, 177, 118",
+							"LightingTintOpacity": "0.65",							
+						},
+						{
+							"Id": "peakphase",
+							"TimeOfDay": "1600",
+							"Condition": "!LOCATION_CONTEXT Here Desert",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.75",
+							"LightingTint": "227, 227, 174",
+							"LightingTintOpacity": "0.75",				
+						},
+					],
+
+					"Layers": [
+						{
+							"Id": "LightAsh1",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_SpriteSpring2\" \"LOCATION_NAME Target IslandEast\" \"LOCATION_NAME Target IslandShrine\" \"LOCATION_NAME Target Desert\"",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 16, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "0.05, 0.15",
+							"ViewSpeed": "-1, -1",
+							"Scale": 6,
+							"Color": null,
+							"Opacity": 0.6,
+						},
+						{
+							"Id": "LightAsh2",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_SpriteSpring2\" \"LOCATION_NAME Target IslandEast\" \"LOCATION_NAME Target IslandShrine\" \"LOCATION_NAME Target Desert, !PLAYER_HAS_BUFF Current PDWUVGoggles\"",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 16, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "-0.05, 0.05",
+							"ViewSpeed": "-1, -1",
+							"Scale": 8,
+							"Color": null,
+							"Opacity": 0.6,
+						},
+						{
+							"Id": "Ash1",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 16, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "-0.05, 0.1",
+							"ViewSpeed": "-1, -1",
+							"Scale": 4,
+							"Color": null,
+							"Opacity": 0.6,
+						},
+						{
+							"Id": "Ash2",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !PLAYER_HAS_BUFF Current PDWUVGoggles",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 16, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "0.05, 0.05",
+							"ViewSpeed": "-1, -1",
+							"Scale": 6,
+							"Color": "200, 200, 200",
+							"Opacity": 0.55,
+						},
+						{
+							"Id": "Ash3",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !PLAYER_HAS_BUFF Current PDWUVGoggles",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 16, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "0, 0.15",
+							"ViewSpeed": "-1, -1",
+							"Scale": 8,
+							"Color": null,
+							"Opacity": 0.5,
+						},
+						{
+							"Id": "cloudymaybe",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 0, "Y": 64, "Width": 64, "Height": 64 },
+							"Color": "40, 42, 54",
+							"Opacity": 0.41,
+							"Speed": "0.05, 0.05",
+							"ViewSpeed": "-1, -1",
+							"Scale": 25,
+						},
+						{
+							"Id": "AshyColorLight",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_SpriteSpring2\" \"LOCATION_NAME Target IslandEast\" \"LOCATION_NAME Target IslandShrine\" \"LOCATION_NAME Target Desert\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "40, 42, 54",
+							"Opacity": 0.21
+						},
+						{
+							"Id": "AshyColor",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "40, 42, 54",
+							"Opacity": 0.31
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "!LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",							
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.47
+						},							
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

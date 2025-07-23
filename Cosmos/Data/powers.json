@@ -1,0 +1,109 @@
+{
+	"Changes":[
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "Cosmos.StarfallIcon.Power": {
+                    "Id": "Cosmos.StarfallIcon.Power",
+                    "Trigger": "spacechase0.SpaceCore_OnItemEaten",
+                    "Condition": "ITEM_ID Input Cosmos.StarfallIcon",
+                    "MarkActionApplied": true,
+                    "Actions": [
+                        "Spiderbuttons.SpecialPowerUtilities/Actions/SetPowerAvailable Current Cosmos.PowerStars",
+                        "spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Cosmos.Eaten.Power}}\" (O)Cosmos.StarfallIcon",
+                        "spacechase0.SpaceCore_PlaySound CosmosBookNoPage false",
+                        "AddMail Current CosmosStarfallIcon received"
+                    ]
+                },
+                "Cosmos.StarfallIcon.Power2": {
+                    "Id": "Cosmos.StarfallIcon.Power2",
+                    "Trigger": "spacechase0.SpaceCore_OnItemEaten",
+                    "Condition": "ITEM_ID Input Cosmos.IridiumiteIcon",
+                    "MarkActionApplied": true,
+                    "Actions": [
+                        "Spiderbuttons.SpecialPowerUtilities/Actions/SetPowerAvailable Current Cosmos.PowerCrystal",
+                        "spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Cosmos.Eaten.Power2}}\" (O)Cosmos.IridiumiteIcon",
+                        "spacechase0.SpaceCore_PlaySound CosmosBookNoPage false",
+                        "AddMail Current CosmosIridiumiteIcon received"
+                    ]
+                }
+            }
+        },
+        {
+            "LogName": "Mail Flags for Special Powers",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "CosmosStarfallIcon": null,
+                "CosmosIridiumiteIcon": null
+            }
+        },
+        
+        //POWER DATA
+        {
+            "LogName": "Add Power Tab",
+            "Action": "EditData",
+            "When":{"HasMod":"Spiderbuttons.SpecialPowerUtilities"},
+            "Target":"Spiderbuttons.SpecialPowerUtilities/PowerTabs",
+            "Entries": {
+                "kath.cosmos": {
+                    "TabDisplayName": "{{i18n:CosmosTab}}",
+                    "IconPath": "Mods/kath.cosmos/Objects",
+                    "IconSourceRect": {
+                        "X": 32,
+                        "Y": 32,
+                        "Width": 16,
+                        "Height": 16	
+                    }
+                }		
+            }
+        },	
+        {
+            "LogName": "Add Power Data",
+            "Action": "EditData",
+            "Target": "Data/Powers",
+            "Entries": {
+                "Cosmos.PowerBook": {
+                    "DisplayName": "{{i18n:CosmosPower.Name}}",
+                    "Description": "{{i18n:CosmosPower.Description}}",
+                    "TexturePath": "Mods/kath.cosmos/Objects",
+                    "TexturePosition": { "X": 48, "Y": 32 },
+                    "UnlockedCondition": "PLAYER_STAT Current Cosmos.PowerBook 1",
+                    "CustomFields": {
+                        "Spiderbuttons.SpecialPowerUtilities/Tab": "kath.cosmos"
+                    }
+                },
+                "Cosmos.PowerCrystal": {
+                    "DisplayName": "{{i18n:CosmosPower3.Name}}",
+                    "Description": "{{i18n:CosmosPower3.Description}}",
+                    "TexturePath": "Mods/kath.cosmos/Objects",
+                    "TexturePosition": { "X": 64, "Y": 32 },
+                    "UnlockedCondition": "PLAYER_HAS_RUN_TRIGGER_ACTION Current Cosmos.StarfallIcon.Power2",
+                    "CustomFields": {
+                        "Spiderbuttons.SpecialPowerUtilities/Tab": "kath.cosmos"
+                    }
+                },
+                "Cosmos.PowerStars": {
+                    "DisplayName": "{{i18n:CosmosPower2.Name}}",
+                    "Description": "{{i18n:CosmosPower2.Description}}",
+                    "TexturePath": "Mods/kath.cosmos/Objects",
+                    "TexturePosition": { "X": 32, "Y": 32 },
+                    "UnlockedCondition": "PLAYER_HAS_RUN_TRIGGER_ACTION Current Cosmos.StarfallIcon.Power",
+                    "CustomFields": {
+                        "Spiderbuttons.SpecialPowerUtilities/Tab": "kath.cosmos"
+                    }
+                }
+            }
+        }
+	]
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,368 @@
+{
+//WARNING!! Do NOT make edits to any file in this mod unless you know what you're doing, you can easily break things by accidentally deleting a symbol. I am not responsible for breaks caused by editing and I don't provide coding instruction. There is a Wiki for that.
+
+//IF YOU CHOOSE TO EDIT THE DIALOGUE - You may edit your personal copy only. You do not have permission to make edits and re-post or share this mod. The dialogue is my own writing and I worked very hard on this. Contact MaggPlays directly if you have any questions or if you think your edits should be a variant.
+
+"Format": "2.4.0",
+"ConfigSchema": {
+	"SamCustomSprites": {
+		"AllowValues": "yes, no",
+		"Default": "yes",
+		"Description": "Enables custom sprites for certain events. Selecting 'No' will show alternate visuals in some events and remove some non-essential events that require custom sprites. If you are using Slightly Cuter sprites, download the compatible patch for the custom sprites.",
+		},
+	"FarmerPronouns": {
+		"AllowValues": "yes, no",
+		"Default": "no",
+		"Description": "Select 'Yes' to use gender neutral pronouns for farmer.",
+		},
+	"SkateparkMap": {
+		"AllowValues": "yes, no",
+		"Default": "yes",
+		"Description": "Keep Sam's skatepark on the map after the skatepark event.",
+		},
+	},
+"DynamicTokens": [
+{
+	"Name": "FarmerGender",
+	"Value": "female",
+	"When": {
+		"PlayerGender": "female",
+		"FarmerPronouns": "no",
+		}
+	},
+{
+	"Name": "FarmerGender",
+	"Value": "male",
+	"When": {
+		"PlayerGender": "male",
+		"FarmerPronouns": "no",
+		}
+	},
+{
+	"Name": "FarmerGender",
+	"Value": "neutral",
+	"When": {
+		"FarmerPronouns": "yes",
+		}
+	},
+{
+	"Name": "SamHearts",
+	"Value": "nohearts",
+	},
+{
+	"Name": "SamHearts",
+	"Value": "lowhearts",
+	"When": {
+		"Hearts:Sam": "3, 4"
+		},
+	},
+{
+	"Name": "SamHearts",
+	"Value": "medhearts",
+	"When": {
+		"Hearts:Sam": "5, 6"
+		},
+	},
+{
+	"Name": "SamHearts",
+	"Value": "highhearts",
+	"When": {
+		"Hearts:Sam": "7, 8"
+		},
+	},
+//Seb portrait calls
+{
+	//sad sneer
+	"Name": "mp12",
+	"Value": "$12",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": true
+        }
+	},
+{
+	"Name": "mp12",
+	"Value": "$2",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": false
+        }
+    },
+{
+	//surprise
+	"Name": "mp13",
+	"Value": "$13",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": true
+        }
+	},
+{
+	"Name": "mp13",
+	"Value": "$4",
+	"When": {
+		"HasMod |contains=maggplays.sebastiansprites": false
+        }
+    },
+//Custom sprite compatibility tokens
+{
+	"Name": "BeachMusicSebSprite",
+	"Value": "pause 50",
+	"When": {
+		"SamCustomSprites": "no",
+		}
+	},
+{
+	"Name": "BeachMusicSebSprite",
+	"Value": "animate Sebastian false true 250 107 108 109 109 108 107",
+	"When": {
+		"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb}}' = 'true' OR '{{SamCustomSprites}}' = 'yes'": true,
+		}
+	},
+{
+	"Name": "GossipPlaces",
+	"Value": "Sam 1 1 2 Sebastian 5 9 3 Abigail 3 7 2 farmer -100 -100 0",
+	},
+{
+	"Name": "GossipPlaces",
+	"Value": "Sam 1 1 2 Sebastian 5 8 3 Abigail 3 7 2 farmer -100 -100 0 Victor 3 10 0",
+	"When": {
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+		}
+	},
+{
+	"Name": "WipeoutSprite1",
+	"Value": "showFrame Sam 37",
+	"When": {
+		"SamCustomSprites": "no",
+		}
+	},
+{
+	"Name": "WipeoutSprite1",
+	"Value": "showFrame Sam 58",
+	"When": {
+		"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb,DSV.Core}}' = 'true' OR '{{SamCustomSprites}}' = 'yes'": true,
+		}
+	},
+{
+	"Name": "WipeoutSprite2",
+	"Value": "warp Sam 15 6/showFrame Sam 37/positionOffset Sam 0 -20/warp Harvey 17 6",
+	"When": {
+		"SamCustomSprites": "no",
+		}
+	},
+{
+	"Name": "WipeoutSprite2",
+	"Value": "warp Sam 15 5/positionOffset Sam 0 -20/faceDirection Sam 2/showFrame Sam 59/warp Harvey 16 6",
+	"When": {
+		"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb,DSV.Core}}' = 'true' OR '{{SamCustomSprites}}' = 'yes'": true,
+		}
+	},
+{
+	"Name": "WipeoutSprite3",
+	"Value": "advancedMove Harvey false -6 0 0 3 -5 0 4 100/pause 6000/faceDirection farmer 2/pause 1000/speak Sam \"{{i18n: sam.event.wipeout.6}}\"/faceDirection farmer 1/emote farmer 32",
+	"When": {
+		"SamCustomSprites": "no",
+		}
+	},
+{
+	"Name": "WipeoutSprite3",
+	"Value": "advancedMove Harvey false 0 1 -6 0 0 3 -5 0 4 100/pause 6000/faceDirection farmer 2/pause 1000/speak Sam \"{{i18n: sam.event.wipeout.6}}\"/faceDirection farmer 1/emote farmer 32",
+	"When": {
+		"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb,DSV.Core}}' = 'true' OR '{{SamCustomSprites}}' = 'yes'": true,
+		}
+	},
+{
+	"Name": "WipeoutSprite4",
+	"Value": "faceDirection Harvey 0/speak Harvey \"{{i18n: sam.event.wipeout.8}}\"/emote Harvey 32/showFrame Sam 0",
+	"When": {
+		"SamCustomSprites": "no",
+		}
+	},
+{
+	"Name": "WipeoutSprite4",
+	"Value": "move Harvey 0 -1 0/speak Harvey \"{{i18n: sam.event.wipeout.8}}\"/emote Harvey 32",
+	"When": {
+		"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb,DSV.Core}}' = 'true' OR '{{SamCustomSprites}}' = 'yes'": true,
+		}
+	},
+{
+	"Name": "PicnicSprite1",
+	"Value": "faceDirection Sam 2/faceDirection farmer 2",
+	"When": {
+		"SamCustomSprites": "no",
+		}
+	},
+{
+	"Name": "PicnicSprite1",
+	"Value": "showFrame Sam 82/faceDirection farmer 2/showFrame farmer 70",
+	"When": {
+		"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb,DSV.Core}}' = 'true' OR '{{SamCustomSprites}}' = 'yes'": true,
+		}
+	},
+{
+	"Name": "PicnicSprite2",
+	"Value": "warp Sam 18 22/showFrame Sam 0/faceDirection Sam 1/warp farmer 19 22/faceDirection farmer 3",
+	"When": {
+		"SamCustomSprites": "no",
+		}
+	},
+{
+	"Name": "PicnicSprite2",
+	"Value": "warp Sam 18 23/showFrame Sam 81/hideShadow Sam true/warp farmer 19 22/faceDirection farmer 2/showFrame farmer 70",
+	"When": {
+		"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb,DSV.Core}}' = 'true' OR '{{SamCustomSprites}}' = 'yes'": true,
+		}
+	},
+],
+"Changes": [
+//MAPS
+{
+	"Action": "Load",
+	"Target": "Maps/Magg_Sam_SkateparkFull, Maps/Magg_Sam_SaloonBand, Maps/Magg_Sam_TownPicnicLeaves, Maps/Magg_Sam_TownSmallTable, Maps/Magg_Sam_SaloonMeet, Maps/Magg_Sam_Clinic, Maps/Magg_Sam_WoodsCamp, Maps/Magg_Sam_Mountain",
+	"FromFile": "assets/maps/{{TargetWithoutPath}}.tmx",
+	},
+{
+	"Action": "Load",
+	"Target": "Maps/MaggsSpriteTiles",
+	"FromFile": "assets/maps/MaggsSpriteTiles.png",
+	},
+{
+	"Action": "EditMap",
+	"Target": "Maps/Town",
+	"FromFile": "assets/maps/Magg_Sam_Skatepark.tmx",
+	"FromArea": { "X": 0, "Y": 0, "Width": 16, "Height": 15 },
+	"ToArea": { "X": 30, "Y": 7, "Width": 16, "Height": 15 },
+	"PatchMode": "Replace",
+	"When": {
+		"HasSeenEvent |contains=MaggDreamPark07072025": true,
+		"SkateparkMap": "yes"
+        }
+	},
+{
+	"Action": "EditMap",
+	"Target": "Maps/Town",
+	"FromFile": "assets/maps/Magg_Sam_Skatepark.tmx",
+	"FromArea": { "X": 0, "Y": 15, "Width": 5, "Height": 2 },
+	"ToArea": { "X": 30, "Y": 22, "Width": 5, "Height": 2 },
+	"PatchMode": "Replace",
+	"When": {
+		"HasSeenEvent |contains=MaggDreamPark07072025": true,
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+		"SkateparkMap": "yes"
+        }
+	},
+{
+	"Action": "EditMap",
+	"Target": "Maps/Town",
+	"FromFile": "assets/maps/Magg_Sam_Skatepark.tmx",
+	"FromArea": { "X": 16, "Y": 11, "Width": 1, "Height": 4 },
+	"ToArea": { "X": 46, "Y": 18, "Width": 1, "Height": 4 },
+	"PatchMode": "Replace",
+	"When": {
+		"HasSeenEvent |contains=MaggDreamPark07072025": true,
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+		"SkateparkMap": "yes"
+        }
+	},
+//CHARACTER SPRITES
+//only works on vanilla and non-seasonal sprite mods
+{
+	"Action": "EditImage",
+	"Target": "Characters/Sam",
+	"FromFile": "assets/sprites/Sam_patch.png",
+	"ToArea": { "X": 0, "Y": 448, "Width": 64, "Height": 480 },
+	"PatchMode": "Replace",
+	"When": {
+		"SamCustomSprites": "yes",
+		}
+	},
+{
+	"Action": "EditImage",
+	"Target": "Characters/Sam_Winter",
+	"FromFile": "assets/sprites/Sam_winter_patch.png",
+	"ToArea": { "X": 0, "Y": 448, "Width": 64, "Height": 480 },
+	"PatchMode": "Replace",
+	"When": {
+		"SamCustomSprites": "yes",
+		}
+	},
+//TEMPORARY ACTORS
+{
+	"Action": "Load",
+	"Target": "Characters/Pepperoni, Characters/PepperoniSlice, Characters/PizzaSlice",
+	"FromFile": "assets/sprites/{{TargetWithoutPath}}.png"
+    },
+//DIALOGUE
+{
+	"LogName": "Dialogue and events",
+	"Action": "Include",
+	"FromFile": "assets/NPC_dialogue.json, assets/Sam_events.json",
+	"When": {
+		"HasMod |contains=maggplays.immersivesam": false,
+		}
+	},
+{
+	"LogName": "Dialogue and events",
+	"Action": "Include",
+	"FromFile": "assets/Sam_dialogue.json",
+	"When": {
+		"HasMod |contains=maggplays.immersivesam": false,
+		"HasMod |contains=maggplays.immersivesebastian": false,
+		}
+	},
+{
+	"LogName": "Dialogue and events",
+	"Action": "Include",
+	"FromFile": "assets/Sam_dialogue_ImmersiveSeb.json",
+	"When": {
+		"HasMod |contains=maggplays.immersivesam": false,
+		"HasMod |contains=maggplays.immersivesebastian": true,
+		}
+	},
+//MAIL
+{
+	"Action": "EditData",
+	"Target": "Data/TriggerActions",
+	"Entries": {
+		"{{ModId}}_MaggSamMail1": {
+			"Id": "{{ModId}}_MaggSamMail1",
+			"Trigger": "DayEnding",
+			"Condition": "PLAYER_HAS_SEEN_EVENT Current MaggSaloonTunes07072025, !PLAYER_NPC_RELATIONSHIP Current Sam Married",
+			"Actions": [
+				"AddMail Current MaggSamMail1 tomorrow"
+                    ]
+                },
+		"{{ModId}}_MaggSamMail2": {
+			"Id": "{{ModId}}_MaggSamMail2",
+			"Trigger": "DayEnding",
+			"Condition": "PLAYER_HAS_SEEN_EVENT Current MaggSocialStars07072025, !PLAYER_NPC_RELATIONSHIP Current Sam Married",
+			"Actions": [
+				"AddMail Current MaggSamMail2 tomorrow"
+                    ]
+				},
+		"{{ModId}}_MaggSamMail3": {
+			"Id": "{{ModId}}_MaggSamMail3",
+			"Trigger": "DayEnding",
+			"Condition": "PLAYER_HAS_SEEN_EVENT Current MaggWipeout07072025, !PLAYER_NPC_RELATIONSHIP Current Sam Married",
+			"Actions": [
+				"AddMail Current MaggSamMail3 tomorrow"
+                    ]
+                },
+        "{{ModId}}_MaggSamMail4": {
+			"Id": "{{ModId}}_MaggSamMail4",
+			"Trigger": "DayEnding",
+			"Condition": "PLAYER_HAS_SEEN_EVENT Current MaggPicnicAttack07072025, !PLAYER_NPC_RELATIONSHIP Current Sam Married",
+			"Actions": [
+				"AddMail Current MaggSamMail4 tomorrow"
+                    ]
+				},
+		"{{ModId}}_MaggSamMail5": {
+			"Id": "{{ModId}}_MaggSamMail5",
+			"Trigger": "DayEnding",
+			"Condition": "PLAYER_HAS_SEEN_EVENT Current MaggFellowship07072025, !PLAYER_NPC_RELATIONSHIP Current Sam Married",
+			"Actions": [
+				"AddMail Current MaggSamMail5 tomorrow"
+                    ]
+				},
+		}
+	}
+]
+}

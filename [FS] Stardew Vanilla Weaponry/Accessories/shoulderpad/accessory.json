@@ -1,0 +1,193 @@
+
+{
+    "name": "Shoulderpad",
+    "FrontAccessory":
+    {
+
+        "DrawOrderOverride": {
+            "Preposition": "After",
+            "AppearanceType": "Sleeves"
+        },
+
+        "HeadPosition":
+        {
+            "X": 0,
+            "Y" : -4
+        },
+
+        "StartingPosition":
+        {
+            "X" : 0,
+            "Y" : 0
+        },
+        "AccessorySize":
+        {
+            "Width" : 16,
+            "Length": 16
+        },
+
+        "UniformAnimation": [
+            {
+              "Frame": 1,
+              "Duration": 100,
+              "Conditions": [
+                {
+                  "Name": "IsUsingMeleeWeapon",
+                  "Value": true
+                }
+                ]
+            },
+            {
+                "Frame": 1,
+                "Duration": 100,
+                "Conditions": [
+                  {
+                    "Name": "IsUsingMeleeWeapon",
+                    "Value": false
+                  }
+                  ]
+              }
+        ]
+
+    },
+    "BackAccessory":
+    {
+        "HeadPosition":
+        {
+            "X": 0,
+            "Y" : -5
+        },
+
+        "DrawOrderOverride": {
+            "Preposition": "Before",
+            "AppearanceType": "Hair"
+        },
+
+        "StartingPosition":
+        {
+            "X" : 0,
+            "Y" : 16
+        },
+        "AccessorySize":
+        {
+            "Width" : 16,
+            "Length": 16
+        },
+        "UniformAnimation": [
+            {
+              "Frame": 1,
+              "Duration": 100,
+              "Conditions": [
+                {
+                  "Name": "IsUsingMeleeWeapon",
+                  "Value": true
+                }
+                ]
+            },
+            {
+                "Frame": 1,
+                "Duration": 100,
+                "Conditions": [
+                  {
+                    "Name": "IsUsingMeleeWeapon",
+                    "Value": false
+                  }
+                  ]
+              }
+        ]
+
+    },
+    "LeftAccessory":
+    {
+        "HeadPosition":
+        {
+            "X": 0,
+            "Y" : -4
+        },
+
+        "DrawOrderOverride": {
+            "Preposition": "After",
+            "AppearanceType": "Sleeves"
+        },
+
+        "StartingPosition":
+        {
+            "X" : 0,
+            "Y" : 32
+        },
+        "AccessorySize":
+        {
+            "Width" : 16,
+            "Length": 16
+        },
+        "UniformAnimation": [
+            {
+              "Frame": 1,
+              "Duration": 100,
+              "Conditions": [
+                {
+                  "Name": "IsUsingMeleeWeapon",
+                  "Value": true
+                }
+                ]
+            },
+            {
+                "Frame": 1,
+                "Duration": 100,
+                "Conditions": [
+                  {
+                    "Name": "IsUsingMeleeWeapon",
+                    "Value": false
+                  }
+                  ]
+              }
+        ]
+
+    },
+    "RightAccessory":
+    {
+        "HeadPosition":
+        {
+            "X": 0,
+            "Y" : -4
+        },
+
+        "DrawOrderOverride": {
+            "Preposition": "After",
+            "AppearanceType": "Sleeves"
+        },
+
+        "StartingPosition":
+        {
+            "X" : 0,
+            "Y" : 48
+        },
+        "AccessorySize":
+        {
+            "Width" : 16,
+            "Length": 16
+        },
+        "UniformAnimation": [
+            {
+              "Frame": 1,
+              "Duration": 100,
+              "Conditions": [
+                {
+                  "Name": "IsUsingMeleeWeapon",
+                  "Value": true
+                }
+                ]
+            },
+            {
+                "Frame": 1,
+                "Duration": 100,
+                "Conditions": [
+                  {
+                    "Name": "IsUsingMeleeWeapon",
+                    "Value": false
+                  }
+                  ]
+              }
+        ]
+    }
+}

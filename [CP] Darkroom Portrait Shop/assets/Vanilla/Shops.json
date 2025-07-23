@@ -1,0 +1,384 @@
+{
+	"Changes":[
+	
+		// Patch the Shop Itself in (Immersion or One Time)
+		
+		{
+            "LogName": "Portrait Shop Replacement for Dark Room Door",
+            "Action": "EditMap",
+            "Target": "Maps/HaleyHouse",
+            "MapTiles": [
+                {
+                    "Position": { "X": 4, "Y": 3 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+						"Action": null,
+                        "Action": "OpenShop AgentLyoko.PortraitShop_HaleyPortraits none",
+                    },
+                },
+            ],
+			"When": {
+				"ShopType": "immersion, onetime",
+			},
+        },
+		
+		{
+            "LogName": "Portrait Shop Replacement for Dark Room Door - Portraits Always Available",
+            "Action": "EditMap",
+            "Target": "Maps/HaleyHouse",
+            "MapTiles": [
+                {
+                    "Position": { "X": 4, "Y": 3 },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+						"Action": null,
+                        "Action": "OpenShop AgentLyoko.PortraitShop_HaleyPortraits none 0600 2200", //Limiter of before 10 PM - if she's selling portraits all day, Haley deserves rest.
+                    },
+                },
+            ],
+			"When": {
+				"ShopType": "immediate",
+			},
+        },
+		
+		
+		
+		//Immersion Shop
+		{
+		  "LogName": "Take a (Portrait) Ticket",
+		  "Action": "EditData",
+		  "Target": "Data/Shops",
+		  "Entries": {
+			"AgentLyoko.PortraitShop_HaleyPortraits": {
+			  "ID": "AgentLyoko.PortraitShop_HaleyPortraits",
+			  "Owners": [
+				{
+				  "Name": "AnyOrNone",
+				  "Condition": null,
+				  "Portrait": "Portraits/Haley",
+				  "ClosedMessage": "{{i18n:PortraitShop.Closed}}",
+				  "Dialogues": [
+					{
+					  "Condition": null,
+					  "Dialogue": "{{i18n:PortraitShop.Open}}",
+					},
+				  ],
+				},
+			  ],
+			  "PriceModifiers": null,
+			  "Items": [
+				{
+				  "Id": "AgentLyoko.PortraitShop_PortraitTicket",
+				  "ItemId": "(O)AgentLyoko.PortraitShop_PortraitTicket",
+				  "Price": "{{PortraitPrice}}",
+				},
+			  ],
+			},
+		  },
+		  "When": {
+				"ShopType": "immersion",
+		  },
+		},
+		
+		{
+		  "LogName": "One Time Portraits",
+		  "Action": "EditData",
+		  "Target": "Data/Shops",
+		  "Entries": {
+			"AgentLyoko.PortraitShop_HaleyPortraits": {
+			  "ID": "AgentLyoko.PortraitShop_HaleyPortraits",
+			  "Owners": [
+				{
+				  "Name": "AnyOrNone",
+				  "Condition": null,
+				  "Portrait": "Portraits/Haley",
+				  "ClosedMessage": "{{i18n:PortraitShop.Closed}}",
+				  "Dialogues": [
+					{
+					  "Condition": null,
+					  "Dialogue": "{{i18n:PortraitShop.Open}}",
+					},
+				  ],
+				},
+			  ],
+			  "PriceModifiers": null,
+			  "Items": [
+				{
+				  "Id": "AgentLyoko.PortraitShop_PortraitTicket",
+				  "ItemId": "AgentLyoko.PortraitShop_PortraitTicket",
+				  "Price": "{{PortraitPrice}}",
+				},
+				{
+				  "ItemId": "(F)AbigailPortrait",
+				  "Id": "AgentLyoko.PortraitShop_AbigailPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Abigail 8, PLAYER_HAS_MAIL Current AgentLyoko.AbigailPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)LeahPortrait",
+				  "Id": "AgentLyoko.PortraitShop_LeahPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Leah 8, PLAYER_HAS_MAIL Current AgentLyoko.LeahPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)PennyPortrait",
+				  "Id": "AgentLyoko.PortraitShop_PennyPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Penny 8, PLAYER_HAS_MAIL Current AgentLyoko.PennyPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)MaruPortrait",
+				  "Id": "AgentLyoko.PortraitShop_MaruPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Maru 8, PLAYER_HAS_MAIL Current AgentLyoko.MaruPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)HaleyPortrait",
+				  "Id": "AgentLyoko.PortraitShop_HaleyPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Haley 8, PLAYER_HAS_MAIL Current AgentLyoko.HaleyPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)EmilyPortrait",
+				  "Id": "AgentLyoko.PortraitShop_EmilyPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Emily 8, PLAYER_HAS_MAIL Current AgentLyoko.NPCPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)SebastianPortrait",
+				  "Id": "AgentLyoko.PortraitShop_SebastianPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Sebastian 8, PLAYER_HAS_MAIL Current AgentLyoko.SebastianPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)ElliottPortrait",
+				  "Id": "AgentLyoko.PortraitShop_ElliottPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Elliott 8, PLAYER_HAS_MAIL Current AgentLyoko.ElliottPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)SamPortrait",
+				  "Id": "AgentLyoko.PortraitShop_SamPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Sam 8, PLAYER_HAS_MAIL Current AgentLyoko.SamPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)HarveyPortrait",
+				  "Id": "AgentLyoko.PortraitShop_HarveyPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Harvey 8, PLAYER_HAS_MAIL Current AgentLyoko.HarveyPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)AlexPortrait",
+				  "Id": "AgentLyoko.PortraitShop_AlexPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Alex 8, PLAYER_HAS_MAIL Current AgentLyoko.AlexPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)ShanePortrait",
+				  "Id": "AgentLyoko.PortraitShop_ShanePortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Shane 8, PLAYER_HAS_MAIL Current AgentLyoko.ShanePermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)KrobusPortrait",
+				  "Id": "AgentLyoko.PortraitShop_KrobusPortrait",
+				  "Price": "{{PortraitPrice}}",
+				  "Condition": "PLAYER_HEARTS Current Krobus 8, PLAYER_HAS_MAIL Current AgentLyoko.KrobusPermaPortraitMail",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+			  ],
+			},
+		  },
+		  "When": {
+				"ShopType": "onetime",
+		  },
+		},
+		
+		//Regular shop
+		
+		{
+		  "LogName": "Buy The Portraits",
+		  "Action": "EditData",
+		  "Target": "Data/Shops",
+		  "Entries": {
+			"AgentLyoko.PortraitShop_HaleyPortraits": {
+			  "ID": "AgentLyoko.PortraitShop_HaleyPortraits",
+			  "Owners": [
+				{
+				  "Name": "AnyOrNone",
+				  "Condition": null,
+				  "Portrait": "Portraits/Haley",
+				  "ClosedMessage": "{{i18n:PortraitShop.Portraits.Closed}}",
+				  "Dialogues": [
+					{
+					  "Condition": null,
+					  "Dialogue": "{{i18n:PortraitShop.Portraits.Open}}",
+					},
+				  ],
+				},
+			  ],
+			  "PriceModifiers": null,
+			  "Items": [
+				{
+				  "ItemId": "(F)AbigailPortrait",
+				  "Id": "AgentLyoko.PortraitShop_AbigailPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Abigail 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)LeahPortrait",
+				  "Id": "AgentLyoko.PortraitShop_LeahPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Leah 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)PennyPortrait",
+				  "Id": "AgentLyoko.PortraitShop_PennyPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Penny 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)MaruPortrait",
+				  "Id": "AgentLyoko.PortraitShop_MaruPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Maru 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)HaleyPortrait",
+				  "Id": "AgentLyoko.PortraitShop_HaleyPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Haley 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)EmilyPortrait",
+				  "Id": "AgentLyoko.PortraitShop_EmilyPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Emily 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)SebastianPortrait",
+				  "Id": "AgentLyoko.PortraitShop_SebastianPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Sebastian 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)ElliottPortrait",
+				  "Id": "AgentLyoko.PortraitShop_ElliottPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Elliott 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)SamPortrait",
+				  "Id": "AgentLyoko.PortraitShop_SamPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Sam 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)HarveyPortrait",
+				  "Id": "AgentLyoko.PortraitShop_HarveyPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Harvey 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)AlexPortrait",
+				  "Id": "AgentLyoko.PortraitShop_AlexPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Alex 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)ShanePortrait",
+				  "Id": "AgentLyoko.PortraitShop_ShanePortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Shane 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+				
+				{
+				  "ItemId": "(F)KrobusPortrait",
+				  "Id": "AgentLyoko.PortraitShop_KrobusPortrait",
+				  "Price": 30000,
+				  "Condition": "PLAYER_HEARTS Current Krobus 8",
+				  "AvailableStock": 1,
+				  "AvailableStockLimit": "Player",
+				},
+			  ],
+			},
+		  },
+		  "When": {
+				"ShopType": "immediate",
+		  },
+		},
+    ]
+}

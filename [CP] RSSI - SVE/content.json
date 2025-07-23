@@ -1,0 +1,619 @@
+{
+    "Format": "2.3.0",
+	"ConfigSchema": {
+	
+	"SVE_Pierre": {
+	"AllowValues": "standard, hardmode, off",
+    "Default": "standard"
+		},
+	"SVE_IceCreamStand": {
+	"AllowValues": "standard, hardmode, off",
+    "Default": "standard"
+		},
+	"SVE_FlowerDance": {
+	"AllowValues": "standard, hardmode, off",
+    "Default": "standard"
+		}
+	 },
+    "Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+            "Fields": {
+				"FlashShifter.StardewValleyExpandedCP_Nectarine_Sapling": {
+                    "ContextTags": [ "SVE_Pierre_Shop_Sapling" ]
+				},
+				"FlashShifter.StardewValleyExpandedCP_Pear_Sapling": {
+                    "ContextTags": [ "SVE_Pierre_Shop_Sapling" ]
+				},
+				"FlashShifter.StardewValleyExpandedCP_Persimmon_Sapling": {
+                    "ContextTags": [ "SVE_Pierre_Shop_Sapling" ]
+				}
+			}
+		},
+///SALOON
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Saloon",
+                "Items"
+            ],
+            "Entries": {
+				
+				"FlashShifter.StardewValleyExpandedCP_Grampleton_Orange_Chicken": null,
+
+				
+                "RSSI_FlashShifter.StardewValleyExpandedCP_Grampleton_Orange_Chicken": {
+                    "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Grampleton_Orange_Chicken",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Grampleton_Orange_Chicken",
+                    "Price": "650",
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Any 8185293, SYNCED_RANDOM day RSSI_FlashShifter.StardewValleyExpandedCP_Grampleton_Orange_Chicken 0.5" //SOPHIA 6 HEART
+                },
+            },
+    },
+///JOJA
+	{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "Priority": "Default+2",
+  "TargetField": [
+    "Joja",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "FlashShifter.StardewValleyExpandedCP_Cucumber_Seed": null,
+	  "FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed": null,
+	  "FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed": null,
+	  "FlashShifter.StardewValleyExpandedCP_Parsnip_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Potato_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Cauliflower_Seeds, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay": null,
+	  "FlashShifter.StardewValleyExpandedCP_Tulip_Bulb": null,
+	  "FlashShifter.StardewValleyExpandedCP_Jazz_Seeds, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay": null,
+	  "FlashShifter.StardewValleyExpandedCP_Kale_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Bean_Starter": null,
+	  "FlashShifter.StardewValleyExpandedCP_Melon_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Tomato_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Blueberry_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Pepper_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Wheat_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Radish_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Corn_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Hops_Starter": null,
+	  "FlashShifter.StardewValleyExpandedCP_Spangle_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Sunflower_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Pumpkin_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Eggplant_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Bok_Choy": null,
+	  "FlashShifter.StardewValleyExpandedCP_Amaranth_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Yam_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Cranberry_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Fairy_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Grape_Starter": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Parsnip_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Potato_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Cauliflower_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Tulip_Bulb": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Jazz_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Kale_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Bean_Starter": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Melon_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Tomato_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Blueberry_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Pepper_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Wheat_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Radish_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Corn_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Hops_Starter": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Poppy_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Spangle_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Sunflower_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Pumpkin_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Eggplant_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Bok_Choy": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Amaranth_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Yam_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Cranberry_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Fairy_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_Warehouse_Grape_Starter": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Parsnip_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Potato_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Cauliflower_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Tulip_Bulb": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Jazz_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Kale_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Bean_Starter": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Melon_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Tomato_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Blueberry_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Pepper_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Wheat_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Radish_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Corn_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Hops_Starter": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Poppy_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Spangle_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Sunflower_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Pumpkin_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Eggplant_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Bok_Choy": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Amaranth_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Yam_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Cranberry_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Fairy_Seeds": null,
+	  "FlashShifter.StardewValleyExpandedCP_JojaDay_Grape_Starter": null,
+
+	  "RSSI_JOJA_FlashShifter.StardewValleyExpandedCP_Cucumber_Seed": {
+	  "Id": "RSSI_JOJA_FlashShifter.StardewValleyExpandedCP_Cucumber_Seed",
+      "ItemId": "FlashShifter.StardewValleyExpandedCP_Cucumber_Seed",
+	  "Condition": "SEASON spring, !PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day RSSI_JOJA_FlashShifter.StardewValleyExpandedCP_Cucumber_Seed 0.5",
+	  "AvoidRepeat": false,
+	  "AvailableStock": 30,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.0,
+				1.0,
+				0.5,
+				0.5,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+            },
+	"RSSI_JOJA_FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed": {
+	"Id": "RSSI_JOJA_FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed",
+    "ItemId": "FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed",
+	"Condition": "SEASON summer, !PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day RSSI_JOJA_FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed 0.5",
+	  "AvoidRepeat": false,
+	  "AvailableStock": 30,
+	"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.0,
+				1.0,
+				0.5,
+				0.5,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+            },
+	  "RSSI_JOJA_FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed": {
+	  "Id": "RSSI_JOJA_FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed",
+      "ItemId": "FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed",
+	  "Condition": "SEASON fall, !PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day RSSI_JOJA_FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed 0.5",
+	  "AvoidRepeat": false,
+	  "AvailableStock": 30,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.0,
+				1.0,
+				0.5,
+				0.5,
+
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+       }
+       },
+        },
+///PIERRE
+		{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "Priority": "Default+2",
+  "TargetField": [
+    "SeedShop",
+    "Items"
+	],
+  "Entries": {
+	  "FlashShifter.StardewValleyExpandedCP_Cucumber_Seed": null,
+	  "FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed": null,
+	  "FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed": null,
+	  "FlashShifter.StardewValleyExpandedCP_Nectarine_Sapling": null,
+	  "FlashShifter.StardewValleyExpandedCP_Pear_Sapling": null,
+	  "FlashShifter.StardewValleyExpandedCP_Persimmon_Sapling": null,
+
+	  "RSSI_FlashShifter.StardewValleyExpandedCP_Cucumber_Seed": {
+	  "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Cucumber_Seed",
+      "ItemId": "FlashShifter.StardewValleyExpandedCP_Cucumber_Seed",
+	  "Condition": "SEASON spring, !PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day RSSI_FlashShifter.StardewValleyExpandedCP_Cucumber_Seed 0.5",
+	  "AvoidRepeat": false,
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+				1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+            },
+	"RSSI_FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed": {
+	"Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed",
+    "ItemId": "FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed",
+	"Condition": "SEASON summer, !PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day RSSI_FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed 0.5",
+	  "AvoidRepeat": false,
+	  "AvailableStock": 6,
+	"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+            },
+	  "RSSI_FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed": {
+	  "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed",
+      "ItemId": "FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed",
+	  "Condition": "SEASON fall, !PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day RSSI_FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed 0.5",
+	  "AvoidRepeat": false,
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+       },
+	  "RSSI_boringvlln.rshops_SVESaplings": {
+      "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day RSSI_boringvlln.rshops_SVESaplings 0.6",
+	  "Id": "RSSI_boringvlln.rshops_SVESaplings",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+	  "PerItemCondition": "ITEM_CONTEXT_TAG Target SVE_Pierre_Shop_Sapling",
+	  "AvoidRepeat": false,
+	  "AvailableStock": 1,
+	  "IgnoreShopPriceModifiers": true,
+            }
+		},
+	"When": { "SVE_Pierre": "standard" }
+	},
+	{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "Priority": "Default+2",
+  "TargetField": [
+    "SeedShop",
+    "Items"
+	],
+  "Entries": {
+	  "FlashShifter.StardewValleyExpandedCP_Cucumber_Seed": null,
+	  "FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed": null,
+	  "FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed": null,
+	  "FlashShifter.StardewValleyExpandedCP_Nectarine_Sapling": null,
+	  "FlashShifter.StardewValleyExpandedCP_Pear_Sapling": null,
+	  "FlashShifter.StardewValleyExpandedCP_Persimmon_Sapling": null,
+
+	  "RSSI_FlashShifter.StardewValleyExpandedCP_Cucumber_Seed": {
+	  "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Cucumber_Seed",
+      "ItemId": "FlashShifter.StardewValleyExpandedCP_Cucumber_Seed",
+	  "Condition": "SEASON spring, !PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day RSSI_FlashShifter.StardewValleyExpandedCP_Cucumber_Seed 0.5",
+	  "AvoidRepeat": false,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+            },
+	"RSSI_FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed": {
+	"Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed",
+    "ItemId": "FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed",
+	"Condition": "SEASON summer, !PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day RSSI_FlashShifter.StardewValleyExpandedCP_Butternut_Squash_Seed 0.5",
+	  "AvoidRepeat": false,
+	  "AvailableStock": 10,
+	"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+            },
+	  "RSSI_FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed": {
+	  "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed",
+      "ItemId": "FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed",
+	  "Condition": "SEASON fall, !PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day RSSI_FlashShifter.StardewValleyExpandedCP_Sweet_Potato_Seed 0.5",
+	  "AvoidRepeat": false,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+               "RandomAmount": [
+               0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+       },
+	  "RSSI_boringvlln.rshops_SVESaplings": {
+      "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day RSSI_boringvlln.rshops_SVESaplings 0.6",
+	  "Id": "RSSI_boringvlln.rshops_SVESaplings",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+	  "PerItemCondition": "ITEM_CONTEXT_TAG Target SVE_Pierre_Shop_Sapling",
+	  "AvoidRepeat": false,
+	  "AvailableStock": 1,
+	  "IgnoreShopPriceModifiers": true,
+            }
+		},
+	"When": { "SVE_Pierre": "hardmode" }
+	},	
+///ALEX ICE CREAM
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "IceCreamStand",
+                "Items"
+            ],
+            "Entries": {
+			    "FlashShifter.StardewValleyExpandedCP_Ice_Cream_Sundae": null,
+				"FlashShifter.StardewValleyExpandedCP_Vegan_Cone": null,
+
+			    "RSSI_FlashShifter.StardewValleyExpandedCP_Ice_Cream_Sundae": {
+                    "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Ice_Cream_Sundae",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Ice_Cream_Sundae",
+                    "Price": "500",
+					"AvailableStock": 16,
+					"AvailableStockModifiers": [
+						{
+						"Modification": "Multiply",
+						"RandomAmount": [
+						1.5,
+						1.4,
+						1.3,
+						1.2,
+						1.1,
+						1.0,
+						0.9,
+						0.8,
+						0.7,
+						0.6,
+						0.5,
+						]
+					}
+				]
+			},
+				"RSSI_FlashShifter.StardewValleyExpandedCP_Vegan_Cone": {
+                    "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Vegan_Cone",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Vegan_Cone",
+                    "Price": "750",
+					"AvailableStock": 16,
+					"AvailableStockModifiers": [
+						{
+						"Modification": "Multiply",
+						"RandomAmount": [
+						1.5,
+						1.4,
+						1.3,
+						1.2,
+						1.1,
+						1.0,
+						0.9,
+						0.8,
+						0.7,
+						0.6,
+						0.5,
+							]
+						}
+					],
+				}
+			},
+		"When": { "SVE_IceCreamStand": "standard" }
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "IceCreamStand",
+                "Items"
+            ],
+            "Entries": {
+			    "FlashShifter.StardewValleyExpandedCP_Ice_Cream_Sundae": null,
+				"FlashShifter.StardewValleyExpandedCP_Vegan_Cone": null,
+
+			    "RSSI_FlashShifter.StardewValleyExpandedCP_Ice_Cream_Sundae": {
+                    "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Ice_Cream_Sundae",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Ice_Cream_Sundae",
+                    "Price": "500",
+					"AvailableStock": 16,
+					"AvailableStockModifiers": [
+						{
+						"Modification": "Multiply",
+						"RandomAmount": [
+							0.1,
+							0.2,
+							0.3,
+							0.4,
+							0.5,
+							0.6,
+							0.7,
+							0.8,
+							0.9,
+						]
+					}
+				],
+			},
+				"RSSI_FlashShifter.StardewValleyExpandedCP_Vegan_Cone": {
+                    "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Vegan_Cone",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Vegan_Cone",
+                    "Price": "750",
+					"AvailableStock": 16,
+					"AvailableStockModifiers": [
+						{
+						"Modification": "Multiply",
+						"RandomAmount": [
+							0.1,
+							0.2,
+							0.3,
+							0.4,
+							0.5,
+							0.6,
+							0.7,
+							0.8,
+							0.9,
+							]
+						}
+					],
+				}
+			},
+		"When": { "SVE_IceCreamStand": "hardmode" }
+		},
+///FLOWER DANCE
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Festival_FlowerDance_Pierre",
+                "Items"
+            ],
+            "Entries": {
+
+			    "FlashShifter.StardewValleyExpandedCP_Decorative_Tulips": null,
+				"FlashShifter.StardewValleyExpandedCP_Decorative_Sunflower": null,
+			    "FlashShifter.StardewValleyExpandedCP_Decorative_Fairy_Rose": null,
+
+					
+			    "RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Tulips": {
+                    "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Tulips",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Decorative_Tulips",
+                    "Price": "400",
+                },
+				"RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Sunflower": {
+                    "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Sunflower",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Decorative_Sunflower",
+                    "Price": "500",
+                },
+			    "RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Fairy_Rose": {
+                    "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Fairy_Rose",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Decorative_Fairy_Rose",
+                    "Price": "600",
+ 					"AvailableStock": 5,
+					}	  
+				},
+			"When": { "SVE_FlowerDance": "standard" }		
+		},
+		{
+         "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Festival_FlowerDance_Pierre",
+                "Items"
+            ],
+            "Entries": {
+
+			    "FlashShifter.StardewValleyExpandedCP_Decorative_Tulips": null,
+				"FlashShifter.StardewValleyExpandedCP_Decorative_Sunflower": null,
+			    "FlashShifter.StardewValleyExpandedCP_Decorative_Fairy_Rose": null,
+
+					
+			    "RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Tulips": {
+                    "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Tulips",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Decorative_Tulips",
+                    "Price": "800",
+ 					"AvailableStock": 5,
+					},
+				"RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Sunflower": {
+                    "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Sunflower",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Decorative_Sunflower",
+                    "Price": "1000",
+ 					"AvailableStock": 5,
+					},
+			    "RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Fairy_Rose": {
+                    "Id": "RSSI_FlashShifter.StardewValleyExpandedCP_Decorative_Fairy_Rose",
+                    "ItemId": "FlashShifter.StardewValleyExpandedCP_Decorative_Fairy_Rose",
+                    "Price": "1200",
+ 					"AvailableStock": 5,
+					}	  
+				},
+			"When": { "SVE_FlowerDance": "hardmode" }		
+		}
+	]
+}

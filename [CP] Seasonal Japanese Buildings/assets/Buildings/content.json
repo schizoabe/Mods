@@ -1,0 +1,112 @@
+{
+	"Changes": [
+		{
+			"Action": "Include",
+			"FromFile": "assets/Buildings/Barn/content.json",
+			"When": {
+				"Barn": "true"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Buildings/Cabins/content.json",
+			"When": {
+				"HasValue:{{Cabins}}": "true"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Buildings/Coop/content.json",
+			"When": {
+				"Coop": "true"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Buildings/Houses/content.json",
+			"When": {
+				"Houses": "true"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Buildings/Obelisks/content.json",
+			"When": {
+				"Obelisks": "true",
+				"disable_obelisks": "false"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Buildings/Shed/content.json"
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Buildings/Slime Hutch/content.json",
+			"When": {
+				"Slime Hutch": "normal, big"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Buildings/Stable/content.json",
+			"When": {
+				"Stable": "true"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Buildings/Well/content.json",
+			"When": {
+				"Well": "static, animated"
+			}
+		},
+		
+		{
+			"Action":"EditImage",
+			"Target":"Buildings/Greenhouse",
+			"FromFile":"assets/Buildings/Greenhouse_{{season}}.png",
+			"When": {
+				"Greenhouse": "true"
+			}
+   		},
+
+		{
+			"LogName": "Junimo Hut",
+			"Action": "EditImage",
+			"Target": "Buildings/Junimo Hut",
+			"FromFile": "assets/Buildings/junimo_hut_{{Junimo Hut}}.png",
+			"When": {
+				"Junimo Hut": "stone, tree"
+			}
+		},
+		{
+			"LogName": "Junimo Hut remove shadow",
+			"Action": "EditData",
+			"Target": "Data/Buildings",
+			"Fields": {
+				"Junimo Hut": {
+					"DrawShadow": false
+				}
+			}
+		},
+		
+		{
+			"Action":"EditImage",
+			"Target":"Buildings/Mill",
+			"FromFile":"assets/Buildings/Mill.png",
+			"When": {
+				"Mill": "true"
+			}
+   		},
+		
+		{
+			"Action":"EditImage",
+			"Target":"Buildings/Silo",
+			"FromFile":"assets/Buildings/Silo_{{season}}.png",
+			"When": {
+				"Silo": "true"
+			}
+		}
+	]
+}

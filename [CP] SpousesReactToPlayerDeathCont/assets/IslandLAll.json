@@ -1,0 +1,17 @@
+{ // Island Death - Leo - Spouses Generic
+  "Changes": [
+    {
+      "LogName": "KO Island - Leo - Spouses Generic",
+      "Action": "EditData",
+      "Target": "Data/Events/IslandSouth",
+      "When": {
+        "HasValue: {{Spouse}}": true,
+        "HasFlag": "addedParrotBoy",
+        "query: '{{Spouse}}' NOT IN ('Willy')": true,
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 13 33 2 Leo 15 33 3/skippable/pause 1500/showFrame 5/message \" ...{2}?\"/pause 1000/message \" ...!\"/playSound parrot_squawk/pause 500/viewport 13 33 clamp true/pause 1000/speak Leo \"{{i18n:IslandKilled.Leo.01}}\"/emote farmer 16/faceDirection farmer 1/pause 500/speak Leo \"{{i18n:IslandKilled.Leo.02}}\"/pause 500/message \"{{i18n:Island.Thoughts.01}}\"/pause 500/emote farmer 40/message \"{{i18n:Island.Thoughts.02}}\"/pause 500/speak Leo \"{{i18n:IslandKilled.Leo.03}}\"/faceDirection farmer 2/showFrame 0/pause 1000/emote farmer 12/minedeath/end dialogue {{Spouse}} \"{{i18n:IslandEnd.{{SpouseName}}.01}}\""
+      }
+    }
+  ]
+}

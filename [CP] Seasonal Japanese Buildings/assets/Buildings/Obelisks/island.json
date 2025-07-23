@@ -1,0 +1,131 @@
+{
+	"Changes": [
+		{
+			"Action": "Load",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/island_base_winter.png",
+			"When": {"season": "winter"},
+			"Priority": "Low"
+		},
+		{
+			"Action": "Load",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/island_base.png",
+			"When": {"season": "spring, summer, fall"},
+			"Priority": "Low"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 144, "Y": 0, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 0, "Y": 0, "Width": 24, "Height": 48 },
+			"When": {"Island Corner": "top-left"},
+			"Priority": "Late+1"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 168, "Y": 0, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 24, "Y": 0, "Width": 24, "Height": 48 },
+			"When": {"Island Corner": "top-right"},
+			"Priority": "Late+1"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 144, "Y": 48, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 0, "Y": 48, "Width": 24, "Height": 48 },
+			"When": {"Island Corner": "bottom-left"},
+			"Priority": "Late+1"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 168, "Y": 48, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 24, "Y": 48, "Width": 24, "Height": 48 },
+			"When": {"Island Corner": "bottom-right"},
+			"Priority": "Late+1"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 0, "Y": 0, "Width": 48, "Height": 48 },
+				"ToArea": { "X": 0, "Y": 0, "Width": 48, "Height": 48 },
+			"When": {"Island Border": "top"},
+			"Priority": "Late+2"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 96, "Y": 0, "Width": 24, "Height": 96 },
+				"ToArea": { "X": 0, "Y": 0, "Width": 24, "Height": 96 },
+			"When": {"Island Border": "left"},
+			"Priority": "Late+3"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 120, "Y": 0, "Width": 24, "Height": 96 },
+				"ToArea": { "X": 24, "Y": 0, "Width": 24, "Height": 96 },
+			"When": {"Island Border": "right"},
+			"Priority": "Late+3"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 48, "Y": 48, "Width": 48, "Height": 48 },
+				"ToArea": { "X": 0, "Y": 48, "Width": 48, "Height": 48 },
+			"When": {"Island Border": "bottom"},
+			"Priority": "Late+4"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 0, "Y": 48, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 0, "Y": 48, "Width": 24, "Height": 48 },
+			"Priority": "Late+5",
+			"When": {
+				"Island Border |contains=bottom": "true",
+				"Island Border |contains=left": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 24, "Y": 48, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 24, "Y": 48, "Width": 24, "Height": 48 },
+			"Priority": "Late+5",
+			"When": {
+				"Island Border |contains=bottom": "true",
+				"Island Border |contains=right": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Island Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/island_feature_{{season}}.png",
+			"Priority": "Late+6"
+		}
+	]
+}

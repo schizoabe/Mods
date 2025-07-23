@@ -1,0 +1,372 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Happening",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts",
+			"TargetField": [ "Desert", "WeatherConditions" ],
+			"Entries": {	
+							"HeavyRainSpring": {
+        						"Id": "HeavyRainSpring",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_HeavyRain",
+        						"Weather": "kath.weathering_HeavyRain"
+      						},
+							"SandStormSummer": {
+        						"Id": "SandStormSummer",
+        						"Condition": "SEASON summer, SYNCED_RANDOM day summer_weather 0.125",
+        						"Weather": "kath.weathering_Sandstorm"
+      						},
+							"HailWinter": {
+        						"Id": "HailWinter",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_Hail",
+        						"Weather": "kath.weathering_Hail"
+      						},
+							"HeatWaveSummer": {
+        						"Id": "HeatWaveSummer",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_HeatWave",
+        						"Weather": "kath.weathering_HeatWave"
+      						},
+							"RainPostDrought": {
+        						"Id": "RainPostDrought",
+        						"Condition": "!WEATHER Here kath.weathering_HeatWave, CS_WEATHER Desert -2 kath.weathering_HeatWave",
+        						"Weather": "Rain"
+      						},
+							"Eclipse": {
+        						"Id": "Eclipse",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_Darkness",
+        						"Weather": "kath.weathering_Darkness"
+      						},
+							/*"AshMNE": {
+        						"Id": "AshMNE",
+        						"Condition": "{{AshSummonOut}}",
+        						"Weather": "kath.weathering_Ash"
+      						},
+							"AshSummon": {
+        						"Id": "AshSummon",
+        						"Condition": "{{AshSummon2Out}}",
+        						"Weather": "kath.weathering_AshSummon"
+      						},	
+							"Ash": {
+        						"Id": "Ash",
+        						"Condition": "{{DAshPost4}}",
+        						"Weather": "kath.weathering_Ash"
+      						},*/
+							"NorthLights": {
+        						"Id": "NorthLights",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_NorthernLights",
+        						"Weather": "kath.weathering_NorthernLights"
+      						},
+							"Meatball": {
+        						"Id": "Meatball",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_Meatball",
+        						"Weather": "kath.weathering_Meatball"
+      						},
+							"LocustSwarm": {
+        						"Id": "LocustSwarm",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_Locust",
+        						"Weather": "kath.weathering_Locust"
+      						},
+							"MayoRain": {
+        						"Id": "MayoRain",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_Mayo",
+        						"Weather": "kath.weathering_Mayo"
+      						},
+							"NoVis": {
+        						"Id": "NoVis",
+        						"Condition": "SYNCED_RANDOM day foggy_weather 0.2",
+        						"Weather": "kath.weathering_NoVis"
+      						}
+									},
+			"MoveEntries": [
+			{ "Id": "HeavyRainSpring", "BeforeId": "Default" },
+			{ "Id": "SandStormSummer", "BeforeId": "Default" },
+			{ "Id": "HeatWaveSummer", "BeforeId": "Default" },
+			{ "Id": "HailWinter", "BeforeId": "Default" },
+			{ "Id": "RainPostDrought", "BeforeId": "Default" },
+			{ "Id": "Eclipse", "BeforeId": "Default" },
+			//{ "Id": "AshMNE", "BeforeId": "HeavyRainSpring" },
+			//{ "Id": "Ash", "ToPosition": "Top" },
+			{ "Id": "NorthLights", "BeforeId": "Default" },
+			{ "Id": "Meatball", "BeforeId": "Default" },
+			{ "Id": "LocustSwarm", "BeforeId": "Default" },
+			{ "Id": "MayoRain", "BeforeId": "Default" },
+			{ "Id": "NoVis", "BeforeId": "Default" }
+			//{ "Id": "AshSummon", "ToPosition": "Top" }
+			]
+		},
+		{
+      		"LogName": "The Weather Happening",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts",
+			"TargetField": [ "Default", "WeatherConditions" ],
+			"Entries": {
+							"SnowSpring": {
+        						"Id": "SnowSpring",
+        						"Condition": "SEASON spring, DAY_OF_MONTH 1 2 3 4 5, SYNCED_RANDOM day spring_weather 0.183",
+        						"Weather": "Snow"
+      						},
+							"HeavyRainSpring": {
+        						"Id": "HeavyRainSpring",
+        						"Condition": "SEASON spring, !IS_PASSIVE_FESTIVAL_TODAY DesertFestival, SYNCED_RANDOM day spring_weather 0.183",
+        						"Weather": "kath.weathering_HeavyRain"
+      						},
+							"DryLightningSummer": {
+        						"Id": "DryLightningSummer",
+        						"Condition": "SEASON summer,SYNCED_RANDOM day summer_weather 0.2",
+        						"Weather": "kath.weathering_DryLightning"
+      						},
+							"Wildfire": {
+        						"Id": "Wildfire", 
+        						"Condition": "!WEATHER Here kath.weathering_DryLightning, CS_WEATHER Town -1 kath.weathering_DryLightning, RANDOM 0.65",
+        						"Weather": "kath.weathering_Wildfire"
+      						},
+							"BlizzardWinter": {
+        						"Id": "BlizzardWinter",
+        						"Condition": "SEASON winter,!IS_PASSIVE_FESTIVAL_TODAY NightMarket, SYNCED_RANDOM day winter_weather 0.183, SYNCED_RANDOM day location_weather 0.75",
+        						"Weather": "kath.weathering_Blizzard"
+      						},
+							/*"SandStormSummer": {
+        						"Id": "SandStormSummer",
+        						"Condition": "{{PTSandPost4}}",
+        						"Weather": "kath.weathering_Sandstorm"
+      						},*/
+							"HailWinter": {
+        						"Id": "HailWinter",
+        						"Condition": "SEASON winter, !IS_PASSIVE_FESTIVAL_TODAY NightMarket, SYNCED_RANDOM day winter_weather 0.125, SYNCED_RANDOM day location_weather 0.75",
+        						"Weather": "kath.weathering_Hail"
+      						},
+							"StarFalling": {
+        						"Id": "StarFalling",
+        						"Condition": "DAY_OF_MONTH 25 26, SYNCED_RANDOM season lucky_weather 0.05, RANDOM 0.05",
+        						"Weather": "kath.weathering_StarFalling"
+      						},
+							"SnowFall": {
+        						"Id": "SnowFall",
+        						"Condition": "SEASON fall, DAY_OF_MONTH 25 26 27, SYNCED_RANDOM day fall_weather 0.183",
+        						"Weather": "Snow"
+      						},
+							"HeatWaveSummer": {
+        						"Id": "HeatWaveSummer",
+        						"Condition": "SEASON summer, SYNCED_RANDOM day summer_weather 0.183",
+        						"Weather": "kath.weathering_HeatWave"
+      						},
+							"RainWinter": {
+        						"Id": "RainWinter",
+        						"Condition": "SEASON winter, DAY_OF_MONTH 1 2 3 25 26 27 , SYNCED_RANDOM day winter_weather 0.4, SYNCED_RANDOM day location_weather 0.85 ",
+        						"Weather": "Rain"
+      						},
+							"RainPostDrought": {
+        						"Id": "RainPostDrought",
+        						"Condition": "!WEATHER Here kath.weathering_HeatWave, CS_WEATHER Town -2 kath.weathering_HeatWave",
+        						"Weather": "Rain"
+      						},
+							"Smoggy": {
+        						"Id": "Smoggy",
+        						"Condition": "SEASON fall, SYNCED_RANDOM day fall_weather 0.25, RANDOM 0.5",
+        						"Weather": "kath.weathering_Smog"
+      						},
+							"SmoggyJoja": {
+        						"Id": "SmoggyJoja",
+        						"Condition": "SEASON fall, SYNCED_RANDOM day fall_weather 0.45, RANDOM 0.85",
+        						"Weather": "kath.weathering_SmogJoja"
+      						},
+							"AcidRainFall": {
+        						"Id": "AcidRainFall",
+        						"Condition": "SEASON fall, SYNCED_RANDOM day fall_weather 0.215",
+        						"Weather": "kath.weathering_AcidRain"
+      						},
+							"MudRainFall": {
+        						"Id": "MudRainFall",
+        						"Condition": "SEASON fall, SYNCED_RANDOM day fall_weather 0.35",
+        						"Weather": "kath.weathering_MudRain"
+      						},
+							"Eclipse": {
+        						"Id": "Eclipse",
+        						"Condition": "!SEASON summer, DAY_OF_MONTH 25 26 27, SYNCED_RANDOM year lucky_weather 0.183, RANDOM 0.15",
+        						"Weather": "kath.weathering_Darkness"
+      						},
+							/*"AshSummon": {
+        						"Id": "AshSummon",
+        						"Condition": "{{AshSummon2Out}}",
+        						"Weather": "kath.weathering_AshSummon"
+      						},	
+							"Ash": {
+        						"Id": "Ash",
+        						"Condition": "{{PTAshPost4}}",
+        						"Weather": "kath.weathering_Ash"
+      						},
+							"AshMNE": {
+        						"Id": "AshMNE",
+        						"Condition": "{{AshSummonOut}}",
+        						"Weather": "kath.weathering_Ash"
+      						},*/
+							"NorthLights": {
+        						"Id": "NorthLights",
+        						"Condition": "SEASON winter, DAY_OF_MONTH 4 5 6 7, SYNCED_RANDOM year lucky_weather 0.25, RANDOM 0.25",
+        						"Weather": "kath.weathering_NorthernLights"
+      						},
+							"Meatball": {
+        						"Id": "Meatball",
+        						"Condition": "SEASON spring, DAY_OF_MONTH 5 12 19 26, SYNCED_RANDOM year luck_weather 0.45, RANDOM 0.5",
+        						"Weather": "kath.weathering_Meatball"
+      						},
+							"LocustSwarm": {
+        						"Id": "LocustSwarm",
+        						"Condition": "SEASON spring, SYNCED_RANDOM day spring_weather 0.15, RANDOM 0.25",
+        						"Weather": "kath.weathering_Locust"
+      						},
+							"Tornado": {
+        						"Id": "Tornado",
+        						"Condition": "SEASON spring summer, SYNCED_RANDOM  year luck_weather 0.65, RANDOM 0.35",
+        						"Weather": "kath.weathering_Tornado"
+      						},
+							"MayoRain": {
+        						"Id": "MayoRain",
+        						"Condition": "SYNCED_RANDOM year luck_weather 0.45, RANDOM 0.5",
+        						"Weather": "kath.weathering_Mayo"
+      						},
+							"NoVis": {
+        						"Id": "NoVis",
+        						"Condition": "SYNCED_RANDOM day foggy_weather 0.2",
+        						"Weather": "kath.weathering_NoVis"
+      						},
+							"RainbowSnake": {
+        						"Id": "RainbowSnake",
+        						"Condition": "ANY \"SEASON summer, DAY_OF_MONTH {{Random: 14,15,16}}, {{HasMod|contains=sapphicsaph_pitv}}\" \"RANDOM 0.01, CS_WEATHER_IS_RAINING Town -1\" \"RANDOM 0.05, CS_WEATHER_IS_RAINING Town\"",
+        						"Weather": "kath.weathering_Rainbow"
+      						}
+					},
+			"MoveEntries": [
+			{ "Id": "SnowSpring", "BeforeId": "SummerStorm" },
+			{ "Id": "HeavyRainSpring", "BeforeId": "SummerStorm" },
+			{ "Id": "DryLightningSummer", "BeforeId": "SummerStorm" },
+			//{ "Id": "SandStormSummer", "BeforeId": "SummerStorm" },
+			{ "Id": "HeatWaveSummer", "BeforeId": "SummerStorm" },
+			{ "Id": "HailWinter", "BeforeId": "SummerStorm" },
+			{ "Id": "BlizzardWinter", "BeforeId": "SummerStorm" },
+			{ "Id": "StarFalling", "BeforeId": "SummerStorm" },
+			{ "Id": "SnowFall", "BeforeId": "SummerStorm" },
+			{ "Id": "RainWinter", "BeforeId": "SummerStorm" },
+			{ "Id": "RainPostDrought", "BeforeId": "SummerStorm" },
+			{ "Id": "Smoggy", "BeforeId": "SummerStorm" },
+			{ "Id": "SmoggyJoja", "BeforeId": "SummerStorm" },
+			{ "Id": "AcidRain", "BeforeId": "SummerStorm" },
+			{ "Id": "Eclipse", "BeforeId": "SummerStorm" },
+			//{ "Id": "AshMNE", "BeforeId": "SnowSpring" },
+			//{ "Id": "Ash", "ToPosition": "Top" },
+			{ "Id": "NorthLights", "BeforeId": "SummerStorm" },
+			{ "Id": "Wildfire", "BeforeId": "SummerStorm" },
+			{ "Id": "Meatball", "BeforeId": "SummerStorm" },
+			{ "Id": "LocustSwarm", "BeforeId": "SummerStorm" },
+			{ "Id": "Tornado", "BeforeId": "SummerStorm" },
+			{ "Id": "MayoRain", "BeforeId": "SummerStorm" },
+			{ "Id": "Default", "ToPosition": "Bottom" },
+			{ "Id": "RainbowSnake", "BeforeId": "SummerStorm" },
+			{ "Id": "NoVis", "BeforeId": "Default" }
+			//{ "Id": "AshSummon", "ToPosition": "Top" }
+			]
+		},
+		{
+      		"LogName": "The Weather Happening",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts",
+			"TargetField": [ "Island", "WeatherConditions" ],
+			"Entries": {
+							"HeavyRainSpring": {
+        						"Id": "HeavyRainSpring",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_HeavyRain",
+        						"Weather": "kath.weathering_HeavyRain"
+      						},
+							"HeatWaveSummer": {
+        						"Id": "HeatWaveSummer",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_HeatWave",
+        						"Weather": "kath.weathering_HeatWave"
+      						},
+							"HurricaneFall": {
+        						"Id": "HurricaneFall",
+        						"Condition": "SEASON fall, SYNCED_RANDOM day fall_weather 0.3",
+        						"Weather": "kath.weathering_Hurry"
+      						},
+							"RainPostDrought": {
+        						"Id": "RainPostDrought",
+        						"Condition": "!WEATHER Here kath.weathering_HeatWave, CS_WEATHER IslandSouth -2 kath.weathering_HeatWave",
+        						"Weather": "Rain"
+      						},
+							"Smoggy": {
+        						"Id": "Smoggy",
+        						"Condition": "SEASON fall, SYNCED_RANDOM day fall_weather 0.25, RANDOM 0.5",
+        						"Weather": "kath.weathering_Smog"
+      						},
+							"SmoggyJoja": {
+        						"Id": "SmoggyJoja",
+        						"Condition": "SEASON fall, SYNCED_RANDOM day fall_weather 0.45, RANDOM 0.85",
+        						"Weather": "kath.weathering_SmogJoja"
+      						},
+							"AcidRainFall": {
+        						"Id": "AcidRainFall",
+        						"Condition": "SEASON fall, SYNCED_RANDOM day fall_weather 0.215",
+        						"Weather": "kath.weathering_AcidRain"
+      						},
+							"Eclipse": {
+        						"Id": "Eclipse",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_Darkness",
+        						"Weather": "kath.weathering_Darkness"
+      						},
+							"AshMNE": {
+        						"Id": "AshMNE",
+        						"Condition": "PLAYER_HAS_MAIL Any SummonAsh",
+        						"Weather": "kath.weathering_Ash"
+      						},
+							"AshSummon": {
+        						"Id": "AshSummon",
+        						"Condition": "PLAYER_HAS_MAIL Any SummonAsh2",
+        						"Weather": "kath.weathering_AshSummon"
+      						},	
+							"Ash": {
+        						"Id": "Ash",
+        						"Condition": "!SEASON winter, SYNCED_RANDOM year lucky_weather 0.35, RANDOM 0.55, !PLAYER_HAS_MAIL Any SummonAsh, !PLAYER_HAS_MAIL Any SummonAsh2",
+        						"Weather": "kath.weathering_Ash"
+      						},
+							"NorthLights": {
+        						"Id": "NorthLights",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_NorthernLights",
+        						"Weather": "kath.weathering_NorthernLights"
+      						},
+							"Meatball": {
+        						"Id": "Meatball",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_Meatball",
+        						"Weather": "kath.weathering_Meatball"
+      						},
+							"MayoRain": {
+        						"Id": "MayoRain",
+        						"Condition": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_Mayo",
+        						"Weather": "kath.weathering_Mayo"
+      						},
+							"NoVis": {
+        						"Id": "NoVis",
+        						"Condition": "SYNCED_RANDOM day foggy_weather 0.2",
+        						"Weather": "kath.weathering_NoVis"
+      						}
+					},
+			"MoveEntries": [
+			{ "Id": "HeavyRainSpring", "BeforeId": "Rain" },
+			{ "Id": "HeatWaveSummer", "BeforeId": "Rain" },
+			{ "Id": "HurricaneFall", "BeforeId": "Rain" },
+			{ "Id": "RainPostDrought", "BeforeId": "Rain" },
+			{ "Id": "Smoggy", "BeforeId": "Rain" },
+			{ "Id": "SmoggyJoja", "BeforeId": "Rain" },
+			{ "Id": "AcidRain", "BeforeId": "Rain" },
+			{ "Id": "Eclipse", "BeforeId": "Rain" },
+			{ "Id": "AshMNE", "BeforeId": "HeavyRainSpring" },
+			{ "Id": "Ash", "ToPosition": "Top" },
+			{ "Id": "NorthLights", "BeforeId": "Rain" },
+			{ "Id": "Meatball", "BeforeId": "Rain" },
+			{ "Id": "MayoRain", "BeforeId": "Rain" },
+			{ "Id": "NoVis", "BeforeId": "Rain" },
+			{ "Id": "AshSummon", "ToPosition": "Top" }
+			]
+		}
+
+//End
+]
+}

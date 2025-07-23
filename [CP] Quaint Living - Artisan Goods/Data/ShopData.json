@@ -1,0 +1,46 @@
+{
+   
+    "Changes": [
+
+         {        
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Dwarf", "Items" ],
+            "Entries": {
+                "QL_Extractor": {
+                    "Id": "QL_Extractor",
+                    "ItemId": "(BC)QL_Extractor",
+                    "Price": 45000
+					},				
+/*                "QL_ExtractorRecipe": {
+					"Price": -1,
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Player",
+					"Condition": "PLAYER_HEARTS Any Dwarf 6",
+					"Id": "(BC)QL_Extractor (Recipe)",
+					"ItemId": "(BC)QL_Extractor",
+					"IsRecipe": true,
+				"Price": 150000
+						}, 
+*/
+        }
+   },
+   
+
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Traveler", "Items" ],
+            "Entries": {
+                "QL_FloralKeg": {
+                    "Condition": "DAY_OF_WEEK Sunday",
+                    "Id": "QL_FloralKeg",
+                    "ItemId": "(BC)QL_FloralKeg",
+                    "Price": 50000,
+                    "AvailableStock": 1,
+                },
+        }
+   },
+
+   ]
+}

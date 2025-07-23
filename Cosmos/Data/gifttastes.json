@@ -1,0 +1,69 @@
+{
+	"Changes":[
+//Entries Universal_Love Universal_Like Universal_Neutral Universal_Dislike
+//Fields NPC --1 Love----3 Like----9 Neutral----5 Dislike----7 Hate--
+//Object ID or Context Tag	
+
+//Might add specific dialogue in the future
+		{
+			"LogName": "Adding Gift Tastes",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+			"TextOperations": [
+				//Universals
+					{
+						"Operation": "Append",
+						"Target": ["Entries","Universal_Dislike"],
+						"Value": "Cosmos_spacerock_item Cosmos_spacerock_outputitem",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries","Universal_Hate"],
+						"Value": "Cosmos_spacerock_outputitem_mushroom",
+						"Delimiter": " "
+					},
+				//Specific
+					{
+						"Operation": "Append",
+						"Target": ["Fields","Demetrius",3],
+						"Value": "Cosmos_spacerock_item",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Fields","Emily",3],
+						"Value": "Cosmos_spacerock_outputitem",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Fields","Krobus",3],
+						"Value": "Cosmos_spacerock_outputitem_mushroom",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Fields","Wizard",3],
+						"Value": "Cosmos_spacerock_outputitem_mushroom",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Fields","Maru",1],
+						"Value": "Cosmos_spacerock_item",
+						"Delimiter": " "
+					}
+			]
+		}	
+	]
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  

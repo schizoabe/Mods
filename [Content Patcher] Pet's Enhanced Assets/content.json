@@ -1,0 +1,113 @@
+﻿{
+    "Format": "2.4.4",
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "AnimalShop", "Items" ],
+      "Entries": {
+        "SunkenLace.PetsEnhancedMod.CatTreats": {
+          "ItemId": "(O)SunkenLace.PetsEnhancedMod.CatTreats",
+          "Price": 35,
+          "AvoidRepeat": true,
+          "Condition": "PLAYER_HAS_PET Any"
+        },
+        "SunkenLace.PetsEnhancedMod.DogTreats": {
+          "ItemId": "(O)SunkenLace.PetsEnhancedMod.DogTreats",
+          "Price": 35,
+          "AvoidRepeat": true,
+          "Condition": "PLAYER_HAS_PET Any"
+        },
+        "SunkenLace.PetsEnhancedMod.PetManual": {
+          "ItemId": "(T)SunkenLace.PetsEnhancedMod.PetManual",
+          "Price": 12000,
+          "AvoidRepeat": true,
+          "Condition": "PLAYER_HAS_PET Any"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "AnimalShop", "Items" ],
+      "Entries": {
+        "SunkenLace.PetsEnhancedMod.PetFlute": {
+          "ItemId": "(T)SunkenLace.PetsEnhancedMod.PetFlute",
+          "Price": 16000,
+          "AvoidRepeat": true,
+          "Condition": "PLAYER_HAS_MAIL Any SunkenLace.PetsEnhancedMod.GiftPetFluteMail Received"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "SunkenLace.PetsEnhancedMod.DogTreats": {
+          "Name": "SunkenLace.PetsEnhancedMod.DogTreats",
+          "Displayname": "{{Sunken_Lace.PetsEnhancedCode/DogTreatsDisplayName}}",
+          "Description": "{{Sunken_Lace.PetsEnhancedCode/DogTreatsDescription}}",
+          "Type": "Object",
+          "Price": 35,
+          "Texture": "Mods/SunkenLace.PetsEnhancedMod/Textures/Items/ItemSprites",
+          "SpriteIndex": 1
+        },
+        "SunkenLace.PetsEnhancedMod.CatTreats": {
+          "Name": "SunkenLace.PetsEnhancedMod.CatTreats",
+          "Displayname": "{{Sunken_Lace.PetsEnhancedCode/CatTreatsDisplayName}}",
+          "Description": "{{Sunken_Lace.PetsEnhancedCode/CatTreatsDescription}}",
+          "Type": "Object",
+          "Price": 35,
+          "Texture": "Mods/SunkenLace.PetsEnhancedMod/Textures/Items/ItemSprites",
+          "SpriteIndex": 0
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Tools",
+      "Entries": {
+        "SunkenLace.PetsEnhancedMod.PetFlute": {
+          "Name": "SunkenLace.PetsEnhancedMod.PetFlute",
+          "DisplayName": "{{Sunken_Lace.PetsEnhancedCode/PetFluteDisplayName}}",
+          "Description": "{{Sunken_Lace.PetsEnhancedCode/PetFluteDescription}}",
+          "ClassName": "GenericTool",
+          "SalePrice": 8000,
+          "Texture": "Mods/SunkenLace.PetsEnhancedMod/Textures/Items/ItemSprites",
+          "SpriteIndex": 3,
+          "UpgradeLevel": -1,
+          "SetProperties": {
+            "InstantUse": "true",
+            "IsEfficient": "true"
+          }
+        },
+        "SunkenLace.PetsEnhancedMod.PetManual": {
+          "Name": "SunkenLace.PetsEnhancedMod.PetManual",
+          "DisplayName": "{{Sunken_Lace.PetsEnhancedCode/PetManualDisplayName}}",
+          "Description": "{{Sunken_Lace.PetsEnhancedCode/PetManualDescription}}",
+          "ClassName": "GenericTool",
+          "SalePrice": 12000,
+          "Texture": "Mods/SunkenLace.PetsEnhancedMod/Textures/Items/ItemSprites",
+          "SpriteIndex": 2,
+          "UpgradeLevel": -1,
+          "SetProperties": {
+            "InstantUse": "true",
+            "IsEfficient": "true"
+          }
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": { "SunkenLace.PetsEnhancedMod.GiftPetFluteMail": "{{Sunken_Lace.PetsEnhancedCode/MarnieGiftsPetFluteMail}}" }
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/SunkenLace.PetsEnhancedMod/Textures/Items/ItemSprites",
+      "FromFile": "assets/ItemSprites.png"
+    }
+
+
+  ]
+}

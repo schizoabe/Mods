@@ -1,0 +1,59 @@
+{
+	"Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {"SprinklerDrought |contains=maps": true},
+            "Entries": {
+			"kath.weathering_SprinklerFlagAdd": {
+				"Id": "kath.weathering_SprinklerFlagAdd",
+                "Trigger": "Esca.EMP_SaveLoaded",
+				"MarkActionApplied": false,
+                "Actions": [
+					"If !PLAYER_HAS_MAIL Host SprinklerMalfuntionFlag ## AddMail All SprinklerMalfuntionFlag now",
+                    ],
+				},
+			}
+		},
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {"SprinklerDrought |contains=maps": false},
+            "Entries": {		
+			"kath.weathering_SprinklerFlagRemove": {
+				"Id": "kath.weathering_SprinklerFlagRemove",
+                "Trigger": "Esca.EMP_SaveLoaded",
+				"MarkActionApplied": false,
+                "Actions": [
+					"If PLAYER_HAS_MAIL Host SprinklerMalfuntionFlag ## RemoveMail All SprinklerMalfuntionFlag",
+                    ],
+				},					
+			},
+		},	
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {		
+			"kath.weathering_SprinklerFlagNoticeOn": {
+				"Id": "kath.weathering_SprinklerFlagNoticeOn",
+                "Trigger": "Esca.EMP_SaveLoaded",
+				"Condition": "PLAYER_HAS_MAIL Host SprinklerMalfuntionFlag",
+				"MarkActionApplied": false,
+                "Actions": [
+					"Esca.EMP_LogMessage Trace Project Danger Weather: Sprinkler Flag is On",
+                    ],
+				},
+			"kath.weathering_SprinklerFlagNoticeOff": {
+				"Id": "kath.weathering_SprinklerFlagNoticeOff",
+                "Trigger": "Esca.EMP_SaveLoaded",
+				"Condition": "!PLAYER_HAS_MAIL Host SprinklerMalfuntionFlag",
+				"MarkActionApplied": false,
+                "Actions": [
+					"Esca.EMP_LogMessage Trace Project Danger Weather: Sprinkler Flag is Off",
+                    ],
+				},				
+			},
+		},	
+//End
+]
+}

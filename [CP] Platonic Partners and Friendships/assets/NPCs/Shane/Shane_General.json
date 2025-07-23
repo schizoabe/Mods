@@ -1,0 +1,123 @@
+{
+    "Changes": [
+        // CONTENT INCLUDES
+        {
+            "LogName": "Enable Shane's aromantic content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Shane/Shane_AroContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, SexWithoutRomance"
+            }
+        },
+        // ACE CONTENT
+        {
+            "LogName": "Shane ace dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries":
+            {
+                "SpouseStardrop": "{{i18n:PPAF.Shane.DialogueEdits.Romance.SpouseStardrop |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:ShaneRelationshipType": "RomanceWithoutSex",
+                "HasMod |contains=tenthousandcats.ImmersiveCShane": false
+            }
+        },
+        {
+            "LogName": "Shane ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueShane",
+            "Entries":
+            {
+                "Good_9": "{{i18n:PPAF.Shane.DialogueEdits.Ace.Good_9 |LovePortraitsShane={{LovePortraitsShaneToken}}}}",
+                "Outdoor_0": "{{i18n:PPAF.Shane.DialogueEdits.Ace.Outdoor_0}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, RomanceWithoutSex",
+                "HasMod |contains=tenthousandcats.ImmersiveCShane": false
+            }
+        },
+        // TERMS OF ENDEARMENT
+        {
+            "LogName": "Shane terms of endearment, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Shane",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Shane terms of endearment",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // NO BLUSH EDITS
+        {
+            "LogName": "Shane no blush edit",
+            "Action": "EditImage",
+            "Target": "Portraits/Shane, Portraits/Shane_Winter, Portraits/Shane_Beach, Portraits/Shane_JojaMart",
+            "FromFile": "assets/Portraits/{{TargetWithoutPath}}_NoBlush.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Shane": true,
+                "HasMod |contains=DSVTeam.DiverseStardewValley, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        {
+            "LogName": "Shane no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Shane_Spring, Portraits/Shane_Summer, Portraits/Shane_Fall, Portraits/Shane_Winter_Outdoor, Portraits/Shane_Winter_Indoor, Portraits/Shane_FlowerDance, Portraits/Shane_SpiritsEve, Portraits/Shane_EggF, Portraits/Shane_Fair, Portraits/Shane_Jellies, Portraits/Shane_Luau, Portraits/Shane_Winter_IceF, Portraits/Shane_Winter_WinterStar, Portraits/Shane_Beach",
+            "FromFile": "assets/Portraits/Shane_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Shane": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        },
+        // COMPATIBILITY
+        //Immersive Characters - Shane
+        {
+            "LogName": "Shane ace dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries":
+            {
+                "SpouseStardrop": "{{i18n:PPAF.Shane.DialogueEdits.Shared.ImmersiveShane.SpouseStardrop |LovePortraitsShane={{LovePortraitsShaneToken}}}}"
+            },
+            "When": {
+                "HasMod |contains=tenthousandcats.ImmersiveCShane": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueShane",
+            "Entries": {
+                "Good_9": "{{i18n:PPAF.Shane.DialogueEdits.Ace.{{Random: Good_9, ImmersiveShane.Good_9}}}}",
+                "Outdoor_0": "{{i18n:PPAF.Shane.DialogueEdits.Ace.{{Random: Outdoor_0, ImmersiveShane.Outdoor_0}}}}",
+                "winter_8": "{{i18n:PPAF.Shane.DialogueEdits.Ace.ImmersiveShane.winter_8}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:ShaneRelationshipType": "FullyPlatonic, RomanceWithoutSex",
+                "HasMod |contains=tenthousandcats.ImmersiveCShane": true
+            }
+        }
+    ]
+}

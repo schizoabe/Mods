@@ -1,0 +1,164 @@
+{
+    "Changes": [
+        // WEDDING EDITS
+        {
+            "LogName": "Change kiss to hug in platonic commitment ceremony",
+            "Action": "EditData",
+            "Target": "Data/Weddings",
+            "TargetField": [ "EventScript" ],
+            "Entries": {
+                "default": "sweet/-1000 -100/farmer 27 63 2 [SpouseFarmerText [EscapedText] [EscapedText spouse 28 63 2]] Lewis 27 64 2 otherFarmers 29 69 0[SetupContextualWeddingAttendees]/changeLocation Town/[SpouseFarmerText [EscapedText faceDirection [SpouseActor] 2/warp [SpouseActor] 28 63] [EscapedText showFrame spouse 36]]/specificTemporarySprite wedding/viewport 27 64 true/pause 4000/speak Lewis \"[GenderedText [EscapedText [LocalizedText Strings\\StringsFromCSFiles:Utility.cs.5367 [DayOfMonth] [Season]]] [EscapedText [LocalizedText Strings\\StringsFromCSFiles:Utility.cs.5369 [DayOfMonth] [Season]]]]\"/faceDirection farmer 1/[SpouseFarmerText [EscapedText faceDirection [SpouseActor] 3] [EscapedText showFrame spouse 37]]/pause 500/faceDirection Lewis 0/pause 2000/speak Lewis \"[LocalizedText Strings\\StringsFromCSFiles:Utility.cs.5370]\"/move Lewis 0 1 0/playMusic none/pause 1000/showFrame Lewis 20/speak Lewis \"[GenderedText [SpouseGenderedText [EscapedText [LocalizedText Strings\\StringsFromCSFiles:Utility.cs.5371]] [EscapedText [LocalizedText Strings\\StringsFromCSFiles:Utility.cs.5373]]] [SpouseGenderedText [EscapedText [LocalizedText Strings\\StringsFromCSFiles:Utility.cs.5377]] [EscapedText [LocalizedText Strings\\StringsFromCSFiles:Utility.cs.5375]]]]\"/pause 1000/showFrame 101/[SpouseFarmerText [EscapedText showFrame [SpouseActor] 101 true] [EscapedText showFrame spouse 38]]/positionOffset [SpouseActor] -5 0/positionOffset farmer 5 0/positionOffset [SpouseActor] -5 0/positionOffset farmer 5 0/pause 2000/specificTemporarySprite wed/faceDirection farmer 2/[SpouseFarmerText [EscapedText faceDirection [SpouseActor] 2] [EscapedText showFrame spouse 36]]/[ContextualWeddingCelebrations]positionOffset [SpouseActor] 10 0/positionOffset farmer -10 0/move Lewis 0 3 3 true/pause 4000/faceDirection farmer 1/[SpouseFarmerText [EscapedText showFrame [SpouseActor] 3 true] [EscapedText showFrame spouse 37]]/globalFade/viewport -1000 -1000/pause 1000/message \"[LocalizedText Strings\\StringsFromCSFiles:Utility.cs.5381]\"/pause 500/message \"[LocalizedText Strings\\StringsFromCSFiles:Utility.cs.5383]\"/pause 4000/waitForOtherPlayers weddingEnd[FarmerUniqueId]/end wedding"
+            }
+        },
+        // DIALOGUE EDITS
+        {
+            "LogName": "Caroline marriage reference",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Caroline",
+            "Entries": {
+                "married_memory_oneweek": "{{i18n:PPAF.GenericTweaks.Dialogue.Caroline.married_memory_oneweek}}"
+            }
+        },
+        {
+            "LogName": "Evelyn marriage reference",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Evelyn",
+            "Entries": {
+                "married": "{{i18n:PPAF.GenericTweaks.Dialogue.Evelyn.married}}",
+                "divorce": "{{i18n:PPAF.GenericTweaks.Dialogue.Evelyn.divorce}}"
+            }
+        },
+        {
+            "LogName": "George marriage reference",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/George",
+            "Entries": {
+                "divorced_once": "{{i18n:PPAF.GenericTweaks.Dialogue.George.divorced_once}}"
+            }
+        },
+        {
+            "LogName": "Gus marriage reference",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Gus",
+            "Entries": {
+                "married": "{{i18n:PPAF.GenericTweaks.Dialogue.Gus.married}}",
+                "divorced_once": "{{i18n:PPAF.GenericTweaks.Dialogue.Gus.divorced_once}}",
+                "divorced_twice": "{{i18n:PPAF.GenericTweaks.Dialogue.Gus.divorced_twice}}"
+            }
+        },
+        {
+            "LogName": "Lewis marriage reference",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Lewis",
+            "Entries": {
+                "divorced_once": "{{i18n:PPAF.GenericTweaks.Dialogue.Lewis.divorced_once}}",
+                "divorced_twice": "{{i18n:PPAF.GenericTweaks.Dialogue.Lewis.divorced_twice}}"
+            }
+        },
+        // GENERIC MARRIAGE DIALOGUE
+        {
+            "LogName": "Platonic amulet line",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries": {
+                "Good_5": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Pendant.Good_5}}"
+            },
+            "When": {
+                "HasValue:{{Roommate}}": "false",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Platonic bracelet line",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries": {
+                "Good_5": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Bracelet.Good_5}}"
+            },
+            "When": {
+                "HasValue:{{Roommate}}": "true",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Platonic edits to generic marriage dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries": {
+                "Rainy_Day_0": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Rainy_Day_0 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Rainy_Day_1": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Rainy_Day_1 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Rainy_Day_3": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Rainy_Day_3 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Rainy_Night_0": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Rainy_Night_0}}",
+                "Indoor_Night_2": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Indoor_Night_2}}",
+                "Indoor_Night_3": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Indoor_Night_3}}",
+                "Indoor_Day_1": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Indoor_Day_1}}",
+                "Indoor_Day_3": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Indoor_Day_3}}",
+                "Indoor_Day_4": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Indoor_Day_4 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Indoor_Night_4": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Indoor_Night_4}}",
+                "Outdoor_2": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Outdoor_2}}",
+                "Outdoor_4": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Outdoor_4 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Good_0": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Good_0 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Good_1": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Good_1}}",
+                "Good_2": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Good_2 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Good_3": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Good_3}}",
+                "Good_4": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Good_4}}",
+                "Good_5": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Good_5}}",
+                "Good_8": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Good_8}}",
+                "Neutral_0": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Neutral_0}}",
+                "Bad_0": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Bad_0}}",
+                "Bad_1": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Bad_1}}",
+                "Bad_5": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Bad_5}}",
+                "Bad_7": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Bad_7}}",
+                "Bad_9": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.Bad_9}}",
+                "TwoKids_2": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.TwoKids_2}}",
+                "summer_1": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.summer_1 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "summer_8": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.summer_8}}",
+                "winter_28": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.winter_28}}",
+                "NoBed_3": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.NoBed_3}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        // STRINGS EDITS
+        {
+            "LogName": "Platonic commitment ceremony dialogue and 'you're already committed' proposal reactions",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "Utility.cs.5367": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Utility.cs.5367}}",
+                "Utility.cs.5369": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Utility.cs.5369}}",
+                "Utility.cs.5370": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Utility.cs.5370}}",
+                "Utility.cs.5371": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Utility.cs.5371 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Utility.cs.5373": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Utility.cs.5373 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Utility.cs.5375": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Utility.cs.5375 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Utility.cs.5377": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Utility.cs.5377 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Utility.cs.5379": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Utility.cs.5379}}",
+                "NPC.cs.3965": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.NPC.cs.3965}}",
+                "NPC.cs.3966": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.NPC.cs.3966}}",
+                "NPC.cs.3967": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.NPC.cs.3967}}",
+                "NPC.cs.3968": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.NPC.cs.3968}}",
+                "Game1.cs.2782": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Game1.cs.2782}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/UI",
+            "Entries": {
+                "Calendar_Wedding": "{{i18n:PPAF.GenericTweaks.Strings.Calendar_Wedding}}"
+            }
+        },
+        // SPRITE EDITS
+        {
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/Sprites/FriendCeremony.png",
+            "ToArea": {
+                "X": 317,
+                "Y": 421,
+                "Width": 12,
+                "Height": 8
+            }
+        }
+    ]
+}

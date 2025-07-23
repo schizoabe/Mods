@@ -1,0 +1,433 @@
+{
+    "Format": "2.5.0",
+    "DynamicTokens": [
+        // RELATIONSHIP STYLE
+        {
+            "Name": "SpouseOrRoommateToken",
+            "Value": "{{Merge:{{Spouse}},{{Roommate}} |valueAt=0}}"
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:AbigailRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Abigail"
+            }
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:AlexRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Alex"
+            }
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:ElliottRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Elliott"
+            }
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:EmilyRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Emily"
+            }
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:HaleyRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Haley"
+            }
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:HarveyRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Harvey"
+            }
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:LeahRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Leah"
+            }
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:MaruRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Maru"
+            }
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:PennyRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Penny"
+            }
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:SamRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Sam"
+            }
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:SebastianRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Sebastian"
+            }
+        },
+        {
+            "Name": "RelationshipStyle",
+            "Value": "{{PPAF.Core/ConfigValue:ShaneRelationshipType}}",
+            "When": {
+                "SpouseOrRoommateToken": "Shane"
+            }
+        },
+        // PORTRAIT TOKENS
+        {
+            "Name": "LovePortraitsHappyToken",
+            "Value": "$h"
+        },
+        {
+            "Name": "LovePortraitsHappyToken",
+            "Value": "$l",
+            "When": {
+                "PPAF.Core/ConfigValue:UseLovePortraits": "True",
+            },
+        },
+        {
+            "Name": "LovePortraitsNeutralToken",
+            "Value": "$0"
+        },
+        {
+            "Name": "LovePortraitsNeutralToken",
+            "Value": "$l",
+            "When": {
+                "PPAF.Core/ConfigValue:UseLovePortraits": "True",
+            },
+        },
+        {
+            "Name": "LovePortraitsExpression7Token",
+            "Value": "$7"
+        },
+        {
+            "Name": "LovePortraitsExpression7Token",
+            "Value": "$l",
+            "When": {
+                "PPAF.Core/ConfigValue:UseLovePortraits": "True",
+            },
+        },
+        {
+            "Name": "LovePortraitsPennyToken",
+            "Value": "$6"
+        },
+        {
+            "Name": "LovePortraitsPennyToken",
+            "Value": "$8",
+            "When": {
+                "PPAF.Core/ConfigValue:UseLovePortraits": "True",
+            },
+        },
+        {
+            "Name": "LovePortraitsSamToken",
+            "Value": "$10"
+        },
+        {
+            "Name": "LovePortraitsSamToken",
+            "Value": "$l",
+            "When": {
+                "PPAF.Core/ConfigValue:UseLovePortraits": "True",
+            },
+        },
+        {
+            "Name": "LovePortraitsShaneToken",
+            "Value": "$6"
+        },
+        {
+            "Name": "LovePortraitsShaneToken",
+            "Value": "$l",
+            "When": {
+                "PPAF.Core/ConfigValue:UseLovePortraits": "True",
+            },
+        },
+        // DIALOGUE TOKENS
+        {
+            "Name": "LowercaseEndearmentToken",
+            "Value": "{{Lowercase:{{PPAF.Core/ConfigValue:TermOfEndearment}}}}"
+        },
+        {
+            "Name": "LowercaseEndearmentToken",
+            "Value": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+            "When": {
+                "PPAF.Core/ConfigValue:TermOfEndearment": "@, BFF",
+            },
+        },
+        {
+            "Name": "LowercaseEndearmentToken",
+            "Value": "@",
+            "When": {
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": true
+            },
+        },
+        {
+            "Name": "PlatonicHousemateToken",
+            "Value": "{{PPAF.Core/ConfigValue:PlatonicLabel_housemate}}"
+        },
+        // GENERAL TOKENS
+        {
+            "Name": "AdoptionSpouseToken",
+            "Value": "Universal"
+        },
+        {
+            "Name": "AdoptionSpouseToken",
+            "Value": "{{Spouse}}",
+            "When": {
+                "Spouse |contains= Abigail, Alex, Elliott, Emily, Haley, Harvey, Leah, Maru, Penny, Sam, Sebastian, Shane": "true"
+            },
+        },
+        {
+            "Name": "AdoptionSpouseToken",
+            "Value": "Universal",
+            "When": {
+                "HasMod |contains= aedenthorn.MultipleSpouses, aedenthorn.FreeLove": "true"
+            },
+        },
+        {
+            "Name": "SpouseRoommateGenderToken",
+            "Value": ""
+        },
+        {
+            "Name": "SpouseRoommateGenderToken",
+            "Value": "Female",
+            "When": {
+                "SpouseOrRoommateToken |contains= Abigail, Emily, Maru, Haley, Leah, Penny": true
+            },
+        },
+        {
+            "Name": "SpouseRoommateGenderToken",
+            "Value": "Male",
+            "When": {
+                "SpouseOrRoommateToken |contains= Elliott, Harvey, Alex, Sam, Sebastian, Shane": true
+            },
+        },
+        // COMPATIBILITY TOKENS
+        {
+            "Name": "LoveLettersToken",
+            "Value": ""
+        },
+        {
+            "Name": "LoveLettersToken",
+            "Value": ".LoveLetters",
+            "When": {
+                "HasMod |contains=applesauce.LoveLetters": true
+            },
+        },
+        {
+            "Name": "CompassionateCourageousToken",
+            "Value": ""
+        },
+        {
+            "Name": "CompassionateCourageousToken",
+            "Value": "Courageous",
+            "When": {
+                "SpouseOrRoommateToken |contains= Abigail, Emily, Maru, Alex, Sam, Sebastian, Shane": true
+            },
+        },
+        {
+            "Name": "CompassionateCourageousToken",
+            "Value": "Compassionate",
+            "When": {
+                "SpouseOrRoommateToken |contains= Haley, Leah, Penny, Elliott, Harvey": true
+            },
+        },
+        {
+            "Name": "RWECompatToken",
+            "Value": ""
+        },
+        {
+            "Name": "RWECompatToken",
+            "Value": ".RWE",
+            "When": {
+                "HasMod |contains=tiakall.writerelliott": true
+            },
+        },
+        {
+			"Name": "RWEBookGenreToken",
+			"Value": "Scifi", 
+		},		
+		{
+			"Name": "RWEBookGenreToken",
+			"Value": "Mystery", 
+			"When":
+			{
+				"HasFlag": "ElliottWritesMystery",
+			}
+		},
+		{
+			"Name": "RWEBookGenreToken",
+			"Value": "Romance", 
+			"When":
+			{
+				"HasFlag": "ElliottWritesRomance",
+			}
+		},
+		{
+			"Name": "RWEBookGenreToken",
+			"Value": "Horror", 
+			"When":
+			{
+				"HasFlag": "ElliottWritesHorror",
+			}
+		},
+        {
+            "Name": "DialogueYear",
+            "Value": "",
+            "When": {
+                "Year": "1",
+            },
+        },
+        {
+            "Name": "DialogueYear",
+            "Value": "_2",
+            "When": {
+                "Year |contains= 1": false
+            },
+        },
+    ],
+    "Changes": [
+        // GENERAL INCLUDES
+        {
+            "Action": "Include",
+            "FromFile": "assets/GenericTweaks.json, assets/BraceletRejections.json",
+        },
+        {
+            "LogName": "Edit generic lines to be platonic",
+            "Action": "Include",
+            "FromFile": "assets/PlatonicTweaks.json",
+            "When": {
+                "RelationshipStyle": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Edit pregnancy lines to be about adoption",
+            "Action": "Include",
+            "FromFile": "assets/AdoptionEdits.json",
+            "When": {
+                "PPAF.Core/ConfigValue:AlwaysAdopt": true,
+            }
+        },
+        {
+            "LogName": "Disable redundant schedule changes if Bachelor(ettes) Stay Friends is installed",
+            "Action": "Include",
+            "FromFile": "assets/ScheduleChanges.json",
+            "When": {
+                "PPAF.Core/ConfigValue:EnableScheduleChanges": "true",
+                "HasMod |contains=missmarlot.bachelorsstayfriends": "false"
+            }
+        },
+        // NPC INCLUDES
+        {
+            "LogName": "Enable Abigail's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Abigail/Abigail_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:AbigailRelationshipType |contains=RomanceAndSex": false
+            }
+        },
+        {
+            "LogName": "Enable Alex's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Alex/Alex_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:AlexRelationshipType |contains=RomanceAndSex": false
+            }
+        },
+        {
+            "LogName": "Enable Elliott's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Elliott/Elliott_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:ElliottRelationshipType |contains=RomanceAndSex": false
+            }
+        },
+        {
+            "LogName": "Enable Emily's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Emily/Emily_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:EmilyRelationshipType |contains=RomanceAndSex": false
+            }
+        },
+        {
+            "LogName": "Enable Haley's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Haley/Haley_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:HaleyRelationshipType |contains=RomanceAndSex": false
+            }
+        },
+        {
+            "LogName": "Enable Harvey's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Harvey/Harvey_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:HarveyRelationshipType |contains=RomanceAndSex": false
+            }
+        },
+        {
+            "LogName": "Enable Leah's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Leah/Leah_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:LeahRelationshipType |contains=RomanceAndSex": false
+            }
+        },
+        {
+            "LogName": "Enable Maru's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Maru/Maru_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:MaruRelationshipType |contains=RomanceAndSex": false
+            }
+        },
+        {
+            "LogName": "Enable Penny's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Penny/Penny_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:PennyRelationshipType |contains=RomanceAndSex": false
+            }
+        },
+        {
+            "LogName": "Enable Sam's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Sam/Sam_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:SamRelationshipType |contains=RomanceAndSex": false
+            }
+        },
+        {
+            "LogName": "Enable Sebastian's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Sebastian/Sebastian_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:SebastianRelationshipType |contains=RomanceAndSex": false
+            }
+        },
+        {
+            "LogName": "Enable Shane's edits according to relationship type",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Shane/Shane_General.json",
+            "When": {
+                "PPAF.Core/ConfigValue:ShaneRelationshipType |contains=RomanceAndSex": false
+            }
+        }
+    ]
+}

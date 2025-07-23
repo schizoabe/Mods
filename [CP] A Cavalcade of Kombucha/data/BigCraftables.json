@@ -1,0 +1,39 @@
+{
+"Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries": {
+                "ACOK_Scoby_Starter": {
+                    "Name": "Scoby Starter",
+                    "DisplayName": "{{i18n:Scoby-Starter.name}}",
+                    "Description": "{{i18n:Scoby-Starter.description}}",
+                    "Price": 100,
+                    "CanBePlacedOutDoors": false,
+                    "CanBePlacedIndoors": true,
+                    "Texture": "StunkyMcDoo.ACOK.cp/Scoby-Starter",
+                    "SpriteIndex": 0,
+				},
+                "ACOK_Kombucha_Jar": {
+                    "Name": "Kombucha Jar",
+                    "DisplayName": "{{i18n:Kombucha-Jar.name}}",
+                    "Description": "{{i18n:Kombucha-Jar.description}}",
+                    "Price": 100,
+                    "CanBePlacedOutDoors": true,
+                    "CanBePlacedIndoors": true,
+                    "Texture": "StunkyMcDoo.ACOK.cp/Kombucha-Jar",
+                    "SpriteIndex": 0,
+				},
+			}
+        },
+///ADDING CRAFTING RECIPES
+		{
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Scoby Starter": "ACOK_Scoby 10 388 5 338 1/Home/ACOK_Scoby_Starter/true/Foraging 2/{{i18n:Scoby-Starter.name}}",
+                "Kombucha Jar": "388 5 338 3 334 1/Home/ACOK_Kombucha_Jar/true/Foraging 4/{{i18n:Kombucha-Jar.name}}"
+			}
+		}
+	]
+}

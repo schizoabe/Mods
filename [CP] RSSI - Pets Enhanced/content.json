@@ -1,0 +1,52 @@
+{
+    "Format": "2.3.0",
+    "Changes": [
+ {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "AnimalShop", "Items" ],
+      "Entries": {
+		  
+		"PO_CatTreats": null,
+		"PO_DogTreats": null,
+		"PO_PetManual": null,
+		
+        "RSSI_PO_Treats": {
+          "Id": "RSSI_PO_Treats",
+		  "RandomItemId": [ "(O)PO_CatTreats", "(O)PO_DogTreats" ],
+          "Price": 500,
+		  "AvailableStock": 20,
+		  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+          "AvoidRepeat": true
+        },		
+        "RSSI_PO_PetManual": {
+          "Id": "PO_PetManual",
+          "ItemId": "(O)PO_PetManual",
+          "Price": 15000,
+		   "AvailableStock": 1,
+          "AvoidRepeat": true
+        }
+      },
+      "When": {
+        "HasValue:{{Sunken_Lace.PetsEnhancedCode/FarmHasAnyPet}}": "true"
+      }
+    },
+]
+ }

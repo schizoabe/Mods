@@ -1,0 +1,90 @@
+{
+    "Format": "2.0.0",
+
+    "ConfigSchema": {
+        "EnableRivalHearts":
+            {
+                "AllowValues": "true, false",
+                "Default": "false",
+            },
+    },
+	
+	"DynamicTokens": [
+            {
+                "Name": "FestivalYear",
+                "Value": "odd",
+            },
+			
+			{
+                "Name": "FestivalYear",
+                "Value": "even",
+				"When": {
+					"Query: {{Year}} % 2 = 0": true,
+				},
+            },
+    ],
+
+    "Changes": [
+	
+        {
+            "LogName": "Schedule",
+            "Action": "Include",
+            "FromFile": "Data/Schedule.json"
+        },
+	
+        {
+            "LogName": "Festivals",
+            "Action": "Include",
+            "FromFile": "Data/Festivals.json"
+        },
+
+        {
+            "LogName": "Events",
+            "Action": "Include",
+            "FromFile": "Data/Events.json"
+        },
+
+        {
+            "LogName": "Quests",
+            "Action": "Include",
+            "FromFile": "Data/Quests.json"
+        },
+
+        {
+            "LogName": "SpecialOrders",
+            "Action": "Include",
+            "FromFile": "Data/SpecialOrders.json"
+        },
+
+        {
+            "LogName": "Dialogue",
+            "Action": "Include",
+            "FromFile": "Data/Dialogue.json"
+        },
+
+        {
+            "LogName": "ConversationTopics",
+            "Action": "Include",
+            "FromFile": "Data/ConversationTopics.json"
+        },
+
+        {
+            "LogName": "RivalHearts",
+            "Action": "Include",
+            "FromFile": "Data/RivalHeartEvents.json",
+            "When": {
+                "EnableRivalHearts": true
+            }
+        },
+
+        {
+            "LogName": "DSVCompat",
+            "Action": "Include",
+            "FromFile": "Data/DSVCompat.json",
+            "When": {
+                "HasMod |contains= DSVTeam.DiverseStardewValley": true
+            }
+        },
+
+	]
+}

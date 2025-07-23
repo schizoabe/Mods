@@ -1,0 +1,391 @@
+{
+	"Changes": [
+	//Entries
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomSpring": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomSpring", "ToPosition": "Top" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomSpring": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomSpring", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomSpring": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomSpring", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomSummer": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomSummer", "ToPosition": "Top" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomSummer": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomSummer", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomSummer": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomSummer", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomFall": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomFall", "ToPosition": "Top" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomFall": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomFall", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomFall": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomFall", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomWinter": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomWinter", "ToPosition": "Top" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomWinter": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomWinter", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_RandomWinter": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_RandomWinter", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_Randomsapling": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_Randomsapling", "AfterId": "boringvlln.rshops_Saplings" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: RSSI_PC.QL.FlowerGarden2_Randomsapling": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "RSSI_PC.QL.FlowerGarden2_Randomsapling", "AfterId": "boringvlln.rshops_SaplingsComm" }
+      ]
+    },
+	//Entries Sandy
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+              "HasValue: QL_JasmineSeeds": true,
+              "HasMod |contains=boringvlln.rshops": false
+              },
+      "MoveEntries": [
+          { "ID": "QL_JasmineSeeds", "BeforeId": "(O)494" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+              "HasValue: QL_JasmineSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true
+              },
+      "MoveEntries": [
+          { "ID": "QL_JasmineSeeds", "BeforeID": "boringvlln.rshops_Sandysnack" }
+      ]
+    },
+	//Shop data
+	{
+		"Action": "EditData",
+		"Target": "Data/Shops",
+		"TargetField": [
+			"SeedShop",
+			"Items"
+		],
+		"When": {
+			"Pierre": "Standard, Hardmode"
+		},
+		"Entries": {
+			"QL_AmaryllisSeeds": null,
+			"QL_CallaLilySeeds": null,
+			"QL_CarnationSeeds": null,
+			"QL_DahliaSeeds": null,
+			"QL_DelphiniumSeeds": null,
+			"QL_FreesiaSeeds": null,
+			"QL_FritillariaSeeds": null,
+			"QL_IrisSeeds": null,
+			"QL_LavenderSeeds": null,
+			"QL_LilySeeds": null,
+			"QL_OrchidSeeds": null,
+			"QL_PansySeeds": null,
+			"QL_PeonySeeds": null,
+			"QL_RoseSeeds": null,
+			"QL_SnapdragonSeeds": null,
+			"QL_StripedSquillSeeds": null,
+			"QL_ZinniaSeeds": null,
+			"QL_AlamandaSapling": null,
+			"QL_GardeniaSapling": null,
+			"QL_HibiscusSapling": null,
+			"QL_LilacSapling": null,
+		}
+	},
+	//Seeds data
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"When": {
+			"Pierre": "Standard, Hardmode"
+		},
+		"Fields": {
+			"QL_DahliaSeeds": {
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_spring",
+					"PC.QL.FlowerGarden2_season_fall"
+				]
+			},
+			"QL_DelphiniumSeeds": {
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_summer"
+				]
+			},
+			"QL_FreesiaSeeds": {
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_spring"
+				]
+			},
+			"QL_FritillariaSeeds": {
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_spring"
+				]
+			},
+			"QL_IrisSeeds": {
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_spring",
+					"PC.QL.FlowerGarden2_season_summer",
+					"PC.QL.FlowerGarden2_season_fall"
+				]
+			},
+			"QL_LilySeeds": {
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_summer",
+					"PC.QL.FlowerGarden2_season_fall"
+				]
+			},
+			"QL_PansySeeds": {
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_spring",
+					"PC.QL.FlowerGarden2_season_winter"
+				]
+			},
+			"QL_PeonySeeds": {
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_spring"
+				]
+			},
+			"QL_StripedSquillSeeds": {
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_spring",
+					"PC.QL.FlowerGarden2_season_winter"
+				]
+			},
+			"QL_ZinniaSeeds": {
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_summer",
+					"PC.QL.FlowerGarden2_season_fall"
+				]
+			}
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"When": {
+			"Pierre": "Standard, Hardmode",
+			"Year": "2"
+		},
+		"Fields": {
+			"QL_AmaryllisSeeds": { //Y2
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_winter"
+				]
+			},
+			"QL_CallaLilySeeds": { //Y2
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_summer"
+				]
+			},
+			"QL_LavenderSeeds": { //Y2
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_fall"
+				]
+			},
+			"QL_RoseSeeds": { //Y2
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_spring",
+					"PC.QL.FlowerGarden2_season_summer",
+					"PC.QL.FlowerGarden2_season_fall"
+				]
+			},
+			"QL_SnapdragonSeeds": { //Y2
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_fall",
+					"PC.QL.FlowerGarden2_season_winter"
+				]
+			}
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"When": {
+			"Pierre": "Standard, Hardmode",
+			"Year": "3",
+			"Spiderbuttons.CMCT/Config: PC.CP.QL.FlowerGarden2, AllSeedsAvailableY2": false
+		},
+		"Fields": {
+			"QL_CarnationSeeds": { //Y3
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_summer"
+				]
+			},
+			"QL_OrchidSeeds": { //Y3
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_spring",
+					"PC.QL.FlowerGarden2_season_summer",
+					"PC.QL.FlowerGarden2_season_fall",
+					"PC.QL.FlowerGarden2_season_winter"
+				]
+			}
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"When": {
+			"Pierre": "Standard, Hardmode",
+			"Year": "2",
+			"Spiderbuttons.CMCT/Config: PC.CP.QL.FlowerGarden2, AllSeedsAvailableY2": true
+		},
+		"Fields": {
+			"QL_CarnationSeeds": { //Y3
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_summer"
+				]
+			},
+			"QL_OrchidSeeds": { //Y3
+				"ContextTags": [
+					"PC.QL.FlowerGarden2_season_spring",
+					"PC.QL.FlowerGarden2_season_summer",
+					"PC.QL.FlowerGarden2_season_fall",
+					"PC.QL.FlowerGarden2_season_winter"
+				]
+			}
+		}
+	}
+	]
+}

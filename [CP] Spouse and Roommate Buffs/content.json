@@ -1,0 +1,129 @@
+{
+	"Format": "2.3.0",
+	"ConfigSchema": {
+		"BuffStrength": {
+			"AllowValues": "Weak, Average, Strong",
+			"Default": "Average",
+			"Description": "Choose how strong the spouse/roommate buff is. Average is around the same strength as food buffs."
+		},
+		"GenericSpouseRoommateBuff": {
+			"AllowValues": "FarmingLevel, FishingLevel, ForagingLevel, MiningLevel, Attack, Defense, Off",
+			"Default": "FarmingLevel",
+			"Description": "Choose which skill should be buffed if marrying or becoming roommates with another player or a mod-added NPC without special support. Select off if you don't want a buff."
+		},
+		"KrobusBuff": {
+			"AllowValues": "OilOfGarlic, MonsterMusk",
+			"Default": "OilOfGarlic",
+			"Description": "Choose which buff Krobus will give you. Oil of Garlic will prevent monsters from spawning, while Monster Musk will attract extra monsters."
+		}
+	},
+	"DynamicTokens": [
+		{
+			"Name": "BuffSkillToken",
+			"Value": "1",
+			"When": 
+			{
+				"BuffStrength |contains= Weak": true
+			}
+		},
+		{
+			"Name": "BuffSkillToken",
+			"Value": "3",
+			"When": 
+			{
+				"BuffStrength |contains= Average": true
+			}
+		},
+		{
+			"Name": "BuffSkillToken",
+			"Value": "5",
+			"When": 
+			{
+				"BuffStrength |contains= Strong": true
+			}
+		},
+		{
+			"Name": "BuffEnergyMagnetismToken",
+			"Value": "25",
+			"When": 
+			{
+				"BuffStrength |contains= Weak": true
+			}
+		},
+		{
+			"Name": "BuffEnergyMagnetismToken",
+			"Value": "50",
+			"When": 
+			{
+				"BuffStrength |contains= Average": true
+			}
+		},
+		{
+			"Name": "BuffEnergyMagnetismToken",
+			"Value": "75",
+			"When": 
+			{
+				"BuffStrength |contains= Strong": true
+			}
+		},
+		{
+			"Name": "BuffSpeedToken",
+			"Value": "1",
+			"When": 
+			{
+				"BuffStrength |contains= Weak": true
+			}
+		},
+		{
+			"Name": "BuffSpeedToken",
+			"Value": "2",
+			"When": 
+			{
+				"BuffStrength |contains= Average": true
+			}
+		},
+		{
+			"Name": "BuffSpeedToken",
+			"Value": "3",
+			"When": 
+			{
+				"BuffStrength |contains= Strong": true
+			}
+		},
+		{
+			"Name": "KrobusBuffType",
+			"Value": "23",
+			"When": { "KrobusBuff": "OilOfGarlic"}
+		},
+		{
+			"Name": "KrobusBuffType",
+			"Value": "24",
+			"When": { "KrobusBuff": "MonsterMusk"}
+		}
+	],
+	"Changes": [
+		{
+			"Action": "Load",
+			"Target": "Mods/Airyn.SpouseBuff/SpouseBuffIcons",
+			"FromFile": "assets/{{TargetWithoutPath}}.png"
+		},
+		{
+			"Action": "Include",
+			"FromFile": "data/SpouseBuffs.json"
+		},
+		{
+			"Action": "Include",
+			"FromFile": "data/RSVSpouseBuffs.json",
+			"When": {
+				"HasMod": "Rafseazz.RSVCP"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "data/DSVBuffIcons.json",
+			"When": {
+				"HasMod": "DSV.Core"
+			}
+		},
+	]
+}

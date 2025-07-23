@@ -1,0 +1,262 @@
+﻿{
+	"Format": "2.0.0",
+	"Changes": [
+        //decorative hatch
+		{
+			"Action": "Load",
+			"Target": "Mods/{{ModId}}/DecorativeHatches",
+			"FromFile": "assets/DecorativeHatches.png"
+		},
+		{
+			//add furniture
+            "Action": "EditData",
+			"Target": "Data/Furniture",
+			"Entries": {
+				"{{ModId}}_HatchWalnut": "{{ModId}}_HatchWalnut/decor/1 1/1 1/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_HatchWalnut.Name]/0/Mods\\{{ModId}}\\DecorativeHatches",
+                "{{ModId}}_HatchBirch": "{{ModId}}_HatchBirch/decor/1 1/1 1/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_HatchBirch.Name]/1/Mods\\{{ModId}}\\DecorativeHatches",
+                "{{ModId}}_HatchMahogany": "{{ModId}}_HatchMahogany/decor/1 1/1 1/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_HatchMahogany.Name]/2/Mods\\{{ModId}}\\DecorativeHatches",
+                "{{ModId}}_HatchWinter": "{{ModId}}_HatchWinter/decor/1 1/1 1/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_HatchWinter.Name]/3/Mods\\{{ModId}}\\DecorativeHatches",
+                "{{ModId}}_HatchWizard": "{{ModId}}_HatchWizard/decor/1 1/1 1/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_HatchWizard.Name]/4/Mods\\{{ModId}}\\DecorativeHatches",
+                "{{ModId}}_HatchRetro": "{{ModId}}_HatchRetro/decor/1 1/1 1/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_HatchRetro.Name]/5/Mods\\{{ModId}}\\DecorativeHatches",
+                "{{ModId}}_HatchJunimo": "{{ModId}}_HatchJunimo/decor/1 1/1 1/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_HatchJunimo.Name]/6/Mods\\{{ModId}}\\DecorativeHatches",
+                "{{ModId}}_HatchJojaM": "{{ModId}}_HatchJojaM/decor/1 1/1 1/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_HatchJojaM.Name]/7/Mods\\{{ModId}}\\DecorativeHatches",
+                "{{ModId}}_HatchJojaB": "{{ModId}}_HatchJojaB/decor/1 1/1 1/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_HatchJojaB.Name]/8/Mods\\{{ModId}}\\DecorativeHatches"
+            }
+		},
+		{
+			//add furniture strings
+			"Action": "EditData",
+			"Target": "Strings/Furniture",
+			"Entries": {
+				"{{ModId}}_HatchWalnut.Name": "{{i18n:furniture.HatchWalnut.name}}",
+                "{{ModId}}_HatchBirch.Name": "{{i18n:furniture.HatchBirch.name}}",
+                "{{ModId}}_HatchMahogany.Name": "{{i18n:furniture.HatchMahogany.name}}",
+                "{{ModId}}_HatchWinter.Name": "{{i18n:furniture.HatchWinter.name}}",
+                "{{ModId}}_HatchWizard.Name": "{{i18n:furniture.HatchWizard.name}}",
+                "{{ModId}}_HatchRetro.Name": "{{i18n:furniture.HatchRetro.name}}",
+                "{{ModId}}_HatchJunimo.Name": "{{i18n:furniture.HatchJunimo.name}}",
+                "{{ModId}}_HatchJojaM.Name": "{{i18n:furniture.HatchJojaM.name}}",
+                "{{ModId}}_HatchJojaB.Name": "{{i18n:furniture.HatchJojaB.name}}"
+            }
+		},
+		{
+			//add as PIF doors
+			"Action": "EditData",
+			"Target": "DLX.PIF/Doors",
+			"Entries": {
+                "{{ModId}}_HatchWalnut": {},
+                "{{ModId}}_HatchBirch": {},
+                "{{ModId}}_HatchMahogany": {},
+                "{{ModId}}_HatchWinter": {},
+                "{{ModId}}_HatchWizard": {},
+                "{{ModId}}_HatchRetro": {},
+                "{{ModId}}_HatchJunimo": {},
+                "{{ModId}}_HatchJojaM": {},
+                "{{ModId}}_HatchJojaB": {}
+			}
+		},
+		{
+			//add to PIF shop
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"DLX.PIF.Magician",
+				"Items"
+			],
+			"Entries": {
+              "(F){{ModId}}_HatchWalnut": {
+				"ID": "(F){{ModId}}_HatchWalnut",
+				"ItemId": "(F){{ModId}}_HatchWalnut"
+			  },
+              "(F){{ModId}}_HatchBirch": {
+                "ID": "(F){{ModId}}_HatchBirch",
+                "ItemId": "(F){{ModId}}_HatchBirch"
+              },
+              "(F){{ModId}}_HatchMahogany": {
+                "ID": "(F){{ModId}}_HatchMahogany",
+                "ItemId": "(F){{ModId}}_HatchMahogany"
+              },
+              "(F){{ModId}}_HatchWinter": {
+                "ID": "(F){{ModId}}_HatchWinter",
+                "ItemId": "(F){{ModId}}_HatchWinter"
+              },
+              "(F){{ModId}}_HatchWizard": {
+                "ID": "(F){{ModId}}_HatchWizard",
+                "ItemId": "(F){{ModId}}_HatchWizard"
+              },
+              "(F){{ModId}}_HatchRetro": {
+                "ID": "(F){{ModId}}_HatchRetro",
+                "ItemId": "(F){{ModId}}_HatchRetro"
+              },
+              "(F){{ModId}}_HatchJunimo": {
+                "ID": "(F){{ModId}}_HatchJunimo",
+                "ItemId": "(F){{ModId}}_HatchJunimo"
+              },
+              "(F){{ModId}}_HatchJojaM": {
+                "ID": "(F){{ModId}}_HatchJojaM",
+                "ItemId": "(F){{ModId}}_HatchJojaM"
+              },
+              "(F){{ModId}}_HatchJojaB": {
+                "ID": "(F){{ModId}}_HatchJojaB",
+                "ItemId": "(F){{ModId}}_HatchJojaB"
+              }
+
+			}
+		},
+
+      //decorative ladder
+      {
+        "Action": "Load",
+        "Target": "Mods/{{ModId}}/DecorativeLadders",
+        "FromFile": "assets/DecorativeLadders.png"
+      },
+      {
+        //add furniture
+        "Action": "EditData",
+        "Target": "Data/Furniture",
+        "Entries": {
+          "{{ModId}}_LadderBirch": "{{ModId}}_LadderBirch/painting/1 3/1 3/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_LadderBirch.Name]/0/Mods\\{{ModId}}\\DecorativeLadders",
+          "{{ModId}}_LadderMahogany": "{{ModId}}_LadderMahogany/painting/1 3/1 3/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_LadderMahogany.Name]/1/Mods\\{{ModId}}\\DecorativeLadders",
+          "{{ModId}}_LadderWinter": "{{ModId}}_LadderWinter/painting/1 3/1 3/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_LadderWinter.Name]/2/Mods\\{{ModId}}\\DecorativeLadders",
+          "{{ModId}}_LadderWizard": "{{ModId}}_LadderWizard/painting/1 3/1 3/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_LadderWizard.Name]/3/Mods\\{{ModId}}\\DecorativeLadders",
+          "{{ModId}}_LadderRetro": "{{ModId}}_LadderRetro/painting/1 3/1 3/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_LadderRetro.Name]/12/Mods\\{{ModId}}\\DecorativeLadders",
+          "{{ModId}}_LadderJojaM": "{{ModId}}_LadderJojaM/painting/1 3/1 3/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_LadderJojaM.Name]/13/Mods\\{{ModId}}\\DecorativeLadders",
+          "{{ModId}}_LadderJojaB": "{{ModId}}_LadderJojaB/painting/1 3/1 3/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_LadderJojaB.Name]/14/Mods\\{{ModId}}\\DecorativeLadders"
+        }
+      },
+      {
+        //add furniture strings
+        "Action": "EditData",
+        "Target": "Strings/Furniture",
+        "Entries": {
+          "{{ModId}}_LadderBirch.Name": "{{i18n:furniture.LadderBirch.name}}",
+          "{{ModId}}_LadderMahogany.Name": "{{i18n:furniture.LadderMahogany.name}}",
+          "{{ModId}}_LadderWinter.Name": "{{i18n:furniture.LadderWinter.name}}",
+          "{{ModId}}_LadderWizard.Name": "{{i18n:furniture.LadderWizard.name}}",
+          "{{ModId}}_LadderRetro.Name": "{{i18n:furniture.LadderRetro.name}}",
+          "{{ModId}}_LadderJojaM.Name": "{{i18n:furniture.LadderJojaM.name}}",
+          "{{ModId}}_LadderJojaB.Name": "{{i18n:furniture.LadderJojaB.name}}"
+        }
+      },
+      {
+        //add as PIF doors
+        "Action": "EditData",
+        "Target": "DLX.PIF/Doors",
+        "Entries": {
+          "{{ModId}}_LadderBirch": {},
+          "{{ModId}}_LadderMahogany": {},
+          "{{ModId}}_LadderWinter": {},
+          "{{ModId}}_LadderWizard": {},
+          "{{ModId}}_LadderRetro": {},
+          "{{ModId}}_LadderJojaM": {},
+          "{{ModId}}_LadderJojaB": {}
+        }
+      },
+      {
+        //add to PIF shop
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [
+          "DLX.PIF.Magician",
+          "Items"
+        ],
+        "Entries": {
+          "(F){{ModId}}_LadderBirch": {
+            "ID": "(F){{ModId}}_LadderBirch",
+            "ItemId": "(F){{ModId}}_LadderBirch"
+          },
+          "(F){{ModId}}_LadderMahogany": {
+            "ID": "(F){{ModId}}_LadderMahogany",
+            "ItemId": "(F){{ModId}}_LadderMahogany"
+          },
+          "(F){{ModId}}_LadderWinter": {
+            "ID": "(F){{ModId}}_LadderWinter",
+            "ItemId": "(F){{ModId}}_LadderWinter"
+          },
+          "(F){{ModId}}_LadderWizard": {
+            "ID": "(F){{ModId}}_LadderWizard",
+            "ItemId": "(F){{ModId}}_LadderWizard"
+          },
+          "(F){{ModId}}_LadderRetro": {
+            "ID": "(F){{ModId}}_LadderRetro",
+            "ItemId": "(F){{ModId}}_LadderRetro"
+          },
+          "(F){{ModId}}_LadderJojaM": {
+            "ID": "(F){{ModId}}_LadderJojaM",
+            "ItemId": "(F){{ModId}}_LadderJojaM"
+          },
+          "(F){{ModId}}_LadderJojaB": {
+            "ID": "(F){{ModId}}_LadderJojaB",
+            "ItemId": "(F){{ModId}}_LadderJojaB"
+          }
+        }
+      },
+
+      //attic ladder
+      {
+        "Action": "Load",
+        "Target": "Mods/{{ModId}}/AtticLadders",
+        "FromFile": "assets/AtticLadders.png"
+      },
+      {
+        //add furniture
+        "Action": "EditData",
+        "Target": "Data/Furniture",
+        "Entries": {
+          "{{ModId}}_AtticLadderOak": "{{ModId}}_AtticLadderOak/painting/1 3/1 3/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_AtticLadderOak.Name]/0/Mods\\{{ModId}}\\AtticLadders",
+          "{{ModId}}_AtticLadderWalnut": "{{ModId}}_AtticLadderWalnut/painting/1 3/1 3/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_AtticLadderWalnut.Name]/1/Mods\\{{ModId}}\\AtticLadders",
+          "{{ModId}}_AtticLadderBirch": "{{ModId}}_AtticLadderBirch/painting/1 3/1 3/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_AtticLadderBirch.Name]/2/Mods\\{{ModId}}\\AtticLadders",
+          "{{ModId}}_AtticLadderMahogany": "{{ModId}}_AtticLadderMahogany/painting/1 3/1 3/1/5000/-1/[LocalizedText Strings\\Furniture:{{ModId}}_AtticLadderMahogany.Name]/3/Mods\\{{ModId}}\\AtticLadders"
+        }
+      },
+      {
+        //add furniture strings
+        "Action": "EditData",
+        "Target": "Strings/Furniture",
+        "Entries": {
+          "{{ModId}}_AtticLadderOak.Name": "{{i18n:furniture.AtticLadderOak.name}}",
+          "{{ModId}}_AtticLadderWalnut.Name": "{{i18n:furniture.AtticLadderWalnut.name}}",
+          "{{ModId}}_AtticLadderBirch.Name": "{{i18n:furniture.AtticLadderBirch.name}}",
+          "{{ModId}}_AtticLadderMahogany.Name": "{{i18n:furniture.AtticLadderMahogany.name}}"
+        }
+      },
+      {
+        //add as PIF doors
+        "Action": "EditData",
+        "Target": "DLX.PIF/Doors",
+        "Entries": {
+          "{{ModId}}_AtticLadderOak": {},
+          "{{ModId}}_AtticLadderWalnut": {},
+          "{{ModId}}_AtticLadderBirch": {},
+          "{{ModId}}_AtticLadderMahogany": {}
+        }
+      },
+      {
+        //add to PIF shop
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [
+          "DLX.PIF.Magician",
+          "Items"
+        ],
+        "Entries": {
+          "(F){{ModId}}_AtticLadderOak": {
+            "ID": "(F){{ModId}}_AtticLadderOak",
+            "ItemId": "(F){{ModId}}_AtticLadderOak"
+          },
+          "(F){{ModId}}_AtticLadderWalnut": {
+            "ID": "(F){{ModId}}_AtticLadderWalnut",
+            "ItemId": "(F){{ModId}}_AtticLadderWalnut"
+          },
+          "(F){{ModId}}_AtticLadderBirch": {
+            "ID": "(F){{ModId}}_AtticLadderBirch",
+            "ItemId": "(F){{ModId}}_AtticLadderBirch"
+          },
+          "(F){{ModId}}_AtticLadderMahogany": {
+            "ID": "(F){{ModId}}_AtticLadderMahogany",
+            "ItemId": "(F){{ModId}}_AtticLadderMahogany"
+          }
+        }
+      }
+	]
+}

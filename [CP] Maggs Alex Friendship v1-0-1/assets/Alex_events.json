@@ -1,0 +1,344 @@
+{
+"Changes": [
+//MAIL
+{
+    "LogName": "Alex new mail",
+    "Action": "EditData",
+    "Target": "Data/mail",
+    "Entries": {
+			"MaggAlexMail1": "{{i18n: alex.mail1.text}}%item object 223 1 %%[#]{{i18n: alex.mail1.title}}",
+			"MaggAlexMail2": "{{i18n: alex.mail2.text}}%item object 692 1 %%[#]{{i18n: alex.mail2.title}}",
+			"MaggAlexMail3": "{{i18n: alex.mail3.text}}%item object 195 1 %%[#]{{i18n: alex.mail3.title}}",
+			"MaggAlexMail4": "{{i18n: alex.mail4.text}}%item object 591 1 %%[#]{{i18n: alex.mail4.title}}",
+        }
+    },
+//CUTSCENES
+//GAME DAY SPRING validated //change goal sound
+{
+	"LogName": "Game Day Spring",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggGameDaySpring07092025/F/Season spring/u 15 16 17 18 19 20 21 22 23 24 25 26 27 28/t 1500 2000": "playful/17 18/farmer 9 24 0 Alex 17 18 2/skippable/changeToTemporaryMap Magg_Alex_House false/addTemporaryActor Dusty 32 32 20 17 2 true Character/animate Dusty false true 1000 23 23 24/playSound doorClose/move farmer 0 -4 1/move farmer 5 0 0/speak Alex \"{{i18n: alex.cutscene.gamedayspring.1}}\"/move farmer 0 -2 2/move farmer 2 0 1/speak Alex \"{{i18n: alex.cutscene.gamedayspring.2}}\"/faceDirection farmer 2/pause 300/emote Alex 32/emote farmer 32/pause 1500/playSound Stadium_cheer/textAboveHead Alex \"{{i18n: alex.cutscene.gamedayspring.3}}\"/jump Alex/pause 2500/emote farmer 56/pause 1500/globalFade/viewport -1000 -1000 false/pause 300/end",
+			},
+		"When": {
+			"AlexCustomSprites": "no",
+		}
+	},
+{
+	"LogName": "Game Day Spring",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggGameDaySpring07092025/F/Season spring/u 15 16 17 18 19 20 21 22 23 24 25 26 27 28/t 1500 2000": "playful/17 18/farmer 9 24 0 Alex 17 17 2/skippable/changeToTemporaryMap Magg_Alex_House false/addTemporaryActor Dusty 32 32 20 17 2 true Character/animate Dusty false true 1000 23 23 24/showFrame Alex 52 true/positionOffset Alex 40 5/playSound doorClose/move farmer 0 -4 1/move farmer 5 0 0/speak Alex \"{{i18n: alex.cutscene.gamedayspring.1}}\"/move farmer 0 -2 2/move farmer 3 0 0/speak Alex \"{{i18n: alex.cutscene.gamedayspring.2}}\"/move farmer 0 -1 2/showFrame farmer 68 true/positionOffset farmer -20 10/pause 300/showFrame Alex 55/emote Alex 32/emote farmer 32/pause 200/showFrame Alex 52/pause 1500/showFrame Alex 53/playSound Stadium_cheer/textAboveHead Alex \"{{i18n: alex.cutscene.gamedayspring.3}}\"/pause 2500/showFrame Alex 52/emote farmer 56/pause 1500/globalFade/viewport -1000 -1000 false/pause 300/end",
+			},
+		"When": {
+			"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb}}' = 'true' OR '{{AlexCustomSprites}}' = 'yes'": true,
+		}
+	},
+//GAME DAY SUMMER validated
+{
+	"LogName": "Game Day Summer",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggGameDaySummer07092025/F/Season summer/u 15 16 17 18 19 20 21 22 23 24 25 26 27/t 1500 2000": "playful/17 18/farmer 9 24 0 Alex 17 18 2/skippable/changeToTemporaryMap Magg_Alex_House false/addTemporaryActor Dusty 32 32 20 17 2 true Character/animate Dusty false true 1000 23 23 24/playSound doorClose/move farmer 0 -4 1/move farmer 5 0 0/speak Alex \"{{i18n: alex.cutscene.gamedaysummer.1}}\"/move farmer 0 -2 2/move farmer 2 0 1/speak Alex \"{{i18n: alex.cutscene.gamedaysummer.2}}\"/faceDirection farmer 2/pause 300/emote Alex 32/emote farmer 32/pause 1500/playSound Stadium_cheer/textAboveHead Alex \"{{i18n: alex.cutscene.gamedaysummer.3}}\"/animate Dusty false true 150 20 21/jump Alex/pause 500/jump farmer/pause 2000/emote farmer 56/emote Alex 56/pause 1500/globalFade/viewport -1000 -1000 false/pause 300/end",
+			},
+		"When": {
+			"AlexCustomSprites": "no",
+		}
+	},
+{
+	"LogName": "Game Day Summer",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggGameDaySummer07092025/F/Season summer/u 15 16 17 18 19 20 21 22 23 24 25 26 27/t 1500 2000": "playful/17 18/farmer 9 24 0 Alex 17 17 2/skippable/changeToTemporaryMap Magg_Alex_House false/addTemporaryActor Dusty 32 32 20 17 2 true Character/animate Dusty false true 1000 23 23 24/showFrame Alex 52 true/positionOffset Alex 40 5/playSound doorClose/move farmer 0 -4 1/move farmer 5 0 0/speak Alex \"{{i18n: alex.cutscene.gamedaysummer.1}}\"/move farmer 0 -2 2/move farmer 3 0 0/speak Alex \"{{i18n: alex.cutscene.gamedaysummer.2}}\"/move farmer 0 -1 2/showFrame farmer 68 true/positionOffset farmer -20 10/pause 300/showFrame Alex 55/emote Alex 32/emote farmer 32/pause 200/showFrame Alex 52/pause 1500/showFrame Alex 54 true/positionOffset Alex 0 40/playSound Stadium_cheer/textAboveHead Alex \"{{i18n: alex.cutscene.gamedaysummer.3}}\"/animate Dusty false true 150 20 21/pause 500/showFrame farmer 0 true/positionOffset farmer 0 40/jump farmer/pause 2000/emote farmer 56/showFrame Alex 0/emote Alex 56/pause 1500/globalFade/viewport -1000 -1000 false/pause 300/end",
+			},
+		"When": {
+			"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb}}' = 'true' OR '{{AlexCustomSprites}}' = 'yes'": true,
+		}
+	},
+//GAME DAY FALL validated
+{
+	"LogName": "Game Day Fall",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggGameDayFall07092025/F/Season fall/u 15 16 17 18 19 20 21 22 23 24 25 26 28/t 1500 2000": "playful/17 18/farmer 9 24 0 Alex 17 18 2/skippable/changeToTemporaryMap Magg_Alex_House false/addTemporaryActor Dusty 32 32 20 17 2 true Character/animate Dusty false true 1000 23 23 24/playSound doorClose/move farmer 0 -4 1/move farmer 5 0 0/speak Alex \"{{i18n: alex.cutscene.gamedayfall.1}}\"/move farmer 0 -2 2/move farmer 2 0 1/speak Alex \"{{i18n: alex.cutscene.gamedayfall.2}}\"/faceDirection farmer 2/stopAnimation Dusty 0/move Dusty 0 1 2/move Dusty -1 0 3/animate Dusty false true 150 20 21/pause 300/emote Alex 32/emote farmer 32/pause 1000/playSound Stadium_cheer/textAboveHead Alex \"{{i18n: alex.cutscene.gamedayfall.3}}\"/animate Dusty false true 150 15 22/jump Alex/pause 500/jump farmer/pause 2000/emote farmer 56/emote Alex 56/pause 1000/animate Dusty false true 1000 23 23 24/pause 1000/globalFade/viewport -1000 -1000 false/pause 300/end",
+			},
+		"When": {
+			"AlexCustomSprites": "no",
+		}
+	},
+{
+	"LogName": "Game Day Fall",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggGameDayFall07092025/F/Season fall/u 15 16 17 18 19 20 21 22 23 24 25 26 28/t 1500 2000": "playful/17 18/farmer 9 24 0 Alex 17 17 2/skippable/changeToTemporaryMap Magg_Alex_House false/addTemporaryActor Dusty 32 32 20 17 2 true Character/animate Dusty false true 1000 23 23 24/showFrame Alex 52 true/positionOffset Alex 40 5/playSound doorClose/move farmer 0 -4 1/move farmer 5 0 0/speak Alex \"{{i18n: alex.cutscene.gamedayfall.1}}\"/move farmer 0 -2 2/move farmer 3 0 0/speak Alex \"{{i18n: alex.cutscene.gamedayfall.2}}\"/move farmer 0 -1 2/showFrame farmer 68 true/positionOffset farmer -20 10/stopAnimation Dusty 0/move Dusty 0 1 2/move Dusty -1 0 3/animate Dusty false true 150 20 21/pause 300/showFrame Alex 55/emote Alex 32/emote farmer 32/pause 200/showFrame Alex 52/pause 1000/showFrame Alex 54 true/positionOffset Alex 0 40/playSound Stadium_cheer/textAboveHead Alex \"{{i18n: alex.cutscene.gamedayfall.3}}\"/animate Dusty false true 150 15 22/pause 500/showFrame farmer 0 true/positionOffset farmer 0 40/jump farmer/pause 2000/emote farmer 56/showFrame Alex 0/emote Alex 56/pause 1000/showFrame farmer 68 true/positionOffset farmer 0 -40/showFrame Alex 52 true/positionOffset Alex 0 -40/pause 300/animate Dusty false true 1000 23 23 24/pause 1000/globalFade/viewport -1000 -1000 false/pause 300/end",
+			},
+		"When": {
+			"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb}}' = 'true' OR '{{AlexCustomSprites}}' = 'yes'": true,
+		}
+	},
+//GAME DAY WINTER validated
+{
+	"LogName": "Game Day Winter",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggGameDayWinter07092025/F/Season winter/u 15 16 17 18 19 20 21 22 23 24 26 27 28/t 1500 2000": "playful/17 18/farmer 9 24 0 Alex 17 18 2/skippable/changeToTemporaryMap Magg_Alex_House false/addTemporaryActor Dusty 32 32 20 17 2 true Character/animate Dusty false true 1000 23 23 24/playSound doorClose/move farmer 0 -4 1/move farmer 5 0 0/speak Alex \"{{i18n: alex.cutscene.gamedaywinter.1}}\"/move farmer 0 -2 2/move farmer 2 0 1/speak Alex \"{{i18n: alex.cutscene.gamedaywinter.2}}\"/faceDirection farmer 2/stopAnimation Dusty 0/move Dusty 0 2 2/move Dusty -6 0 3/animate Dusty true true 150 20 21/pause 300/emote Alex 32/emote farmer 32/pause 1000/playSound Stadium_cheer/textAboveHead Alex \"{{i18n: alex.cutscene.gamedaywinter.3}}\"/animate Dusty true true 150 15 22/jump Alex/jump farmer/pause 2000/emote farmer 56/emote Alex 56/pause 1000/animate Dusty false true 1000 23 23 24/pause 500/globalFade/viewport -1000 -1000 false/pause 300/end",
+			},
+		"When": {
+			"AlexCustomSprites": "no",
+		}
+	},
+{
+	"LogName": "Game Day Winter",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggGameDayWinter07092025/F/Season winter/u 15 16 17 18 19 20 21 22 23 24 26 27 28/t 1500 2000": "playful/17 18/farmer 9 24 0 Alex 17 17 2/skippable/changeToTemporaryMap Magg_Alex_House false/addTemporaryActor Dusty 32 32 20 17 2 true Character/animate Dusty false true 1000 23 23 24/showFrame Alex 52 true/positionOffset Alex 40 5/playSound doorClose/move farmer 0 -4 1/move farmer 5 0 0/speak Alex \"{{i18n: alex.cutscene.gamedaywinter.1}}\"/move farmer 0 -2 2/move farmer 3 0 0/speak Alex \"{{i18n: alex.cutscene.gamedaywinter.2}}\"/move farmer 0 -1 2/showFrame farmer 68 true/positionOffset farmer -20 10/stopAnimation Dusty 0/move Dusty 0 1 2/move Dusty -5 0 3/animate Dusty true true 150 20 21/pause 300/showFrame Alex 55/emote Alex 32/emote farmer 32/pause 200/showFrame Alex 52/pause 1000/showFrame Alex 54 true/positionOffset Alex 0 40/playSound Stadium_cheer/textAboveHead Alex \"{{i18n: alex.cutscene.gamedaywinter.3}}\"/animate Dusty true true 150 15 22/pause 500/showFrame farmer 0 true/positionOffset farmer 0 40/jump farmer/pause 2000/emote farmer 56/showFrame Alex 0/emote Alex 56/pause 1000/showFrame farmer 68 true/positionOffset farmer 0 -40/showFrame Alex 52 true/positionOffset Alex 0 -40/pause 300/showFrame Alex 52/animate Dusty false true 1000 23 23 24/pause 500/globalFade/viewport -1000 -1000 false/pause 300/end",
+			},
+		"When": {
+			"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb}}' = 'true' OR '{{AlexCustomSprites}}' = 'yes'": true,
+		}
+	},
+//1 HEART EVENTS
+//SMOOTH OPERATOR validated
+{
+	"LogName": "Smooth Operator",
+	"Action": "EditData",
+	"Target": "Data/Events/Town",
+	"Entries": {
+			"MaggSmoothOperator07092025/y 1/Season spring/w sunny/u 10 11 12 13 14 15 16 17 18 19 20/t 1000 1400": "continue/57 66/farmer 44 65 1 Alex 59 66 0/skippable/addTemporaryActor woodpile 32 32 59 65 2 false Character/move farmer 14 0 2/emote Alex 40/pause 100/speak Alex \"{{i18n: alex.event.smoothoperator.1}}\"/pause 100/emote farmer 8/pause 100/speak Alex \"{{i18n: alex.event.smoothoperator.2.1}} {{AlexGpaName}} {{i18n: alex.event.smoothoperator.2.2}}\"/pause 100/move farmer 0 1 1/pause 200/faceDirection Alex 3/quickQuestion {{i18n: alex.event.smoothoperator.3}}#{{i18n: alex.event.smoothoperator.4}}#{{i18n: alex.event.smoothoperator.5}}#{{i18n: alex.event.smoothoperator.6}}(break)speak Alex \"{{i18n: alex.event.smoothoperator.7.{{FarmerGender}}}}\"(break)speak Alex \"{{i18n: alex.event.smoothoperator.8}}\"(break)speak Alex \"{{i18n: alex.event.smoothoperator.9}}\"\\pause 200/emote farmer 32/emote Alex 32/pause 500/globalFade/viewport -1000 -1000 false/changeToTemporaryMap {{Vanilla4Map}} false/playSound clank/pause 200/playSound axchop/pause 200/playSound crafting/pause 200/message \"{{i18n: alex.event.smoothoperator.10}}\"/playSound crafting/addTemporaryActor Dusty 32 32 53 69 2 true Character/warp woodpile -100 -100/warp farmer 49 66/faceDirection farmer 0/warp Alex 50 66/faceDirection Alex 0/animate Dusty false true 1000 23 23 24/viewport 52 66 true/globalFadeToClear/pause 500/faceDirection Alex 3/faceDirection farmer 1/speak Alex \"{{i18n: alex.event.smoothoperator.11.1}} {{AlexGpaName}} {{i18n: alex.event.smoothoperator.11.2}}\"/pause 100/emote farmer 56/pause 500/globalFade/viewport -1000 -1000 false/pause 500/end",
+        }
+    },
+//2 HEART EVENTS
+//VANILLA 2 HEART validated
+{
+	"LogName": "Vanilla 2 Heart",
+	"Action": "EditData",
+	"Target": "Data/Events/Beach",
+	"Entries": {
+			"20/f Alex 500/z winter/p Alex/w sunny": "playful/-100 -100/farmer 27 7 2 Alex 25 17 2/showFrame Alex 23/skippable/addConversationTopic maggplaycatch 6/animate Alex false true 125 16 17 18 19 20 21 22 23 23 23 23 23 23 23 23 23 23 23 23/viewport 28 14 true/move farmer 0 10 2/stopAnimation Alex/showFrame Alex 24/pause 600/showFrame Alex 23/speak Alex \"{{i18n: alex.event.vanilla2.1}}\"/pause 300/emote Alex 40/speak Alex \"{{i18n: alex.event.vanilla2.2}}\"/pause 800/faceDirection farmer 3/pause 800/faceDirection farmer 2/speak Alex \"{{i18n: alex.event.vanilla2.3}}\"/pause 1000/faceDirection Alex 1/pause 500/showFrame Alex 24/speak Alex \"{{i18n: alex.event.vanilla2.4}}\"/pause 500/move farmer 2 0 3/pause 1000/showFrame Alex 4/animate Alex false false 80 24 25 25 26 4/pause 240/playSound throw/animate farmer true true 100 30/specificTemporarySprite joshFootball/null/pause 500/stopAnimation farmer/pause 700/speak Alex \"{{i18n: alex.event.vanilla2.5}}\"/pause 500/move farmer -2 0 2/pause 800/faceDirection Alex 2/speak Alex \"{{i18n: alex.event.vanilla2.6}}\"/pause 1000/question fork1 \"#{{i18n: alex.event.vanilla2.7}}#{{i18n: alex.event.vanilla2.8}}\"/fork arrogantJosh/faceDirection Alex 1/faceDirection farmer 3/pause 500/speak Alex \"{{i18n: alex.event.vanilla2.9}}\"/emote farmer 32/move Alex 1 0 1/pause 500/speak Alex \"{{i18n: alex.event.vanilla2.10}}\"/end",
+			"arrogantJosh": "pause 500/faceDirection Alex 3/emote Alex 12/faceDirection Alex 2/speak Alex \"{{i18n: alex.event.vanilla2.11}}\"/move Alex 0 -15 0 true/speak Alex \"{{i18n: alex.event.vanilla2.12}}\"/faceDirection farmer 0/speak Alex \"{{i18n: alex.event.vanilla2.13}}\"/end",
+        }
+    },
+//DOWNTIME valdated
+{
+	"LogName": "Downtime",
+	"Action": "EditData",
+	"Target": "Data/Events/Beach",
+	"Entries": {
+			"MaggDowntime07092025/e 20/A maggplaycatch/!w rainy/t 1000 1400": "playful/-100 -100/farmer 27 7 2 Alex 25 17 2/showFrame Alex 23/skippable/addTemporaryActor gridball 16 32 -100 -100 0 false Character/addTemporaryActor Dusty 32 32 23 17 1 true Character/animate Dusty true true 1000 20 21/animate Alex false true 125 16 17 18 19 20 21 22 23 23 23 23 23 23 23 23 23 23 23 23/viewport 28 17 true/move farmer 0 10 3/pause 600/stopAnimation Alex/showFrame Alex 24/pause 300/speak Alex \"{{i18n: alex.cutscene.downtime.1}}\"/pause 300/emote Alex 32/pause 200/showFrame Alex 24/emote farmer 32/pause 200/move farmer 2 0 3/animate Dusty false true 1000 23 23 24/pause 500/speak Alex \"{{i18n: alex.cutscene.downtime.2}}\"/pause 300/animate Alex false false 80 24 25 25 26 4/pause 240/warp gridball 25 17/advancedMove gridball false 4 0 2 100/playSound throw/stopAnimation Alex 4/pause 1700/animate farmer true false 100 30 30 30 31 32 33 34/pause 300/showFrame gridball 16/pause 1000/animate farmer true false 100 34 34 33 33 32/pause 200/showFrame gridball 0/advancedMove gridball false -4 0 2 100/playSound throw/pause 1700/showFrame Alex 24 true/warp gridball -100 -100/pause 300/emote Alex 32 true/jump farmer 6/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000 false/pause 1000/end",
+        }
+    },
+//SOUS CHEF validated
+{
+	"LogName": "Sous Chef",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggSousChef07092025/F/f Alex 500/t 1200 1600": "poppy/4 18/Alex 3 17 0 farmer 9 24 0/skippable/changeToTemporaryMap Magg_Alex_House false/playSound doorClose/move farmer 0 -5 3/move farmer -3 0 3/faceDirection Alex 1/speak Alex \"{{i18n: alex.event.souschef.1.1}} {{AlexGmaName}}{{i18n: alex.event.souschef.1.2}}\"/emote farmer 56/move farmer -2 0 0/move farmer 0 -2 3/pause 300/speak Alex \"{{i18n: alex.event.souschef.2}}\"/emote Alex 28/pause 200/message \"{{i18n: alex.event.souschef.3}}\"/emote farmer 40/pause 200/speak Alex \"{{i18n: alex.event.souschef.4}}\"/faceDirection Alex 0/faceDirection farmer 0/pause 200/playSound clank/pause 500/playSound sandyStep/pause 500/playSound coin/pause 500/playSound furnace/pause 500/speak Alex \"{{i18n: alex.event.souschef.5}}\"/faceDirection farmer 3/faceDirection Alex 1/emote farmer 8/speak Alex \"{{i18n: alex.event.souschef.6}}\"/emote farmer 32 true/emote Alex 32/pause 500/globalFade/viewport -1000 -1000 false/message \"{{i18n: alex.event.souschef.7}}\"/pause 500/end",
+		}
+	},
+//3 HEART EVENTS
+//LEVELING UP validated
+{
+    "LogName": "Leveling Up",
+    "Action": "EditData",
+    "Target": "Data/Events/Town",
+    "Entries": {
+			"MaggLevelingUp07092025/F/f Alex 750/f Sebastian 500/f Sam 500/f Abigail 500/e MaggSousChef07092025/!w rainy/t 1000 1500": "fallFest/-1000 -1000/farmer 21 46 2 Abigail -100 -100 2 Alex 43 61 2 Sebastian 31 56 2 Sam 32 56 3/skippable/showFrame Sam 16/animate Sebastian false true 110 16 17 18 19 20 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16/viewport 31 57 true/globalFadeToClear/playSound doorClose/warp Abigail 43 57/advancedMove Abigail false 0 2 -11 0 4 100/pause 5000/showFrame Sam 0/emote Sam 32/move Sam 0 2 2/stopAnimation Sebastian/move Sebastian 0 2 2/pause 100/speak Abigail \"{{i18n: alex.event.levelup.1}}\"/pause 100/speak Sam \"{{i18n: alex.event.levelup.2}}\"/pause 100/speak Abigail \"{{i18n: alex.event.levelup.3}}\"/pause 100/speak Sam \"{{i18n: alex.event.levelup.4}}\"/advancedMove farmer false 0 9 5 0 0 4 4 0 1 100/faceDirection Sebastian 1/textAboveHead Sebastian \"{{i18n: alex.event.levelup.5}}\"/pause 2000/faceDirection Sam 3/emote Sam 28/pause 500/speak Sam \"{{i18n: alex.event.levelup.6}}\"/pause 500/faceDirection Sebastian 2/pause 500/speak Sam \"{{i18n: alex.event.levelup.7}}\"/pause 500/emote farmer 32/faceDirection Sam 2/pause 100/speak Sam \"{{i18n: alex.event.levelup.8}}\"/pause 100/speak Sebastian \"{{i18n: alex.event.levelup.9}}\"/advancedMove Alex false -6 0 0 -1 4 100/pause 1000/faceDirection Abigail 3/pause 1000/speak Abigail \"{{i18n: alex.event.levelup.10}}\"/pause 1000/speak Sam \"{{i18n: alex.event.levelup.11}}\"/pause 1000/advancedMove Alex false -6 0 4 100/pause 3000/speak Sam \"{{i18n: alex.event.levelup.12}}\"/pause 300/emote Sebastian 12/emote Abigail 32 true/emote farmer 32/pause 300/speak Alex \"{{i18n: alex.event.levelup.13}}\"/pause 200/speak Sam \"{{i18n: alex.event.levelup.14}}\"/pause 100/emote Abigail 56/emote Sam 56 true/emote farmer 56/emote Sebastian 60/pause 100/speak Alex \"{{i18n: alex.event.levelup.15}}\"/pause 200/advancedMove Abigail false 10 0 0 -1 2 100/pause 100/move Sebastian 0 -2 1/move Sam 0 -2 3/advancedMove Alex false 0 -1 3 100/pause 500/speak Alex \"{{i18n: alex.event.levelup.16}}\"/pause 100/emote Alex 40/speak Alex \"{{i18n: alex.event.levelup.17}}\"/pause 100/emote farmer 32/speak Alex \"{{i18n: alex.event.levelup.18}}\"/pause 500/globalFade/viewport -1000 -1000 false/message \"{{i18n: alex.event.levelup.19}}\"/pause 500/end",
+        }
+    },
+//WRITERS BLOCK validated
+{
+		"LogName": "Writer's Block",
+		"Action": "EditData",
+		"Target": "Data/Events/Saloon",
+		"Entries": {
+			"MaggWritersBlock07092025/F/f Alex 750/e MaggLevelingUp07092025/t 1600 2400": "Saloon1/10 19/Alex 14 24 0 Gus 12 18 0 Emily 15 17 0 Marnie 8 22 1 Lewis 9 22 3 Pierre 16 20 0 Leah 2 20 1 Elliott 4 19 2 Pam 7 18 1 Clint 19 23 3 Willy 17 22 2 Shane 21 17 2 farmer -100 -100 0/skippable/addConversationTopic maggstarsoffateevent 4/changeToTemporaryMap Magg_Alex_SaloonMeet false/animate Marnie false true 200 21 22 23 23 23 23 23 23 23 23 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20/animate Lewis false true 200 19 19 19 19 19 19 19 19 19 19 19 19 22 23 23 23 23 23 22 22 22 23 23 23 23 23 23 23 23 23 23 2 19 19 19 19 19 19 19 19 19 19 19/animate Elliott false true 200 16 16 16 16 16 16 16 16 17 18 18 18 19 19 18 18 19 19 18 17 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16/animate Gus false true 200 18 18 19 19 20 20 19 19/animate Shane false true 200 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 23 22 21 20 20 20 20/advancedMove Emily true 1 0 4 2000 0 1 2 3000 -1 0 0 -1 4 2000 2 1000 0 1 2 4000 0 -1 4 2000/pause 500/viewport move 2 0 5000 true/move Alex 0 -3 1/move Alex 7 0 0/move Alex 0 -1 1/move Alex 3 0 2/move Alex 0 1 3/positionOffset Alex 0 15/playSound thudStep/showFrame Alex 39/pause 500/warp farmer 14 24/faceDirection farmer 0/playSound doorClose/move farmer 0 -3 1/move farmer 7 0 1/pause 500/speak Alex \"{{i18n: alex.event.writersblock.1}}\"/emote farmer 32/move farmer 0 -1 0/move farmer 2 0 2/positionOffset farmer -20 20/pause 1000/emote Alex 28/pause 300/message \"{{i18n: alex.event.writersblock.2}}\"/pause 200/speak Alex \"{{i18n: alex.event.writersblock.3}}\"/pause 100/emote farmer 32/pause 100/speak Alex \"{{i18n: alex.event.writersblock.4}}\"/pause 300/message \"{{i18n: alex.event.writersblock.5}}\"/pause 500/speak Alex \"{{i18n: alex.event.writersblock.6}}\"/pause 200/message \"{{i18n: alex.event.writersblock.7}}\"/emote farmer 56/speak Alex \"{{i18n: alex.event.writersblock.8}}\"/emote Alex 40/pause 500/speak Alex \"{{i18n: alex.event.writersblock.9}}\"/pause 200/speak Alex \"{{i18n: alex.event.writersblock.10}}\"/emote farmer 32 true/emote Alex 32/pause 500/globalFade/viewport -1000 -1000 false/message \"{{i18n: alex.event.writersblock.11}}\"/pause 500/end",
+		}
+	},
+//4 HEART EVENTS
+//VANILLA 4 HEART validated
+{
+	"LogName": "Vanilla 4 Heart",
+	"Action": "EditData",
+	"Target": "Data/Events/Town",
+	"Entries": {
+			"2481135/f Alex 1000/t 900 1600": "sweet/-1000 -1000/farmer 44 65 1 Alex 50 69 1/skippable/addTemporaryActor Dusty 32 32 52 69 1 false Character/showFrame Dusty 20/changeToTemporaryMap Magg_Alex_Town4 false/viewport 53 68 true/pause 3000/speak Alex \"{{i18n: alex.event.vanilla4.1}}\"/animate Dusty false true 120 20 21/pause 2000/speak Alex \"{{i18n: alex.event.vanilla4.2}}\"/faceDirection Alex 2/pause 700/emote Alex 28/playSound leafrustle/move farmer 6 0 2/pause 500/animate Dusty false true 100 15 22/faceDirection Alex 0/jump Alex/pause 800/speak Alex \"{{i18n: alex.event.vanilla4.3}}\"/move farmer 0 2 2/question fork1 \"#{{i18n: alex.event.vanilla4.4}}#{{i18n: alex.event.vanilla4.5}}\"/fork didntHear/pause 500/faceDirection Alex 2/pause 1000/showFrame Alex 27/pause 600/playMusic desolate/emote Alex 28/speak Alex \"{{i18n: alex.event.vanilla4.6}}\"/stopAnimation Dusty 20/animate Dusty false true 150 20 21/pause 1000/showFrame Alex 0 true/faceDirection Alex 0/pause 500/speak Alex \"{{i18n: alex.event.vanilla4.7}}\"/faceDirection Alex 1/speak Alex \"{{i18n: alex.event.vanilla4.8}}\"/pause 800/speak Alex \"{{i18n: alex.event.vanilla4.9}}\"/move farmer 0 1 1/pause 3000/emote Alex 40/faceDirection Alex 0/playMusic spring_day_ambient/speak Alex \"{{i18n: alex.event.vanilla4.10}}\"/pause 500/faceDirection farmer 2/pause 500/speak Alex \"{{i18n: alex.event.vanilla4.11}}\"/faceDirection Alex 1/faceDirection farmer 1/{{Vanilla4Sprite}}/playSound dwop/pause 500/stopAnimation Dusty 15/jump Dusty/pause 500/speak Alex \"{{i18n: alex.event.vanilla4.12}}\"/playSound dogWhining/animate Dusty false true 75 15 22/pause 3000/globalFade/viewport -1000 -1000/end",
+		}
+    },
+{
+	"LogName": "Vanilla 4 Heart Didn't Hear",
+	"Action": "EditData",
+	"Target": "Data/Events/Temp",
+	"Entries": {
+			"didntHear": "pause 400/pause 100/faceDirection Alex 1/speak Alex \"{{i18n: alex.event.vanilla4.13}}\"/faceDirection Alex 2/pause 1000/showFrame Alex 27/pause 600/playMusic desolate/emote Alex 28/speak Alex \"{{i18n: alex.event.vanilla4.14}}\"/stopAnimation Dusty 20/animate Dusty false true 150 20 21/pause 1000/showFrame Alex 0 true/faceDirection Alex 0/pause 500/speak Alex \"{{i18n: alex.event.vanilla4.7}}\"/faceDirection Alex 1/speak Alex \"{{i18n: alex.event.vanilla4.8}}\"/pause 800/speak Alex \"{{i18n: alex.event.vanilla4.9}}\"/move farmer 0 1 1/pause 3000/emote Alex 40/faceDirection Alex 0/playMusic spring_day_ambient/pause 500/faceDirection farmer 2/pause 500/speak Alex \"{{i18n: alex.event.vanilla4.15}}\"/pause 1000/speak Alex \"{{i18n: alex.event.vanilla4.11}}\"/faceDirection Alex 1/faceDirection farmer 1/{{Vanilla4Sprite}}/playSound dwop/pause 500/stopAnimation Dusty 15/jump Dusty/pause 500/speak Alex \"{{i18n: alex.event.vanilla4.12}}\"/playSound dogWhining/animate Dusty false true 50 15 22/pause 3000/globalFade/viewport -1000 -1000 false/message \"{{i18n: alex.event.vanilla4.16}}\"/pause 500/end",
+        }
+    },
+//ALL-STAR CHEF validated
+{
+	"LogName": "All-Star Chef",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggAllStarChef07092025/F/f Alex 1000/e 2481135/t 1200 1600": "playful/4 18/Alex 3 17 0 farmer 9 24 0/skippable/addConversationTopic maggextraticketevent 6/changeToTemporaryMap Magg_Alex_House false/playSound doorClose/move farmer 0 -4 3/move farmer -4 0 3/move farmer 0 -1 0/faceDirection Alex 2/speak Alex \"{{i18n: alex.event.allstarchef.1}}\"/emote farmer 56/move farmer -1 0 0/move farmer 0 -2 3/faceDirection Alex 1/pause 100/message \"{{i18n: alex.event.allstarchef.2}}\"/emote farmer 56/pause 200/speak Alex \"{{i18n: alex.event.allstarchef.3}}\"/faceDirection Alex 0/faceDirection farmer 0/pause 200/speak Alex \"{{i18n: alex.event.allstarchef.4}}\"/faceDirection Alex 1/faceDirection farmer 3/emote farmer 32/emote Alex 32/pause 200/faceDirection Alex 0/faceDirection farmer 0/pause 200/playSound clank/pause 500/playSound sandyStep/pause 500/playSound coin/pause 500/playSound furnace/pause 500/faceDirection Alex 1/faceDirection farmer 3/pause 200/speak Alex \"{{i18n: alex.event.allstarchef.6}}\"/pause 100/quickQuestion {{i18n: alex.event.allstarchef.7}}#{{i18n: alex.event.allstarchef.8}}#{{i18n: alex.event.allstarchef.9}}(break)speak Alex \"{{i18n: alex.event.allstarchef.10}}\"(break)speak Alex \"{{i18n: alex.event.allstarchef.11}}\"\\pause 50/jump Alex/pause 500/speak Alex \"{{i18n: alex.event.allstarchef.12}}\"/emote farmer 56 true/emote Alex 56/pause 500/globalFade/viewport -1000 -1000 false/message \"{{i18n: alex.event.allstarchef.13}}\"/pause 500/end",
+        }
+    },
+//EXTRA TICKET validated
+{
+	"LogName": "Extra Ticket",
+	"Action": "EditData",
+	"Target": "Data/Events/Farm",
+	"Entries": {
+			"MaggExtraTicket07092025/F/f Alex 1000/e MaggAllStarChef07092025/A maggextraticketevent/!w rainy/t 605 800": "continue/64 15/farmer 64 16 2 Alex 64 18 0/skippable/pause 1000/emote Alex 32/speak Alex \"{{i18n: alex.event.extraticket.1}}\"/pause 300/emote farmer 8/faceDirection Alex 1/pause 500/faceDirection Alex 0/pause 500/speak Alex \"{{i18n: alex.event.extraticket.2}}\"/emote farmer 56/pause 200/speak Alex \"{{i18n: alex.event.extraticket.3}}\"/emote Alex 56/faceDirection Alex 2/advancedMove Alex false 0 2 15 0 1 100/pause 1500/faceDirection farmer 1/pause 1000/globalFade/viewport -1000 -1000/message \"{{i18n: alex.event.extraticket.4}}\"/pause 500/end",
+		}
+    },
+//Ballgame validated validated
+{
+	"LogName": "Ballgame",
+	"Action": "EditData",
+	"Target": "Data/Events/BusStop",
+	"Entries": {
+			"MaggBallgame07092025/e MaggExtraTicket07092025/t 1600 1800": "continue/-1000 -1000/farmer 22 19 0 Alex 23 10 2 Shane 22 13 0 Clint 19 11 1 Pam 20 10 2/viewport 22 11 clamp true/skippable/move farmer 0 -4 0 true/move Shane 0 -4 0 true/proceedPosition Shane/playSound thudStep/warp Shane -100 -100/move farmer 0 -1 0/move Alex 0 1 2/speak Alex \"{{i18n: alex.event.carriedaway.1}}\"/move Pam 2 0 0/move Pam 0 -1 0/warp Pam -100 -100/playSound thudStep/move Clint 3 0 0/move Clint 0 -2 0/faceDirection Alex 3 true/playSound thudStep/warp Clint -100 -100/move farmer 0 -4 0 true/globalFade/viewport -1000 -1000/stopMusic/pause 800/playSound busDriveOff/pause 4000/changeToTemporaryMap Stadium false/speak Alex \"{{i18n: alex.event.carriedaway.2}}\"/pause 1500/playMusic Stadium_ambient/warp farmer 19 19/faceDirection farmer 2/positionOffset farmer 0 16/warp Shane 14 12/faceDirection Shane 2/warp Clint 30 14/faceDirection Clint 2/warp Alex 22 12/pause 3000/advancedMove Alex false 0 7 -2 0/viewport 22 18 clamp true/proceedPosition Alex/faceDirection Alex 3/faceDirection farmer 1/speak Alex \"{{i18n: alex.event.carriedaway.4}}\"/emote farmer 32/faceDirection Alex 2/faceDirection farmer 2/farmerEat 184/pause 1000/faceDirection Alex 3/faceDirection farmer 1/pause 300/quickQuestion {{i18n: alex.event.carriedaway.5}}#{{i18n: alex.event.carriedaway.6}}#{{i18n: alex.event.carriedaway.7}}(break)speak Alex \"{{i18n: alex.event.carriedaway.8}}\"(break)speak Alex \"{{i18n: alex.event.carriedaway.9}}\"\\pause 300/faceDirection Alex 2/faceDirection farmer 2/playSound Stadium_cheer/{{CarriedAwaySprite}}/jump Alex/pause 2000/showFrame Alex 0/speak Alex \"{{i18n: alex.event.carriedaway.10}}\"/pause 300/faceDirection Alex 3/faceDirection farmer 1/emote farmer 56 true/emote Alex 56/faceDirection Alex 2/faceDirection farmer 2/pause 1500/playSound Stadium_cheer/{{CarriedAwaySprite}}/jump Alex/textAboveHead Alex \"{{i18n: alex.event.carriedaway.11}}\"/jump Shane/jump Clint/pause 100/textAboveHead Shane \"{{i18n: alex.event.carriedaway.11}}\"/pause 500/playSound Stadium_cheer/faceDirection farmer 1 true/faceDirection Alex 3/pause 1000/faceDirection farmer 2 true/faceDirection Alex 2/jump Alex/jump farmer 6/pause 1000/faceDirection Alex 3/faceDirection farmer 1/pause 300/speak Alex \"{{i18n: alex.event.carriedaway.12}}\"/emote farmer 56/emote Alex 56/faceDirection farmer 2/faceDirection Alex 2/playSound Stadium_cheer/pause 500/{{CarriedAwaySprite}}/jump Alex/jump farmer 6/pause 1000/globalFade/viewport -1000 -1000 false/pause 1000/speak Alex \"{{i18n: alex.event.carriedaway.13}}\"/pause 500/end",
+		}
+	},
+//5 HEART EVENTS
+//VANILLA 5 HEART validated
+{
+	"LogName": "Vanilla 5 Heart",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"21/f Alex 1250/p Alex": "sadpiano/12 5/farmer 10 11 0 Alex 13 5 0/skippable/addConversationTopic MaggPuppyLoveEvent 3/addTemporaryActor Dusty 32 32 15 7 2 true Character/animate Dusty false true 1000 23 23 24/pause 500/speak Alex \"{{i18n: alex.event.vanilla5.1}}\"/doAction 10 9/move farmer 0 -5 1/move farmer 3 0 0/pause 500/faceDirection Alex 2/pause 600/speak Alex \"{{i18n: alex.event.vanilla5.2}}\"/faceDirection Alex 0/move farmer 1 0 0/move farmer 0 -1 3/emote farmer 8/pause 500/emote Alex 28/speak Alex \"{{i18n: alex.event.vanilla5.3}}\"/faceDirection Alex 1/speak Alex \"$q 57 null#{{i18n: alex.event.vanilla5.4}}#$r 57 0 Event_books1#{{i18n: alex.event.vanilla5.5}}#$r 57 50 Event_books2#{{i18n: alex.event.vanilla5.6}}#$r 57 -50 Event_books3#{{i18n: alex.event.vanilla5.7}}\"/faceDirection Alex 0/pause 1000/emote Alex 16/speak Alex \"{{i18n: alex.event.vanilla5.8}}\"/faceDirection Alex 1/speak Alex \"{{i18n: alex.event.vanilla5.9}}\"/jump farmer/pause 800/speak Alex \"{{i18n: alex.event.vanilla5.10}}\"/faceDirection farmer 2/animate farmer false true 100 102 103/pause 2000/globalFade/viewport -1000 -1000/stopAnimation farmer/message \"{{i18n: alex.event.vanilla5.11}}\"/pause 500/end",
+		}
+	},
+//PUPPY LOVE validated
+{
+	"LogName": "Puppy Love",
+	"Action": "EditData",
+	"Target": "Data/Events/Town",
+	"Entries": {
+			"MaggPuppyLove07092025/F/f Alex 1250/e 21/A MaggPuppyLoveEvent/!w rainy/t 1200 1600": "sweet/-1000 -1000/farmer 45 72 2 Alex 52 72 1/skippable/addConversationTopic MaggSplitEvent 2/changeToTemporaryMap {{Vanilla4Map}} false/addTemporaryActor Dusty 32 32 53 72 2 true Character/showFrame Dusty 20/animate Dusty false true 100 20 21/{{PuppyLoveSprite}}/viewport 55 73 true/playSound doorClose/globalFadeToClear/move farmer 0 1 1/move farmer 2 0 1/speak Alex \"{{i18n: alex.event.puppylove.1}}\"/pause 500/move farmer 6 0 0/pause 100/showFrame Alex 0/faceDirection Alex 2/emote Alex 32/stopAnimation Dusty 15/animate Dusty false true 100 15 22/pause 100/speak Alex \"{{i18n: alex.event.puppylove.2}}\"/emote farmer 8/pause 100/speak Alex \"{{i18n: alex.event.puppylove.3}}\"/faceDirection Alex 1/pause 300/speak Alex \"{{i18n: alex.event.puppylove.4}}\"/pause 100/emote farmer 32/stopAnimation Dusty 4/advancedMove Dusty false 23 0 1 100/pause 100/advancedMove Alex false 23 0 1 100/pause 500/advancedMove farmer false 22 0 1 100/viewport move 2 0 11500/pause 14000/animate Dusty true true 125 20 21/emote Alex 40/pause 100/speak Alex \"{{i18n: alex.event.puppylove.5}}\"/emote Alex 28/pause 100/speak Alex \"{{i18n: alex.event.puppylove.6}}\"/pause 100/faceDirection Alex 2/faceDirection farmer 0/pause 200/speak Alex \"{{i18n: alex.event.puppylove.7}}\"/pause 300/speak Alex \"{{i18n: alex.event.puppylove.8}}\"/faceDirection Alex 1/animate Dusty false true 100 20 21/emote Alex 20/pause 300/faceDirection Alex 2/speak Alex \"{{i18n: alex.event.puppylove.9}}\"/pause 100/emote farmer 32/emote Alex 32/pause 100/faceDirection Alex 1/faceDirection farmer 1/pause 100/speak Alex \"{{i18n: alex.event.puppylove.10}}\"/pause 100/speak Alex \"{{i18n: alex.event.puppylove.11}}\"/pause 100/stopAnimation Dusty 23/positionOffset Dusty -10 0/animate Dusty false true 1000 23 23 24/faceDirection Alex 2/faceDirection farmer 0/pause 100/speak Alex \"{{i18n: alex.event.puppylove.12}}\"/pause 300/speak Alex \"{{i18n: alex.event.puppylove.13.1}} {{AlexGpaName}} {{i18n: alex.event.puppylove.13.2}}\"/faceDirection Alex 1/faceDirection farmer 1/pause 500/globalFade/viewport -1000 -1000 false/message \"{{i18n: alex.event.puppylove.14}}\"/pause 500/end",
+		}
+	},
+//6 HEART EVENTS
+//VANILLA 6 HEART validated
+{
+	"LogName": "Vanilla 6 heart",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"2119820/f Alex 1500/p Alex": "jaunty/-1000 -1000/farmer 10 10 0 Alex 13 6 2/skippable/addConversationTopic maggbettertogetherevent 4/addConversationTopic MaggLongshotEvent 9/addTemporaryActor Dusty 32 32 15 7 2 true Character/animate Dusty false true 1000 23 23 24/showFrame Alex 28/animate Alex false true 100 28 29 30 31 32 32 31 30 29 28/viewport 13 6 true/pause 6500/stopAnimation Alex/pause 1000/doAction 10 9/move farmer 0 -3 1/move farmer 2 0 0/showFrame Alex 34 true/animate Alex false false 100 28 33 34/pause 600/speak Alex \"{{i18n: alex.event.vanilla6.1}}\"/pause 100/emote Alex 40/speak Alex \"{{i18n: alex.event.vanilla6.3}}\"/emote farmer 8/pause 1000/speak Alex \"{{i18n: alex.event.vanilla6.4}}\"/pause 1000/showFrame Alex 33/pause 1000/speak Alex \"{{i18n: alex.event.vanilla6.5}}\"/move farmer 1 0 0/pause 1000/jump farmer/pause 800/showFrame Alex 34/pause 800/emote Alex 32/pause 1200/showFrame Alex 29/pause 100/showFrame Alex 28/pause 100/showFrame Alex 29/pause 100/animate Alex false true 50 30 31 32 32 31 30/pause 3000/globalFade/viewport -1000 -1000/end",
+		}
+	},
+//BETTER TOGETHER validated must have sprites enabled
+{
+	"LogName": "Better Together",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggBetterTogether07092025/F/f Alex 1500/e 2119820/A maggbettertogetherevent/t 1600 2400": "jaunty/-1000 -1000/farmer 10 10 0 Sebastian -100 -100 2 Alex 14 5 2 Sam -100 -100 2/skippable/addTemporaryActor {{BetterTogetherSpriteSam}} 16 32 16 5 1 true Character/addTemporaryActor {{BetterTogetherSpriteSeb}} 16 32 18 6 1 true Character/changePortrait Sebastian Beach/changePortrait Sam Beach/changeToTemporaryMap Magg_Alex_HouseWorkout false/showFrame Alex 28/animate Alex false true 150 28 29 30 31 32 32 31 30 29 28/showFrame {{BetterTogetherSpriteSeb}} 0/animate {{BetterTogetherSpriteSeb}} false true 200 0 1 2 3 3 2 1 0/showFrame {{BetterTogetherSpriteSam}} 0/animate {{BetterTogetherSpriteSam}} false true 180 0 1 2 3 3 2 1 0/viewport 18 7 true/globalFadeToClear/doAction 10 9/move farmer 0 -3 0/move farmer 4 0 0/pause 1500/faceDirection farmer 1/pause 2000/showFrame Alex 34 true/animate Alex false false 100 28 33 34/pause 200/stopAnimation {{BetterTogetherSpriteSam}} 4/speak Sam \"{{i18n: alex.event.bettertogether.1}}\"/pause 100/emote {{BetterTogetherSpriteSeb}} 60/pause 100/animate {{BetterTogetherSpriteSam}} false true 180 0 1 2 3 3 2 1 0/faceDirection farmer 0/stopAnimation Alex 66/speak Alex \"{{i18n: alex.event.bettertogether.2}}\"/pause 100/emote Alex 56/emote farmer 32/advancedMove farmer false 0 -1 4 100/pause 300/message \"{{i18n: alex.event.bettertogether.3}}\"/pause 100/positionOffset Alex 0 4/pause 50/positionOffset farmer 0 -4/pause 50/positionOffset Alex 0 4/pause 50/positionOffset farmer 0 -4/pause 50/positionOffset Alex 0 4/positionOffset farmer 0 -4/pause 300/speak Alex \"{{i18n: alex.event.bettertogether.4}}\"/pause 500/stopAnimation {{BetterTogetherSpriteSam}} 4/stopAnimation {{BetterTogetherSpriteSeb}} 4/speak Sam \"{{i18n: alex.event.bettertogether.6}}\"/pause 100/speak Sebastian \"{{i18n: alex.event.bettertogether.7}}\"/pause 100/showFrame Alex 65/jump Alex/pause 500/faceDirection farmer 1/speak Alex \"{{i18n: alex.event.bettertogether.8}}\"/pause 100/emote {{BetterTogetherSpriteSam}} 28/emote {{BetterTogetherSpriteSeb}} 32/pause 500/globalFade/viewport -1000 -1000 false/pause 300/end",
+			},
+		"When": {
+			"Query: '{{HasMod |contains=maggplays.SOspritespatchSeb}}' = 'true' OR '{{AlexCustomSprites}}' = 'yes'": true,
+		}
+    },
+//LONGSHOT validated
+{
+	"LogName": "Longshot",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggLongshot107092025/F/f Alex 1500/e 2119820/A MaggLongshotEvent/t 1200 1600": "playful/4 18/Alex 3 17 0 farmer 9 24 0/skippable/addConversationTopic MaggLongshotEvent2 0/addTemporaryActor deadegg 16 32 -100 -100 0 false Character/changeToTemporaryMap Magg_Alex_House false/{{LongshotSprite}}/speak Alex \"{{i18n: alex.event.longshot.3}}\"/pause 300/showFrame Alex 0 true/faceDirection Alex 1/pause 50/faceDirection Alex 2/jump Alex/pause 300/speak Alex \"{{i18n: alex.event.longshot.4}}\"/pause 200/move farmer -3 0 0/move farmer 0 -1 0/pause 300/speak Alex \"{{i18n: alex.event.longshot.5}}\"/emote farmer 56/pause 200/globalFade/viewport -1000 -1000 false/warp deadegg -100 -100/warp Alex 5 21/showFrame Alex 39/positionOffset Alex -20 0/warp farmer 1 21/faceDirection farmer 1/showFrame farmer 117/positionOffset farmer 10 25/playMusic sweet/viewport 5 21 true/globalFadeToClear/pause 200/speak Alex \"{{i18n: alex.event.longshot.6}}\"/pause 200/speak Alex \"{{i18n: alex.event.longshot.7}}\"/pause 300/quickQuestion {{i18n: alex.event.longshot.8}}#{{i18n: alex.event.longshot.9}}#{{i18n: alex.event.longshot.10}}(break)speak Alex \"{{i18n: alex.event.longshot.11}}\"(break)speak Alex \"{{i18n: alex.event.longshot.12}}\"\\pause 300/speak Alex \"{{i18n: alex.event.longshot.13}}\"/pause 500/message \"{{i18n: alex.event.longshot.14}}\"/emote farmer 56 true/emote Alex 56/pause 500/globalFade/viewport -1000 -1000 false/speak Alex \"{{i18n: alex.event.longshot.15}}\"/pause 300/end",
+        }
+    },
+//LONGSHOT PART 2 validated
+{
+	"LogName": "Longshot Part 2",
+	"Action": "EditData",
+	"Target": "Data/Events/Beach",
+	"Entries": {
+			"MaggLongshot207092025/F/e MaggLongshot107092025/A MaggLongshotEvent2/w sunny/t 700 1700": "ocean/42 19/farmer 40 9 2 Alex 41 18 2/skippable/addConversationTopic MaggGhostsEvent 5/addTemporaryActor Dusty 32 32 42 18 2 true Character/animate Dusty false true 120 15 22/move farmer 0 9 1/faceDirection Alex 3/pause 100/speak Alex \"{{i18n: alex.event.longshot2.1}}\"/faceDirection Alex 2/showFrame Alex 27/emote farmer 8/showFrame Alex 0/viewport move 0 1 3500 true/advancedMove farmer false 0 5 2 100/advancedMove Alex false 0 5 2 100/advancedMove Dusty false 0 5 2 100/pause 4000/stopAdvancedMoves/animate Dusty true true 100 18/speak Alex \"{{i18n: alex.event.longshot2.2}}\"/pause 300/faceDirection Alex 3/faceDirection farmer 1/speak Alex \"{{i18n: alex.event.longshot2.3}}\"/pause 200/emote Alex 28/speak Alex \"{{i18n: alex.event.longshot2.4}}\"/pause 500/stopAnimation Dusty 23/animate Dusty false true 1000 23 23 24/emote farmer 32 true/emote Alex 32/pause 500/globalFade/viewport -1000 -1000 false/speak Alex \"{{i18n: alex.event.longshot2.6}}\"/pause 300/end",
+        }
+    },
+//7 HEART EVENTS
+//PAST GHOSTS validated
+{
+	"LogName": "Past Ghosts",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggGhosts07092025/F/f Alex 1750/e MaggLongshot207092025/A MaggGhostsEvent/!w rainy/t 1000 1800": "sadpiano/-1000 -1000/Alex 15 21 0 George 16 21 0 Evelyn 5 20 3 farmer -100 -100 0/skippable/addConversationTopic maggsticksevent 0/viewport 12 21 true/globalFadeToClear/pause 500/faceDirection Alex 1/pause 100/speak Alex \"{{AlexGpaName}}{{i18n: alex.event.ghosts.1}}\"/pause 500/faceDirection George 3/speak George \"{{i18n: alex.event.ghosts.2}}\"/pause 300/advancedMove Alex false -2 0 0 -1 -4 0 3 100/pause 500/advancedMove George false -2 0 0 -1 -4 0 3 100/pause 3000/faceDirection Evelyn 1/speak Alex \"{{AlexGmaName}}{{i18n: alex.event.ghosts.3.1}} {{AlexGpaName}} {{i18n: alex.event.ghosts.3.2}}\"/pause 300/speak Evelyn \"{{i18n: alex.event.ghosts.4}}\"/pause 500/globalFade/viewport -1000 -1000 false/changeToTemporaryMap Town false/warp Evelyn -100 -100/warp Alex 48 42/faceDirection Alex 0/warp George 49 42/faceDirection George 0/viewport 46 37 true/globalFadeToClear/advancedMove Alex false 0 -6 1 100/advancedMove George false 0 -6 3 100/pause 3000/speak Alex \"{{i18n: alex.event.ghosts.5}}\"/pause 500/speak George \"{{i18n: alex.event.ghosts.6}}\"/pause 300/speak Alex \"{{i18n: alex.event.ghosts.7}}\"/pause 300/speak George \"{{i18n: alex.event.ghosts.8}}\"/emote Alex 60/pause 300/speak Alex \"{{i18n: alex.event.ghosts.9}}\"/emote George 32/pause 300/speak George \"{{i18n: alex.event.ghosts.10}}\"/pause 300/speak Alex \"{{i18n: alex.event.ghosts.11}}\"/pause 300/speak George \"{{i18n: alex.event.ghosts.12}}\"/emote George 56 true/emote Alex 56/pause 300/advancedMove Alex false 0 1 -7 0 4 100/pause 500/advancedMove George false -8 0 2 100/viewport move -1 0 5000/pause 5000/speak Alex \"{{i18n: alex.event.ghosts.13}}\"/emote Alex 40/pause 100/speak Alex \"{{i18n: alex.event.ghosts.14}}\"/emote George 32/pause 100/speak George \"{{i18n: alex.event.ghosts.15}}\"/pause 500/speak Alex \"{{i18n: alex.event.ghosts.16}}\"/emote Alex 40/pause 300/advancedMove Alex false -1 0 0 -8 -11 0 1 100/pause 1000/advancedMove George false 0 -8 -11 0 0 1 3 100/viewport move -1 -1 8000/pause 9000/showFrame Alex 27/pause 1500/showFrame Alex 0 true/faceDirection Alex 1/pause 300/emote George 8/speak Alex \"{{i18n: alex.event.ghosts.17}}\"/pause 300/emote George 40/pause 300/speak George \"{{i18n: alex.event.ghosts.18.1}} {{AlexGmaName}} {{i18n: alex.event.ghosts.18.2}}\"/pause 500/speak George \"{{i18n: alex.event.ghosts.19}}\"/emote George 28/pause 500/speak George \"{{i18n: alex.event.ghosts.20.1}} {{AlexGmaName}} {{i18n: alex.event.ghosts.20.2}} {{AlexGmaName}} {{i18n: alex.event.ghosts.20.3}}\"/pause 1000/speak Alex \"{{i18n: alex.event.ghosts.21.1}} {{AlexGpaName}}{{i18n: alex.event.ghosts.21.2}}\"/pause 500/speak George \"{{i18n: alex.event.ghosts.22}}\"/showFrame Alex 27/pause 1000/showFrame Alex 0 true/faceDirection Alex 1/pause 300/speak Alex \"{{i18n: alex.event.ghosts.23}}\"/pause 300/speak George \"{{i18n: alex.event.ghosts.24}}\"/pause 300/speak Alex \"{{AlexGpaName}}{{i18n: alex.event.ghosts.25.1}} {{AlexGmaName}} {{i18n: alex.event.ghosts.25.2}}\"/pause 500/speak George \"{{i18n: alex.event.ghosts.26}}\"/emote Alex 32 true/emote George 32/pause 500/globalFade/viewport -1000 -1000 false/pause 500/end",
+		}
+	},
+//8 HEART EVENTS
+//VANILLA 8 HEART validated
+{
+	"LogName": "Vanilla 8 Heart",
+	"Action": "EditData",
+	"Target": "Data/Events/Beach",
+	"Entries": {
+			"288847/f Alex 2000/p Alex/w sunny/G !IS_PASSIVE_FESTIVAL_TODAY SquidFest": "ocean/-100 -100/farmer 52 13 2 Alex 53 24 2/showFrame Alex 38/skippable/viewport 53 24 true/pause 2000/speak Alex \"{{i18n: alex.event.vanilla8.1}}\"/move farmer 0 11 2/pause 1000/showFrame Alex 36/pause 500/showFrame Alex 37/pause 500/speak Alex \"{{i18n: alex.event.vanilla8.2}}\"/pause 500/showFrame Alex 36/pause 1000/showFrame 95/pause 2000/speak Alex \"{{i18n: alex.event.vanilla8.3}}\"/pause 1000/speak Alex \"{{i18n: alex.event.vanilla8.4}}\"/pause 1000/showFrame Alex 38/pause 1000/speak Alex \"{{i18n: alex.event.vanilla8.5}}\"/pause 1000/playSound openBox/showFrame Alex 35/pause 500/playMusic tinymusicbox/pause 10000/specificTemporarySprite JoshMom/pause 20000/playMusic ocean/pause 900/showFrame Alex 37/pause 900/showFrame Alex 36/pause 800/speak Alex \"$q -1 null#{{i18n: alex.event.vanilla8.6}}#$r -1 0 event_box1#{{i18n: alex.event.vanilla8.7}}#$r -1 0 event_box2#{{i18n: alex.event.vanilla8.8}}#$r -1 0 event_box3#{{i18n: alex.event.vanilla8.9}}#$r -1 0 event_box4#{{i18n: alex.event.vanilla8.10}}\"/pause 1000/showFrame Alex 36/pause 1000/speak Alex \"{{i18n: alex.event.vanilla8.11}}\"/showFrame Alex 0/stopAnimation farmer/move Alex 0 -2 0 true/move farmer 0 -2 0 false/pause 1000/faceDirection Alex 3/pause 800/speak Alex \"{{i18n: alex.event.vanilla8.12}}\"/pause 800/faceDirection farmer 1/pause 500/speak Alex \"{{i18n: alex.event.vanilla8.13}}\"/pause 500/faceDirection farmer 2/animate farmer false true 100 102 103/pause 100/jump Alex/pause 1500/stopAnimation farmer/move farmer 0 -6 0 true/faceDirection Alex 0/emote Alex 16/speak Alex \"{{i18n: alex.event.vanilla8.14}}\"/pause 300/globalFade/viewport -1000 -1000 false/pause 500/end",
+		}
+    },
+//OFF THE LEASH validated
+{
+	"LogName": "Off the Leash",
+	"Action": "EditData",
+	"Target": "Data/Events/Farm",
+	"Entries": {
+			"MaggOffLeash07092025/F/f Alex 2000/e 288847/!w rainy/t 605 1200": "continue/64 15/farmer 64 16 2 Alex 64 18 0/skippable/addConversationTopic MaggAceServeEvent 4/pause 1000/emote Alex 32/speak Alex \"{{i18n: alex.event.offleash.1}}\"/pause 300/emote farmer 32/pause 100/speak Alex \"{{i18n: alex.event.offleash.2}}\"/pause 500/globalFade/viewport -1000 -1000 false/changeToTemporaryMap Backwoods false/warp farmer 20 18/faceDirection farmer 0/warp Alex 19 18/faceDirection Alex 0/addTemporaryActor Dusty 32 32 18 19 0 true Character/viewport 20 14 true/globalFadeToClear/advancedMove Alex false 0 -4 6 0 1 100/advancedMove farmer false 0 -3 5 0 1 100/pause 500/advancedMove Dusty false 0 -2 3 0 0 -2 3 0 1 100/pause 5000/message \"{{i18n: alex.event.offleash.3}}\"/pause 500/advancedMove Alex false 0 -1 5 0 2 100/advancedMove farmer false 0 -1 5 0 4 100/advancedMove Dusty false 0 -2 4 0 1 100/viewport move 1 0 5000/pause 5000/animate Dusty true true 150 20 21/speak Alex \"{{i18n: alex.event.offleash.4}}\"/pause 100/emote farmer 32/pause 100/stopAnimation Dusty 4/advancedMove Alex false 9 0 2 100/advancedMove farmer false 9 0 4 100/advancedMove Dusty false 9 0 1 100/viewport move 2 0 7000/pause 7000/animate Dusty true true 150 20 21/speak Alex \"{{i18n: alex.event.offleash.6}}\"/pause 500/globalFade/viewport -1000 -1000 false/changeToTemporaryMap Beach false/warp farmer 41 13/faceDirection farmer 1/warp Alex 41 14/faceDirection Alex 1/positionOffset Alex 0 -10/warp Dusty 39 13/faceDirection Dusty 1/viewport 40 14 true/globalFadeToClear/advancedMove Alex false 14 0 0 -7 -1 0 2 100/advancedMove farmer false 13 0 0 -6 -1 0 2 100/advancedMove Dusty false 15 0 0 -4 -1 0 4 100/pause 2000/viewport move 1 -1 8000/pause 9000/animate Dusty false true 1000 23 23 24/pause 500/speak Alex \"{{i18n: alex.event.offleash.8}}\"/pause 100/emote farmer 56/{{OffLeashSprite}}/globalFade/viewport -1000 -1000 false/pause 500/end",
+		}
+	},
+//ACE SERVE validated
+{
+	"LogName": "Ace Serve",
+	"Action": "EditData",
+	"Target": "Data/Events/Beach",
+	"Entries": {
+			"MaggAceServe07092025/F/f Alex 2000/e MaggOffLeash07092025/A MaggAceServeEvent/!w rainy/!Season winter/t 1100 1600": "ocean/-1000 -1000/farmer 39 1 2 Alex 38 11 3 Sam 35 11 1 Shane 36 10 2/skippable/addConversationTopic MaggUpgradeEvent 5/addTemporaryActor VolleyballNet 64 128 31 12 2 false Character/addTemporaryActor volleyball 16 32 -100 -100 1 false Character/addTemporaryActor Dusty 32 32 38 12 3 true Character/animate Dusty false true 120 15 22/viewport 35 12 true/advancedMove farmer false 0 6 -2 0 0 3 2 100/pause 3000/faceDirection Alex 0/stopAnimation Dusty 0/move Dusty 1 0 0/move Dusty 0 -2 3/move Dusty -1 0 3/animate Dusty false true 120 20 21/speak Alex \"{{i18n: alex.event.aceserve.1}}\"/pause 300/faceDirection Alex 3/speak Sam \"{{i18n: alex.event.aceserve.2}}\"/pause 300/speak Shane \"{{i18n: alex.event.aceserve.3}}\"/pause 100/faceDirection Sam 0/pause 100/speak Sam \"{{i18n: alex.event.aceserve.4}}\"/pause 100/faceDirection Sam 1/pause 100/emote farmer 32/jump Alex/pause 500/speak Alex \"{{i18n: alex.event.aceserve.5}}\"/pause 100/advancedMove Sam false 0 4 -7 0 0 -6 1 100/pause 500/advancedMove Shane false 0 5 -9 0 0 -4 1 100/pause 500/advancedMove Alex false -3 0 3 100/advancedMove farmer false 0 -1 -1 0 3 100/pause 500/globalFade/viewport -1000 -1000 false/speak Sam \"{{i18n: alex.event.aceserve.6}}\"/playSound thudStep/pause 300/speak Alex \"{{i18n: alex.event.aceserve.7}}\"/playSound thudStep/pause 300/speak Shane \"{{i18n: alex.event.aceserve.8}}\"/playSound thudStep/warp Alex 38 11/faceDirection Alex 3/pause 300/viewport 33 11 true/globalFadeToClear/move Alex -1 0 3/jump Alex/warp volleyball 36 11/speed volleyball 5/advancedMove volleyball false -14 0 2 100/playSound thudStep/pause 1500/jump Shane/pause 500/hideShadow volleyball true/faceDirection Sam 3/faceDirection Shane 3/showFrame volleyball 16/{{CarriedAwaySprite}}/jump Alex/jump farmer/pause 1000/showFrame Alex 0 true/faceDirection Alex 3/speak Alex \"{{i18n: alex.event.aceserve.9}}\"/pause 100/faceDirection Shane 1/faceDirection Sam 1/move Shane 1 0 1/speed Alex 5/advancedMove Alex false 0 -2 3 100/faceDirection farmer 1/jump Alex/jump farmer/pause 500/speak Alex \"{{i18n: alex.event.aceserve.11}}\"/pause 500/faceDirection Shane 0/faceDirection Sam 2/faceDirection farmer 3/speak Shane \"{{i18n: alex.event.aceserve.14}}\"/pause 300/speak Sam \"{{i18n: alex.event.aceserve.15}}\"/advancedMove Sam false 0 -3 10 0 0 -5 4 100/advancedMove Shane false 0 -5 10 0 0 -5 4 100/pause 500/faceDirection farmer 1/speak Alex \"{{i18n: alex.event.aceserve.16}}\"/pause 100/emote farmer 32/emote Alex 32/pause 500/globalFade/viewport -1000 -1000 false/pause 300/end",
+		}
+    },
+//UPGRADE validated
+{
+	"LogName": "Upgrade",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggUpgrade07092025/F/f Alex 2250/e MaggAceServe07092025/A MaggUpgradeEvent/t 1400 2000": "playful/16 7/Alex 13 5 0 farmer -100 -100 0 Sebastian 10 10 0/skippable/addTemporaryActor Dusty 32 32 15 7 2 true Character/animate Dusty false true 1000 23 23 24/pause 500/doAction 10 9/playSound doorClose/textAboveHead Sebastian \"{{i18n: alex.event.upgrade.1}}\"/move Sebastian 0 -4 1/move Sebastian 3 0 0 true/faceDirection Alex 2/pause 300/speak Alex \"{{i18n: alex.event.upgrade.2}}\"/pause 300/speak Sebastian \"{{i18n: alex.event.upgrade.3}}\"/pause 100/emote Alex 32/speak Alex \"{{i18n: alex.event.upgrade.4}}\"/pause 300/speak Sebastian \"{{i18n: alex.event.upgrade.5}}\"/warp farmer 9 24/playSound doorClose/advancedMove farmer false 0 -11 1 0 0 -7 7 0 1 100/pause 200/advancedMove Sebastian false 5 0 0 1 1 100/pause 1000/advancedMove Alex false 5 0 0 1 2 100/pause 2200/positionOffset Sebastian 20 25/animate Sebastian true true 100 24 24 24 24 24 24 24 24 24 24 25 26 27 26 27 26 27 26 25 24 24/pause 500/playSound keyboardTyping/pause 9000/faceDirection Alex 3/emote Alex 32 true/emote farmer 32/speak Alex \"{{i18n: alex.event.upgrade.6}}\"/pause 500/speak Sebastian \"{{i18n: alex.event.upgrade.7}}\"/pause 100/faceDirection Alex 2/emote Alex 8/positionOffset Alex 0 2/pause 50/positionOffset Alex 0 2/pause 50/positionOffset Alex 0 2/pause 50/positionOffset Alex 0 2/pause 1000/message \"{{i18n: alex.event.upgrade.8}}\"/pause 2000/advancedMove farmer false -1 0 0 -1 2 100/pause 300/faceDirection Alex 0/positionOffset Alex 0 -14/advancedMove Alex false 0 -1 -1 0 2 100/pause 500/stopAnimation Sebastian 0 true/faceDirection Sebastian 0 true/positionOffset Sebastian -20 -25/advancedMove Sebastian false 0 -1 -1 0 4 100/pause 1000/speak Sebastian \"{{i18n: alex.event.upgrade.9}}\"/pause 100/emote Alex 56/emote farmer 32/textAboveHead Sebastian \"{{i18n: alex.event.upgrade.10}}\"/pause 300/advancedMove Sebastian false -7 0 0 14 -1 0 0 4 2 100/pause 4000/faceDirection Alex 3/faceDirection farmer 1/speak Alex \"{{i18n: alex.event.upgrade.11}}\"/pause 100/emote farmer 32/emote Alex 32/pause 500/globalFade/viewport -1000 -1000 false/pause 500/end",
+		}
+	},
+//REPEATING EVENTS
+//WINTER WALKS validated
+{
+	"LogName": "Winter walk intro",
+	"Action": "EditData",
+	"Target": "Data/Events/JoshHouse",
+	"Entries": {
+			"MaggWinterWalkIntro07092025/F/Season fall/u 20 21 22 23 24 25 26 27 28/p Alex": "sadpiano/8 20/farmer 9 24 0 Alex 8 19 2/skippable/addTemporaryActor Dusty 32 32 5 18 2 true Character/animate Dusty false true 1000 23 23 24/playSound doorClose/move farmer 0 -5 3/faceDirection Alex 1/pause 100/speak Alex \"{{i18n: alex.date.winterwalkintro.1}}\"/showFrame Alex 27/pause 300/speak Alex \"{{i18n: alex.date.winterwalkintro.2}}\"/pause 300/showFrame Alex 0/faceDirection Alex 1/speak Alex \"{{i18n: alex.date.winterwalkintro.3}}\"/pause 300/message \"{{i18n: alex.date.winterwalkintro.4}}\"/emote Alex 32 true/emote farmer 32/pause 100/speak Alex \"{{i18n: alex.date.winterwalkintro.5}}\"/pause 500/globalFade/viewport -1000 -1000 false/pause 500/end",
+		}
+	},
+{
+		"LogName": "First winter walk",
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			"MaggFirstWinterWalk07092025/F/Season winter/e MaggWinterWalkIntro07092025/t 600 900": "Cyclops/-1000 -1000/farmer 64 16 2 Alex 64 18 0/skippable/addConversationTopic MaggAlexWalkRecurring 0/viewport 64 15 true/pause 1000/speak Alex \"{{i18n: alex.date.firstwinterwalk.1}}\"/emote farmer 56/pause 100/speak Alex \"{{i18n: alex.date.firstwinterwalk.2}}\"/pause 500/globalFade/viewport -1000 -1000 false/changeToTemporaryMap Forest false/warp farmer 69 39/faceDirection farmer 2/positionOffset farmer 0 20/warp Alex 70 39/faceDirection Alex 2/viewport 70 43 true/globalFadeToClear/advancedMove farmer false 0 3 2 100/advancedMove Alex false 0 3 2 100/pause 1500/speak Alex \"{{i18n: alex.date.firstwinterwalk.3}}\"/pause 500/message \"{{i18n: alex.date.firstwinterwalk.4}}\"/advancedMove farmer false 0 5 2 100/advancedMove Alex false 0 5 2 100/viewport move 0 1 4000/pause 4000/speak Alex \"{{i18n: alex.date.firstwinterwalk.5}}\"/faceDirection farmer 1/faceDirection Alex 3/pause 300/speak Alex \"{{i18n: alex.date.firstwinterwalk.7}}\"/pause 500/globalFade/viewport -1000 -1000 false/message \"{{i18n: alex.date.firstwinterwalk.8}}\"/pause 300/end",
+		}
+	},
+{
+		"LogName": "Winter walk recurring",
+		"Action": "EditData",
+		"Target": "Data/Events/Farmhouse",
+		"Entries": {
+			"MaggWinterWalk07092025/F/Season winter/e MaggFirstWinterWalk07092025/A MaggAlexWalkRecurring/{{AlexWalkDays}}": "Cyclops/-1000 -1000/farmer 100 100 2 Alex 100 100 2/skippable/changeToTemporaryMap Forest false/warp farmer 69 39/faceDirection farmer 2/positionOffset farmer 0 20/warp Alex 70 39/faceDirection Alex 2/pause 1000/viewport 70 43 true/advancedMove farmer false 0 3 2 100/advancedMove Alex false 0 3 2 100/pause 1500/speak Alex \"{{i18n: alex.date.winterwalk.{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}}}\"/pause 200/advancedMove farmer false 0 5 2 100/advancedMove Alex false 0 5 2 100/viewport move 0 1 4000/pause 4000/speak Alex \"{{i18n: alex.date.winterwalk.{{Random: 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}}}}\"/faceDirection farmer 1/faceDirection Alex 3/pause 300/pause 300/speak Alex \"{{i18n: alex.date.winterwalk.{{Random: 31, 32, 33, 34, 35, 36, 37, 38, 39, 40}}}}\"/pause 500/globalFade/viewport -1000 -1000 false/pause 300/end",
+		}
+	},
+]
+}

@@ -1,0 +1,795 @@
+{
+	"Changes": [
+	//GENERAL DIALOGUE CHANGES
+		{
+			"LogName": "Special Dialogue Changes",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Introduction": "{{i18n:ICS.SpecialDialogue.Introduction.{{NoProfanity}}}}",
+				"RejectBouquet_Divorced": "{{i18n:ICS.SpecialDialogue.General.RejectBouquet_Divorced.{{NoProfanity}}}}",
+				"AcceptBouquet": "{{i18n:ICS.SpecialDialogue.General.AcceptBouquet}}",
+				"WipedMemory": "{{i18n:ICS.SpecialDialogue.General.WipedMemory}}",
+				"RejectMovieTicket_Divorced": "{{i18n:ICS.SpecialDialogue.General.RejectMovieTicket_Divorced}}"
+			}
+		},
+		{
+			"LogName": "Special Dialogue 0-1",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"FlowerDance_Decline": "{{i18n:ICS.SpecialDialogue.0-1.FlowerDance_Decline.{{NoProfanity}}}}",
+				"RejectBouquet_VeryLowHearts": "{{i18n:ICS.SpecialDialogue.0-1.RejectBouquet_VeryLowHearts}}",
+				"RejectMovieTicket_AlreadyInvitedBySomeoneElse": "{{i18n:ICS.SpecialDialogue.0-1.RejectMovieTicket_AlreadyInvitedBySomeoneElse}}",
+				"RejectMovieTicket_AlreadyWatchedThisWeek": "{{i18n:ICS.SpecialDialogue.0-1.RejectMovieTicket_AlreadyWatchedThisWeek}}",
+				"RejectMovieTicket": "{{i18n:ICS.SpecialDialogue.0-1.RejectMovieTicket}}",
+				"JojaMart": "{{i18n:ICS.SpecialDialogue.JojaMart0.{{Random:1,2}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "0, 1"
+			}
+		},
+		{
+			"LogName": "Special Dialogue 2-3",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"FlowerDance_Decline": "{{i18n:ICS.SpecialDialogue.2-3.FlowerDance_Decline}}",
+				"RejectBouquet_VeryLowHearts": "{{i18n:ICS.SpecialDialogue.2-3.RejectBouquet_VeryLowHearts}}",
+				"RejectMovieTicket_AlreadyInvitedBySomeoneElse": "{{i18n:ICS.SpecialDialogue.2-3.RejectMovieTicket_AlreadyInvitedBySomeoneElse}}",
+				"RejectMovieTicket_AlreadyWatchedThisWeek": "{{i18n:ICS.SpecialDialogue.2-3.RejectMovieTicket_AlreadyWatchedThisWeek}}",
+				"RejectMovieTicket": "{{i18n:ICS.SpecialDialogue.2-3.RejectMovieTicket}}",
+				"JojaMart": "{{i18n:ICS.SpecialDialogue.JojaMart2.{{Random:1,2}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "2, 3"
+			}
+		},
+		{
+			"LogName": "Special Dialogue 4-5 Hearts",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {				
+				"FlowerDance_Accept": "{{i18n:ICS.SpecialDialogue.4-5.FlowerDance_Accept.{{NoProfanity}}}}",
+				"FlowerDance_Decline": "{{i18n:ICS.SpecialDialogue.4-5.FlowerDance_Decline}}",
+				"RejectBouquet_LowHearts": "{{i18n:ICS.SpecialDialogue.4-5.RejectBouquet_LowHearts}}",
+				"RejectMovieTicket_AlreadyInvitedBySomeoneElse": "{{i18n:ICS.SpecialDialogue.4-5.RejectMovieTicket_AlreadyInvitedBySomeoneElse}}",
+				"RejectMovieTicket_AlreadyWatchedThisWeek": "{{i18n:ICS.SpecialDialogue.4-5.RejectMovieTicket_AlreadyWatchedThisWeek}}",
+				"RejectMovieTicket": "{{i18n:ICS.SpecialDialogue.4-5.RejectMovieTicket}}",
+				"JojaMart": "{{i18n:ICS.SpecialDialogue.JojaMart4.{{Random:1,2}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "4,5"
+			}
+		},
+		{
+			"LogName": "Special Dialogue 6-7 Hearts",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"FlowerDance_Accept": "{{i18n:ICS.SpecialDialogue.6-7.FlowerDance_Accept}}",
+				"FlowerDance_Decline": "{{i18n:ICS.SpecialDialogue.6-7.FlowerDance_Decline}}",
+				"RejectBouquet_LowHearts": "{{i18n:ICS.SpecialDialogue.6-7.RejectBouquet_LowHearts}}",
+				"RejectMovieTicket_AlreadyInvitedBySomeoneElse": "{{i18n:ICS.SpecialDialogue.6-7.RejectMovieTicket_AlreadyInvitedBySomeoneElse}}",
+				"RejectMovieTicket_AlreadyWatchedThisWeek": "{{i18n:ICS.SpecialDialogue.6-7.RejectMovieTicket_AlreadyWatchedThisWeek}}",
+				"RejectMovieTicket": "{{i18n:ICS.SpecialDialogue.6-7.RejectMovieTicket}}",
+				"JojaMart": "{{i18n:ICS.SpecialDialogue.JojaMart6.{{Random:1.{{NoProfanity}},2}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "6,7"
+			}
+		},
+		{
+			"LogName": "Special Dialogue 8 Hearts",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"FlowerDance_Accept": "{{i18n:ICS.SpecialDialogue.8-15.FlowerDance_Accept}}",
+				"FlowerDance_Decline": "{{i18n:ICS.SpecialDialogue.8-15.FlowerDance_Decline}}",
+				"RejectMovieTicket_AlreadyInvitedBySomeoneElse": "{{i18n:ICS.SpecialDialogue.8-15.RejectMovieTicket_AlreadyInvitedBySomeoneElse.{{NoProfanity}}}}",
+				"RejectMovieTicket_AlreadyWatchedThisWeek": "{{i18n:ICS.SpecialDialogue.8-15.RejectMovieTicket_AlreadyWatchedThisWeek}}",
+				"RejectMovieTicket": "{{i18n:ICS.SpecialDialogue.8-15.RejectMovieTicket}}",
+				"JojaMart": "{{i18n:ICS.SpecialDialogue.JojaMart8.{{Random:1,2}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 8, 15}}"
+			}
+		},
+		{
+			"LogName": "Special Dialogue Dialogue Dating/Engaged",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"AcceptGift_(O)460": "{{i18n:ICS.SpecialDialogue.Dating.AcceptGift_(O)460.{{NoProfanity}}}}",
+				"FlowerDance_Accept": "{{i18n:ICS.SpecialDialogue.Dating.FlowerDance_Accept}}",
+				"WinterStar_GiveGift_Before": "{{i18n:ICS.SpecialDialogue.Dating.WinterStar_GiveGift_Before}}",
+				"WinterStar_GiveGift_After": "{{i18n:ICS.SpecialDialogue.Dating.WinterStar_GiveGift_After}}"
+			},
+			"When": {
+				"Relationship:Shane": "Dating, Engaged"
+			}
+		},
+		{
+			"LogName": "Winter Star Divorced Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"WinterStar_GiveGift_Before": "{{i18n:ICS.SpecialDialogue.Divorced.WinterStar_GiveGift_Before}}",
+				"WinterStar_GiveGift_After": "{{i18n:ICS.SpecialDialogue.Divorced.WinterStar_GiveGift_After}}"
+			},
+			"When": {
+				"Relationship:Shane": "Divorced"
+			}
+		},
+		{
+			"LogName": "Engagement Dialogue",
+			"Action": "EditData",
+			"Target": "Data/EngagementDialogue",
+			"Entries": {
+				"Shane0": "{{i18n:ICS.SpecialDialogue.Engagement.Shane0.{{NoProfanity}}}}",
+				"Shane1": "{{i18n:ICS.SpecialDialogue.Engagement.Shane1}}"
+			}
+		},
+	//JOJAMART DIALOGUE
+		{
+			"LogName": "JojaMart Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"JojaMart": "{{i18n:ICS.SpecialDialogue.JojaMart10.{{Random:1,2}}}}"
+			},
+			"When": {
+				"Relationship:Shane |contains= Engaged": false,
+				"Hearts:Shane": "9,10"
+			}
+		},
+		{
+			"LogName": "JojaMart Engagement Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"JojaMart": "{{i18n:ICS.SpecialDialogue.JojaMart.Engaged}}"
+			},
+			"When": {
+				"Relationship:Shane |contains= Engaged": true
+			}
+		},
+	//DUMPSTER DIALOGUE
+		{
+			"LogName": "Dumpster Dive 0-6",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"DumpsterDiveComment": "{{i18n:ICS.SpecialDialogue.Dumpster.0-6.DumpsterDiveComment.{{NoProfanity}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 0, 6}}"
+			}
+		},
+		{
+			"LogName": "Dumpster Dive 7-9",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"DumpsterDiveComment": "{{i18n:ICS.SpecialDialogue.Dumpster.7-9.DumpsterDiveComment}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 7, 9}}"
+			}
+		},
+		{
+			"LogName": "Dumpster Dive 10+",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"DumpsterDiveComment": "{{i18n:ICS.SpecialDialogue.Dumpster.10-14.DumpsterDiveComment |RandomPetName={{RandomPetName}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 10, 14}}"
+			}
+		},
+	//RESORT DIALOGUE
+		{
+			"LogName": "Resort Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"Resort_Entering": "{{i18n:ICS.ResortDialogue.Resort_Entering}}",
+				"Resort_Bar": "{{i18n:ICS.ResortDialogue.Resort_Bar}}"
+			},
+			"When": {
+				"HasSeenEvent |contains=2118991": true
+			}
+		},
+	//REGULAR DIALOGUE
+		{
+			"LogName": "DailyDialogue 0-1",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"1{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.1}}",
+				"2{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.2.{{NoProfanity}}}}",
+				"3{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.3}}",
+				"4{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.4}}",
+				"summer_4{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.summer_4.{{NoProfanity}}}}",
+				"5{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.5}}",
+				"6{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.6}}",
+				"7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.7}}",
+				"8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.8}}",
+				"9{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.9}}",
+				"10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.10}}",
+				"summer_10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.summer_10}}",
+				"11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.11}}",
+				"summer_11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.summer_11}}",
+				"12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.12}}",
+				"spring_12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.spring_12.{{NoProfanity}}}}",
+				"13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.13}}",
+				"spring_13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.spring_13.{{NoProfanity}}}}",
+				"14{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.14}}",
+				"15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.15}}",
+				"winter_15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.winter_15}}",
+				"16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.16}}",
+				"17{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.17}}",
+				"18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.18}}",
+				"fall_18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.fall_18}}",
+				"19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.19.{{NoProfanity}}}}",
+				"20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.20.{{NoProfanity}}}}",
+				"21{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.21}}",
+				"22{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.22}}",
+				"23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.23}}",
+				"spring_23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.spring_23.{{NoProfanity}}}}",
+				"24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.24}}",
+				"spring_24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.spring_24}}",
+				"25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.25}}",
+				"winter_25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.winter_25.{{NoProfanity}}}}",
+				"26{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.26}}",
+				"27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.27}}",
+				"28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.0-1.28}}"
+
+			},
+			"When": {
+				"Hearts:Shane": "0, 1"
+			}
+		},
+		{
+			"LogName": "DailyDialogue 2-3",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"1{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.1}}",
+				"2{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.2}}",
+				"3{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.3}}",
+				"4{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.4}}",
+				"5{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.5}}",
+				"summer_5{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.summer_5.{{NoProfanity}}}}",
+				"6{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.6}}",
+				"7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.7}}",
+				"winter_7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.winter_7}}",
+				"8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.8}}",
+				"summer_8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.summer_8}}",
+				"winter_8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.winter_8.{{NoProfanity}}}}",
+				"9{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.9}}",
+				"10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.10}}",
+				"summer_10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.summer_10}}",
+				"11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.11}}",
+				"summer_11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.summer_11}}",
+				"12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.12}}",
+				"spring_12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.spring_12 |PotluckCompat={{PotluckCompat}}}}",
+				"13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.13}}",
+				"spring_13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.spring_13}}",
+				"summer_13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.summer_13.{{NoProfanity}}}}",
+				"14{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.14}}",
+				"15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.15}}",
+				"fall_15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.fall_15}}",
+				"16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.16}}",
+				"fall_16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.fall_16.{{NoProfanity}}}}",
+				"17{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.17}}",
+				"18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.18}}",
+				"fall_18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.fall_18}}",
+				"19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.19}}",
+				"20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.20}}",
+				"spring_20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.spring_20}}",
+				"21{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.21}}",
+				"22{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.22}}",
+				"23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.23}}",
+				"spring_23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.spring_23.{{NoProfanity}}}}",
+				"24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.24}}",
+				"spring_24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.spring_24}}",
+				"winter_24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.winter_24}}",
+				"25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.25}}",
+				"winter_25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.winter_25}}",
+				"26{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.26}}",
+				"fall_26{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.fall_26.{{NoProfanity}}}}",
+				"27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.27}}",
+				"fall_27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.fall_27}}",
+				"28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.28}}",
+				"summer_28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.2-3.summer_28}}"	
+			},
+			"When": {
+				"Hearts:Shane": "2, 3"
+			}
+		},
+		{
+			"LogName": "DailyDialogue 4-5",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"1{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.1.{{NoProfanity}}}}",
+				"2{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.2}}",
+				"3{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.3.{{JojaOrRanchJob}}}}",
+				"summer_3{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.summer_3}}",
+				"4{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.4}}",
+				"5{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.5}}",
+				"6{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.6}}",
+				"7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.7}}",
+				"fall_7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.fall_7}}",
+				"winter_7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.winter_7.{{NoProfanity}}}}",
+				"8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.8}}",
+				"winter_8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.winter_8}}",
+				"9{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.9}}",
+				"10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.10.{{NoProfanity}}}}",
+				"summer_10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.summer_10 |PotluckCompat={{PotluckCompat}}}}",
+				"11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.11}}",
+				"summer_11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.summer_11 |PotluckCompat={{PotluckCompat}}}}",
+				"12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.12}}",
+				"spring_12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.spring_12}}",
+				"13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.13}}",
+				"spring_13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.spring_13}}",
+				"summer_13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.summer_13.{{NoProfanity}}}}",
+				"14{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.14}}",
+				"15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.15.{{NoProfanity}}}}",
+				"fall_15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.fall_15}}",
+				"winter_15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.winter_15}}",
+				"16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.16}}",
+				"fall_16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.fall_16}}",
+				"winter_16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.winter_16.{{NoProfanity}}}}",
+				"17{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.17}}",
+				"18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.18}}",
+				"fall_18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.fall_18}}",
+				"19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.19}}",
+				"winter_19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.winter_19}}",
+				"20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.20}}",
+				"spring_20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.spring_20}}",
+				"21{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.21}}",
+				"22{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.22}}",
+				"23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.23}}",
+				"spring_23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.spring_23}}",
+				"24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.24}}",
+				"spring_24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.spring_24.{{NoProfanity}}}}",
+				"winter_24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.winter_24}}",
+				"25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.25}}",
+				"winter_25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.winter_25}}",
+				"26{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.26}}",
+				"fall_26{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.fall_26.{{NoProfanity}}}}",
+				"27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.27}}",
+				"summer_27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.summer_27}}",
+				"fall_27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.fall_27.{{NoProfanity}}}}",
+				"28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.28}}",
+				"summer_28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.summer_28}}"
+
+			},
+			"When": {
+				"Hearts:Shane": "4, 5"
+			}
+		},
+		{
+			"LogName": "DailyDialogue 4-5",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.4-5.10.DSVTurkishGus.{{NoProfanity}}}}"
+			},
+			"When":
+			{
+				"Hearts:Shane": "4, 5",
+				"HasMod |contains= DSV.Core": true,
+				"DSV.Core/ConfigValue:GusVariant |contains= Turkish": true
+			}
+		},
+		{
+			"LogName": "Daily Dialogue 6 Prerecovery",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"6{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6.PreRecovery.6}}",
+				"8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6.PreRecovery.8}}",
+				"19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6.PreRecovery.19}}",
+				"winter_19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6.PreRecovery.winter_19}}",
+				"spring_20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6.PreRecovery.spring_20}}",
+				"25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6.PreRecovery.25}}",
+				"28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6.PreRecovery.28.{{NoProfanity}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 6, 14}}",
+				"HasSeenEvent |contains=2118991": false
+			}
+		},
+		{
+			"LogName": "Daily Dialogue 6 Recovery",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"6{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.PostRecovery.6}}",
+				"8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.PostRecovery.8}}",
+				"19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.PostRecovery.19}}",
+				"winter_19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.PostRecovery.winter_19}}",
+				"spring_20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.PostRecovery.spring_20}}",
+				"25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.PostRecovery.25}}",
+				"28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.PostRecovery.28}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 6, 7}}",
+				"HasSeenEvent": "2118991"
+			}
+		},
+		{
+			"LogName": "DailyDialogue 6-7",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"1{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.1.{{NoProfanity}}}}",
+				"spring_1{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.spring_1}}",
+				"2{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.2}}",
+				"3{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.3.{{JojaOrRanchJob}}.{{NoProfanity}}}}",
+				"4{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.4}}",
+				"summer_4{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.summer_4}}",
+				"5{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.5}}",
+				"summer_5{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.summer_5}}",
+				"7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.7}}",
+				"fall_7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.fall_7}}",
+				"winter_7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.winter_7}}",
+				"8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.8}}",
+				"summer_8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.summer_8}}",
+				"winter_8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.winter_8}}",
+				"9{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.9}}",
+				"10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.10}}",
+				"summer_10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.summer_10.{{NoProfanity}} |PotluckCompat={{PotluckCompat}}}}",
+				"11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.11}}",
+				"summer_11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.summer_11}}",
+				"12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.12}}",
+				"spring_12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.spring_12}}",
+				"13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.13}}",
+				"spring_13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.spring_13}}",
+				"summer_13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.summer_13}}",
+				"14{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.14}}",
+				"winter_14{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.winter_14}}",
+				"15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.15}}",
+				"fall_15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.fall_15}}",
+				"winter_15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.winter_15.{{NoProfanity}}}}",
+				"16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.16}}",
+				"fall_16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.fall_16}}",
+				"winter_16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.winter_16}}",
+				"17{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.17}}",
+				"18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.18}}",
+				"fall_18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.fall_18}}",
+				"20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.20}}",
+				"21{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.21}}",
+				"winter_21{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.winter_21}}",
+				"22{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.22}}",
+				"23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.23}}",
+				"spring_23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.spring_23}}",
+				"24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.24}}",
+				"spring_24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.spring_24}}",
+				"winter_24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.winter_24}}",
+				"25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.25}}",
+				"winter_25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.winter_25}}",
+				"26{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.26.{{NoProfanity}}}}",
+				"fall_26{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.fall_26}}",
+				"27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.27}}",
+				"summer_27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.summer_27}}",
+				"fall_27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.fall_27}}",
+				"summer_28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.6-7.summer_28}}"
+			},
+			"When": {
+				"Hearts:Shane": "6, 7"
+			}
+		},
+		{
+			"LogName": "DailyDialogue 8-9",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"1{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.1}}",
+				"spring_1{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.spring_1}}",
+				"2{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.2.{{NoProfanity}}}}",
+				"3{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.3.{{JojaOrRanchJob}}.{{NoProfanity}}}}",
+				"spring_2{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.spring_2}}",
+				"summer_3{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.summer_3}}",
+				"4{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.4}}",
+				"summer_4{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.summer_4}}",
+				"5{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.5}}",
+				"summer_5{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.summer_5}}",
+				"6{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.6}}",
+				"7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.7.{{NoProfanity}}}}",
+				"fall_7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.fall_7}}",
+				"winter_7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.winter_7.{{NoProfanity}}}}",
+				"8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.8}}",
+				"summer_8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.summer_8}}",
+				"winter_8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.winter_8.{{NoProfanity}}}}",
+				"9{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.9}}",
+				"10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.10}}",
+				"summer_10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.summer_10 |PotluckCompat={{PotluckCompat}}}}",
+				"11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.11}}",
+				"summer_11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.summer_11 |PotluckCompat={{PotluckCompat}}}}",
+				"12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.12}}",
+				"spring_12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.spring_12}}",
+				"13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.13}}",
+				"spring_13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.spring_13}}",
+				"summer_13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.summer_13}}",
+				"14{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.14}}",
+				"15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.15.{{NoProfanity}}}}",
+				"fall_15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.fall_15}}",
+				"winter_15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.winter_15}}",
+				"16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.16}}",
+				"fall_16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.fall_16}}",
+				"winter_16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.winter_16.{{NoProfanity}}}}",
+				"17{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.17}}",
+				"19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.19.{{NoProfanity}}}}",
+				"winter_19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.winter_19}}",
+				"20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.20}}",
+				"spring_20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.spring_20}}",
+				"21{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.21}}",
+				"22{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.22}}",
+				"23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.23}}",
+				"spring_23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.spring_23}}",
+				"24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.24}}",
+				"spring_24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.spring_24}}",
+				"winter_24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.winter_24}}",
+				"25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.25}}",
+				"winter_25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.winter_25}}",
+				"26{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.26}}",
+				"fall_26{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.fall_26.{{NoProfanity}}}}",
+				"27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.27.{{NoProfanity}}}}",
+				"summer_27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.summer_27}}",
+				"fall_27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.fall_27}}",
+				"28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.28.{{NoProfanity}} |RandomChickenMag={{RandomChickenMag}}}}",
+				"summer_28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-14.summer_28}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 8, 14}}"
+			}
+		},
+		{
+			"LogName": "DailyDialogue 10+ Platonic",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"1{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.1}}",
+				"winter_1{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.winter_1}}",
+				"3{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.3.{{JojaOrRanchJob}}}}",
+				"summer_4{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.summer_4}}",
+				"5{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.5}}",
+				"summer_6{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.summer_6}}",
+				"7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.7}}",
+				"fall_7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.fall_7}}",
+				"9{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.9}}",
+				"summer_10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.summer_10 |PotluckCompat={{PotluckCompat}}}}",
+				"summer_11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.summer_11 |PotluckCompat={{PotluckCompat}}}}",
+				"12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.12}}",
+				"spring_12{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.spring_12}}",
+				"13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.13}}",
+				"spring_13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.spring_13}}",
+				"summer_13{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.summer_13}}",
+				"winter_14{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.winter_14}}",
+				"15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.15}}",
+				"fall_15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.fall_15}}",
+				"winter_15{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.winter_15}}",
+				"16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.16}}",
+				"fall_16{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.fall_16.{{NoProfanity}}}}",
+				"fall_18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.fall_18}}",
+				"19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.19}}",
+				"winter_19{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.winter_19}}",
+				"20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.20}}",
+				"spring_20{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.spring_20}}",
+				"21{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.21.{{NoProfanity}}}}",
+				"22{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.22.{{NoProfanity}}}}",
+				"23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.23}}",
+				"24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.24}}",
+				"winter_24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.winter_24}}",
+				"25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.25}}",
+				"26{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.26}}",
+				"fall_26{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.fall_26}}",
+				"27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.27}}",
+				"summer_27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.summer_27}}",
+				"fall_27{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.fall_27}}",
+				"28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Platonic.28}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 10, 14}}"
+			}
+		},
+		{
+			"LogName": "DailyDialogue 10+ Romantic",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"2{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.2}}",
+				"4{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.4}}",
+				"6{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.6}}",
+				"winter_7{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.winter_7}}",
+				"8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.8}}",
+				"winter_8{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.winter_8}}",
+				"10{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.10}}",
+				"11{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.11}}",
+				"14{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.14.{{NoProfanity}}}}",
+				"17{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.17}}",
+				"18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.18}}",
+				"spring_23{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.spring_23}}",
+				"spring_24{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.spring_24}}",
+				"winter_25{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.winter_25}}",
+				"summer_28{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.10-14.Romantic.summer_28}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 10, 14}}",
+				"Relationship:Shane": "Dating, Engaged"
+			}
+		},
+	//CONDITIONAL DIALOGUE
+		{
+			"LogName": "Daily Dialogue Joja 8-9",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"winter_3{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-9.Joja.winter_3}}"
+			},
+			"When": {
+				"Hearts:Shane": "8, 9, 10",
+				"HasSeenEvent |contains=191393": false
+			}
+		},
+		{
+			"LogName": "Daily Dialogue CC 8-9",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"fall_3{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-9.NoJoja.fall_3}}"
+			},
+			"When": {
+				"Hearts:Shane": "8, 9",
+				"HasSeenEvent": "191393"
+			}
+		},
+		{
+			"LogName": "Daily Dialogue 8-9 Years 1-2",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-9.Year1-2.18.{{NoProfanity}}}}",
+				"fall_18{{DialogueYear}}": "{{i18n:ICS.DailyDialogue.8-9.Year1-2.fall_18}}"
+			},
+			"When": {
+				"Hearts:Shane": "8, 9",
+				"Year": "1, 2"
+			}
+		},
+		{
+			"LogName": "Daily Dialogue 8-9 Years 3+",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"18_2": "{{i18n:ICS.DailyDialogue.8-9.Year3+.18_2}}",
+				"fall_18_2": "{{i18n:ICS.DailyDialogue.8-9.Year3+.fall_18_2}}"
+			},
+			"When": {
+				"Hearts:Shane": "8, 9",
+				"Year |contains=1, 2": false
+			}
+		},
+		{
+			"LogName": "Stardrop Tea Edit",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"AcceptGift_(O)StardropTea": "{{i18n:ICS.SpecialDialogue.StardropTea |PotluckCompat={{PotluckCompat}}}}"
+			},
+			"When": {
+				"HasSeenEvent": "2118991"
+			}
+		},
+	//FESTIVAL DIALOGUE
+		{
+			"LogName": "Spirits Eve Edit",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"Entries": {
+				"Shane": "{{i18n:ICS.FestivalDialogue.SpiritsEve}}"
+			},
+			"When": {
+				"HasSeenEvent": "2118991"
+			}
+		},
+	//CONVERSATION TOPICS
+		{
+			"LogName": "Daily Dialogue Conversation Topics Joja",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"joja_Begin": "{{i18n:ICS.ConversationTopics.Joja.joja_Begin}}",
+				"movieTheater": "{{i18n:ICS.ConversationTopics.Joja.movieTheater.{{NoProfanity}}}}"
+			},
+			"When": {
+				"HasFlag": "jojaMember",
+				"Hearts:Shane": "{{Range: 4, 14}}"
+			}
+		},
+		{
+			"LogName": "Daily Dialogue Conversation Topics CC Complete",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"cc_Complete": "{{i18n:ICS.ConversationTopics.NoJoja.cc_Complete}}"
+			},
+			"When": {
+				"HasFlag |contains= jojaMember": false,
+				"Hearts:Shane": "{{Range: 4, 14}}",
+				"Relationship:Shane |contains= Married, Engaged": false
+			}
+		},
+		{
+			"LogName": "Daily Dialogue Conversation Topics CC Theater",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"movieTheater": "{{i18n:ICS.ConversationTopics.NoJoja.movieTheater}}"
+			},
+			"When": {
+				"HasFlag |contains= jojaMember": false,
+				"Hearts:Shane": "{{Range: 4, 14}}"
+			}
+		},
+	//DIALOGUE RESPONSES
+		{
+			"LogName": "Daily Dialogue Responses",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//0 hearts
+				"smile": "{{i18n:ICS.DialogueResponses.smile.{{NoProfanity}}}}",
+				"meanie": "{{i18n:ICS.DialogueResponses.meanie.{{NoProfanity}} |PossAdj={{PossAdj}}}}",
+				"fiteMe": "{{i18n:ICS.DialogueResponses.fiteMe}}",
+				"assertive": "{{i18n:ICS.DialogueResponses.assertive}}",
+				"timid": "{{i18n:ICS.DialogueResponses.timid}}",
+				"ShaneGrouch": "{{i18n:ICS.DialogueResponses.ShaneGrouch}}",			
+			//2 hearts
+				"realTalk": "{{i18n:ICS.DialogueResponses.realTalk}}",
+				"insult": "{{i18n:ICS.DialogueResponses.insult.{{NoProfanity}}}}",
+				"WhatDoUWant": "{{i18n:ICS.DialogueResponses.WhatDoUWant}}",			
+			//4 hearts
+				"yikes": "{{i18n:ICS.DialogueResponses.yikes}}",
+				"goodAdvice": "{{i18n:ICS.DialogueResponses.goodAdvice}}",
+				"JasBday": "{{i18n:ICS.DialogueResponses.JasBday}}",
+				"alcohol_sup": "{{i18n:ICS.DialogueResponses.alcohol_sup}}",
+				"blatantAlcoholism": "{{i18n:ICS.DialogueResponses.blatantAlcoholism}}",
+				"alcohol_jerk": "{{i18n:ICS.DialogueResponses.alcohol_jerk |ParentTitle={{ParentTitle}}}}",
+			//6 hearts
+				"negatory": "{{i18n:ICS.DialogueResponses.negatory}}",
+				"absotively": "{{i18n:ICS.DialogueResponses.absotively}}",
+				"Flower_Dance": "{{i18n:ICS.DialogueResponses.Flower_Dance}}",
+			//10 hearts
+				"smooch": "{{i18n:ICS.DialogueResponses.smooch}}",
+				"haha": "{{i18n:ICS.DialogueResponses.haha}}",
+				"pepper_problem": "{{i18n:ICS.DialogueResponses.pepper_problem}}",
+				"story_one": "{{i18n:ICS.DialogueResponses.story_one}}",
+				"story_trash": "{{i18n:ICS.DialogueResponses.story_trash}}",
+				"Shane_story": "{{i18n:ICS.DialogueResponses.Shane_story}}",
+				"pumpkinYes": "{{i18n:ICS.DialogueResponses.pumpkinYes}}",
+				"pumpkinNo": "{{i18n:ICS.DialogueResponses.pumpkinNo}}",
+				"pumpkinSeeds": "{{i18n:ICS.DialogueResponses.pumpkinSeeds}}"			
+			}
+		},
+	//MARNIE DIALOGUE
+		{
+			"LogName": "Marnie Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Marnie",
+			"Entries": {
+				"fall_17{{DialogueYear}}": "{{i18n:ICS.MarnieDialogue.fall_17}}",
+				"fall_18{{DialogueYear}}": "{{i18n:ICS.MarnieDialogue.fall_18}}"
+			},
+			"When": {
+				"Hearts:Shane": "8, 9",
+				"Year": "1, 2"
+			}
+		}
+	]
+}

@@ -1,0 +1,35 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Harvey",
+			"Entries": {
+				"marriage_Mon": "730 Hospital 6 15 2 \"Strings\\schedules\\Harvey:marriage_{{Random:clinic, clinic2, clinic4, clinic5, clinic7}}\"/1200 SeedShop 2 26 2 \"Strings\\schedules\\Harvey:marriage_Mon.000\"/1500 Town 23 27 1 \"Strings\\schedules\\Harvey:marriage_Mon.001\"/1900 BusStop 9 23 3",
+				"marriage_Fri": "730 Hospital 6 15 2 \"Strings\\schedules\\Harvey:marriage_{{Random:clinic, clinic2, clinic3, clinic4, clinic7}}\"/1100 Hospital 7 15 3 harvey_read \"Strings\\schedules\\Harvey:marriage_{{Random:clinicr, clinicr2, clinicr3}}\"/1300 HarveyRoom 4 5 1 harvey_radiomarriage \"Strings\\schedules\\Harvey:marriage_{{Random:radio, radio2, radio3, radio4}}\"/1600 Town 32 55 3 harvey_read \"Strings\\schedules\\Harvey:marriage_{{Random:read, read2, read3}}\"/1830 BusStop 9 23 3"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Harvey",
+			"Entries": {
+				"marriageJob": "730 Hospital 6 15 2 \"Strings\\schedules\\Harvey:marriage_{{Random:clinic, clinic2, clinic4, clinic6, clinic7}}\"/1100 Hospital 7 15 3 harvey_read \"Strings\\schedules\\Harvey:marriage_{{Random:clinicr, clinicr2, clinicr3}}\"/1300 HarveyRoom 11 5 3 harvey_read \"Strings\\schedules\\Harvey:marriage_{{Random:read, read4}}\"/1600 Saloon 18 20 0 \"Strings\\schedules\\Harvey:marriage_{{Random:saloon, saloon2, saloon3, saloon4, saloon5, saloon6}}\"/2000 BusStop 9 23 3"
+			},
+			"When": {
+				"Weather": "Rain, Storm"
+			}
+		},
+		
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Harvey",
+			"Entries": {
+				"marriage_Mon": "730 Hospital 6 15 2 \"Strings\\schedules\\Harvey:marriage_nmpre\"/1200 SeedShop 2 26 2 \"Strings\\schedules\\Harvey:marriage_nmpre2\"/1630 Beach 39 33 0 \"Strings\\schedules\\Harvey:marriage_nm\"/2300 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "15"
+			}
+		},
+	]
+}

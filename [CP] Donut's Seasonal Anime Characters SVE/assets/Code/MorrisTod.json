@@ -1,0 +1,41 @@
+{
+	"Changes": [
+        
+        //MorrisTod
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/MorrisTod_{{Season}}",
+            "FromFile": "assets/fifadog/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        },
+        {
+            "LogName": "Winter Variants",
+            "Action": "EditImage",
+            "Target": "Portraits/MorrisTod_{{Season}}_Indoor , Portraits/MorrisTod_{{Season}}_Outdoor", 
+            "FromFile": "assets/fifadog/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "winter"
+            }            
+        },
+
+        //Redunant But Will Fix any issues of portraits not showing up for Temporary Actor Calls within SVE
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Morris",
+            "FromFile": "assets/fifadog/MorrisTod_{{Season}}.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        }
+
+    ]
+}

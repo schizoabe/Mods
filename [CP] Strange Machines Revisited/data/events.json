@@ -1,0 +1,21 @@
+{
+   "Changes":
+   [
+        // {
+        //     "LogName": "Clint Event",
+        //     "Action": "EditData",
+        //     "Target": "Data/Events/Farm",
+        //     "Entries": {
+        //         "39270001/n Brazier.Furnace":"continue/64 15/farmer 64 16 2 Clint 64 18 0/pause 1500/speak Clint \"{{i18n:events-39270001.01}}\"/pause 500/speak Clint \"{{i18n:events-39270001.02}}\"/pause 500/speak Clint \"{{i18n:events-39270001.03}}\"/pause 800/itemAboveHead/playSound getNewSpecialItem/addCraftingRecipe Brazier Furnace/pause 1000/speak Clint \"{{i18n:events-39270001.04}}\"/pause 500/faceDirection Clint 1/pause 500/faceDirection Clint 0/speak Clint \"{{i18n:events-39270001.05}}\"/pause 200/end"
+        //     }
+        // },
+        {
+            "LogName": "Gus Event",
+            "Action": "EditData",
+            "Target": "Data/Events/Saloon",
+            "Entries": {
+            "sm.Gus_PM/friendship Gus 2500": "continue/10 21/farmer 14 24 0 Gus 14 18 2/skippable/pause 1000/playSound doorClose/pause 500/emote Gus 20/pause 500/speak Gus \"{{i18n:events-39270002.01}}\"/pause 1500/move farmer 0 -4 0/pause 1000/emote Gus 40/emote farmer 40/pause 1000/farmerEat 241/pause 1500/move farmer 0 0 0/pause 1000/fade/viewport -1000 -1000/pause 3000/viewport 10 21/pause 1000/speak Gus \"{{i18n:events-39270002.02}}\"/pause 1500/emote farmer 20/speak Gus \"{{i18n:events-39270002.03}}\"/emote farmer 32/speak Gus \"{{i18n:events-39270002.04}}\"/pause 2000/itemAboveHead/playSound getNewSpecialItem/addCraftingRecipe {{ModId}}_PM/addItem {{ModId}}_RustyPan 1 0/speak Gus \"{{i18n:events-39270002.05}}\"/addItem {{ModId}}_WoodenPiece 1 0/speak Gus \"{{i18n:events-39270002.06}}\"/addItem {{ModId}}_WoodenPiece 1 0/speak Gus \"{{i18n:events-39270002.07}}\"/addItem {{ModId}}_WoodenPiece 1 0/speak Gus \"{{i18n:events-39270002.08}}\"/move farmer 0 4 0/end"
+            }
+        },
+    ]
+}

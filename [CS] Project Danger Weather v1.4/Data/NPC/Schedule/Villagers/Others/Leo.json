@@ -1,0 +1,37 @@
+{
+	"Changes": [
+	{	
+		"Action": "EditData",
+		"Target": "Characters/schedules/Leo",
+		"Priority": "Late",
+		"When": {"Weather": "kath.weathering_Darkness, kath.weathering_HeavyRain, kath.weathering_Hurry, kath.weathering_Ash, kath.weathering_AshSummon"},
+		"Entries": {
+				"rain": "GOTO spring",
+				"Tue": "GOTO spring",
+				"Sun": "GOTO spring",
+				"spring": "900 IslandHut 7 7 0/1400 IslandHut 7 9 2 square_3_3/1700 IslandHut 6 6 0/1900 IslandHut 4 8 0/2100 IslandHut 11 10 1 leo_sleep"
+			},
+	},
+	{	
+		"Action": "EditData",
+		"Target": "Characters/schedules/LeoMainland",
+		"Priority": "Late",
+		"When": {"Weather": "kath.weathering_Darkness, kath.weathering_HeavyRain, kath.weathering_Hurry, kath.weathering_Ash, kath.weathering_AshSummon, kath.weathering_Blizzard, kath.weathering_Hail, kath.weathering_Locust"},
+		"Entries": {
+				  "9": "GOTO spring",
+				  "23": "GOTO spring",
+				  "rain": "GOTO spring",
+				  "winter_15": "GOTO spring",
+				  "summer": "GOTO spring",
+				  "fall": "GOTO spring",
+				  "winter": "GOTO spring",
+				  "Tue": "GOTO spring",
+				  "Wed": "GOTO spring",
+				  "Sat": "GOTO spring",
+				  "Sun": "GOTO spring",
+				  "Mon": "GOTO spring",
+				  "spring": "700 LeoTreeHouse 2 2 0/1900 LeoTreeHouse 2 5 3/2200 LeoTreeHouse 5 4 1 leo_sleep"
+			},
+	},	
+]
+}

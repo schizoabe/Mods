@@ -1,0 +1,375 @@
+{
+	"Changes": [
+	//Entries Sandy
+	{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+      				"HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_sandy_tea": true,
+      				"HasMod |contains=boringvlln.rshops": false
+      				},
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_sandy_tea", "ToPosition": "Top" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+      				"HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_sandy_tea": true,
+      				"HasMod |contains=boringvlln.rshops": true
+      				},
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_sandy_tea", "AfterID": "boringvlln.rshops_Sandysnack" }
+      ]
+    },
+    //Entries Pierre
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_pierre_spring": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_pierre_spring", "ToPosition": "Top" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_pierre_spring": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_pierre_spring", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_pierre_spring": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_pierre_spring", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_pierre_summer": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_pierre_summer", "ToPosition": "Top" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_pierre_summer": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_pierre_summer", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_pierre_summer": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_pierre_summer", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_pierre_fall": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_pierre_fall", "ToPosition": "Top" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_pierre_fall": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_pierre_fall", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_pierre_fall": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_pierre_fall", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_pierre_sapling": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_pierre_sapling", "AfterId": "boringvlln.rshops_Saplings" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_slimerrain.uncleirohapprovedteacp_pierre_sapling": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_slimerrain.uncleirohapprovedteacp_pierre_sapling", "AfterId": "boringvlln.rshops_SaplingsComm" }
+      ]
+    },
+	//Shops tweaks
+	{
+		"Action": "EditData",
+		"Target": "Data/Shops",
+		"TargetField": [
+			"Sandy",
+			"Items"
+		],
+		"When": {
+			"Sandy": "Standard, Hardmode"
+		},
+		"Entries": {
+			"slimerrain.uncleirohapprovedteacp_Cassia_Sapling": null,
+			"slimerrain.uncleirohapprovedteacp_Brown_Rice_Tea": null,
+			"slimerrain.uncleirohapprovedteacp_Chamomile_Tea": null,
+			"slimerrain.uncleirohapprovedteacp_Lavender_Tea": null,
+			"slimerrain.uncleirohapprovedteacp_Jasmine_Tea": null,
+			"slimerrain.uncleirohapprovedteacp_Barley_Tea": null,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/Shops",
+		"TargetField": [
+			"Hospital",
+			"Items"
+		],
+		"When": {
+			"Hospital": "Standard, Hardmode"
+		},
+		"Entries": {
+			"slimerrain.uncleirohapprovedteacp_Cassia_Tea": null,
+			"slimerrain.uncleirohapprovedteacp_Chrysanthemum_Tea": null,
+			"slimerrain.uncleirohapprovedteacp_Health_Blend_Tea": null,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/Shops",
+		"TargetField": [
+			"SeedShop",
+			"Items"
+		],
+		"When": {
+			"Pierre": "Standard, Hardmode"
+		},
+		"Entries": {
+			"slimerrain.uncleirohapprovedteacp_Goji_Berry_Seeds": null,
+			"slimerrain.uncleirohapprovedteacp_Osmanthus_Sapling": null,
+			"slimerrain.uncleirohapprovedteacp_Lavender_Seeds": null,
+			"slimerrain.uncleirohapprovedteacp_Jasmine_Sapling": null,
+			"slimerrain.uncleirohapprovedteacp_Lily_Bulb": null,
+			"slimerrain.uncleirohapprovedteacp_Chrysanthemum_Seeds": null,
+			"slimerrain.uncleirohapprovedteacp_Lotus_Seeds": null,
+			"slimerrain.uncleirohapprovedteacp_Sugarcane_Seeds": null,
+			"slimerrain.uncleirohapprovedteacp_Chamomile_Seeds": null,
+		}
+	},
+	//Items data
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"Fields": {
+			"slimerrain.uncleirohapprovedteacp_Cassia_Tea": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_hospital_tea",
+				]
+			},
+			"slimerrain.uncleirohapprovedteacp_Chrysanthemum_Tea": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_hospital_tea"
+				]
+			},
+			"slimerrain.uncleirohapprovedteacp_Health_Blend_Tea": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_hospital_tea"
+				]
+			},
+			"slimerrain.uncleirohapprovedteacp_Brown_Rice_Tea": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_sandy_tea"
+				]
+			},
+			"slimerrain.uncleirohapprovedteacp_Chamomile_Tea": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_sandy_tea"
+				]
+			},
+			"slimerrain.uncleirohapprovedteacp_Lavender_Tea": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_sandy_tea"
+				]
+			},
+			"slimerrain.uncleirohapprovedteacp_Jasmine_Tea": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_sandy_tea"
+				]
+			},
+			"slimerrain.uncleirohapprovedteacp_Barley_Tea": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_sandy_tea"
+				]
+			},
+			"slimerrain.uncleirohapprovedteacp_Goji_Berry_Seeds": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_season_spring",
+					"slimerrain.uncleirohapprovedteacp_season_summer"
+				]
+			},
+			"slimerrain.uncleirohapprovedteacp_Osmanthus_Sapling": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_sapling"
+				]
+			}
+		}
+	},
+	//QLF/CFE/WFC
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"Fields": {
+			"slimerrain.uncleirohapprovedteacp_Lavender_Seeds": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_season_spring"
+				]
+			},
+			"slimerrain.uncleirohapprovedteacp_Jasmine_Sapling": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_sapling"
+				]
+			}
+		},
+		"When": {
+			"Spiderbuttons.CMCT/Dynamic: slimerrain.uncleirohapprovedteacp, KeepQLFG2Dupes": true,
+			"Spiderbuttons.CMCT/Dynamic: slimerrain.uncleirohapprovedteacp, KeepCFEDupes": true,
+			"Spiderbuttons.CMCT/Dynamic: slimerrain.uncleirohapprovedteacp, KeepWFCFDupes": true
+		}
+	},
+	//QLF/CF
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"Fields": {
+			"slimerrain.uncleirohapprovedteacp_Lily_Bulb": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_season_spring"
+				]
+			}
+		},
+		"When": {
+			"Spiderbuttons.CMCT/Dynamic: slimerrain.uncleirohapprovedteacp, KeepQLFG2Dupes": true,
+			"Spiderbuttons.CMCT/Dynamic: slimerrain.uncleirohapprovedteacp, KeepCFDupes": true
+		}
+	},
+	//CF
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"Fields": {
+			"slimerrain.uncleirohapprovedteacp_Chrysanthemum_Seeds": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_season_spring",
+					"slimerrain.uncleirohapprovedteacp_season_summer",
+					"slimerrain.uncleirohapprovedteacp_season_fall"
+				]
+			},
+			"slimerrain.uncleirohapprovedteacp_Lotus_Seeds": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_season_spring",
+					"slimerrain.uncleirohapprovedteacp_season_summer",
+					"slimerrain.uncleirohapprovedteacp_season_fall"
+				]
+			}
+		},
+		"When": {
+			"Spiderbuttons.CMCT/Dynamic: slimerrain.uncleirohapprovedteacp, KeepCFDupes": true
+		}
+	},
+	//CC
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"Fields": {
+			"slimerrain.uncleirohapprovedteacp_Sugarcane_Seeds": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_season_fall"
+				]
+			}
+		},
+		"When": {
+			"Spiderbuttons.CMCT/Dynamic: slimerrain.uncleirohapprovedteacp, KeepCCDupes": true
+		}
+	},
+	//WFC
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"Fields": {
+			"slimerrain.uncleirohapprovedteacp_Chamomile_Seeds": {
+				"ContextTags": [
+					"slimerrain.uncleirohapprovedteacp_season_spring",
+					"slimerrain.uncleirohapprovedteacp_season_summer"
+				]
+			}
+		},
+		"When": {
+			"Spiderbuttons.CMCT/Dynamic: slimerrain.uncleirohapprovedteacp, KeepWFCFDupes": true
+		}
+	}
+	]
+}

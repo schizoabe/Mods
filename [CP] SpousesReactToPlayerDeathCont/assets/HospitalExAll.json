@@ -1,0 +1,18 @@
+{ // Ex-Spouse Death - Generic
+  "Changes": [
+    {
+      "LogName": "KO Ex-Spouse - Generic",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "When": {
+        "Ex-Involvement": "true",
+        "HasValue:{{Spouse}}": false,
+        //"HasValue:{{ExSpouse}}": true,
+        "query: '{{ExSpouse}}' NOT IN ('Harvey')": true,
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 12 3 {{ExSpouse}} 22 8 2/skippable/pause 1500/showFrame 5/message \"{{i18n:PlayerKilled.doctor.01}}\"/pause 1000/message \"{{i18n:PlayerKilled.doctor.02}}\"/viewport 20 12 true/pause 1000/speak Harvey \"{{i18n:PlayerKilled.doctor.03}}\"/faceDirection farmer 1/emote farmer 16/pause 500/speak Harvey \"{{i18n:PlayerKilled.doctor.06}}\"/pause 500/emote Harvey 40/pause 500/faceDirection Harvey 0/faceDirection Harvey 3/pause 500/speak Harvey \"{{i18n:PlayerKilled.doctor.10}}\"/move Harvey 1 0 1/move Harvey 0 -3 0/pause 1000/speak Harvey \"{{i18n:PlayerKilled.doctor.11}}\"/pause 500/speak {{ExSpouse}} \"{{i18n:PlayerKilled.{{ExSpouse}}.20}}\"/pause 500/textAboveHead Harvey \"{{i18n:PlayerKilled.doctor.15}}\"/move Harvey -5 0 0 true/move Harvey 0 -1 0/move Harvey -3 0 0/move Harvey 0 -1 0/move Harvey -4 0 0/move Harvey 0 -1 0/playSound doorClose/warp Harvey -100 -100/move {{ExSpouse}} 0 4 3/emote farmer 16/faceDirection {{ExSpouse}} 3/pause 1000/speak {{ExSpouse}} \"{{i18n:PlayerKilled.{{ExSpouse}}.21}}\"/emote farmer 16/pause 1000/speak {{ExSpouse}} \"{{i18n:PlayerKilled.{{ExSpouse}}.22}}\"/pause 500/move {{ExSpouse}} 0 -4 0/move {{ExSpouse}} -8 0 0/move {{ExSpouse}} 0 -1 0/move {{ExSpouse}} -3 0 0/warp {{ExSpouse}} -100 -100/emote farmer 28/hospitaldeath/end dialogue {{ExSpouse}} \"{{i18n:DivorcedEnd.{{ExSpouse}}.01}}\""
+      }
+    }
+  ]
+}

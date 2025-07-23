@@ -1,0 +1,280 @@
+{
+    "Changes": [
+        // DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "AcceptBouquet": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.AcceptBouquet |LovePortraitsShane={{LovePortraitsShaneToken}}}}",
+                "RejectMermaidPendant_Under8Hearts": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.RejectMermaidPendant_Under8Hearts}}",
+                "Spouse_MonstersInHouse": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.Spouse_MonstersInHouse}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "DumpsterDiveComment": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.DumpsterDiveComment}}",
+                "2{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.2{{DialogueYear}}}}",
+                "4{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.4{{DialogueYear}}}}",
+                "6{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.6{{DialogueYear}} |LovePortraitsShane={{LovePortraitsShaneToken}}}}",
+                "winter_7{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.winter_7{{DialogueYear}}}}",
+                "8{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.8{{DialogueYear}} |LovePortraitsShane={{LovePortraitsShaneToken}}}}",
+                "winter_8{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.winter_8{{DialogueYear}}}}",
+                "10{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.10{{DialogueYear}}}}",
+                "11{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.11{{DialogueYear}}}}",
+                "14{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.14{{DialogueYear}}}}",
+                "17{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.17{{DialogueYear}}}}",
+                "18{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.18{{DialogueYear}}}}",
+                "spring_23{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.spring_23{{DialogueYear}}}}",
+                "spring_24{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.spring_24{{DialogueYear}}}}",
+                "winter_25{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.winter_25{{DialogueYear}}}}",
+                "summer_28{{DialogueYear}}": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.summer_28{{DialogueYear}}}}",
+                "story_one": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.story_one}}",
+                "story_trash": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.story_trash}}",
+                "Shane_story": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.Shane_story}}"
+            },
+            "When": {
+                "Hearts:Shane": "{{Range: 10, 14}}"
+            }
+        },
+		{
+			"LogName": "JojaMart Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"JojaMart": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.JojaMart10.{{Random:1,2}}}}"
+			},
+			"When": {
+				"Relationship:Shane |contains= Engaged": false,
+				"Hearts:Shane": "9,10"
+			}
+		},
+        // PLATONIC PARTNER DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Data/EngagementDialogue",
+            "Entries": {
+                "Shane0": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.Shane0 |LovePortraitsShane={{LovePortraitsShaneToken}}}}",
+                "Shane1": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.Shane1 |LovePortraitsShane={{LovePortraitsShaneToken}}}}",
+                "ShaneRoommate0": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.Shane0 |LovePortraitsShane={{LovePortraitsShaneToken}}}}",
+                "ShaneRoommate1": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.Shane1 |LovePortraitsShane={{LovePortraitsShaneToken}}}}",
+            }
+        },
+		{
+			"LogName": "JojaMart Engagement Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"JojaMart": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.JojaMartEngaged}}"
+			},
+			"When": {
+				"Relationship:Shane |contains= Engaged": true
+			}
+		},
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueShane",
+            "Entries": {
+                "Good_1": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Good_1.{{Random:1,2}}}}",
+                "Good_2": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Good_2.{{Random:1,2}}}}",
+                "Good_3": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Good_3}}",
+                "Good_5": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Good_5.{{Random:1,2}} |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Good_7": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Good_7.{{Random:1,2}}}}",
+                "Good_8": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Good_8.{{Random:1,2}} |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsShane={{LovePortraitsShaneToken}}}}",
+                "Neutral_0": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Neutral_0.{{Random:1,2}}}}",
+                "Outdoor_1": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Outdoor_1.{{Random:1,2}}}}",
+                "Indoor_Day_3": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Indoor_Day_3.{{Random:1,2}}}}",
+                "funReturn_Shane": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.funReturn_Shane.{{Random:1,2}}}}",
+                "Rainy_Day_3": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Rainy_Day_3.{{Random:1,2}}}}",
+                "Rainy_Night_0": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Rainy_Night_0.{{Random:1,2}}}}",
+                "Rainy_Night_4": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Rainy_Night_4.{{Random:1,2}}}}",
+                "spring_23": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.spring_23}}",
+                "summer_11": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.summer_11 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "winter_7": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.winter_7}}",
+                "Neutral_5": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Neutral_5.{{Random:1,2}} |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Indoor_Day_4": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Indoor_Day_4.{{Random:1,2}} |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Rainy_Night_3": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Rainy_Night_3.{{Random:1,2}} |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "summer_4": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.summer_4 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "fall_18": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.fall_18 |LowercaseEndearment={{LowercaseEndearmentToken}}}}"
+            }
+        },
+        {
+            "LogName": "Shane -'Admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueShane",
+            "Entries": {
+                "Good_6": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Good_6.{{Random:1,Pendant}}}}"
+            },
+            "When": {
+                "Relationship:Shane": "Married",
+                "Roommate |contains=Shane": false
+            }
+        },
+        {
+            "LogName": "Shane - Bracelet version of 'admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueShane",
+            "Entries": {
+                "Good_6": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Good_6.{{Random:1,Bracelet}}}}"
+            },
+            "When": {
+                "Roommate": "Shane"
+            }
+        },
+        {
+            "LogName": "Shane - Ambiguous version of 'admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueShane",
+            "Entries": {
+                "Good_6": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Good_6.{{Random:1,Ambiguous}}}}"
+            },
+            "When": {
+                "Relationship:Shane": "Married",
+                "Roommate |contains=Shane": false,
+                "Spouse |contains=Shane": false
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueShane",
+            "Entries": {
+                "Bad_0": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Bad_0.0-8 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Bad_1": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Bad_1 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Bad_3": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Bad_3}}",
+                "Bad_5": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Bad_5}}",
+                "Bad_6": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Bad_6}}",
+                "Bad_7": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Bad_7.0-8}}"
+            },
+            "When": {
+                "Hearts:Shane": "{{Range: 0, 8}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueShane",
+            "Entries": {
+                "Bad_0": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Bad_0.9-14}}",
+                "Bad_2": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Bad_2}}",
+                "Bad_7": "{{i18n:PPAF.Shane.PartnerDialogue.Aro.ImmersiveShane.Bad_7.9-14 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "Hearts:Shane": "{{Range: 9, 14}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/ExtraDialogue",
+            "Entries": {
+                "SummitEvent_Dialogue3_Shane": "{{i18n:PPAF.Shane.SummitDialogue.Aro.ImmersiveShane.SummitEvent_Dialogue3_Shane.0}}\"/pause 500/speak Shane \"{{i18n:PPAF.Shane.SummitDialogue.Aro.ImmersiveShane.SummitEvent_Dialogue3_Shane.1}}\"/pause 1000/speak Shane \"{{i18n:PPAF.Shane.SummitDialogue.Aro.ImmersiveShane.SummitEvent_Dialogue3_Shane.2}}\"/pause 100/emote farmer 12/pause 200/speak Shane \"{{i18n:PPAF.Shane.SummitDialogue.Aro.ImmersiveShane.SummitEvent_Dialogue3_Shane.3}}\"/pause 1000/emote Shane 40/pause 1000/speak Shane \"{{i18n:PPAF.Shane.SummitDialogue.Aro.ImmersiveShane.SummitEvent_Dialogue3_Shane.4}}\"/faceDirection Shane 3/speak Shane \"{{i18n:PPAF.Shane.SummitDialogue.Aro.ImmersiveShane.SummitEvent_Dialogue3_Shane.5}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:UseLovePortraits": false
+            }
+        },
+        // STRINGS
+        {
+            "LogName": "Shane pendant and bracelet proposal acceptance, 10k, love portraits",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "Shane_Engaged": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.Shane_Engaged |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsShane={{LovePortraitsShaneToken}}}}",
+                "Shane_EngagedRoommate": "{{i18n:PPAF.Shane.DialogueEdits.Aro.ImmersiveShane.Shane_EngagedRoommate |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsShane={{LovePortraitsShaneToken}}}}"
+            }
+        },
+        // GIFT TASTES
+        {
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Fields": 
+			{
+			"Shane": 
+				{
+					0: "{{i18n:PPAF.Shane.GiftTastes.Aro.ImmersiveShane.9-14.Loved}}",
+					2: "{{i18n:PPAF.Shane.GiftTastes.Aro.ImmersiveShane.9-14.Liked}}"
+				}
+			},
+            "When": {
+                "Hearts:Shane": "{{Range: 9, 14}}",
+                "Relationship:Shane |contains=Married": false
+            }
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Fields": 
+			{
+			"Shane": 
+				{
+					0: "{{i18n:PPAF.Shane.GiftTastes.Aro.ImmersiveShane.Married.Loved.{{Random:1,2,3,4,5,6}}}}",
+					2: "{{i18n:PPAF.Shane.GiftTastes.Aro.ImmersiveShane.Married.Liked.{{Random:1,2,3,4,5,6,7}}}}",
+					8: "{{i18n:PPAF.Shane.GiftTastes.Aro.ImmersiveShane.Married.Neutral.{{Random:1,2,3,4,5,6}}}}"
+				}
+			},
+            "When": {
+                "SpouseOrRoommateToken": "Shane"
+            }
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"AcceptGift_(O)260": "{{i18n:PPAF.Shane.GiftTastes.ImmersiveShane.9-14.HotPepper.{{Random:1,2,3}}}}",
+				"AcceptGift_(O)206": "{{i18n:PPAF.Shane.GiftTastes.ImmersiveShane.9-14.Pizza.{{Random:1,2,3,4}}}}",
+				"AcceptGift_(O)215": "{{i18n:PPAF.Shane.GiftTastes.ImmersiveShane.9-14.PepperPoppers.{{Random:1,2,3}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 9, 14}}",
+				"HasSeenEvent |contains=2118991": true,
+				"Relationship:Shane |contains= Dating, Engaged": true
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"AcceptGift_(O)260": "{{i18n:PPAF.Shane.GiftTastes.ImmersiveShane.Married.HotPepper.{{Random:1,2,3,4}}}}",
+				"AcceptGift_(O)215": "{{i18n:PPAF.Shane.GiftTastes.ImmersiveShane.Married.PepperPoppers.{{Random:1,2,3,4,5}}}}"
+			},
+			"When": {
+				"SpouseOrRoommateToken": "Shane"
+			}
+		},
+        // EVENTS
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Entries": {
+                "2128292/e 3900074/t 600 630/f Shane 2000/D Shane": null,
+                "59443111/e 9581348/t 2200 2600/f Shane 2500/D Shane/w sunny": null,
+                "ShaneHello": null
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Fields": {
+                "59443143/O Shane/f Shane 3000/t 2200 2400/z spring/z summer/z fall/d Mon Fri Sat/F": {
+                    69: "pause 10"
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Forest",
+            "Fields": {
+                "59443125/e 59443124/z spring/z fall/z winter/u 4/w sunny/t 1100 1300": {
+                    74: "speak Marnie \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.JasBirthday.75 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}\"",
+                    109: "speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.JasBirthday.112 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}#$b#{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.JasBirthday.113}}\""
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/BusStop",
+            "Entries": {
+                "9581348/e 2128292/t 1600 1800": "continue/-1000 -1000/farmer 22 19 0 Shane 23 10 2 Alex 22 13 0 Gus 19 11 1 Pam 20 10 2/viewport 12 11 clamp true/addConversationTopic ShaneGridballGame 3/skippable/move farmer 0 -4 0 rue/move Alex 0 -4 0 true/proceedPosition Alex/playSound thudStep/warp Alex -100 -100/move farmer 0 -1 0/move Shane 0 1 2/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.0}}\"/move Pam 2 0 0/move Pam 0 -1 0/warp Pam -100 -100/playSound thudStep/move Gus 3 0 0/move Gus 0 -2 0/faceDirection Shane 3 true/playSound thudStep/warp Gus -100 -100/move farmer 0 -4 0 true/globalFade/viewport -1000 -1000/playMusic none/pause 800/playSound busDriveOff/pause 4000/changeToTemporaryMap Stadium false/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.1}}\"/pause 1500/playSound glug/pause 500/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.2}}\"/pause 1000/playMusic Stadium_ambient/warp farmer 19 19/faceDirection farmer 2/positionOffset farmer 0 16/warp Alex 14 12/faceDirection Alex 2/warp Gus 30 14/faceDirection Gus 2/warp Shane 22 12/pause 3000/advancedMove Shane false 0 7 -2 0/viewport 22 18 clamp true/proceedPosition Shane/faceDirection Shane 2/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.3}}\"/showFrame Shane 25/pause 1000/playSound coin/showFrame 90/showFrame Shane 0/pause 2000/farmerEat 184/pause 1000/animate Shane false true 200 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 23 22 21 20 20 20 20/pause 6000/animate Shane false true 400 0 30 0 30 0 31 0 31/pause 1000/faceDirection farmer 1/pause 1000/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.4}}\"/pause 2000/faceDirection farmer 2/pause 4000/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.5}}\"/pause 1000/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.6}}\"/stopAnimation Shane/pause 100/jump Shane/showFrame Shane 18/pause 1000/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.7}}\"/showFrame Shane 0/pause 1500/playSound Stadium_cheer/pause 500/showFrame Shane 31/jump Shane/textAboveHead Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.8}}\"/jump Alex/jump Gus/pause 100/textAboveHead Alex \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.9}}\"/pause 2000/jump Shane/pause 2000/showFrame Shane 34/positionOffset Shane -4 0/pause 10/positionOffset Shane -5 0/pause 10/positionOffset Shane -4 0/pause 10/positionOffset Shane -4 0/pause 10/positionOffset Shane -4 0/pause 10/positionOffset Shane -2 0/pause 5/positionOffset Shane -2 0/positionOffset Shane -2 0/pause 10/showFrame farmer 94/pause 800/showFrame farmer 0/pause 800/faceDirection farmer 1 true/animate farmer false true 100 101/pause 1000/pause 1500/stopAnimation farmer/showFrame Shane 12/positionOffset Shane 1 0/positionOffset Shane 2 0/pause 10/positionOffset Shane 2 0/pause 10/positionOffset Shane 2 0/pause 10/positionOffset Shane 2 0/pause 10/positionOffset Shane 1 0/pause 1500/faceDirection Shane 1/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.10}}\"/move Shane 1 0 1/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.11 |LovePortraitsShane={{LovePortraitsShaneToken}}}}\"/pause 2300/faceDirection Shane 2/pause 500/move farmer 2 0 1/positionOffset farmer 2 0/pause 10/positionOffset farmer 2 0/pause 10/positionOffset farmer 2 0/pause 10/pause 700/animate farmer false true 100 101/positionOffset farmer 1 0/positionOffset farmer 1 0/pause 10/positionOffset farmer 1 0/pause 10/positionOffset farmer 2 0/pause 10/positionOffset farmer 2 0/pause 10/positionOffset farmer 1 0/pause 10/positionOffset farmer 2 0/pause 800/shake Shane 1200/pause 2800/showFrame Shane 34/positionOffset Shane -2 0/pause 3000/viewport move -1 -1 5000/pause 3000/globalFade/viewport -2000 -2000/pause 3000/playMusic none/pause 1000/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.12}}\"/pause 1000/speak Shane \"{{i18n:PPAF.Shane.Events.Aro.ImmersiveShane.10Heart.13}}\"/pause 2000/end"
+            }
+        }
+    ]
+}

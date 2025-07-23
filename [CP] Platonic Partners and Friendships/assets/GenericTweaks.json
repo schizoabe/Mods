@@ -1,0 +1,416 @@
+{
+    "Changes": [
+        // FRIENDSHIP BRACELET
+        {
+            "LogName": "Adds the Friendship Bracelet item",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModID}}_FriendshipBracelet": {
+                    //The art for this object (all four colorways) was created by Airyn!  
+                    "Name": "Friendship Bracelet",
+                    "DisplayName": "{{i18n: PPAF.FriendshipBracelet.DisplayName}}",
+                    "Description": "{{i18n: PPAF.FriendshipBracelet.Description}}",
+                    "Texture": "{{InternalAssetKey: assets/Sprites/{{PPAF.Core/ConfigValue:BraceletTheme}}.png}}",
+                    "Price": 0,
+                    "Category": -8,
+                    "Edibility": -300,
+                    "CanPurchase": false,
+                    "ContextTags": [],
+                    "ExcludeFromShippingCollection": true
+                }
+            }
+        },
+        {
+            "LogName": "Change friendship bracelet item description if player can no longer get a Mermaid's Pendant",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Fields": {
+                "{{ModID}}_FriendshipBracelet": {
+                    "Description": "{{i18n: PPAF.FriendshipBracelet.Description.NoPendant}}"
+                }
+            },
+            "When": {
+                "Query: '{{HasValue:{{spouse}}}}' = 'true' OR '{{Roommate}}' = 'Krobus'": true,
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Adds the Friendship Bracelet recipe",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Friendship Bracelet": "460 1/Home/{{ModID}}_FriendshipBracelet/false/default/"
+            }
+        },
+        {
+            "LogName": "Change friendship bracelet crafting recipe if player can no longer get a Mermaid's Pendant because Krobus",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Fields": {
+                "Friendship Bracelet": {
+                    0: "771 5"
+                }
+            },
+            "When": {
+                "Query: '{{HasValue:{{spouse}}}}' = 'true' OR '{{Roommate}}' = 'Krobus'": true,
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        // DIALOGUE EDITS
+        {
+            "LogName": "Jas marriage reference",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Jas",
+            "Entries": {
+                "married": "{{i18n:PPAF.GenericTweaks.Dialogue.Jas.married}}"
+            }
+        },
+        {
+            "LogName": "Qi marriage reference",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Mister Qi",
+            "Entries": {
+                "married": "{{i18n:PPAF.GenericTweaks.Dialogue.Qi.married}}"
+            }
+        },
+        {
+            "LogName": "Willy marriage reference",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Willy",
+            "Entries": {
+                "married": "{{i18n:PPAF.GenericTweaks.Dialogue.Willy.married}}"
+            }
+        },
+        {
+            "LogName": "Wizard marriage reference",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Wizard",
+            "Entries": {
+                "married": "{{i18n:PPAF.GenericTweaks.Dialogue.Wizard.married |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            }
+        },
+        {
+            "LogName": "Changes dialogue at Flower Festival to say dancing can be platonic",
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "Entries": {
+                "Lewis": "{{i18n:PPAF.GenericTweaks.Dialogue.FlowerDance.Lewis}}",
+                "Demetrius": "{{i18n:PPAF.GenericTweaks.Dialogue.FlowerDance.Demetrius}}"
+            }
+        },
+        // STRINGS EDITS
+        {
+            "LogName": "Edits terms of endearment and other misc lines from all housemates if a poly mod is installed and CFD is not",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4517": "@",
+                "NPC.cs.4518": "@",
+                "NPC.cs.4519": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4522": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4523": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains= aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": true,
+                "HasMod |contains= aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": false
+            }
+        },
+        {
+            "LogName": "Edits gift jealousy dialogue for romantic spouses",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.3985": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.NPC.cs.3985}}"
+            },
+            "When": {
+                "Query: '{{RelationshipStyle |contains= FullyPlatonic,SexWithoutRomance}}' = 'true' OR '{{Spouse |contains=Abigail,Alex,Elliott,Emily,Haley,Harvey,Leah,Maru,Penny,Sam,Sebastian,Shane}}' = 'true'": false,
+                "HasMod |contains=agentlyoko.nomorejealousy": false
+            }
+        },
+        {
+            "LogName": "Jealousy friendship change edit",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Fields": {
+                "{{Spouse}}": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+		},
+            "When": {
+                "HasMod |contains=agentlyoko.nomorejealousy": false,
+		"HasValue:{{spouse}}": "true"
+            },
+        },
+        {
+            "LogName": "NPC-specific jealousy edits",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Fields": {
+                "Abigail": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+                "Alex": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+                "Elliott": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+                "Emily": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+                "Haley": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+                "Harvey": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+                "Leah": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+                "Maru": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+                "Penny": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+                "Sam": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+                "Sebastian": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+                "Shane": {
+                    "SpouseGiftJealousyFriendshipChange": 30},
+            },
+            "When": {
+                "HasMod |contains=agentlyoko.nomorejealousy": false},
+        },
+        {
+            "LogName": "Edits pendant rejections, wilted bouquet, fortune teller",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.3955": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.NPC.cs.3955}}",
+                "NPC.cs.3969": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.NPC.cs.3969}}",
+                "NPC.cs.3972": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.NPC.cs.3972}}",
+                "NPC.cs.4425": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.NPC.cs.4425}}",
+                "Wilted_Bouquet_Effect": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Wilted_Bouquet_Effect}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.1}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "Event.cs.1831": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1831}}",
+                "Event.cs.1832": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1832}}",
+                "Event.cs.1833": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1833}}",
+                "Event.cs.1834": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1834}}",
+                "Event.cs.1845": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1845}}",
+                "Event.cs.1825": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1825}}",
+                "Event.cs.1826": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1826}}",
+                "TriedToMarryButKrobus": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.TriedToMarryButKrobus}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.3965": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.RomanceWithoutSex.NPC.cs.3965}}",
+                "NPC.cs.3966": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.RomanceWithoutSex.NPC.cs.3966}}",
+                "NPC.cs.3967": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.RomanceWithoutSex.NPC.cs.3967}}",
+                "NPC.cs.3968": "{{i18n:PPAF.GenericTweaks.Dialogue.Strings.RomanceWithoutSex.NPC.cs.3968}}"
+            },
+            "When": {
+                "RelationshipStyle": "RomanceWithoutSex"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/Locations",
+            "Entries": {
+                "Beach_Mariner_Player_Male": "{{i18n:PPAF.GenericTweaks.Strings.Beach_Mariner_Player_Male}}",
+                "Beach_Mariner_Player_Female": "{{i18n:PPAF.GenericTweaks.Strings.Beach_Mariner_Player_Female}}",
+                "Beach_Mariner_PlayerHasItem": "{{i18n:PPAF.GenericTweaks.Strings.Beach_Mariner_PlayerHasItem}}",
+                "Beach_Mariner_PlayerNotUpgradedHouse": "{{i18n:PPAF.GenericTweaks.Strings.Beach_Mariner_PlayerNotUpgradedHouse}}",
+                "Beach_Mariner_PlayerBuyItem_Question": "{{i18n:PPAF.GenericTweaks.Strings.Beach_Mariner_PlayerBuyItem_Question}}",
+                "ManorHouse_DivorceBook_NoSpouse": "{{i18n:PPAF.GenericTweaks.Strings.ManorHouse_DivorceBook_NoSpouse}}",
+                "ManorHouse_DivorceBook_Question": "{{i18n:PPAF.GenericTweaks.Strings.ManorHouse_DivorceBook_Question}}",
+                "ManorHouse_DivorceBook_CancelQuestion": "{{i18n:PPAF.GenericTweaks.Strings.ManorHouse_DivorceBook_CancelQuestion}}",
+                "ManorHouse_DivorceBook_Cancelled": "{{i18n:PPAF.GenericTweaks.Strings.ManorHouse_DivorceBook_Cancelled}}",
+                "ManorHouse_DivorceBook_Filed": "{{i18n:PPAF.GenericTweaks.Strings.ManorHouse_DivorceBook_Filed}}",
+                "WitchHut_EvilShrineCenter": "{{i18n:PPAF.GenericTweaks.Strings.WitchHut_EvilShrineCenter}}"
+            }
+        },
+        {
+            "LogName": "Already gave bouquet edit",
+            "Action": "EditData",
+            "Target": "Strings/UI",
+            "Entries": {
+                "AlreadyDatingBouquet": "{{i18n:PPAF.GenericTweaks.Strings{{LoveLettersToken}}.AlreadyDatingBouquet}}"
+            }
+        }, 
+        {
+            //remember to include 'casual' edits when that's implemented
+            "LogName": "Library book edit",
+            "Action": "EditData",
+            "Target": "Strings/Notes",
+            "Entries": {
+                "13": "{{i18n:PPAF.GenericTweaks.Strings.Notes{{LoveLettersToken}}.13}}"
+            }
+        },
+        // EVENT EDITS
+        {
+            "LogName": "Blocks the vanilla Haleyhouse jealousy event regardless of other mods installed",
+            "Action": "EditData",
+            "Target": "Data/Events/HaleyHouse",
+            "Entries": {
+                "195012/f Haley 2500/f Emily 2500/f Penny 2500/f Abigail 2500/f Leah 2500/f Maru 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 38/e 2123343/e 10/e 901756/e 54/e 15/k 195019": null
+            }
+        },
+        {
+            "LogName": "Rewrites vanilla HaleyHouse group heart event, rabbit's foot version",
+            "Action": "EditData",
+            "Target": "Data/Events/HaleyHouse",
+            "Fields": {
+                "195019/f Haley 2500/f Emily 2500/f Penny 2500/f Abigail 2500/f Leah 2500/f Maru 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 38/e 2123343/e 10/e 901756/e 54/e 15/i 446/k 195012": {
+                    6: "{{i18n:PPAF.GenericTweaks.Events.RabbitsFoot}}",
+                    24: "{{i18n:PPAF.GenericTweaks.Events.195019.24}}",
+                    36: "{{i18n:PPAF.GenericTweaks.Events.195019.36}}"
+                }
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+                "HasMod |contains=SystemWorks.Flex": false,
+                "HasMod |contains=Airyn.FriendshipRabbitFootEvents": false
+            }
+        },
+        {
+            "LogName": "Blocks the SVE Haleyhouse jealousy event",
+            "Action": "EditData",
+            "Target": "Data/Events/HaleyHouse",
+            "Entries": {
+                "195012/f Olivia 2500/f Sophia 2500/f Claire 2500/f Haley 2500/f Emily 2500/f Penny 2500/f Abigail 2500/f Leah 2500/f Maru 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 38/e 2123343/e 10/e 901756/e 54/e 15/k 195019": null,
+                "choseToExplain": null,
+                "lifestyleChoice": null
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+        {
+            "LogName": "Blocks the Flexible Frameworks Haleyhouse jealousy event",
+            "Action": "EditData",
+            "Target": "Data/Events/HaleyHouse",
+            "Entries": {
+                "195012/f Haley 2500/f Emily 2500/f Penny 2500/f Harvey 2500/f Alex 2500/f Maru 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 38/e 2123343/e 10/e 901756/e 54/e 15/k 195019": null
+            },
+            "When": {
+                "HasMod |contains=SystemWorks.Flex": true
+            }
+        },
+        {
+            "LogName": "Blocks the Flexible Frameworks SVE-compatible Haleyhouse jealousy event",
+            "Action": "EditData",
+            "Target": "Data/Events/HaleyHouse",
+            "Entries": {
+                "195012/f Haley 2500/f Emily 2500/f Penny 2500/f Harvey 2500/f Alex 2500/f Sophia 2500/f Claire 2500/f Maru 2500/o Claire/o Olivia/o Victor/o Sophia/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 38/e 2123343/e 10/e 901756/e 54/e 15/k 195019": null
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+                "HasMod |contains=SystemWorks.Flex": true
+            }
+        },
+        {
+            "LogName": "Blocks the vanilla Saloon jealousy event regardless of other mods installed",
+            "Action": "EditData",
+            "Target": "Data/Events/Saloon",
+            "Entries": {
+                "195013/f Shane 2500/f Sebastian 2500/f Sam 2500/f Harvey 2500/f Alex 2500/f Elliott 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 911526/e 528052/e 9581348/e 43/e 384882/e 233104/k 195099": null
+            }
+        },
+        {
+            "LogName": "Rewrites Saloon group heart event, rabbit's foot version",
+            "Action": "EditData",
+            "Target": "Data/Events/Saloon",
+            "Fields": {
+                "195099/f Shane 2500/f Sebastian 2500/f Sam 2500/f Harvey 2500/f Alex 2500/f Elliott 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 911526/e 528052/e 9581348/e 43/e 384882/e 233104/i 446/k 195013": {
+                    7: "{{i18n:PPAF.GenericTweaks.Events.RabbitsFoot}}"
+                }
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+                "HasMod |contains=SystemWorks.Flex": false,
+                "HasMod |contains=Airyn.FriendshipRabbitFootEvents": false
+            }
+        },
+        {
+            "LogName": "Blocks the SVE Saloon jealousy event",
+            "Action": "EditData",
+            "Target": "data/events/saloon",
+            "Entries": {
+                "195013/f Shane 2500/f Sebastian 2500/f Sam 2500/f Harvey 2500/f Alex 2500/f Elliott 2500/f Victor 2500/o Claire/o Olivia/o Sophia/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 911526/e 528052/e 9581348/e 43/e 384882/e 233104/k 195099": null,
+                "choseToExplain": null,
+                "crying": null
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+        {
+            "LogName": "Blocks the Flexible Frameworks saloon jealousy event",
+            "Action": "EditData",
+            "Target": "Data/Events/Saloon",
+            "Entries": {
+                "195013/f Shane 2500/f Sebastian 2500/f Sam 2500/f Abigail 2500/f Leah 2500/f Elliott 2500/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 911526/e 528052/e 9581348/e 43/e 384882/e 233104/k 195099": null
+            },
+            "When": {
+                "HasMod |contains=SystemWorks.Flex": true
+            }
+        },
+        {
+            "LogName": "Blocks the Flexible Frameworks SVE-compatible saloon jealousy event",
+            "Action": "EditData",
+            "Target": "Data/Events/Saloon",
+            "Entries": {
+                "195013/f Shane 2500/f Sebastian 2500/f Sam 2500/f Abigail 2500/f Leah 2500/f Elliott 2500/f Victor 2500/f Olivia 2500/o Claire/o Olivia/o Victor/o Sophia/o Abigail/o Penny/o Leah/o Emily/o Maru/o Haley/o Shane/o Harvey/o Sebastian/o Sam/o Elliott/o Alex/e 911526/e 528052/e 9581348/e 43/e 384882/e 233104/k 195099": null
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+                "HasMod |contains=SystemWorks.Flex": true
+            }
+        },
+        // ITEM EDITS
+        {
+            "LogName": "Bouquet and pendant description edits",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Fields": {
+                "458": {
+                    "Description": "{{i18n:PPAF.GenericTweaks.ItemDescriptions.458}}"
+                },
+                "277": { 
+                    "Description": "{{i18n:PPAF.GenericTweaks.ItemDescriptions.277}}"
+                },
+                "460": { 
+                    "Description": "{{i18n:PPAF.GenericTweaks.ItemDescriptions.460}}"
+                }
+            }
+        },
+        // MAIL EDITS
+        {
+            "LogName": "Bouquet and pendant mail edits",
+            "Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+                "SeaAmulet": "{{i18n:PPAF.GenericTweaks.Mail.SeaAmulet.Text}}[#]{{i18n:PPAF.GenericTweaks.Mail.SeaAmulet.Title}}",
+                "Bouquet": "{{i18n:PPAF.GenericTweaks.Mail.Bouquet{{LoveLettersToken}}.Text}}[#]{{i18n:PPAF.GenericTweaks.Mail.Bouquet{{LoveLettersToken}}.Title}}"
+            }
+        },
+        //COMPATIBILITY: STARDEW VALLEY EXPANDED
+        //Lines in this section are based on FlashShifter's, used and edited with permission. (Thank you, FlashShifter!)
+        {
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+            "Entries": {
+                "Town-Fair.2": "{{i18n: PPAF.GenericTweaks.Strings.SVE.Town-Fair}}"
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        }
+    ]
+}

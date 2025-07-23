@@ -1,0 +1,34 @@
+ {
+  "Changes": [
+  	//Standard
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "Traveler", "Items" ],
+      "When": { "Traveling Cart": "Standard" },
+      "Fields": {
+
+        "ChocoValley_RubyCacaoSeeds": 
+        {
+        "Condition": "SEASON spring summer fall, SYNCED_RANDOM day ChocoValley_RubyCacaoSeeds 0.6, PLAYER_BASE_FARMING_LEVEL Any 5",
+       	"AvailableStock": 1
+   			}
+      }
+	},
+    //Hardmode
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "Traveler", "Items" ],
+      "When": { "Traveling Cart": "Hardmode" },
+      "Fields": {
+
+	      "ChocoValley_RubyCacaoSeeds": 
+        {
+	      "Condition": "SEASON spring summer fall, SYNCED_RANDOM day ChocoValley_RubyCacaoSeeds 0.3, PLAYER_BASE_FARMING_LEVEL Any 5",
+	     	"AvailableStock": 1
+   			}
+      }
+		}
+  ]
+}

@@ -1,0 +1,228 @@
+{
+	"Changes": [
+        {
+            "LogName":"Add Items",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "MayoWater": {
+                    "Name": "MayoWater",
+                    "DisplayName": "{{i18n: MayoWater.Name}}",
+                    "Description": "{{i18n: MayoWater.Desc.Danger}}",
+                    "Type": "Basic",          
+                    "Category": -26,
+                    "Edibility": 20,
+                    "Price": 5,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Mayo",
+                    "SpriteIndex": "3",
+					"ContextTags": [
+						"color_red",
+						"color_black",
+						"mayo_item",
+						],
+					"CustomFields": {},
+            	},
+			},
+		},
+
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore"},
+			"Entries": {
+				"MayoWater": {
+					"EatenHealthRestoredOverride": 1,
+					"EatenStaminaRestoredOverride": 0,
+					"MaxStackSizeOverride": 5,
+					"CanBeShipped": true,
+					"CategoryTextOverride": "{{i18n: MayoWaterCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					},
+				},
+			}
+		},
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [	"Entries", "Universal_Hate" ],
+					"Value": "MayoWater",
+					"Delimiter": " "
+				}
+			]
+		},
+
+		
+		{
+      		"LogName": "The Weather Data Mayo Rain",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Mayo": {
+					"Id": "kath.weathering_Mayo",
+					"DisplayName": "{{i18n: Weather.Mayo}}",
+
+					"Forecast": "{{i18n: Weather.Mayo.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Mayo.ForecastIsland}}", "Desert": "{{i18n: Weather.Mayo.ForecastDesert}}",},
+					
+					"UseNightTiles": true,
+					"IsSnowing": false,
+					"IsRaining": true,
+					"IsLightning": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": true,
+					"SpawnFrogs": true,
+					"SpawnClouds": false,
+										
+					"MusicOverride": "rain",
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 12, "Y": 48},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 52, "Y": 91},
+
+					"AmbientColor": "255, 200, 80",
+					"LightingTint": "#00bbff",
+					"LightingTintOpacity": 0.45,
+					"PostLightingTint": "red",
+					"PostLightingTintOpacity": 0.22,					
+
+					"TotemMessage": "{{i18n: Weather.MayoWaterTotem}}",
+					"TotemScreenTint": "#4e0606",
+					"TotemSound": "rainsound",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDMayo 3",
+							],
+						},
+						{
+							"Id": "FoodSpawn",
+							"Type": "Trigger",
+							"Actions": [
+								"leclair.cloudyskies_SpawnForage -i ALL_ITEMS -iq \"ITEM_ID Target MayoWater\" --max 5 -c 0.35 Player Current 7",
+							],
+							"Rate": "1200",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "YummyWeather",
+							"Type": "Buff",
+							"Condition": "!LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"BuffId": "YummyWeather",
+							"TargetMapType": "Indoors",
+						},
+						{
+							"Id": "Firerain",
+							"Type": "Buff",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"BuffId": "Firerain",
+							"TargetMapType": "Outdoors",
+						},						
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "MakeItRain1",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": "#4e0606",
+							"Opacity": 1,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 45,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "MakeItRainLess",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target IslandEast\" \"LOCATION_NAME Target IslandShrine\" \"LOCATION_NAME Target CaptainRoom\" \"LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": "#4e0606",
+							"Opacity": 1,
+							"Vibrancy": 1,
+							"Scale": 4,
+							"Count": 25,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "MakeItRain2",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": "Black",
+							"Opacity": 1,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 45,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "MakeItRainLess2",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": "Black",
+							"Opacity": 1,
+							"Vibrancy": 1,
+							"Scale": 4,
+							"Count": 25,
+							"Speed": "-16, 32",
+						},						
+						{
+							"Id": "MakeItRainMayo",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Texture": "Mods/kath.weathering/MayoRain",
+							"Source": {"X": 0, "Y": 16, "Width": 16, "Height": 16 },
+							"Color": null,
+							"Opacity": 0.9,
+							"Vibrancy": 1,
+							"Scale": 4,
+							"Count": 60,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "LightingDarken",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "27, 44, 126",
+							"Opacity": 0.3
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "!LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.57
+						},	
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

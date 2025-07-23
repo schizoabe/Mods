@@ -1,0 +1,406 @@
+{
+    "Changes": [
+        // FRIENDSHIP BRACELET
+        {
+            "LogName": "Enable friendship bracelet for Maru",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "TargetField": [
+                "{{ModID}}_FriendshipBracelet",
+                "ContextTags"
+            ],
+            "Entries": {
+                "#-8": "propose_roommate_maru"
+            }
+        },
+        // JEALOUSY EDIT
+        {
+            "LogName": "Maru Jealousy Edit",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Fields": {
+                "Maru": {
+                    "SpouseGiftJealousyFriendshipChange": 30
+                }
+            }
+        },
+        // DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Maru",
+            "Entries": {
+                "Thu10": "{{i18n:PPAF.Maru.DialogueEdits.Aro.Thu10}}",
+                "event_robot1": "{{i18n:PPAF.Maru.DialogueEdits.Aro.event_robot1}}",
+                "event_robot3": "{{i18n:PPAF.Maru.DialogueEdits.Aro.event_robot3}}",
+                "summer_Thu10": "{{i18n:PPAF.Maru.DialogueEdits.Aro.summer_Thu10}}",
+                "fall_Fri6": "{{i18n:PPAF.Maru.DialogueEdits.Aro.fall_Fri6}}",
+                "fall_Thu10": "{{i18n:PPAF.Maru.DialogueEdits.Aro.fall_Thu10}}",
+                "winter_Thu10": "{{i18n:PPAF.Maru.DialogueEdits.Aro.winter_Thu10}}",
+                "SpouseGiftJealous": "{{i18n:PPAF.Maru.DialogueEdits.Aro.SpouseGiftJealous}}",
+                "SpouseStardrop": "{{i18n:PPAF.Maru.DialogueEdits.Aro.SpouseStardrop}}",
+                "dating_Maru": "{{i18n:PPAF.Maru.DialogueEdits.Aro.dating_Maru}}",
+                "dating_Maru_memory_oneday": "{{i18n:PPAF.Maru.DialogueEdits.Aro.dating_Maru_memory_oneday}}",
+                "AcceptBouquet": "{{i18n:PPAF.Maru.DialogueEdits.Aro.AcceptBouquet.{{Random:1{{LoveLettersToken}},2}}}}",
+                "FlowerDance_Accept_Spouse": "{{i18n:PPAF.Maru.DialogueEdits.Aro.FlowerDance_Accept_SpouseRoommate}}",
+                "FlowerDance_Accept_Roommate": "{{i18n:PPAF.Maru.DialogueEdits.Aro.FlowerDance_Accept_SpouseRoommate}}"
+            }
+        },
+        // PLATONIC PARTNER DIALOGUE
+        {
+            "LogName": "Maru pendant and bracelet engagement dialogue",
+            "Action": "EditData",
+            "Target": "Data/EngagementDialogue",
+            "Entries": {
+                "Maru0": "{{i18n:PPAF.Maru.EngagementDialogue.Aro.Maru0 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "MaruRoommate0": "{{i18n:PPAF.Maru.EngagementDialogue.Aro.Maru0 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Maru1": "{{i18n:PPAF.Maru.EngagementDialogue.Aro.Maru1}}",
+                "MaruRoommate1": "{{i18n:PPAF.Maru.EngagementDialogue.Aro.Maru1}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueMaru",
+            "Entries": {
+                "Good_4": "{{i18n:PPAF.Maru.PartnerDialogue.Aro.Good_4}}",
+                "Neutral_0": "{{i18n:PPAF.Maru.PartnerDialogue.Aro.Neutral_0}}",
+                "fall_25": "{{i18n:PPAF.Maru.PartnerDialogue.Aro.fall_25}}",
+                "spouseRoom_Maru": "{{i18n:PPAF.Maru.PartnerDialogue.Aro.spouseRoom_Maru |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Indoor_Day_4": "{{i18n:PPAF.Maru.PartnerDialogue.Aro.Indoor_Day_4}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries": {
+                "Rainy_Night_Maru": "{{i18n:PPAF.Maru.PartnerDialogue.Aro.Rainy_Night_Maru |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "spouseRoom_Maru": "{{i18n:PPAF.Maru.PartnerDialogue.Aro.spouseRoom_Maru |LowercaseEndearment={{LowercaseEndearmentToken}}}}"
+            }
+        },
+        {
+            "LogName": "Maru -'Admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueMaru",
+            "Entries": {
+                "Good_5": "{{i18n:PPAF.Maru.PartnerDialogue.Aro.Good_5.Pendant}}"
+            },
+            "When": {
+                "Relationship:Maru": "Married",
+                "Roommate |contains=Maru": false
+            }
+        },
+        {
+            "LogName": "Maru - Bracelet version of 'admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueMaru",
+            "Entries": {
+                "Good_5": "{{i18n:PPAF.Maru.PartnerDialogue.Aro.Good_5.Bracelet}}"
+            },
+            "When": {
+                "Roommate": "Maru"
+            }
+        },
+        {
+            "LogName": "Maru - Ambiguous version of 'admiring the pendant' line",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueMaru",
+            "Entries": {
+                "Good_5": "{{i18n:PPAF.Maru.PartnerDialogue.Aro.Good_5.Ambiguous |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "Relationship:Maru": "Married",
+                "Roommate |contains=Maru": false,
+                "Spouse |contains=Maru": false
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter8",
+            "Entries":
+            {
+                "Maru_spouse_y2": "{{i18n:PPAF.Maru.PartnerDialogue.Aro.IceFest.Maru_spouse_y2}}"
+            }
+        },
+        // OTHER CHARACTERS' DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Demetrius",
+            "Entries": {
+                "dating_Maru": "{{i18n:PPAF.Maru.OtherDialogue.Aro{{LoveLettersToken}}.Demetrius.dating_Maru}}",
+                "married_Maru": "{{i18n:PPAF.Maru.OtherDialogue.Aro.Demetrius.married_Maru}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Robin",
+            "Entries": {
+                "divorced_Maru": "{{i18n:PPAF.Maru.OtherDialogue.Aro.Robin.divorced_Maru}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "married_Maru": "{{i18n:PPAF.Maru.OtherDialogue.Aro.Sebastian.married_Maru}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey, Characters/Dialogue/Penny",
+            "Entries": {
+                "dating_Maru_memory_oneday": "{{i18n:PPAF.Maru.OtherDialogue.Aro.{{TargetWithoutPath}}.dating_Maru_memory_oneday}}",
+                "married_Maru": "{{i18n:PPAF.Maru.OtherDialogue.Aro.{{TargetWithoutPath}}.married_Maru |PlatonicHousemate={{PlatonicHousemateToken}}}}"
+            }
+        },
+        // STRINGS
+        {
+            "LogName": "Maru pendant and bracelet proposal acceptance",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "Maru_Engaged": "{{i18n:PPAF.Maru.Strings.Aro.Maru_Engaged |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Maru_EngagedRoommate": "{{i18n:PPAF.Maru.Strings.Aro.Maru_EngagedRoommate |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            }
+        },
+        {
+            "LogName": "Maru terms of endearment and other misc lines, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Maru.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Maru.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Maru.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Maru.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Maru.Strings.Aro.Nickname.2}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Maru.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Maru",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Maru terms of endearment and other misc lines, poly with CFD",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Maru",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Maru.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Maru.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Maru.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Maru.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Maru.Strings.Aro.Nickname.2}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Maru.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Maru",
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Maru",
+            "Entries": {
+                "marriage_Mon.002": "{{i18n:PPAF.Maru.Strings.Aro.marriage_Mon.002}}",
+                "marriageJob.000": "{{i18n:PPAF.Maru.Strings.Aro.marriageJob.000 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriageJob.002": "{{i18n:PPAF.Maru.Strings.Aro.marriageJob.002}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/Characters",
+            "Entries": {
+                "MovieInvite_Spouse_Maru": "{{i18n:PPAF.Maru.Strings.Aro.MovieInvite_Spouse_Maru}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/SpeechBubbles",
+            "Entries": {
+                "Hospital_Maru_Spouse": "{{i18n:PPAF.Maru.Strings.Aro.Hospital_Maru_Spouse |LowercaseEndearment={{LowercaseEndearmentToken}}}}"
+            }
+        },
+        // PENDANT REJECTION
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Maru",
+            "Entries": {
+                "RejectMermaidPendant_AlreadyAccepted_Engaged": "{{i18n:PPAF.Maru.PendantRejections.Engaged.{{Random:1,2}}}}",
+                "RejectMermaidPendant_AlreadyAccepted_Married": "{{i18n:PPAF.Maru.PendantRejections.Married.{{Random:1,2}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Demetrius, Characters/Dialogue/Robin, Characters/Dialogue/Sebastian",
+            "Entries": {
+                "RejectMermaidPendant_PlayerWithSomeoneElse": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.Maru.{{Random:1,2}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Maru"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "RejectMermaidPendant_PlayerWithSomeoneElse": "{{i18n:PPAF.Maru.PendantRejections.Sebastian.{{Random:1,2}}}}"
+            },
+            "When": {
+                "Relationship:Maru": "Engaged"
+            }
+        },
+        // SPRITE EDITS
+        {
+            "Action": "EditImage",
+            "Target": "Characters/Maru",
+            "FromFile": "assets/Sprites/MaruDressRecolor.png",
+            "ToArea": {
+                "X": 0,
+                "Y": 288,
+                "Width": 48,
+                "Height": 32
+            },
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ConfigValue:EditSprites": "True",
+                "HasMod |contains=DSVTeam.DiverseSeasonalOutfits, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        // EVENTS
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Mountain",
+            "Fields": {
+                "8/f Maru 1500/w sunny/t 2100 2340": {
+                    40: "pause 50",
+                    41: "pause 50",
+                    42: "pause 50",
+                    43: "pause 50",
+                    44: "pause 50",
+                    45: "pause 50",
+                    46: "pause 50",
+                    47: "pause 50",
+                    48: "pause 50",
+                    49: "pause 50",
+                    50: "pause 50",
+                    51: "pause 250"
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/ScienceHouse",
+            "Fields": {
+                "9/f Maru 2000/p Maru": {
+                    104: "speak Maru \"{{i18n:PPAF.Maru.Events.Aro.8Heart.104}}\""
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Mountain",
+            "Entries": {
+                "5183338/e 3917666/O Maru/w sunny/t 2200 2500": "nightTime/-1000 -1000/farmer 23 29 3 Maru 14 29 3/skippable/changeToTemporaryMap NightSceneMaruMap2 false/bgColor 0 0 0/ambientLight 0 0 0/viewport 14 25 true clamp/pause 1000/move farmer -8 0 3/faceDirection Maru 1/pause 800/showFrame Maru 32/pause 700/showFrame Maru 4/speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.0}}\"/pause 500/faceDirection Maru 2/pause 1000/faceDirection farmer 2/pause 1000/speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.1}}\"/pause 2000/faceDirection Maru 1/faceDirection farmer 3/pause 1000/speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.2}}\"/faceDirection Maru 2/speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.3}}\"/faceDirection Maru 1/speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.4}}\"/pause 500/emote farmer 32/pause 500/jump Maru/pause 400/speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.5}}\"/faceDirection Maru 3/faceDirection farmer 3 true/showFrame Maru 28/emote Maru 40/pause 1000/textAboveHead Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.6}}\"/pause 3000/showFrame Maru 12/move Maru 0 1 0/speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.7}}\"/pause 500/move farmer -1 0 3/pause 1000/animate farmer true true 100 35/pause 1000/fade/viewport -1000 -1000/pause 1000/playMusic spaceMusic/warp Maru 15 29/faceDirection Maru 3/cutscene marucomet/pause 1000/viewport 14 25 true clamp/pause 3000/stopAnimation farmer/pause 1000/faceDirection farmer 1/pause 500/speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.8}}\"/pause 500/quickQuestion {{i18n:PPAF.Maru.Events.Aro.14Hearts.8Q}}(break)jump Maru\\pause 500\\speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.9}}\"\\emote Maru 32(break)emote Maru 32\\speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.10}}\"(break)speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.11}}\"\\emote Maru 28\\speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14Heart.12}}\"/pause 2000/animate Maru false true 100 28/animate farmer false true 100 101/positionOffset farmer 16 0/pause 2000/specificTemporarySprite maruTelescope/viewport move 0 -1 13000/pause 16000/fade/viewport -1000 -1000/pause 3000/end newDay"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/ScienceHouse",
+            "Fields": {
+                "10/f Maru 2500/t 900 1600": {
+                    155: "speak Maru \"{{i18n:PPAF.Maru.Events.Aro.10Heart.155}}\"",
+                    189: "speak Demetrius \"{{i18n:PPAF.Maru.Events.Aro.10Heart.189}}\"",
+                    239: "speak Maru \"$q 18981 null#{{i18n:PPAF.Maru.Events.Aro.10Heart.239.Q}}#$r 18981 50 event_robot1#{{i18n:PPAF.Maru.Events.Aro.10Heart.239.A1}}#$r 18981 -50 event_robot2#{{i18n:PPAF.Maru.Events.Aro.10Heart.239.A2}}#$r 18981 0 event_robot3#{{i18n:PPAF.Maru.Events.Aro.10Heart.239.A3}}\"",
+                    241: "pause 50",
+                    242: "pause 50",
+                    243: "pause 100",
+                    244: "pause 100",
+                    245: "pause 50",
+                    246: "pause 50",
+                    247: "pause 50",
+                    248: "pause 50",
+                    //
+                    280: "pause 50",
+                    281: "pause 50",
+                    282: "pause 50",
+                    283: "pause 50",
+                    284: "pause 50",
+                    285: "pause 50",
+                    286: "pause 50",
+                    287: "animate farmer false true 100 101",
+                    288: "positionOffset farmer 1 0",
+                    289: "pause 20",
+                    290: "positionOffset farmer 1 0",
+                    291: "pause 2500"
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/FarmHouse",
+            "Fields": {
+                "3917666/f Maru 3500/O Maru/t 610 1700/p Maru/d Sun/z winter": {
+                    6: "speak Maru \"{{i18n:PPAF.Maru.Events.Aro.14HeartInitial.6}}\""
+                }
+            }
+        },
+        //COMPATIBILITY: PLATONIC RELATIONSHIPS
+        //This section prevents the dating-flag-required version of the vanilla 10 heart event added by Platonic Relationships from triggering. Thanks to Cherry for providing the event codes!
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/ScienceHouse",
+            "Entries": {
+                "10/f Maru 2500/D Maru/t 900 1600": null
+            },
+            "When": {
+                "HasMod |contains=Cherry.PlatonicRelationships": true
+            }
+        },
+        //COMPATIBILITY: SPOUSES REACT TO PLAYER 'DEATH' v1.1.0
+        //Lines in this section are based on the original lines written by CasualInvidia, used and edited with permission. (Thank you, CasualInvidia!)
+        {
+            "LogName": "Enable Maru's Spouses React to Player 'Death' content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Maru/Maru_SpousesReact.json",
+            "When": {
+                "HasMod |contains=CasualInvidia.SpousesReactToDeath": true
+            }
+        },
+        //
+        //COMPATIBILITY IMMERSIVE SPOUSES - IMPROVED SPOUSE SCHEDULES v0.5-beta
+        //Lines in this section are based on the original lines written by yeet (Someguy363), used and edited with permission. (Thank you, yeet!)
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Maru",
+            "Entries": {
+                "marriage_sit": "{{i18n:PPAF.Maru.DialogueEdits.Aro.ISS.marriage_sit}}",
+                "marriage_r": "{{i18n:PPAF.Maru.DialogueEdits.Aro.ISS.marriage_r}}",
+                "marriage_r2": "{{i18n:PPAF.Maru.DialogueEdits.Aro.ISS.marriage_r2 |PlatonicHousemate={{PlatonicHousemateToken}}}}",
+                "marriage_p": "{{i18n:PPAF.Maru.DialogueEdits.Aro.ISS.marriage_p}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        //COMPATIBILITY: PLEASE REMEMBER MY MARRIAGE v1.0.1
+        //Lines in this section are based on the original lines written by nraittanna, used and edited with permission. (Thank you, nraittanna!)
+        {
+            "LogName": "Enable Maru's Please Remember My Marriage content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Maru/Maru_RememberMyMarriage.json",
+            "When": {
+                "HasMod |contains=nraittanna.RememberMyMarriage": true
+            }
+        }
+    ]
+}

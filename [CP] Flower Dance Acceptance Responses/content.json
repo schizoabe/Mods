@@ -1,0 +1,414 @@
+{
+    "Format": "2.0.0",
+    "ConfigSchema": {
+		"Immersive Shane Override": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Description": "Allows this mod's Flower Dance dialogue keys to override Immersive Shane's Flower Dance keys. Does nothing without a corresponding selection in the next option.",
+			"Section": "Main Mod Changes",
+        },
+        "IC-Shane Conditional Overrides": {
+            "AllowValues": "none, normal, all",
+            "Default": "none",
+			"Description": "Chooses which of Immersive Shane's dialogues to override (in case of only wanting a conditional override). Defaults to none to prevent overriding.",
+			"Section": "Main Mod Changes",
+        },
+        "Free Love Immersive Shane Override": {
+            "AllowValues": "enabled, disabled",
+            "Default": "disabled",
+			"Description": "If enabled, Shane's vanilla marriage acceptance will be patched in to acceptance dialogue when Shane is married with Free Love, so that he still has unique dialogue when asked.",
+			"Section": "Main Mod Changes",
+        },
+		"Vanilla Request Override": {
+			"AllowValues": "disabled, firstyear, enabled",
+            "Default": "disabled",
+			"Description": "Enable this to return the original, pre-1.6 responses from this mod for bachelor/ettes that are not being dated. Keep disabled to use 1.6's new Flower Dance Acceptance lines.",
+			"Section": "Main Mod Changes",
+        },
+		"Flower Queen Override": {
+			"AllowValues": "disabled, enabled",
+            "Default": "disabled",
+			"Description": "Enable this to allow Flower Queen edits to fire regardless of the status of vanilla request override. Does nothing if Vanilla Request Override is active, as that will automatically apply Flower Queen edits if DSV is installed.",
+			"Section": "Main Mod Changes",
+        },
+		"Dance Request Override": {
+			"AllowValues": "disabled, unmarried, enabled",
+            "Default": "unmarried",
+			"Description": "Enabling this will allow small changes to the ask dialogue of each character, if not platonic (platonic asks are dealt with by PPAF proper, or will be the regular variant with Platonic Relationships).",
+			"Section": "Main Mod Changes",
+        },
+		"Free Love Fix": {
+			"AllowValues": "enabled, disabled, auto",
+            "Default": "auto",
+			"Description": "If enabled, this mod will patch the original marriage dialogues into the character's default response (to have the proper reaction). Disable if you believe the original game's acceptance keys would clash with your particular dialogue mod. Defaults to automatic and should only apply based on if you have Free Love installed or not.",
+			"Section": "Main Mod Changes",
+        },
+		"Abigail": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Abigail's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+		"Sebastian": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Sebastian's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+		"Alex": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Alex's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+		"Haley": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Haley's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+		"Leah": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Leah's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+		"Elliott": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Elliott's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+		"Harvey": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Harvey's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+		"Maru": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Maru's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+		"Sam": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Sam's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+		"Penny": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Penny's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+		"Shane": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Shane's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+		"Emily": {
+			"AllowValues": "disabled, enabled",
+            "Default": "enabled",
+			"Description": "Determines if Emily's Flower Dance dialogue changes are active.",
+			"Section": "Individual Toggles",
+        },
+    },
+	"DynamicTokens": [
+		// by default, apply the player's config
+		{
+			"Name": "Free Love Option",
+			"Value": "{{Free Love Fix}}"
+		},
+
+		// if config is set to 'auto' and Free Love is installed, set it to enabled
+		{
+			"Name": "Free Love Option",
+			"Value": "enabled",
+			"When": {
+				"Free Love Option": "auto",
+				"HasMod": "aedenthorn.FreeLove"
+			},
+		},
+
+		// if it's still 'auto', set the fallback default
+		{
+			"Name": "Free Love Option",
+			"Value": "disabled",
+			"When": {
+				"Free Love Option": "Auto"
+			},
+		},
+		
+		{
+			"Name": "CFD",
+			"Value": "inactive"
+		},
+		
+		{
+			"Name": "CFD",
+			"Value": "installed",
+			"When": {
+				"HasMod": "aedenthorn.CustomFixedDialogue",
+			},
+		},
+		
+		{
+			"Name": "CFD",
+			"Value": "installed",
+			"When": {
+				"HasMod": "datamancer.CustomFixedDialogue",
+			},
+		},
+	],
+	"Changes":[
+		
+		//Acceptance Dialogues (Vanilla)
+		{
+			"LogName": "Year 2+ Acceptance Dialogues",
+			"Action": "Include",
+			"FromFile": "assets/Default/year2.json",
+			"When": {
+				"Vanilla Request Override": "enabled",
+			},
+		},
+		{
+			"LogName": "Year 2+ Acceptance Dialogues, Flower Queen Compat", //DSV When Condition
+			"Action": "Include",
+			"FromFile": "assets/DSV/year2.json",
+			"When": {
+				"HasMod": "DSV.Core",
+				"Query: {{Vanilla Request Override|contains=enabled}} OR {{Flower Queen Override|contains=enabled}}": true,
+			},	
+		},
+		{
+			"LogName": "Year 1 Acceptance Dialogues",
+			"Action": "Include",
+			"FromFile": "assets/Default/year1.json",
+			"When": {
+				"Year": "1",
+				"Vanilla Request Override": "firstyear, enabled",
+			},
+		},
+		{
+			"LogName": "Year 1 Acceptance Dialogues, Flower Queen Compat", //DSV When Condition
+			"Action": "Include",
+			"FromFile": "assets/DSV/year1.json",
+			"When": {
+				"Year": "1",
+				"HasMod": "DSV.Core",
+				"Vanilla Request Override": "firstyear, enabled",
+				"Query: {{Vanilla Request Override|contains=firstyear, enabled}} OR {{Flower Queen Override|contains=enabled}}": true,
+			},
+		},
+		{
+			"LogName": "Dating Acceptance Dialogues",
+			"Action": "Include",
+			"FromFile": "assets/Default/dating.json",
+		},
+		{
+			"LogName": "Haley Dating Patch - Flower Queen", //DSV When condition
+			"Action": "Include",
+			"FromFile": "assets/DSV/dating.json",
+			"When": {
+				"HasMod": "DSV.Core",
+			},	
+		},
+		
+		//Acceptance Dialogues (PPAF/Platonic Relationship)
+		{
+			"LogName": "Best Friend Acceptance Dialogues Fallback - Platonic Relationships",
+			"Action": "Include",
+			"FromFile": "assets/Platonic/Platonic.json",
+			"When": {
+				"HasMod |contains=Cherry.PlatonicRelationships": true,
+			},	
+		},
+		{
+			"LogName": "Best Friend Acceptance Dialogues",
+			"Action": "Include",
+			"FromFile": "assets/Platonic/PPAF.json",
+			"When": {
+				"HasMod": "PPAF.Core",
+			},	
+		},
+		{
+			"LogName": "Haley Best Friend Acceptance Dialogues Fallback - Platonic Relationships (Haley Not Flower Queen)", //DSV When Condition
+			"Action": "Include",
+			"FromFile": "assets/Platonic/DSVPlatonic.json",
+			"When": {
+				"HasMod |contains=Cherry.PlatonicRelationships": true,
+				"HasMod": "DSV.Core",
+			},	
+		},
+		{
+			"LogName": "Haley Best Friend Acceptance Dialogues, Haley Not Flower Queen", //DSV When Condition
+			"Action": "Include",
+			"FromFile": "assets/Platonic/DSVPPAF.json",
+			"When": {
+				"HasMod|contains=Amaranthacyan.PPAFSMAPI": true,
+                "HasMod|contains=DSV.Core": true,
+			},	
+		},
+		
+		//Ask Dialogues
+		{
+			"LogName": "Altered Ask Dialogues (Regular)",
+			"Action": "Include",
+			"FromFile": "assets/Asks/Vanilla/regular.json",
+			"When": {
+				"Dance Request Override": "unmarried, enabled",
+				"HasMod |contains=PPAF.Core": false,
+				"CFD": "installed",
+			},
+		},
+		{
+			"LogName": "Haley Patch (Not Flower Queen)", //DSV When Condition, two patches
+			"Action": "Include",
+			"FromFile": "assets/Asks/DSV/regular.json",
+			"When": {
+				"Dance Request Override": "unmarried, enabled",
+				"HasMod |contains=PPAF.Core": false,
+				"HasMod": "DSV.Core",
+				"CFD": "installed",
+			},
+		},
+		{
+			"LogName": "Altered Ask Dialogues (Failed)",
+			"Action": "Include",
+			"FromFile": "assets/Asks/Vanilla/failure.json",
+			"When": {
+				"Dance Request Override": "unmarried, enabled",
+				"HasMod |contains=PPAF.Core": false,
+				"CFD": "installed",
+			},	
+		},
+		{
+			"LogName": "Altered Ask Dialogues (Failed, no Three Heart Dance Partner)",
+			"Action": "Include",
+			"FromFile": "assets/Asks/Vanilla/threeheart.json",
+			"When": {
+				"Dance Request Override": "unmarried, enabled",
+				"HasMod |contains=PPAF.Core": false,
+				"HasMod |contains=ThreeHeartDancePartner": false,
+				"CFD": "installed",
+			},
+		},
+		{
+			"LogName": "Altered Ask Dialogues (Dating)",
+			"Action": "Include",
+			"FromFile": "assets/Asks/Vanilla/dating.json",
+			"When": {
+				"Dance Request Override": "unmarried, enabled",
+				"HasMod |contains=PPAF.Core": false,
+				"CFD": "installed",
+			},
+		},
+		{
+			"LogName": "Haley Patch (Not Flower Queen)", //DSV When Condition
+			"Action": "Include",
+			"FromFile": "assets/Asks/DSV/dating.json",
+			"When": {
+				"Dance Request Override": "unmarried, enabled",
+				"HasMod |contains=PPAF.Core": false,
+				"HasMod": "DSV.Core",
+				"CFD": "installed",
+			},
+		},
+		{
+			"LogName": "Altered Ask Dialogues (Marriage)",
+			"Action": "Include",
+			"FromFile": "assets/Asks/Vanilla/married.json",
+			"When": {
+				"Dance Request Override": "enabled",
+				"HasMod |contains=PPAF.Core": false,
+				"CFD": "installed",
+			},
+		},
+		//PPAF (ALL JSONS MUST HAVE ROMANCEANDSEX/ROMANCEWITHOUTSEX IN PATCH!)
+		{
+			"LogName": "Altered Ask Dialogues (Regular) - PPAF Romance",
+			"Action": "Include",
+			"FromFile": "assets/Asks/PPAF/regular.json",
+			"When": {
+				"Dance Request Override": "unmarried, enabled",
+				"HasMod": "PPAF.Core",
+				"CFD": "installed",
+			},
+		},
+		{
+			"LogName": "Haley Patch (Not Flower Queen)", //DSV When Condition, two patches
+			"Action": "Include",
+			"FromFile": "assets/Asks/PPAF/haleypatch.json",
+			"When": {
+				"Dance Request Override": "unmarried, enabled",
+				"HasMod |contains=PPAF.Core": true,
+				"HasMod": "DSV.Core",
+				"CFD": "installed",
+			},
+		},
+		{
+			"LogName": "Altered Ask Dialogues (Failed) - PPAF Romance",
+			"Action": "Include",
+			"FromFile": "assets/Asks/PPAF/failure.json",
+			"When": {
+				"Dance Request Override": "unmarried, enabled",
+				"HasMod": "PPAF.Core",
+				"CFD": "installed",
+			},
+		},
+		{
+			"LogName": "Altered Ask Dialogues (Failed, no Three Heart Dance Partner) - PPAF Romance",
+			"Action": "Include",
+			"FromFile": "assets/Asks/PPAF/threeheart.json",
+			"When": {
+				"Dance Request Override": "unmarried, enabled",
+				"HasMod": "PPAF.Core",
+				"HasMod |contains=ThreeHeartDancePartner": false,
+				"CFD": "installed",
+			},
+		},
+		{
+			"LogName": "Altered Ask Dialogues (Dating, RomanceAndSex/RomanceWithoutSex) - PPAF Romance",
+			"Action": "Include",
+			"FromFile": "assets/Asks/PPAF/dating.json",
+			"When": {
+				"Dance Request Override": "unmarried, enabled",
+				"HasMod": "PPAF.Core",
+				"CFD": "installed",
+			},
+		},
+		{
+			"LogName": "Altered Ask Dialogues (Married, RomanceAndSex/RomanceWithoutSex) - PPAF Romance",
+			"Action": "Include",
+			"FromFile": "assets/Asks/PPAF/married.json",
+			"When": {
+				"Dance Request Override": "enabled",
+				"HasMod": "PPAF.Core",
+				"CFD": "installed",
+			},
+		},
+		
+		//Misc Fixes
+		{
+			"LogName": "Free Love Fix for original marriage strings",
+			"Action": "Include",
+			"FromFile": "assets/Misc/FreeLove.json",
+			"When": {
+				"Free Love Option": "enabled",
+				"HasMod |contains=PPAF.Core": false,
+			},			
+		},
+		{
+			"LogName": "Free Love Fix for original marriage strings - PPAF Romance",
+			"Action": "Include",
+			"FromFile": "assets/Misc/FreeLovePPAF.json",
+			"When": {
+				"Free Love Option": "enabled",
+				"HasMod": "PPAF.Core",
+			},			
+		},
+    ]
+}

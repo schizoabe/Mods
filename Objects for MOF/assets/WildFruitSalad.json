@@ -1,0 +1,106 @@
+{
+    "Changes": [
+	{
+		"Action": "EditData", 
+		"Target": "Data/Objects",
+		"Entries": {
+			"WildFruitSalad": {
+				"Name": "WildFruitSalad",
+				"DisplayName": "Wild Fruit Salad",
+				"Description": "A salad made from wild-picked fruits, very healthy.",
+				"Type": "Basic",
+				"Category": -7,
+				"Price": 365,
+				"Texture": "Mods/{{ModId}}/objects14px",
+				"SpriteIndex": 14, 
+				"Edibility": 70, 
+				"IsDrink": false,
+				"ExcludeFromFishingCollection": true,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Buffs": [
+				  {
+					"Duration": 250,
+					"CustomAttributes": {
+					  "ForagingLevel": 2,
+					  "MaxStamina": 50
+					}
+				  }
+				]
+			}
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/CookingRecipes", 
+		"Entries": {
+			"WildFruitSalad": "296 1 398 1 396 1/1 1/WildFruitSalad"
+			}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/NPCGiftTastes",
+		"TextOperations": [
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Vincent", 1],
+				"Value": "WildFruitSalad",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Linus", 1],
+				"Value": "WildFruitSalad",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Shane", 1],
+				"Value": "WildFruitSalad",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Sandy", 1], 
+				"Value": "WildFruitSalad",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Leah", 1],
+				"Value": "WildFruitSalad",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Abigail", 5],
+				"Value": "WildFruitSalad",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Harvey", 5],
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Jas",7], 
+				"Value": "WildFruitSalad",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Haley",7], 
+				"Value": "WildFruitSalad",
+				"Delimiter": " "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Fields", "Evelyn", 7],
+				"Value": "WildFruitSalad",
+				"Delimiter": " "
+			}
+		]
+	}
+    ]
+}

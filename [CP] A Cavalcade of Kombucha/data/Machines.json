@@ -1,0 +1,357 @@
+{
+	"Changes": [
+///SCOBY STARTER
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"Entries": {
+				"(BC)ACOK_Scoby_Starter": {
+					"HasInput": false,
+					"InteractMethod": null,
+					"OutputRules": [
+						{
+							"Id": "ACOK_Scoby",
+							"Triggers": [
+								{
+								"Id": "DayUpdate",
+								"Trigger": "DayUpdate",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "ACOK_Scoby",
+									"MinStack": 1,
+									"MaxStack": 3
+								}
+							],
+							"DaysUntilReady": 1,
+							"PreventTimePass": "Outside",
+						}
+					]
+				}
+			}
+		},
+///KOMBUCHA JAR
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"Entries": {
+				"(BC)ACOK_Kombucha_Jar": {
+					"OutputRules": [
+						{
+							"Id": "ACOK_Plain_Kombucha",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O)815",
+									"RequiredCount": 1
+								}
+							],
+							"OutputItem": [
+								{
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "ACOK_Scoby",
+								"selph.ExtraMachineConfig.RequirementCount.1": 1,
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:Kombucha-Jar.inputerrorplain}}"
+								},
+								"ItemId": "ACOK_Plain_Kombucha",
+								"CopyQuality": true,
+								}
+							],
+							"MinutesUntilReady": 10,
+						},
+						{
+							"Id": "ACOK_Floral_Kombucha",
+							"Triggers": [
+								{
+									"RequiredTags": ["category_flowers"],
+									"RequiredCount": 1
+								},
+								{
+									"RequiredTags": ["flower_item"],
+									"RequiredCount": 1
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "ACOK_Floral_Kombucha",
+									"ObjectInternalName": "{0} ACOK_Floral_Kombucha",
+									"ObjectDisplayName": "[LocalizedText Strings\\Objects:Floral-Kombucha %PRESERVED_DISPLAY_NAME]",
+									"PreserveId": "DROP_IN",
+									"CopyPrice": true,
+									"CopyQuality": true,
+									"CustomData": {
+										"selph.ExtraMachineConfig.CopyColor": "true",
+										"selph.ExtraMachineConfig.RequirementId.1": "ACOK_Plain_Kombucha",
+										"selph.ExtraMachineConfig.RequirementCount.1": 1,
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:Kombucha-Jar.inputerrorfloral}}",
+										},
+									"PriceModifierMode": "Stack",
+									"PriceModifiers": [
+								{
+									"Modification": "Multiply",
+									"Amount": 1.5
+								},
+								{
+									"Modification": "Add",
+									"Amount": 350
+								}
+							],
+								"MinutesUntilReady": 10,
+								}
+							]
+						},
+						{
+							"Id": "ACOK_Sweet_Kombucha",
+							"Triggers": [
+								{
+									"RequiredTags": ["category_fruits"],
+									"RequiredCount": 1
+								},
+								{
+									"RequiredTags": ["fruit_item"],
+									"RequiredCount": 1
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "ACOK_Sweet_Kombucha",
+									"ObjectInternalName": "{0} ACOK_Sweet_Kombucha",
+									"ObjectDisplayName": "[LocalizedText Strings\\Objects:Sweet-Kombucha %PRESERVED_DISPLAY_NAME]",
+									"PreserveId": "DROP_IN",
+									"CopyPrice": true,
+									"CopyQuality": true,
+									"CustomData": {
+										"selph.ExtraMachineConfig.CopyColor": "true",
+										"selph.ExtraMachineConfig.RequirementId.1": "ACOK_Plain_Kombucha",
+										"selph.ExtraMachineConfig.RequirementCount.1": 1,
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:Kombucha-Jar.inputerrorsweet}}",
+										},
+									"PriceModifierMode": "Stack",
+									"PriceModifiers": [
+								{
+									"Modification": "Multiply",
+									"Amount": 1.5
+								},
+								{
+									"Modification": "Add",
+									"Amount": 350
+								}
+							],
+								"MinutesUntilReady": 10,
+								}
+							]
+						},
+						{
+							"Id": "ACOK_Savoury_Kombucha",
+							"Triggers": [
+								{
+									"RequiredTags": ["category_vegetable", "!edible_mushroom", "!poisonous_mushroom", "!edible_mushroom_item"],
+									"RequiredCount": 1
+								},
+								{
+									"RequiredTags": ["vegetable_item", "!edible_mushroom", "!poisonous_mushroom", "!edible_mushroom_item"],
+									"RequiredCount": 1
+								},
+								{
+									"RequiredTags": ["category_greens", "!edible_mushroom", "!poisonous_mushroom", "!edible_mushroom_item"],
+									"RequiredCount": 1
+								},
+							],
+							"OutputItem": [
+								{
+									"ItemId": "ACOK_Savoury_Kombucha",
+									"ObjectInternalName": "{0} ACOK_Savoury_Kombucha",
+									"ObjectDisplayName": "[LocalizedText Strings\\Objects:Savoury-Kombucha %PRESERVED_DISPLAY_NAME]",
+									"PreserveId": "DROP_IN",
+									"CopyPrice": true,
+									"CopyQuality": true,
+									"CustomData": {
+										"selph.ExtraMachineConfig.CopyColor": "true",
+										"selph.ExtraMachineConfig.RequirementId.1": "ACOK_Plain_Kombucha",
+										"selph.ExtraMachineConfig.RequirementCount.1": 1,
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:Kombucha-Jar.inputerrorsavoury}}",
+										},
+									"PriceModifierMode": "Stack",
+									"PriceModifiers": [
+								{
+									"Modification": "Multiply",
+									"Amount": 1.5
+								},
+								{
+									"Modification": "Add",
+									"Amount": 350
+								}
+							],
+								"MinutesUntilReady": 10,
+								}
+							]
+						},
+						{
+							"Id": "ACOK_Nutty_Kombucha",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O)MysticTreeSeed",
+									"RequiredCount": 1
+								},
+								{
+									"RequiredItemId": "(O)292",
+									"RequiredCount": 1
+								},
+								{
+									"RequiredItemId": "(O)309",
+									"RequiredCount": 1
+								},
+								{
+									"RequiredItemId": "(O)310",
+									"RequiredCount": 1
+								},
+								{
+									"RequiredItemId": "(O)311",
+									"RequiredCount": 1
+								},
+								{
+									"RequiredTags": ["category_seeds"],
+									"RequiredCount": 1
+								},
+								{
+									"RequiredTags": ["seed_item"],
+									"RequiredCount": 1
+								},
+								{
+									"RequiredTags": ["nut_item"],
+									"RequiredCount": 1
+								},
+							],
+							"OutputItem": [
+								{
+									"ItemId": "ACOK_Nutty_Kombucha",
+									"ObjectInternalName": "{0} ACOK_Nutty_Kombucha",
+									"ObjectDisplayName": "[LocalizedText Strings\\Objects:Nutty-Kombucha %PRESERVED_DISPLAY_NAME]",
+									"PreserveId": "DROP_IN",
+									"CopyPrice": true,
+									"CopyQuality": true,
+									"CustomData": {
+										"selph.ExtraMachineConfig.CopyColor": "true",
+										"selph.ExtraMachineConfig.RequirementId.1": "ACOK_Plain_Kombucha",
+										"selph.ExtraMachineConfig.RequirementCount.1": 1,
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:Kombucha-Jar.inputerrornutty}}",
+										},
+									"PriceModifierMode": "Stack",
+									"PriceModifiers": [
+								{
+									"Modification": "Multiply",
+									"Amount": 1.5
+								},
+								{
+									"Modification": "Add",
+									"Amount": 350
+								}
+							],
+								"MinutesUntilReady": 10,
+								}
+							]
+						},
+						{
+							"Id": "ACOK_Umami_Kombucha",
+							"Triggers": [
+								{
+									"RequiredTags": ["edible_mushroom"],
+									"RequiredCount": 1
+								},
+								{
+									"RequiredTags": ["edible_mushroom_item"],
+									"RequiredCount": 1
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "ACOK_Umami_Kombucha",
+									"ObjectInternalName": "{0} ACOK_Umami_Kombucha",
+									"ObjectDisplayName": "[LocalizedText Strings\\Objects:Umami-Kombucha %PRESERVED_DISPLAY_NAME]",
+									"PreserveId": "DROP_IN",
+									"CopyPrice": true,
+									"CopyQuality": true,
+									"CustomData": {
+										"selph.ExtraMachineConfig.CopyColor": "true",
+										"selph.ExtraMachineConfig.RequirementId.1": "ACOK_Plain_Kombucha",
+										"selph.ExtraMachineConfig.RequirementCount.1": 1,
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:Kombucha-Jar.inputerrorumami}}",
+										},
+									"PriceModifierMode": "Stack",
+									"PriceModifiers": [
+								{
+									"Modification": "Multiply",
+									"Amount": 1.5
+								},
+								{
+									"Modification": "Add",
+									"Amount": 350
+								}
+							],
+								"MinutesUntilReady": 10,
+								}
+							]
+						},
+						{
+							"Id": "ACOK_Salty_Kombucha",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O)152",
+									"RequiredCount": 1
+								},
+								{
+									"RequiredItemId": "(O)153",
+									"RequiredCount": 1
+								},
+								{
+									"RequiredItemId": "(O)157",
+									"RequiredCount": 1
+								},
+								{
+									"RequiredItemId": "(O)FSTS_Anisea_Weed",
+									"RequiredCount": 1
+								},
+								{
+									"RequiredItemId": "(O)FSTS_Spysea_Weed",
+									"RequiredCount": 1
+								},
+								{
+									"RequiredItemId": "(O)FSTS_Aquamint",
+									"RequiredCount": 1
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "ACOK_Salty_Kombucha",
+									"ObjectInternalName": "{0} ACOK_Salty_Kombucha",
+									"ObjectDisplayName": "[LocalizedText Strings\\Objects:Salty-Kombucha %PRESERVED_DISPLAY_NAME]",
+									"PreserveId": "DROP_IN",
+									"CopyPrice": true,
+									"CopyQuality": true,
+									"CustomData": {
+										"selph.ExtraMachineConfig.CopyColor": "true",
+										"selph.ExtraMachineConfig.RequirementId.1": "ACOK_Plain_Kombucha",
+										"selph.ExtraMachineConfig.RequirementCount.1": 1,
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:Kombucha-Jar.inputerrorsalty}}",
+										},
+									"PriceModifierMode": "Stack",
+									"PriceModifiers": [
+								{
+									"Modification": "Multiply",
+									"Amount": 1.5
+								},
+								{
+									"Modification": "Add",
+									"Amount": 350
+								}
+							],
+								"MinutesUntilReady": 10,
+								}
+							]
+						},
+					]
+				}
+			}
+		}
+	]
+}

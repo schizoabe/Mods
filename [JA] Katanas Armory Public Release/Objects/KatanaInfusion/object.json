@@ -1,0 +1,37 @@
+{
+Name: "Katana Infusion",
+Description: "Remember: infusing monsters can melt them.",
+CanSell: "False",
+Price: 3000,
+ContextTags:
+        [
+        "katana_infusion"
+        ],
+Category: "Mineral",
+CategoryTextOverride: "Magic",
+Edibility: -300,
+  "Recipe": {
+    "ResultCount": 1,
+    "Ingredients": [
+      {
+        "Object": "Iridium Bar",
+        "Count": 5
+      },
+      {
+        "Object": "Gold Bar",
+        "Count": 5
+      },
+      {
+        "Object": "Solar Essence",
+        "Count": 5
+      },
+      {
+        "Object": "Void Essence",
+        "Count": 5
+      }
+    ],
+CanPurchase: "True",
+PurchaseFrom: "IslandTrade",
+PurchasePrice: 3000
+  }
+}

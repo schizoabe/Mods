@@ -1,0 +1,66 @@
+{
+    "Changes": [
+///ALTER VANILLA BUNDLES
+		{
+		"Action": "EditData",
+		"Target": "Data/Bundles",
+		"When": {"Enable Mushroom Bundles": true},
+			"Entries": {
+			"Crafts Room/13": "Spring Foraging/O 495 30/16 1 0 18 1 0 20 1 0 22 1 0 MAAM_White_Mushroom 1 0/0",
+			"Bulletin Board/31": "Chef's/O 221 3/724 1 0 259 1 0 430 1 0 MAAM_Plump_Belly_Mushroom 1 0 228 1 0 194 1 0/4",
+			"Bulletin Board/32": "Field Research/BO 20 1/422 1 0 392 1 0 702 1 0 536 1 0/5",
+			}
+		},
+///ALTER VANILLA REMIXED BUNDLE
+		{
+		"Action": "EditData",
+		"Target": "Data/RandomBundles",
+		"When": {"Enable Mushroom Bundles": true},
+		"TargetField": [ "Crafts Room", "BundleSets", "#0", "Bundles", "#0" ],
+		"TextOperations":[
+			{
+         "Operation": "Append",
+         "Target": ["Entries", "Items"],
+         "Value": "1 White Mushroom, 1 Dew Cup Mushroom, 1 St Mayalls Mushroom, 1 Ridge Puff Mushroom",
+         "Delimiter": ","
+			},
+			]
+		},
+		{
+		"Action": "EditData",
+		"Target": "Data/RandomBundles",
+		"When": {"Enable Mushroom Bundles": true},
+		"TargetField": [ "Crafts Room", "BundleSets", "#0", "Bundles", "#2" ],
+		"TextOperations":[
+			{
+         "Operation": "Append",
+         "Target": ["Entries", "Items"],
+         "Value": "1 Muffin Button Mushroom, 1 Lord Edmondsons Mushroom, 1 Stalk Cluster Mushroom, 1 Spring Cap Mushroom",
+         "Delimiter": ","
+			},
+			]
+		},
+		{
+		"Action": "EditData",
+		"Target": "Data/RandomBundles",
+		"When": {"Enable Mushroom Bundles": true},
+		"TargetField": [ "Bulletin Board", "Bundles", "#0" ],
+		"TextOperations":[
+			{
+         "Operation": "Append",
+         "Target": ["Entries", "Items"],
+         "Value": "1 Plump Belly Mushroom",
+         "Delimiter": ","
+			},
+			{
+         "Operation": "RemoveDelimited",
+         "Target": ["Entries", "Items"],
+         "Search": "1 Poppy",
+         "Delimiter": ","
+			},
+			]
+		},
+	]
+}
+
+///patch export "Data\Bundles"

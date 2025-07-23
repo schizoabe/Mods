@@ -1,0 +1,161 @@
+{
+	"Changes": [
+		{
+      	    "LogName": "Add Buffs and Debuffs",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+				"DEW_Wrath": {
+    			"DisplayName": "{{i18n:DEW.Buff.Name}}",
+    			"Description": "{{i18n:DEW.Buff.Desc}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": -2,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.billing/Buff",
+    			"IconSpriteIndex": 0,
+    			"Effects":  {
+      				"FarmingLevel": -10.0,
+      				"FishingLevel": 0.0,
+      				"MiningLevel": 0.0,
+      				"LuckLevel": -10.0,
+      				"ForagingLevel": 0.0,
+      				"MaxStamina": 0.0,
+      				"MagneticRadius": -20.0,
+      				"Speed": 0.0,
+      				"Defense": 0.0,
+      				"Attack": 0.0					
+				},
+    			"ActionsOnApply": [],
+    			"CustomFields": null
+                	}
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+			"kath.billing_SendBill": {
+				"Id": "kath.billing_SendBill",
+                "Trigger": "DayStarted",
+                "Condition": "DAY_OF_WEEK {{DayOfBilling}}, DATE_RANGE {{GraceEndPlus}}", //post grace period weekly billing
+				"MarkActionApplied": false,
+                "Actions": [
+					"AddMail Current BillingMailBill now",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: BillArrivedDEW}}\" (O)DEW.DEW"
+                    ]
+				},
+			"kath.billing_SendBillStart": {
+				"Id": "kath.billing_SendBillStart",
+                "Trigger": "DayStarted",
+                "Condition": "DAY_OF_WEEK {{DayOfBilling}}, DATE_RANGE Spring 1 1 {{GraceEnd}} 1", //grace period weekly billing
+				"MarkActionApplied": false,
+                "Actions": [
+					"AddMail Current BillingMailStart now",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: BillArrivedDEW}}\" (O)DEW.DEW"
+                    ]
+				},
+			"kath.billing_SendBillService": { 
+				"Id": "kath.billing_SendBillService",
+                "Trigger": "DayStarted",
+                "Condition": "DAY_OF_MONTH {{DayofService}}, DATE_RANGE {{GraceEndPlus}}", //no service bill in grace period
+				"MarkActionApplied": false,
+                "Actions": [
+					"AddMail Current BillingMailServices now",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: BillArrivedDEW}}\" (O)DEW.DEW"
+                    ]
+				},
+			"kath.billing_SendBillWinter": {
+				"Id": "kath.billing_SendBillWinter",
+                "Trigger": "DayStarted",
+                "Condition": "DAY_OF_WEEK {{DayOfSurcharge}}, SEASON winter, YEAR 2", //extra billing for winter
+				"MarkActionApplied": false,
+                "Actions": [
+					"AddMail Current BillingMailWinter now",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: BillArrivedDEW}}\" (O)DEW.DEW"
+                    ]
+				},				
+			"kath.billing_SendWarning": {
+				"Id": "kath.billing_SendWarning",
+                "Trigger": "DayEnding",
+                "Condition": "ANY \"!PLAYER_HAS_MAIL Current BillingMailWarning Mailbox, DAY_OF_MONTH {{DayofService}}, !YEAR 1 1, PLAYER_CURRENT_MONEY Current 0 1\" \"!PLAYER_HAS_MAIL Current BillingMailWarning Mailbox, DAY_OF_WEEK {{DayOfSurcharge}}, !YEAR 1 1, SEASON winter, PLAYER_CURRENT_MONEY Current 0 1\" \"!PLAYER_HAS_MAIL Current BillingMailWarning Mailbox, DAY_OF_WEEK {{DayOfBilling}}, !YEAR 1 1, PLAYER_CURRENT_MONEY Current 0 1\" \"!PLAYER_HAS_MAIL Current BillingMailWarning Mailbox, PLAYER_HAS_MAIL Current BillingMailBill Mailbox\" \"!PLAYER_HAS_MAIL Current BillingMailWarning Mailbox, PLAYER_HAS_MAIL Current BillingMailStart Mailbox\" \"!PLAYER_HAS_MAIL Current BillingMailWarning Mailbox, PLAYER_HAS_MAIL Current BillingMailServices Mailbox\" \"!PLAYER_HAS_MAIL Current BillingMailWarning Mailbox, PLAYER_HAS_MAIL Current BillingMailWinter Mailbox\"",
+				"MarkActionApplied": false,
+                "Actions": [
+					"AddMail Current BillingMailWarning now",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: WarningDEWCollections}}\" (O)DEW.DEW"
+                    ]
+				},
+			"kath.billing_SendWarning2": {
+				"Id": "kath.billing_SendWarning2",
+                "Trigger": "LocationChanged",
+                "Condition": "PLAYER_HAS_MAIL Current BillingMailWarning Mailbox",
+                "Actions": [
+					"AddBuff DEW_Wrath",
+					"spacechase0.SpaceCore_DamageCurrentFarmer 15",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: AngryDEWCollections}}\" (O)DEW.DEW"
+                    ]
+				},
+			"kath.billing_SendWarning2Refresh": {
+				"Id": "kath.billing_SendWarning2Refresh",
+                "Trigger": "DayEnding",
+                "Condition": "TRUE",
+				"MarkActionApplied": false,
+                "Actions": [
+					"MarkActionApplied Current kath.billing_SendWarning2 false"
+                    ]
+				}			
+			}
+		},
+
+		{
+		"Action": "EditData",
+    	"Target": "Data/mail",
+    	"Entries":{ 
+			"BillingMailStart": "^{{i18n: BillingStart.LetterText |PlayerName={{PlayerName}} |FarmName={{FarmName}} |FarmAcc={{FarmAcc}} |CollectionID={{CollectionID}} |Season={{Season}} |Day={{Day}} |GraceBilling={{GraceBilling}} }}{{i18n: Signature}}[letterbg Mods/kath.billing/Letters 0][textcolor black]%action AddMoney -{{GraceBilling}} %%[#]{{i18n: BillingStart.LetterTitle}}",
+			"BillingMailBill": "^{{i18n: Billing.LetterText |PlayerName={{PlayerName}} |FarmName={{FarmName}} |FarmAcc={{FarmAcc}} |CollectionID={{CollectionID}} |Season={{Season}} |Day={{Day}} |BillingWeekly={{BillingWeekly}} }}{{i18n: Signature}}[letterbg Mods/kath.billing/Letters 0][textcolor black]%action AddMoney -{{BillingWeekly}} %%[#]{{i18n: Billing.LetterTitle}}",
+			"BillingMailServices": "^{{i18n: BillingServices.LetterText |PlayerName={{PlayerName}} |FarmName={{FarmName}} |FarmAcc={{FarmAcc}} |CollectionID={{CollectionID}} |Season={{Season}} |Day={{Day}} |BillingServices={{BillingServices}} }}{{i18n: Signature}}[letterbg Mods/kath.billing/Letters 0][textcolor black]%action AddMoney -{{BillingServices}} %%[#]{{i18n: BillingServices.LetterTitle}}",
+			"BillingMailWinter": "^{{i18n: BillingWinter.LetterText |PlayerName={{PlayerName}} |FarmName={{FarmName}} |FarmAcc={{FarmAcc}} |CollectionID={{CollectionID}} |Season={{Season}} |Day={{Day}} |BillingWinter={{BillingWinter}} }}{{i18n: Signature}}[letterbg Mods/kath.billing/Letters 0][textcolor black]%action AddMoney -{{BillingWinter}} %%[#]{{i18n: BillingWiinter.LetterTitle}}",
+			"BillingMailWarning": "^{{i18n: Warning.LetterText |PlayerName={{PlayerName}} |FarmName={{FarmName}} |FarmAcc={{FarmAcc}} |CollectionID={{CollectionID}} }}[letterbg Mods/kath.billing/Letters 0][textcolor black]%action AddBuff DEW_Wrath %%[#]{{i18n: Warning.LetterTitle}}",
+			"DEWThanksLetter": "^{{i18n: DEWThanksLetter.LetterText |PlayerName={{PlayerName}} |FarmName={{FarmName}} }}{{i18n: Signature}}[letterbg Mods/kath.billing/Letters 0][textcolor black][#]{{i18n: DEWThanksLetter.LetterTitle}}"
+			}
+		},
+		
+		//Just for the message tbh
+        {
+            "LogName":"Add Items",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "DEW.DEW": {
+                    "Name": "DEW.DEW",
+                    "DisplayName": "{{i18n: DEW.Buff.Name}}",
+                    "Description": "{{i18n: DEW.Buff.Desc}}",
+                    "Type": "Basic",          
+                    "Category": -20,
+                    "Price": 0,
+                    "ExcludeFromShippingCollection": true,
+                    "Texture": "Mods/kath.billing/Buff",
+                    "SpriteIndex": 0,
+					
+					"ContextTags": [
+					"not_placeable",
+					"not_giftable",
+					"not_museum_donatable"
+							]
+            		}	
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/ObjectExtensionData",
+            "Entries": {
+                "DEW.DEW": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1
+				}
+			}
+		}		
+		
+		
+]
+}

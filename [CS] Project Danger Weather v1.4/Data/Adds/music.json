@@ -1,0 +1,169 @@
+{
+	"Changes": [
+        {
+      	    "LogName": "Add Noise",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+				"KathSiren": {
+                    "ID": "KathSiren",
+                    "Category": "Sound",
+					"StreamedVorbis": false,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Nado.ogg}}"
+                    		],
+                    "Looped": false
+                	},
+				"KathBadBugs": {
+                    "ID": "KathBadBugs",
+                    "Category": "Music",
+					"StreamedVorbis": true,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Locust.ogg}}"
+                    		],
+                    "Looped": true
+                	},
+				"KathFire": {
+                    "ID": "KathFire",
+                    "Category": "Music",
+					"StreamedVorbis": true,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Fire.ogg}}"
+                    		],
+                    "Looped": true
+                	},
+				"KathEclipse1": {
+                    "ID": "KathEclipse1",
+                    "Category": "Music",
+					"StreamedVorbis": true,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Eclipse1.ogg}}"
+                    		],
+                    "Looped": true
+                	},
+				"KathEclipse2": {
+                    "ID": "KathEclipse2",
+                    "Category": "Music",
+					"StreamedVorbis": true,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Eclipse2.ogg}}"
+                    		],
+                    "Looped": true
+                	},
+				"KathFishFlies": {
+                    "ID": "KathFishFlies",
+                    "Category": "Music",
+					"StreamedVorbis": true,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Flies.ogg}}"
+                    		],
+                    "Looped": true
+                	},
+				"KathRainOverride": {
+                    "ID": "KathRainOverride",
+                    "Category": "Music",
+					"StreamedVorbis": true,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Rain.ogg}}"
+                    		],
+                    "Looped": true
+                	},
+				"KathHurricane": {
+                    "ID": "KathHurricane",
+                    "Category": "Music",
+					"StreamedVorbis": true,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Hurricane.ogg}}"
+                    		],
+                    "Looped": true
+                	},
+                "KathBlizzard": {
+                    "ID": "KathBlizzard",
+                    "Category": "Music",
+					"StreamedVorbis": true,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Blizzard.ogg}}"
+                    		],
+                    "Looped": true
+                	},
+                "KathSandstorm": {
+                    "ID": "KathSandstorm",
+                    "Category": "Music",
+					"StreamedVorbis": true,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Sandstorm.ogg}}"
+                    		],
+                    "Looped": true
+                	},
+				"KathQuake": {
+                    "ID": "KathQuake",
+                    "Category": "Sound",
+					"StreamedVorbis": false,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Earthquake.ogg}}"
+                    		],
+                    "Looped": false
+                	},
+				"KathAsh": {
+                    "ID": "KathAsh",
+                    "Category": "Music",
+					"StreamedVorbis": true,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/AshFall.ogg}}"
+                    		],
+                    "Looped": true
+                	},
+				"KathLava": {
+                    "ID": "KathLava",
+                    "Category": "Music",
+					"StreamedVorbis": true,
+                    "FilePaths": [
+                        "{{AbsoluteFilePath: assets/Music/Lava.ogg}}"
+                    		],
+                    "Looped": true
+                	},//close in-entry
+		},//close entry
+	},//close
+
+
+//MUSIC STUFF
+		{
+            "Action": "EditMap",
+            "Target": "Maps/Forest, Maps/Desert",
+			"Update": "OnLocationChange",
+			"When": {"Weather": "kath.weathering_HeatWave",},
+            "MapProperties": {
+                "Music": "KathFishFlies"
+            },
+        },
+		{
+            "Action": "EditMap",
+            "Target": "Maps/Forest",
+			"Update": "OnLocationChange",
+			"When": {"Weather": "kath.weathering_Wildfire",},
+            "MapProperties": {
+                "Music": "KathFire"
+            },
+        },
+//LNH
+		{
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Island_NW",
+			"Update": "OnLocationChange",
+			"When": {"Weather": "kath.weathering_Hurry",},
+            "MapProperties": {
+                "Music": "KathHurricane"
+            },
+        },
+		{
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Island_NW",
+			"Update": "OnLocationChange",
+			"When": {"Weather": "kath.weathering_HeavyRains",},
+            "MapProperties": {
+                "Music": "KathRainOverride"
+            },
+        },
+//End
+]
+}

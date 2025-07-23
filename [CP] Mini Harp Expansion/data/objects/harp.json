@@ -1,0 +1,134 @@
+{
+    "Changes": [
+        {
+            "LogName": "Texture - Harp",
+            "Action": "Load",
+            "Target": "{{ModId}}\\MiniHarp",
+            "FromFile": "assets/miniharp.png"
+        },
+        {
+            "LogName": "Powers - Harp",
+            "Action": "EditData",
+            "Target": "Data/Powers",
+            "Entries": {
+                "{{ModId}}_Harp_Wallet": {
+                    "DisplayName": "{{i18n:object.harp.name}}",
+                    "Description": "{{i18n:object.harp.description}}",
+                    "TexturePath": "{{ModId}}\\MiniHarp",
+                    "TexturePosition": {
+                        "X": 16,
+                        "Y": 0
+                      },
+                    "UnlockedCondition": "PLAYER_HAS_MAIL Current {{ModId}}_Harp_MASTERY"
+                }   
+            }
+        },
+        {
+            "LogName": "Objects - Harp",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModId}}_Harp_Broken": {
+                    "Name": "{{ModId}}_Harp_Broken",
+                    "DisplayName": "{{i18n:object.broken-harp.name}}",
+                    "Description": "{{i18n:object.broken-harp.description}}",
+                    "Type": "asdf",
+                    "Category": -99,
+                    "Price": -1,
+                    "Texture": "{{ModId}}\\MiniHarp",
+                    "SpriteIndex": 0,
+                    "Edibility": -300,
+                    "IsDrink": false,
+                    "GeodeDropsDefaultItems": false,
+                    "GeodeDrops": null,
+                    "ArtifactSpotChances": null,
+                    "ExcludeFromFishingCollection": true,
+                    "ExcludeFromShippingCollection": true,
+                    "ExcludeFromRandomSale": true,
+                    "CustomFields": null
+                },
+                "{{ModId}}_Harp_Object": {
+                    "Name": "{{ModId}}_Harp_Object",
+                    "DisplayName": "{{i18n:object.harp.name}}",
+                    "Description": "{{i18n:object.harp.description}}",
+                    "Type": "asdf",
+                    "Category": -99,
+                    "Price": -1,
+                    "Texture": "{{ModId}}\\MiniHarp",
+                    "SpriteIndex": 1,
+                    "Edibility": -300,
+                    "IsDrink": false,
+                    "GeodeDropsDefaultItems": false,
+                    "GeodeDrops": null,
+                    "ArtifactSpotChances": null,
+                    "ExcludeFromFishingCollection": true,
+                    "ExcludeFromShippingCollection": true,
+                    "ExcludeFromRandomSale": true,
+                    "CustomFields": null
+                }
+            }
+        },
+        {
+            "LogName": "SpaceCore - ObjectExtensions - Harp",
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/ObjectExtensionData",
+            "Entries": {
+                "{{ModId}}_Harp_Broken": {
+                    "CategoryTextOverride": "{{i18n:category.broken-musical-instrument.name}}",
+                    "CanBeTrashed": false,
+                    "CanBeShipped": false,
+                    "GiftableToNpcAllowList": {
+                        "{{ModId}}_GiftDisallowed": true
+                    },
+                    "GiftedToNotOnAllowListMessage": "{{i18n:gift.message}}",
+                    "UseForTriggerAction": true
+                },
+                "{{ModId}}_Harp_Object": {
+                    "CategoryTextOverride": "{{i18n:category.musical-instrument.name}}",
+                    "CanBeTrashed": false,
+                    "CanBeShipped": false,
+                    "GiftableToNpcAllowList": {
+                        "{{ModId}}_GiftDisallowed": true
+                    },
+                    "GiftedToNotOnAllowListMessage": "{{i18n:gift.message}}",
+                    "UseForTriggerAction": true
+                }
+            }
+        },
+        {
+            "LogName": "BetterCrafting - Recipes - MiniHarp",
+            "Action": "EditData",
+            "Target": "Mods/leclair.bettercrafting/Recipes",
+            "Entries": {
+                "{{ModId}}_Harp_Recipe": {
+                    "Default": true,
+                    "IsCooking": false,
+                    "AllowRecycling": false,
+                    "DisplayName": "{{i18n:object.harp.name}}",
+                    "Description": "{{i18n:object.harp.description}}",
+                    "Ingredients": [
+                        {
+                            "Id": "{{ModId}}_Harp_Recipe_Input1",
+                            "ItemID": "(O){{ModId}}_Harp_Broken",
+                            "Quantity": 1
+                        },
+                        {
+                            "Id": "{{ModId}}_Harp_Recipe_Input2",
+                            "ItemID": "(O)709",
+                            "Quantity": 5
+                        }
+                    ],
+                    "ActionsOnCraft": [
+                        "AddMail Current {{ModId}}_Harp_ACTIVE all"
+                    ],
+                    "Output": [
+                        {
+                            "Id": "{{ModId}}_Harp_Output",
+                            "ItemId": "(O){{ModId}}_Harp_Object"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

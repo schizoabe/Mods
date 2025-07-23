@@ -1,0 +1,131 @@
+{
+    "Changes": [
+        // CONTENT INCLUDES
+        {
+            "LogName": "Enable Penny's aromantic content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Penny/Penny_AroContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, SexWithoutRomance"
+            }
+        },
+        // ACE CONTENT
+        {
+            "LogName": "Penny romance dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Penny",
+            "Entries":
+            {
+                "SpouseStardrop": "{{i18n:PPAF.Penny.DialogueEdits.Romance.SpouseStardrop}}",                
+		        "event_pool4": "{{i18n:PPAF.Penny.DialogueEdits.Romance.event_pool4}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:PennyRelationshipType": "RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Penny ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialoguePenny",
+            "Entries":
+            {
+                "Indoor_Night_4": "{{i18n:PPAF.Penny.DialogueEdits.Ace.Indoor_Night_4}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Penny ace festival dialogue edit",
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "Entries":
+            {
+                "Penny_spouse": "{{i18n:PPAF.Penny.DialogueEdits.Ace.SpiritsEve.Penny_spouse}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:PennyRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/BathHouse_Pool",
+            "Fields": {
+                "38/f Penny 2500/t 1900 2400/n pennySpa": {
+                    37: "speak Penny \"{{i18n:PPAF.Penny.Events.Ace.10Heart.37}}",
+                    38: "speak Penny \"$q -1 null#...$8#$r -1 0 event_pool4#{{i18n:PPAF.Penny.Events.Ace.10Heart.38.A1}}#$r -1 -1500 event_pool5#{{i18n:PPAF.Penny.Events.Ace.10Heart.38.A2}}"
+                }
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:PennyRelationshipType": "RomanceWithoutSex"
+            }
+        },
+        // TERMS OF ENDEARMENT
+        {
+            "LogName": "Penny terms of endearment, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Penny",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Penny terms of endearment",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Penny",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // NO BLUSH EDITS
+        {
+            "LogName": "Penny no blush edit",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny, Portraits/Penny_Winter, Portraits/Penny_Beach",
+            "FromFile": "assets/Portraits/{{TargetWithoutPath}}_NoBlush.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Penny": true,
+                "HasMod |contains=DSVTeam.DiverseStardewValley, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        {
+            "LogName": "Penny no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny_Spring, Portraits/Penny_Summer, Portraits/Penny_Fall, Portraits/Penny_Winter_Outdoor, Portraits/Penny_Winter_Indoor, Portraits/Penny_FlowerDance, Portraits/Penny_SpiritsEve, Portraits/Penny_Fair, Portraits/Penny_EggF, Portraits/Penny_Jellies, Portraits/Penny_Luau, Portraits/Penny_Winter_IceF, Portraits/Penny_Winter_WinterStar, Portraits/Penny_Beach",
+            "FromFile": "assets/Portraits/Penny_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Penny": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        },
+        // COMPATIBILITY
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Penny",
+            "Entries": {
+                "marriage_bus2": "{{i18n:PPAF.Penny.DialogueEdits.Ace.ISS.marriage_bus2}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, RomanceWithoutSex",
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        }
+    ]
+}

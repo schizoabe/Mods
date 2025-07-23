@@ -1,0 +1,56 @@
+{
+	"Format": "2.0.0",
+    "ConfigSchema": {
+        "Bedroom Version": {
+            "AllowValues": "New, Old",
+            "Default": "New",
+        }
+    },
+	"Changes": [
+    {
+        "Action": "Load",
+        "Target": "Maps/Luan125gui.HaleyandEmilysparentsroom_Haley_Parents_Room",
+        "FromFile": "assets/HaleyHouse2_{{Bedroom Version}}.tmx"
+    },
+    {
+        "Action": "EditData",
+        "Target": "Data/Locations",
+        "Entries": {
+            "{{ModId}}_Haley_Parents_Room": {
+                "DisplayName": "Haley_Parents_Room",
+                "CreateOnLoad": { "MapPath": "Maps/Luan125gui.HaleyandEmilysparentsroom_Haley_Parents_Room" },
+                "FormerLocationNames": [ "Custom_Luan.HaleyHouse2" ]
+                }
+            }
+        },
+        {
+			"Action": "EditMap",
+			"Target": "Maps/HaleyHouse",
+			"FromFile": "Assets/HaleyHouse1.tmx",
+			"ToArea": {
+				"X": 24,
+				"Y": 15,
+				"Width": 1,
+				"Height": 5
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/HaleyHouse",
+			"AddWarps": [
+				"24 19 Luan125gui.HaleyandEmilysparentsroom_Haley_Parents_Room 2 7"
+			]
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+			"Entries": {
+				"Luan.HaleyParents": "{{i18n: Luan.HaleyParents}}",
+				"Luan.HaleyParents1": "{{i18n: Luan.HaleyParents1}}",
+				"Luan.HaleyParents2": "{{i18n: Luan.HaleyParents2}}",
+				"Luan.HaleyParents3": "{{i18n: Luan.HaleyParents3}}",
+				"Luan.HaleyParents4": "{{i18n: Luan.HaleyParents4}}"
+			}
+		}
+	]
+}

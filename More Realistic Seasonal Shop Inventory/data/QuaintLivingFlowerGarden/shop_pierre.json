@@ -1,0 +1,306 @@
+{
+  "Changes": [
+  	//Standard Pierre
+    {
+    "Action": "EditData",
+    "Target": "Data/Shops",
+    "TargetField": [ "SeedShop", "Items" ],
+    "When": {"Pierre": "Standard"},
+    "Entries": {
+
+    "RSSI_PC.QL.FlowerGarden2_RandomSpring": {
+    "Id": "RSSI_PC.QL.FlowerGarden2_RandomSpring",
+    "ItemId": "RANDOM_ITEMS (O)",
+    "MaxItems": 1,
+    "Condition": "SEASON spring, SYNCED_RANDOM day RSSI_PC.QL.FlowerGarden2_RandomSpring 0.8",
+    "PerItemCondition": "ITEM_CONTEXT_TAG Target PC.QL.FlowerGarden2_season_spring",
+    "AvailableStock": 10,
+    "AvailableStockModifiers": [
+      {
+        "Modification": "Multiply",
+        "RandomAmount": [
+          1.5,
+          1.4,
+          1.3,
+          1.2,
+          1.1,
+          1.0,
+          0.9,
+          0.8,
+          0.7,
+          0.6,
+          0.5,
+          ]
+        }
+      ],
+    "IgnoreShopPriceModifiers": true,
+    "PriceModifiers": [
+      {
+        "Modification": "Multiply",
+        "Amount": 0.5
+        }
+      ]
+    },
+    "RSSI_PC.QL.FlowerGarden2_RandomSummer": {
+    "Id": "RSSI_PC.QL.FlowerGarden2_RandomSummer",
+    "ItemId": "RANDOM_ITEMS (O)",
+    "MaxItems": 1,
+    "Condition": "SEASON summer, SYNCED_RANDOM day RSSI_PC.QL.FlowerGarden2_RandomSummer 0.8",
+    "PerItemCondition": "ITEM_CONTEXT_TAG Target PC.QL.FlowerGarden2_season_summer",
+    "AvailableStock": 10,
+    "AvailableStockModifiers": [
+      {
+        "Modification": "Multiply",
+        "RandomAmount": [
+          1.5,
+          1.4,
+          1.3,
+          1.2,
+          1.1,
+          1.0,
+          0.9,
+          0.8,
+          0.7,
+          0.6,
+          0.5,
+          ]
+        }
+      ],
+    "IgnoreShopPriceModifiers": true,
+    "PriceModifiers": [
+      {
+        "Modification": "Multiply",
+        "Amount": 0.5
+        }
+      ]
+    },
+    "RSSI_PC.QL.FlowerGarden2_RandomFall": {
+    "Id": "RSSI_PC.QL.FlowerGarden2_RandomFall",
+    "ItemId": "RANDOM_ITEMS (O)",
+    "MaxItems": 1,
+    "Condition": "SEASON fall, SYNCED_RANDOM day RSSI_PC.QL.FlowerGarden2_RandomFall 0.8",
+    "PerItemCondition": "ITEM_CONTEXT_TAG Target PC.QL.FlowerGarden2_season_fall",
+    "AvailableStock": 10,
+    "AvailableStockModifiers": [
+      {
+        "Modification": "Multiply",
+        "RandomAmount": [
+          1.5,
+          1.4,
+          1.3,
+          1.2,
+          1.1,
+          1.0,
+          0.9,
+          0.8,
+          0.7,
+          0.6,
+          0.5,
+          ]
+        }
+      ],
+    "IgnoreShopPriceModifiers": true,
+    "PriceModifiers": [
+      {
+        "Modification": "Multiply",
+        "Amount": 0.5
+        }
+      ]
+    },
+    "RSSI_PC.QL.FlowerGarden2_RandomWinter": {
+    "Id": "RSSI_PC.QL.FlowerGarden2_RandomWinter",
+    "ItemId": "RANDOM_ITEMS (O)",
+    "MaxItems": 1,
+    "Condition": "SEASON winter, SYNCED_RANDOM day RSSI_PC.QL.FlowerGarden2_RandomWinter 0.8",
+    "PerItemCondition": "ITEM_CONTEXT_TAG Target PC.QL.FlowerGarden2_season_winter",
+    "AvailableStock": 10,
+    "AvailableStockModifiers": [
+      {
+        "Modification": "Multiply",
+        "RandomAmount": [
+          1.5,
+          1.4,
+          1.3,
+          1.2,
+          1.1,
+          1.0,
+          0.9,
+          0.8,
+          0.7,
+          0.6,
+          0.5,
+          ]
+        }
+      ],
+    "IgnoreShopPriceModifiers": true,
+    "PriceModifiers": [
+      {
+        "Modification": "Multiply",
+        "Amount": 0.5
+        }
+      ]
+    },
+    "RSSI_PC.QL.FlowerGarden2_Randomsapling": {
+    "Condition": "SYNCED_RANDOM day RSSI_PC.QL.FlowerGarden2_Randomsapling 0.6",
+    "Id": "RSSI_PC.QL.FlowerGarden2_Randomsapling",
+    "RandomItemId": [ "QL_AlamandaSapling", "QL_GardeniaSapling", "QL_HibiscusSapling", "QL_LilacSapling" ],
+    "AvailableStock": 1,
+    "IgnoreShopPriceModifiers": true,
+    "PriceModifiers": [
+        {
+          "Modification": "Multiply",
+          "Amount": 0.5
+            }
+          ]
+        }
+      }
+    },
+    //Hardmode Pierre
+    {
+    "Action": "EditData",
+    "Target": "Data/Shops",
+    "TargetField": [ "SeedShop", "Items" ],
+    "When": {"Pierre": "Hardmode"},
+    "Entries": {
+
+    "RSSI_PC.QL.FlowerGarden2_RandomSpring": {
+    "Id": "RSSI_PC.QL.FlowerGarden2_RandomSpring",
+    "ItemId": "RANDOM_ITEMS (O)",
+    "MaxItems": 1,
+    "Condition": "SEASON spring, SYNCED_RANDOM day RSSI_PC.QL.FlowerGarden2_RandomSpring 0.5",
+    "PerItemCondition": "ITEM_CONTEXT_TAG Target PC.QL.FlowerGarden2_season_spring",
+    "AvailableStock": 10,
+    "AvailableStockModifiers": [
+      {
+        "Modification": "Multiply",
+        "RandomAmount": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          ]
+        }
+      ],
+    "IgnoreShopPriceModifiers": true,
+    "PriceModifiers": [
+      {
+        "Modification": "Multiply",
+        "Amount": 0.5
+        }
+      ]
+    },
+    "RSSI_PC.QL.FlowerGarden2_RandomSummer": {
+    "Id": "RSSI_PC.QL.FlowerGarden2_RandomSummer",
+    "ItemId": "RANDOM_ITEMS (O)",
+    "MaxItems": 1,
+    "Condition": "SEASON summer, SYNCED_RANDOM day RSSI_PC.QL.FlowerGarden2_RandomSummer 0.5",
+    "PerItemCondition": "ITEM_CONTEXT_TAG Target PC.QL.FlowerGarden2_season_summer",
+    "AvailableStock": 10,
+    "AvailableStockModifiers": [
+      {
+        "Modification": "Multiply",
+        "RandomAmount": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          ]
+        }
+      ],
+    "IgnoreShopPriceModifiers": true,
+    "PriceModifiers": [
+      {
+        "Modification": "Multiply",
+        "Amount": 0.5
+        }
+      ]
+    },
+    "RSSI_PC.QL.FlowerGarden2_RandomFall": {
+    "Id": "RSSI_PC.QL.FlowerGarden2_RandomFall",
+    "ItemId": "RANDOM_ITEMS (O)",
+    "MaxItems": 1,
+    "Condition": "SEASON fall, SYNCED_RANDOM day RSSI_PC.QL.FlowerGarden2_RandomFall 0.5",
+    "PerItemCondition": "ITEM_CONTEXT_TAG Target PC.QL.FlowerGarden2_season_fall",
+    "AvailableStock": 10,
+    "AvailableStockModifiers": [
+      {
+        "Modification": "Multiply",
+        "RandomAmount": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          ]
+        }
+      ],
+    "IgnoreShopPriceModifiers": true,
+    "PriceModifiers": [
+      {
+        "Modification": "Multiply",
+        "Amount": 0.5
+        }
+      ]
+    },
+    "RSSI_PC.QL.FlowerGarden2_RandomWinter": {
+    "Id": "RSSI_PC.QL.FlowerGarden2_RandomWinter",
+    "ItemId": "RANDOM_ITEMS (O)",
+    "MaxItems": 1,
+    "Condition": "SEASON winter, SYNCED_RANDOM day RSSI_PC.QL.FlowerGarden2_RandomWinter 0.5",
+    "PerItemCondition": "ITEM_CONTEXT_TAG Target PC.QL.FlowerGarden2_season_winter",
+    "AvailableStock": 10,
+    "AvailableStockModifiers": [
+      {
+        "Modification": "Multiply",
+        "RandomAmount": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          ]
+        }
+      ],
+    "IgnoreShopPriceModifiers": true,
+    "PriceModifiers": [
+      {
+        "Modification": "Multiply",
+        "Amount": 0.5
+        }
+      ]
+    },
+    "RSSI_PC.QL.FlowerGarden2_Randomsapling": {
+    "Condition": "SYNCED_RANDOM day RSSI_PC.QL.FlowerGarden2_Randomsapling 0.3",
+    "Id": "RSSI_PC.QL.FlowerGarden2_Randomsapling",
+    "RandomItemId": [ "QL_AlamandaSapling", "QL_GardeniaSapling", "QL_HibiscusSapling", "QL_LilacSapling" ],
+    "AvailableStock": 1,
+    "IgnoreShopPriceModifiers": true,
+    "PriceModifiers": [
+      {
+        "Modification": "Multiply",
+        "Amount": 0.5
+        }
+      ]
+    }
+      }
+    },
+  ]
+}

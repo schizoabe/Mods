@@ -1,0 +1,473 @@
+{
+	"Changes": [
+/*=======================================================================================================================
+BEDROOM EDITS
+=======================================================================================================================*/
+	
+	{
+		"Action": "EditMap",
+		"Target": "Maps/AnimalShop",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Shane}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 21, "Y": 13 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/AnimalShop",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Marnie}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 15, "Y": 12 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Blacksmith",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Clint}} >= {{Minimum Hearts Bedroom}}": true,
+			"SDV-E": false
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 4, "Y": 9 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Blacksmith",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Clint}} >= {{Minimum Hearts Bedroom}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 4, "Y": 10 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/HaleyHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Haley}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 5, "Y": 13 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/HaleyHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Emily}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 16, "Y": 12 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Hospital",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Harvey}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 9, "Y": 5 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			},
+			{
+			"Position": { "X": 10, "Y": 5 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/JoshHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Alex}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 10, "Y": 9 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/JoshHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Evelyn}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 5, "Y": 9 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/JoshHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:George}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 5, "Y": 9 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/ManorHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Lewis}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 16, "Y": 9 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Saloon",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Gus}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 20, "Y": 9 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/SamHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Sam}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 12, "Y": 14 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/SamHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Jodi}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 17, "Y": 6 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/SamHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Kent}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 17, "Y": 6 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/ScienceHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Maru}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 7, "Y": 10 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/ScienceHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Robin}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 13, "Y": 10 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/ScienceHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Demetrius}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 13, "Y": 10 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/SebastianRoom",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Sebastian}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 1, "Y": 3 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/SeedShop",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Abigail}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 13, "Y": 11 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/SeedShop",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Caroline}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 20, "Y": 11 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/SeedShop",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Pierre}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 20, "Y": 11 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Trailer",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Penny}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 6, "Y": 7 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Trailer_big",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Penny}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 4, "Y": 18 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Trailer_big",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Pam}} >= {{Minimum Hearts Bedroom}}": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 20, "Y": 21 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+/*=======================================================================================================================
+SDV-E BEDROOM EDITS
+=======================================================================================================================*/	
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_ClaireHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Claire}} >= {{Minimum Hearts Bedroom}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 12, "Y": 13 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_JenkinsHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Olivia}} >= {{Minimum Hearts Bedroom}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 19, "Y": 17 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_JenkinsHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Victor}} >= {{Minimum Hearts Bedroom}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 33, "Y": 17 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_SophiaHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Sophia}} >= {{Minimum Hearts Bedroom}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 19, "Y": 14 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_SusanHouse",
+		"Update": "OnLocationChange",
+		"When": {
+			"query: {{Hearts:Susan}} >= {{Minimum Hearts Bedroom}}": true,
+			"SDV-E": true
+		},
+		"MapTiles": [
+			{
+			"Position": { "X": 22, "Y": 13 },
+			"Layer": "Buildings",
+			"SetProperties": { "Action": "Door" }
+			}
+		]
+	}
+	]
+}

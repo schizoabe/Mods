@@ -1,0 +1,68 @@
+{
+  "Changes": [
+  	//Standard Sandy
+    {
+    "Action": "EditData",
+    "Target": "Data/Shops",
+    "TargetField": [ "Sandy", "Items" ],
+    "When": {"Sandy": "Standard"},
+    "Fields": {
+
+    "QL_JasmineSeeds": {
+    "Condition": "SYNCED_RANDOM day QL_JasmineSeeds 0.6, SEASON spring summer, YEAR 2, WORLD_STATE_FIELD WeatherForTomorrow Rain",
+    "AvailableStock": 10,
+    "AvailableStockModifiers": [
+        {
+          "Modification": "Multiply",
+          "RandomAmount": [
+            1.5,
+            1.4,
+            1.3,
+            1.2,
+            1.1,
+            1.0,
+            0.9,
+            0.8,
+            0.7,
+            0.6,
+            0.5,
+            ]
+          }
+        ],
+    "IgnoreShopPriceModifiers": true                  
+        }
+      }
+    },
+    //Hardmode Sandy
+    {
+    "Action": "EditData",
+    "Target": "Data/Shops",
+    "TargetField": [ "Sandy", "Items" ],
+    "When": {"Sandy": "Hardmode"},
+    "Fields": {
+
+    "QL_JasmineSeeds": {
+    "Condition": "SYNCED_RANDOM day QL_JasmineSeeds 0.3, SEASON spring summer, YEAR 2, WORLD_STATE_FIELD WeatherForTomorrow Rain",
+    "AvailableStock": 10,
+    "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,
+              ]
+            }
+          ],
+    "IgnoreShopPriceModifiers": true
+        }
+      }        
+    }
+  ]
+}

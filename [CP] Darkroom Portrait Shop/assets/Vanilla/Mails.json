@@ -1,0 +1,115 @@
+{
+	"Changes":[
+		{
+            "LogName": "Default Mails",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+				//Intro Mails
+                "AgentLyoko.PortraitShopOpen": "{{i18n:PortraitShopOpen.Body}}[#]{{i18n:PortraitShopOpen.Title}}",
+				"AgentLyoko.PortraitShopOpenAlt": "{{i18n:PortraitShopOpen.Alt}}[#]{{i18n:PortraitShopOpen.AltTitle}}",
+				
+				//Trigger Mails (Add furniture item given in mail)
+				
+				"AgentLyoko.AbigailPortraitMail": "{{i18n:Abigail.PortraitMail}}%item id (F)AbigailPortrait 1 %%[#]{{i18n:Abigail.PortraitTitle}}",
+				"AgentLyoko.LeahPortraitMail": "{{i18n:Leah.PortraitMail}}%item id (F)LeahPortrait 1 %%[#]{{i18n:Leah.PortraitTitle}}",
+				"AgentLyoko.PennyPortraitMail": "{{i18n:Penny.PortraitMail}}%item id (F)PennyPortrait 1 %%[#]{{i18n:Penny.PortraitTitle}}",
+				"AgentLyoko.MaruPortraitMail": "{{i18n:Maru.PortraitMail}}%item id (F)MaruPortrait 1 %%[#]{{i18n:Maru.PortraitTitle}}",
+				"AgentLyoko.HaleyPortraitMail": "{{i18n:Haley.PortraitMail}}%item id (F)HaleyPortrait 1 %%[#]{{i18n:Haley.PortraitTitle}}",
+				"AgentLyoko.EmilyPortraitMail": "{{i18n:Emily.PortraitMail}}%item id (F)EmilyPortrait 1 %%[#]{{i18n:Emily.PortraitTitle}}",
+				"AgentLyoko.SebastianPortraitMail": "{{i18n:Sebastian.PortraitMail}}%item id (F)SebastianPortrait 1 %%[#]{{i18n:Sebastian.PortraitTitle}}",
+				"AgentLyoko.ElliottPortraitMail": "{{i18n:Elliott.PortraitMail}}%item id (F)ElliottPortrait 1 %%[#]{{i18n:Elliott.PortraitTitle}}",
+				"AgentLyoko.SamPortraitMail": "{{i18n:Sam.PortraitMail}}%item id (F)SamPortrait 1 %%[#]{{i18n:Sam.PortraitTitle}}",
+				"AgentLyoko.HarveyPortraitMail": "{{i18n:Harvey.PortraitMail}}%item id (F)HarveyPortrait 1 %%[#]{{i18n:Harvey.PortraitTitle}}",
+				"AgentLyoko.AlexPortraitMail": "{{i18n:Alex.PortraitMail}}%item id (F)AlexPortrait 1 %%[#]{{i18n:Alex.PortraitTitle}}",
+				"AgentLyoko.ShanePortraitMail": "{{i18n:Shane.PortraitMail}}%item id (F)ShanePortrait 1 %%[#]{{i18n:Shane.PortraitTitle}}",
+				"AgentLyoko.KrobusPortraitMail": "[letterbg 0]{{i18n:Krobus.PortraitMail}}%item id (F)KrobusPortrait 1 %%[#]{{i18n:Krobus.PortraitTitle}}",
+				
+				//PPAF variants should be put in their own file so that tokens can be used.
+				
+				"AgentLyoko.AbigailDivorcedPortrait": "{{i18n:DivorceMail.Abigail |FarmName={{FarmName}} }}%item id (F)AbigailPortrait 1 %%[#]{{i18n:Abigail.DivorcePortrait}}",
+				"AgentLyoko.LeahDivorcedPortrait": "{{i18n:DivorceMail.Leah |FarmName={{FarmName}} }}%item id (F)LeahPortrait 1 %%[#]{{i18n:Leah.DivorcePortrait}}",
+				"AgentLyoko.PennyDivorcedPortrait": "{{i18n:DivorceMail.Penny |FarmName={{FarmName}} }}%item id (F)PennyPortrait 1 %%[#]{{i18n:Penny.DivorcePortrait}}",
+				"AgentLyoko.MaruDivorcedPortrait": "{{i18n:DivorceMail.Maru |FarmName={{FarmName}} }}%item id (F)MaruPortrait 1 %%[#]{{i18n:Maru.DivorcePortrait}}",
+				"AgentLyoko.HaleyDivorcedPortrait": "{{i18n:DivorceMail.Haley |FarmName={{FarmName}} }}%item id (F)HaleyPortrait 1 %%[#]{{i18n:Haley.DivorcePortrait}}",
+				"AgentLyoko.EmilyDivorcedPortrait": "{{i18n:DivorceMail.Emily |FarmName={{FarmName}} }}%item id (F)EmilyPortrait 1 %%[#]{{i18n:Emily.DivorcePortrait}}",
+				
+				"AgentLyoko.SebastianDivorcedPortrait": "{{i18n:DivorceMail.Sebastian |FarmName={{FarmName}} }}%item id (F)SebastianPortrait 1 %%[#]{{i18n:Sebastian.DivorcePortrait}}",
+				"AgentLyoko.ElliottDivorcedPortrait": "{{i18n:DivorceMail.Elliott |FarmName={{FarmName}} }}%item id (F)ElliottPortrait 1 %%[#]{{i18n:Elliott.DivorcePortrait}}",
+				"AgentLyoko.SamDivorcedPortrait": "{{i18n:DivorceMail.Sam |FarmName={{FarmName}} }}%item id (F)SamPortrait 1 %%[#]{{i18n:Sam.DivorcePortrait}}",
+				"AgentLyoko.HarveyDivorcedPortrait": "{{i18n:DivorceMail.Harvey |FarmName={{FarmName}} }}%item id (F)HarveyPortrait 1 %%[#]{{i18n:Harvey.DivorcePortrait}}",
+				"AgentLyoko.AlexDivorcedPortrait": "{{i18n:DivorceMail.Alex |FarmName={{FarmName}} }}%item id (F)AlexPortrait 1 %%[#]{{i18n:Alex.DivorcePortrait}}",
+				"AgentLyoko.ShaneDivorcedPortrait": "{{i18n:DivorceMail.Shane |FarmName={{FarmName}} }}%item id (F)ShanePortrait 1 %%[#]{{i18n:Shane.DivorcePortrait}}",
+				
+			},
+        },
+		
+		{
+            "LogName": "Default Spouse Mails (No Variation for Haley Marriage)",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+				
+					//Spouse Mail Variants
+					
+				"AgentLyoko.AbigailSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Abigail.Intro}}^^{{i18n:Haley.SpousePortrait.Abigail}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} }}%item id (F)AbigailPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Abigail}}",
+				"AgentLyoko.LeahSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Leah.Intro}}^^{{i18n:Haley.SpousePortrait.Leah}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} }}%item id (F)LeahPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Leah}}",
+				"AgentLyoko.PennySpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Penny.Intro}}^^{{i18n:Haley.SpousePortrait.Penny}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} }}%item id (F)PennyPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Penny}}",
+				"AgentLyoko.MaruSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Maru.Intro}}^^{{i18n:Haley.SpousePortrait.Maru}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} }}%item id (F)MaruPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Maru}}",
+				
+				"AgentLyoko.EmilySpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Emily.Intro}}^^{{i18n:Haley.SpousePortrait.Emily |FarmName={{FarmName}} }}%item id (F)EmilyPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Emily}}",
+				
+				"AgentLyoko.SebastianSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Sebastian.Intro}}^^{{i18n:Haley.SpousePortrait.Sebastian}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} }}%item id (F)SebastianPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Sebastian}}",
+				"AgentLyoko.ElliottSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Elliott.Intro}}^^{{i18n:Haley.SpousePortrait.Elliott}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} }}%item id (F)ElliottPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Elliott}}",
+				"AgentLyoko.SamSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Sam.Intro}}^^{{i18n:Haley.SpousePortrait.Sam}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} }}%item id (F)SamPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Sam}}",
+				"AgentLyoko.HarveySpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Harvey.Intro}}^^{{i18n:Haley.SpousePortrait.Harvey}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} }}%item id (F)HarveyPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Harvey}}",
+				"AgentLyoko.AlexSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Alex.Intro}}^^{{i18n:Haley.SpousePortrait.Alex}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} }}%item id (F)AlexPortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Alex}}",
+				"AgentLyoko.ShaneSpousePortraitMail": "{{i18n:Haley.SpousePortrait.Married.Shane.Intro}}^^{{i18n:Haley.SpousePortrait.Shane}}^^{{i18n:Haley.SpouseLetterEnd.{{HaleyRelationship}} }}%item id (F)ShanePortrait 1 %%[#]{{i18n:Haley.SpousePortraitTitle.Shane}}",
+				
+				"AgentLyoko.HaleySpousePortraitMail": "{{i18n:Emily.SpousePortrait}}%item id (F)HaleyPortrait 1 %%[#]{{i18n:Emily.SpousePortraitTitle}}",
+				
+			},
+			"When": {
+				"HaleyRelationship": "Default, Married",
+			},
+        },
+		
+		{
+            "LogName": "Krobus Roommate Letter if NOT married to Haley",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+				"AgentLyoko.KrobusRoommatePortraitMail": "[letterbg 0]{{i18n:Haley.RoommatePortrait.Married.Krobus.Intro}}^^{{i18n:Haley.RoommatePortrait.Krobus}}%item id (F)KrobusPortrait 1 %%[#]{{i18n:Haley.RoommatePortraitTitle.Krobus}}",
+			},
+			"When": {
+				"HaleyRelationship": "Default",
+			},
+        },
+		
+		{
+            "LogName": "Krobus Roommate Letter if also married to Haley (or housemated)",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+				"AgentLyoko.KrobusPortraitMail": "[letterbg 0]{{i18n:Krobus.PortraitMail.HaleyMarried}}%item id (F)KrobusPortrait 1 %%[#]{{i18n:Krobus.PortraitTitle}}",
+				"AgentLyoko.KrobusRoommatePortraitMail": "[letterbg 0]{{i18n:Haley.RoommatePortrait.Married.Krobus.Intro}}^^{{i18n:Haley.RoommatePortrait.Krobus.HaleyMarried}}%item id (F)KrobusPortrait 1 %%[#]{{i18n:Haley.RoommatePortraitTitle.Krobus}}",
+				
+			},
+			"When": {
+				"HaleyRelationship": "Married, Housemate", //Should be platonic either way.
+			},
+        },
+		
+		{
+            "LogName": "Alternate Intro",
+			"Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+				"AgentLyoko.PortraitShopOpen": "{{i18n:PortraitShopOpen.Alt}}[#]{{i18n:PortraitShopOpen.AltTitle}}",	
+			},
+			"When": {
+				"ShopType": "immediate",
+			},
+        },
+    ]
+}

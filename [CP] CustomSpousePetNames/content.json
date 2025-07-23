@@ -1,0 +1,42 @@
+{
+  "Format": "2.3.0",
+  "ConfigSchema": {
+        "StardropFix": {
+            "AllowValues": "true, false",
+            "Default": false
+        }
+    },
+  "Changes": [
+	{
+		"Action": "EditData",
+		"Target": "Strings/StringsFromCSFiles",
+		"Entries": {
+			"NPC.cs.4507": "Pookie",
+			"NPC.cs.4508": "Love",
+			"NPC.cs.4509": "Hot Stuff",
+			"NPC.cs.4510": "Cuddlebug",
+			"NPC.cs.4511": "Hunky",
+			"NPC.cs.4512": "Peach", 
+			"NPC.cs.4513": "Cutie",
+			"NPC.cs.4514": "Ducky",
+			"NPC.cs.4515": "Handsome",
+			"NPC.cs.4516": "Darling",
+			"NPC.cs.4517": "Honey",
+			"NPC.cs.4518": "Dear",
+			"NPC.cs.4519": "Sweetie",
+			"NPC.cs.4522": "Hun",
+			"NPC.cs.4523": "Sweetheart",
+		},
+	},
+	{
+		"Action": "EditData",
+		"Target": "Strings/StringsFromCSFiles",
+		"When": {
+			"StardropFix": true,
+		},
+		"Entries": {
+			"NPC.cs.4001": "Honey... I wanted to give you that fruit as a symbol of my love.",
+		},
+	},	
+]
+}

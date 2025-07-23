@@ -1,0 +1,419 @@
+{
+  "Format": "2.5.0",
+
+  "Changes": [
+    
+    // attic
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRAttic": {
+          "DisplayName": "Attic",
+          "DefaultArrivalTile": {
+            "X": 7, "Y": 7
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 7, "Y": 7
+          },
+          "ArrivalDirection_T0": 2,
+          "ArrivalTile_T1": {
+            "X": 6, "Y": 7
+          },
+          "ArrivalDirection_T1": 2,
+          "ArrivalTile_T2": {
+            "X": 3, "Y": 6
+          },
+          "ArrivalDirection_T2": 2,
+          "MapAsset_T0": "Maps/PIF/DLX.CRAtticT0",
+          "MapAsset_T1": "Maps/PIF/DLX.CRAtticT1",
+          "MapAsset_T2": "Maps/PIF/DLX.CRAtticT2",
+          "Preview": "CR_Attic_Preview",
+          "Group": "Tiny Rooms 1.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRAtticT0, Maps/PIF/DLX.CRAtticT1, Maps/PIF/DLX.CRAtticT2",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_Attic_Preview",
+      "FromFile": "assets/Previews/Preview_Attic.png"
+    },
+    
+    // basement
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRBasement": {
+          "DisplayName": "Basement",
+          "DefaultArrivalTile": {
+            "X": 16, "Y": 8
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 16, "Y": 8
+          },
+          "ArrivalDirection_T0": 2,
+          "ArrivalTile_T1": {
+            "X": 16, "Y": 8
+          },
+          "ArrivalDirection_T1": 2,
+          "MapAsset_T0": "Maps/PIF/DLX.CRBasementT0",
+          "MapAsset_T1": "Maps/PIF/DLX.CRBasementT1",
+          "Preview": "CR_Basement_Preview",
+          "Group": "Tiny Rooms 2.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRBasementT0, Maps/PIF/DLX.CRBasementT1",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_Basement_Preview",
+      "FromFile": "assets/Previews/Preview_Basement.png"
+    },
+
+    // boiler room
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRBoiler": {
+          "DisplayName": "Boiler Room",
+          "DefaultArrivalTile": {
+            "X": 14, "Y": 13
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 14, "Y": 13
+          },
+          "ArrivalTile_T1": {
+            "X": 16, "Y": 13
+          },
+          "MapAsset_T0": "Maps/PIF/DLX.CRBoilerT0",
+          "MapAsset_T1": "Maps/PIF/DLX.CRBoilerT1",
+          "Preview": "CR_Boiler_Preview",
+          "Group": "Tiny Rooms 1.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRBoilerT0, Maps/PIF/DLX.CRBoilerT1",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_Boiler_Preview",
+      "FromFile": "assets/Previews/Preview_Boiler.png"
+    },
+
+    // closet
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRCloset": {
+          "DisplayName": "Closet",
+          "DefaultArrivalTile": {
+            "X": 7, "Y": 11
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 7, "Y": 11
+          },
+          "ArrivalTile_T1": {
+            "X": 7, "Y": 12
+          },
+          "ArrivalTile_T2": {
+            "X": 6, "Y": 12
+          },
+          "MapAsset_T0": "Maps/PIF/DLX.CRClosetT0",
+          "MapAsset_T1": "Maps/PIF/DLX.CRClosetT1",
+          "MapAsset_T2": "Maps/PIF/DLX.CRClosetT2",
+          "Preview": "CR_Closet_Preview",
+          "Group": "Tiny Rooms 1.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRClosetT0, Maps/PIF/DLX.CRClosetT1, Maps/PIF/DLX.CRClosetT2",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_Closet_Preview",
+      "FromFile": "assets/Previews/Preview_Closet.png"
+    },
+
+    // corridor
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRCorridor": {
+          "DisplayName": "Corridor",
+          "DefaultArrivalTile": {
+            "X": 7, "Y": 10
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 7, "Y": 10
+          },
+          "MapAsset_T0": "Maps/PIF/DLX.CRCorridorT0",
+          "Preview": "CR_Corridor_Preview",
+          "Group": "Tiny Rooms 2.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRCorridorT0",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_Corridor_Preview",
+      "FromFile": "assets/Previews/Preview_Corridor.png"
+    },
+
+     // little attic
+     {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRAtticLittle": {
+          "DisplayName": "Little Attic",
+          "DefaultArrivalTile": {
+            "X": 4, "Y": 11
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 4, "Y": 11
+          },
+          "ArrivalDirection_T0": 1,
+          "MapAsset_T0": "Maps/PIF/DLX.CRAtticLittleT0",
+          "Preview": "CR_AtticLittle_Preview",
+          "Group": "Tiny Rooms 2.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRAtticLittleT0",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_AtticLittle_Preview",
+      "FromFile": "assets/Previews/Preview_AtticLittle.png"
+    },
+
+    
+    // nook
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRNookRoom": {
+          "DisplayName": "Nook Room",
+          "DefaultArrivalTile": {
+            "X": 14, "Y": 12
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 14, "Y": 12
+          },
+          "ArrivalTile_T1": {
+            "X": 14, "Y": 12
+          },
+          "MapAsset_T0": "Maps/PIF/DLX.CRNookT0",
+          "MapAsset_T1": "Maps/PIF/DLX.CRNookT1",
+          "Preview": "CR_Nook_Preview",
+          "Group": "Tiny Rooms 2.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRNookT0, Maps/PIF/DLX.CRNookT1",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_Nook_Preview",
+      "FromFile": "assets/Previews/Preview_Nook.png"
+    },
+
+    // storeroom
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRStoreroom": {
+          "DisplayName": "Storeroom",
+          "DefaultArrivalTile": {
+            "X": 5, "Y": 15
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 5, "Y": 15
+          },
+          "ArrivalTile_T1": {
+            "X": 5, "Y": 15
+          },
+          "MapAsset_T0": "Maps/PIF/DLX.CRStoreroomT0",
+          "MapAsset_T1": "Maps/PIF/DLX.CRStoreroomT1",
+          "Preview": "CR_Storeroom_Preview",
+          "Group": "Tiny Rooms 2.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRStoreroomT0, Maps/PIF/DLX.CRStoreroomT1",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_Storeroom_Preview",
+      "FromFile": "assets/Previews/Preview_Storeroom.png"
+    },
+
+    // tiny room 1
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRTiny1": {
+          "DisplayName": "Tiny Room 1",
+          "DefaultArrivalTile": {
+            "X": 4, "Y": 11
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 4, "Y": 11
+          },
+          "MapAsset_T0": "Maps/PIF/DLX.CRTiny1T0",
+          "Preview": "CR_Tiny1_Preview",
+          "Group": "Tiny Rooms 1.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRTiny1T0",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_Tiny1_Preview",
+      "FromFile": "assets/Previews/Preview_Tiny1.png"
+    },
+
+    // tiny room 2
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRTiny2": {
+          "DisplayName": "Tiny Room 2",
+          "DefaultArrivalTile": {
+            "X": 15, "Y": 8
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 15, "Y": 8
+          },
+          "MapAsset_T0": "Maps/PIF/DLX.CRTiny2T0",
+          "Preview": "CR_Tiny2_Preview",
+          "Group": "Tiny Rooms 1.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRTiny2T0",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_Tiny2_Preview",
+      "FromFile": "assets/Previews/Preview_Tiny2.png"
+    },
+
+    // tiny room 3
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRTiny3": {
+          "DisplayName": "Tiny Room 3",
+          "DefaultArrivalTile": {
+            "X": 8, "Y": 13
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 8, "Y": 13
+          },
+          "MapAsset_T0": "Maps/PIF/DLX.CRTiny3T0",
+          "Preview": "CR_Tiny3_Preview",
+          "Group": "Tiny Rooms 2.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRTiny3T0",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_Tiny3_Preview",
+      "FromFile": "assets/Previews/Preview_Tiny3.png"
+    },
+
+    // tiny room 4
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "DLX.CRTiny4": {
+          "DisplayName": "Tiny Room 4",
+          "DefaultArrivalTile": {
+            "X": 13, "Y": 14
+          },
+          "ExcludeFromNpcPathfinding": true,
+          "ArrivalTile_T0": {
+            "X": 13, "Y": 14
+          },
+          "MapAsset_T0": "Maps/PIF/DLX.CRTiny4T0",
+          "Preview": "CR_Tiny4_Preview",
+          "Group": "Tiny Rooms 2.0"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/PIF/DLX.CRTiny4T0",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "CR_Tiny4_Preview",
+      "FromFile": "assets/Previews/Preview_Tiny4.png"
+    }
+  ]
+}
+
+

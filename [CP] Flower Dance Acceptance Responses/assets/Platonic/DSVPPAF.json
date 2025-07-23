@@ -1,0 +1,20 @@
+{
+	"Changes":[
+		{
+			"LogName": "Haley - Flower Dance, Best Friends",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Haley.Friends.Accept}}",
+			},
+			"When": {
+				"relationship:Haley": "dating",
+				"HasMod|contains=Amaranthacyan.PPAFSMAPI": true,
+                "HasMod|contains=DSV.Core": true,
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+				"DSV.Core/FlowerQueen |contains= Haley": false,
+				"Haley": "enabled",
+			},
+		},
+	],
+}

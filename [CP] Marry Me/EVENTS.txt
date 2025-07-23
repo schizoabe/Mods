@@ -1,0 +1,165 @@
+## EVENT TRIGGERS and FAQs ##
+
+This is a complete list of all events in version 1.1
+
+## FULL EVENT LIST FOR KANTRIP'S MARRY ME: REVERSE PROPOSALS MOD ##
+
+### WHITE EVENTS
+ALL of the white proposal events have the following conditions:
+* Must be dating the NPC
+* Must be at 10 hearts with the NPC
+* Must have seen the 10 heart event for the NPC (does not apply to modded NPCs)
+* Must have at least one free slot in the player's inventory for the mermaid pendant
+* Weather must be SUNNY
+* Must have not seen the BLACK proposal event for that suitor
+* Player must not be married or engaged to anyone else
+
+About half of the vanilla suitors will also require an invitation letter. Start checking your mailbox on sunny days after seeing the 10 heart event for that suitor.
+
+The rest don't require an invitation, but they won't trigger until after the 10 heart event has been seen.
+
+//ABIGAIL
+Event ID: Kantrip.MarryMe_Proposal_Abigail
+Location: Forest
+Letter: Invitation letter required (see above)
+Time: 10AM - 6PM
+Summary: Carving history
+
+//ALEX
+Event ID: Kantrip.MarryMe_Proposal_Alex
+Location: Town
+Letter: Invitation letter required (see above)
+Time: 10AM - 6PM
+Summary: Post-mortem introduction
+
+//ELLIOTT
+Event ID: Kantrip.MarryMe_Proposal_Elliott
+Location: Beach
+Letter: Invitation letter required (see above)
+Time: 8PM - 11PM
+Summary: Moon dance
+
+//EMILY
+Event ID: Kantrip.MarryMe_Proposal_Emily
+Location: Beach
+Letter: None
+Time: 8PM - 11PM
+Summary: Stargazing
+
+//HALEY
+Event ID: Kantrip.MarryMe_Proposal_Haley
+Location: Town
+Letter: None
+Time: 12PM - 6PM
+Summary: Making memories
+
+//HARVEY
+Event ID: Kantrip.MarryMe_Proposal_Harvey
+Location: Clinic
+Letter: Invitation letter required (see above)
+Time: 6PM - 10PM
+Summary: Smooth jazz
+
+//LEAH
+Event ID: Kantrip.MarryMe_Proposal_Leah
+Location: Forest
+Letter: Invitation letter required (see above)
+Time: 9AM - 6PM
+Season: NOT winter
+Special: TWO inventory slots must be open
+Summary: Waterfall picnic
+
+//MARU
+Event ID: Kantrip.MarryMe_Proposal_Maru
+Location: Town
+Letter: None
+Time: 8PM - 11PM
+Summary: Wishing stars
+
+//PENNY
+Event ID: Kantrip.MarryMe_Proposal_Penny
+Location: Town
+Letter: None
+Time (spring): 8PM - 10PM
+Time (summer): 8PM - 10PM
+Time (fall):   7PM - 9PM
+Time (winter): 6PM - 8PM
+Summary: Little helpers
+
+//SAM
+Event ID: Kantrip.MarryMe_Proposal_Sam
+Location: BusStop
+Letter: None
+Time: 3PM - 6PM
+Special: TWO inventory slots must be open
+Summary: Flustered
+
+//SEBASTIAN
+Event ID: Kantrip.MarryMe_Proposal_Sebastian
+Location: Mountain
+Letter: Invitation letter required (see above)
+Time: 7PM - 10PM
+Season: NOT winter
+Summary: Frog watching
+
+
+//SHANE
+Event ID: Kantrip.MarryMe_Proposal_Sebastian
+Location: Forest
+Letter: Invitation letter required (see above)
+Time: 8PM - 11PM
+Summary: Light conversation
+
+
+//DEFAULT (modded NPCs)
+Event ID: Kantrip.MarryMe_Proposal_{{Suitor}}
+Location: Town
+Time: 10AM - 5PM
+Season: NOT winter
+Summary: A short conversation by the wishing well
+NOTE: This event will only play if it has been enabled by the NPC's mod author. If you would like to see it for your chosen NPC, go ask the mod author to add support.
+
+
+### BLACK EVENTS
+Black heart proposals trigger when the player is at 10 hearts with a suitor but is *also* dating someone else at the same time. These can be turned off via the mod config menu.
+
+Note: YOU CAN ONLY SEE ONE BLACK HEART PROPOSAL PER SAVE (might change this if enough people want it)
+
+Required:
+* Must be dating the NPC
+* Must be at 10 hearts with the NPC
+* Must have seen the 10 heart event for the NPC (does not apply to modded NPCs)
+* Must have at least one free slot in the player's inventory for the mermaid pendant
+* Must have not seen the WHITE proposal event for that suitor
+* Player must not be married or engaged to anyone else
+
+Half of the proposals are in sunny/windy weather, half are in rain/storm/snowy weather.
+
+//SUNNY Suitors
+* Alex
+* Abigail
+* Haley
+* Harvey
+* Leah
+* Maru
+* ALL modded NPCs
+
+//RAINY Suitors
+* Elliott
+* Emily
+* Penny
+* Sam
+* Sebastian
+* Shane
+
+
+//THE DESPERATE PROPOSAL
+Event ID: Kantrip.OlderSebastian_Proposal_Black
+Config: Black events enabled
+Time: 6AM - 12AM (midnight)
+Weather: Varies by suitor (see above)
+Have Seen: The suitor's 10 heart event (except modded NPCs)
+Location: Bus Stop
+NOTE: This event will only play for modded NPCs if it has been enabled by an NPC's mod author. If you would like to see it for your chosen NPC, go ask the author to add support.
+
+

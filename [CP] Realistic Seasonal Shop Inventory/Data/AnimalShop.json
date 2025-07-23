@@ -1,0 +1,641 @@
+{
+ "Changes": [
+ 
+ //standard
+ 
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "AnimalShop",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)178": null,
+	  "(BC)104": null,
+	  "(BC)45": null,
+	  "(F)Doghouse": null,
+	  "(F)DarkDoghouse": null,
+	  "(F)CatTree": null,
+	  "(F)DarkCatTree": null,
+	  "(F)BirdHouse": null,
+	  "(BC)165": null,
+	  
+	  
+	  "boringvlln.rshops_MHay": {
+      "Id": "boringvlln.rshops_MHay",
+	  "ItemId": "(O)178",
+	  "Price": 50,
+	  "AvailableStock": 50,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MEggSmol": {
+		  "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MEggSmol",
+	  "RandomItemId": [ "(O)176", "(O)180" ],
+	  "Price": 100,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MEggSmolComm": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MEggSmolComm",
+	  "RandomItemId": [ "(O)176", "(O)180" ],
+	  "Price": 200,
+	  "AvailableStock": 30,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MEggBig": {
+		  "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MEggBig",
+	  "RandomItemId": [ "(O)174", "(O)182" ],
+	  "Price": 200,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MEggBigComm": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MEggBigComm",
+	  "RandomItemId": [ "(O)174", "(O)182" ],
+	  "Price": 300,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MMilk": {
+		   "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MMilk",
+	  "RandomItemId": [ "(O)184", "(O)186" ],
+	  "Price": 300,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MMilkComm": {
+		   "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MMilkComm",
+	  "RandomItemId": [ "(O)184", "(O)186" ],
+	  "Price": 400,
+	  "AvailableStock": 15,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MGMilk": {
+		   "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MGMilk",
+	  "RandomItemId": [ "(O)436", "(O)438" ],
+	  "Price": 500,
+	   "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,				
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MGMilkComm": {
+		   "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MGMilkComm",
+	  "RandomItemId": [ "(O)436", "(O)438" ],
+	  "Price": 600,
+	  "AvailableStock": 8,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MCheese": {
+		   "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MCheese",
+	  "RandomItemId": [ "(O)424", "(O)426" ],
+	  "Price": 2000,
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MCheeseComm": {
+		   "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MCheeseComm",
+	  "RandomItemId": [ "(O)424", "(O)426" ],
+	  "Price": 3000,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MFloof": {
+      "Id": "boringvlln.rshops_MFloof",
+	  "RandomItemId": [ "(O)440", "(O)446", "(O)444" ],
+	  "Price": 1000,	  
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,	
+				4,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MarnieFurn1": {
+		  "Condition": "SYNCED_RANDOM day boringvlln.rshops_MarnieFurn1 0.6",
+      "Id": "boringvlln.rshops_MarnieFurn1",
+	  "RandomItemId": [ "(BC)104", "(BC)45" ],
+	  "Price": 1000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_MarnieFurn2": {
+		   "Condition": "SYNCED_RANDOM day boringvlln.rshops_MarnieFurn2 0.6",
+      "Id": "boringvlln.rshops_MarnieFurn2",
+	  "RandomItemId": [ "(F)Doghouse", "(F)DarkDoghouse", "(F)CatTree", "(F)DarkCatTree", "(F)BirdHouse" ],
+	  "Price": 5000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GrabPet": {
+		  "Condition": "SYNCED_RANDOM day boringvlln.rshops_MarnieFurn3 0.05, PLAYER_FARMING_LEVEL Current 10",
+      "Id": "boringvlln.rshops_GrabPet",
+	  "RandomItemId": [ "(BC)165", "(BC)272" ],
+	  "TradeItemId": "(O)789",
+        "TradeItemAmount": 1,
+        "Price": -1,
+	  "AvailableStock": 1,
+	  },
+ },
+  "When": { "AnimalShop": "standard" }
+},
+
+//hardmode
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "AnimalShop",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)178": null,
+	  "(BC)104": null,
+	  "(BC)45": null,
+	  "(F)Doghouse": null,
+	  "(F)DarkDoghouse": null,
+	  "(F)CatTree": null,
+	  "(F)DarkCatTree": null,
+	  "(F)BirdHouse": null,
+	  "(BC)165": null,
+	  
+	  "boringvlln.rshops_MHay": {
+      "Id": "boringvlln.rshops_MHay",
+	  "ItemId": "(O)178",
+	  "Price": 200,
+	  "AvailableStock": 50,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MEggSmol": {
+		  "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MEggSmol",
+	  "RandomItemId": [ "(O)176", "(O)180" ],
+	  "Price": 100,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MEggSmolComm": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MEggSmolComm",
+	  "RandomItemId": [ "(O)176", "(O)180" ],
+	  "Price": 200,
+	  "AvailableStock": 30,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MEggBig": {
+		  "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MEggBig",
+	  "RandomItemId": [ "(O)174", "(O)182" ],
+	  "Price": 200,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MEggBigComm": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MEggBigComm",
+	  "RandomItemId": [ "(O)174", "(O)182" ],
+	  "Price": 300,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MMilk": {
+		   "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MMilk",
+	  "RandomItemId": [ "(O)184", "(O)186" ],
+	  "Price": 300,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MMilkComm": {
+		   "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MMilkComm",
+	  "RandomItemId": [ "(O)184", "(O)186" ],
+	  "Price": 400,
+	  "AvailableStock": 15,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MGMilk": {
+		   "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MGMilk",
+	  "RandomItemId": [ "(O)436", "(O)438" ],
+	  "Price": 500,	  
+	   "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,			
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MGMilkComm": {
+		   "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MGMilkComm",
+	  "RandomItemId": [ "(O)436", "(O)438" ],
+	  "Price": 600,
+	  "AvailableStock": 8,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MCheese": {
+		   "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MCheese",
+	  "RandomItemId": [ "(O)424", "(O)426" ],
+	  "Price": 2000,
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MCheeseComm": {
+		   "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_MCheeseComm",
+	  "RandomItemId": [ "(O)424", "(O)426" ],
+	  "Price": 3000,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	   "boringvlln.rshops_MFloof": {
+      "Id": "boringvlln.rshops_MFloof",
+	  "RandomItemId": [ "(O)440", "(O)446", "(O)444" ],
+	  "Price": 1000,	  
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,				
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MarnieFurn1": {
+		  "Condition": "SYNCED_RANDOM day boringvlln.rshops_MarnieFurn1 0.3",
+      "Id": "boringvlln.rshops_MarnieFurn1",
+	  "RandomItemId": [ "(BC)104", "(BC)45" ],
+	  "Price": 2000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_MarnieFurn2": {
+		   "Condition": "SYNCED_RANDOM day boringvlln.rshops_MarnieFurn2 0.3",
+      "Id": "boringvlln.rshops_MarnieFurn2",
+	  "RandomItemId": [ "(F)Doghouse", "(F)DarkDoghouse", "(F)CatTree", "(F)DarkCatTree", "(F)BirdHouse" ],
+	  "Price": 10000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GrabPet": {
+		  "Condition": "SYNCED_RANDOM day boringvlln.rshops_MarnieFurn3 0.01, PLAYER_FARMING_LEVEL Current 10",
+      "Id": "boringvlln.rshops_GrabPet",
+	  "RandomItemId": [ "(BC)165", "(BC)272" ],
+	  "TradeItemId": "(O)789",
+        "TradeItemAmount": 1,
+        "Price": -1,
+	  "AvailableStock": 1,
+	  },
+  },	  
+  "When": { "AnimalShop": "hardmode" }
+},
+]
+}

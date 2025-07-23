@@ -1,0 +1,473 @@
+{
+    "Changes": [
+///ADDING FRUIT AND NUTS
+ {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "FOF_Bramble_Berry": {
+                    "Name": "Bramble Berry",
+					"DisplayName": "{{i18n:Bramble-Berry.name}}",
+					"Description": "{{i18n:Bramble-Berry.description}}",
+                    "Price": 14,
+                    "Type": "Fruit",
+                    "Category": -79,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 0,
+                    "Edibility": 15,
+                    "ContextTags": [ "color_dark_blue", "fruit_item" ]
+                },
+                "FOF_Crackle_Apple": {
+                    "Name": "Crackle Apple",
+					"DisplayName": "{{i18n:Crackle-Apple.name}}",
+					"Description": "{{i18n:Crackle-Apple.description}}",
+                    "Price": 60,
+                    "Type": "Fruit",
+                    "Category": -79,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 1,
+                    "Edibility": 7,
+                    "ContextTags": [ "color_red", "fruit_item" ]
+                },
+                "FOF_Fizzling_Berry": {
+                    "Name": "Fizzling Berry",
+					"DisplayName": "{{i18n:Fizzling-Berry.name}}",
+					"Description": "{{i18n:Fizzling-Berry.description}}",
+                    "Price": 100,
+                    "Type": "Fruit",
+                    "Category": -79,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 2,
+                    "Edibility": 20,
+                    "ContextTags": [ "color_orange", "fruit_item" ]
+                },
+                "FOF_Nimbus_Berry": {
+                    "Name": "Nimbus Berry",
+					"DisplayName": "{{i18n:Nimbus-Berry.name}}",
+					"Description": "{{i18n:Nimbus-Berry.description}}",
+                    "Price": 17,
+                    "Type": "Fruit",
+                    "Category": -79,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 3,
+                    "Edibility": 12,
+                    "ContextTags": [ "color_pink", "fruit_item" ]
+                },
+                "FOF_Rose_Pops": {
+                    "Name": "Rose Pops",
+					"DisplayName": "{{i18n:Rose-Pops.name}}",
+					"Description": "{{i18n:Rose-Pops.description}}",
+                    "Price": 15,
+                    "Type": "Fruit",
+                    "Category": -79,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 4,
+                    "Edibility": 10,
+                    "ContextTags": [ "color_red", "fruit_item" ]
+                },
+                "FOF_Sol_Berry": {
+                    "Name": "Sol Berry",
+					"DisplayName": "{{i18n:Sol-Berry.name}}",
+					"Description": "{{i18n:Sol-Berry.description}}",
+                    "Price": 20,
+                    "Type": "Fruit",
+                    "Category": -79,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 5,
+                    "Edibility": 13,
+                    "ContextTags": [ "color_pink", "fruit_item" ]
+                },
+                "FOF_Chestnut": {
+                    "Name": "Chestnut",
+					"DisplayName": "{{i18n:FOF-Chestnut.name}}",
+					"Description": "{{i18n:FOF-Chestnut.description}}",
+                    "Price": 5,
+                    "Type": "Forage",
+                    "Category": -74,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 6,
+                    "Edibility": -300,
+                    "ContextTags": [ "color_pink", "nut_item", "tree_seed_item" ]
+                },
+///ADDING SAPLINGS
+                "FOF_Crackle_Apple_Sapling": {
+                    "Name": "Crackle Apple Sapling",
+					"DisplayName": "{{i18n:Crackle-Apple-Sapling.name}}",
+					"Description": "{{i18n:Crackle-Apple-Sapling.description}}",
+                    "Price": 2400,
+                    "Type": "Basic",
+                    "Category": -74,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 15,
+                    "ContextTags": [ "sapling_item" ]
+                },
+///ADDING MEALS
+                "FOF_Bramble_Berry_Muffin": {
+                    "Name": "Bramble Berry Muffin",
+					"DisplayName": "{{i18n:Bramble-Berry-Muffin.name}}",
+					"Description": "{{i18n:Bramble-Berry-Muffin.description}}",
+                    "Price": 220,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 7,
+                    "Edibility": 50,
+			},
+                "FOF_Chestnut_Cauliflower_Soup": {
+                    "Name": "Chestnut and Cauliflower Soup",
+					"DisplayName": "{{i18n:Chestnut-Cauliflower-Soup.name}}",
+					"Description": "{{i18n:Chestnut-Cauliflower-Soup.description}}",
+                    "Price": 320,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 8,
+                    "Edibility": 80,
+					"IsDrink": "True",
+			},
+                "FOF_Crackle_Apple_Buckle": {
+                    "Name": "Crackle Apple Buckle",
+					"DisplayName": "{{i18n:Crackle-Apple-Buckle.name}}",
+					"Description": "{{i18n:Crackle-Apple-Buckle.description}}",
+                    "Price": 220,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 9,
+                    "Edibility": 70,
+			},
+                "FOF_Fizzling_Cake": {
+                    "Name": "Fizzling Cake",
+					"DisplayName": "{{i18n:Fizzling-Cake.name}}",
+					"Description": "{{i18n:Fizzling-Cake.description}}",
+                    "Price": 440,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 10,
+                    "Edibility": 75,
+			},
+                "FOF_Nimbus_Berry_Crostata": {
+                    "Name": "Nimbus Berry Crostata",
+					"DisplayName": "{{i18n:Nimbus-Berry-Crostata.name}}",
+					"Description": "{{i18n:Nimbus-Berry-Crostata.description}}",
+                    "Price": 350,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 11,
+                    "Edibility": 90,
+			},
+                "FOF_Roast_Chestnuts": {
+                    "Name": "Roast Chestnuts",
+					"DisplayName": "{{i18n:Roast-Chestnuts.name}}",
+					"Description": "{{i18n:Roast-Chestnuts.description}}",
+                    "Price": 250,
+                    "Type": "ArtisanGoods",
+                    "Category": -26,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 12,
+                    "Edibility": 40,
+					"IsDrink": "True",
+			},
+                "FOF_Rose_Pops_Donut": {
+                    "Name": "Rose Pops Donut",
+					"DisplayName": "{{i18n:Rose-Pops-Donut.name}}",
+					"Description": "{{i18n:Rose-Pops-Donut.description}}",
+                    "Price": 150,
+                    "Type": "ArtisanGoods",
+                    "Category": -26,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 13,
+                    "Edibility": 42,
+					"IsDrink": "True",
+			},
+                "FOF_Sol_Berry_Cherry_Tart": {
+                    "Name": "Sol Berry and Cherry Tart",
+					"DisplayName": "{{i18n:Sol-Berry-Cherry-Tart.name}}",
+					"Description": "{{i18n:Sol-Berry-Cherry-Tart.description}}",
+                    "Price": 225,
+                    "Type": "ArtisanGoods",
+                    "Category": -26,
+                    "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/objects",
+                    "SpriteIndex": 14,
+                    "Edibility": 83,
+					"IsDrink": "True",
+				}
+			}
+        },
+///ADDING COOKING RECIPES
+        {
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "Entries": {
+                "Bramble Berry Muffin": "FOF_Bramble_Berry 1 -5 1 245 1 246 1/10 10/FOF_Bramble_Berry_Muffin/none/{{i18n:Bramble-Berry-Muffin.name}}",
+                "Chestnut and Cauliflower Soup": "FOF_Chestnut 1 190 1 -6 1/10 10/FOF_Chestnut_Cauliflower_Soup/none/{{i18n:Chestnut-Cauliflower-Soup.name}}",
+				"Crackle Apple Buckle": "FOF_Crackle_Apple 1 613 1 245 1 246 1/10 10/FOF_Crackle_Apple_Buckle/none/{{i18n:Crackle-Apple-Buckle.name}}",
+				"Fizzling Cake": "FOF_Fizzling_Berry 1 -6 1 246 1/10 10/FOF_Fizzling_Cake/none/{{i18n:Fizzling-Cake.name}}",
+				"Nimbus Berry Crostata": "FOF_Nimbus_Berry 1 245 1 246 1 -6 1/10 10/FOF_Nimbus_Berry_Crostata/none/{{i18n:Nimbus-Berry-Crostata.name}}",
+				"Roast Chestnuts": "FOF_Chestnut 4 /10 10/FOF_Roast_Chestnuts/none/{{i18n:Roast-Chestnuts.name}}",
+                "Rose Pops Donut": "FOF_Rose_Pops 1 -6 1 -5 1 245 1/10 10/FOF_Rose_Pops_Donut/none/{{i18n:Rose-Pops-Donut.name}}",
+                "Sol Berry and Cherry Tart": "FOF_Sol_Berry 1 638 1 246 1 425 1/10 10/FOF_Sol_Berry_Cherry_Tart/none/{{i18n:Sol-Berry-Cherry-Tart.name}}",
+				}
+		},
+///ADDING TO SHOPS
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Saloon",
+                "Items"
+            ],
+            "Entries": {
+                "FOF_Root_Dishes": {
+                    "RandomItemId": ["FOF_Bramble_Berry_Muffin", "FOF_Chestnut_Cauliflower_Soup", "FOF_Crackle_Apple_Buckle", "FOF_Fizzling_Cake", "FOF_Nimbus_Berry_Crostata", "FOF_Roast_Chestnuts", "FOF_Rose_Pops_Donut", "FOF_Sol_Berry_Cherry_Tart" ],
+					"MaxItems": 1,
+					"Price": "750",
+                    "IsRecipe": "true",
+					"Condition": "day_of_week wed"
+				}
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Festival_SpiritsEve_Pierre",
+                "Items"
+            ],
+            "Entries": {
+                "FOF_Rose_Pops_Donuts_Festival": {
+                    "ItemId": "FOF_Rose_Pops_Donut",
+					"Price": "100",
+				}
+			}
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Festival_FeastOfTheWinterStar_Pierre",
+                "Items"
+            ],
+            "Entries": {
+                "FOF_Rose_Pop_Donuts_Festival": {
+                    "ItemId": "FOF_Roast_Chestnuts",
+					"Price": "100",
+				}
+			}
+		},
+//ADD FRUIT TREES
+		{
+			"Action": "EditData",
+			"Target": "Data/FruitTrees",
+			"Entries": {
+				"FOF_Crackle_Apple_Sapling": {
+					"DisplayName": "{{i18n:Crackle-Apple-Tree.name}}",
+					"Description": "{{i18n:Crackle-Apple-Tree.description}}",
+					"Seasons": [ "fall" ],
+					"Fruit": [{"ItemId": "FOF_Crackle_Apple"}],
+					"Texture": "StunkyMcDoo.FruitNutofFerngill.cp/Crackle-Apple-Tree",
+					"TextureSpriteRow": 0
+				},
+			}
+		},
+///ADD WILD TREES
+		{
+	 "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "Entries": {
+        "FOF_Chestnut_Tree": {
+          "Textures": [
+            {
+              "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/chestnuttree_spring",
+              "Season": "spring",
+              "Condition": null
+            },
+            {
+              "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/chestnuttree_summer",
+              "Season": "summer",
+              "Condition": null
+            },
+            {
+              "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/chestnuttree_fall",
+              "Season": "fall",
+              "Condition": null
+            },
+            {
+              "Texture": "StunkyMcDoo.FruitNutofFerngill.cp/chestnuttree_winter",
+              "Season": "winter",
+              "Condition": null
+            },
+          ],
+          "SeedItemID": "FOF_Chestnut",
+          "SeedPlantable": true,
+          "GrowthChance": 0.2,
+          "FertilizedGrowthChance": 1,
+          "SeedOnShakeChance ": 0.05,
+          "SeedOnChopChance": 0.75,
+          "DropWoodOnChop": true,
+          "DropHardwoodOnLumberChop": true,
+          "IsLeafy": true,
+          "IsLeafyInWinter": false,
+          "GrowsInWinter": false,
+          "IsStumpDuringWinter": false,
+          "AllowWoodpeckers": true,
+          "UseAlternateSpriteWhenSeedReady": false,
+          "ChopItems": [
+            {
+              "ItemId": "(O)92",
+              "MinSize": "Tree",
+              "ForStump": false,
+              "Chance": 1,
+              "MinStack": 1,
+              "MaxStack": 2,
+            },
+            {
+              "ItemId": "(O)388",
+              "MinSize": "Tree",
+              "ForStump": false,
+              "Chance": 0.3,
+              "MinStack": 8,
+              "MaxStack": 10,
+            },
+            {
+              "ItemId": "FOF_Chestnut",
+              "MinSize": "Tree",
+              "ForStump": false,
+              "Chance": 0.3,
+              "MinStack": 1,
+              "MaxStack": 2,
+            },
+          ],
+          "TapItems": [
+            {
+              "ItemId": "(O)92",
+			  "Chance": 1.0,
+              "DaysUntilReady": 4,
+            }
+          ],
+          "ShakeItems": [
+            {
+              "ItemId": "FOF_Chestnut",
+              "Chance": 0.1,
+            },
+          ],
+        }
+	}
+		},
+///UNIVERSAL TASTES
+		{
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"LogName": "Universals",
+			"TextOperations": [
+				{
+				"Operation": "Append",
+				"Target": [	"Entries", "Universal_Neutral" ],
+					"Value": "FOF_Bramble_Berry FOF_Nimbus_Berry FOF_Sol_Berry",
+					"Delimiter": " "
+                },
+				{
+				"Operation": "Append",
+				"Target": [ "Entries", "Universal_Dislike" ],
+					"Value": "FOF_Crackle_Apple",
+					"Delimiter": " "
+                },
+            ]
+        },
+///GIFT TASTES
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+///LOVES
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Leo", 1],
+                    "Value": "FOF_Fizzling_Berry",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Linus", 1],
+                    "Value": "FOF_Fizzling_Berry FOF_Roast_Chestnuts",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Vincent", 1],
+                    "Value": "FOF_Rose_Pop FOF_Rose_Pop_Donut",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Clint", 1],
+                    "Value": "FOF_Chestnut_Cauliflower_Soup",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Wizard", 1],
+                    "Value": "FOF_Crackle_Apple_Buckle",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Gus", 1],
+                    "Value": "FOF_Fizzling_Cake",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "George", 1],
+                    "Value": "FOF_Nimbus_Berry_Crostata",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Jodi", 1],
+                    "Value": "FOF_Rose_Pop_Donut",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sam", 1],
+                    "Value": "FOF_Rose_Pop_Donut",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Kent", 1],
+                    "Value": "FOF_Rose_Pop_Donut",
+                    "Delimiter": " "
+                },
+///LIKES
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Jodi", 3],
+                    "Value": "FOF_Rose_Pops FOF_Chestnut_Cauliflower_Soup",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Linus", 3],
+                    "Value": "FOF_Chestnut",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Emily", 3],
+                    "Value": "FOF_Bramble_Berry_Muffin",
+                    "Delimiter": " "
+                },
+				{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Marnie", 3],
+                    "Value": "FOF_Sol_Berry_Cherry_Tart",
+                    "Delimiter": " "
+                },
+            ]
+        },
+	]
+}

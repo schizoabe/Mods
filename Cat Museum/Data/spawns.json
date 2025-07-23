@@ -1,0 +1,71 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/Locations",
+			"TargetField": [ "Default", "ArtifactSpots" ],
+			"Entries": {
+				"KathMuseum.LostBook": {
+				"Condition": "LOCATION_NAME Here Town Mountain Railroad Farm, PLAYER_HAS_MAIL Current KathMuseum.MirinMet Any",	
+				"Chance": 1.0,
+				"ApplyGenerousEnchantment": false,
+				"OneDebrisPerDrop": true,
+				"Precedence": -50,
+				"ContinueOnDrop": false,
+				"MinStack": 1,
+				"MaxStack": 1,
+				"Id": "KathMuseum.LostBook",
+				"ItemId": "(O)KathMuseum.LostBook"
+				},
+				"KathMuseum.CurioChance1": {
+				"Condition": "LOCATION_NAME Here Town Mountain Forest Farm",	
+				"Chance": 0.75,
+				"ApplyGenerousEnchantment": false,
+				"OneDebrisPerDrop": true,
+				"Precedence": -50,
+				"ContinueOnDrop": false,
+				"MinStack": 1,
+				"MaxStack": 1,
+				"Id": "KathMuseum.CurioChance1",
+				"ItemId": "(O)KathMuseum.Curio1"
+				},
+				"KathMuseum.CurioChance2": {
+				"Condition": "LOCATION_NAME Here Mountain Forest Farm",	
+				"Chance": 0.8,
+				"ApplyGenerousEnchantment": false,
+				"OneDebrisPerDrop": true,
+				"Precedence": -50,
+				"ContinueOnDrop": false,
+				"MinStack": 1,
+				"MaxStack": 1,
+				"Id": "KathMuseum.CurioChance2",
+				"ItemId": "(O)KathMuseum.Curio2"
+				},
+				"KathMuseum.CurioChance3": {
+				"Condition": "LOCATION_NAME Here Desert Railroad Farm",	
+				"Chance": 0.9,
+				"ApplyGenerousEnchantment": false,
+				"OneDebrisPerDrop": true,
+				"Precedence": -50,
+				"ContinueOnDrop": false,
+				"MinStack": 1,
+				"MaxStack": 1,
+				"Id": "KathMuseum.CurioChance3",
+				"ItemId": "(O)KathMuseum.Curio3"
+				},
+				"KathMuseum.CurioChance4": {
+				"Condition": "LOCATION_NAME Here Beach Farm",	
+				"Chance": 0.85,
+				"ApplyGenerousEnchantment": false,
+				"OneDebrisPerDrop": true,
+				"Precedence": -50,
+				"ContinueOnDrop": false,
+				"MinStack": 1,
+				"MaxStack": 1,
+				"Id": "KathMuseum.CurioChance4",
+				"ItemId": "(O)KathMuseum.Curio4"
+				}
+			}
+		}
+	]
+}

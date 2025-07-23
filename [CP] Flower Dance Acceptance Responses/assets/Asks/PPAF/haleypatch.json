@@ -1,0 +1,35 @@
+{
+	"Changes":[
+		{
+			"LogName": "Haley - Flower Dance, Ask Dialogue, PPAF and DSV, Not Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"Event.cs.1738": "{{i18n:FDAR.DSV.Haley.Ask}}",
+			},
+			"When": {
+				"HasMod": "PPAF.Core",
+				"HasMod|contains=DSV.Core": true,
+				"DSV.Core/FlowerQueen |contains= Haley": false,
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Haley": "enabled",
+			},
+		},
+		{
+			"LogName": "Haley - Flower Dance, Ask Dialogue, PPAF and DSV, Not Flower Queen, High Hearts",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"Event.cs.1738": "{{i18n:FDAR.DSV.Haley.Ask.High}}",
+			},
+			"When": {
+				"Hearts:Haley": "6, 7, 8",
+				"HasMod|contains=DSV.Core": true,
+				"DSV.Core/FlowerQueen |contains= Haley": false,
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "RomanceAndSex, RomanceWithoutSex",
+				"Haley": "enabled",
+			},
+		},
+	],
+}

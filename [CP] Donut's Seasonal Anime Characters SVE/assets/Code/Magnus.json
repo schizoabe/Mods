@@ -1,0 +1,104 @@
+{
+	"Changes": [
+        
+        //Magnus
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Magnus_{{Season}}",
+            "FromFile": "assets/fifadog/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter",
+                "Rasmodia Patch": "false"
+            }            
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/Magnus_FlowerDance",
+            "FromFile": "assets/fifadog/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Rasmodia Patch": "false"
+            }            
+        },
+
+        //Redunant But Will Fix any issues of portraits not showing up for Temporary Actor Calls within SVE
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Magnus",
+            "FromFile": "assets/fifadog/Magnus_{{Season}}.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter",
+                "Rasmodia Patch": "false"
+            }            
+        },
+
+        //Rasmodia
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Magnus_{{Season}}",
+            "FromFile": "assets/KlevLovins/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter",
+                "Rasmodia Patch": "true"
+            }            
+        },
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Characters/Magnus_{{Season}}",
+            "FromFile": "assets/KlevLovins/Sprites/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter",
+                "Rasmodia Patch": "true"
+            }            
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/Magnus_FlowerDance",
+            "FromFile": "assets/KlevLovins/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Rasmodia Patch": "true"
+            }            
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "EditImage",
+            "Target": "Characters/Magnus_FlowerDance",
+            "FromFile": "assets/KlevLovins/Sprites/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Rasmodia Patch": "true"
+            }            
+        },
+        
+        //Redunant But Will Fix any issues of portraits not showing up for Temporary Actor Calls within SVE
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Magnus",
+            "FromFile": "assets/KevLovins/Magnus_{{Season}}.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter",
+                "Rasmodia Patch": "true"
+            }            
+        }
+
+    ]
+}

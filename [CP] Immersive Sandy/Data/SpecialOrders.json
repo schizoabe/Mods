@@ -1,0 +1,181 @@
+{
+
+      "Changes": [
+	  {
+	  "Action": "EditData",
+	  "Target": "Data/SpecialOrders",
+	  "Entries": {
+		"ImmSandy.SO.FlowerCrownsSpring": {
+			"Name": "[ImmSandy.SO.FlowerCrownsSpring_Name]",
+			"Requester": "Sandy",
+			"Duration": "TwoWeeks",
+			"Repeatable": "True",
+			"RequiredTags": "season_spring, mail_SandyTYcrowns",
+			"OrderType": "",
+			"SpecialRule": "",
+			"Text": "[ImmSandy.SO.FlowerCrownsSpring_Text]",
+			"ItemToRemoveOnEnd": null,
+			"MailToRemoveOnEnd": null,
+			"Objectives": [
+			  {
+				"Type": "Donate",
+				"Text": "[ImmSandy.SO.FlowerCrownsSpring_Objective_0_Text]",
+				"RequiredCount": "24",
+				"Data": {
+				  "AcceptedContextTags": "item_tulip",
+				  "DropBox": "SandyCounter",
+				  "DropBoxGameLocation": "SandyHouse",
+				  "DropBoxIndicatorLocation": "3 6"
+				}
+			  }
+			],
+			"Rewards": [
+			  {
+				"Type": "Money",
+				"Data": {
+				  "Amount": "1500"
+				}
+			  }
+			]
+		  },
+		  "ImmSandy.SO.FlowerCrownsSummer": {
+			"Name": "[ImmSandy.SO.FlowerCrownsSummer_Name]",
+			"Requester": "Sandy",
+			"Duration": "TwoWeeks",
+			"Repeatable": "True",
+			"RequiredTags": "season_summer, mail_SandyTYcrowns",
+			"OrderType": "", 
+			"SpecialRule": "",
+			"Text": "[ImmSandy.SO.FlowerCrownsSummer_Text]",
+			"ItemToRemoveOnEnd": null,
+			"MailToRemoveOnEnd": null,
+			"Objectives": [
+			  {
+				"Type": "Donate",
+				"Text": "[ImmSandy.SO.FlowerCrownsSummer_Objective_0_Text]",
+				"RequiredCount": "24",
+				"Data": {
+				  "AcceptedContextTags": "item_poppy",
+				  "DropBox": "SandyCounter",
+				  "DropBoxGameLocation": "SandyHouse",
+				  "DropBoxIndicatorLocation": "3 6"
+				}
+			  }
+			],
+			"Rewards": [
+			  {
+				"Type": "Money",
+				"Data": {
+				  "Amount": "5000"
+				}
+			  }
+			]
+		  },
+		  "ImmSandy.SO.HairpiecesFall": {
+			"Name": "[ImmSandy.SO.HairpiecesFall_Name]",
+			"Requester": "Sandy",
+			"Duration": "TwoWeeks",
+			"Repeatable": "True",
+			"RequiredTags": "season_fall, mail_SandyTYhairpieces",
+			"OrderType": "",
+			"SpecialRule": "",
+			"Text": "[ImmSandy.SO.HairpiecesFall_Text]",
+			"ItemToRemoveOnEnd": null,
+			"MailToRemoveOnEnd": null,
+			"Objectives": [
+			  {
+				"Type": "Donate",
+				"Text": "[ImmSandy.SO.HairpiecesFall_Objective_0_Text]",
+				"RequiredCount": "24",
+				"Data": {
+				  "AcceptedContextTags": "item_sunflower",
+				  "DropBox": "SandyCounter",
+				  "DropBoxGameLocation": "SandyHouse",
+				  "DropBoxIndicatorLocation": "3 6"
+				}
+			  }
+			],
+			"Rewards": [
+			  {
+				"Type": "Money",
+				"Data": {
+				  "Amount": "3000"
+				}
+			  }
+			]
+		  },
+		  "ImmSandy.SO.HairpiecesWinter": {
+			"Name": "[ImmSandy.SO.HairpiecesWinter_Name]",
+			"Requester": "Sandy",
+			"Duration": "Month",
+			"Repeatable": "True",
+			"RequiredTags": "season_winter, mail_SandyTYhairpieces",
+			"OrderType": "",
+			"SpecialRule": "",
+			"Text": "[ImmSandy.SO.HairpiecesWinter_Text]",
+			"ItemToRemoveOnEnd": null,
+			"MailToRemoveOnEnd": null,
+			"Objectives": [
+			  {
+				"Type": "Donate",
+				"Text": "[ImmSandy.SO.HairpiecesWinter_Objective_0_Text]",
+				"RequiredCount": "24",
+				"Data": {
+				  "AcceptedContextTags": "item_crocus",
+				  "DropBox": "SandyCounter",
+				  "DropBoxGameLocation": "SandyHouse",
+				  "DropBoxIndicatorLocation": "3 6"
+				}
+			  }
+			],
+			"Rewards": [
+			  {
+				"Type": "Money",
+				"Data": {
+				  "Amount": "3500"
+				}
+			  }
+			]
+		  }   
+	  }
+	  },
+	  
+	  {
+		  "Action": "EditData",
+		  "Target": "Strings/SpecialOrderStrings",
+		  "Entries": {
+			"ImmSandy.SO.FlowerCrownsSpring_Name": "Two Dozen Tulips Needed!",
+			"ImmSandy.SO.FlowerCrownsSpring_Text": "It's spring, and you know what that means: the Flower Dance Festival is right around the corner! I need two dozen tulips to make the Flower Queen crown.",
+			"ImmSandy.SO.FlowerCrownsSpring_Objective_0_Text": "Drop off 24 tulips at the Oasis.",
+			"ImmSandy.SO.FlowerCrownsSpring_Objective_0_Message": "Thanks, @, you're a lifesaver!",
+			"ImmSandy.SO.FlowerCrownsSummer_Name": "It's Wedding Season!",
+			"ImmSandy.SO.FlowerCrownsSummer_Text": "It's summer, and wedding season is in full force. I need two dozen poppies to make flower crowns for a client's wedding party.",
+			"ImmSandy.SO.FlowerCrownsSummer_Objective_0_Text": "Drop off 24 poppies at the Oasis.",
+			"ImmSandy.SO.FlowerCrownsSummer_Objective_0_Message": "Thanks, @, I can always count on you!",
+			"ImmSandy.SO.HairpiecesFall_Name": "Two Dozen Sunflowers Needed!",
+			"ImmSandy.SO.HairpiecesFall_Text": "I need two dozen sunflowers for a couple of clients who want to look their best at their local Harvest Festival.",
+			"ImmSandy.SO.HairpiecesFall_Objective_0_Text": "Drop off 24 sunflowers at the Oasis.",
+			"ImmSandy.SO.HairpiecesFall_Objective_0_Message": "Thanks, @, you're a lifesaver!",
+			"ImmSandy.SO.HairpiecesWinter_Name": "Winter Wedding!",
+			"ImmSandy.SO.HairpiecesWinter_Text": "I need two dozen crocuses to make hairpieces for a client who is having a winter wedding.",
+			"ImmSandy.SO.HairpiecesWinter_Objective_0_Text": "Drop off 24 crocuses at the Oasis.",
+			"ImmSandy.SO.HairpiecesWinter_Objective_0_Message": "Thanks, @, I can always count on you!"
+		  }
+	  },
+
+	  {
+		"Action": "EditMap",
+		"Target": "Maps/SandyHouse",
+		"MapTiles": [
+		  {
+			"Position": { "X": 3, "Y": 6},
+			"Layer": "Buildings",
+			"SetProperties": {
+			  "Action": "DropBox SandyCounter"
+			}
+		  }
+		]
+	  }
+	
+	  ]
+  }

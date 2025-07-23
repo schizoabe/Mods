@@ -1,0 +1,580 @@
+{
+	"Changes": [	
+//General Changes to Produce
+//Chickens
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Brown Chicken", "ProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+			"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Brown Chicken", "DeluxeProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+			"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	//
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["White Chicken", "ProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+			"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["White Chicken", "DeluxeProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+			"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	//
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Blue Chicken", "ProduceItemIds", "Default"],
+		"When": {"HasMod |contains=6480.blueegg,i24KittyKat.BlueEggCP": false},
+		"Priority": "Late",
+		"Entries": {
+			"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Blue Chicken", "DeluxeProduceItemIds", "Default"],
+		"Priority": "Late",
+		"When": {"HasMod |contains=6480.blueegg,i24KittyKat.BlueEggCP": false},
+		"Entries": {
+			"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Blue Chicken", "ProduceItemIds", "#0"],
+		"When": {"HasMod": "6480.blueegg"},
+		"Priority": "Late",
+		"Entries": {
+			"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},	
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Blue Chicken", "DeluxeProduceItemIds", "#0"],
+		"Priority": "Late",
+		"When": {"HasMod": "6480.blueegg"},
+		"Entries": {
+			"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",		}
+	},	
+	//
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Void Chicken", "ProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+			"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Void Chicken", "ProduceItemIds", "Default"],
+		"When": {"HasMod": "selph.SpookyVoidChickensCP", "HasMod |contains=Strobe.largevoidegg": false},
+		"Priority": "Late + 1",
+		"Entries": {
+			"Condition": "ANY \"!SEASON_DAY fall 27\" \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},	
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Void Chicken", "DeluxeProduceItemIds", "#0"],
+		"Priority": "Late + 1",
+		"When": {"HasMod": "Strobe.largevoidegg", "HasMod |contains=selph.SpookyVoidChickensCP": false},
+		"Entries": {
+			"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},	
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Void Chicken", "ProduceItemIds", "#0"],
+		"When": {"HasMod": "Strobe.largevoidegg", "HasMod":"selph.SpookyVoidChickensCP"},
+		"Priority": "Late + 2",
+		"Entries": {
+			"Condition": "ANY \"!SEASON_DAY fall 27\" \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},	
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Void Chicken", "DeluxeProduceItemIds", "#0"],
+		"Priority": "Late + 2",
+		"When": {"HasMod": "Strobe.largevoidegg", "HasMod":"selph.SpookyVoidChickensCP"},
+		"Entries": {
+			"Condition": "ANY \"!SEASON_DAY fall 27\" \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},	
+//Duck
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Duck", "ProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Duck", "DeluxeProduceItemIds", "Default"],
+		"When": {"HasMod |contains=selph.AnimalMultiproduce":false},
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness\" \"!CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness\" ",
+		}
+	},
+
+//Rabbit
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Rabbit", "ProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Rabbit", "DeluxeProduceItemIds", "Default"],
+		"When": {"HasMod |contains=selph.AnimalMultiproduce":false},
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	
+//Cows	
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["White Cow", "ProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["White Cow", "DeluxeProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},	
+	//
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Brown Cow", "ProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Brown Cow", "DeluxeProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},	
+	
+//Goat	
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Goat", "ProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Goat", "DeluxeProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},	
+	
+//Sheep
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Sheep", "ProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Sheep", "DeluxeProduceItemIds", "Default"],
+		"When": {"HasMod": "radm.milkdasheep"},
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Sheep", "ProduceItemIds", "Sheep's Milk"],
+		"When": {"HasMod": "radm.milkdasheep", "HasMod |contains=selph.AnimalMultiproduce":false},
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!WEATHER Town kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Sheep", "DeluxeProduceItemIds", "Large Sheep's Milk"],
+		"When": {"HasMod": "radm.milkdasheep", "HasMod |contains=selph.AnimalMultiproduce":false},
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain\" \"!WEATHER Town kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+
+//Pig
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Pig", "ProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_HeatWave, !WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain, !WEATHER Town kath.weathering_Locust\" \"!CS_WEATHER Town -1 kath.weathering_HeatWave, !CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+
+//Ostrich
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Ostrich", "ProduceItemIds", "Default"],
+		"Priority": "Late",
+		"Entries": {
+					"Condition": "ANY \"!WEATHER Town kath.weathering_Blizzard, !WEATHER Town kath.weathering_Darkness, !WEATHER Town kath.weathering_HeavyRain, !WEATHER Town kath.weathering_Locust\" \"!CS_WEATHER Town -1 kath.weathering_Blizzard, !CS_WEATHER Town -1 kath.weathering_Darkness, !CS_WEATHER Town -1 kath.weathering_HeavyRain\" ",
+		}
+	},
+
+
+//HeatWave
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["White Chicken"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"GrassEatAmount": 0
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Brown Chicken"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"GrassEatAmount": 0
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Blue Chicken"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"GrassEatAmount": 0
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Void Chicken"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"GrassEatAmount": 0
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Duck"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"DaysToProduce": 1,
+			"GrassEatAmount": 0
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Rabbit"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"DaysToProduce": 1,
+			"GrassEatAmount": 0
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["White Cow"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"GrassEatAmount": 0
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Brown Cow"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"GrassEatAmount": 0
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Goat"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"GrassEatAmount": 0
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Sheep"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"DaysToProduce": 1,
+			"GrassEatAmount": 0
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Pig"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"GrassEatAmount": 0
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Ostrich"],
+		"When": {"Weather": "kath.weathering_HeatWave"},
+		"Priority": "Late",
+		"Entries": {
+			"GrassEatAmount": 0
+		}
+	},	
+	
+//Blizzard
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["White Chicken"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Brown Chicken"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Blue Chicken"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Void Chicken"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Duck"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+			//"DaysToProduce": 7,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Rabbit"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+			//"DaysToProduce": 7,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["White Cow"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Brown Cow"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Goat"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Sheep"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+			//"DaysToProduce": 7,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Pig"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/FarmAnimals",
+		"TargetField": ["Ostrich"],
+		"When": {"Weather": "kath.weathering_Blizzard"},
+		"Priority": "Late",
+		"Entries": {
+			"HappinessDrain": 10,
+		}
+	},	
+
+//Darkness
+    {
+      "LogName": "VoidChicken Darkness",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+	  "Priority": "Late",
+      "When": {"HasMod": "selph.ExtraAnimalConfig", "HasMod |contains=selph.SpookyVoidChickensCP": false},
+      "Entries": {
+        "Void Chicken": {},
+      },
+    },
+    {
+      "LogName": "VoidChicken Darkness Add Stuff",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+	  "Priority": "Late + 1",
+      "When": {"HasMod": "selph.ExtraAnimalConfig", "HasMod |contains=selph.SpookyVoidChickensCP": false, "Weather": "kath.weathering_Darkness"},
+      "Fields": {
+        "Void Chicken": {
+          "IgnoreRain": true,
+          "IgnoreWinter": true,
+          "GlowColor": "Black",
+          "GlowRadius": 1,
+          "SpeedOverride": 6,
+          "IsAttackAnimal": "{{NoDanger}}",
+		  "AttackDamage": 5,
+		  
+        },
+      },
+    },
+
+	
+//End
+]
+}

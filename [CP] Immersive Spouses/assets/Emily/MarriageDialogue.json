@@ -1,0 +1,68 @@
+{
+	"Changes": [
+	//STANDARD LEAVE/RETURN DIALOGUE
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries": {
+				"funLeave_Emily": "#$c .5#Good morning! Do you have your day planned out?$h#Morning, dear. Hope you had a good nights rest.#$e#$c .5#I'll be visiting Haley today if you need to find me.#Gus doesn't need much help on Mondays but that's where I'll be.#$b#Make sure you have a good day, alright?$l",
+				"funReturn_Emily": "#$c .5#Did you get to eat yet? Gus had some extra dishes he let me take home.[209 214 225 215 219]$h#My day went well... Mondays have always been a little slow.#$e#I'm heading to bed. See you there?$l"
+			},
+			"When": {
+				"DayOfWeek": "Monday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries": {
+				"funLeave_Emily": "#$c .5#It's aerobics day! I wonder how everyone has been doing.$h#It's another beautiful day. Today's going to be a good one, I know it.#$e#$c .5#Do you need me to pick up anything while I'm at Pierre's?#Hey... don't overwork yourself, okay?$l",
+				"funReturn_Emily": "My body's all sore from classes today. I'll be taking tomorrow off to relax.#$e#$c .5#Make sure you do so too once in a while. It's not good to keep stressing the body.$s#I can already feel my muscles cramping up. Would you mind giving me a massage?$l"
+			},
+			"When": {
+				"DayOfWeek": "Tuesday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries": {
+				"funLeave_Emily": "#$c .5#Did I put too much fragrance on last night? You smell unusually nice this morning. Not that I mind...$l#What's on the agenda today, dear? Mine's the same old.$h#$e#$c .5#I'm visiting Haley again today. I have some more recipes to show her!$h#Just one more day till it's Friday!$h",
+				"funReturn_Emily": "#$c .5#How was your day, dear? I can already tell you've worked hard.#Oh! You're still up! Sorry, you scared me.$6#$e#You like to stay up pretty late don't you?#$b#I'll be in bed, come soon?$l"
+			},
+			"When": {
+				"DayOfWeek": "Thursday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries": {
+				"funLeave_Emily": "#$c .5#I figured I'd visit the beach today. The ocean sends out positive energy.#Sometimes I feel like destiny bought us together... I'm happy for us.$l#$e#$c .5#Every day is precious as long as you look at the beauty of it. Remember that, dear.$h#I like to take time alone to just... be thankful for everything that's happened.$l",
+				"funReturn_Emily": "#$c .5#Whew! Friday was hectic as always. I'll be glad to spend the rest of the night with you.$h#I love working at the saloon on Friday nights. Everyone looked so happy.$l#$e#$c .5#But I wish Gus would at least hire someone to help him out when I'm not around.$s#I have the weekend off. Want to do something together?$l"
+			},
+			"When": {
+				"DayOfWeek": "Friday"
+			}
+		},
+
+	//SPECIFIC DAYS
+	
+		//DOCTOR CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries": {	
+				"winter_11": "I'm just letting you know I have a Doctor's appointment today.#$e#There's no need to worry about me, my lifestyle has been extra healthy since moving on to the farm.$h"
+			}
+		},
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueEmily",
+			"Entries":  {	
+				"winter_15": "Gus is letting me have the day off to attend the Night Market tonight.#$e#It's smart of him, he'll have an easy workload since it's also Monday.$h"
+			}
+		},
+	]
+}

@@ -1,0 +1,73 @@
+{
+    "Format": "2.3.0",
+    "Changes": [
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "SeedShop", "Items" ],
+            "Entries": {
+				
+				"blueberry.LoveOfCooking_chocolate": null,
+				
+                "RSSI_blueberry.LoveOfCooking_chocolateP": {
+                    "Id": "RSSI_blueberry.LoveOfCooking_chocolateP",
+                    "ItemId": "blueberry.LoveOfCooking_chocolate",
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+                    "Condition": "PLAYER_FARMHOUSE_UPGRADE Current 1, PLAYER_HAS_MAIL Current ccComplete"
+                }
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Joja", "Items" ],
+            "Entries": {
+				
+				"blueberry.LoveOfCooking_chocolate": null,
+				
+                "RSSI_blueberry.LoveOfCooking_chocolateJ": {
+                    "Id": "RSSI_blueberry.LoveOfCooking_chocolateJ",
+                    "ItemId": "blueberry.LoveOfCooking_chocolate",
+					"AvailableStock": 50,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+                    "Condition": null
+                }
+            },
+        }
+]
+ }

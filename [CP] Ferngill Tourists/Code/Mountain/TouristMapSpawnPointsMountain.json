@@ -1,0 +1,73 @@
+{    
+	"Changes": 
+    [        
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 15, "Y": 10 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristMountain01"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 69, "Y": 13 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristMountain02"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 41, "Y": 35 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristMountain03"
+                  }
+               }
+            ],
+            "When":
+            {
+               "TouristNumbersMountain |contains= medium, large": true
+            }
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 89, "Y": 33 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristMountain04"
+                  }
+               }
+            ],
+            "When":
+            {
+               "TouristNumbersMountain |contains= large": true
+            }
+         }
+    ]
+}

@@ -1,0 +1,158 @@
+{
+  "Format": "2.4.0",
+  "ConfigSchema": {
+    "EvilMorris": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "JojaCoupons": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "BusRepair": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "BusRepair": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "BridgeRepair": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "IceCreamPromoted": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "SilentAssistant": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "FriendRemembered": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "WildGathering": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "FishyBusiness": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "FamilyReunited": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "PinkCakeObsession": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "JojaPrize": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "MidnightFrogging": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "ExoticMerchant": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "ChefsTouch": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    },
+    "BravePatient": {
+      "AllowValues": "true, false",
+      "Default": "true",
+    }
+  },
+
+  "Changes": [
+    /* Data include */
+    {
+      "Action": "Include",
+      "FromFile": "data/CTs.json, data/TriggerActions.json, data/Mail.json"
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/JojaMart",
+      "FromFile": "data/Blank.json",
+      "Priority": "Low"
+    },
+
+    /* Event Location include */
+    {
+      "Action": "Include",
+      "FromFile": "data/Events/JojaMart.json, data/Events/BusStop.json, data/Events/Mountain.json, data/Events/Town.json, data/Events/SandyHouse.json, data/Events/Woods.json, data/Events/Forest.json, data/Events/Backwoods.json, data/Events/Beach.json, data/Events/HaleyHouse.json, data/Events/Saloon.json, data/Events/Hospital.json"
+    },
+
+    /* Assets include */
+    {
+      "LogName": "Morris Onphone",
+      "Action": "Load",
+      "Target": "Portraits/Morris_onphone",
+      "FromFile": "assets/TempPortraits/Morris_onphone.png"
+    },
+    {
+      "LogName": "Morris Onphone (Nyapu)",
+      "Action": "EditImage",
+      "PatchMode": "Replace",
+      "Target": "Portraits/Morris_onphone",
+      "FromFile": "assets/TempPortraits/Morris_onphone_nyapu.png",
+      "When": {
+        "HasMod |contains=Nyapu.Portraits": true
+      }
+    },
+    {
+      "LogName": "Temporary Boxes",
+      "Action": "Load",
+      "Target": "Characters/Boxes_1, Characters/Boxes_2, Characters/Boxes_3, Characters/Boxes_4, Characters/Boxes_5, Characters/Boxes_6, Characters/Boxes_7",
+      "FromFile": "assets/TempActors/boxes.png"
+    },
+    {
+      "LogName": "Green Junimo",
+      "Action": "Load",
+      "Target": "Characters/GreenJunimo",
+      "FromFile": "assets/TempActors/GreenJunimo.png"
+    },
+    {
+      "LogName": "Sebastian on bike",
+      "Action": "Load",
+      "Target": "Characters/SebOnBike",
+      "FromFile": "assets/TempActors/SebOnBike.png"
+    },
+    {
+      "LogName": "Kent carrying a bag",
+      "Action": "Load",
+      "Target": "Characters/Kent_Back",
+      "FromFile": "assets/TempActors/KentBack.png"
+    },
+    {
+      "LogName": "Wizard Teleport",
+      "Action": "Load",
+      "Target": "Characters/Wizard_Warp",
+      "FromFile": "assets/TempActors/WarpWizard.png"
+    },
+
+    /* Audio include */
+    {
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_Motorcycle": {
+          "ID": "{{ModId}}_Motorcycle",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/Sounds/ducati-monster-4-103262.wav}}"
+          ],
+          "Looped": false
+        }
+      }
+    },
+
+  ]
+}

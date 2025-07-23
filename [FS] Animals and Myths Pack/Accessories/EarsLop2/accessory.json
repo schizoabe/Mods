@@ -1,0 +1,329 @@
+{
+  "Name": "Ears (Lop 2)",
+
+	// FRONT
+  "FrontAccessory": {
+    "ColorMaskLayers": [
+      {
+        "Name": "Ear Color",
+        "Values": [
+          [ 254, 254, 254 ],
+          [ 240, 240, 240 ],
+          [ 217, 217, 217 ],
+          [ 202, 202, 202 ],
+          [ 188, 188, 188 ],
+          [ 165, 165, 165 ],
+          [ 119, 119, 119 ],
+          [ 81, 81, 81 ],
+          [ 57, 57, 57 ]
+        ]
+      },
+      {
+        "Name": "Accent Color",
+        "Values": [
+          [ 254, 252, 255 ],
+          [ 232, 232, 232 ],
+          [ 172, 172, 172 ],
+          [ 143, 143, 143 ],
+          [ 78, 78, 78 ]
+        ]
+      },
+    ],
+    "DrawBeforeHair": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 0
+    },
+    "HeadPosition": {
+      "X": 8,
+      "Y": 2
+    },
+    "AccessorySize": {
+      "Width": 32,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 5000
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 100
+      },
+      {
+        "Frame": 3,
+        "Duration": 100
+      },
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 100
+      },
+      {
+        "Frame": 3,
+        "Duration": 100
+      }
+    ]
+  },
+
+	// RIGHT
+  "RightAccessory": {
+    "ColorMaskLayers": [
+      {
+        "Name": "Ear Color",
+        "Values": [
+          [ 254, 254, 254 ],
+          [ 240, 240, 240 ],
+          [ 217, 217, 217 ],
+          [ 202, 202, 202 ],
+          [ 188, 188, 188 ],
+          [ 165, 165, 165 ],
+          [ 119, 119, 119 ],
+          [ 81, 81, 81 ],
+          [ 57, 57, 57 ]
+        ]
+      },
+      {
+        "Name": "Accent Color",
+        "Values": [
+          [ 254, 252, 255 ],
+          [ 232, 232, 232 ],
+          [ 172, 172, 172 ],
+          [ 143, 143, 143 ],
+          [ 78, 78, 78 ]
+        ]
+      },
+    ],
+    "StartingPosition": {
+      "X": 0,
+      "Y": 16
+    },
+    "HeadPosition": {
+      "X": 8,
+      "Y": 2
+    },
+    "AccessorySize": {
+      "Width": 32,
+      "Length": 16
+    },
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100,
+        "OverrideStartingIndex": true,
+      },
+      {
+        "Frame": 2,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 3,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 2,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      }
+    ]
+  },
+
+	// LEFT
+  "LeftAccessory": {
+    "ColorMaskLayers": [
+      {
+        "Name": "Ear Color",
+        "Values": [
+          [ 254, 254, 254 ],
+          [ 240, 240, 240 ],
+          [ 217, 217, 217 ],
+          [ 202, 202, 202 ],
+          [ 188, 188, 188 ],
+          [ 165, 165, 165 ],
+          [ 119, 119, 119 ],
+          [ 81, 81, 81 ],
+          [ 57, 57, 57 ]
+        ]
+      },
+      {
+        "Name": "Accent Color",
+        "Values": [
+          [ 254, 252, 255 ],
+          [ 232, 232, 232 ],
+          [ 172, 172, 172 ],
+          [ 143, 143, 143 ],
+          [ 78, 78, 78 ]
+        ]
+      },
+    ],
+    "Flipped": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 16
+    },
+    "HeadPosition": {
+      "X": 8,
+      "Y": 2
+    },
+    "AccessorySize": {
+      "Width": 32,
+      "Length": 16
+    },
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100,
+        "OverrideStartingIndex": true,
+      },
+      {
+        "Frame": 2,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 3,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 2,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      }
+    ]
+  },
+
+
+	// BACK
+  "BackAccessory": {
+    "ColorMaskLayers": [
+      {
+        "Name": "Ear Color",
+        "Values": [
+          [ 254, 254, 254 ],
+          [ 240, 240, 240 ],
+          [ 217, 217, 217 ],
+          [ 202, 202, 202 ],
+          [ 188, 188, 188 ],
+          [ 165, 165, 165 ],
+          [ 119, 119, 119 ],
+          [ 81, 81, 81 ],
+          [ 57, 57, 57 ]
+        ]
+      },
+      {
+        "Name": "Accent Color",
+        "Values": [
+          [ 254, 252, 255 ],
+          [ 232, 232, 232 ],
+          [ 172, 172, 172 ],
+          [ 143, 143, 143 ],
+          [ 78, 78, 78 ]
+        ]
+      },
+    ],
+    "DrawAfterPlayer": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 32
+    },
+    "HeadPosition": {
+      "X": 8,
+      "Y": 1
+    },
+    "AccessorySize": {
+      "Width": 32,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 5000
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 100
+      },
+      {
+        "Frame": 3,
+        "Duration": 100
+      },
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 100
+      },
+      {
+        "Frame": 3,
+        "Duration": 100
+      }
+    ]
+  }
+}

@@ -1,0 +1,228 @@
+{
+	"Changes":[
+        {
+            "LogName": "Add Categories",
+            "Action": "EditData",
+            "Target":"spacechase0.SpaceCore/ObjectExtensionData",
+            "Entries": {
+                "Cosmos.Meteorite1":{
+                    "CategoryTextOverride": "{{i18n:CategoryChange}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                },
+                "Cosmos.Meteorite2":{
+                    "CategoryTextOverride": "{{i18n:CategoryChange}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                },
+                "Cosmos.Meteorite3":{
+                    "CategoryTextOverride": "{{i18n:CategoryChange}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                },
+                "Cosmos.Meteorite4":{
+                    "CategoryTextOverride": "{{i18n:CategoryChange}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                },
+                "Cosmos.Mineral1":{
+                    "CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                },
+                "Cosmos.Mineral2":{
+                    "CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                },
+                "Cosmos.Mineral3":{
+                    "CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                },
+                "Cosmos.Mineral4":{
+                    "CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                },
+                "Cosmos.Mineral5":{
+                    "CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                },
+                "Cosmos.Mineral6":{
+                    "CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                },
+                "Cosmos.Mushroom":{
+                    "CategoryTextOverride": "{{i18n:CategoryChangeBiology}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                }
+            }
+        },
+        {
+            "LogName": "Add Categories",
+            "Action": "EditData",
+            "Target":"spacechase0.SpaceCore/ObjectExtensionData",
+            "Entries": {
+                "Cosmos.PowerBook":{
+                    "CanBeTrashed": false,
+                    "MaxStackSizeOverride": 1
+                },
+                "Cosmos.StarfallIcon":{
+                    "CanBeTrashed": false,
+                    "EatenHealthRestoredOverride": 1,
+                    "EatenStaminaRestoredOverride": 1,
+                    "MaxStackSizeOverride": 1,
+                    "CategoryTextOverride": "{{i18n:CategoryChangeStarfall}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                },
+                "Cosmos.IridiumiteIcon":{
+                    "CanBeTrashed": false,
+                    "EatenHealthRestoredOverride": 1,
+                    "EatenStaminaRestoredOverride": 1,
+                    "MaxStackSizeOverride": 1,
+                    "CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+                    "CategoryColorOverride": {
+                            "R": 153,
+                            "G": 163,
+                            "B": 186,
+                            "A": 255
+                    }
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Mods/mistyspring.ItemExtensions/Data",
+            "When": {"HasMod": "mistyspring.ItemExtensions"},
+            "Entries": {
+                "(O)Cosmos.Mushroom": {
+                    "Light":{
+                        "Size": 1.5,
+                        "Hex": "#cafaef",
+                        "R": 202,
+                        "G": 250,
+                        "B": 239,
+                        "Transparency": 0.9
+                    }
+                },
+                "(O)Cosmos.StarfallIcon": {
+                    "FoodDialogue": {
+                        "ConsumeQuestion":"{{i18n: EatCosmos}}",
+                        "CannotConsume":"{{i18n: EatCosmosNot}}",
+                        "Yes": "{{i18n: EatCosmosYes}}",
+                        "No":"{{i18n: EatCosmosNo}}" 
+                    },
+                    "Light":{
+                        "Size": 1.5,
+                        "Hex": "#cafaef",
+                        "R": 202,
+                        "G": 250,
+                        "B": 239,
+                        "Transparency": 0.9
+                    }
+                },
+                "(O)Cosmos.IridiumiteIcon": {
+                    "FoodDialogue": {
+                        "ConsumeQuestion":"{{i18n: EatCosmos}}",
+                        "CannotConsume":"{{i18n: EatCosmosNot}}",
+                        "Yes": "{{i18n: EatCosmosYes}}",
+                        "No":"{{i18n: EatCosmosNo}}" 
+                    },
+                    "Light":{
+                        "Size": 1.5,
+                        "Hex": "#a9dbfc",
+                        "R": 169,
+                        "G": 219,
+                        "B": 252,
+                        "Transparency": 0.9
+                    }
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "When": {"HasMod": "MindMeltMax.GlowBuff"},
+            "Priority": "Late",
+            "TargetField": ["Cosmos.Mushroom"],
+            "Entries": {
+                "Buffs": [
+                    {
+                        "BuffId": "MindMeltMax.GlowBuff/Glow",
+                        "Duration": 240,
+                        "CustomFields": {
+                            "MindMeltMax.GlowBuff/GlowTexture": "4",
+                            "MindMeltMax.GlowBuff/GlowRadius": 1,
+                            "MindMeltMax.GlowBuff/GlowColor": "202,250,239",
+                            "MindMeltMax.GlowBuff/DisplayName": "{{i18n:Glow.Name}}",
+                            "MindMeltMax.GlowBuff/Description": "{{i18n:Glow.Description}}",
+                            "MindMeltMax.GlowBuff/HoverText": "{{i18n:Glow.Hover}}"
+                        }
+                    }
+                ]
+            }
+        }	
+	]
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  

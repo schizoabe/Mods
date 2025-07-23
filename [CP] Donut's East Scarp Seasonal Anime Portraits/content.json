@@ -1,0 +1,309 @@
+{
+    "Format": "2.3.0",
+    
+    "DynamicTokens": [
+        {
+            "Name": "Festival",
+            "Value": "FlowerDance",
+            "When": {
+                "DayEvent": "flower dance",
+                "LocationName": "Forest, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "SpiritsEve",
+            "When": {
+                "DayEvent": "spirit's eve",
+                "LocationName": "town, Custom_EastScarpeInn, Custom_EastScarpe, temp"
+            }
+        }
+    ],
+
+    "Changes": [
+
+        // Aideen
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Aideen",
+            "FromFile": "assets/Aideen_{{Season}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+
+        {
+            "LogName": "Festival",
+            "Action": "EditImage",
+            "Target": "Portraits/Aideen",
+            "FromFile": "assets/Aideen_{{Festival}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+        
+        {
+            "LogName": "Beach",
+            "Action": "EditImage",
+            "Target": "Portraits/Aideen",
+            "FromFile": "assets/Aideen_Beach.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When": {
+                "LocationName": "IslandSouth, IslandWest, IslandEast, IslandNorth",
+                "Time": "{{Range: 1130, 1820}}"
+            }
+        },
+
+        // Eloise
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Eloise",
+            "FromFile": "assets/Eloise_{{Season}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall"
+            }                   
+        },
+        {
+            "LogName": "Eloise Winter Indoor",
+            "Action": "EditImage",
+            "Target": "Portraits/Eloise",
+            "FromFile": "assets/Eloise_Winter_Indoor.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",            
+            "When":{
+                "Season": "winter",
+                "IsOutdoors": "false"
+            }
+        },
+        {
+            "LogName": "Eloise Winter Outdoor",
+            "Action": "EditImage",
+            "Target": "Portraits/Eloise",
+            "FromFile": "assets/Eloise_Winter_Outdoor.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",     
+            "When":{
+                "Season": "winter",
+                "IsOutdoors": "true"
+            }       
+        },
+
+        {
+            "LogName": "Festival",
+            "Action": "EditImage",
+            "Target": "Portraits/Eloise",
+            "FromFile": "assets/Eloise_{{Festival}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+        
+        {
+            "LogName": "Beach",
+            "Action": "EditImage",
+            "Target": "Portraits/Eloise_Beach",
+            "FromFile": "assets/Eloise_Beach.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+
+        // Jacob
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Jacob",
+            "FromFile": "assets/Jacob_{{Season}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+
+        {
+            "LogName": "Festival",
+            "Action": "EditImage",
+            "Target": "Portraits/Jacob",
+            "FromFile": "assets/Jacob_{{Festival}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+
+        {
+            "LogName": "Beach",
+            "Action": "EditImage",
+            "Target": "Portraits/Jacob_Beach",
+            "FromFile": "assets/Jacob_Beach.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+
+        // Josephine
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/JosephineK",
+            "FromFile": "assets/Josephine_{{Season}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+
+        {
+            "LogName": "Festival",
+            "Action": "EditImage",
+            "Target": "Portraits/JosephineK",
+            "FromFile": "assets/Josephine_{{Festival}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+        
+        {
+            "LogName": "Beach",
+            "Action": "EditImage",
+            "Target": "Portraits/JosephineK",
+            "FromFile": "assets/Josephine_Beach.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When": {
+                "LocationName": "IslandSouth, IslandWest, IslandEast, IslandNorth",
+                "Time": "{{Range: 1130, 1820}}"
+            }
+        },
+
+        // Kataryna
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/KatarynaLK",
+            "FromFile": "assets/Kataryna_{{Season}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+    
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/KatarynaLK_wetHair",
+            "FromFile": "assets/Kataryna_WetHair_{{Season}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+
+        {
+            "LogName": "Festival",
+            "Action": "EditImage",
+            "Target": "Portraits/KatarynaLK",
+            "FromFile": "assets/Kataryna_{{Festival}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+        
+        {
+            "LogName": "Beach",
+            "Action": "EditImage",
+            "Target": "Portraits/KatarynaLK",
+            "FromFile": "assets/Kataryna_Beach.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When": {
+                "LocationName": "IslandSouth, IslandWest, IslandEast, IslandNorth",
+                "Time": "{{Range: 1130, 1820}}"
+            }
+        },
+
+        // Oliver
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/OliverK",
+            "FromFile": "assets/Oliver_{{Season}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+
+        {
+            "LogName": "Festival",
+            "Action": "EditImage",
+            "Target": "Portraits/OliverK",
+            "FromFile": "assets/Oliver_{{Festival}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+        
+        {
+            "LogName": "Beach",
+            "Action": "EditImage",
+            "Target": "Portraits/OliverK",
+            "FromFile": "assets/Oliver_Beach.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When": {
+                "LocationName": "IslandSouth, IslandWest, IslandEast, IslandNorth",
+                "Time": "{{Range: 1130, 1820}}"
+            }
+        },
+
+        // Rosa
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Rosa",
+            "FromFile": "assets/Rosa_{{Season}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+
+        {
+            "LogName": "Festival",
+            "Action": "EditImage",
+            "Target": "Portraits/Rosa",
+            "FromFile": "assets/Rosa_{{Festival}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+        
+        {
+            "LogName": "Beach",
+            "Action": "EditImage",
+            "Target": "Portraits/Rosa",
+            "FromFile": "assets/Rosa_Beach.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When": {
+                "LocationName": "IslandSouth, IslandWest, IslandEast, IslandNorth",
+                "Time": "{{Range: 1130, 1820}}"
+            }
+        },
+
+        // Vivienne
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/VivienneLK",
+            "FromFile": "assets/Vivienne_{{Season}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+
+        {
+            "LogName": "Festival",
+            "Action": "EditImage",
+            "Target": "Portraits/VivienneLK",
+            "FromFile": "assets/Vivienne_{{Festival}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"
+        },
+        
+        {
+            "LogName": "Beach",
+            "Action": "EditImage",
+            "Target": "Portraits/VivienneLK",
+            "FromFile": "assets/Vivienne_Beach.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When": {
+                "LocationName": "IslandSouth, IslandWest, IslandEast, IslandNorth",
+                "Time": "{{Range: 1130, 1820}}"
+            }
+        }
+    ]
+}

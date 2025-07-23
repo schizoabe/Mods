@@ -1,0 +1,92 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Happening",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts",
+			"TargetField": [ "Desert", "WeatherConditions" ],
+			"Priority": "Late + 10",
+			"Entries": {	
+						"HeavyRainMonsoon": {
+							"Id": "HeavyRainMonsoon",
+							"Condition": "ANY \"YEAR 2 2, SEASON summer, DAY_OF_MONTH 13 19\" \"YEAR 4 4, SEASON_DAY fall 0\" \"YEAR 4 4, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 6 7, SEASON_DAY fall 0\" \"YEAR 6 7, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 9 10, SEASON_DAY fall 0\" \"YEAR 9 10, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 12 12, SEASON_DAY fall 0\" \"YEAR 12 12, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 14 14, SEASON_DAY fall 0\" \"YEAR 14 14, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 16 17, SEASON_DAY fall 0\" \"YEAR 16 17, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 19 20, SEASON_DAY fall 0\" \"YEAR 19 20, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 22, SEASON_DAY fall 0\" \"YEAR 22, SEASON fall, DAY_OF_MONTH 1 9 10\"",
+							"Weather": "kath.weathering_HeavyRainMonsoon"
+						},
+						"MonsoonMonsoon": {
+							"Id": "MonsoonMonsoon",
+							"Condition": "ANY \"YEAR 2 2, SEASON summer, DAY_OF_MONTH 14 15 16 17 18\" \"YEAR 4 4, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 6 7, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 9 10, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 12 12, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 14 14, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 16 17, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 19 20, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 22, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\"",
+							"Weather": "kath.weathering_Monsoon"
+						},
+						"RainMonsoon": {
+							"Id": "RainMonsoon",
+							"Condition": "ANY \"YEAR 2 2, SEASON summer, DAY_OF_MONTH 11 12 20 21\" \"YEAR 4 4, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 4 4, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 6 7, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 6 7, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 9 10, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 9 10, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 12 12, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 12 12, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 14 14, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 14 14, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 16 17, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 16 17, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 19 20, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 19 20, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 22, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 22, SEASON fall, DAY_OF_MONTH 11 12 13\"",
+							"Weather": "Rain"
+						}
+			},
+			"MoveEntries": [
+				{ "Id": "HeavyRainMonsoon", "ToPosition": "Top" },
+				{ "Id": "MonsoonMonsoon", "ToPosition": "Top" },
+				{ "Id": "RainMonsoon", "ToPosition": "Top" }
+			]
+		},
+		{
+      		"LogName": "The Weather Happening",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts", 
+			"TargetField": [ "Default", "WeatherConditions" ],
+			"Priority": "Late + 10",
+			"Entries": {	
+						"HeavyRainMonsoon": {
+							"Id": "HeavyRainMonsoon",
+							"Condition": "ANY \"YEAR 2 2, SEASON summer, DAY_OF_MONTH 13 19\" \"YEAR 4 4, SEASON_DAY fall 0\" \"YEAR 4 4, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 6 7, SEASON_DAY fall 0\" \"YEAR 6 7, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 9 10, SEASON_DAY fall 0\" \"YEAR 9 10, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 12 12, SEASON_DAY fall 0\" \"YEAR 12 12, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 14 14, SEASON_DAY fall 0\" \"YEAR 14 14, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 16 17, SEASON_DAY fall 0\" \"YEAR 16 17, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 19 20, SEASON_DAY fall 0\" \"YEAR 19 20, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 22, SEASON_DAY fall 0\" \"YEAR 22, SEASON fall, DAY_OF_MONTH 1 9 10\"",
+							"Weather": "kath.weathering_HeavyRainMonsoon"
+						},
+						"MonsoonMonsoon": {
+							"Id": "MonsoonMonsoon",
+							"Condition": "ANY \"YEAR 2 2, SEASON summer, DAY_OF_MONTH 14 15 16 17 18\" \"YEAR 4 4, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 6 7, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 9 10, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 12 12, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 14 14, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 16 17, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 19 20, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 22, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\"",
+							"Weather": "kath.weathering_Monsoon"
+						},
+						"RainMonsoon": {
+							"Id": "RainMonsoon",
+							"Condition": "ANY \"YEAR 2 2, SEASON summer, DAY_OF_MONTH 11 12 20 21\" \"YEAR 4 4, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 4 4, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 6 7, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 6 7, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 9 10, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 9 10, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 12 12, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 12 12, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 14 14, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 14 14, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 16 17, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 16 17, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 19 20, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 19 20, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 22, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 22, SEASON fall, DAY_OF_MONTH 11 12 13\"",
+							"Weather": "Rain"
+						}
+			},
+			"MoveEntries": [
+				{ "Id": "HeavyRainMonsoon", "ToPosition": "Top" },
+				{ "Id": "MonsoonMonsoon", "ToPosition": "Top" },
+				{ "Id": "RainMonsoon", "ToPosition": "Top" }
+			]
+		},
+		{
+			"LogName": "The Weather Happening",
+		  "Action": "EditData",
+		  "Target": "Data/LocationContexts", 
+		  "TargetField": [ "Island", "WeatherConditions" ],
+		  "Priority": "Late + 10",
+		  "Entries": {	
+					 "HeavyRainMonsoon": {
+							"Id": "HeavyRainMonsoon",
+							"Condition": "ANY \"YEAR 2 2, SEASON summer, DAY_OF_MONTH 13 19\" \"YEAR 4 4, SEASON_DAY fall 0\" \"YEAR 4 4, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 6 7, SEASON_DAY fall 0\" \"YEAR 6 7, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 9 10, SEASON_DAY fall 0\" \"YEAR 9 10, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 12 12, SEASON_DAY fall 0\" \"YEAR 12 12, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 14 14, SEASON_DAY fall 0\" \"YEAR 14 14, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 16 17, SEASON_DAY fall 0\" \"YEAR 16 17, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 19 20, SEASON_DAY fall 0\" \"YEAR 19 20, SEASON fall, DAY_OF_MONTH 1 9 10\" \"YEAR 22, SEASON_DAY fall 0\" \"YEAR 22, SEASON fall, DAY_OF_MONTH 1 9 10\"",
+							"Weather": "Rain"
+						},
+					"MonsoonMonsoon": {
+							"Id": "MonsoonMonsoon",
+							"Condition": "ANY \"YEAR 2 2, SEASON summer, DAY_OF_MONTH 14 15 16 17 18\" \"YEAR 4 4, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 6 7, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 9 10, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 12 12, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 14 14, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 16 17, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 19 20, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\" \"YEAR 22, SEASON fall, DAY_OF_MONTH 2 3 4 5 6 7 8\"",
+							"Weather": "Rain"
+						},
+					"RainMonsoon": {
+							"Id": "RainMonsoon",
+							"Condition": "ANY \"YEAR 2 2, SEASON summer, DAY_OF_MONTH 11 12 20 21\" \"YEAR 4 4, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 4 4, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 6 7, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 6 7, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 9 10, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 9 10, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 12 12, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 12 12, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 14 14, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 14 14, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 16 17, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 16 17, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 19 20, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 19 20, SEASON fall, DAY_OF_MONTH 11 12 13\" \"YEAR 22, SEASON summer, DAY_OF_MONTH 25 26\" \"YEAR 22, SEASON fall, DAY_OF_MONTH 11 12 13\"",
+							"Weather": "Rain"
+						}
+		  },
+		  "MoveEntries": [
+			  { "Id": "HeavyRainMonsoon", "ToPosition": "Top" },
+			  { "Id": "MonsoonMonsoon", "ToPosition": "Top" },
+			  { "Id": "RainMonsoon", "ToPosition": "Top" }
+		  ]
+	  }		
+//End
+]
+}

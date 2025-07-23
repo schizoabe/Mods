@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.0" orientation="orthogonal" renderorder="right-down" width="6" height="5" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="72">
+ <properties>
+  <property name="DayTiles" value="Front 3 2 256 Front 3 3 288 Front 5 2 256 Front 5 3 288 Front 15 1 256 Front 15 2 288 Front 25 1 256 Front 25 2 288 Front 25 11 256 Front 25 12 288 Front 24 1 826 Front 26 1 826 Front 11 12 1346 Front 28 3 1346 Front 24 11 826"/>
+  <property name="Doors" value="15 12 1 120 21 13 1 120 6 12 1 120"/>
+  <property name="Light" value="11 12 1 24 1 4 26 1 4 28 3 1 24 11 4"/>
+  <property name="NightTiles" value="Front 3 2 1253 Front 3 3 1285 Front 5 2 1253 Front 5 3 1285 Front 15 1 1253 Front 15 2 1285 Front 25 1 1253 Front 25 2 1285 Front 25 11 1253 Front 25 12 1285 Front 24 1 827 Front 26 1 827 Front 11 12 1347 Front 28 3 1347 Front 24 11 827"/>
+  <property name="Warp" value="13 20 Forest 90 16"/>
+  <property name="WindowLight" value="3 2 6 3 3 6 5 2 6 5 3 6 15 1 6 15 2 6 25 1 6 25 2 6 25 11 6 25 12 6"/>
+ </properties>
+ <tileset firstgid="1" name="1" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+  <tile id="581">
+   <animation>
+    <frame tileid="581" duration="250"/>
+    <frame tileid="550" duration="250"/>
+    <frame tileid="581" duration="250"/>
+    <frame tileid="582" duration="250"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="2177" name="Paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
+  <image source="paths" width="64" height="256"/>
+ </tileset>
+ <tileset firstgid="2241" name="townInterior_2" tilewidth="16" tileheight="16" tilecount="1312" columns="32">
+  <image source="townInterior_2.png" width="512" height="656"/>
+ </tileset>
+ <layer id="1" name="Back" width="6" height="5">
+  <data encoding="base64" compression="zlib">
+   eJyrZ2JgqGNhYKgH4gYgPgDkNwBxPBDPA/LnA/ECFgg/AYidORBsEB0L5CdBxaKBdAwHhK7lgKipQWLD9IEwAH3PDZw=
+  </data>
+ </layer>
+ <layer id="9" name="Back1" width="6" height="5">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgYAAAAeAAB
+  </data>
+ </layer>
+ <objectgroup id="2" name="Back"/>
+ <layer id="3" name="Buildings" width="6" height="5">
+  <data encoding="base64" compression="zlib">
+   eJzbzMjAYMDMgAIcgWL6UDEtJoQ4OxMD1QAAqjwBkQ==
+  </data>
+ </layer>
+ <layer id="14" name="Buildings1" width="6" height="5">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgYAAAAeAAB
+  </data>
+ </layer>
+ <objectgroup id="4" name="Buildings" visible="0">
+  <object id="8" name="TileData" x="96" y="16" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;AnimalShop.8&quot;"/>
+   </properties>
+  </object>
+  <object id="10" name="TileData" x="16" y="0" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;AnimalShop.10&quot;"/>
+   </properties>
+  </object>
+  <object id="11" name="TileData" x="80" y="16" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;AnimalShop.11&quot;"/>
+   </properties>
+  </object>
+  <object id="13" name="TileData" x="0" y="16" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;AnimalShop.13&quot;"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="5" name="Front" width="6" height="5">
+  <data encoding="base64" compression="zlib">
+   eJxjYMAEzxmxCFIAlgDxMjQMAIHXBCU=
+  </data>
+ </layer>
+ <layer id="12" name="Front1" width="6" height="5">
+  <data encoding="base64" compression="zlib">
+   eJxjYMAEGxixCFIZAABFmwCy
+  </data>
+ </layer>
+ <layer id="10" name="Front2" width="6" height="5">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgYAAAAeAAB
+  </data>
+ </layer>
+ <objectgroup id="6" name="Front" visible="0"/>
+ <layer id="7" name="Paths" width="6" height="5" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYICADg4IbuVgwACdQLF2qHgTkG5Dwi1Q8XYs+vCJAwDpmwas
+  </data>
+ </layer>
+ <objectgroup id="8" name="Paths"/>
+</map>

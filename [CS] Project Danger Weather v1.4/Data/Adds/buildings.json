@@ -1,0 +1,301 @@
+{
+	"Changes": [
+	
+	
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+			"kath.weathering_STOPTRIGGER1": {
+				"Id": "kath.weathering_STOPTRIGGER1",
+                "Trigger": "DayEnding",
+                "Condition": "BUILDINGS_CONSTRUCTED All kath.weathering_Array 1 999 FALSE",
+                "Actions": [
+					"AddMail All BuiltArray received",
+					"MarkActionApplied All kath.weathering_STOPTRIGGER2 false",
+					"AddConversationTopic WCDBuiltArray 2",
+                    ],
+				},	
+			"kath.weathering_STOPTRIGGER2": {
+				"Id": "kath.weathering_STOPTRIGGER2",
+                "Trigger": "DayEnding",
+                "Condition": "!BUILDINGS_CONSTRUCTED All kath.weathering_Array 1 999 FALSE",
+                "Actions": [
+					"RemoveMail All BuiltArray all",
+					"MarkActionApplied All kath.weathering_STOPTRIGGER1 false",
+                    ],
+				},	
+			"kath.weathering_STOPTRIGGERSTATION1": {
+				"Id": "kath.weathering_STOPTRIGGERSTATION1",
+                "Trigger": "DayEnding",
+                "Condition": "BUILDINGS_CONSTRUCTED All kath.weathering_Station 1 999 FALSE",
+                "Actions": [
+					"AddMail All BuiltStation received",
+					"MarkActionApplied All kath.weathering_STOPTRIGGERSTATION2 false",
+					"AddConversationTopic WCDBuiltStation 2",
+                    ],
+				},	
+			"kath.weathering_STOPTRIGGERSTATION2": {
+				"Id": "kath.weathering_STOPTRIGGERSTATION2",
+                "Trigger": "DayEnding",
+                "Condition": "!BUILDINGS_CONSTRUCTED All kath.weathering_Station 1 999 FALSE",
+                "Actions": [
+					"RemoveMail All BuiltStation all",
+					"MarkActionApplied All kath.weathering_STOPTRIGGERSTATION1 false",
+                    ],
+				},	
+			},
+		},
+		
+		
+		
+    {
+      "LogName": "Add Buildings",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+		  
+	"kath.weathering_Array": {
+            "ID": "kath.weathering_Array",
+            "Name": "{{i18n: ArrayBuilding.Name}}",
+            "Description": "{{i18n: ArrayBuilding.Desc}}",
+
+            "Texture": "Mods/kath.weathering/Buildings",
+            "Skins": [],
+            "DrawShadow": false,
+            "Size": {
+                "X": 5,
+                "Y": 3
+            },
+            "FadeWhenBehind": false,
+            "SourceRect": {
+                "X": 0,
+                "Y": 48,
+                "Width": 80,
+                "Height": 48
+            },
+            "SeasonOffset": {},
+            "DrawOffset": "0, 0",
+            "SortTileOffset": 0.0,
+            "AdditionalPlacementTiles": null,
+            "BuildingType": null,
+            "Builder": "Wizard",
+            "BuildCondition": "PLAYER_HAS_MAIL Current Wizard.ArrayBuild Any, !BUILDINGS_CONSTRUCTED All kath.weathering_Array 1",
+            "BuildDays": 0,
+            "BuildCost": 500000,
+            "BuildMaterials": [
+                {
+                "ItemId": "(O)681",
+                "Amount": 50
+                },
+                {
+                "ItemId": "(O)797",
+                "Amount": 5
+                },
+                {
+                "ItemId": "(O)910",
+                "Amount": 5
+                }
+            ],
+            "BuildingToUpgrade": null,
+            "MagicalConstruction": true,
+            "BuildMenuDrawOffset": {
+                "X": 0,
+                "Y": 0
+            },
+            "AddMailOnBuild": null,
+            "Metadata": {},
+            "ModData": {},
+            "Chests": [
+				{
+					"Id": "Input",
+					"Type": "Load",
+					"Sound": "stoneCrack",
+					"InvalidItemMessage": "[LocalizedText Strings\\\\StringsfromMaps:BuildArrayMessage1]",
+					"ChestFullMessage": "[LocalizedText Strings\\\\StringsfromMaps:BuildArrayMessage2]",
+					"DisplayTile": "-1, -1",
+					"DisplayHeight": 0.0,
+				},
+				{
+					"Id": "Output",
+					"Type": "Collect",
+					"InvalidItemMessage": null,
+					"ChestFullMessage": null,
+					"DisplayTile": "2, 2",
+					"DisplayHeight": 1.5,
+				},
+			],
+            "DefaultAction": null,
+            "AdditionalTilePropertyRadius": 0,
+            "AllowsFlooringUnderneath": true,
+            "ActionTiles": [
+            {
+              "Id": "Default_OpenChestInput",
+              "Tile": {
+                "X": 2,
+                "Y": 0
+              },
+              "Action": "BuildingChest Input"
+            },
+            {
+              "Id": "Default_OpenChestOuput",
+              "Tile": {
+                "X": 2,
+                "Y": 2
+              },
+              "Action": "BuildingChest Output"
+            },
+			],
+            "TileProperties": [
+			{
+				"Id": "AddLights",
+				"Name": "mushymato.MMAP_Light",
+				"Value": "{{AddLight}}",
+				"Layer": "Front",
+				"TileArea": {"X": 2, "Y": 1, "Width": 1, "Height": 1},
+			}
+			],
+            "ItemConversions": [
+				{
+					"Id": "ManaFertilizer",
+					"RequiredTags": ["id_o_910"],
+					"SourceChest": "Input",
+					"DestinationChest": "Output",
+					"ProducedItems": [
+					{
+						"ID": "ManaFertilizerProduce",
+						"ItemId": "(O)ManaFertilizer",
+						"Condition": "!WEATHER Here kath.weathering_Darkness",
+						"MinStack": 1,
+						"MaxStack": 3,
+						"Chance": "{{ManaOutput}}",
+					},
+					],
+					"RequiredCount": 1,
+					"MaxDailyConversions": 1,
+				},
+			],
+            "DrawLayers": [
+				{
+				"Id": "ManaRock",
+				"SourceRect": {
+                "X": "{{ManaFlowX}}",
+                "Y": 144,
+                "Width": 16,
+                "Height": 16
+					},
+				"DrawPosition": "32, 16",
+				"FrameCount": "{{ManaFlowCount}}",
+				"FramesPerRow": "{{ManaFlowCount}}",
+				"FrameDuration": 250,
+				},					
+			],
+            "CustomFields": null
+            },	
+			
+	"kath.weathering_Station": {
+            "ID": "kath.weathering_Station",
+            "Name": "{{i18n: StationBuilding.Name}}",
+            "Description": "{{i18n: StationBuilding.Desc}}",
+
+            "Texture": "Mods/kath.weathering/Buildings",
+            "Skins": [],
+            "DrawShadow": false,
+            "Size": {
+                "X": 5,
+                "Y": 3
+            },
+            "FadeWhenBehind": true,
+            "SourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 80,
+                "Height": 48
+            },
+            "SeasonOffset": {
+                "X": 80,
+                "Y": 0
+            },
+            "DrawOffset": "0, 0",
+            "SortTileOffset": 0.0,
+            "CollisionMap": "OOOOO\nXXXXX\nXXXXX",
+            "AdditionalPlacementTiles": null,
+            "BuildingType": null,
+            "Builder": "Robin",
+            "BuildCondition": "PLAYER_HAS_MAIL Current Robin.StationBuild Any, !BUILDINGS_CONSTRUCTED All kath.weathering_Station 1",
+            "BuildDays": 0,
+            "BuildCost": 9000,
+            "BuildMaterials": [
+                {
+                "ItemId": "(O)709",
+                "Amount": 100
+                },
+                {
+                "ItemId": "(O)338",
+                "Amount": 20
+                },
+                {
+                "ItemId": "(O)335",
+                "Amount": 20
+                }
+            ],
+            "BuildingToUpgrade": null,
+            "MagicalConstruction": false,
+            "BuildMenuDrawOffset": {
+                "X": 0,
+                "Y": 0
+            },
+            "AddMailOnBuild": null,
+            "Metadata": {},
+            "ModData": {},
+            "HayCapacity": 0,
+            "Chests": null,
+            "DefaultAction": null,
+            "AdditionalTilePropertyRadius": 0,
+            "AllowsFlooringUnderneath": true,
+            "ActionTiles": [
+				{
+					"Id": "MessageTile1",
+					"Action": "Message \"BuildStationMessage2\"",
+					"Tile": {
+						"X": 1,
+						"Y": 2,					
+					},
+				},
+				{
+					"Id": "MessageTile2",
+					"Action": "Message \"BuildStationMessage1\"",
+					"Tile": {
+						"X": 0,
+						"Y": 2,					
+					},
+				},					
+			],
+            "TileProperties": [],
+            "ItemConversions": null,
+            "DrawLayers": [
+				{
+					"Id": "WindVeil",
+					"SourceRect": {
+						"X": 0,
+						"Y": 0,
+						"Width": 80,
+						"Height": 48
+						},
+					"DrawPosition": "0, 0",
+					"Texture": "Mods/kath.weathering/Buildings_2",
+					"FrameCount": 8,
+					"FramesPerRow": 1,
+					"FrameDuration": "{{WindyDuration}}",
+				},	
+			],
+            "CustomFields": null
+            },		  
+		
+      //
+      }
+    },
+  
+//End
+]
+}

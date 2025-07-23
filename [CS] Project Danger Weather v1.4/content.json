@@ -1,0 +1,1476 @@
+{
+	"Format": "2.4.0",
+	
+	//Humble adventurer welcome to this hot mess//
+	//Could it be more organized and less superfluous? Yes.//
+	//Do I want to organize it? No, this is too wild, send help.//
+
+	//It is messier now ><//
+	
+		"DynamicTokens": [
+	//Here we go again
+		//Danger or Not
+		{
+			"Name": "DangerDegree",
+			"Value": "Danger"
+				},
+		{
+			"Name": "DangerDegree",
+			"Value": "Danger",
+			"When": {
+			"NoDanger": "false",
+			"NoDebuffs": "false"
+			}
+		},
+		{
+			"Name": "DangerDegree",
+			"Value": "Safe",
+			"When": {
+			"NoDanger": "true"	
+			}
+		},
+		{
+			"Name": "DangerDegree",
+			"Value": "Safe",
+			"When": {
+			"NoDanger": "false",
+			"NoDebuffs": "true"
+			}
+		},
+		//PT Sandy Gone
+		/*{
+			"Name": "PTSand",
+			"Value": "ANY \"SEASON summer, DAY_OF_MONTH 17 18, YEAR 1 1\" \"SEASON summer, DAY_OF_MONTH 7 8, YEAR 2 2\" \"SEASON summer, DAY_OF_MONTH 2 19, YEAR 3\" \"SEASON summer, DAY_OF_MONTH 8 9 21, YEAR 4 4\"",
+			"When": {
+			"NoPTSandy": "false"
+			}
+		},		
+		{
+			"Name": "PTSand",
+			"Value": "FALSE",
+			"When": {
+			"NoPTSandy": "true"
+			}
+		},
+		{
+			"Name": "PTSandPost4",
+			"Value": "SEASON summer, SYNCED_RANDOM day summer_weather 0.125",
+			"When": {
+			"NoPTSandy": "false"
+			}
+		},		
+		{
+			"Name": "PTSandPost4",
+			"Value": "FALSE",
+			"When": {
+			"NoPTSandy": "true"
+			}
+		},	
+		{
+			"Name": "SandyPost4",
+			"Value": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_Sandstorm",
+			"When": {
+			"NoPTSandy": "false"
+			}
+		},		
+		{
+			"Name": "SandyPost4",
+			"Value": "SEASON summer, SYNCED_RANDOM day summer_weather 0.125",
+			"When": {
+			"NoPTSandy": "true"
+			}
+		},	
+
+		{
+			"Name": "NoPTSandyCheck",
+			"Value": "TRUE",
+			"When": {
+			"NoPTSandy": "false"
+			}
+		},		
+		{
+			"Name": "NoPTSandyCheck",
+			"Value": "FALSE",
+			"When": {
+			"NoPTSandy": "true"
+			}
+		},			
+		//No Ash in Valley
+		{
+			"Name": "PlannedAsh",
+			"Value": "ANY \"SEASON spring, DAY_OF_MONTH 2, YEAR 2 2\" \"SEASON winter, DAY_OF_MONTH 4, YEAR 4 4\"",
+			"When": {
+			"OnlyIslandAsh": "false"
+			}
+		},		
+		{
+			"Name": "PlannedAsh",
+			"Value": "FALSE",
+			"When": {
+			"OnlyIslandAsh": "true"
+			}
+		},
+		{
+			"Name": "PTAshPost4",
+			"Value": "!SEASON winter, SYNCED_RANDOM year lucky_weather 0.35, RANDOM 0.55, !PLAYER_HAS_MAIL Any SummonAsh, !PLAYER_HAS_MAIL Any SummonAsh2",
+			"When": {
+			"OnlyIslandAsh": "false"
+			}
+		},		
+		{
+			"Name": "PTAshPost4",
+			"Value": "FALSE",
+			"When": {
+			"OnlyIslandAsh": "true"
+			}
+		},	
+		{
+			"Name": "DAshPost4",
+			"Value": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_Ash, !PLAYER_HAS_MAIL Any SummonAsh, !PLAYER_HAS_MAIL Any SummonAsh2",
+			"When": {
+			"OnlyIslandAsh": "false"
+			}
+		},		
+		{
+			"Name": "DAshPost4",
+			"Value": "FALSE",
+			"When": {
+			"OnlyIslandAsh": "true"
+			}
+		},
+		{
+			"Name": "IsAshPost4",
+			"Value": "WORLD_STATE_FIELD WeatherForTomorrow kath.weathering_Ash, !PLAYER_HAS_MAIL Any SummonAsh, !PLAYER_HAS_MAIL Any SummonAsh2",
+			"When": {
+			"OnlyIslandAsh": "false"
+			}
+		},		
+		{
+			"Name": "IsAshPost4",
+			"Value": "!SEASON winter, SYNCED_RANDOM year lucky_weather 0.35, RANDOM 0.55, !PLAYER_HAS_MAIL Any SummonAsh, !PLAYER_HAS_MAIL Any SummonAsh2",
+			"When": {
+			"OnlyIslandAsh": "true"
+			}
+		},		
+		{
+			"Name": "AshSummonOut",
+			"Value": "PLAYER_HAS_MAIL Current SummonAsh",
+			"When": {
+			"OnlyIslandAsh": "false"
+			}
+		},		
+		{
+			"Name": "AshSummonOut",
+			"Value": "FALSE",
+			"When": {
+			"OnlyIslandAsh": "true"
+			}
+		},
+		{
+			"Name": "AshSummon2Out",
+			"Value": "PLAYER_HAS_MAIL Current SummonAsh2",
+			"When": {
+			"OnlyIslandAsh": "false"
+			}
+		},		
+		{
+			"Name": "AshSummon2Out",
+			"Value": "FALSE",
+			"When": {
+			"OnlyIslandAsh": "true"
+			}
+		},*/		
+		//FoggyValues
+		{
+			"Name": "NoVisFog",
+			"Value": "0.8",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "NoVisFog",
+			"Value": "0.5",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},	
+
+		{
+			"Name": "BlurredFog",
+			"Value": "TRUE",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "BlurredFog",
+			"Value": "FALSE",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+		{
+			"Name": "BlurredFogValue",
+			"Value": "0.9",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "BlurredFogValue",
+			"Value": "0.7",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+
+		{
+			"Name": "Blurred",
+			"Value": "TIME 600 1000",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "Blurred",
+			"Value": "FALSE",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+		{
+			"Name": "MornFog",
+			"Value": "0.75",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "MornFog",
+			"Value": "0.55",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+		{
+			"Name": "Fog1",
+			"Value": "0.7",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "Fog1",
+			"Value": "0.5",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+		{
+			"Name": "Fog2",
+			"Value": "0.65",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "Fog2",
+			"Value": "0.45",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+		{
+			"Name": "Fog3",
+			"Value": "0.6",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "Fog3",
+			"Value": "0.4",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+		{
+			"Name": "Fog4",
+			"Value": "0.55",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "Fog4",
+			"Value": "0.35",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+		{
+			"Name": "Fog5",
+			"Value": "0.45",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "Fog5",
+			"Value": "0.3",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+		{
+			"Name": "Fog6",
+			"Value": "0.35",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "Fog6",
+			"Value": "0.25",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+		{
+			"Name": "LastFog",
+			"Value": "0.25",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "LastFog",
+			"Value": "0.2",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+		{
+			"Name": "BufferFog",
+			"Value": "0.15",
+			"When": {
+				"ThickFoggy": "false"
+			}
+		},
+		{
+			"Name": "BufferFog",
+			"Value": "0.15",
+			"When": {
+				"ThickFoggy": "true"
+			}
+		},
+	//Meatball Food Rate
+		{
+			"Name": "RateFood",
+			"Value": "7200",
+			"When": {
+				"HasMod |contains=Stuyk.LongerDays, cantorsdust.TimeSpeed": true
+			}
+		},
+		{
+			"Name": "RateFood",
+			"Value": "3600",
+			"When": {
+				"HasMod |contains=Stuyk.LongerDays, cantorsdust.TimeSpeed": false
+			}
+		},
+	//ManaFlow//////////////////////////////////
+		//FrameCount
+		{
+			"Name": "ManaFlowCount",
+			"Value": "8",
+			"When": {
+				"Weather |contains=kath.weathering_Darkness": false
+			}
+		},		
+		{
+			"Name": "ManaFlowCount",
+			"Value": "1",
+			"When": {
+				"Weather |contains=kath.weathering_Darkness": true
+			}
+		},	
+		//X
+		{
+			"Name": "ManaFlowX",
+			"Value": "144",
+			"When": {
+				"Weather |contains=kath.weathering_Darkness": false
+			}
+		},		
+		{
+			"Name": "ManaFlowX",
+			"Value": "128",
+			"When": {
+				"Weather |contains=kath.weathering_Darkness": true
+			}
+		},	
+		//ChanceChange	
+		{
+			"Name": "ManaOutput",
+			"Value": "0.55",
+			"When": {
+				"HasFlag |contains=museumComplete": false,
+				"HasFlag |contains=Farm_Eternal": false,
+				"EasyFerti": "false"
+			}
+		},
+		{
+			"Name": "ManaOutput",
+			"Value": "0.85",
+			"When": {
+				"HasFlag |contains=museumComplete": true,
+				"HasFlag |contains=Farm_Eternal": false,
+				"EasyFerti": "false"
+			}
+		},		
+		{
+			"Name": "ManaOutput",
+			"Value": "1.0",
+			"When": {
+				"HasFlag |contains=museumComplete": true,
+				"HasFlag |contains=Farm_Eternal": true,
+				"EasyFerti": "false"
+			}
+		},	
+		{
+			"Name": "ManaOutput",
+			"Value": "1.0",
+			"When": {
+				"EasyFerti": "true"
+			}
+		},		
+	//WindVeil	
+		//Speeds
+		{
+			"Name": "WindyDuration",
+			"Value": "250",
+			"When": {
+				"Weather |contains=kath.weathering_Sandstorm, kath.weathering_Tornado, Rain, Storm, Wind, kath.weathering_HeavyRain, kath.weathering_Blizzard": false
+			}
+		},
+		{
+			"Name": "WindyDuration",
+			"Value": "150",
+			"When": {
+				"Weather |contains=kath.weathering_Sandstorm, kath.weathering_Tornado, Rain, Storm, Wind": true,
+				"Weather |contains=kath.weathering_HeavyRain, kath.weathering_Blizzard": false
+				
+			}
+		},
+		{
+			"Name": "WindyDuration",
+			"Value": "50",
+			"When": {
+				"Weather |contains=kath.weathering_Sandstorm, kath.weathering_Tornado, Rain, Storm, Wind": false,
+				"Weather |contains=kath.weathering_HeavyRain, kath.weathering_Blizzard": true
+			}
+		},	
+//Change Fertilizer Looks
+		{
+			"Name": "IndexFerti",
+			"Value": "0"
+		},
+		{
+			"Name": "IndexFerti",
+			"Value": "0",
+			"When": {
+				"RevertVanilla": "vanilla"
+			}
+		},	
+		{
+			"Name": "IndexFerti",
+			"Value": "1",
+			"When": {
+				"RevertVanilla": "grandpa",
+				"HasMod": "Gweniaczek.Grandpas_Tools"
+			}
+		},
+		{
+			"Name": "IndexFerti",
+			"Value": "2",
+			"When": {
+				"RevertVanilla": "vt",
+				"HasMod": "Taiyo.VanillaTweaks.Farming"
+			}
+		},
+		{
+			"Name": "IndexFerti",
+			"Value": "3",
+			"When": {
+				"RevertVanilla": "off"
+			}
+		},
+		
+//SeasonBlock
+		{
+			"Name": "SeasonBlock",
+			"Value": "-300"
+		},
+		{
+			"Name": "SeasonBlock",
+			"Value": "1",
+			"When": {
+				"Season": "summer"
+			}
+		},
+		{
+			"Name": "SeasonBlock",
+			"Value": "1",
+			"When": {
+				"Weather": "kath.weathering_HeatWave"
+			}
+		},		
+		{
+			"Name": "SeasonBlock2",
+			"Value": "-300"
+		},
+		{
+			"Name": "SeasonBlock2",
+			"Value": "1",
+			"When": {
+				"Season": "spring"
+			}
+		},	
+		{
+			"Name": "SeasonBlock2",
+			"Value": "1",
+			"When": {
+				"Weather": "kath.weathering_Locust"
+			}
+		},			
+		{
+			"Name": "SeasonDrink",
+			"Value": "false"
+		},			
+		{
+			"Name": "SeasonDrink",
+			"Value": "true",
+			"When": {
+				"DrinkSPF": "true"
+			}
+		},	
+//Wind Thing
+{
+	"Name": "WindForecast",
+	"Value": "{{i18n: WindForecast.{{Random:Spring,Spring,Spring,Spring,Spring,Spring,Spring,Spring,Spring,Wimdy}} }}"
+},
+{
+	"Name": "WindForecast",
+	"Value": "{{i18n: WindForecast.{{Random:Summer,Summer,Summer,Summer,Summer,Summer,Summer,Summer,Summer,Wimdy}} }}",
+	"When": {
+		"Season": "summer"
+	}
+},	
+{
+	"Name": "WindForecast",
+	"Value": "{{i18n: WindForecast.{{Random:Fall,Fall,Fall,Fall,Fall,Fall,Fall,Fall,Fall,Wimdy}} }}",
+	"When": {
+		"Season": "fall"
+	}
+},
+{
+	"Name": "WindForecast",
+	"Value": "{{i18n: WindForecast.{{Random:Winter,Winter,Winter,Winter,Winter,Winter,Winter,Winter,Winter,Wimdy}} }}",
+	"When": {
+		"Season": "winter"
+	}
+},		
+//Green Rain Thing
+{
+	"Name": "GreenRainName",
+	"Value": "{{i18n:Patch.GreenRain}}"
+},
+{
+	"Name": "GreenRainName",
+	"Value": "{{i18n: Patch.GreenRain.Known}}",
+	"When": {
+		"Year|contains=1": false,
+		"Hearts:Wizard": "1, 2, 3, 4, 5, 6, 7"
+	}
+},	
+{
+	"Name": "GreenRainName",
+	"Value": "{{i18n: Patch.GreenRain.Known2}}",
+	"When": {
+		"Year|contains=1": false,
+		"Hearts:Wizard": "8, 9, 10"
+	}
+},	
+//Totem or Tome
+{
+	"Name": "TotemOrTome",
+	"Value": "{{i18n:Patch.Totem}}"
+},
+{
+	"Name": "TotemOrTome",
+	"Value": "{{i18n:Patch.Tome}}",
+	"When": {"HasMod": "Aimon111.WarpTotemstoMagicBookTomes"}
+},		
+//Festival Thing
+
+		{
+			"Name": "FoTSCompat",
+			"Value": "{{i18n: Patch.Festival_Summer11}}"
+		},	
+		{
+			"Name": "FoTSCompat",
+			"Value": "{{i18n: FeastOfTheSun.Compat}}",
+			"When": {"HasMod":"KaileyStardew.FeastOfTheSun"}			
+		},
+		
+		{
+			"Name": "FestivalInfo",
+			"Value": "{{i18n: Festival_General}}"
+		},
+        {
+			"Name": "FestivalInfo",
+			"Value": "{{i18n: Festival_Spring2}}",
+			"When": {
+				"Season": "spring",
+				"Day": "2",
+                "Year|contains=1": false,
+                "HasMod": "kath.starlight"
+			}
+		},
+		{
+			"Name": "FestivalInfo",
+			"Value": "{{i18n: Festival_Spring13}}",
+			"When": {
+				"Season": "spring",
+				"Day": "12"
+			}
+		},	
+		{
+			"Name": "FestivalInfo",
+			"Value": "{{i18n: Festival_Spring24}}",
+			"When": {
+				"Season": "spring",
+				"Day": "23"
+			}
+		},
+		{
+			"Name": "FestivalInfo",
+			"Value": "{{i18n: Festival_Summer11 |FoTSCompat={{FoTSCompat}} }}",
+			"When": {
+				"Season": "summer",
+				"Day": "10"
+			}
+		},
+		{
+			"Name": "FestivalInfo",
+			"Value": "{{i18n: Festival_Summer28}}",
+			"When": {
+				"Season": "summer",
+				"Day": "27"
+			}
+		},
+		{
+			"Name": "FestivalInfo",
+			"Value": "{{i18n: Festival_Fall16}}",
+			"When": {
+				"Season": "fall",
+				"Day": "15"
+			}
+		},
+		{
+			"Name": "FestivalInfo",
+			"Value": "{{i18n: Festival_Fall27}}",
+			"When": {
+				"Season": "fall",
+				"Day": "26"
+			}
+		},
+		{
+			"Name": "FestivalInfo",
+			"Value": "{{i18n: Festival_Winter8}}",
+			"When": {
+				"Season": "winter",
+				"Day": "7"
+			}
+		},
+		{
+			"Name": "FestivalInfo",
+			"Value": "{{i18n: Festival_Winter25}}",
+			"When": {
+				"Season": "winter",
+				"Day": "24"
+			}
+		},
+		//
+		{
+			"Name": "FestivalName",
+			"Value": "{{i18n: Patch.Festival_General}}"
+		},
+        {
+			"Name": "FestivalName",
+			"Value": "{{i18n: Patch.Festival_Spring2}}",
+			"When": {
+				"Season": "spring",
+				"Day": "13",
+                "Year|contains=1": false,
+                "HasMod": "kath.starlight"
+			}
+		},
+		{
+			"Name": "FestivalName",
+			"Value": "{{i18n: Patch.Festival_Spring13}}",
+			"When": {
+				"Season": "spring",
+				"Day": "13"
+			}
+		},	
+		{
+			"Name": "FestivalName",
+			"Value": "{{i18n: Patch.Festival_Spring24}}",
+			"When": {
+				"Season": "spring",
+				"Day": "24"
+			}
+		},
+		{
+			"Name": "FestivalName",
+			"Value": "{{i18n: Patch.Festival_Summer11}}",
+			"When": {
+				"Season": "summer",
+				"Day": "11",
+				"HasMod |contains=KaileyStardew.FeastOfTheSun":false
+			}
+		},
+		{
+			"Name": "FestivalName",
+			"Value": "{{i18n: FeastOfTheSun.Compat}}",
+			"When": {
+				"Season": "summer",
+				"Day": "11",
+				"HasMod": "KaileyStardew.FeastOfTheSun"
+			}
+		},		
+		{
+			"Name": "FestivalName",
+			"Value": "{{i18n: Patch.Festival_Summer28}}",
+			"When": {
+				"Season": "summer",
+				"Day": "28"
+			}
+		},
+		{
+			"Name": "FestivalName",
+			"Value": "{{i18n: Patch.Festival_Fall16}}",
+			"When": {
+				"Season": "fall",
+				"Day": "16"
+			}
+		},
+		{
+			"Name": "FestivalName",
+			"Value": "{{i18n: Patch.Festival_Fall27}}",
+			"When": {
+				"Season": "fall",
+				"Day": "27"
+			}
+		},
+		{
+			"Name": "FestivalName",
+			"Value": "{{i18n: Patch.Festival_Winter8}}",
+			"When": {
+				"Season": "winter",
+				"Day": "8"
+			}
+		},
+		{
+			"Name": "FestivalName",
+			"Value": "{{i18n: Patch.Festival_Winter25}}",
+			"When": {
+				"Season": "winter",
+				"Day": "25"
+			}
+		},
+		{
+			"Name": "FestivalNamePlus",
+			"Value": "",
+			"When": {
+				"SpecialWeather": "false"
+			}
+		},		
+		{
+			"Name": "FestivalNamePlus",
+			"Value": "",
+			"When": {
+				"DayEvent |contains=dance of the moonlight jellies,egg festival,feast of the winter star,festival of ice,flower dance,luau,stardew valley fair,spirit's eve": false,
+				"SpecialWeather": "true"
+			}
+		},
+		{
+			"Name": "FestivalNamePlus",
+			"Value": "{{i18n: Misc.1}}{{FestivalName}}{{i18n: Misc.2}}",
+			"When": {
+				"DayEvent |contains=dance of the moonlight jellies,egg festival,feast of the winter star,festival of ice,flower dance,luau,stardew valley fair,spirit's eve,": true,
+				"SpecialWeather": "true"
+			}
+		},		
+        {
+			"Name": "FestivalNamePlus",
+			"Value": "{{i18n: Misc.1}}{{FestivalName}}{{i18n: Misc.2}}",
+			"When": {
+				"Season": "Spring",
+                "Day": 2,
+                "Year|contains=1": false,
+				"SpecialWeather": "true"
+			}
+		},
+//Joja Member Check
+		{
+			"Name": "JojaMemberCheck",
+			"Value": "0.03",
+			"When": {
+				"HasFlag |contains=jojaMember": false
+			}
+		},
+		{
+			"Name": "JojaMemberCheck",
+			"Value": "0.06",
+			"When": {
+				"HasFlag |contains=jojaMember": true
+			}
+		},
+//Change Fest Music
+		{
+			"Name": "SpiritEveMusic",
+			"Value": "fall3",
+			"When": {
+				"ChangeFestMusic": "false"
+			}
+		},
+		{
+			"Name": "SpiritEveMusic",
+			"Value": "KathEclipse2",
+			"When": {
+				"ChangeFestMusic": "true"
+			}
+		},
+		{
+			"Name": "SpiritEveNT",
+			"Value": "false"
+		},
+		{
+			"Name": "SpiritEveNT",
+			"Value": "true",
+			"When": {
+				"Season": "fall",
+				"Day": "27"
+			}
+		},
+//Light
+		{
+			"Name": "AddLight",
+			"Value": "null",
+			"When": {
+				"HasMod |contains=mushymato.MMAP": false
+			}
+		},
+		{
+			"Name": "AddLight",
+			"Value": "2 Green 1",
+			"When": {
+				"HasMod": "mushymato.MMAP"
+			}
+		},
+		{
+			"Name": "AddLight",
+			"Value": "1 Black 1",
+			"When": {
+				"HasMod": "mushymato.MMAP",
+				"Weather": "kath.weathering_Darkness"
+			}
+		},
+		
+		{
+			"Name": "AddLight2",
+			"Value": "0.95"
+		},
+		{
+			"Name": "AddLight2",
+			"Value": "0.1",
+			"When": {
+				"Weather": "kath.weathering_Darkness"
+			}
+		},	
+		//
+		{
+			"Name": "NadoSummonedPower",
+			"Value": "NadoSummonedDanger"
+		},
+		{
+			"Name": "NadoSummonedPower",
+			"Value": "NadoSummonedSafe",
+			"When": {
+				"Query: '{{NoDanger}}' = 'true' OR '{{DangerWeather}}' = 'false'": true
+			}
+		},
+		
+		{
+			"Name": "EarthquakeSummonPower",
+			"Value": "EarthquakeSummonedDanger"
+		},
+		{
+			"Name": "EarthquakeSummonPower",
+			"Value": "EarthquakeSummonedSafe",
+			"When": {
+				"Query: '{{NoDanger}}' = 'true' OR '{{DangerWeather}}' = 'false'": true
+			}
+		},	
+		
+		{
+			"Name": "VolcanoSummonPower",
+			"Value": "VolcanoSummonDanger"
+		},
+		{
+			"Name": "VolcanoSummonPower",
+			"Value": "VolcanoSummonSafe",
+			"When": {
+				"Query: '{{NoDanger}}' = 'true' OR '{{DangerWeather}}' = 'false'": true
+			}
+		},	
+		//
+		{
+			"Name": "NadoOnce",
+			"Value": "NadoPassingDanger"						
+		},		
+		{
+			"Name": "NadoOnce",
+			"Value": "NadoPassingDanger",
+			"When": {
+				"ConsequencesLITE": "Default"
+			}						
+		},
+		{
+			"Name": "NadoOnce",
+			"Value": "NadoPassingNULL",	
+			"When": {
+				"HasFlag": "BuiltArray"
+			}			
+		},
+		{
+			"Name": "NadoOnce",
+			"Value": "NadoPassingNULL",	
+			"When": {
+				"ConsequencesLITE": "LITE"
+			}			
+		},				
+		{
+			"Name": "NadoOnce",
+			"Value": "NadoPassingSafe",		
+			"When": {
+				"Query: '{{NoDanger}}' = 'true' OR '{{DangerWeather}}' = 'false'": true
+			}			
+		},
+		
+		{
+			"Name": "ChanceChange",
+			"Value": "0.45"			
+		},
+		{
+			"Name": "ChanceChange",
+			"Value": "1.0",	
+			"When": {
+				"HasFlag": "{{NadoOnce}}"
+			}			
+		},
+
+		{
+			"Name": "ChanceCoin",
+			"Value": "0.02"			
+		},
+		{
+			"Name": "ChanceCoin",
+			"Value": "0.05",	
+			"When": {
+				"HasFlag|contains=Saw_Flame_Sprite_North_North": true,
+				"HasFlag|contains=Island_UpgradeParrotPlatform": true
+			}			
+		},
+		{
+			"Name": "ChanceCoin",
+			"Value": "0.1",	
+			"When": {
+				"HasFlag|contains=Saw_Flame_Sprite_North_North": true,
+				"HasFlag|contains=Island_UpgradeParrotPlatform": true,				
+				"HasFlag|contains=reachedCaldera": true
+			}			
+		},		
+		{
+			"Name": "ChanceCoin",
+			"Value": "0.15",	
+			"When": {
+				"HasFlag|contains=Saw_Flame_Sprite_North_North": true,
+				"HasFlag|contains=Island_UpgradeParrotPlatform": true,				
+				"HasFlag|contains=reachedCaldera": true,				
+				"HasFlag|contains=fieldOfficeFinale": true
+			}			
+		},	
+		{
+			"Name": "RangeLocust",
+			"Value": "{{Random: {{Range: 15,40}} }}"
+		},	
+//oh look another one
+		{
+			"Name": "MossWater",
+			"Value": "null"		
+		},
+		{
+			"Name": "MossWater",
+			"Value": "102 139 56 200",	
+			"When": {
+				"Query: '{{Weather}}' = 'GreenRain' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 GreenRain}}' = 'true'": true
+			}			
+		},
+		{
+			"Name": "MossWater",
+			"Value": "102 139 56 200",	
+			"When": {
+				"Query: '{{Weather}}' = 'kath.weathering_MudRain' OR '{{Esca.EMP/GameStateQuery: PLAYER_SPECIAL_ORDER_ACTIVE Any Kath.Weathering_Algae}}' = 'true' OR '{{Esca.EMP/GameStateQuery: PLAYER_SPECIAL_ORDER_ACTIVE Any Kath.Weathering_AlgaeRepeat}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -1 kath.weathering_MudRain}}' = 'true' OR '{{Esca.EMP/GameStateQuery: CS_WEATHER Town -2 kath.weathering_MudRain}}' = 'true'": true			
+			}			
+		},
+//Oh some more..
+		{
+			"Name": "KrobusSummon",
+			"Value": "Town"			
+		},
+		{
+			"Name": "KrobusSummon",
+			"Value": "Sewer",	
+			"When": {
+				"HasFlag": "openedSewer"
+			}			
+		},
+//NPCYeet
+		{
+			"Name": "RandomNPCYeet", //Or is it?
+			"Value": "{{Random:  Pierre, Pierre, Alex, Elliott, Abigail, Lewis, Lewis, Pam}}",
+            "When": {
+				"NPCYeetMonsoon": "Random"
+			}			
+		},
+        {
+			"Name": "RandomNPCYeet",
+			"Value": "Pierre",
+            "When": {
+				"NPCYeetMonsoon": "Pierre"
+			}			
+		},
+        {
+			"Name": "RandomNPCYeet",
+			"Value": "Alex",
+            "When": {
+				"NPCYeetMonsoon": "Alex"
+			}			
+		},
+        {
+			"Name": "RandomNPCYeet",
+			"Value": "Elliott",
+            "When": {
+				"NPCYeetMonsoon": "Elliott"
+			}			
+		},
+        {
+			"Name": "RandomNPCYeet",
+			"Value": "Abigail",
+            "When": {
+				"NPCYeetMonsoon": "Abigail"
+			}			
+		},
+        {
+			"Name": "RandomNPCYeet",
+			"Value": "Lewis",
+            "When": {
+				"NPCYeetMonsoon": "Lewis"
+			}			
+		},
+        {
+			"Name": "RandomNPCYeet",
+			"Value": "Pam",
+            "When": {
+				"NPCYeetMonsoon": "Pam"
+			}			
+		},
+
+		{
+			"Name": "NPCYeet",
+			"Value": ""	
+		},
+		{
+			"Name": "NPCYeet",
+			"Value": "Elliott",
+			"When": {
+				"HasFlag": "RandomNPCYeet.Elliott"
+			}			
+		},
+		{
+			"Name": "NPCYeet",
+			"Value": "Abigail",
+			"When": {
+				"HasFlag": "RandomNPCYeet.Abigail"
+			}			
+		},
+		{
+			"Name": "NPCYeet",
+			"Value": "Pierre",
+			"When": {
+				"HasFlag": "RandomNPCYeet.Pierre"
+			}			
+		},
+		{
+			"Name": "NPCYeet",
+			"Value": "Lewis",
+			"When": {
+				"HasFlag": "RandomNPCYeet.Lewis"
+			}			
+		},
+		{
+			"Name": "NPCYeet",
+			"Value": "Pam",
+			"When": {
+				"HasFlag": "RandomNPCYeet.Pam"
+			}			
+		},		
+//FlowerItemGiven
+		{
+			"Name": "FlowerItemGiven",
+			"Value": "{{Random: 18, 22, 18, 22, 18, 22, 18, 22, 597, 591}}"			
+		},	
+		{
+			"Name": "FlowerItemGiven",
+			"Value": "{{Random: 402, 402, 402, 402, 402, 402, 402, 402, 402, 376, 421, 593}}",	
+			"When": {
+				"Season": "summer"
+			}		
+		},
+		{
+			"Name": "FlowerItemGiven",
+			"Value": "{{Random: 404, 404, 404, 404, 404, 404, 421, 595}}",	
+			"When": {
+				"Season": "fall"
+			}				
+		},
+		{
+			"Name": "FlowerItemGiven",
+			"Value": "{{Random: 283, 283, 283, 283, 418}}",	
+			"When": {
+				"Season": "winter"
+			}				
+		},	
+//
+		{
+			"Name": "ColdWeatherCompat",
+			"Value": ""			
+		},	
+		{
+			"Name": "ColdWeatherCompat",
+			"Value": "AddBuff Dolly.ColdWeather_WarmBuff -2",	
+			"When": {
+				"HasMod": "Dolly.ColdWeather"
+			}		
+		}
+	],
+	
+		"ConfigSchema": {
+		"AddWeather": {
+			"AllowValues": "rainy, sandy, blizzy, dry, hail, heat, starry, hurry, firerain, dark, muddy, ash, north, wildfire, meatball, locust, nado, smog, fog, sleet, mayo, surprise, clone, rainbow, novisibility",
+			"Default": "rainy, sandy, blizzy, dry, hail, heat, starry, hurry, firerain, dark, muddy, ash, north, wildfire, locust, nado, smog, fog, rainbow, novisibility",
+			// "Description": "{{i18n: config.AddWeather}}",
+        	"AllowBlank": true,
+			"AllowMultiple": true,
+			"Section": "Weather"
+		},
+		"Monsoon": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.Monsoon}}",
+        	"AllowBlank": false,
+			"Section": "Weather"
+		},
+		"FallingSnow": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			// "Description": "{{i18n: config.FallingSnow}}",
+        	"AllowBlank": false,
+			"Section": "Weather"
+		},
+		"ThickFoggy": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			// "Description": "{{i18n: config.ThickFoggy}}",
+        	"AllowBlank": false,
+			"Section": "Weather"
+		},		
+		"StarryRain": {
+			"AllowValues": "rain, wind",
+			"Default": "wind",
+			// "Description": "{{i18n: config.StarryRain}}",
+        	"AllowBlank": false,
+			"Section": "Stars"
+		},
+		"PretendFlooding": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.PretendFlooding}}",
+        	"AllowBlank": false,
+		    "Section": "Maps"
+		},
+		"PretendHeatWave": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.PretendHeatWave}}",
+        	"AllowBlank": false,
+		    "Section": "Maps"
+		},
+		"SprinklerDrought": {
+			"AllowValues": "maps, damage",
+			"Default": "damage",
+			// "Description": "{{i18n: config.SprinklerDrought}}",
+        	"AllowBlank": true,
+			"AllowMultiple": true,
+		    "Section": "Maps"
+		},
+		"PretendHurricane": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.PretendHurricane}}",
+        	"AllowBlank": false,
+		    "Section": "Maps"
+		},
+		"PretendLava": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.PretendLava}}",
+        	"AllowBlank": false,
+		    "Section": "Maps"
+		},
+		"PretendFire": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			// "Description": "{{i18n: config.PretendFire}}",
+        	"AllowBlank": false,
+		    "Section": "Maps"
+		},
+		"PostWeather": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			// "Description": "{{i18n: config.PostWeather}}",
+        	"AllowBlank": false,
+		    "Section": "Maps"
+		},
+		"NightEvents": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			// "Description": "{{i18n: config.NightEvents}}",
+        	"AllowBlank": false,
+			"Section": "Immersion"
+		},
+		"ChangeVanilla": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			// "Description": "{{i18n: config.ChangeVanilla}}",
+        	"AllowBlank": false,
+			"Section": "Immersion"
+		},
+		"DangerWeather": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			// "Description": "{{i18n: config.DangerWeather}}",
+        	"AllowBlank": false,
+			"Section": "Immersion"
+		},
+		"Aids": {
+			"AllowValues": "clothes, buildings, objects",
+			"Default": "clothes, buildings, objects",
+			// "Description": "{{i18n: config.Aids}}",
+        	"AllowBlank": true,
+			"AllowMultiple": true,
+			"Section": "Immersion"
+		},
+		"RevertVanilla": {
+			"AllowValues": "vanilla, grandpa, vt, off",
+			"Default": "vanilla",
+			// "Description": "{{i18n: config.RevertVanilla}}",
+        	"AllowBlank": false,
+			"Section": "Immersion"
+		},
+		"EasyFerti": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.EasyFerti}}",
+        	"AllowBlank": false,
+			"Section": "Immersion"
+		},
+		"NPCChanges": {
+			"AllowValues": "schedule, CT, disappearing",
+			"Default": "CT",
+			// "Description": "{{i18n: config.NPCChanges}}",
+        	"AllowBlank": true,
+			"AllowMultiple": true,
+			"Section": "Immersion2"
+		},
+        "NPCYeetMonsoon": {
+			"AllowValues": "Random, Pierre, Alex, Elliott, Abigail, Lewis, Pam",
+			"Default": "Random",
+			// "Description": "{{i18n: config.NPCYeetMonsoon}}",
+        	"AllowBlank": false,
+			"AllowMultiple": false,
+			"Section": "Immersion2"
+		},
+		"ChangesFor": {
+			"AllowValues": "Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kent, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Wizard, Dwarf, Krobus, Leo, Sandy",
+			"Default": "Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kent, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Wizard, Dwarf, Krobus, Leo, Sandy",
+			// "Description": "{{i18n: config.ChangesFor}}",
+        	"AllowBlank": true,
+			"AllowMultiple": true,
+			"Section": "Immersion2"			
+		},		
+		"AnimalEffects": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.AnimalEffects}}",
+        	"AllowBlank": false,
+			"Section": "Immersion2"
+		},		
+		"NoDanger":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.NoDanger}}",
+        	"AllowBlank": false,
+			"Section": "Disable"
+		},
+		"NoDebuffs": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.NoDebuffs}}",
+        	"AllowBlank": false,
+			"Section": "Disable"
+		},		
+		"ChangeMusic":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.ChangeMusic}}",
+        	"AllowBlank": false,
+			"Section": "Music"
+		},
+		"CreepyMusic":{
+			"AllowValues": "true, false",
+			"Default": "true",
+			// "Description": "{{i18n: config.CreepyMusic}}",
+        	"AllowBlank": false,
+			"Section": "Music"
+		},
+		"ChangeFestMusic":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.ChangeFestMusic}}",
+        	"AllowBlank": false,
+			"Section": "Music"
+		},		
+		/*"NoPTSandy":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.NoPTSandy}}",
+        	"AllowBlank": false,
+			"Section": "Ask"
+		},
+		"OnlyIslandAsh":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.OnlyIslandAsh}}",
+        	"AllowBlank": false,
+			"Section": "Ask"
+		},*/
+		"DrinkSPF":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.DrinkSPF}}",
+        	"AllowBlank": false,
+			"Section": "Ask"
+		},
+		"SpecialWeather":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.SpecialWeather}}",
+        	"AllowBlank": false,
+			"Section": "Ask"
+		},
+		"RainEve":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.RainEve}}",
+        	"AllowBlank": false,
+			"Section": "Ask"
+		},		
+		"Totem":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.Totem}}",
+        	"AllowBlank": false,
+			"Section": "Ask"
+		},
+		"VanillaTotem":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.VanillaTotem}}",
+        	"AllowBlank": false,
+			"Section": "Ask"
+		},	
+		"ChangeRainTotem":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.ChangeRainTotem}}",
+        	"AllowBlank": false,
+			"Section": "Ask"
+		},	
+		"PriorityOverWW":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.PriorityOverWW}}",
+        	"AllowBlank": false,
+			"Section": "Ask"
+		},	
+		"JustNorthernLights":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.JustNorthernLights}}",
+        	"AllowBlank": false,
+			"Section": "Ask"
+		},
+		"ConsequencesLITE":{
+			"AllowValues": "Default, LITE",
+			"Default": "Default",
+			// "Description": "{{i18n: config.ConsequencesLITE}}",
+        	"AllowBlank": false,
+			"Section": "Ask"
+		}			
+		/*"MonsterSpawn":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			// "Description": "{{i18n: config.MonsterSpawn}}",
+        	"AllowBlank": false,
+			"Section": "Ask",
+		},*/
+	},
+   
+	"Changes": [
+	
+//Adding Loading
+        {
+      	    "LogName": "Load Data",
+			"Action": "Include",
+			"FromFile": "Data/loader.json"
+		}
+		
+//End
+]
+}

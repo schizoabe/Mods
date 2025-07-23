@@ -1,0 +1,1706 @@
+{
+	"Format": "2.0.0",
+
+	"ConfigSchema": {
+		
+		"Fuckwords": {
+		"AllowValues": "true, false",
+		"Default": "true"
+		},
+
+	},
+
+
+  "Changes": [
+
+    {
+      "LogName": "Include RummageData",
+      "Action": "Include",
+      "FromFile": "Data/Extras/RummageData.json"
+    },
+
+    //Strings
+
+
+    //"Chat_TrashCan": "{1} caught {0} digging through the trash...",
+
+    {
+      "Action": "EditData",
+      "Target": "Strings/UI",
+      "Entries": {
+        "Chat_Rumagement": "{1} caught {0} stealing from someone!!!"
+
+      }
+    },
+
+
+
+
+    ////Extra Dialogue
+
+    {
+      "Action": "EditData",
+      "Target": "Data/ExtraDialogue",
+      "When": {
+        "Fuckwords": true
+      },
+      "Entries": {
+        "RummageComment_Vika": "Ooooh! A girl after my heart! I love to rummage through things! *MWAH!!!*$1",
+        "RummageComment_Child": "Why are you digging around in there???$h",
+        "RummageComment_Teen": "Get the fuck out of that!!!$a",
+        "RummageComment_Adult": "Hey!!! Get out of that!!! Stop thieving around!!!$a"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/ExtraDialogue",
+      "When": {
+        "Fuckwords": false
+      },
+      "Entries": {
+        "RummageComment_Vika": "Ooooh! A girl after my heart! I love to rummage through things! *MWAH!!!*$1",
+        "RummageComment_Child": "Why are you digging around in there???$h",
+        "RummageComment_Teen": "Get the f**k out of that!!!$a",
+        "RummageComment_Adult": "Hey!!! Get out of that!!! Stop theiving around!!!$a"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SeedShop", //////Abigail's Dresser
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 12,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 30"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SeedShop",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 35,
+            "Y": 16
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 31"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SeedShop",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 26,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 32"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SeedShop",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 36,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 33"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/AdventureGuild",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 11,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 34"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/AdventureGuild",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 7,
+            "Y": 11
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 34"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/AnimalShop",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 26,
+            "Y": 14
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 33"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/AnimalShop",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 15,
+            "Y": 3
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 35"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/AnimalShop",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 26,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 35"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/LeahHouse",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 11,
+            "Y": 12
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 36"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/LeahHouse",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 3,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 37"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/ScienceHouse", /////Robin Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 17,
+            "Y": 3
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 39"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/ScienceHouse", ////Maru Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 7,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 40"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/ScienceHouse", //////Robin Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 30,
+            "Y": 8
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 33"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SebastianRoom",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 11,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 42"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SebastianRoom",
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 10,
+            "Y": 10
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 42"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SamHouse", //////// Sam Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 23,
+            "Y": 17
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 42"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SamHouse", ///// Jodi Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 19,
+            "Y": 3
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 43"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SamHouse", /////Jodi Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 5,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 33"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/HaleyHouse", /////Haley Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 17,
+            "Y": 15
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 33"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/HaleyHouse", /////Haley Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 2,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 44"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/HaleyHouse", /////Emily Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 17,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 45"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Saloon", /////Saloon Trash
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 21,
+            "Y": 3
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Saloon", /////Saloon 
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 13,
+            "Y": 16
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 46"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Saloon", /////Saloon 
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 14,
+            "Y": 16
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 46"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Saloon", /////Saloon Cola
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 37,
+            "Y": 16
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 28"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/MermaidHouse", /////Mermaid Night Market
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 1,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 47"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/MermaidHouse", /////Mermaid Night Market
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 7,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 47"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Hospital", /////Hospital
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 3,
+            "Y": 16
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 48"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Hospital", /////Hospital
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 4,
+            "Y": 16
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 48"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Hospital", /////Hospital
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 4,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 48"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/HarveyRoom", /////Dr Hazel's Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 11,
+            "Y": 3
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 49"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/HarveyRoom", /////Dr Hazel's Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 20,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 33"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/JoshHouse", /////Evelyn's House
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 19,
+            "Y": 16
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 50"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/JoshHouse", /////Alex Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 22,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 51"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/JoshHouse", /////Evelyn Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 4,
+            "Y": 16
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 33"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/ManorHouse", /////The Jagweed named Lewis's House
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 6,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 33"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/ManorHouse", /////The Jagweed named Lewis's House
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 18,
+            "Y": 8
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 52"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Trailer", /////Penny's Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 1,
+            "Y": 7
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 53"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Trailer", /////Pam Living Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 12,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 54"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Trailer", /////Pam Room
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      },
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 23,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 54"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Trailer_big", /////Penny's House Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 3,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 53"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Trailer_big", /////Pam House Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 28,
+            "Y": 18
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 54"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Blacksmith", /////Clint. 
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 2,
+            "Y": 11
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 55"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Blacksmith", /////Clint. 
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 3,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 55"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/ArchaeologyHouse", /////Museum
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 7,
+            "Y": 8
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 56"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Town", /////Lemonade Stand
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 89,
+            "Y": 91
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 57"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Sewer", /////Krobus's Place 
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 28,
+            "Y": 16
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 58"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Sewer", /////Krobus's Place 
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 34,
+            "Y": 16
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 58"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/FishShop", /////Willy's Place
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 7,
+            "Y": 3
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 59"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/JojaMart", /////Joja Mart
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 27,
+            "Y": 27
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 60"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/JojaMart", /////Joja Mart Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 6,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/JojaMart", /////Joja Mart Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 1,
+            "Y": 8
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/JojaMart", /////Joja Mart Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 25,
+            "Y": 15
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/JojaMart", /////Joja Mart Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 28,
+            "Y": 8
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/JojaMart", /////Joja Mart Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 2,
+            "Y": 18
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/JojaMart", /////Joja Mart Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 8,
+            "Y": 21
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/JojaMart", /////Joja Mart Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 7,
+            "Y": 21
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SeedShop", /////Pierre Groceries Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 1,
+            "Y": 21
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SeedShop", /////Pierre Groceries Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 4,
+            "Y": 21
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SeedShop", /////Pierre Groceries Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 10,
+            "Y": 19
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/ElliotHouse", /////Elliott
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 12,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 62"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SandyHouse", /////Sandy Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 5,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SandyHouse", /////Sandy Groceries
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 5,
+            "Y": 7
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Club", /////Casino
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 18,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 63"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Ruins", /////CC Ruins Power Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 66,
+            "Y": 14
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Joja", /////CC Joja Power Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 66,
+            "Y": 14
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Refurbished", /////CC REFURB Power Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 66,
+            "Y": 14
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 26"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Refurbished", /////CC REFURB Power Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 64,
+            "Y": 13
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 26"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter", /////CC Pantry
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 15,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Ruins", /////CC Pantry
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 15,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Joja", /////CC Pantry
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 15,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Refurbished", /////CC Pantry
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 15,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 61"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter", /////CC Mayor Jagweed Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 49,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Ruins", /////CC Mayor Jagweed Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 49,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Joja", /////CC Joja Mayor Jagweed Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 49,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 60"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Joja", /////CC Joja Mayor Jagweed Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 53,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 60"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Refurbished", /////CC Refurb Mayor Jagweed Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 47,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 52"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Refurbished", /////CC Refurb Mayor Jagweed Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 50,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 52"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Refurbished", /////CC Refurb Mayor Jagweed Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 56,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 27"
+          }
+        }
+      ]
+    },
+
+
+
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter", /////CC Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 1,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter", /////CC Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 9,
+            "Y": 9
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Ruins", /////CC Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 1,
+            "Y": 5
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Ruins", /////CC Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 9,
+            "Y": 9
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Joja", /////CC Joja Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 4,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 60"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Joja", /////CC Joja Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 7,
+            "Y": 7
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 60"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Refurbished", /////CC Refurb Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 2,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Refurbished", /////CC Refurb Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 5,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 33"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Refurbished", /////CC Refurb Kitchen
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 8,
+            "Y": 4
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 33"
+          }
+        }
+      ]
+    },
+
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter", /////CC Art Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 17,
+            "Y": 18
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Ruins", /////CC Art Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 17,
+            "Y": 18
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 29"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Joja", /////CC Joja Art Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 11,
+            "Y": 22
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 60"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Joja", /////CC Joja Art Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 15,
+            "Y": 20
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 60"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Refurbished", /////CC Refurb Art Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 14,
+            "Y": 18
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 62"
+          }
+        }
+      ]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/CommunityCenter_Refurbished", /////CC Refurb Art Room
+      "Update": "OnLocationChange",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 18,
+            "Y": 18
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "RS.Rummage 30"
+          }
+        }
+      ]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ]
+
+}

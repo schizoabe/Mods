@@ -1,0 +1,91 @@
+{
+//Config
+"config.section.Mode.name": "Mode",	
+"config.section.Mode.description": "Change the mode.",
+"config.section.Maths.name": "Maths",	
+"config.section.Maths.description": "Change the base maths used.",
+
+"config.BaseMultiplier.name": "Base Multiplier",
+"config.BaseMultiplier.description": "Change the difficulty.",
+"config.BaseMultiplier.values.easy": "Easy x1",
+"config.BaseMultiplier.values.mid": "Less Easy x2.5",
+"config.BaseMultiplier.values.hard": "More Challenge x5",
+"config.EvilMode.name": "Challenge Mode",
+"config.EvilMode.description": "Challenging from the start, and I am not telling you by how much...",
+
+"Signature": "^^Ferngill's Department of Energy and Water",
+"BillingStart.LetterTitle": "Energy and Water Grace Period",
+"BillingStart.LetterText": "Client: {{PlayerName}}^Address: {{FarmName}} Farm^Account No.: {{FarmAcc}}^^Collection ID: G-{{CollectionID}}^Billing Date: {{Season}} {{Day}}^The account has been automatically (and magically) debited the amount of: {{GraceBilling}}$^Your grace period will last until Winter 28!",
+"Billing.LetterTitle": "Weekly Energy and Water Bill",
+"Billing.LetterText": "Client: {{PlayerName}}^Address: {{FarmName}} Farm^Account No.: {{FarmAcc}}^^Collection ID: B-{{CollectionID}}^Billing Date: {{Season}} {{Day}}^The account has been automatically (and magically) debited the amount of: {{BillingWeekly}}$",
+"BillingServices.LetterTitle": "Monthly Service Charge for Energy and Water",
+"BillingServices.LetterText": "Client: {{PlayerName}}^Address: {{FarmName}} Farm^Account No.: {{FarmAcc}}^^Collection ID: S-{{CollectionID}}^Billing Date: {{Season}} {{Day}}^The account has been automatically (and magically) debited the amount of: {{BillingServices}}$^^Service Billing includes: integrated piping and wiring, Fern Islands support, and weather damage repairs!",
+"BillingWinter.LetterTitle": "Winter Surcharge for Energy and Water",
+"BillingWinter.LetterText": "Client: {{PlayerName}}^Address: {{FarmName}} Farm^Account No.: {{FarmAcc}}^^Collection ID: W-{{CollectionID}}^Billing Date: {{Season}} {{Day}}^The account has been automatically (and magically) debited the amount of: {{BillingWinter}}$^^Winter Surcharge Billing helps us maintain the grid running during cold temperatures.",
+"Warning.LetterTitle": "Account Not Debited - Warning",
+"Warning.LetterText": "Client: {{PlayerName}}^Address: {{FarmName}} Farm^Account No.: {{FarmAcc}}^^Collection Warning ID: WD-{{CollectionID}}^^We have not received the payment for previous bills, this warning letter has been sent along with a hex.^Please be sure to pay the DEW on-time and as complete as possible!",
+
+"DEW.Buff.Name": "The Wrath of the DEW",
+"DEW.Buff.Desc": "Someone in the Collections Department was not happy...",
+
+"WarningDEWCollections": "Someone in the Collections Department is getting angry...",
+"AngryDEWCollections": "Someone in the Collections Department is angry...",
+
+"BillArrivedDEW": "A bill has arrived.",
+
+
+//Something Extra
+"DEWThanksLetter.LetterTitle": "Thank You, from Ferngill's Department of Electricity and Water",
+"DEWThanksLetter.LetterText": "Dear {{PlayerName}} from {{FarmName}},^Thank you very much for this first donation towards our program that focuses on bringing electricity and safe water to all in Ferngill.^Any further donations will always be appreciated.",
+"DEWBills.CharityAddOn.Name": "Electricity and Safe Water for Ferngill",
+"DEWBills.CharityAddOn.Description": "Proof that you have donated to the 'Electricity and Safe Water for Ferngill' charity program from Ferngill's Department of Electricity and Water.",
+
+//v1.2
+"config.MultiplayerPlayers.name": "Multiplayer Players",
+"config.MultiplayerPlayers.description": "If you are not using separate wallets in multiplayer, select the amount of players.",
+"config.GraceEnd.name": "End of Grace Period",
+"config.GraceEnd.description": "Choose when you want your grace period to end, between Summer 28 or Winter 28 of Year 1.",
+
+"config.DayOfBilling.name": "Day for Weekly Bill",
+"config.DayOfBilling.description": "Choose the day of the week you want to receive your weekly bill, between Thursday, Friday, and Saturday.",
+"config.DayofService.name": "Day for Monthly Service Bill",
+"config.DayofService.description": "Choose the day of the month you want to receive your service bill, between 26, 27, and 28.",
+"config.DayOfSurcharge.name": "Day for Winter Surcharge Bill",
+"config.DayOfSurcharge.description": "Choose the day of the week you want to receive your weekly winter surcharge bill, between Tuesday, Wednesday, and Thursday.",
+
+
+"DEWB.Furniture": "Ferngill's DEW Certified Reader",
+"DEWB.Furniture2": "Place it on a wall and it will give you information on you energy and water charges.",
+"DEWB.SummarySummary": "You fiddle with the reader.#The following information may change by the time of your billing, use it as an estimate.^Reading is for a monthly charge.#Client: {{PlayerName}}^Address: {{FarmName}} Farm^Account No.: {{FarmAcc}}^^Services Charge: {{BillingServices}}^Usage Charge: {{BillingCharge}}^{{WinterSurcharge}}#Base Values for Services:^^{{BaseBaseNumbers}}#Crop Irrigation Pipeline, and Grid:^^{{CropNumber}}^{{LandNumber}}#Maintenance due to Weather:^^{{WeatherNumber}}#Account Class:^^{{NetProfitNumber}}^{{PartnershipNumber}}#Subsidies:^^{{Subsidy}}^These are applied to your bill after Year 1.#Thank you for using the Ferngill's Department of Electricity and Water Certified Reader.^Weekly Bills arrive every {{DayOfBilling}}.^Monthly Service Bill arrives every {{DayofService}}th of the month.^Winter Surcharge Bills arrive every {{DayOfSurcharge}}.",//CHANGED IN 1.2.3
+"DEWB.SummaryGrace":"You fiddle with the reader.#You are still in your grace period.^Your account's grace period last until {{GraceEnd}}.^The amount recorded is {{GraceBilling}}.#The meter will update the day after the last day of the grace period.",
+"CropShipped": "Crops Shipped",
+"BeveragesMade": "Items Processed in Kegs",
+"PreservesMade": "Items Preserved in Jars",
+"SeedsSown": "Seeds Sown",
+"ItemsCooked": "Cooked Dishes",
+"CropFactor": "Crops Land Use Factor",
+"Crops": "due to Crop Range over",
+"BaseService": "Piping Service Base",
+"BaseWeekly": "Water and Electricity Service Weekly Base",
+"BaseWinter": "Winter and Grid Maintenance Base",
+"WeatherFactor": "Weather Maintenance Surcharge",
+"RichnessFactor": "Profile Net",
+"PartnershipFactor": "Shared Household Net",
+"MultiplayerPlayers": "Number in Household Net",
+"LandUse": "Building and Land Coverage",
+"GIVisit": "Ginger Island Net Extension",
+"NoWinterSurcharge": "The Winter Surcharge has not been calculated yet.",
+"WinterSurcharge": "Winter Surcharge",
+
+//Added in 1.2.3//
+"config.ProfitMarginChange.name": "Profit Margin Change",
+"config.ProfitMarginChange.description": "If you are using the profit margin changes from the vanilla game, you can change this config to match it!",
+"config.ProfitMarginChange.values.100": "100%",
+"config.ProfitMarginChange.values.75": "75%",
+"config.ProfitMarginChange.values.50": "50%",
+"config.ProfitMarginChange.values.25": "25%",
+"subsidies": "Applied Subsidies",
+"recycling": "Trash Recycling",
+"solarPanels": "Clean Energy",
+"slimesKilled": "Valley Protection"
+}

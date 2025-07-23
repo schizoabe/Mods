@@ -1,0 +1,2555 @@
+{
+ "Changes": [
+ 
+ //standard
+ 
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "SeedShop",
+    "Items"
+  ],
+  "Entries": {
+	  "(O)472": null,
+	  "(O)473": null,
+	  "(O)474": null,
+	  "(O)475": null,
+	  "(O)427": null,
+	  "(O)477": null,
+	  "(O)429": null,
+	  "(O)476": null,
+	  "(O)273": null,
+	  "(O)479": null,
+	  "(O)480": null,
+	  "(O)481": null,
+	  "(O)482": null,
+	  "WheatSeeds_Summer": null,
+	  "(O)484": null,
+	  "(O)453": null,
+	  "(O)455": null,
+	  "(O)302": null,
+	  "CornSeeds_Summer": null,
+	  "SunflowerSeeds_Summer": null,
+	  "(O)485": null,
+	  "(O)490": null,
+	  "CornSeeds_Fall": null,
+	  "(O)488": null,
+	  "(O)491": null,
+	  "(O)492": null,
+	  "(O)493": null,
+	  "WheatSeeds_Fall": null,
+	  "SunflowerSeeds_Fall": null,
+	  "(O)425": null,
+	  "(O)299": null,
+	  "(O)301": null,
+	  "(O)489": null,
+	  "GrassStarter": null,
+	  "(O)245": null,
+	  "(O)246": null,
+	  "(O)423": null,
+	  "(O)247": null,
+	  "(O)419": null,
+	  "(O)368": null,
+	  "(O)370": null,
+	  "(O)465": null,
+	  "(O)369": null,
+	  "(O)371": null,
+	  "(O)466": null,
+	  "(O)628": null,
+	  "(O)629": null,
+	  "(O)630": null,
+	  "(O)631": null,
+	  "(O)632": null,
+	  "(O)633": null,
+	  
+	
+	"boringvlln.rshops_SeedMakerRare": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day boringvlln.rshops_SeedMakerRare 0.05",
+       "ItemId": "(BC)25",
+	  "Id": "boringvlln.rshops_SeedMakerRare",
+	  "Price": 10000,
+	   "AvoidRepeat": true,
+	  "AvailableStock": 1,
+	   "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_SpringSeeds": {
+		  "Condition": "SEASON spring, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)472", "(O)475", "(O)473", "(O)474", "(O)427", "(O)477", "(O)429" ],
+	  "Id": "boringvlln.rshops_SpringSeeds",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_SpringSeedsExtra": {
+		  "Condition": "SEASON spring, YEAR 2, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)476", "(O)273", "(O)472", "(O)475", "(O)473", "(O)474", "(O)427", "(O)477", "(O)429", "(O)CarrotSeeds" ],
+	  "Id": "boringvlln.rshops_SpringSeedsExtra",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+    },	
+	"boringvlln.rshops_SpringSeedsComm1": {
+		  "Condition": "SEASON spring, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)476", "(O)273", "(O)472", "(O)475", "(O)473", "(O)474", "(O)427", "(O)477", "(O)429", "(O)CarrotSeeds" ],
+	  "Id": "boringvlln.rshops_SpringSeedsComm1",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+	    "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+				1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },
+	"boringvlln.rshops_SpringSeedsComm2": {
+		  "Condition": "SEASON spring, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)476", "(O)273", "(O)472", "(O)475", "(O)473", "(O)474", "(O)427", "(O)477", "(O)429", "(O)CarrotSeeds" ],
+	  "Id": "boringvlln.rshops_SpringSeedsComm2",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	   "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+	    "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+				1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },
+	"boringvlln.rshops_SpringSeedsStrawberry": {
+		  "Condition": "SEASON spring, YEAR 2, SYNCED_RANDOM day boringvlln.rshops_SpringSeedsStrawberry 0.05",
+      "ItemId": "(O)745",
+	  "Id": "boringvlln.rshops_SpringSeedsStrawberry",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "Price": 500,
+	   "IgnoreShopPriceModifiers": true,
+    },	
+	"boringvlln.rshops_SummerSeeds": {
+		  "Condition": "SEASON summer, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431" ],
+	  "Id": "boringvlln.rshops_SummerSeeds",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_SummerSeedsExtra": {
+		  "Condition": "SEASON summer, YEAR 2, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431", "(O)SummerSquashSeeds" ],
+	  "Id": "boringvlln.rshops_SummerSeedsExtra",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_SummerSeedsComm1": {
+		  "Condition": "SEASON summer, YEAR 2, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431", "(O)SummerSquashSeeds" ],
+	  "Id": "boringvlln.rshops_SummerSeedsComm1",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+	   "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },		
+	"boringvlln.rshops_SummerSeedsComm2": {
+		  "Condition": "SEASON summer, YEAR 2, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431", "(O)SummerSquashSeeds" ],
+	  "Id": "boringvlln.rshops_SummerSeedsComm2",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+	   "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },		
+	"boringvlln.rshops_FallSeeds": {
+		  "Condition": "SEASON fall, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299", "(O)301" ],
+	  "Id": "boringvlln.rshops_FallSeeds",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_FallSeedsExtra": {
+		  "Condition": "SEASON fall, YEAR 2, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)489", "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299", "(O)301", "(O)BroccoliSeeds" ],
+	  "Id": "boringvlln.rshops_FallSeedsExtra",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },  
+	"boringvlln.rshops_FallSeedsComm1": {
+		  "Condition": "SEASON fall, YEAR 2, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)489", "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299", "(O)301", "(O)BroccoliSeeds" ],
+	  "Id": "boringvlln.rshops_FallSeedsComm1",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+	   "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },  
+	"boringvlln.rshops_FallSeedsComm2": {
+		  "Condition": "SEASON fall, YEAR 2, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)489", "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299", "(O)301", "(O)BroccoliSeeds" ],
+	  "Id": "boringvlln.rshops_FallSeedsComm2",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+	   "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },  
+	"boringvlln.rshops_FarmingRelatedBasic": {
+		  "Condition": "SEASON spring summer fall, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)297", "(O)368", "(O)370", "(O)465" ],
+	  "Id": "boringvlln.rshops_FarmingRelated",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_FarmingRelatedBasicComm": {
+		  "Condition": "SEASON spring summer fall, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)297", "(O)368", "(O)370", "(O)465" ],
+	  "Id": "boringvlln.rshops_FarmingRelatedBasicComm",
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_FarmingRelatedExtra": {
+		  "Condition": "SEASON spring summer fall, YEAR 2, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)369", "(O)371", "(O)466" ],
+	  "Id": "boringvlln.rshops_FarmingRelatedExtra",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    }, 
+	"boringvlln.rshops_FarmingRelatedExtraComm": {
+		  "Condition": "SEASON spring summer fall, YEAR 2, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)369", "(O)371", "(O)466" ],
+	  "Id": "boringvlln.rshops_FarmingRelatedExtraComm",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    }, 
+	"boringvlln.rshops_Saplings": {
+		  "Condition": "SEASON spring summer fall, !PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day boringvlln.rshops_Saplings 0.6",
+      "RandomItemId": [ "(O)628", "(O)629", "(O)630", "(O)631", "(O)632", "(O)633" ],
+	  "Id": "boringvlln.rshops_Saplings",
+	  "AvailableStock": 1,
+	  "IgnoreShopPriceModifiers": true,
+    }, 
+	"boringvlln.rshops_SaplingsComm": {
+		  "Condition": "SEASON spring summer fall, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)628", "(O)629", "(O)630", "(O)631", "(O)632", "(O)633" ],
+	  "Id": "boringvlln.rshops_SaplingsComm",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": false,
+	   "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    }, 
+	"boringvlln.rshops_Bread": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_Bread",
+      "ItemId": "(O)216",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_BreadComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_BreadComm",
+      "ItemId": "(O)216",
+	  "AvailableStock": 30,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Sugar": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_Sugar",
+      "ItemId": "(O)245",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SugarComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_SugarComm",
+      "ItemId": "(O)245",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Wflour": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_Wflour",
+      "ItemId": "(O)246",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_WflourComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_WflourComm",
+      "ItemId": "(O)246",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Rice": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_Rice",
+      "ItemId": "(O)423",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RiceComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_RiceComm",
+      "ItemId": "(O)423",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Sauces": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+	"RandomItemId": [ "(O)247", "(O)419", "(O)306", "(O)307" ],
+	  "Id": "boringvlln.rshops_Sauces",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SaucesComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+	"RandomItemId": [ "(O)247", "(O)419", "(O)306", "(O)307" ],
+	  "Id": "boringvlln.rshops_SaucesComm",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SSweets": {
+      "RandomItemId": [ "(O)340", "(O)724" ],
+	  "Id": "boringvlln.rshops_SSweets",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_JuicesP": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "FLAVORED_ITEM Juice (O)613", "FLAVORED_ITEM Juice (O)256", "FLAVORED_ITEM Juice (O)635" ],
+	  "Id": "boringvlln.rshops_JuicesP",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_JuicesPComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "FLAVORED_ITEM Juice (O)282", "FLAVORED_ITEM Juice (O)613", "FLAVORED_ITEM Juice (O)256", "FLAVORED_ITEM Juice (O)635", "FLAVORED_ITEM Juice (O)636", "FLAVORED_ITEM Juice (O)637", "FLAVORED_ITEM Juice (O)638", "FLAVORED_ITEM Juice (O)832", "FLAVORED_ITEM Juice (O)834", "FLAVORED_ITEM Juice (O)Carrot" ],
+	  "Id": "boringvlln.rshops_JuicesPComm",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Delicacy": {
+      "RandomItemId": [ "(O)432", "(O)445", "(O)447", "(O)432", "(O)815" ],
+	  "Id": "boringvlln.rshops_Delicacy",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+	  
+    },
+	"boringvlln.rshops_VeggieSpringMany": {
+		  "Condition": "SEASON spring",
+      "RandomItemId": [ "(O)24", "(O)188", "(O)190", "(O)192", "(O)248", "(O)250", "(O)Carrot" ],
+	  "Id": "boringvlln.rshops_VeggieSpringMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    }, 
+	"boringvlln.rshops_VeggieSpringFew": {
+		  "Condition": "SEASON spring, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)248", "(O)250", "(O)Carrot", "(O)24", "(O)188", "(O)190", "(O)192", "(O)400" ],
+	  "Id": "boringvlln.rshops_VeggieSpringFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    }, 
+	"boringvlln.rshops_VeggieSpringFewComm": {
+		  "Condition": "SEASON spring, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)248", "(O)250", "(O)Carrot", "(O)24", "(O)188", "(O)190", "(O)192", "(O)400" ],
+	  "Id": "boringvlln.rshops_VeggieSpringFewComm",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    }, 
+	"boringvlln.rshops_VeggieSummerMany": {
+		  "Condition": "SEASON summer",
+      "RandomItemId": [ "(O)266", "(O)SummerSquash", "(O)270", "(O)256", "(O)264" ],
+	  "Id": "boringvlln.rshops_VeggieSummerMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    }, 
+	"boringvlln.rshops_VeggieSummerFew": {
+		  "Condition": "SEASON summer, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)256", "(O)264", "(O)266", "(O)SummerSquash", "(O)270" ],
+	  "Id": "boringvlln.rshops_VeggieSummerFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieSummerFewComm": {
+		  "Condition": "SEASON summer, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)256", "(O)264", "(O)266", "(O)SummerSquash", "(O)270" ],
+	  "Id": "boringvlln.rshops_VeggieSummerFewComm",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieFallMany": {
+		  "Condition": "SEASON fall",
+      "RandomItemId": [ "(O)280", "(O)284", "(O)Broccoli", "(O)272", "(O)274", "(O)276", "(O)278" ],
+	  "Id": "boringvlln.rshops_VeggieFallMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieFallFew": {
+		  "Condition": "SEASON fall, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)272", "(O)274", "(O)276", "(O)278", "(O)280", "(O)284", "(O)Broccoli" ],
+	  "Id": "boringvlln.rshops_VeggieFallFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieFallFewComm": {
+		  "Condition": "SEASON fall, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)272", "(O)274", "(O)276", "(O)278", "(O)280", "(O)284", "(O)Broccoli" ],
+	  "Id": "boringvlln.rshops_VeggieFallFewComm",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieWinter": {
+		  "Condition": "SEASON winter",
+      "RandomItemId": [ "(O)280", "(O)284", "(O)Broccoli", "(O)272", "(O)274", "(O)276", "(O)278", "(O)266", "(O)SummerSquash", "(O)270", "(O)256", "(O)264", "(O)24", "(O)188", "(O)190", "(O)192", "(O)248", "(O)250", "(O)Carrot" ],
+	  "Id": "boringvlln.rshops_VeggieWinter",
+	  "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                2.0,
+                2.5,
+				3.5,
+				4.0,
+				4.5,
+              ]
+            }
+          ],
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieWinterComm": {
+		  "Condition": "SEASON winter, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)280", "(O)284", "(O)Broccoli", "(O)272", "(O)274", "(O)276", "(O)278", "(O)266", "(O)SummerSquash", "(O)270", "(O)256", "(O)264", "(O)24", "(O)188", "(O)190", "(O)192", "(O)248", "(O)250", "(O)Carrot" ],
+	  "Id": "boringvlln.rshops_VeggieWinterComm",
+	  "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                2.0,
+                2.5,
+				3.5,
+				4.0,
+				4.5,
+              ]
+            }
+          ],
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FlowerSpring": {
+		  "Condition": "SEASON spring, SYNCED_RANDOM day boringvlln.rshops_FlowerSpring 0.6",
+      "RandomItemId": [ "(O)591", "(O)597" ],
+	  "Id": "boringvlln.rshops_FlowerSpring",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FlowerSummer": {
+		  "Condition": "SEASON summer, SYNCED_RANDOM day boringvlln.rshops_FlowerSummer 0.6",
+      "RandomItemId": [ "(O)421", "(O)593", "(O)376" ],
+	  "Id": "boringvlln.rshops_FlowerSummer",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FlowerFall": {
+		  "Condition": "SEASON fall, SYNCED_RANDOM day boringvlln.rshops_FlowerFall 0.6",
+      "ItemId": "(O)421",
+	  "Id": "boringvlln.rshops_FlowerFall",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	
+ },
+  "When": { "Pierre": "standard" }
+},
+
+//hardmode
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "SeedShop",
+    "Items"
+  ],
+  "Entries": {
+	  "(O)472": null,
+	  "(O)473": null,
+	  "(O)474": null,
+	  "(O)475": null,
+	  "(O)427": null,
+	  "(O)477": null,
+	  "(O)429": null,
+	  "(O)476": null,
+	  "(O)273": null,
+	  "(O)479": null,
+	  "(O)480": null,
+	  "(O)481": null,
+	  "(O)482": null,
+	  "WheatSeeds_Summer": null,
+	  "(O)484": null,
+	  "(O)453": null,
+	  "(O)455": null,
+	  "(O)302": null,
+	  "CornSeeds_Summer": null,
+	  "SunflowerSeeds_Summer": null,
+	  "(O)485": null,
+	  "(O)490": null,
+	  "CornSeeds_Fall": null,
+	  "(O)488": null,
+	  "(O)491": null,
+	  "(O)492": null,
+	  "(O)493": null,
+	  "WheatSeeds_Fall": null,
+	  "SunflowerSeeds_Fall": null,
+	  "(O)425": null,
+	  "(O)299": null,
+	  "(O)301": null,
+	  "(O)489": null,
+	  "GrassStarter": null,
+	  "(O)245": null,
+	  "(O)246": null,
+	  "(O)423": null,
+	  "(O)247": null,
+	  "(O)419": null,
+	  "(O)368": null,
+	  "(O)370": null,
+	  "(O)465": null,
+	  "(O)369": null,
+	  "(O)371": null,
+	  "(O)466": null,
+	  "(O)628": null,
+	  "(O)629": null,
+	  "(O)630": null,
+	  "(O)631": null,
+	  "(O)632": null,
+	  "(O)633": null,
+	  
+	
+	"boringvlln.rshops_SeedMakerRare": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day boringvlln.rshops_SeedMakerRare 0.03",
+       "ItemId": "(BC)25",
+	  "Id": "boringvlln.rshops_SeedMakerRare",
+	  "Price": 10000,
+	   "AvoidRepeat": true,
+	  "AvailableStock": 1,
+	   "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_SpringSeeds": {
+		  "Condition": "SEASON spring, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)472", "(O)475", "(O)473", "(O)474", "(O)427", "(O)477", "(O)429" ],
+	  "Id": "boringvlln.rshops_SpringSeeds",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_SpringSeedsExtra": {
+		  "Condition": "SEASON spring, YEAR 2, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)476", "(O)273", "(O)472", "(O)475", "(O)473", "(O)474", "(O)427", "(O)477", "(O)429", "(O)CarrotSeeds" ],
+	  "Id": "boringvlln.rshops_SpringSeedsExtra",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+    },	
+	"boringvlln.rshops_SpringSeedsComm1": {
+		  "Condition": "SEASON spring, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)476", "(O)273", "(O)472", "(O)475", "(O)473", "(O)474", "(O)427", "(O)477", "(O)429", "(O)CarrotSeeds" ],
+	  "Id": "boringvlln.rshops_SpringSeedsComm1",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+	    "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+				1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },
+	"boringvlln.rshops_SpringSeedsComm2": {
+		  "Condition": "SEASON spring, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)476", "(O)273", "(O)472", "(O)475", "(O)473", "(O)474", "(O)427", "(O)477", "(O)429", "(O)CarrotSeeds" ],
+	  "Id": "boringvlln.rshops_SpringSeedsComm2",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	   "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	   "IgnoreShopPriceModifiers": true,
+	    "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+				1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },
+	"boringvlln.rshops_SpringSeedsStrawberry": {
+		  "Condition": "SEASON spring, YEAR 2, SYNCED_RANDOM day boringvlln.rshops_SpringSeedsStrawberry 0.05",
+      "ItemId": "(O)745",
+	  "Id": "boringvlln.rshops_SpringSeedsStrawberry",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "Price": 500,
+	   "IgnoreShopPriceModifiers": true,
+    },	
+	"boringvlln.rshops_SummerSeeds": {
+		  "Condition": "SEASON summer, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431" ],
+	  "Id": "boringvlln.rshops_SummerSeeds",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_SummerSeedsExtra": {
+		  "Condition": "SEASON summer, YEAR 2, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431", "(O)SummerSquashSeeds" ],
+	  "Id": "boringvlln.rshops_SummerSeedsExtra",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_SummerSeedsComm1": {
+		  "Condition": "SEASON summer, YEAR 2, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431", "(O)SummerSquashSeeds" ],
+	  "Id": "boringvlln.rshops_SummerSeedsComm1",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+	   "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },		
+	"boringvlln.rshops_SummerSeedsComm2": {
+		  "Condition": "SEASON summer, YEAR 2, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431", "(O)SummerSquashSeeds" ],
+	  "Id": "boringvlln.rshops_SummerSeedsComm2",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+	   "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },		
+	"boringvlln.rshops_FallSeeds": {
+		  "Condition": "SEASON fall, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299", "(O)301" ],
+	  "Id": "boringvlln.rshops_FallSeeds",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_FallSeedsExtra": {
+		  "Condition": "SEASON fall, YEAR 2, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)489", "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299", "(O)301", "(O)BroccoliSeeds" ],
+	  "Id": "boringvlln.rshops_FallSeedsExtra",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },  
+	"boringvlln.rshops_FallSeedsComm1": {
+		  "Condition": "SEASON fall, YEAR 2, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)489", "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299", "(O)301", "(O)BroccoliSeeds" ],
+	  "Id": "boringvlln.rshops_FallSeedsComm1",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+	   "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },  
+	"boringvlln.rshops_FallSeedsComm2": {
+		  "Condition": "SEASON fall, YEAR 2, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)489", "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299", "(O)301", "(O)BroccoliSeeds" ],
+	  "Id": "boringvlln.rshops_FallSeedsComm2",
+	   "AvoidRepeat": true,
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+	   "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    },  
+	"boringvlln.rshops_FarmingRelatedBasic": {
+		  "Condition": "SEASON spring summer fall, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)297", "(O)368", "(O)370", "(O)465" ],
+	  "Id": "boringvlln.rshops_FarmingRelated",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_FarmingRelatedBasicComm": {
+		  "Condition": "SEASON spring summer fall, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)297", "(O)368", "(O)370", "(O)465" ],
+	  "Id": "boringvlln.rshops_FarmingRelatedBasicComm",
+	  "AvailableStock": 40,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    },
+	"boringvlln.rshops_FarmingRelatedExtra": {
+		  "Condition": "SEASON spring summer fall, YEAR 2, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)369", "(O)371", "(O)466" ],
+	  "Id": "boringvlln.rshops_FarmingRelatedExtra",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    }, 
+	"boringvlln.rshops_FarmingRelatedExtraComm": {
+		  "Condition": "SEASON spring summer fall, YEAR 2, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)369", "(O)371", "(O)466" ],
+	  "Id": "boringvlln.rshops_FarmingRelatedExtraComm",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": true,
+    }, 
+	"boringvlln.rshops_Saplings": {		
+		  "Condition": "SEASON spring summer fall, !PLAYER_HAS_SEEN_EVENT Any 191393, SYNCED_RANDOM day boringvlln.rshops_Saplings 0.3",
+      "RandomItemId": [ "(O)628", "(O)629", "(O)630", "(O)631", "(O)632", "(O)633" ],
+	  "Id": "boringvlln.rshops_Saplings",
+	  "AvailableStock": 1,
+	  "IgnoreShopPriceModifiers": true,
+    }, 
+	"boringvlln.rshops_SaplingsComm": {
+		  "Condition": "SEASON spring summer fall, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)628", "(O)629", "(O)630", "(O)631", "(O)632", "(O)633" ],
+	  "Id": "boringvlln.rshops_SaplingsComm",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+	  "IgnoreShopPriceModifiers": false,
+	   "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.1,
+                1.2,
+                1.3,
+				1.4,
+                1.5,
+              ]
+            }
+          ]
+    }, 
+	"boringvlln.rshops_Bread": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_Bread",
+      "ItemId": "(O)216",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_BreadComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_BreadComm",
+      "ItemId": "(O)216",
+	  "AvailableStock": 30,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Sugar": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_Sugar",
+      "ItemId": "(O)245",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SugarComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_SugarComm",
+      "ItemId": "(O)245",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Wflour": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_Wflour",
+      "ItemId": "(O)246",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_WflourComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_WflourComm",
+      "ItemId": "(O)246",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Rice": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_Rice",
+      "ItemId": "(O)423",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RiceComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_RiceComm",
+      "ItemId": "(O)423",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Sauces": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+	"RandomItemId": [ "(O)247", "(O)419", "(O)306", "(O)307" ],
+	  "Id": "boringvlln.rshops_Sauces",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SaucesComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+	"RandomItemId": [ "(O)247", "(O)419", "(O)306", "(O)307" ],
+	  "Id": "boringvlln.rshops_SaucesComm",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_SSweets": {
+      "RandomItemId": [ "(O)340", "(O)724" ],
+	  "Id": "boringvlln.rshops_SSweets",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_JuicesP": {
+		"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "FLAVORED_ITEM Juice (O)613", "FLAVORED_ITEM Juice (O)256", "FLAVORED_ITEM Juice (O)635" ],
+	  "Id": "boringvlln.rshops_JuicesP",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_JuicesPComm": {
+		"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "FLAVORED_ITEM Juice (O)282", "FLAVORED_ITEM Juice (O)613", "FLAVORED_ITEM Juice (O)256", "FLAVORED_ITEM Juice (O)635", "FLAVORED_ITEM Juice (O)636", "FLAVORED_ITEM Juice (O)637", "FLAVORED_ITEM Juice (O)638", "FLAVORED_ITEM Juice (O)832", "FLAVORED_ITEM Juice (O)834", "FLAVORED_ITEM Juice (O)Carrot" ],
+	  "Id": "boringvlln.rshops_JuicesPComm",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_Delicacy": {
+      "RandomItemId": [ "(O)432", "(O)445", "(O)447", "(O)432", "(O)815" ],
+	  "Id": "boringvlln.rshops_Delicacy",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+	  
+    },
+	"boringvlln.rshops_VeggieSpringMany": {
+		  "Condition": "SEASON spring",
+      "RandomItemId": [ "(O)24", "(O)188", "(O)190", "(O)192", "(O)248", "(O)250", "(O)Carrot" ],
+	  "Id": "boringvlln.rshops_VeggieSpringMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    }, 
+	"boringvlln.rshops_VeggieSpringFew": {
+		  "Condition": "SEASON spring, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)248", "(O)250", "(O)Carrot", "(O)24", "(O)188", "(O)190", "(O)192", "(O)400" ],
+	  "Id": "boringvlln.rshops_VeggieSpringFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    }, 
+	"boringvlln.rshops_VeggieSpringFewComm": {
+		  "Condition": "SEASON spring, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)248", "(O)250", "(O)Carrot", "(O)24", "(O)188", "(O)190", "(O)192", "(O)400" ],
+	  "Id": "boringvlln.rshops_VeggieSpringFewComm",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    }, 
+	"boringvlln.rshops_VeggieSummerMany": {
+		  "Condition": "SEASON summer",
+      "RandomItemId": [ "(O)266", "(O)SummerSquash", "(O)270", "(O)256", "(O)264" ],
+	  "Id": "boringvlln.rshops_VeggieSummerMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    }, 
+	"boringvlln.rshops_VeggieSummerFew": {
+		  "Condition": "SEASON summer, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)256", "(O)264", "(O)266", "(O)SummerSquash", "(O)270" ],
+	  "Id": "boringvlln.rshops_VeggieSummerFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieSummerFewComm": {
+		  "Condition": "SEASON summer, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)256", "(O)264", "(O)266", "(O)SummerSquash", "(O)270" ],
+	  "Id": "boringvlln.rshops_VeggieSummerFewComm",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieFallMany": {
+		  "Condition": "SEASON fall",
+      "RandomItemId": [ "(O)280", "(O)284", "(O)Broccoli", "(O)272", "(O)274", "(O)276", "(O)278" ],
+	  "Id": "boringvlln.rshops_VeggieFallMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieFallFew": {
+		  "Condition": "SEASON fall, !PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)272", "(O)274", "(O)276", "(O)278", "(O)280", "(O)284", "(O)Broccoli" ],
+	  "Id": "boringvlln.rshops_VeggieFallFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieFallFewComm": {
+		  "Condition": "SEASON fall, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)272", "(O)274", "(O)276", "(O)278", "(O)280", "(O)284", "(O)Broccoli" ],
+	  "Id": "boringvlln.rshops_VeggieFallFewComm",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieWinter": {
+		  "Condition": "SEASON winter",
+      "RandomItemId": [ "(O)280", "(O)284", "(O)Broccoli", "(O)272", "(O)274", "(O)276", "(O)278", "(O)266", "(O)SummerSquash", "(O)270", "(O)256", "(O)264", "(O)24", "(O)188", "(O)190", "(O)192", "(O)248", "(O)250", "(O)Carrot" ],
+	  "Id": "boringvlln.rshops_VeggieWinter",
+	  "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                2.0,
+                2.5,
+				3.5,
+				4.0,
+				4.5,
+              ]
+            }
+          ],
+	   "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_VeggieWinterComm": {
+		  "Condition": "SEASON winter, PLAYER_HAS_SEEN_EVENT Any 191393",
+      "RandomItemId": [ "(O)280", "(O)284", "(O)Broccoli", "(O)272", "(O)274", "(O)276", "(O)278", "(O)266", "(O)SummerSquash", "(O)270", "(O)256", "(O)264", "(O)24", "(O)188", "(O)190", "(O)192", "(O)248", "(O)250", "(O)Carrot" ],
+	  "Id": "boringvlln.rshops_VeggieWinterComm",
+	  "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                2.0,
+                2.5,
+				3.5,
+				4.0,
+				4.5,
+              ]
+            }
+          ],
+	   "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+				0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FlowerSpring": {
+		  "Condition": "SEASON spring, SYNCED_RANDOM day boringvlln.rshops_FlowerSpring 0.3",
+      "RandomItemId": [ "(O)591", "(O)597" ],
+	  "Id": "boringvlln.rshops_FlowerSpring",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FlowerSummer": {
+		  "Condition": "SEASON summer, SYNCED_RANDOM day boringvlln.rshops_FlowerSummer 0.3",
+      "RandomItemId": [ "(O)421", "(O)593", "(O)376" ],
+	  "Id": "boringvlln.rshops_FlowerSummer",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_FlowerFall": {
+		  "Condition": "SEASON fall, SYNCED_RANDOM day boringvlln.rshops_FlowerFall 0.3",
+      "ItemId": "(O)421",
+	  "Id": "boringvlln.rshops_FlowerFall",
+	  "AvailableStock": 6,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	
+ },
+  "When": { "Pierre": "hardmode" }
+},
+]
+}

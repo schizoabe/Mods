@@ -1,0 +1,37 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Haley",
+			"Entries": {
+				"marriage_Tue": "900 Town 23 22 2 \"Strings\\schedules\\Haley:marriage_{{Random:r, r2, r3, r4}}\"/1300 BusStop 23 23 haley_photomarriage \"Strings\\schedules\\Haley:marriage_{{Random:photobus, photobus2, photobus3}}\"/1700 BusStop 9 23 3",
+				"marriage_Thu": "1000 Forest 77 44 2 haley_photomarriage \"Strings\\schedules\\Haley:marriage_{{Random:photoforest, photoforest2, photoforest3}}\"/1600 HaleyHouse 5 5 2 \"Strings\\schedules\\Haley:marriage_marriageroom\"/1930 BusStop 9 23 3",
+				"marriage_Sun": "900 Beach 19 7 2/1230 Beach 40 36 haley_photomarriage \"Strings\\schedules\\Haley:marriage_{{Random:photobeach, photobeach2, photobeach3}}\"/1600 Town 23 22 2 \"Strings\\schedules\\Haley:marriage_{{Random:r, r2, r3, r4}}\"/1930 BusStop 9 23 3"
+			}
+		},
+		// DOCTORS CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Haley",
+			"Entries": {
+				"marriage_Tue": "1000 Hospital 12 14 0 \"Strings\\schedules\\Haley:marriage_doctormarriage\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Haley:winter_9.001\"/1600 Town 23 22 2 \"Strings\\schedules\\Haley:marriage_doctorafter\"/1900 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "9"
+			}
+		},
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Haley",
+			"Entries": {
+				"marriage_Tue": "1000 HaleyHouse 4 15 2 \"Strings\\schedules\\Haley:marriage_nmpre\"/1630 Beach 27 34 2 \"Strings\\schedules\\Haley:marriage_nm\"/2300 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "16"
+			}
+		},
+	]
+}

@@ -1,0 +1,81 @@
+{
+  "Name": "FerngillTouristRailroad02",
+  "Type": "Walking",
+  "TileSheetPath": "Characters\\FerngillTouristRailroad02",
+  "TravelSpeed": 1,
+  "FrameSizeWidth": 16,
+  "FrameSizeHeight": 32,
+
+  "IdleBehavior": "Wander",
+  "MaxIdleDistance": "-1",
+  "MaxDistanceBeforeTeleport": "-1",
+
+  "EnableSpawnAtDayStart": true,
+  "EnableFarmerCollision": true,
+  "EnableCharacterCollision": true,
+  "EnableBreathing": true,
+  "EnableShadow": true,
+  "Shadow": 
+		{
+			"OffsetX": 0,
+			"OffsetY": 8,
+			"Scale": 1,
+			"Alpha": 255
+		},
+
+  "DirectionChangeChanceWhileMoving": 0.003,
+  "DirectionChangeChanceWhileIdle": 0.1,
+  "ChanceForHalting": 0.4,
+  "MinHaltTime": 10000,
+  "MaxHaltTime": 25000,
+
+  "InspectionDialogue": "Wow, what a lovely Railroad!",
+
+  "UpAnimation": {
+    "StartingFrame": 8,
+    "NumberOfFrames": 4,
+    "Duration": 150,
+
+    "IdleAnimation": {
+      "StartingFrame": 8,
+      "NumberOfFrames": 1,
+      "Duration": 500
+    }
+  },
+
+  "DownAnimation": {
+    "StartingFrame": 0,
+    "NumberOfFrames": 4,
+    "Duration": 150,
+
+    "IdleAnimation": {
+      "StartingFrame": 0,
+      "NumberOfFrames": 1,
+      "Duration": 500
+    }
+  },
+
+  "LeftAnimation": {
+    "StartingFrame": 12,
+    "NumberOfFrames": 4,
+    "Duration": 150,
+
+    "IdleAnimation": {
+      "StartingFrame": 12,
+      "NumberOfFrames": 1,
+      "Duration": 500
+    }
+  },
+
+  "RightAnimation": {
+    "StartingFrame": 4,
+    "NumberOfFrames": 4,
+    "Duration": 150,
+
+    "IdleAnimation": {
+      "StartingFrame": 4,
+      "NumberOfFrames": 1,
+      "Duration": 500
+    }
+  }
+}

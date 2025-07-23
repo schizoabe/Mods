@@ -1,0 +1,117 @@
+{
+	"Changes": [
+		{
+            "LogName": "Shane Room Edit 6-7",
+            "Action": "EditMap",
+            "Target": "Maps/AnimalShop",
+            "FromFile": "assets/Maps/ShaneRoom_6Heart.tmx",
+            "ToArea":
+            {
+                "X": 21,
+                "Y": 4,
+                "Width": 8,
+                "Height": 9
+            },
+            "When":
+            {
+				"HasSeenEvent": "2118991",
+				"HasMod |contains= uglynt.town.interiors": false
+            }
+        },
+		{
+            "LogName": "Shane Room Edit 8",
+            "Action": "EditMap",
+            "Target": "Maps/AnimalShop",
+            "FromFile": "assets/Maps/ShaneRoom_{{Random:6,8,8}}Heart.tmx",
+            "ToArea":
+            {
+                "X": 21,
+                "Y": 4,
+                "Width": 8,
+                "Height": 9
+            },
+            "When":
+            {
+				"HasSeenEvent": "2118991",
+				"Hearts:Shane": "8,9,10",
+				"HasMod |contains= uglynt.town.interiors": false
+            }
+        },
+		{
+            "LogName": "Shane Room Edit Married",
+            "Action": "EditMap",
+            "Target": "Maps/AnimalShop",
+            "FromFile": "assets/Maps/ShaneRoom_8Heart.tmx",
+            "ToArea":
+            {
+                "X": 21,
+                "Y": 4,
+                "Width": 8,
+                "Height": 9
+            },
+            "When":
+            {
+				"HasSeenEvent": "2118991",
+				"Relationship:Shane": "Married",
+				"HasMod |contains= uglynt.town.interiors": false
+            }
+        },
+// LUTI COMPATIBILITY
+		{
+            "LogName": "Shane Room Edit 6-7",
+            "Action": "EditMap",
+            "Target": "Maps/AnimalShop",
+            "FromFile": "assets/Maps/ShaneRoom_6Heart_LUTI.tmx",
+            "ToArea":
+            {
+                "X": 21,
+                "Y": 5,
+                "Width": 6,
+                "Height": 5
+            },
+            "When":
+            {
+				"HasSeenEvent": "2118991",
+				"HasMod |contains= uglynt.town.interiors": true
+            }
+        },
+		{
+            "LogName": "Shane Room Edit 8",
+            "Action": "EditMap",
+            "Target": "Maps/AnimalShop",
+            "FromFile": "assets/Maps/ShaneRoom_{{Random:6,8,8,8}}Heart_LUTI.tmx",
+            "ToArea":
+            {
+                "X": 21,
+                "Y": 5,
+                "Width": 6,
+                "Height": 5
+            },
+            "When":
+            {
+				"HasSeenEvent": "2118991",
+				"Hearts:Shane": "8,9,10",
+				"HasMod |contains= uglynt.town.interiors": true
+            }
+        },
+		{
+            "LogName": "Shane Room Edit Married",
+            "Action": "EditMap",
+            "Target": "Maps/AnimalShop",
+            "FromFile": "assets/Maps/ShaneRoom_8Heart_LUTI.tmx",
+            "ToArea":
+            {
+                "X": 21,
+                "Y": 5,
+                "Width": 6,
+                "Height": 5
+            },
+            "When":
+            {
+				"HasSeenEvent": "2118991",
+				"Relationship:Shane": "Married",
+				"HasMod |contains= uglynt.town.interiors": true
+            }
+        }
+	]
+}

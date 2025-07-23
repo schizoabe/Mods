@@ -1,0 +1,44 @@
+{
+ "Changes": [
+ 
+ //standard
+ 
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Casino",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "boringvlln.rshops_Treasure": {
+      "Id": "boringvlln.rshops_Treasure",
+      "ItemId": "(O)166",
+	  "Price": 500,
+	  }
+ },
+  "When": { "Casino": "standard" }
+},
+
+//hardmode
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Casino",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "boringvlln.rshops_Treasure": {
+      "Id": "boringvlln.rshops_Treasure",
+      "ItemId": "(O)166",
+	  "Price": 1000,
+	  }
+ },
+  "When": { "Casino": "hardmode" }
+},
+]
+}

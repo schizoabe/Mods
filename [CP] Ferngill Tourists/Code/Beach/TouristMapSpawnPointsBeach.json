@@ -1,0 +1,132 @@
+{    
+	"Changes": 
+    [        
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Beach",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 15, "Y": 12 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristBeach01"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Beach",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 44, "Y": 18 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristBeach02"
+                  }
+               }
+            ]
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Beach",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 24, "Y": 30 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristBeach03"
+                  }
+               }
+            ],
+            "When":
+            {
+               "TouristNumbersBeach |contains= medium, large": true
+            }
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Beach",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 30, "Y": 14 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristBeach04"
+                  }
+               }
+            ],
+            "When":
+            {
+               "TouristNumbersBeach |contains= large": true
+            }
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Beach",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 69, "Y": 11 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristBeach05"
+                  }
+               }
+            ],
+            "When":
+            {
+               "HasFlag |contains= beachBridgeFixed": true
+            }
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Beach",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 86, "Y": 39 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristBeach06"
+                  }
+               }
+            ],
+            "When":
+            {
+               "HasFlag |contains= beachBridgeFixed": true,
+               "TouristNumbersBeach |contains= medium, large": true
+            }
+         },
+         {
+            "Action": "EditMap",
+            "Target": "Maps/Beach",
+            "MapTiles": 
+            [
+               {
+                  "Position": { "X": 88, "Y": 7 },
+                  "Layer": "Back",
+                  "SetProperties": 
+                  {
+                     "CustomCompanions": "Spawn 1 Airyn.FerngillTouristsCC.FerngillTouristBeach07"
+                  }
+               }
+            ],
+            "When":
+            {
+               "HasFlag |contains= beachBridgeFixed": true,
+               "TouristNumbersBeach |contains= large": true
+            }
+         }
+    ]
+}

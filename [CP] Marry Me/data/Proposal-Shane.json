@@ -1,0 +1,36 @@
+{
+"Changes": [
+
+//Load map
+{
+     "Action": "Load",
+     "Priority": "Low",
+     "Target": "Maps/MM-ShaneWhite",
+     "FromFile": "assets/maps/Forest-Lake.tmx",
+},
+
+//SHANE -- proposes in the forest, at the lake (night)
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Forest",
+    "Entries": {
+        "{{ModId}}_Proposal_Shane/Dating Shane/f Shane 2500/t 2000 2300/w sunny/c 1/LocalMail {{ModId}}_Letter_Shane": "nightTime/-1000 -1000/farmer 21 15 2 Shane 23 15 2/--skippable/mailReceived {{ModId}}_StopBlack_Shane/changeToTemporaryMap MM-ShaneWhite false/warp Shane 23 15/faceDirection Shane 2/warp farmer 21 15/faceDirection farmer 2/animate Shane false true 200 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 23 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20/positionOffset farmer 0 20/viewport 22 14 clamp true/pause 2000/speak Shane \"{{i18n:White_Shane.0}}\"/pause 600/faceDirection farmer 1/pause 200/quickQuestion #{{i18n:White_Shane.1}}#{{i18n:White_Shane.2}}(break)pause 200\\speak Shane \"{{i18n:White_Shane.3}}\"(break)pause 200\\speak Shane \"{{i18n:White_Shane.4}}\"/pause 1000/faceDirection farmer 2/pause 3000/speak Shane \"{{i18n:White_Shane.5}}\"/pause 200/faceDirection farmer 1/emote farmer 56/pause 600/speak Shane \"{{i18n:White_Shane.6}}\"/pause 1000/faceDirection farmer 2/pause 3000/emote Shane 40/pause 2000/stopAnimation Shane 20/speak Shane \"{{i18n:White_Shane.7}}\"/pause 1400/faceDirection Shane 1/pause 800/speak Shane \"{{i18n:White_Shane.8}}\"/pause 200/faceDirection Shane 2/pause 200/speak Shane \"{{i18n:White_Shane.9}}\"/pause 400/faceDirection farmer 1/pause 200/emote farmer 8/pause 1600/emote Shane 60/pause 800/speak Shane \"{{i18n:White_Shane.10}}\"/pause 400/speak Shane \"{{i18n:White_Shane.11}}\"/pause 400/emote farmer 32/pause 800/faceDirection farmer 2/pause 2400/emote Shane 40/pause 400/speak Shane \"{{i18n:White_Shane.12}}\"/pause 200/message \"{{i18n:White_Shane.13}}\"/pause 400/faceDirection Shane 3/pause 600/faceDirection farmer 1/playMusic musicboxsong/pause 2000/speak Shane \"{{i18n:White_Shane.14}}\"/pause 500/speak Shane \"{{i18n:White_Shane.15}}\"/emote Shane 60/pause 200/speak Shane \"{{i18n:White_Shane.16}}\"/pause 200/speed Shane 1/move Shane -1 0 3/pause 200/message \"{{i18n:White_Shane.17}}\"/pause 100/jump farmer/pause 400/speak Shane \"{{i18n:White_Shane.18}}\"/pause 800/message \"{{i18n:White_Shane.19 |You={{You}}}}\"/pause 200/speak Shane \"{{i18n:White_Shane.20}}\"/pause 400/emote farmer 16/pause 200/question fork1 \"{{i18n:proposalResponse}}\"/fork {{ModId}}_Shane_No/switchEvent {{ModId}}_Shane_Yes",
+    }
+},
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Temp",
+    "Entries": {
+        "{{ModId}}_Shane_Yes": "pause 200/speak Shane \"{{i18n:White_Shane.YES.0}}\"/emote Shane 16/pause 200/message \"{{i18n:White_Shane.YES.1 |You={{You}}}}\"/pause 200/positionOffset farmer 4 0/positionOffset Shane -4 0/{{Farmer_Kiss}}/{{Shane_Kiss}}/emote Shane 20/pause 200/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Shane 12/pause 1000/speak Shane \"{{i18n:White_Shane.YES.2}}\"/pause 200/positionOffset farmer 2 0/positionOffset Shane -2 0/{{Farmer_Kiss}}/{{Shane_Kiss}}/emote Shane 20/pause 200/emote farmer 20/pause 2000/stopAnimation farmer/stopAnimation Shane 12/pause 1000/speak Shane \"{{i18n:White_Shane.YES.3}}\"/pause 1200/message \"{{i18n:White_Shane.YES.4 |Your={{Your}}}}\"/pause 800/speak Shane \"{{i18n:White_Shane.YES.5}}\"/pause 200/emote farmer 32/globalFade/viewport -1000 -1000/pause 2000/action Kantrip.HeartActions_DoEngagement Shane/action AddItem 460/pause 3000/stopMusic/end/",
+        
+        "{{ModId}}_Shane_No": "stopAnimation Shane 12/speed Shane 2/jump Shane/emote Shane 16/pause 800/emote Shane 28/pause 800/faceDirection Shane 1/shake Shane 500/pause 4000/faceDirection Shane 3/pause 200/speak Shane \"{{i18n:White_Shane.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_Shane_notReady(break)switchEvent {{ModId}}_Shane_noMarriage(break)switchEvent {{ModId}}_Shane_breakup/",
+        
+        "{{ModId}}_Shane_notReady": "pause 400/emote Shane 60/pause 800/speak Shane \"{{i18n:White_Shane.NO1.0}}\"/pause 500/speak Shane \"{{i18n:White_Shane.NO1.1}}\"/pause 200/emote farmer 32/pause 400/emote Shane 32/pause 200/speak Shane \"{{i18n:White_Shane.NO1.2}}\"/pause 200/{{Farmer_Kiss}}/{{Shane_Kiss}}/pause 2000/globalFade/viewport -1000 -1000/pause 2000/stopMusic/end",
+        
+        "{{ModId}}_Shane_noMarriage": "pause 200/speak Shane \"{{i18n:White_Shane.NO2.0}}\"/pause 200/faceDirection Shane 1/emote Shane 40/pause 2000/faceDirection Shane 3/speak Shane \"{{i18n:White_Shane.NO2.1}}\"/pause 1000/faceDirection Shane 2/message \"{{i18n:White_Shane.NO2.2 |You={{You}}}}\"/pause 800/playSound dropItemInWater/pause 200/emote farmer 16/pause 800/faceDirection Shane 3/pause 1000/speak Shane \"{{i18n:White_Shane.NO2.3}}\"/pause 800/emote farmer 32/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_Shane_breakup": "pause 400/playSound dwop/positionOffset Shane 2 0/pause 100/positionOffset Shane 2 0/pause 100/positionOffset Shane 2 0/pause 100/playSound dwop/positionOffset Shane 2 0/pause 100/positionOffset Shane 2 0/pause 100/positionOffset Shane 2 0/pause 1500/faceDirection Shane 2/shake Shane 500/pause 1000/emote Shane 28/pause 2500/message \"{{i18n:White_Shane.NO3.0}}\"/pause 1000/faceDirection Shane 3/pause 200/speak Shane \"{{i18n:White_Shane.NO3.1}}\"/pause 200/advancedMove Shane false 0 -3/pause 200/faceDirection farmer 0/pause 800/halt/pause 800/shake Shane 500/pause 3000/faceDirection Shane 2/pause 500/speak Shane \"{{i18n:White_Shane.NO3.2}}\"/pause 100/faceDirection Shane 0/pause 1000/shake Shane 500/pause 1500/pause 600/speak Shane \"{{i18n:White_Shane.NO3.3}}\"/pause 1200/advancedMove Shane false 0 -8/pause 2500/action Kantrip.HeartActions_DoBreakup Shane/friendship Shane -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    }
+},
+]
+}

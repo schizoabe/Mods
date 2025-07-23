@@ -1,0 +1,158 @@
+{
+  "Format": "2.0.0",
+  "Changes": [
+
+// Add Machine
+
+    {
+      "LogName": "Add Trash Net Machine",
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+        "{{ModId}}_TrashNet": {
+          "Name": "{{ModId}}_TrashNet",
+          "DisplayName": "{{i18n: CleanUpSDV_TrashNetName}}",
+          "Description": "{{i18n: CleanUpSDV_TrashNetDescription}}",
+          "Price": 50,
+          "Fragility": 0,
+          "CanBePlacedOutdoors": true,
+          "CanBePlacedIndoors": false,
+          "IsLamp": false,
+          "Texture": "Mods/{{ModId}}/Machines",
+          "SpriteIndex": 0,
+          "ContextTags": [
+            "custom_crab_pot_item"
+          ]
+        }
+      }
+    },
+
+// Add Machine Picture
+
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Machines",
+      "FromFile": "assets/TrashNet.png"
+    },
+
+// Add Crafting Recipe
+
+    {
+      "LogName": "Add Trash Net Crafting Recipe (Fishing 3)",
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModId}}_TrashNetRecipe": "771 30 388 10/Home/{{ModId}}_TrashNet/true/Fishing 3/{{i18n: CleanUpSDV_TrashNetName}}"
+      }
+    },
+
+// Machine Output
+
+    {
+      "LogName": "Trash Net Output",
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "Entries": {
+        "(BC){{ModId}}_TrashNet": {
+          "HasInput": false,
+          "HasOutput": false,
+          "InteractMethod": null,
+          "OutputRules": [
+            {
+              "Id": "Default",
+              "Triggers": [
+                {
+                  "Id": "OutputCollected, MachinePutDown",
+                  "Trigger": "OutputCollected, MachinePutDown",
+                  "RequiredItemId": null,
+                  "RequiredTags": null,
+                  "RequiredCount": 1,
+                  "Condition": null
+                }
+              ],
+              "UseFirstValidOutput": false,
+              "OutputItem": [
+                {
+                  "CustomData": null,
+                  "OutputMethod": null,
+                  "CopyColor": false,
+                  "CopyPrice": false,
+                  "CopyQuality": false,
+                  "PreserveType": null,
+                  "PreserveId": null,
+                  "IncrementMachineParentSheetIndex": 0,
+                  "PriceModifiers": null,
+                  "PriceModifierMode": "Stack",
+                  "Condition": null,
+                  "Id": "RANDOM_ITEMS (O)",
+                  "ItemId": "RANDOM_ITEMS (O)",
+                  "PerItemCondition": "ITEM_CONTEXT_TAG Target trash_item",
+                  "RandomItemId": null,
+                  "MaxItems": null,
+                  "MinStack": 1,
+                  "MaxStack": 1,
+                  "Quality": -1,
+                  "ObjectInternalName": null,
+                  "ObjectDisplayName": null,
+                  "ToolUpgradeLevel": -1,
+                  "IsRecipe": false,
+                  "StackModifiers": null,
+                  "StackModifierMode": "Stack",
+                  "QualityModifiers": null,
+                  "QualityModifierMode": "Stack",
+                  "ModData": null
+                }
+              ],
+              "MinutesUntilReady": -1,
+              "DaysUntilReady": 1,
+              "InvalidCountMessage": null,
+              "RecalculateOnCollect": false
+            }
+          ],
+          "AdditionalConsumedItems": null,
+          "PreventTimePass": null,
+          "ReadyTimeModifiers": null,
+          "ReadyTimeModifierMode": "Stack",
+          "InvalidItemMessage": null,
+          "InvalidItemMessageCondition": null,
+          "InvalidCountMessage": null,
+          "LoadEffects": null,
+          "WorkingEffects": null,
+          "WorkingEffectChance": 0.33,
+          "AllowLoadWhenFull": false,
+          "WobbleWhileWorking": false,
+          "LightWhileWorking": null,
+          "ShowNextIndexWhileWorking": false,
+          "ShowNextIndexWhenReady": false,
+          "AllowFairyDust": true,
+          "IsIncubator": false,
+          "ClearContentsOvernightCondition": null,
+          "StatsToIncrementWhenLoaded": null,
+          "StatsToIncrementWhenHarvested": null,
+          "ExperienceGainOnHarvest": null,
+          "CustomFields": null
+        }
+      }
+    },
+
+// Add to Willy's Shop
+
+    {
+      "LogName": "Add Trash Net To Willy's Shop",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "FishShop",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_TrashNetWillyShop": {
+          "Id": "{{ModId}}_TrashNetWillyShop",
+          "ItemId": "(BC){{ModId}}_TrashNet",
+          "Condition": "PLAYER_FISHING_LEVEL Current 3",
+          "Price": 250
+        }
+      }
+    },
+  ]
+}

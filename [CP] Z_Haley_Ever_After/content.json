@@ -1,0 +1,23 @@
+{
+    "Format": "2.3.0",
+    "ConfigSchema": {
+    "Festivals": {
+      "AllowValues": "true, false",
+      "Default": "true"}
+    },
+    "Changes": [
+        {
+            "LogName": "Haley",
+            "Action": "Include",
+            "FromFile": "assets/Haley.json"
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "Include",
+            "FromFile": "assets/Festivals.json",
+            "When": {
+                "Festivals": true
+            }
+        }
+    ]
+}

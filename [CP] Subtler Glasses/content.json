@@ -1,0 +1,58 @@
+{
+  "Format": "1.3",
+  "ConfigSchema":
+	{
+	"GlassesBlack": {
+	"AllowValues": "true, false"},
+
+	"GlassesPurple": {
+	"AllowValues": "true, false"},
+
+	"GlassesBlue": {
+	"AllowValues": "true, false"},
+
+	"GlassesRed": {
+	"AllowValues": "true, false"},
+	},
+  "Changes": [
+       {
+          "Action": "Editimage",
+          "Target": "Characters/Farmer/accessories",
+          "FromFile": "assets/GlassesBlack.png",
+	"ToArea": { "X": 3, "Y": 40, "Width": 10, "Height": 18 },
+	"When": {
+	"GlassesBlack": "true"
+	}
+       },
+
+       {
+          "Action": "Editimage",
+          "Target": "Characters/Farmer/accessories",
+          "FromFile": "assets/GlassesPurple.png",
+	"ToArea": { "X": 35, "Y": 40, "Width": 10, "Height": 18 },
+	"When": {
+	"GlassesPurple": "true"
+	}
+       },
+
+       {
+          "Action": "Editimage",
+          "Target": "Characters/Farmer/accessories",
+          "FromFile": "assets/GlassesBlue.png",
+	"ToArea": { "X": 19, "Y": 71, "Width": 10, "Height": 20 },
+	"When": {
+	"GlassesBlue": "true"
+	}
+       },
+
+       {
+          "Action": "Editimage",
+          "Target": "Characters/Farmer/accessories",
+          "FromFile": "assets/GlassesRed.png",
+	"ToArea": { "X": 83, "Y": 39, "Width": 10, "Height": 20 },
+	"When": {
+	"GlassesRed": "true"
+	}
+       },
+    ]
+}

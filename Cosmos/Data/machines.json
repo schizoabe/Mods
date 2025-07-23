@@ -1,0 +1,321 @@
+{
+	"Changes":[
+	//Excluding
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)12",
+				"OutputRules",
+				"Default_Juice",
+				"Triggers",
+				"ItemPlacedInMachine_Vegetable",
+				"RequiredTags"
+			],
+			"Entries": {
+				"#-1": "!Cosmos_spacerock_outputitem_mushroom"
+			}
+		},			
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)12",
+				"OutputRules",
+				"Default_Juice",
+				"Triggers",
+				"ItemPlacedInMachine_Forage",
+				"RequiredTags"
+			],
+			"Entries": {
+				"#-1": "!Cosmos_spacerock_outputitem_mushroom"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)12",
+				"OutputRules",
+				"Default_Juice",
+				"Triggers",
+				"ItemPlacedInMachine_Juice",
+				"RequiredTags"
+			],
+			"Entries": {
+				"#-1": "!Cosmos_spacerock_outputitem_mushroom"
+			}
+		},		
+		//
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)15",
+				"OutputRules",
+				"Default_Pickled",
+				"Triggers",
+				"ItemPlacedInMachine_Vegetable",
+				"RequiredTags"
+			],
+			"Entries": {
+				"#-1": "!Cosmos_spacerock_outputitem_mushroom"
+			}
+		},		
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)15",
+				"OutputRules",
+				"Default_Pickled",
+				"Triggers",
+				"ItemPlacedInMachine_Forage",
+				"RequiredTags"
+			],
+			"Entries": {
+				"#-1": "!Cosmos_spacerock_outputitem_mushroom"
+			}
+		}, 
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)15",
+				"OutputRules",
+				"Default_Pickled",
+				"Triggers",
+				"ItemPlacedInMachine_Pickle",
+				"RequiredTags"
+			],
+			"Entries": {
+				"#-1": "!Cosmos_spacerock_outputitem_mushroom"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)Dehydrator",
+				"OutputRules",
+				"DriedMushrooms",
+				"Triggers",
+				"ItemPlacedInMachine",
+				"RequiredTags"
+			],
+			"Entries": {
+				"#-1": "!Cosmos_spacerock_outputitem_mushroom"
+			}
+		},	
+        {
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)182",
+				"OutputRules",
+				"Default",
+				"Triggers",
+				"ItemPlacedInMachine"
+			],
+			"Entries": {
+				"RequiredTags": ["!Cosmos_spacerock_item"]
+			}
+		},
+		//Change Vanilla
+        {
+			"LogName": "Machine Data Edit Vanilla - Geode Crusher",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC)182", "OutputRules", "Default", "Triggers" ],
+			"Entries": { 
+                "Cosmos.CrushTrigger":{
+					"Id": "Cosmos.CrushTrigger",
+                    "Trigger": "ItemPlacedInMachine",
+                    "RequiredItemId": null,
+                    "RequiredTags": [
+                    "Cosmos_spacerock_item"
+                    ],
+                    "RequiredCount": 1,
+                    "Condition": "PLAYER_HAS_POWER Current Cosmos.PowerBook"
+				}
+            }
+        },
+        {
+			"LogName": "Machine Data Edit Vanilla - Crystalarium Crusher",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC)21", "OutputRules", "Default", "Triggers" ],
+			"Entries": { 
+                "Cosmos.CrystalTrigger":{
+					"Id": "Cosmos.CrystalTrigger",
+                    "Trigger": "ItemPlacedInMachine",
+                    "RequiredItemId": null,
+                    "RequiredTags": [
+                    "crystalarium_cosmos"
+                    ],
+                    "RequiredCount": 1,
+                    "Condition": "ANY \"PLAYER_HAS_POWER Current Cosmos.PowerCrystal\" \"PLAYER_HAS_MAIL Current CosmosIridiumiteIcon\""
+				}
+            }
+        },
+        //
+         
+		{
+			"LogName": "Machine Data Edit Vanilla - Furnace",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC)13", "OutputRules" ],
+			"Entries": {	  
+				"Cosmos.IridiumBar":{
+					"Id": "Cosmos.IridiumBar",
+					"Triggers": [
+						{
+							"Id": "Cosmos.IridiumBarOutput",
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Cosmos.Mineral6",
+							"RequiredCount": 2
+						}
+					],
+					"UseFirstValidOutput": false,
+					"OutputItem": [
+						{
+							"CustomData": {
+								"selph.ExtraMachineConfig.ExtraOutputIds": "CosmosRadioactiveBarExtra",
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)384",
+								"selph.ExtraMachineConfig.RequirementCount.1": "3",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:ExtraNeeded}}"
+							},
+							"Id": "Cosmos.IridiumBarOutcome",
+							"ItemId": "(O)337",
+							"MinStack": 1,
+							"MaxStack": -1,
+							"StackModifiers": []
+						}					  
+					],
+					"MinutesUntilReady": 400
+				},
+				"Cosmos.RadioactiveBar":{
+					"Id": "Cosmos.RadioactiveBar",
+					"Triggers": [
+						{
+							"Id": "Cosmos.RadioactiveBarOutput",
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Cosmos.Mineral6",
+							"RequiredCount": 2
+						}
+					],
+					"UseFirstValidOutput": false,
+					"OutputItem": [
+						{
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)386",
+								"selph.ExtraMachineConfig.RequirementCount.1": "3",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:ExtraNeeded}}"
+							},
+							"Id": "Cosmos.RadioactiveBarOutcome",
+							"ItemId": "(O)910",
+							"MinStack": 1,
+							"MaxStack": -1,
+							"StackModifiers": []
+						}					  
+					],
+					"MinutesUntilReady": 550
+				}  
+			}
+		},
+		{
+			"LogName": "Machine Data Edit Vanilla - Heavy Furnace",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC)HeavyFurnace", "OutputRules" ],
+			"Entries": {	  
+				"Cosmos.IridiumBar":{
+					"Id": "Cosmos.IridiumBar",
+					"Triggers": [
+						{
+							"Id": "Cosmos.IridiumBarOutput",
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Cosmos.Mineral6",
+							"RequiredCount": 10
+						}
+					],
+					"UseFirstValidOutput": false,
+					"OutputItem": [
+						{
+							"CustomData": {
+								"selph.ExtraMachineConfig.ExtraOutputIds": "CosmosRadioactiveBarExtraHeavy",
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)384",
+								"selph.ExtraMachineConfig.RequirementCount.1": "15",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:ExtraNeededHeavy}}"
+							},
+							"Id": "Cosmos.IridiumBarOutcome",
+							"ItemId": "(O)337",
+							"MinStack": 5,
+							"MaxStack": -1,
+							"StackModifiers": []
+						}					  
+					],
+					"MinutesUntilReady": 400
+				},
+				"Cosmos.RadioactiveBar":{
+					"Id": "Cosmos.RadioactiveBar",
+					"Triggers": [
+						{
+							"Id": "Cosmos.RadioactiveBarOutput",
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Cosmos.Mineral6",
+							"RequiredCount": 10
+						}
+					],
+					"UseFirstValidOutput": false,
+					"OutputItem": [
+						{
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)386",
+								"selph.ExtraMachineConfig.RequirementCount.1": "15",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:ExtraNeededHeavy}}"
+							},
+							"Id": "Cosmos.RadioactiveBarOutcome",
+							"ItemId": "(O)910",
+							"MinStack": 5,
+							"MaxStack": -1,
+							"StackModifiers": []
+						}					  
+					],
+					"MinutesUntilReady": 550
+				}  
+			}
+		},	
+		{
+			"LogName": "Add Extra Outputs",
+			"Action": "EditData",
+			"Target": "selph.ExtraMachineConfig/ExtraOutputs",
+			"Entries": {
+				"CosmosRadioactiveBarExtra": {
+					"Id": "CosmosRadioactiveBarExtra",
+					"ItemId": "(O)910",
+					"Condition": "RANDOM 0.05",
+					"MinStack": 1,
+					"MaxStack": -1
+			  	},
+				"CosmosRadioactiveBarExtraHeavy": {
+					"Id": "CosmosRadioactiveBarExtraHeavy",
+					"ItemId": "(O)910",
+					"Condition": "RANDOM 0.1",
+					"MinStack": 1,
+					"MaxStack": 3
+			  	}
+			}
+		}
+	
+	]
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  

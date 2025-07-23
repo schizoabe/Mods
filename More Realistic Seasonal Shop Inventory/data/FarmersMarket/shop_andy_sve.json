@@ -1,0 +1,384 @@
+ {
+    "Changes": [
+        //Standard Andy
+        {
+      "LogName": "MRSSI_Andy_TownFair",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["br93.FarmersMarket_Andy_TownFair", "Items"],
+      "When": {
+                "Spiderbuttons.CMCT/Config: br93.FarmersMarket, LimitedStock": true,
+                "Andy's grange display": "Standard"
+                },
+      "Fields": 
+        {
+          "br93.FarmersMarket_Andy_281":{//chanterelle
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_281 0.8, PLAYER_BASE_FORAGING_LEVEL Any 4"
+          },
+          "br93.FarmersMarket_Andy_296":{//salmonberry
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_296 0.6, PLAYER_BASE_FORAGING_LEVEL Any 1"
+          },
+          "br93.FarmersMarket_Andy_340":{//honey
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_340 0.6, PLAYER_BASE_FORAGING_LEVEL Any 3"
+          },
+          "br93.FarmersMarket_Andy_406":{//wild plum
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_406 0.8"
+          },
+          "br93.FarmersMarket_Andy_408":{//hazelnut
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_408 0.8"
+          },
+          "br93.FarmersMarket_Andy_410":{//blackberry
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_410 0.6, PLAYER_BASE_FORAGING_LEVEL Any 2"
+          },
+          "br93.FarmersMarket_Andy_422":{//purple mushroom
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_422 0.8, PLAYER_BASE_FORAGING_LEVEL Any 5"
+          },
+          "br93.FarmersMarket_Andy_745":{//strawberry seeds
+            "AvailableStock": 10,
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Multiply",
+                    "RandomAmount": [
+                        1.5,
+                        1.4,
+                        1.3,
+                        1.2,
+                        1.1,
+                        1.0,
+                        0.9,
+                        0.8,
+                        0.7,
+                        0.6,
+                        0.5,
+                      ]
+                    }
+                ],
+            "Condition": "PLAYER_FRIENDSHIP_POINTS Any Andy 750"
+          },
+          "br93.FarmersMarket_Andy_770":{//mixed seeds
+            "AvailableStock": 20,
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Multiply",
+                    "RandomAmount": [
+                        1.5,
+                        1.4,
+                        1.3,
+                        1.2,
+                        1.1,
+                        1.0,
+                        0.9,
+                        0.8,
+                        0.7,
+                        0.6,
+                        0.5,
+                      ]
+                    }
+                ],
+          },
+          "br93.FarmersMarket_Andy_773":{//life elixir
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_773 0.8"
+          },
+          "br93.FarmersMarket_Andy_Random":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random 0.8"
+          },
+          "br93.FarmersMarket_Andy_Random2":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random2 0.8, PLAYER_FRIENDSHIP_POINTS Any Andy 500"
+          },
+          "br93.FarmersMarket_Andy_Random3":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random3 0.8, PLAYER_FRIENDSHIP_POINTS Any Andy 750"
+          },
+          "br93.FarmersMarket_Andy_Random4":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random4 0.8, PLAYER_FRIENDSHIP_POINTS Any Andy 1000"
+          },
+          "br93.FarmersMarket_Andy_Random5":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random5 0.8, PLAYER_FRIENDSHIP_POINTS Any Andy 500"
+          },
+          "br93.FarmersMarket_Andy_Random6":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random6 0.8, PLAYER_FRIENDSHIP_POINTS Any Andy 1000"
+          },
+          "br93.FarmersMarket_Andy_Year2Random":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "YEAR 2, SYNCED_RANDOM year br93.FarmersMarket_Andy_Year2Random 0.8"
+          },
+          "br93.FarmersMarket_Andy_Year2Random2":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "YEAR 2, SYNCED_RANDOM year br93.FarmersMarket_Andy_Year2Random2 0.8, PLAYER_FRIENDSHIP_POINTS Any Andy 1000"
+          },
+          "br93.FarmersMarket_Andy_Year2Random3":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                ],
+            "Condition": "YEAR 2, SYNCED_RANDOM year br93.FarmersMarket_Andy_Year2Random3 0.8, PLAYER_FRIENDSHIP_POINTS Any Andy 1500"
+          },
+        }
+    },
+        //Hardmode Andy
+        {
+      "LogName": "MRSSI_Andy_TownFair",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["br93.FarmersMarket_Andy_TownFair", "Items"],
+      "When": {
+                "Spiderbuttons.CMCT/Config: br93.FarmersMarket, LimitedStock": true,
+                "Andy's grange display": "Hardmode"
+                },
+      "Fields": 
+        {
+          "br93.FarmersMarket_Andy_281":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_281 0.5, PLAYER_BASE_FORAGING_LEVEL Any 6"
+          },
+          "br93.FarmersMarket_Andy_296":{
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_296 0.3, PLAYER_BASE_FORAGING_LEVEL Any 3"
+          },
+          "br93.FarmersMarket_Andy_340":{
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_340 0.3, PLAYER_BASE_FORAGING_LEVEL Any 5"
+          },
+          "br93.FarmersMarket_Andy_406":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_406 0.5"
+          },
+          "br93.FarmersMarket_Andy_408":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_408 0.5"
+          },
+          "br93.FarmersMarket_Andy_410":{
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_410 0.3, PLAYER_BASE_FORAGING_LEVEL Any 4"
+          },
+          "br93.FarmersMarket_Andy_422":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_422 0.5, PLAYER_BASE_FORAGING_LEVEL Any 7"
+          },
+          "br93.FarmersMarket_Andy_745":{
+            "AvailableStock": 10,
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Multiply",
+                    "RandomAmount": [
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.4,
+                        0.5,
+                        0.6,
+                        0.7,
+                        0.8,
+                        0.9,
+                      ]
+                    }
+                ],
+            "Condition": "PLAYER_FRIENDSHIP_POINTS Any Andy 1250"
+          },
+          "br93.FarmersMarket_Andy_770":{
+            "AvailableStock": 20,
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Multiply",
+                    "RandomAmount": [
+                        0.1,
+                        0.2,
+                        0.3,
+                        0.4,
+                        0.5,
+                        0.6,
+                        0.7,
+                        0.8,
+                        0.9,
+                      ]
+                    }
+                ],
+          },
+          "br93.FarmersMarket_Andy_773":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_773 0.5, PLAYER_FRIENDSHIP_POINTS Any Andy 1000"
+          },
+          "br93.FarmersMarket_Andy_Random":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random 0.5"
+          },
+          "br93.FarmersMarket_Andy_Random2":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random2 0.5, PLAYER_FRIENDSHIP_POINTS Any Andy 750"
+          },
+          "br93.FarmersMarket_Andy_Random3":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random3 0.5, PLAYER_FRIENDSHIP_POINTS Any Andy 1000"
+          },
+          "br93.FarmersMarket_Andy_Random4":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random4 0.5, PLAYER_FRIENDSHIP_POINTS Any Andy 1250"
+          },
+          "br93.FarmersMarket_Andy_Random5":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random5 0.5, PLAYER_FRIENDSHIP_POINTS Any Andy 750"
+          },
+          "br93.FarmersMarket_Andy_Random6":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Andy_Random6 0.5, PLAYER_FRIENDSHIP_POINTS Any Andy 1500"
+          },
+          "br93.FarmersMarket_Andy_Year2Random":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "YEAR 2, SYNCED_RANDOM year br93.FarmersMarket_Andy_Year2Random 0.5"
+          },
+          "br93.FarmersMarket_Andy_Year2Random2":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "YEAR 2, SYNCED_RANDOM year br93.FarmersMarket_Andy_Year2Random2 0.5, PLAYER_FRIENDSHIP_POINTS Any Andy 1250"
+          },
+          "br93.FarmersMarket_Andy_Year2Random3":{
+            "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                ],
+            "Condition": "YEAR 2, SYNCED_RANDOM year br93.FarmersMarket_Andy_Year2Random3 0.5, PLAYER_FRIENDSHIP_POINTS Any Andy 1750"
+          },
+        }
+    }
+    ]
+}

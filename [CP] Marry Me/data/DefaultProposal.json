@@ -1,0 +1,29 @@
+{
+"Changes": [
+
+//DEFAULT (modded NPCs) -- proposes in the town center
+{
+    //Suitor starts off facing the well. There is a splashing sound as they drop some gold in.
+    //The player enters after that
+    "Action": "EditData",
+    "Target": "Data/Events/Town",
+    "LocalTokens": {
+        "Suitor": "{{Random: {{Kantrip.ReverseProposals/MaxHeartSuitors:type=custom}} }}",
+    },
+    "Entries": {
+        "{{ModId}}_Proposal_{{Suitor}}/Dating {{Suitor}}/f {{Suitor}} 2500/n {{ModId}}_Start{{Suitor}}/t 1000 1700/w sunny/c 1/z winter": "spring_day_ambient/-1000 -1000/farmer 20 42 1 {{Suitor}} 27 29 0/--skippable/mailReceived {{ModId}}_StopBlack_{{Suitor}}/makeInvisible 21 28 11 5/advancedMove farmer false 4 2000 0 -13 3 0 1 500/viewport 27 29 clamp true/pause 2000/playSound dropItemInWater/pause 1400/emote {{Suitor}} 40/pause 2500/faceDirection {{Suitor}} 3/emote {{Suitor}} 16/waitForAllStationary/pause 200/speak {{Suitor}} \"{{i18n:White_Default.0}}\"/pause 200/speak {{Suitor}} \"{{i18n:White_Default.1}}\"/pause 200/emote farmer 8/pause 800/advancedMove farmer false 2 0 1 500/pause 2000/speak {{Suitor}} \"{{i18n:White_Default.2}}\"/pause 100/faceDirection {{Suitor}} 3/pause 200/speak {{Suitor}} \"{{i18n:White_Default.3}}\"/pause 800/faceDirection {{Suitor}} 0/pause 200/faceDirection farmer 0/pause 800/emote {{Suitor}} 60/pause 3000/speak {{Suitor}} \"{{i18n:White_Default.4}}\"/pause 400/emote farmer 40/pause 400/speak {{Suitor}} \"{{i18n:White_Default.5}}\"/pause 400/faceDirection {{Suitor}} 3/pause 200/faceDirection farmer 1/pause 1000/speak {{Suitor}} \"{{i18n:White_Default.6}}\"/pause 500/emote {{Suitor}} 40/playMusic musicboxsong/pause 2000/speak {{Suitor}} \"{{i18n:White_Default.7}}\"/speed {{Suitor}} 1/move {{Suitor}} -1 0 3/pause 800/message \"{{i18n:White_Default.8 |Suitor={{Suitor}} |Your={{Your}}}}\"/pause 100/jump farmer/pause 400/speak {{Suitor}} \"{{i18n:White_Default.9}}\"/pause 800/message \"{{i18n:White_Default.10 |Suitor={{Suitor}} |You={{You}}}}\"/pause 200/speak {{Suitor}} \"{{i18n:White_Default.11}}\"/pause 400/emote farmer 16/pause 200/question fork1  \"{{i18n:proposalResponse}}\"/fork {{ModId}}_{{Suitor}}_No/switchEvent {{ModId}}_{{Suitor}}_Yes",
+        
+        "{{ModId}}_{{Suitor}}_Yes": "stopAnimation {{Suitor}} 12/emote {{Suitor}} 20/pause 200/message \"{{i18n:White_Default.YES.0 |Suitor={{Suitor}} |Your={{Your}}}}\"/pause 200/speak {{Suitor}} \"{{i18n:White_Default.YES.1}}\"/pause 200/emote farmer 32/pause 200/emote {{Suitor}} 20/pause 200/emote farmer 20/pause 1000/speak {{Suitor}} \"{{i18n:White_Default.YES.2}}\"/pause 200/faceDirection {{Suitor}} 0/pause 800/faceDirection farmer 0/pause 1500/globalFade/viewport -1000 -1000/pause 1200/playSound dropItemInWater/pause 1500/speak {{Suitor}} \"{{i18n:White_Default.YES.3}}\"/action Kantrip.HeartActions_DoEngagement {{Suitor}}/action AddItem 460/pause 1000/stopMusic/end/",
+        
+        "{{ModId}}_{{Suitor}}_No": "stopAnimation {{Suitor}} 12/speed {{Suitor}} 2/jump {{Suitor}}/emote {{Suitor}} 16/pause 800/emote {{Suitor}} 28/pause 2000/speak {{Suitor}} \"{{i18n:White_Default.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_{{Suitor}}_notReady(break)switchEvent {{ModId}}_{{Suitor}}_noMarriage(break)switchEvent {{ModId}}_{{Suitor}}_breakup/",
+        
+        "{{ModId}}_{{Suitor}}_notReady": "pause 400/emote {{Suitor}} 60/pause 800/speak {{Suitor}} \"{{i18n:White_Default.NO1.0}}\"/pause 500/message \"{{i18n:White_Default.NO1.1 |Suitor={{Suitor}} |Your={{Your}}}}\"/pause 200/emote farmer 32/pause 400/emote {{Suitor}} 32/pause 200/speak {{Suitor}} \"{{i18n:White_Default.NO1.2}}\"/pause 400/emote farmer 20/pause 200/emote {{Suitor}} 20/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end",
+        
+        "{{ModId}}_{{Suitor}}_noMarriage": "pause 200/speak {{Suitor}} \"{{i18n:White_Default.NO2.0}}\"/pause 200/faceDirection {{Suitor}} 1/emote {{Suitor}} 40/pause 2000/faceDirection {{Suitor}} 3/pause 100/speak {{Suitor}} \"{{i18n:White_Default.NO2.1}}\"/pause 200/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_{{Suitor}}_breakup": "pause 400/playSound dwop/positionOffset {{Suitor}} 2 0/pause 100/positionOffset {{Suitor}} 2 0/pause 100/positionOffset {{Suitor}} 2 0/pause 100/playSound dwop/positionOffset {{Suitor}} 2 0/pause 100/positionOffset {{Suitor}} 2 0/pause 100/positionOffset {{Suitor}} 2 0/pause 1500/faceDirection {{Suitor}} 2/shake {{Suitor}} 500/pause 1000/emote {{Suitor}} 28/pause 2500/faceDirection {{Suitor}} 3/speak {{Suitor}} \"{{i18n:White_Default.NO3.0}}\"/advancedMove {{Suitor}} false 0 2 2 3500/pause 100/faceDirection farmer 2/pause 3500/speak {{Suitor}} \"{{i18n:White_Default.NO3.1}}\"/pause 1000/shake {{Suitor}} 500/pause 1500/advancedMove {{Suitor}} false 0 15/pause 1500/faceDirection farmer 2/pause 1500/action Kantrip.HeartActions_DoBreakup {{Suitor}}/friendship {{Suitor}} -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+    
+]
+}

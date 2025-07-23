@@ -1,0 +1,211 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"Entries": {
+				"(BC){{ModId}}_DWEF_IKP": {
+					"OutputRules": [
+						{
+							"Id": "{{ModId}}_DWEF_DW",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O)771",
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_DWEF_DW",
+								}
+							],
+							"MinutesUntilReady": 20,
+							"InvalidCountMessage": "{{i18n: DWEF_KettleNeedsFiveFiber}}"
+						},
+						{
+							"Id": "{{ModId}}_DWEF_WC",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O){{ModId}}_DWEF_S4CP",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_DWEF_WC",
+								}
+							],
+							"MinutesUntilReady": 20,
+						},
+						{
+							"Id": "{{ModId}}_DWEF_WT",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O){{ModId}}_DWEF_S4TP",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_DWEF_WT",
+								}
+							],
+							"MinutesUntilReady": 20,
+						},
+					],
+					"AdditionalConsumedItems": [
+						{
+						"ItemId": "(O)382",
+						"RequiredCount": 1,
+						"InvalidCountMessage": "{{i18n: DWEF_KettleCoalFuelNeededMessage}}",
+						}
+					],
+					"WobbleWhileWorking": true,
+				},
+				"(BC){{ModId}}_DWEF_KAC": {
+					"OutputRules": [
+						{
+							"Id": "{{ModId}}_DWEF_DW",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O)771",
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_DWEF_DW",
+								}
+							],
+							"MinutesUntilReady": 20,
+						},
+						{
+							"Id": "{{ModId}}_DWEF_WC",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O){{ModId}}_DWEF_S4CP",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_DWEF_WC",
+								}
+							],
+							"MinutesUntilReady": 20,
+						},
+						{
+							"Id": "{{ModId}}_DWEF_WT",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O){{ModId}}_DWEF_S4TP",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_DWEF_WT",
+								}
+							],
+							"MinutesUntilReady": 20,
+						},
+						{
+							"Id": "{{ModId}}_NormalCoffee",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O)433",
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)395",
+								}
+							],
+							"MinutesUntilReady": 50,
+						},
+						{
+							"Id": "{{ModId}}_NormalTea",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O)815",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)614",
+								}
+							],
+							"MinutesUntilReady": 50,
+						},
+					],
+					"AdditionalConsumedItems": [
+						{
+						"ItemId": "(O)382",
+						"RequiredCount": 1,
+						"InvalidCountMessage": "{{i18n: DWEF_KettleCoalFuelNeededMessage}}"
+						}
+					],
+					"WobbleWhileWorking": true,
+				},
+				"(BC){{ModId}}_DWEF_AM": {
+					"OutputRules": [
+						{
+							"Id": "{{ModId}}_DWEF_CTS",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O){{ModId}}_DWEF_CTSP",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_DWEF_CTS",
+								}
+							],
+							"MinutesUntilReady": 30,
+						},
+						{
+							"Id": "{{ModId}}_DWEF_CTG",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O){{ModId}}_DWEF_CTGP",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_DWEF_CTG",
+								}
+							],
+							"MinutesUntilReady": 30,
+						},
+						{
+							"Id": "{{ModId}}_DWEF_CTI",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O){{ModId}}_DWEF_CTIP",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_DWEF_CTI",
+								}
+							],
+							"MinutesUntilReady": 30,
+						},
+						{
+							"Id": "{{ModId}}_DWEF_JFB",
+							"Triggers": [
+								{
+									"RequiredItemId": "(O){{ModId}}_DWEF_JFBP",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_DWEF_JFB",
+								}
+							],
+							"MinutesUntilReady": 30,
+						},
+					],
+					"WobbleWhileWorking": true,
+				},
+			}
+		},
+	]
+}

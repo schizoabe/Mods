@@ -1,0 +1,270 @@
+{
+	"Format": "2.0.0",
+	"Changes": [
+		
+// Produce Start
+
+		//	Spring
+		
+		{	// Seed Shelf
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 7 },
+			"ToArea": { "X": 1, "Y": 18, "Width": 1, "Height": 7 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Season": "Spring"
+			}
+		},
+		{	//Center Bins
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 4, "Y": 1, "Width": 2, "Height": 3 },
+			"ToArea": { "X": 3, "Y": 20, "Width": 2, "Height": 3 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Season": "Spring"
+			}
+		},
+		
+		//	Summer
+		
+		{	// Seed Shelf
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 1, "Y": 0, "Width": 1, "Height": 7 },
+			"ToArea": { "X": 1, "Y": 18, "Width": 1, "Height": 7 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Season": "Summer"
+			}
+		},
+		{	//Center Bins
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 6, "Y": 1, "Width": 2, "Height": 3 },
+			"ToArea": { "X": 3, "Y": 20, "Width": 2, "Height": 3 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Season": "Summer"
+			}
+		},
+		{	//Corner Bin
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"MapTiles": [
+                {
+                    "Position": { "X": 1, "Y": 26 },
+                    "Layer": "Front",
+                    "SetIndex": "2058"
+                },
+				{
+                    "Position": { "X": 2, "Y": 26 },
+                    "Layer": "Front",
+                    "SetIndex": "2059"
+                },
+				{
+                    "Position": { "X": 1, "Y": 27 },
+                    "Layer": "Buildings",
+                    "SetIndex": "2090"
+                },
+				{
+                    "Position": { "X": 2, "Y": 27 },
+                    "Layer": "Buildings",
+                    "SetIndex": "2091"
+                }
+            ],
+			"PatchMode": "Overlay",
+			"When": {
+				"Season": "Summer"
+			}
+		},
+		
+		//	Fall
+		
+		{	// Seed Shelf
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 2, "Y": 0, "Width": 1, "Height": 7 },
+			"ToArea": { "X": 1, "Y": 18, "Width": 1, "Height": 7 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Season": "Fall"
+			}
+		},
+		{	//Center Bins
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 4, "Y": 4, "Width": 2, "Height": 3 },
+			"ToArea": { "X": 3, "Y": 20, "Width": 2, "Height": 3 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Season": "Fall"
+			}
+		},
+		{	//Corner Bin
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"MapTiles": [
+                {
+                    "Position": { "X": 1, "Y": 26 },
+                    "Layer": "Front",
+                    "SetIndex": "2062"
+                },
+				{
+                    "Position": { "X": 2, "Y": 26 },
+                    "Layer": "Front",
+                    "SetIndex": "2063"
+                },
+				{
+                    "Position": { "X": 1, "Y": 27 },
+                    "Layer": "Buildings",
+                    "SetIndex": "2094"
+                },
+				{
+                    "Position": { "X": 2, "Y": 27 },
+                    "Layer": "Buildings",
+                    "SetIndex": "2095"
+                }
+            ],
+			"PatchMode": "Overlay",
+			"When": {
+				"Season": "Fall"
+			}
+		},
+		
+		//	Winter
+		
+		{	// Seed Shelf
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 3, "Y": 0, "Width": 1, "Height": 7 },
+			"ToArea": { "X": 1, "Y": 18, "Width": 1, "Height": 7 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Season": "Winter"
+			}
+		},
+		{	//Center Bins
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 6, "Y": 4, "Width": 2, "Height": 3 },
+			"ToArea": { "X": 3, "Y": 20, "Width": 2, "Height": 3 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Season": "Winter"
+			}
+		},
+		{	//Corner Bin
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"MapTiles": [
+                {
+                    "Position": { "X": 1, "Y": 26 },
+                    "Layer": "Front",
+                    "SetIndex": "2056"
+                },
+				{
+                    "Position": { "X": 2, "Y": 26 },
+                    "Layer": "Front",
+                    "SetIndex": "2057"
+                },
+				{
+                    "Position": { "X": 1, "Y": 27 },
+                    "Layer": "Buildings",
+                    "SetIndex": "2088"
+                },
+				{
+                    "Position": { "X": 2, "Y": 27 },
+                    "Layer": "Buildings",
+                    "SetIndex": "2089"
+                }
+            ],
+			"PatchMode": "Overlay",
+			"When": {
+				"Season": "Winter"
+			}
+		},
+		
+//	Produce End
+		
+		
+		
+//	Fertilizer Shelves Start
+
+		{	//Before day 15
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 6, "Y": 9, "Width": 2, "Height": 6 },
+			"ToArea": { "X": 10, "Y": 24, "Width": 2, "Height": 6 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Query: {{DaysPlayed}} <= 14" : true
+			}
+		},
+		{	//After day 15, before year 2
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 0, "Y": 9, "Width": 2, "Height": 6 },
+			"ToArea": { "X": 10, "Y": 24, "Width": 2, "Height": 6 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Query: {{DaysPlayed}} > 14 AND {{DaysPlayed}} <= 112" : true
+			}
+		},
+		{	//Year 2+
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 2, "Y": 9, "Width": 2, "Height": 6 },
+			"ToArea": { "X": 10, "Y": 24, "Width": 2, "Height": 6 },
+			"PatchMode": "Overlay",
+			"When": {
+				"Query: {{DaysPlayed}} > 112": true
+			}
+		},
+		
+//	Fertilizer Shelves End
+		
+		
+		
+//	Spice Shelves Start
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 0, "Y": 7, "Width": 6, "Height": 2 },
+			"ToArea": { "X": 10, "Y": 18, "Width": 6, "Height": 2 },
+			"PatchMode": "Overlay"
+		},
+		
+//	Spice Shelves End
+		
+		
+		
+//	Decoration Shelves Start
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/SeedShop",
+			"FromFile": "assets/Maps/SeedStore.tmx",
+			"FromArea": { "X": 4, "Y": 9, "Width": 2, "Height": 6 },
+			"ToArea": { "X": 14, "Y": 24, "Width": 2, "Height": 6 },
+			"PatchMode": "Overlay"
+		}
+		
+//Decoration Shelves End
+
+	]
+}

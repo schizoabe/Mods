@@ -1,0 +1,122 @@
+{
+   "Changes": [
+        {
+            "LogName": "SM Clint Shop",
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Blacksmith", "Items" ],
+            "Entries": {
+                "{{ModId}}_NickelNugget_YearOne": {
+                    "Id": "{{ModId}}_NickelNugget_YearOne",
+                    "ItemId": "{{ModId}}_NickelNugget",
+                    "Condition": "!YEAR 2",
+                    "IgnoreShopPriceModifiers": false,
+                    "Price": 200,
+                },
+                "{{ModId}}_Blackstone_YearOne": {
+                    "Id": "{{ModId}}_Blackstone_YearOne",
+                    "ItemId": "{{ModId}}_Blackstone",
+                    "Condition": "!YEAR 2",
+                    "IgnoreShopPriceModifiers": false,
+                    "Price": 500,
+                },
+                "{{ModId}}_NickelNugget_AfterYearOne": {
+                    "Id": "{{ModId}}_NickelNugget_AfterYearOne",
+                    "ItemId": "{{ModId}}_NickelNugget",
+                    "Condition": "YEAR 2",
+                    "IgnoreShopPriceModifiers": false,
+                    "Price": 300,
+                },
+                "{{ModId}}_Blackstone_AfterYearOne": {
+                    "Id": "{{ModId}}_Blackstone_AfterYearOne",
+                    "ItemId": "{{ModId}}_Blackstone",
+                    "Condition": "YEAR 2",
+                    "IgnoreShopPriceModifiers": false,
+                    "Price": 800,
+                }
+            },
+            "MoveEntries": [
+				{
+					"ID": "{{ModId}}_NickelNugget_YearOne",
+					"BeforeId": "GoldOre_YearOne",
+                    "Condition": "!YEAR 2"
+				},
+				{
+					"ID": "{{ModId}}_Blackstone_YearOne",
+					"AfterId": "GoldOre_YearOne",
+                    "Condition": "!YEAR 2"
+				},
+                {
+					"ID": "{{ModId}}_NickelNugget_AfterYearOne",
+					"BeforeId": "GoldOre_AfterYearOne",
+                    "Condition": "YEAR 2"
+				},
+				{
+					"ID": "{{ModId}}_Blackstone_AfterYearOne",
+					"AfterId": "GoldOre_AfterYearOne",
+                    "Condition": "YEAR 2"
+				},
+			]
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Carpenter", "Items" ],
+            "Entries": {
+                "{{ModId}}_NP": {
+                    "ID": "{{ModId}}_NP",
+                    "ItemID": "{{ModId}}_NP",
+                    "IsRecipe": true,
+                    "Price": 2500
+                },
+            }
+        },
+        {
+            "LogName": "SM Clint Shop",
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Blacksmith", "Items" ],
+            "Entries": {
+                "{{ModId}}_AF": {
+                    "Id": "{{ModId}}_AF (Recipe)",
+                    "ItemId": "(BC){{ModId}}_AF",
+                    "IgnoreShopPriceModifiers": true,
+                    "Price": 5000,
+                },
+                "{{ModId}}_BF": {
+                    "Id": "{{ModId}}_BF (Recipe)",
+                    "ItemId": "(BC){{ModId}}_BF",
+                    "IgnoreShopPriceModifiers": true,
+                    "Price": 2000,
+                },
+                "{{ModId}}_CZ": {
+                    "Id": "{{ModId}}_CZ (Recipe)",
+                    "ItemId": "(BC){{ModId}}_CZ",
+                    "IgnoreShopPriceModifiers": true,
+                    "Price": 4500,
+                },
+                "{{ModId}}_FM": {
+                    "Id": "{{ModId}}_FM (Recipe)",
+                    "ItemId": "(BC){{ModId}}_FM",
+                    "IgnoreShopPriceModifiers": true,
+                    "Price": 2000,
+                },
+                "{{ModId}}_GM": {
+                    "Id": "{{ModId}}_GM (Recipe)",
+                    "ItemId": "(BC){{ModId}}_GM",
+                    "IgnoreShopPriceModifiers": true,
+                    "Price": 3500,
+                },
+                "{{ModId}}_GP": {
+                    "Id": "{{ModId}}_GP (Recipe)",
+                    "ItemId": "(BC){{ModId}}_GP",
+                    "IgnoreShopPriceModifiers": true,
+                    "Price": 3500,
+                },
+            },
+            "When": {
+                "Clint Sell Machines": true
+            }
+        },
+    ]
+}

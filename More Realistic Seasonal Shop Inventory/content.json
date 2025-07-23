@@ -1,0 +1,536 @@
+{
+	"Format": "2.4.0",
+	"ConfigSchema": {
+		//Global Toggles
+		"Disable mod":{
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Description": "Disables all modifications.",
+			"Section": "Global Toggles"
+		},
+		"Global Toggle":{
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Standard : Default configuration. Does not override shop configs. Hardmode : Overrides all shops to Hardmode. Recommended when using a lot of mods. Off : Turns off the randomisation and limited stocks. Keeps the better positioning in shops when possible.",
+			"Section": "Global Toggles"
+		},
+		//Vanilla Shops
+		"Blacksmith": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Clint's shop.",
+			"Section": "Vanilla Shops"
+		},
+		"Carpenter": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Robin's shop.",
+			"Section": "Vanilla Shops"
+		},
+		"Clinic": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Harvey's shop.",
+			"Section": "Vanilla Shops"
+		},
+		"Dwarf Shop": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Dwarf's shop.",
+			"Section": "Vanilla Shops"
+		},
+		"Fish Shop": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Willy's shop.",
+			"Section": "Vanilla Shops"
+		},
+		"General Store": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Pierre's shop.",
+			"Section": "Vanilla Shops"
+		},
+		"JojaMart": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Morris's shop",
+			"Section": "Vanilla Shops"
+		},
+		"Oasis": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Sandy's shop.",
+			"Section": "Vanilla Shops"
+		},
+		"Ranch": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Marnie's shop.",
+			"Section": "Vanilla Shops"
+		},
+		"Traveling Cart": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Traveling Merchant's shop.",
+			"Section": "Vanilla Shops"
+		},
+		//Farmer's Market - SVE
+		"Blue Moon Vineyard Display": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Sophia's grange display.",
+			"Section": "Farmer's Market - SVE"
+		},
+		"Emerald Farm Display": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Susan's grange display.",
+			"Section": "Farmer's Market - SVE"
+		},
+		"Fairhaven Farm Display": {
+			"AllowValues": "Standard, Hardmode, Off",
+			"Default": "Standard",
+			"Description": "Andy's grange display. Requires enabling limited stocks in Farmers Market.",
+			"Section": "Farmer's Market - SVE"
+		},
+	},
+	"DynamicTokens": [
+		//Carpenter
+		{
+			"Name": "Robin",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Robin",
+			"Value": "Hardmode",
+			"When": {"Carpenter": "Hardmode"}
+		},
+		{
+			"Name": "Robin",
+			"Value": "Off",
+			"When": {"Carpenter": "Off"}
+		},
+		{
+			"Name": "Robin",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Robin",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//Blacksmith
+		{
+			"Name": "Clint",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Clint",
+			"Value": "Hardmode",
+			"When": {"Blacksmith": "Hardmode"}
+		},
+		{
+			"Name": "Clint",
+			"Value": "Off",
+			"When": {"Blacksmith": "Off"}
+		},
+		{
+			"Name": "Clint",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Clint",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//Dwarf Shop
+		{
+			"Name": "Dwarf",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Dwarf",
+			"Value": "Hardmode",
+			"When": {"Dwarf Shop": "Hardmode"}
+		},
+		{
+			"Name": "Dwarf",
+			"Value": "Off",
+			"When": {"Dwarf Shop": "Off"}
+		},
+		{
+			"Name": "Dwarf",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Dwarf",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//Clinic
+		{
+			"Name": "Hospital",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Hospital",
+			"Value": "Hardmode",
+			"When": {"Clinic": "Hardmode"}
+		},
+		{
+			"Name": "Hospital",
+			"Value": "Off",
+			"When": {"Clinic": "Off"}
+		},
+		{
+			"Name": "Hospital",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Hospital",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//JojaMart
+		{
+			"Name": "Joja",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Joja",
+			"Value": "Hardmode",
+			"When": {"JojaMart": "Hardmode"}
+		},
+		{
+			"Name": "Joja",
+			"Value": "Off",
+			"When": {"JojaMart": "Off"}
+		},
+		{
+			"Name": "Joja",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Joja",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//Ranch
+		{
+			"Name": "Marnie",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Marnie",
+			"Value": "Hardmode",
+			"When": {"Ranch": "Hardmode"}
+		},
+		{
+			"Name": "Marnie",
+			"Value": "Off",
+			"When": {"Ranch": "Off"}
+		},
+		{
+			"Name": "Marnie",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Marnie",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//General Store
+		{
+			"Name": "Pierre",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Pierre",
+			"Value": "Hardmode",
+			"When": {"General Store": "Hardmode"}
+		},
+		{
+			"Name": "Pierre",
+			"Value": "Off",
+			"When": {"General Store": "Off"}
+		},
+		{
+			"Name": "Pierre",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Pierre",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//Oasis
+		{
+			"Name": "Sandy",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Sandy",
+			"Value": "Hardmode",
+			"When": {"Oasis": "Hardmode"}
+		},
+		{
+			"Name": "Sandy",
+			"Value": "Off",
+			"When": {"Oasis": "Off"}
+		},
+		{
+			"Name": "Sandy",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Sandy",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//Traveling Cart
+		{
+			"Name": "Traveling Merchant",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Traveling Merchant",
+			"Value": "Hardmode",
+			"When": {"Traveling Cart": "Hardmode"}
+		},
+		{
+			"Name": "Traveling Merchant",
+			"Value": "Off",
+			"When": {"Traveling Cart": "Off"}
+		},
+		{
+			"Name": "Traveling Merchant",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Traveling Merchant",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//Fish Shop
+		{
+			"Name": "Willy",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Willy",
+			"Value": "Hardmode",
+			"When": {"Fish Shop": "Hardmode"}
+		},
+		{
+			"Name": "Willy",
+			"Value": "Off",
+			"When": {"Fish Shop": "Off"}
+		},
+		{
+			"Name": "Willy",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Willy",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//Fairhaven Farm Display (Farmer's Market - SVE)
+		{
+			"Name": "Andy's grange display",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Andy's grange display",
+			"Value": "Hardmode",
+			"When": {"Fairhaven Farm Display": "Hardmode"}
+		},
+		{
+			"Name": "Andy's grange display",
+			"Value": "Off",
+			"When": {"Fairhaven Farm Display": "Off"}
+		},
+		{
+			"Name": "Andy's grange display",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Andy's grange display",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//Blue Moon Vineyard Display (Farmer's Market - SVE)
+		{
+			"Name": "Sophia's grange display",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Sophia's grange display",
+			"Value": "Hardmode",
+			"When": {"Blue Moon Vineyard Display": "Hardmode"}
+		},
+		{
+			"Name": "Sophia's grange display",
+			"Value": "Off",
+			"When": {"Blue Moon Vineyard Display": "Off"}
+		},
+		{
+			"Name": "Sophia's grange display",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Sophia's grange display",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+		//Emerald Farm Display (Farmer's Market - SVE)
+		{
+			"Name": "Susan's grange display",
+			"Value": "Standard"
+		},
+		{
+			"Name": "Susan's grange display",
+			"Value": "Hardmode",
+			"When": {"Emerald Farm Display": "Hardmode"}
+		},
+		{
+			"Name": "Susan's grange display",
+			"Value": "Off",
+			"When": {"Emerald Farm Display": "Off"}
+		},
+		{
+			"Name": "Susan's grange display",
+			"Value": "Hardmode",
+			"When": {"Global Toggle": "Hardmode"}
+		},
+		{
+			"Name": "Susan's grange display",
+			"Value": "Off",
+			"When": {"Global Toggle": "Off"}
+		},
+	],
+	"Changes": [
+		{
+			"LogName": "Chocolate Valley",
+			"Action": "Include",
+			"FromFile": "data/ChocolateValley/shop_pierre.json, data/ChocolateValley/shop_traveler.json, data/ChocolateValley/shop_extra.json",
+			"When": {
+				"HasMod": "ob7.chocovalley",
+				"Disable mod": false
+			}
+		},
+		{
+			"LogName": "Colorful Carrots",
+			"Action": "Include",
+			"FromFile": "data/ColorfulCarrots/shop_dwarf.json, data/ColorfulCarrots/shop_extra.json",
+			"When": {
+				"HasMod": "AngelOfStars.ColorfulCarrots",
+				"Disable mod": false
+			}
+		},
+		{
+			"LogName": "Farmer's Market",
+			"Action": "Include",
+			"FromFile": "data/FarmersMarket/shop_marnie.json, data/FarmersMarket/shop_willy.json, data/FarmersMarket/shop_clint.json",
+			"When": {
+				"HasMod": "br93.FarmersMarket",
+				"Disable mod": false
+			}
+		},
+		{
+	      	"LogName": "Farmer's Market SVE",
+	      	"Action": "Include",
+	      	"FromFile": "data/FarmersMarket/shop_sophia_sve.json, data/FarmersMarket/shop_susan_sve.json, data/FarmersMarket/shop_andy_sve.json",
+	      	"When": {
+	        	"HasMod": "br93.FarmersMarket",
+	        	"HasMod": "FlashShifter.StardewValleyExpandedCP",
+	        	"Disable mod": false
+	      	}
+	    },
+		{
+			"LogName": "Food Packaging",
+			"Action": "Include",
+			"FromFile": "data/FoodPackaging/shop_pierre.json, data/FoodPackaging/shop_extra.json",
+			"When": {
+				"HasMod": "Dolly.FoodPackaging",
+				"Disable mod": false
+			}
+		},
+		{
+			"LogName": "Growable Forage and Crop Bushes",
+			"Action": "Include",
+			"FromFile": "data/GrowableForage/shop_dwarf.json, data/GrowableForage/shop_joja.json, data/GrowableForage/shop_pierre.json, data/GrowableForage/shop_sandy.json, data/GrowableForage/shop_extra.json",
+			"When": {
+				"HasMod": "Cornucopia.GrowableForage",
+				"Disable mod": false
+			}
+		},
+		{
+			"LogName": "Mini Wind Turbines",
+			"Action": "Include",
+			"FromFile": "data/MiniWindTurbines/shop_robin.json, data/MiniWindTurbines/shop_extra.json",
+			"When": {
+				"HasMod": "Dora.MiniWindTurbines",
+				"Disable mod": false
+			}
+		},
+		{
+			"LogName": "Quaint Living Flower Garden",
+			"Action": "Include",
+			"FromFile": "data/QuaintLivingFlowerGarden/shop_pierre.json, data/QuaintLivingFlowerGarden/shop_sandy.json, data/QuaintLivingFlowerGarden/shop_extra.json",
+			"When": {
+				"HasMod": "PC.CP.QL.FlowerGarden2",
+				"Disable mod": false
+			}
+		},
+		{
+			"LogName": "Radiant Water Lily",
+			"Action": "Include",
+			"FromFile": "data/RadiantWaterLily/shop_sandy.json, data/RadiantWaterLily/shop_extra.json",
+			"When": {
+				"HasMod": "Dolly.RadiantWaterLily",
+				"Disable mod": false
+			}
+		},
+		{
+			"LogName": "Succulent Farm",
+			"Action": "Include",
+			"FromFile": "data/SucculentFarm/shop_pierre.json, data/SucculentFarm/shop_sandy.json, data/SucculentFarm/shop_extra.json",
+			"When": {
+				"HasMod": "NoraCharles.NeosSucculentFarmRedux",
+				"Disable mod": false
+			}
+		},
+		{
+			"LogName": "Uncle Iroh Approved Tea",
+			"Action": "Include",
+			"FromFile": "data/UncleIrohApprovedTea/shop_hospital.json, data/UncleIrohApprovedTea/shop_pierre.json, data/UncleIrohApprovedTea/shop_sandy.json, data/UncleIrohApprovedTea/shop_extra.json",
+			"When": {
+				"HasMod": "slimerrain.uncleirohapprovedteacp",
+				"Disable mod": false
+			}
+		},
+		{
+			"LogName": "Vanilla Forage Crops",
+			"Action": "Include",
+			"FromFile": "data/VanillaForageCrops/shop_dwarf.json, data/VanillaForageCrops/shop_joja.json, data/VanillaForageCrops/shop_marnie.json, data/VanillaForageCrops/shop_pierre.json, data/VanillaForageCrops/shop_willy.json, data/VanillaForageCrops/shop_extra.json",
+			"When": {
+				"HasMod": "ZoeyHoshi.ForageCrops",
+				"Disable mod": false
+			}
+		}
+	]
+}

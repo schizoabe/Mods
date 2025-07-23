@@ -1,0 +1,101 @@
+{
+  "Format": "1.25.0",
+  "Changes": [
+    {
+      "LogName": "NPC Manifestation",
+      "Action": "EditData",
+      "Target": "data/NPCDispositions",
+      "Entries": {
+        "[65]Kitty": "child/polite/outgoing/negative/male/non-datable/null/Other/spring 6//Custom_Claire_WarpRoom 3 3/Kitty"
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+   	"LogName": "Kitty's AntiSocial Flag",
+  	"Action": "EditData",
+  	"Target": "Data/AntiSocialNPCs",
+  	"Entries": {"[65]Kitty": true}
+    },
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/[65]Kitty",
+      "FromFile": "assets/spritesheet.png",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "NPC Portrait",
+      "Action": "Load",
+      "Target": "Portraits/[65]Kitty",
+      "FromFile": "assets/portrait.png",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/[65]Kitty",
+      "FromFile": "assets/schedule.json",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/[65]Kitty",
+      "FromFile": "assets/Dialogue.json",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "Kitty_read_left": "17/17/17",
+        "Kitty_read_right": "18/18/18",
+        "Kitty_sit_front": "16/16 16 16 16 16 16 18 18/16"
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+{	 "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.8":  "This is Kitty's seat. In her notebook there is a drawing of 5 apples and 3 apples."},
+	"When": {"HasSeenEvent": "9695002"}
+},
+
+// Schedule when Lavril and Void are in the school. 
+{	 
+     "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.1":  "This is Lavril and Kitty's seat. Hello!"},
+     "When": {"HasSeenEvent": "9695002","HasMod": "Arknir27.Lavril"}
+},
+
+{ 
+     "Action": "EditData",	 
+     "Target": "characters/schedules/[65]Kitty",
+     "Entries": { 
+  "Mon": "0 BusStop 16 23 0/610 Custom_SchoolHouse 20 17 3/700 Custom_SchoolHouse 19 17 3 Kitty_read_left/710 Custom_SchoolHouse 19 17 3 Kitty_read_left/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Tue": "0 BusStop 16 23 0/610 Custom_SchoolHouse 2 4 2 Kitty_sit_front/710 Custom_SchoolHouse 19 17 3 Kitty_read_left/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Wed": "0 BusStop 16 23 0/610 Custom_SchoolHouse 2 4 2 Kitty_sit_front/710 Custom_SchoolHouse 19 17 3 Kitty_read_left/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Thu": "0 BusStop 16 23 0/610 Custom_SchoolHouse 20 17 3/700 Custom_SchoolHouse 19 17 3 Kitty_read_left/710 Custom_SchoolHouse 19 17 3 Kitty_read_left/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Fri": "0 BusStop 16 23 0/610 Custom_SchoolHouse 20 17 3/700 Custom_SchoolHouse 19 17 3 Kitty_read_left/710 Custom_SchoolHouse 19 17 3 Kitty_read_left/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Sat": "620 Custom_DayEnd_WarpRoom 3 3 0",
+  "Sun": "620 Custom_DayEnd_WarpRoom 3 3 0",
+
+//Festivals School is closed
+"spring_13": "0 Custom_Claire_WarpRoom 1 3 3",
+"spring_24": "0 Custom_Claire_WarpRoom 1 3 3",
+"summer_11": "0 Custom_Claire_WarpRoom 1 3 3",
+"summer_28": "0 Custom_Claire_WarpRoom 1 3 3",
+"fall_16": "0 Custom_Claire_WarpRoom 1 3 3",
+"fall_27": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_8": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_25": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_28": "0 Custom_Claire_WarpRoom 1 3 3",
+		    },       	
+	"When": {"HasSeenEvent": "9695002","HasMod": "Arknir27.Lavril"},
+}
+
+
+  ]
+}
+
+

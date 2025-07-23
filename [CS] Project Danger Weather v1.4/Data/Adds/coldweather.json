@@ -1,0 +1,134 @@
+{
+	"Changes": [
+        {
+			"LogName": "ColdWeather Patch in Triggers to include Hail and Blizzard",
+			//Made as additional TriggerActions so it does not directly overwrite stuff :3
+			//Didn't use CS_WEATHER_IS_SNOWING gsq because idk if other weather authors would like dis effect
+
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+				//Handled directly in weather entry
+				/*"Dolly.ColdWeather_OutdoorsCold.PDWPatch": {
+				"Id": "Dolly.ColdWeather_OutdoorsCold.PDWPatch",
+				"Trigger": "LocationChanged",
+				"Condition": "!PLAYER_HAS_BUFF Current Dolly.ColdWeather_WarmBuff, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail, LOCATION_IS_OUTDOORS Here",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_ColdDebuff"
+				],
+				"MarkActionApplied": false
+				},
+				"Dolly.ColdWeather_IndoorsWarm.PDWPatch": {
+				"Id": "Dolly.ColdWeather_IndoorsWarm.PDWPatch",
+				"Trigger": "LocationChanged",
+				"Condition": "WEATHER Here kath.weathering_Blizzard kath.weathering_Hail, LOCATION_IS_INDOORS Here",
+				"Actions": [
+					"RemoveBuff Dolly.ColdWeather_ColdDebuff"
+				],
+				"MarkActionApplied": false
+				},*/
+				//
+				
+				"Dolly.ColdWeather_DrinkParsnipSoup.PDWPatch": {
+				"Id": "Dolly.ColdWeather_DrinkParsnipSoup.PDWPatch",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input (O)199, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_WarmBuff"
+				],
+				"MarkActionApplied": false
+				},
+				"Dolly.ColdWeather_DrinkTomKhaSoup.PDWPatch": {
+				"Id": "Dolly.ColdWeather_DrinkTomKhaSoup.PDWPatch",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input (O)218, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_WarmBuff"
+				],
+				"MarkActionApplied": false
+				},
+				"Dolly.ColdWeather_DrinkTroutSoup.PDWPatch": {
+				"Id": "Dolly.ColdWeather_DrinkTroutSoup.PDWPatch",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input (O)219, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_WarmBuff"
+				],
+				"MarkActionApplied": false
+				},
+				"Dolly.ColdWeather_DrinkPumpkinSoup.PDWPatch": {
+				"Id": "Dolly.ColdWeather_DrinkPumpkinSoup.PDWPatch",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input (O)236, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_WarmBuff"
+				],
+				"MarkActionApplied": false
+				},
+				"Dolly.ColdWeather_DrinkAlgaeSoup.PDWPatch": {
+				"Id": "Dolly.ColdWeather_DrinkAlgaeSoup.PDWPatch",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input (O)456, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_WarmBuff"
+				],
+				"MarkActionApplied": false
+				},
+				"Dolly.ColdWeather_DrinkMossSoup.PDWPatch": {
+				"Id": "Dolly.ColdWeather_DrinkMossSoup.PDWPatch",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input (O)MossSoup, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_WarmBuff"
+				],
+				"MarkActionApplied": false
+				},
+				"Dolly.ColdWeather_DrinkCoffee.PDWPatch": {
+				"Id": "Dolly.ColdWeather_DrinkCoffee.PDWPatch",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input (O)395, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_WarmBuff"
+				],
+				"MarkActionApplied": false
+				},
+				"Dolly.ColdWeather_DrinkEspresso.PDWPatch": {
+				"Id": "Dolly.ColdWeather_DrinkEspresso.PDWPatch",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input (O)253, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_WarmBuff"
+				],
+				"MarkActionApplied": false
+				},
+				"Dolly.ColdWeather_DrinkTea.PDWPatch": {
+				"Id": "Dolly.ColdWeather_DrinkTea.PDWPatch",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input (O)614, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_WarmBuff"
+				],
+				"MarkActionApplied": false
+				},
+				"Dolly.ColdWeather_EatChowder.PDWPatch": {
+				"Id": "Dolly.ColdWeather_EatChowder.PDWPatch",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input (O)727, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_WarmBuff"
+				],
+				"MarkActionApplied": false
+				},
+				"Dolly.ColdWeather_EatDishOTheSea.PDWPatch": {
+				"Id": "Dolly.ColdWeather_EatDishOTheSea.PDWPatch",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input (O)242, WEATHER Here kath.weathering_Blizzard kath.weathering_Hail",
+				"Actions": [
+					"AddBuff Dolly.ColdWeather_WarmBuff"
+				],
+				"MarkActionApplied": false
+				}
+      		}
+    	}
+	]
+}

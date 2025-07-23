@@ -1,0 +1,114 @@
+{
+	"Changes": [
+
+		{
+      		"LogName": "The Weather Data Vanilla Totem SLEET",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"When": {"HasMod |contains=Kana.WeatherWonders": false},
+			"Entries": {	
+				"kath.weathering_Sleet": {
+					"Id": "kath.weathering_Sleet",
+					"DisplayName": "{{i18n: Weather.Sleet}}",
+
+					"Forecast": "{{i18n: Weather.Sleet.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Sleet.Forecast}}", "Desert": "{{i18n: Weather.Sleet.Forecast}}",},					
+					
+					"UseNightTiles":true,
+					"IsSnowing": false,
+					"IsRaining": true,
+					"IsLightning": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": null,
+					"SpawnClouds": null,
+
+					//"LightingTint": "orangered",
+					//"LightingTintOpacity": 0.35,
+					//"PostLightingTint": "blue",
+					//"PostLightingTintOpacity": 0.16,
+
+					"MusicOverride": "rain",					
+					"MusicFrequencyOutside": 85,
+					"MusicFrequencyInside": 15,
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 104},
+					"TVFrames": 4,
+					
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 72},
+
+					"TotemMessage": "{{i18n: Weather.SleetTotem}}",
+					"TotemScreenTint": "154, 237, 237",
+					"TotemSound": "breakingGlass",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDSleet 2",
+							],
+						},		
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "Snowfall",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"Condition": "!CS_LOCATION_IGNORE_DEBRIS_WEATHER Here, LOCATION_CONTEXT Here Default Lemurkat_EastScarp, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"UseSeasonal": 3,
+							"Color": null,
+							"Opacity": 1,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 75,
+							"MaxCount": 150
+						},
+						{
+							"Id": "Snowfall2",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"Condition": "ANY \"!CS_LOCATION_IGNORE_DEBRIS_WEATHER Here, LOCATION_NAME Target Woods\" \"!CS_LOCATION_IGNORE_DEBRIS_WEATHER Here, LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"UseSeasonal": 3,
+							"Color": null,
+							"Opacity": 1,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 25,
+							"MaxCount": 100
+						},
+						{
+							"Id": "RainPart1",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"Type": "Rain",
+							"Count": 30,
+						},
+						{
+							"Id": "RainPart2",
+							"Condition": "LOCATION_CONTEXT Here Default, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Count": 50,
+						},
+						{
+							"Id": "Tinting",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "41, 50, 50",
+							"Opacity": 0.63
+						}
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

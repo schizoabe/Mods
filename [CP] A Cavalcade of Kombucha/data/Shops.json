@@ -1,0 +1,51 @@
+{
+"Changes": [
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "When": {"HasMod |contains=boringvlln.rshops": "false"},
+            "TargetField": [
+                "SeedShop",
+                "Items"
+            ],
+            "Entries": {
+                "ACOK_Mushroom_Dishes": {
+                    "ItemId": "ACOK_Scoby",
+					"Price": "25",
+				}
+			},
+            "MoveEntries": [
+                { "Id": "ACOK_Scoby", "BeforeId": "(O)245"},
+			]
+		},
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "When": {"HasMod |contains=boringvlln.rshops": "true"},
+            "TargetField": [
+                "SeedShop",
+                "Items"
+            ],
+            "Entries": {
+                "ACOK_Mushroom_Dishes": {
+                    "ItemId": "ACOK_Scoby",
+					"Price": "25",
+					"AvailableStockModifiers": [
+							{
+							"Modification": "Set",
+							"RandomAmount": [
+											2,
+											4,
+											6,
+											8,
+								]
+							}
+						],
+					}
+				},
+            "MoveEntries": [
+                { "Id": "ACOK_Scoby", "BeforeId": "(O)245"},
+			]
+		},
+	]
+}

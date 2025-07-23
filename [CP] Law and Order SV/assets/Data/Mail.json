@@ -1,0 +1,51 @@
+{
+	"Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "{{ModId}}_Clint_ThreatMail": "{{i18n:Clint_ThreatMail_text}}[#]{{i18n:Clint_ThreatMail_title}}",
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "{{ModId}}_Clint_ThreatMail": "{{i18n:Clint_ThreatMail_Relationship_text}}[#]{{i18n:Clint_ThreatMail_title}}",
+            },
+            "When": {
+                "Relationship:Emily": "Dating, Engaged, Married"
+            },
+        
+        },
+        //mod mail
+        {
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "{{ModId}}_ModMail_2025-01-22": "{{i18n:modmail_text}} %item object {{ModId}}_ColeslawOrder 1 %%[#]{{i18n:modmail_title}}",
+                "{{ModId}}_ModMail_2025-02-06": "{{i18n:modmail_text2}} %item object {{ModId}}_ColeslawOrder 1 %%[#]{{i18n:modmail_title2}}",
+                "{{ModId}}_ModMail_2025-03-12": "{{i18n:modmail_text3}} %item object {{ModId}}_ColeslawOrder 1 %%[#]{{i18n:modmail_title3}}",
+                "{{ModId}}_ModMail_2025-06-19": "{{i18n:modmail_text4}} %item object {{ModId}}_ColeslawOrder 1 %%[#]{{i18n:modmail_title4}}",
+            },
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                //Trigger ID needs to be updated with each major patch along with the mail ID
+                "{{ModId}}_Modmail_trigger_1.2": {
+                    "Id": "{{ModId}}_Modmail_trigger_1.4",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_FRIENDSHIP_POINTS Current {{Russell}} 500, PLAYER_FRIENDSHIP_POINTS Current {{Shannon}} 500",
+                    "Actions": [
+                        "AddMail Current {{ModId}}_ModMail_2025-06-19 now",
+                    ]
+                }
+            },
+            "When": {
+                "cfgModAuthorMail":true,
+            },
+        },
+	]
+}

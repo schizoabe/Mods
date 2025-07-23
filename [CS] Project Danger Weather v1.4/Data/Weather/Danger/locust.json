@@ -1,0 +1,208 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data Blizzard",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Locust": {
+					"Id": "kath.weathering_Locust",
+					"DisplayName": "{{i18n: Weather.Locust}}",
+
+					"Forecast": "{{i18n: Weather.Locust.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Locust.ForecastIsland}}", "Desert": "{{i18n: Weather.Locust.ForecastDesert}}",},
+					
+					"UseNightTiles": true,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+
+					"MusicOverride": "KathBadBugs",					
+					"MusicFrequencyOutside": 75,
+					"MusicFrequencyInside": 10,
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 12, "Y": 0},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 52, "Y": 39},
+					"TVFrames": 4,
+
+
+					"TotemMessage": "{{i18n: Weather.LocustTotem}}",
+					"TotemScreenTint": "brown",
+					"TotemSound": "cricketsAmbient",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDLocust 3",
+							],
+						},
+						{
+							"Id": "DrainStamina",
+							"Type": "ModifyStamina",
+							"Amount": -40,
+							"MinValue": 5,
+							"Chance": 0.85,
+							"Rate": "600",
+							"Condition": "!LOCATION_CONTEXT Here Island, !PLAYER_HAS_BUFF Current PDWBugNet, !PLAYER_HAS_BUFF Current BugBGone",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "DrainHealth",
+							"Type": "ModifyHealth",
+							"Amount": -1,
+							"MinValue": 25,
+							"Chance": 0.65,
+							"Rate": "10",
+							"Condition": "!LOCATION_CONTEXT Here Island, !PLAYER_HAS_BUFF Current PDWBugNet, !PLAYER_HAS_BUFF Current BugBGone",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "GainStamina",
+							"Type": "ModifyStamina",
+							"Amount": 10,
+							"MaxValue": 200,
+							"Chance": 0.95,
+							"Rate": "100",
+							"Condition": "!LOCATION_CONTEXT Here Island, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+						},
+						{
+							"Id": "GainHealth",
+							"Type": "ModifyHealth",
+							"Amount": 10,
+							"MaxValue": 100,
+							"Chance": 0.75,
+							"Rate": "100",
+							"Condition": "!LOCATION_CONTEXT Here Island, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+						},
+						{
+							"Id": "Badbugs",
+							"Type": "Buff",
+							"BuffId": "Badbugs",
+							"Condition": "!LOCATION_CONTEXT Here Island, !PLAYER_HAS_BUFF Current PDWBugNet",
+							"TargetMapType": "Outdoors",
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "Somebugs1",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_SpriteSpring2\" \"LOCATION_NAME Target Desert\"",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 48, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "0.5, -0.25",
+							"ViewSpeed": "0, 0",
+							"Scale": 2,
+							"Color": null,
+							"Opacity": 0.9,
+						},
+						{
+							"Id": "Somebugs2",
+							"Condition": "ANY \"LOCATION_NAME Target Woods, !PLAYER_HAS_BUFF Current PDWBugNet\" \"LOCATION_NAME Target Custom_SpriteSpring2, !PLAYER_HAS_BUFF Current PDWBugNet\" \"LOCATION_NAME Target Desert, !PLAYER_HAS_BUFF Current PDWBugNet\"",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 48, "Y": 48, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "0.65, 0.25",
+							"ViewSpeed": "0, 0",
+							"Scale": 3,
+							"Color": null,
+							"Opacity": 0.8,
+						},
+						{
+							"Id": "Bugs1",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target Desert",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 48, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "0.5, -0.75",
+							"ViewSpeed": "0, 0",
+							"Scale": 2,
+							"Color": null,
+							"Opacity": 0.9,
+						},
+						{
+							"Id": "Bugs2",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target Desert, !PLAYER_HAS_BUFF Current PDWBugNet",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 48, "Y": 48, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "-0.75, 1",
+							"ViewSpeed": "0, 0",
+							"Scale": 3,
+							"Color": null,
+							"Opacity": 0.9,
+						},
+						{
+							"Id": "Bugs3",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target Desert, !PLAYER_HAS_BUFF Current PDWBugNet",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 48, "Y": 48, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "1, -1",
+							"ViewSpeed": "0, 0",
+							"Scale": 4,
+							"Color": null,
+							"Opacity": 0.7,
+						},
+						{
+							"Id": "Bugslight",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_SpriteSpring2\" \"LOCATION_NAME Target Desert\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "125, 95, 0",
+							"Opacity": 0.27
+						},
+						{
+							"Id": "Bugsoutlight",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target Desert",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "125, 95, 0",
+							"Opacity": 0.34
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.27
+						},	
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

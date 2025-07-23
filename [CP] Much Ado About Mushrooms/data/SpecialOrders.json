@@ -1,0 +1,202 @@
+{
+  "Changes": [
+    {
+	"Action": "EditData",
+	"Target": "Data/SpecialOrders",
+	"Entries": {
+		"MAAM_DemetriusSO": {
+			"Name": "[MAAM_DemetriusSO_Name]",
+			"Requester": "Demetrius",
+			"Duration": "Month",
+			"Repeatable": "False",
+			"RequiredTags": null,		  
+			"OrderType": "",
+			"SpecialRule": "",
+			"ItemToRemoveOnEnd": null,
+			"MailToRemoveOnEnd": null,
+			"RandomizedElements": null,
+			"Text": "[MAAM_DemetriusSO_Text]",
+			"Objectives": [
+				{
+					"Type": "Deliver",
+					"Text": "[MAAM_DemetriusSO_BlackMushroom_Text]",
+					"RequiredCount": "5",
+					"Data": {
+						"AcceptedContextTags": "Item_Black_Mushroom",
+				        "Message": "[MAAM_DemetriusSO_BlackMushroom_Acceptance_Text]",
+						"TargetName": "Demetrius"
+							}
+				},
+				{
+					"Type": "Deliver",
+					"Text": "[MAAM_DemetriusSO_SlimyMushroom_Text]",
+					"RequiredCount": "5",
+					"Data": {
+						"AcceptedContextTags": "Item_Slimy_Mushroom",
+				        "Message": "[MAAM_DemetriusSO_SlimyMushroom_Acceptance_Text]",
+						"TargetName": "Demetrius"
+							}
+				},
+				{
+					"Type": "Deliver",
+					"Text": "[MAAM_DemetriusSO_YellowMushroom_Text]",
+					"RequiredCount": "5",
+					"Data": {
+						"AcceptedContextTags": "Item_Yellow_Mushroom",
+				        "Message": "[MAAM_DemetriusSO_YellowMushroom_Acceptance_Text]",
+						"TargetName": "Demetrius"
+							}
+				},
+				{
+					"Type": "Deliver",
+					"Text": "[MAAM_DemetriusSO_MagmaCapMushroom_Text]",
+					"RequiredCount": "5",
+					"Data": {
+						"AcceptedContextTags": "Item_Glow_Cap_Mushroom",
+				        "Message": "[MAAM_DemetriusSO_MagmaCapMushroom_Acceptance_Text]",
+						"TargetName": "Demetrius"
+							}
+				},
+				{
+					"Type": "Deliver",
+					"Text": "[MAAM_DemetriusSO_GlowCapMushroom_Text]",
+					"RequiredCount": "5",
+					"Data": {
+						"AcceptedContextTags": "Item_Magma_Cap_Mushroom",
+				        "Message": "[MAAM_DemetriusSO_GlowCapMushroom_Acceptance_Text]",
+						"TargetName": "Demetrius"
+							}
+				},				
+          ],
+          "Rewards": [
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "MAAM_DemetriusSO_Mail",
+                "NoLetter": "false"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+	"Action": "EditData",
+	"Target": "Data/SpecialOrders",
+	"Entries": {
+		"MAAM_GusSpringSO": {
+			"Name": "[MAAM_GusSpringSO_Name]",
+			"Requester": "Gus",
+			"Duration": "Month",
+			"Repeatable": "True",
+			"RequiredTags": "season_spring",		  
+			"OrderType": "",
+			"SpecialRule": "",
+			"ItemToRemoveOnEnd": null,
+			"MailToRemoveOnEnd": null,
+			"RandomizedElements": null,
+			"Text": "[MAAM_GusSpringSO_Text]",
+			"Objectives": [
+				{
+					"Type": "Deliver",
+					"Text": "[MAAM_GusSpringSO_WoodlandStoolMushroom_Text]",
+					"RequiredCount": "5",
+					"Data": {
+						"AcceptedContextTags": "Item_Woodland_Stool_Mushroom",
+				        "Message": "[MAAM_GusSpringSO_WoodlandStoolMushroom_Acceptance]",
+						"TargetName": "Gus"
+							}
+				},
+				{
+					"Type": "Deliver",
+					"Text": "[MAAM_GusSpringSO_RidgePuffMushroom_Text]",
+					"RequiredCount": "5",
+					"Data": {
+						"AcceptedContextTags": "Item_Ridge_Puff_Mushroom",
+				        "Message": "[MAAM_GusSpringSO_RidgePuffMushroom_Acceptance]",
+						"TargetName": "Gus"
+							}
+				},		
+				{
+					"Type": "Deliver",
+					"Text": "[MAAM_GusSpringSO_TootingFunnelMushroom_Text]",
+					"RequiredCount": "5",
+					"Data": {
+						"AcceptedContextTags": "Item_Tooting_Funnel_Mushroom",
+				        "Message": "[MAAM_GusSpringSO_TootingFunnelMushroom_Acceptance]",
+						"TargetName": "Gus"
+							}
+				},				
+          ],
+          "Rewards": [
+            {
+                  "Type": "Money",
+                  "Data": {
+                    "Amount": "3000"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+	"Action": "EditData",
+	"Target": "Data/SpecialOrders",
+	"Entries": {
+		"MAAM_GusSpringSO": {
+			"Name": "[MAAM_GusFallSO_Name]",
+			"Requester": "Gus",
+			"Duration": "Month",
+			"Repeatable": "True",
+			"RequiredTags": "season_fall",		  
+			"OrderType": "",
+			"SpecialRule": "",
+			"ItemToRemoveOnEnd": null,
+			"MailToRemoveOnEnd": null,
+			"RandomizedElements": null,
+			"Text": "[MAAM_GusFallSO_Text]",
+			"Objectives": [
+				{
+					"Type": "Deliver",
+					"Text": "[MAAM_GusFallSO_PlumpBellyMushroom_Text]",
+					"RequiredCount": "5",
+					"Data": {
+						"AcceptedContextTags": "Item_Plump_Belly_Mushroom",
+				        "Message": "[MAAM_GusFallSO_PlumpBellyMushroom_Acceptance]",
+						"TargetName": "Gus"
+							}
+				},
+				{
+					"Type": "Deliver",
+					"Text": "[MAAM_GusFallSO_StalkClusterMushroom_Text]",
+					"RequiredCount": "5",
+					"Data": {
+						"AcceptedContextTags": "Item_Stalk_Cluster_Mushroom",
+				        "Message": "[MAAM_GusFallSO_StalkClusterMushroom_Acceptance]",
+						"TargetName": "Gus"
+							}
+				},		
+				{
+					"Type": "Deliver",
+					"Text": "[MAAM_GusFallSO_SpringCapMushroom_Text]",
+					"RequiredCount": "5",
+					"Data": {
+						"AcceptedContextTags": "Item_Spring_Cap_Mushroom",
+				        "Message": "[MAAM_GusFallSO_SpringCapMushroom_Acceptance]",
+						"TargetName": "Gus"
+							}
+				},				
+          ],
+          "Rewards": [
+            {
+                  "Type": "Money",
+                  "Data": {
+                    "Amount": "3000"
+							}
+						}
+					]
+				}
+			}
+		}
+	]
+}

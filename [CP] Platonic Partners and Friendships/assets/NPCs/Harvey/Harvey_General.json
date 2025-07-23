@@ -1,0 +1,105 @@
+{
+    "Changes": [
+        // CONTENT INCLUDES
+        {
+            "LogName": "Enable Harvey's aromantic content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Harvey/Harvey_AroContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:HarveyRelationshipType": "FullyPlatonic, SexWithoutRomance"
+            }
+        },
+        // ACE CONTENT
+        {
+            "LogName": "Harvey ace dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Entries": {
+                "SpouseStardrop": "{{i18n:PPAF.Harvey.DialogueEdits.Romance.SpouseStardrop |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:HarveyRelationshipType": "RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Harvey ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueHarvey",
+            "Entries": {
+                "winter_1": "{{i18n:PPAF.Harvey.PartnerDialogue.Ace.winter_1}}",
+                "Indoor_Night_0": "{{i18n:PPAF.Harvey.PartnerDialogue.Ace.Indoor_Night_0}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:HarveyRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Harvey ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries": {
+                "Indoor_Night_Harvey": "{{i18n:PPAF.Harvey.PartnerDialogue.Ace.Indoor_Night_Harvey}}",
+                "Outdoor_Harvey": "{{i18n:PPAF.Harvey.PartnerDialogue.Ace.Outdoor_Harvey}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:HarveyRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        // TERMS OF ENDEARMENT
+        {
+            "LogName": "Harvey terms of endearment, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Harvey",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Harvey terms of endearment, poly with CFD",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": true,
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // NO BLUSH EDITS
+        {
+            "LogName": "Harvey no blush edit",
+            "Action": "EditImage",
+            "Target": "Portraits/Harvey, Portraits/Harvey_Winter, Portraits/Harvey_Beach",
+            "FromFile": "assets/Portraits/Harvey_NoBlush.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Harvey": true,
+                "HasMod |contains=DSVTeam.DiverseStardewValley, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        {
+            "LogName": "Harvey no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Harvey_Spring, Portraits/Harvey_Summer, Portraits/Harvey_Fall, Portraits/Harvey_Winter_Outdoor, Portraits/Harvey_Winter_Indoor, Portraits/Harvey_FlowerDance, Portraits/Harvey_SpiritsEve, Portraits/Harvey_EggF, Portraits/Harvey_Fair, Portraits/Harvey_Jellies, Portraits/Harvey_Luau, Portraits/Harvey_Winter_IceF, Portraits/Harvey_Winter_WinterStar, Portraits/Harvey_Aerobics, Portraits/Harvey_Beach, Portraits/Harvey_Doctor",
+            "FromFile": "assets/Portraits/Harvey_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Harvey": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        }
+    ]
+}

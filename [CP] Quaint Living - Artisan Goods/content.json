@@ -1,0 +1,71 @@
+{
+	"Format": "2.0.1",
+	"ConfigSchema":
+	{
+		"VanillaFlowerOnly": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Description": "For players who want productions for vanilla flowers only. Exlude Quaint Living Flowers from production rules and processing."
+			},
+		},
+	"Changes": [
+		{
+			"LogName": "QL Sprites Load",
+			"Action": "Load",
+			"Target": "Mods/PC.QL.ArtisanGoods/Objects, Mods/PC.QL.ArtisanGoods/Machines",
+			"FromFile": "assets/{{TargetWithoutPath}}.png"
+			},
+//SPRING OBJECTS
+		{
+			"LogName": "QL Artisan Goods - Object Data",
+			"Action": "Include",
+			"FromFile": "Data/Objects.json"
+			},
+//MACHINE DATA
+		{
+			"LogName": "QL Artisan Goods - Machines",
+			"Action": "Include",
+			"FromFile": "Data/Machines.json"
+			},
+		{
+			"LogName": "QL Artisan Goods - Machine Rules For Vanilla",
+			"Action": "Include",
+			"FromFile": "Data/MachinesRulesVanilla.json"
+			}, 
+		{
+			"LogName": "QL Artisan Goods - Machine Rules",
+			"Action": "Include",
+			"FromFile": "Data/MachinesRules.json"
+			}, 
+		{
+			"LogName": "QL Artisan Goods - Crafting Recipes",
+			"Action": "Include",
+			"FromFile": "Data/CraftingRecipes.json"
+			},
+		{
+			"LogName": "QL Artisan Goods - Vanilla Object Patches",
+			"Action": "Include",
+			"FromFile": "Data/VanillaPatches.json"
+			},
+		{
+			"LogName": "QL Artisan Goods - Rules Seasonal Patches",
+			"Action": "Include",
+			"When": {"HasMod |contains=PC.CP.QL.FlowerGarden2": true},
+			"FromFile": "Data/SeasonalPatches.json"
+			}, 
+//GIFT TASTES
+		{
+			"LogName": "QL Artisan Goods - Vanilla NPC Gift Tastes",
+			"Action": "Include",
+			"FromFile": "Data/VanillaNPCGiftTastes.json"
+			},
+//SHOP DATA
+		{
+			"LogName": "QL Artisan Goods - Shop Data",
+			"Action": "Include",
+			"FromFile": "Data/ShopData.json"
+			}
+	]
+}
+
+

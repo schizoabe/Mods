@@ -1,0 +1,122 @@
+{
+    "Changes": [
+    //Standard Susan
+    {
+  "LogName": "MRSSI_Susan_TownFair",
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": ["br93.FarmersMarket_Susan_TownFair", "Items"],
+  "When": {
+            "HasMod": "FlashShifter.StardewValleyExpandedCP",
+            "Susan's grange display": "Standard"
+            },
+  "Fields": 
+    {
+    "br93.FarmersMarket_Susan_208":{
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Set",
+                    "RandomAmount": [5, 6, 7, 8]
+                                                                    }
+            ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Susan_208 0.6, PLAYER_STAT Any itemsCrafted 20, PLAYER_FRIENDSHIP_POINTS Any Susan 500"
+          },
+    "br93.FarmersMarket_Susan_342":{
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Set",
+                    "RandomAmount": [5, 6, 7, 8]
+                                                                    }
+            ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Susan_342 0.8"
+          },
+    "br93.FarmersMarket_Susan_344":{
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Set",
+                    "RandomAmount": [5, 6, 7, 8]
+                                                                    }
+            ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Susan_344 0.8"
+          },
+    "br93.FarmersMarket_Susan_348":{
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Set",
+                    "RandomAmount": [5, 6, 7, 8]
+                                                                    }
+            ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Susan_348 0.8, PLAYER_BASE_FARMING_LEVEL Any 4, PLAYER_FRIENDSHIP_POINTS Any Susan 1000"
+          },
+    "br93.FarmersMarket_Susan_350":{
+            "AvailableStockModifiers":[
+                {
+                    "Modification": "Set",
+                    "RandomAmount": [5, 6, 7, 8]
+                                                                    }
+            ],
+            "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Susan_350 0.8, PLAYER_BASE_FARMING_LEVEL Any 4, PLAYER_FRIENDSHIP_POINTS Any Susan 1500"
+          },
+    }
+},
+    //Harmode Susan
+    {
+      "LogName": "MRSSI_Susan_TownFair",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["br93.FarmersMarket_Susan_TownFair", "Items"],
+      "When": {
+                "HasMod": "FlashShifter.StardewValleyExpandedCP",
+                "Susan's grange display": "Hardmode"
+                },
+      "Fields": 
+        {
+        "br93.FarmersMarket_Susan_208":{
+                "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                                        }
+                ],
+                "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Susan_208 0.3, PLAYER_STAT Any itemsCrafted 20, PLAYER_FRIENDSHIP_POINTS Any Susan 1000"
+              },
+        "br93.FarmersMarket_Susan_342":{
+                "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                                        }
+                ],
+                "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Susan_342 0.5"
+              },
+        "br93.FarmersMarket_Susan_344":{
+                "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                                        }
+                ],
+                "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Susan_344 0.5"
+              },
+        "br93.FarmersMarket_Susan_348":{
+                "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                                        }
+                ],
+                "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Susan_348 0.5, PLAYER_BASE_FARMING_LEVEL Any 4, PLAYER_FRIENDSHIP_POINTS Any Susan 1500"
+              },
+        "br93.FarmersMarket_Susan_350":{
+                "AvailableStockModifiers":[
+                    {
+                        "Modification": "Set",
+                        "RandomAmount": [1, 2, 3, 4]
+                                                                        }
+                ],
+                "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Susan_350 0.5, PLAYER_BASE_FARMING_LEVEL Any 4, PLAYER_FRIENDSHIP_POINTS Any Susan 2000"
+              },
+        }
+    }
+    ]
+}

@@ -1,0 +1,109 @@
+{
+  "Name": "Glowing Eyes",
+  "FrontAccessory": {
+    "DrawAfterSleeves": true,
+    "ColorMasks": [
+      [250, 250, 250]
+    ],
+    "StartingPosition": {
+      "X": 0,
+      "Y": 0
+    },
+    "HeadPosition": {
+      "X": 0,
+      "Y": -1
+    },
+    "AccessorySize": {
+      "Width": 16,
+      "Length": 16
+    },
+    "UniformAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 200,
+        "Light": {
+          "Color": [ 250, 250, 250, 255 ],
+          "Radius": {
+            "RandomValue": [ 0.2 ]
+          },
+          "Position": {
+            "X": -33,
+            "Y": 40
+          },
+        }
+      },
+      {
+        "Frame": 1,
+        "Duration": 200,
+        "Light": {
+          "Color": [ 250, 250, 250, 255 ],
+          "Radius": {
+            "RandomValue": [ 0.05 ]
+          },
+          "Position": {
+            "X": -33,
+            "Y": 40
+          },
+        },
+        "Conditions": [
+          {
+            "Name": "IsElapsedTimeMultipleOf",
+            "Value": {
+              "RandomValue": [ 5000, 7500, 8000, 10000 ]
+            }
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "Duration": 167,
+        "Conditions": [
+          {
+            "Name": "DidPreviousFrameDisplay",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 1,
+        "Duration": 200,
+        "Light": {
+          "Color": [ 250, 250, 250, 255 ],
+          "Radius": {
+            "RandomValue": [ 0.05 ]
+          },
+          "Position": {
+            "X": -33,
+            "Y": 40
+          },
+        },
+        "Conditions": [
+          {
+            "Name": "DidPreviousFrameDisplay",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "Duration": 2000,
+        "Light": {
+          "Color": [ 250, 250, 250, 255 ],
+          "Radius": {
+            "RandomValue": [ 0.1 ]
+          },
+          "Position": {
+            "X": -33,
+            "Y": 40
+          },
+        },
+        "Conditions": [
+          {
+            "Name": "DidPreviousFrameDisplay",
+            "Value": true
+          }
+        ]
+      }
+    ]
+  }
+}

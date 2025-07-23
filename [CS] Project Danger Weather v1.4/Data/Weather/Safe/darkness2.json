@@ -1,0 +1,203 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data Eclipse",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Darkness": {
+					"Id": "kath.weathering_Darkness",
+					"DisplayName": "{{i18n: Weather.Darkness}}",
+
+					"Forecast": "{{i18n: Weather.Darkness.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Darkness.ForecastIsland}}", "Desert": "{{i18n: Weather.Darkness.ForecastDesert}}",},
+					
+					"UseNightTiles": true,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"IsDebrisWeather": false,
+					"IsLightning": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 48},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 91},
+					"TVFrames": 4,
+
+					"MusicOverride": "KathEclipse2",
+					"MusicFrequencyOutside": 75,
+					"MusicFrequencyInside": 10,
+					"SoftMusicOverrides": [],
+
+					"TotemMessage": "{{i18n: Weather.DarknessTotem}}",
+					"TotemScreenTint": "black",
+					"TotemSound": "owl",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Critters":[
+						{
+							"Id": "Owl",
+							"Condition": "TIME 1200",
+							"Chance": 0.25,
+							"Type": "Owl"
+						},
+					],					
+					
+					"Lighting": [
+						{
+							"Id": "morning",
+							"TimeOfDay": "600",
+							"Condition": "TRUE",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0",
+							"LightingTint": "16, 48, 148",
+							"LightingTintOpacity": "0",
+						},					
+						{
+							"Id": "morningphase",
+							"TimeOfDay": "800",
+							"Condition": "TRUE",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.2",
+							"LightingTint": "16, 48, 148",
+							"LightingTintOpacity": "0.3",
+						},
+						{
+							"Id": "initialphase",
+							"TimeOfDay": "900",
+							"Condition": "TRUE",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.3",
+							"LightingTint": "57, 85, 174",
+							"LightingTintOpacity": "0.5",			
+						},
+						{
+							"Id": "midphase",
+							"TimeOfDay": "1100",
+							"Condition": "TRUE",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.55",
+							"LightingTint": "104, 146, 194",
+							"LightingTintOpacity": "0.6",
+							"PostLightingTint": "black",
+							"PostLightingTintOpacity": "0.1",								
+						},
+						{
+							"Id": "beforepeakphase",
+							"TimeOfDay": "1200",
+							"Condition": "TRUE",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.6",
+							"LightingTint": "203, 177, 118",
+							"LightingTintOpacity": "0.65",	
+							"PostLightingTint": "black",
+							"PostLightingTintOpacity": "0.3",							
+						},
+						{
+							"Id": "peakphase",
+							"TimeOfDay": "1400",
+							"Condition": "TRUE",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.95",
+							"LightingTint": "227, 227, 174",
+							"LightingTintOpacity": "0.95",
+							"PostLightingTint": "black",
+							"PostLightingTintOpacity": "0.5",							
+							
+						},
+						{
+							"Id": "postpeakphase",
+							"TimeOfDay": "1500",
+							"Condition": "TRUE",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "1.0",
+							"LightingTint": "227, 227, 174",
+							"LightingTintOpacity": "1.0",	
+							"PostLightingTint": "black",
+							"PostLightingTintOpacity": "0.4",							
+						},
+						{
+							"Id": "startendphase",
+							"TimeOfDay": "1600",
+							"Condition": "TRUE",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.85",
+							"LightingTint": "227, 227, 174",
+							"LightingTintOpacity": "0.85",	
+							"PostLightingTint": "black",
+							"PostLightingTintOpacity": "0.3",							
+						},
+						{
+							"Id": "endphase",
+							"TimeOfDay": "1700",
+							"Condition": "TRUE",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.75",
+							"LightingTint": "244, 244, 218",
+							"LightingTintOpacity": "0.75",
+						},
+						{
+							"Id": "nightphase",
+							"TimeOfDay": "1800",
+							"Condition": "!SEASON winter",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.6",
+							"LightingTint": "209, 208, 148",
+							"LightingTintOpacity": "0.6",
+						},
+						{
+							"Id": "darkernight",
+							"TimeOfDay": "1900",
+							"Condition": "TRUE",
+							"TweenMode": "Both",
+							"AmbientColor": "180, 180, 180",
+							"AmbientOutdoorOpacity": "0.55",
+							"LightingTint": "223, 222, 170",
+							"LightingTintOpacity": "0.65",
+						},
+					],
+
+					"Effects":[
+					{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDEclipse 3",
+							],
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "Darkness",
+							"Condition": "!LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.47
+						},
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

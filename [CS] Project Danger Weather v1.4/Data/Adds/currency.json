@@ -1,0 +1,164 @@
+{
+	"Changes": [
+//Currency Load
+        {
+            "LogName":"Add Items",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "WeatherToken": {
+                    "Name": "WeatherToken",
+                    "DisplayName": "{{i18n: WeatherToken.Name}}",
+                    "Description": "{{i18n: WeatherToken.Desc}}",
+                    "Type": "Basic",          
+                    "Category": -20,
+                    "Edibility": -300,
+					"Buffs":[],
+                    "Price": 0,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/WeatherToken",
+                    "SpriteIndex": "0",
+					"ContextTags": [
+						"color_gray",
+						"not_giftable",
+						"not_placeable",
+						],
+					"CustomFields": {},
+            	},
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/VirtualCurrencyData",
+			"When": {"HasMod": "spacechase0.SpaceCore"},
+			"Entries": {
+				"WeatherToken": {
+					"TeamWide": false,
+					"ObtainSound": "money",
+				},
+			}
+		},	
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+			"kath.weathering_CoinStart": {
+				"Id": "kath.weathering_CoinStart",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_HAS_MAIL Any islandNorthCaveOpened, PLAYER_HAS_MAIL Any safariGuyIntro, PLAYER_LOCATION_CONTEXT Any Island",
+                "Actions": [
+					"AddMail All CoinStart",
+                    ],
+				},		
+			}
+		},
+		
+/// Diggy
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [ "IslandNorthCave1", "Forage" ],
+      "Entries": {
+		"WeatherToken": {
+        "Chance": 0.01,
+        "Condition": "PLAYER_HAS_MAIL Any CoinStart",
+        "Id": "WeatherToken",
+        "ItemId": "(O)WeatherToken",
+        "RandomItemId": null,
+        "MaxItems": null,
+        "MinStack": -1,
+        "MaxStack": -1,
+        "Quality": -1,
+        "ObjectInternalName": null,
+        "ObjectDisplayName": null,
+        "ToolUpgradeLevel": -1,
+        "IsRecipe": false,
+        "StackModifiers": null,
+        "StackModifierMode": "Stack",
+        "QualityModifiers": null,
+        "QualityModifierMode": "Stack",
+        "ModData": null,
+        "PerItemCondition": null  
+		},
+	  }
+	},
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [ "IslandSouth", "ArtifactSpots" ],
+      "Entries": {
+		"WeatherToken": {
+		  "Condition": "PLAYER_HAS_MAIL Any CoinStart",	
+          "Chance": "{{ChanceCoin}}",
+          "ApplyGenerousEnchantment": false,
+          "OneDebrisPerDrop": true,
+          "Precedence": -50,
+          "ContinueOnDrop": false,
+          "MinStack": 1,
+          "MaxStack": 5,
+          "Id": "WeatherToken",
+          "ItemId": "(O)WeatherToken",			
+		},
+	  }
+	},	  
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [ "IslandNorth", "ArtifactSpots" ],
+      "Entries": {
+		"WeatherToken": {
+		  "Condition": "PLAYER_HAS_MAIL Any CoinStart",	
+          "Chance": "{{ChanceCoin}}",
+          "ApplyGenerousEnchantment": false,
+          "OneDebrisPerDrop": true,
+          "Precedence": -50,
+          "ContinueOnDrop": false,
+          "MinStack": 1,
+          "MaxStack": 5,
+          "Id": "WeatherToken",
+          "ItemId": "(O)WeatherToken",			
+		},
+	  }
+	},
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [ "IslandWest", "ArtifactSpots" ],
+      "Entries": {
+		"WeatherToken": {
+		  "Condition": "PLAYER_HAS_MAIL Any CoinStart",	
+          "Chance": "{{ChanceCoin}}",
+          "ApplyGenerousEnchantment": false,
+          "OneDebrisPerDrop": true,
+          "Precedence": -50,
+          "ContinueOnDrop": false,
+          "MinStack": 1,
+          "MaxStack": 5,
+          "Id": "WeatherToken",
+          "ItemId": "(O)WeatherToken",			
+		},
+	  }
+	},	
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [ "IslandSouthEast", "ArtifactSpots" ],
+      "Entries": {
+		"WeatherToken": {
+		  "Condition": "PLAYER_HAS_MAIL Any CoinStart",	
+          "Chance": "{{ChanceCoin}}",
+          "ApplyGenerousEnchantment": false,
+          "OneDebrisPerDrop": true,
+          "Precedence": -50,
+          "ContinueOnDrop": false,
+          "MinStack": 1,
+          "MaxStack": 5,
+          "Id": "WeatherToken",
+          "ItemId": "(O)WeatherToken",			
+		},
+	  }
+	},	
+//End
+]
+}

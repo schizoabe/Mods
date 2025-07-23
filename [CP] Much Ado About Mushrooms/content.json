@@ -1,0 +1,23 @@
+{
+    "Format": "2.0.0",
+ 	"ConfigSchema": {
+		"Enable Mushroom Bundles": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Description": "(ATTENTION) Adds MAAM Mushrooms to the Regular and Remixed Bundles. Only works on a new game, and can't be turned off in that save if used."
+		},
+	},
+	"Changes": [
+ 		{
+			"Action": "Include",
+			"FromFile": "data/Mushrooms.json, data/MealsandRecipes.json, data/Machines.json, data/Shops.json, data/MushroomGrowths.json, data/Bundles.json, data/GiftTastes.json, data/Mail.json, data/SpecialOrders.json, data/Strings.json"
+		},
+		{ 
+            "Action": "Load",
+			"Target": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/01 -- COMMON MUSHROOM -- Dew Cup, StunkyMcDoo.MuchAdoAboutMushrooms.cp/01 -- COMMON MUSHROOM -- Muffin Button, StunkyMcDoo.MuchAdoAboutMushrooms.cp/01 -- COMMON MUSHROOM -- Waifs Bonnet, StunkyMcDoo.MuchAdoAboutMushrooms.cp/01 -- COMMON MUSHROOM -- White Mushroom, StunkyMcDoo.MuchAdoAboutMushrooms.cp/02 -- UNCOMMON MUSHROOM -- Plump Belly, StunkyMcDoo.MuchAdoAboutMushrooms.cp/02 -- UNCOMMON MUSHROOM -- Ridge Puff, StunkyMcDoo.MuchAdoAboutMushrooms.cp/02 -- UNCOMMON MUSHROOM -- Spring Cap, StunkyMcDoo.MuchAdoAboutMushrooms.cp/02 -- UNCOMMON MUSHROOM -- Woodland Stool, StunkyMcDoo.MuchAdoAboutMushrooms.cp/03 -- RARE MUSHROOM -- Lord Edmondsons, StunkyMcDoo.MuchAdoAboutMushrooms.cp/03 -- RARE MUSHROOM -- St Mayalls, StunkyMcDoo.MuchAdoAboutMushrooms.cp/03 -- RARE MUSHROOM -- Stalk Cluster,  StunkyMcDoo.MuchAdoAboutMushrooms.cp/03 -- RARE MUSHROOM -- Tooting Funnel, StunkyMcDoo.MuchAdoAboutMushrooms.cp/04 -- EXOTIC MUSHROOM -- Black Mushroom, StunkyMcDoo.MuchAdoAboutMushrooms.cp/04 -- EXOTIC MUSHROOM -- Glow Cap, StunkyMcDoo.MuchAdoAboutMushrooms.cp/04 -- EXOTIC MUSHROOM -- Slimy Mushroom, StunkyMcDoo.MuchAdoAboutMushrooms.cp/04 -- EXOTIC MUSHROOM -- Yellow Mushroom, StunkyMcDoo.MuchAdoAboutMushrooms.cp/05 -- CLUMP -- Dew Cup, StunkyMcDoo.MuchAdoAboutMushrooms.cp/05 -- CLUMP -- Muffin Button, StunkyMcDoo.MuchAdoAboutMushrooms.cp/05 -- CLUMP -- Plump Belly, StunkyMcDoo.MuchAdoAboutMushrooms.cp/05 -- CLUMP -- Ridge Puff, StunkyMcDoo.MuchAdoAboutMushrooms.cp/05 -- CLUMP -- Spring Cap, StunkyMcDoo.MuchAdoAboutMushrooms.cp/05 -- CLUMP -- Woodland Stool, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Fire Spiced Mushrooms, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Garlic Mushrooms, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Ale Pie, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom and Leek Risotto, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Omelet, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Pate, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Tagliatelle, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Tart, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Vol Au Vents, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Sticky Mushroom Rice, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Stuffed Mushroom, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Wild Mushroom Soup, StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Witches Elixir",
+            "FromFile": "assets/{{TargetWithoutPath}}.png"
+        }
+    ]
+}
+
+

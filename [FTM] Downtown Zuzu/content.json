@@ -1,0 +1,1610 @@
+{
+  "$id": "1",
+  "ForageSpawnEnabled": true,
+  "LargeObjectSpawnEnabled": true,
+  "OreSpawnEnabled": true,
+  "MonsterSpawnEnabled": true,
+  "Forage_Spawn_Settings": {
+    "$id": "2",
+    "Areas": [
+      {
+        "$id": "3",
+        "SpringItemIndex": [
+          90
+        ],
+        "SummerItemIndex": [
+          90
+        ],
+        "FallItemIndex": [
+          90
+        ],
+        "WinterItemIndex": [
+          90
+        ],
+        "UniqueAreaID": "Custom_DTZ_ZuzuCitySanctuary",
+        "MapName": "Custom_DTZ_ZuzuCitySanctuary",
+        "MinimumSpawnsPerDay": -5,
+        "MaximumSpawnsPerDay": 3,
+        "IncludeTerrainTypes": [
+          "Dirt",
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "4",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "5",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "Sun",
+            "Wind"
+          ],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "6"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": null
+      }
+    ],
+    "PercentExtraSpawnsPerForagingLevel": 100,
+    "SpringItemIndex": [
+      16,
+      20,
+      22,
+      257
+    ],
+    "SummerItemIndex": [
+      396,
+      398,
+      402,
+      404
+    ],
+    "FallItemIndex": [
+      281,
+      404,
+      420,
+      422
+    ],
+    "WinterItemIndex": [],
+    "CustomTileIndex": []
+  },
+  "Large_Object_Spawn_Settings": {
+    "$id": "7",
+    "Areas": [
+      {
+        "$id": "8",
+        "ObjectTypes": [
+          "Boulder",
+          "MineRock1"
+        ],
+        "FindExistingObjectLocations": false,
+        "PercentExtraSpawnsPerSkillLevel": 10,
+        "RelatedSkill": "Mining",
+        "UniqueAreaID": "Custom_DTZ_OasisCaveRock",
+        "MapName": "Custom_DTZ_OasisCave",
+        "MinimumSpawnsPerDay": -4,
+        "MaximumSpawnsPerDay": 8,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "9",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "10",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "11"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      }
+    ],
+    "CustomTileIndex": []
+  },
+  "Ore_Spawn_Settings": {
+    "$id": "12",
+    "Areas": [
+      {
+        "$id": "13",
+        "MiningLevelRequired": {
+          "$id": "14",
+          "Stone": 0,
+          "Copper": 0,
+          "Iron": 0,
+          "Gold": 6,
+          "Iridium": 8,
+          "Geode": 2,
+          "FrozenGeode": 0,
+          "MagmaGeode": 0,
+          "Gem": 2,
+          "Mystic": 4,
+          "Radioactive": 8,
+          "Diamond": 5,
+          "Ruby": 1,
+          "Jade": 1,
+          "Amethyst": 1,
+          "Topaz": 0,
+          "Emerald": 2,
+          "Aquamarine": 0
+        },
+        "StartingSpawnChance": {
+          "$id": "15",
+          "Stone": 45,
+          "Copper": 7,
+          "Iron": 6,
+          "Gold": 4,
+          "Iridium": 1,
+          "Geode": 0,
+          "FrozenGeode": 0,
+          "MagmaGeode": 0,
+          "Gem": 1,
+          "Mystic": 0,
+          "Radioactive": 0,
+          "Diamond": 0,
+          "Ruby": 2,
+          "Jade": 0,
+          "Amethyst": 0,
+          "Topaz": 0,
+          "Emerald": 0,
+          "Aquamarine": 0
+        },
+        "LevelTenSpawnChance": {
+          "$id": "16",
+          "Stone": 45,
+          "Copper": 7,
+          "Iron": 7,
+          "Gold": 6,
+          "Iridium": 2,
+          "Geode": 2,
+          "FrozenGeode": 0,
+          "MagmaGeode": 0,
+          "Gem": 2,
+          "Mystic": 0,
+          "Radioactive": 0,
+          "Diamond": 0,
+          "Ruby": 3,
+          "Jade": 0,
+          "Amethyst": 0,
+          "Topaz": 0,
+          "Emerald": 0,
+          "Aquamarine": 0
+        },
+        "UniqueAreaID": "Custom_DTZ_OasisCaveOre",
+        "MapName": "Custom_DTZ_OasisCave",
+        "MinimumSpawnsPerDay": 50,
+        "MaximumSpawnsPerDay": 125,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "17",
+          "StartTime": 600,
+          "EndTime": 610,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "18",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "19"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "$id": "20",
+        "MiningLevelRequired": {
+          "$id": "21",
+          "Stone": 0,
+          "Copper": 0,
+          "Iron": 0,
+          "Gold": 6,
+          "Iridium": 8,
+          "Geode": 2,
+          "FrozenGeode": 0,
+          "MagmaGeode": 0,
+          "Gem": 2,
+          "Mystic": 4,
+          "Radioactive": 8,
+          "Diamond": 5,
+          "Ruby": 1,
+          "Jade": 1,
+          "Amethyst": 1,
+          "Topaz": 0,
+          "Emerald": 2,
+          "Aquamarine": 0
+        },
+        "StartingSpawnChance": {
+          "$id": "22",
+          "Stone": 45,
+          "Copper": 7,
+          "Iron": 6,
+          "Gold": 4,
+          "Iridium": 1,
+          "Geode": 0,
+          "FrozenGeode": 0,
+          "MagmaGeode": 0,
+          "Gem": 1,
+          "Mystic": 0,
+          "Radioactive": 0,
+          "Diamond": 0,
+          "Ruby": 2,
+          "Jade": 0,
+          "Amethyst": 0,
+          "Topaz": 0,
+          "Emerald": 0,
+          "Aquamarine": 0
+        },
+        "LevelTenSpawnChance": {
+          "$id": "23",
+          "Stone": 45,
+          "Copper": 7,
+          "Iron": 7,
+          "Gold": 6,
+          "Iridium": 2,
+          "Geode": 2,
+          "FrozenGeode": 0,
+          "MagmaGeode": 0,
+          "Gem": 2,
+          "Mystic": 0,
+          "Radioactive": 0,
+          "Diamond": 0,
+          "Ruby": 3,
+          "Jade": 0,
+          "Amethyst": 0,
+          "Topaz": 0,
+          "Emerald": 0,
+          "Aquamarine": 0
+        },
+        "UniqueAreaID": "Custom_DTZ_ResortSecretCave",
+        "MapName": "Custom_DTZ_ResortSecretCave",
+        "MinimumSpawnsPerDay": 50,
+        "MaximumSpawnsPerDay": 125,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "24",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "25",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "26"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "$id": "27",
+        "MiningLevelRequired": {
+          "$id": "28",
+          "Stone": 0,
+          "Copper": 0,
+          "Iron": 0,
+          "Gold": 6,
+          "Iridium": 9,
+          "Geode": 2,
+          "FrozenGeode": 0,
+          "MagmaGeode": 0,
+          "Gem": 2,
+          "Mystic": 4,
+          "Radioactive": 8,
+          "Diamond": 5,
+          "Ruby": 1,
+          "Jade": 1,
+          "Amethyst": 1,
+          "Topaz": 0,
+          "Emerald": 2,
+          "Aquamarine": 0
+        },
+        "StartingSpawnChance": {
+          "$id": "29",
+          "Stone": 70,
+          "Copper": 3,
+          "Iron": 5,
+          "Gold": 10,
+          "Iridium": 1,
+          "Geode": 2,
+          "FrozenGeode": 0,
+          "MagmaGeode": 1,
+          "Gem": 3,
+          "Mystic": 2,
+          "Radioactive": 0,
+          "Diamond": 1,
+          "Ruby": 4,
+          "Jade": 4,
+          "Amethyst": 4,
+          "Topaz": 4,
+          "Emerald": 3,
+          "Aquamarine": 2
+        },
+        "LevelTenSpawnChance": {
+          "$id": "30",
+          "Stone": 70,
+          "Copper": 3,
+          "Iron": 5,
+          "Gold": 10,
+          "Iridium": 3,
+          "Geode": 3,
+          "FrozenGeode": 0,
+          "MagmaGeode": 1,
+          "Gem": 5,
+          "Mystic": 4,
+          "Radioactive": 0,
+          "Diamond": 3,
+          "Ruby": 5,
+          "Jade": 5,
+          "Amethyst": 5,
+          "Topaz": 5,
+          "Emerald": 4,
+          "Aquamarine": 3
+        },
+        "UniqueAreaID": "Custom_DTZ_OasisCaveUnderOre",
+        "MapName": "Custom_DTZ_OasisCaveUnder",
+        "MinimumSpawnsPerDay": 105,
+        "MaximumSpawnsPerDay": 175,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "31",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "32",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "33"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "$id": "34",
+        "MiningLevelRequired": {
+          "$id": "35",
+          "Stone": 0,
+          "Copper": 0,
+          "Iron": 0,
+          "Gold": 6,
+          "Iridium": 9,
+          "Geode": 2,
+          "FrozenGeode": 0,
+          "MagmaGeode": 0,
+          "Gem": 2,
+          "Mystic": 4,
+          "Radioactive": 8,
+          "Diamond": 2,
+          "Ruby": 1,
+          "Jade": 1,
+          "Amethyst": 1,
+          "Topaz": 0,
+          "Emerald": 2,
+          "Aquamarine": 0
+        },
+        "StartingSpawnChance": {
+          "$id": "36",
+          "Stone": 45,
+          "Copper": 0,
+          "Iron": 1,
+          "Gold": 1,
+          "Iridium": 0,
+          "Geode": 1,
+          "FrozenGeode": 2,
+          "MagmaGeode": 0,
+          "Gem": 1,
+          "Mystic": 1,
+          "Radioactive": 0,
+          "Diamond": 3,
+          "Ruby": 0,
+          "Jade": 0,
+          "Amethyst": 1,
+          "Topaz": 0,
+          "Emerald": 0,
+          "Aquamarine": 3
+        },
+        "LevelTenSpawnChance": {
+          "$id": "37",
+          "Stone": 40,
+          "Copper": 0,
+          "Iron": 2,
+          "Gold": 2,
+          "Iridium": 1,
+          "Geode": 1,
+          "FrozenGeode": 2,
+          "MagmaGeode": 0,
+          "Gem": 1,
+          "Mystic": 1,
+          "Radioactive": 0,
+          "Diamond": 4,
+          "Ruby": 0,
+          "Jade": 0,
+          "Amethyst": 2,
+          "Topaz": 0,
+          "Emerald": 1,
+          "Aquamarine": 3
+        },
+        "UniqueAreaID": "Custom_DTZ_OasisCaveDarkOre",
+        "MapName": "Custom_DTZ_OasisCaveDark",
+        "MinimumSpawnsPerDay": 45,
+        "MaximumSpawnsPerDay": 80,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "38",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "39",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "40"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "$id": "41",
+        "MiningLevelRequired": {
+          "$id": "42",
+          "Stone": 0,
+          "Copper": 0,
+          "Iron": 0,
+          "Gold": 6,
+          "Iridium": 9,
+          "Geode": 2,
+          "FrozenGeode": 0,
+          "MagmaGeode": 0,
+          "Gem": 2,
+          "Mystic": 4,
+          "Radioactive": 8,
+          "Diamond": 2,
+          "Ruby": 1,
+          "Jade": 1,
+          "Amethyst": 1,
+          "Topaz": 0,
+          "Emerald": 2,
+          "Aquamarine": 0
+        },
+        "StartingSpawnChance": {
+          "$id": "43",
+          "Stone": 45,
+          "Copper": 1,
+          "Iron": 1,
+          "Gold": 2,
+          "Iridium": 1,
+          "Geode": 1,
+          "FrozenGeode": 0,
+          "MagmaGeode": 6,
+          "Gem": 1,
+          "Mystic": 1,
+          "Radioactive": 0,
+          "Diamond": 1,
+          "Ruby": 5,
+          "Jade": 0,
+          "Amethyst": 1,
+          "Topaz": 6,
+          "Emerald": 1,
+          "Aquamarine": 0
+        },
+        "LevelTenSpawnChance": {
+          "$id": "44",
+          "Stone": 40,
+          "Copper": 0,
+          "Iron": 2,
+          "Gold": 2,
+          "Iridium": 1,
+          "Geode": 1,
+          "FrozenGeode": 0,
+          "MagmaGeode": 6,
+          "Gem": 1,
+          "Mystic": 1,
+          "Radioactive": 0,
+          "Diamond": 4,
+          "Ruby": 0,
+          "Jade": 0,
+          "Amethyst": 2,
+          "Topaz": 0,
+          "Emerald": 1,
+          "Aquamarine": 0
+        },
+        "UniqueAreaID": "Custom_DTZ_OasisCaveLavaOre",
+        "MapName": "Custom_DTZ_OasisCaveLava",
+        "MinimumSpawnsPerDay": 100,
+        "MaximumSpawnsPerDay": 175,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "45",
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "46",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "47"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      }
+    ],
+    "PercentExtraSpawnsPerMiningLevel": 0,
+    "MiningLevelRequired": {
+      "$id": "48",
+      "Stone": 0,
+      "Copper": 0,
+      "Iron": 0,
+      "Gold": 3,
+      "Iridium": 7,
+      "Geode": 2,
+      "FrozenGeode": 0,
+      "MagmaGeode": 0,
+      "Gem": 3,
+      "Mystic": 3,
+      "Radioactive": 0,
+      "Diamond": 0,
+      "Ruby": 0,
+      "Jade": 0,
+      "Amethyst": 0,
+      "Topaz": 0,
+      "Emerald": 0,
+      "Aquamarine": 0
+    },
+    "StartingSpawnChance": {
+      "$id": "49",
+      "Stone": 45,
+      "Copper": 5,
+      "Iron": 4,
+      "Gold": 3,
+      "Iridium": 1,
+      "Geode": 0,
+      "FrozenGeode": 0,
+      "MagmaGeode": 0,
+      "Gem": 0,
+      "Mystic": 0,
+      "Radioactive": 0,
+      "Diamond": 0,
+      "Ruby": 1,
+      "Jade": 0,
+      "Amethyst": 0,
+      "Topaz": 0,
+      "Emerald": 0,
+      "Aquamarine": 0
+    },
+    "LevelTenSpawnChance": {
+      "$id": "50",
+      "Stone": 45,
+      "Copper": 2,
+      "Iron": 5,
+      "Gold": 5,
+      "Iridium": 2,
+      "Geode": 3,
+      "FrozenGeode": 0,
+      "MagmaGeode": 0,
+      "Gem": 1,
+      "Mystic": 0,
+      "Radioactive": 0,
+      "Diamond": 0,
+      "Ruby": 1,
+      "Jade": 0,
+      "Amethyst": 0,
+      "Topaz": 0,
+      "Emerald": 0,
+      "Aquamarine": 0
+    },
+    "CustomTileIndex": []
+  },
+  "Monster_Spawn_Settings": {
+    "$id": "51",
+    "Areas": [
+      {
+        "$id": "52",
+        "MonsterTypes": [
+          {
+            "$id": "53",
+            "MonsterName": "Ghost",
+            "Settings": {
+              "$id": "54",
+              "HP": 255,
+              "Damage": 10,
+              "Defense": 1,
+              "DodgeChance": 10,
+              "EXP": 13,
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 0,
+              "Loot": [
+                "Coal"
+              ]
+            }
+          },
+          {
+            "$id": "55",
+            "MonsterName": "WildernessGolem",
+            "Settings": {
+              "$id": "56",
+              "HP": 450,
+              "Damage": 15,
+              "Defense": 5,
+              "DodgeChance": 5,
+              "EXP": 30,
+              "RelatedSkill": "Combat",
+              "Loot": [
+                "Fiber",
+                "Green Algae"
+              ],
+              "SpawnWeight": 3
+            }
+          },
+          {
+            "$id": "57",
+            "MonsterName": "MutantGrub",
+            "Settings": {
+              "$id": "58",
+              "HP": 75,
+              "Damage": 15,
+              "DodgeChance": 5,
+              "EXP": 10,
+              "RelatedSkill": "Combat",
+              "Loot": [
+                "Green Algae"
+              ],
+              "SpawnWeight": 2
+            }
+          }
+        ],
+        "UniqueAreaID": "Custom_DTZ_ZuzuCitySewer",
+        "MapName": "Custom_DTZ_ZuzuCitySewer",
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 100,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "59",
+          "StartTime": 610,
+          "EndTime": 2350,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 6,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "60",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "61"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "$id": "62",
+        "MonsterTypes": [
+          {
+            "$id": "63",
+            "MonsterName": "Ghost",
+            "Settings": {
+              "$id": "64",
+              "HP": 250,
+              "Damage": 15,
+              "Defense": 4,
+              "DodgeChance": 10,
+              "EXP": 13,
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 0,
+              "Loot": [
+                "Coal"
+              ]
+            }
+          },
+          {
+            "$id": "65",
+            "MonsterName": "WildernessGolem",
+            "Settings": {
+              "$id": "66",
+              "HP": 350,
+              "Damage": 15,
+              "Defense": 10,
+              "DodgeChance": 5,
+              "EXP": 30,
+              "RelatedSkill": "Combat",
+              "Loot": [
+                "Fiber",
+                "Green Algae"
+              ],
+              "SpawnWeight": 3
+            }
+          },
+          {
+            "$id": "67",
+            "MonsterName": "MutantGrub",
+            "Settings": {
+              "$id": "68",
+              "HP": 150,
+              "Damage": 15,
+              "DodgeChance": 5,
+              "EXP": 10,
+              "RelatedSkill": "Combat",
+              "Loot": [
+                "Green Algae"
+              ],
+              "SpawnWeight": 2
+            }
+          }
+        ],
+        "UniqueAreaID": "Custom_DTZ_ZuzuCitySewerTunnel",
+        "MapName": "Custom_DTZ_ZuzuCitySewerTunnel",
+        "MinimumSpawnsPerDay": 75,
+        "MaximumSpawnsPerDay": 200,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "69",
+          "StartTime": 600,
+          "EndTime": 2600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 5,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "70",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "71"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "$id": "72",
+        "MonsterTypes": [
+          {
+            "$id": "73",
+            "MonsterName": "Ghost",
+            "Settings": {
+              "$id": "74",
+              "HP": 250,
+              "Damage": 15,
+              "Defense": 4,
+              "DodgeChance": 10,
+              "EXP": 13,
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 0,
+              "Loot": [
+                "Coal"
+              ]
+            }
+          },
+          {
+            "$id": "75",
+            "MonsterName": "Dust Sprite",
+            "Settings": {
+              "$id": "76",
+              "HP": 250,
+              "Damage": 15,
+              "Defense": 5,
+              "DodgeChance": 10,
+              "EXP": 13,
+              "RelatedSkill": "Combat",
+              "MinimumSkillLevel": 0,
+              "Loot": [
+                "Coal"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "Custom_DTZ_ResortSecretCaveMonsters",
+        "MapName": "Custom_DTZ_ResortSecretCave",
+        "MinimumSpawnsPerDay": 50,
+        "MaximumSpawnsPerDay": 100,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "77",
+          "StartTime": 600,
+          "EndTime": 2600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 5,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "78",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "79"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "$id": "80",
+        "MonsterTypes": [
+          {
+            "$id": "81",
+            "MonsterName": "Bat",
+            "Settings": {
+              "$id": "82",
+              "HP": 50,
+              "Damage": 10,
+              "EXP": 20,
+              "SpawnWeight": 6
+            }
+          },
+          {
+            "$id": "83",
+            "MonsterName": "DustSprite",
+            "Settings": {
+              "$id": "84",
+              "HP": 150,
+              "Damage": 20,
+              "DodgeChance": 10,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 4
+            }
+          },
+          {
+            "$id": "85",
+            "MonsterName": "ArmoredBug",
+            "Settings": {
+              "$id": "86",
+              "HP": 999,
+              "Damage": 50,
+              "DodgeChance": 100,
+              "SpawnWeight": 5
+            }
+          },
+          {
+            "$id": "87",
+            "MonsterName": "RoyalSerpent",
+            "Settings": {
+              "$id": "88",
+              "HP": 450,
+              "Damage": 48,
+              "Defense": 1,
+              "DodgeChance": 10,
+              "EXP": 100,
+              "RelatedSkill": "Combat",
+              "Segments": 15,
+              "SpawnWeight": 8,
+              "Loot": [
+                "DTZ.DowntownZuzuCP_SerpentFragment"
+              ]
+            }
+          },
+          {
+            "$id": "89",
+            "MonsterName": "PepperRex",
+            "Settings": {
+              "$id": "90",
+              "HP": 400,
+              "Damage": 15,
+              "Defense": 1,
+              "DodgeChance": 5,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 3
+            }
+          },
+          {
+            "$id": "91",
+            "MonsterName": "CarbonGhost",
+            "Settings": {
+              "$id": "92",
+              "HP": 250,
+              "Damage": 45,
+              "Defense": 0,
+              "DodgeChance": 15,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 4
+            }
+          }
+        ],
+        "UniqueAreaID": "Custom_DTZ_OasisCaveMobs",
+        "MapName": "Custom_DTZ_OasisCave",
+        "MinimumSpawnsPerDay": 0,
+        "MaximumSpawnsPerDay": 250,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "93",
+          "StartTime": 600,
+          "EndTime": 2600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "94",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "95"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "$id": "96",
+        "MonsterTypes": [
+          {
+            "$id": "97",
+            "MonsterName": "Bat",
+            "Settings": {
+              "$id": "98",
+              "HP": 50,
+              "Damage": 10,
+              "EXP": 20,
+              "SpawnWeight": 6
+            }
+          },
+          {
+            "$id": "99",
+            "MonsterName": "DustSprite",
+            "Settings": {
+              "$id": "100",
+              "HP": 150,
+              "Damage": 20,
+              "DodgeChance": 10,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 4
+            }
+          },
+          {
+            "$id": "101",
+            "MonsterName": "ArmoredBug",
+            "Settings": {
+              "$id": "102",
+              "HP": 999,
+              "Damage": 50,
+              "DodgeChance": 100,
+              "SpawnWeight": 5
+            }
+          },
+          {
+            "$id": "103",
+            "MonsterName": "RoyalSerpent",
+            "Settings": {
+              "$id": "104",
+              "HP": 450,
+              "Damage": 48,
+              "Defense": 1,
+              "DodgeChance": 10,
+              "EXP": 100,
+              "RelatedSkill": "Combat",
+              "Segments": 15,
+              "SpawnWeight": 15,
+              "Loot": [
+                "DTZ.DowntownZuzuCP_SerpentFragment"
+              ]
+            }
+          },
+          {
+            "$id": "105",
+            "MonsterName": "PepperRex",
+            "Settings": {
+              "$id": "106",
+              "HP": 400,
+              "Damage": 35,
+              "Defense": 1,
+              "DodgeChance": 5,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 5
+            }
+          },
+          {
+            "$id": "107",
+            "MonsterName": "CarbonGhost",
+            "Settings": {
+              "$id": "108",
+              "HP": 250,
+              "Damage": 45,
+              "Defense": 0,
+              "DodgeChance": 15,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 4
+            }
+          }
+        ],
+        "UniqueAreaID": "Custom_DTZ_OasisCaveUnderMobs",
+        "MapName": "Custom_DTZ_OasisCaveUnder",
+        "MinimumSpawnsPerDay": 50,
+        "MaximumSpawnsPerDay": 300,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "109",
+          "StartTime": 600,
+          "EndTime": 2600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "110",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "111"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "$id": "112",
+        "MonsterTypes": [
+          {
+            "$id": "113",
+            "MonsterName": "Bat",
+            "Settings": {
+              "$id": "114",
+              "HP": 50,
+              "Damage": 10,
+              "EXP": 20,
+              "SpawnWeight": 6
+            }
+          },
+          {
+            "$id": "115",
+            "MonsterName": "DustSprite",
+            "Settings": {
+              "$id": "116",
+              "HP": 150,
+              "Damage": 20,
+              "DodgeChance": 10,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 4
+            }
+          },
+          {
+            "$id": "117",
+            "MonsterName": "ArmoredBug",
+            "Settings": {
+              "$id": "118",
+              "HP": 999,
+              "Damage": 50,
+              "DodgeChance": 100,
+              "SpawnWeight": 5
+            }
+          },
+          {
+            "$id": "119",
+            "MonsterName": "RoyalSerpent",
+            "Settings": {
+              "$id": "120",
+              "HP": 1000,
+              "Damage": 48,
+              "Defense": 1,
+              "DodgeChance": 10,
+              "EXP": 100,
+              "RelatedSkill": "Combat",
+              "Segments": 15,
+              "SpawnWeight": 12,
+              "Loot": [
+                "DTZ.DowntownZuzuCP_SerpentFragment"
+              ]
+            }
+          },
+          {
+            "$id": "121",
+            "MonsterName": "PepperRex",
+            "Settings": {
+              "$id": "122",
+              "HP": 1000,
+              "Damage": 35,
+              "Defense": 1,
+              "DodgeChance": 5,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 5
+            }
+          },
+          {
+            "$id": "123",
+            "MonsterName": "CarbonGhost",
+            "Settings": {
+              "$id": "124",
+              "HP": 650,
+              "Damage": 45,
+              "Defense": 0,
+              "DodgeChance": 15,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 4
+            }
+          },
+          {
+            "$id": "125",
+            "MonsterName": "HotHead",
+            "Settings": {
+              "$id": "126",
+              "HP": 250,
+              "Damage": 50,
+              "Defense": 1,
+              "DodgeChance": 10,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 8
+            }
+          }
+        ],
+        "UniqueAreaID": "Custom_DTZ_OasisCaveLavaMobs",
+        "MapName": "Custom_DTZ_OasisCaveLava",
+        "MinimumSpawnsPerDay": 50,
+        "MaximumSpawnsPerDay": 100,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "127",
+          "StartTime": 600,
+          "EndTime": 2600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "128",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "129"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "$id": "130",
+        "MonsterTypes": [
+          {
+            "$id": "131",
+            "MonsterName": "Bat",
+            "Settings": {
+              "$id": "132",
+              "HP": 50,
+              "Damage": 10,
+              "EXP": 20,
+              "SpawnWeight": 6
+            }
+          },
+          {
+            "$id": "133",
+            "MonsterName": "DustSprite",
+            "Settings": {
+              "$id": "134",
+              "HP": 150,
+              "Damage": 20,
+              "DodgeChance": 10,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 4
+            }
+          },
+          {
+            "$id": "135",
+            "MonsterName": "RoyalSerpent",
+            "Settings": {
+              "$id": "136",
+              "HP": 450,
+              "Damage": 15,
+              "Defense": 1,
+              "DodgeChance": 10,
+              "EXP": 100,
+              "RelatedSkill": "Combat",
+              "Segments": 15,
+              "SpawnWeight": 1,
+              "Loot": [
+                "DTZ.DowntownZuzuCP_SerpentFragment"
+              ]
+            }
+          },
+          {
+            "$id": "137",
+            "MonsterName": "CarbonGhost",
+            "Settings": {
+              "$id": "138",
+              "HP": 250,
+              "Damage": 45,
+              "Defense": 0,
+              "DodgeChance": 15,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 3
+            }
+          }
+        ],
+        "UniqueAreaID": "Custom_DTZ_OasisCaveDarkMobs",
+        "MapName": "Custom_DTZ_OasisCaveDark",
+        "MinimumSpawnsPerDay": 50,
+        "MaximumSpawnsPerDay": 100,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "139",
+          "StartTime": 600,
+          "EndTime": 2600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 15,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "140",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "141"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "$id": "142",
+        "MonsterTypes": [
+          {
+            "$id": "143",
+            "MonsterName": "Bat",
+            "Settings": {
+              "$id": "144",
+              "HP": 50,
+              "Damage": 10,
+              "EXP": 20,
+              "SpawnWeight": 6
+            }
+          },
+          {
+            "$id": "145",
+            "MonsterName": "DustSprite",
+            "Settings": {
+              "$id": "146",
+              "HP": 150,
+              "Damage": 20,
+              "DodgeChance": 10,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 4
+            }
+          },
+          {
+            "$id": "147",
+            "MonsterName": "RoyalSerpent",
+            "Settings": {
+              "$id": "148",
+              "HP": 450,
+              "Damage": 15,
+              "Defense": 1,
+              "DodgeChance": 10,
+              "EXP": 100,
+              "RelatedSkill": "Combat",
+              "Segments": 15,
+              "SpawnWeight": 1,
+              "Loot": [
+                "DTZ.DowntownZuzuCP_SerpentFragment"
+              ]
+            }
+          },
+          {
+            "$id": "149",
+            "MonsterName": "CarbonGhost",
+            "Settings": {
+              "$id": "150",
+              "HP": 250,
+              "Damage": 45,
+              "Defense": 0,
+              "DodgeChance": 15,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 3
+            }
+          },
+          {
+            "$id": "151",
+            "MonsterName": "PepperRex",
+            "Settings": {
+              "$id": "152",
+              "HP": 400,
+              "Damage": 15,
+              "Defense": 1,
+              "DodgeChance": 5,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 8
+            }
+          },
+          {
+            "$id": "153",
+            "MonsterName": "GreenSlime",
+            "Settings": {
+              "$id": "154",
+              "HP": 100,
+              "Damage": 10,
+              "Defense": 1,
+              "DodgeChance": 5,
+              "EXP": 50,
+              "RelatedSkill": "Combat",
+              "SpawnWeight": 10
+            }
+          }
+        ],
+        "UniqueAreaID": "Custom_DTZ_OasisCaveJungle",
+        "MapName": "Custom_DTZ_OasisCaveJungle",
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 55,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "$id": "155",
+          "StartTime": 600,
+          "EndTime": 2600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "$id": "156",
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "$id": "157"
+          },
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      }
+    ],
+    "CustomTileIndex": []
+  },
+  "QuarryTileIndex": [
+    556,
+    558,
+    583,
+    606,
+    607,
+    608,
+    630,
+    635,
+    636,
+    680,
+    681,
+    685
+  ],
+  "File_Conditions": {
+    "$id": "158",
+    "FarmTypes": [],
+    "FarmerNames": [],
+    "SaveFileNames": [],
+    "OtherMods": {
+      "$id": "159"
+    }
+  }
+}

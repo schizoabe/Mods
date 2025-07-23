@@ -1,0 +1,76 @@
+{
+	"Changes": [
+		//Redberry Seeds changes
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"When": {
+				"HasMod": "furyx639.CustomBush",
+				"Strawberry Bush": true
+			},
+			"Fields": { 
+				"745": {
+					"Price": 500,
+					"DisplayName": "{{i18n:StrawberrySeeds_name}}",
+					"Description": 	"{{i18n:StrawberrySeeds_description}}"
+				}
+			}
+		},
+		//MtnBrew Seeds changes
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"When": {
+				"HasMod": "furyx639.CustomBush",
+				"Cranberry Bush": true
+			},
+			"Fields": { 
+				"493": {
+					"Price": 800,
+					"DisplayName": "{{i18n:CranberrySeeds_name}}",
+					"Description": 	"{{i18n:CranberrySeeds_description}}"
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"SeedShop",
+				"Items"
+			],
+			"When": {
+				"HasMod": "furyx639.CustomBush",
+				"Cranberry Bush": true
+			},
+			"Fields": {
+				"(O)493": {
+					"Condition": "SEASON spring summer fall winter",
+					"ApplyProfitMargins": false,
+				},
+			},
+			"MoveEntries": [
+				{
+					"Id": "(O)493",
+					"BeforeId": "(O)628"
+				}
+			]
+		},
+		//MtnBrew Seeds changes
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"When": {
+				"HasMod": "furyx639.CustomBush",
+				"Starfruit Bush": true
+			},
+			"Fields": { 
+				"486": {
+					"Price": 2000,
+					"DisplayName": "{{i18n:StarfruitSeeds_name}}",
+					"Description": 	"{{i18n:StarfruitSeeds_description}}"
+				}
+			}
+		},
+	]
+}

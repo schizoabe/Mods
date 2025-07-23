@@ -1,0 +1,38 @@
+{
+	"Changes": [
+        
+        //Sandy
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Sandy_{{Season}}",
+            "FromFile": "assets/{{SandyPortrait}}/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/Sandy_FlowerDance , Portraits/Sandy_SpiritsEve",
+            "FromFile": "assets/{{SandyPortrait}}/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"          
+        },
+
+        //Redunant But Will Fix any issues of portraits not showing up for Temporary Actor Calls within SVE
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Sandy",
+            "FromFile": "assets/{{SandyPortrait}}/Sandy_{{Season}}.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        }
+
+    ]
+}

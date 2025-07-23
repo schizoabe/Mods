@@ -1,0 +1,881 @@
+{
+	"Changes":[
+	{
+		"LogName": "Load Objects",
+		"Action": "Load",
+		"Target": "Mods/kath.cosmos/Objects",
+		"FromFile": "assets/Items/objects.png"
+	},
+//Adding the objects
+	{
+		"LogName": "Add Objects",
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"Entries": {
+			"Cosmos.Meteorite1":{
+				"Name": "Cosmos.Meteorite1",
+				"DisplayName": "{{i18n:Meteorite.1.Name}}",
+				"Description": "{{i18n:Meteorite.1.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Price": 25,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 0,
+
+				"ContextTags":[
+					"Cosmos_spacerock_item",
+					"mirin_museum_curio"
+				],
+				"CustomData": {"selph.ExtraMachineConfig.SlingshotDamage": 5},
+				"GeodeDropsDefaultItems": false,
+				"GeodeDrops": [
+					{
+						"Id": "CosmosGemsMinerals",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": -500,
+						"Condition": "RANDOM 0.25, DAYS_PLAYED 112",
+						"PerItemCondition": null,
+						"ItemId": null,
+						"MinStack": 1,
+						"MaxStack": 2,
+						"MaxItems": 1,
+						"RandomItemId": [
+							"(O)Cosmos.Mineral3",
+							"(O)Cosmos.Mineral4"
+						]
+					},
+					{
+						"Id": "GemsMinerals",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": -100,
+						"Condition": "RANDOM 0.1, DAYS_PLAYED 56",
+						"PerItemCondition": "ITEM_CATEGORY Target -2 -12",
+						"ItemId": "RANDOM_ITEMS (O)",
+						"MinStack": 1,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": []
+					},
+					{
+						"Id": "Default",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": 0,
+						"Condition": "MINE_LOWEST_LEVEL_REACHED 40",
+						"PerItemCondition": null,
+						"ItemId": null,
+						"MinStack": 1,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": [
+							"(O)535", //geode
+							"(O)749" //omni geode
+						]
+					},
+					{
+						"Id": "Fallback",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": 100,
+						"Condition": null,
+						"PerItemCondition": null,
+						"ItemId": null,
+						"MinStack": 5,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": [
+							"(O)390", //stone
+							"(O)378", //copper ore
+							"(O)380", //iron ore
+							"(O)330" //clay
+						]
+					}
+				]
+			},
+			"Cosmos.Meteorite2":{
+				"Name": "Cosmos.Meteorite2",
+				"DisplayName": "{{i18n:Meteorite.2.Name}}",
+				"Description": "{{i18n:Meteorite.2.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Price": 25,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 1,
+
+				"ContextTags":[
+					"Cosmos_spacerock_item",
+					"Cosmos_starfragment_item",
+					"mirin_museum_curio"
+				],
+				"CustomData": {"selph.ExtraMachineConfig.SlingshotDamage": 5},
+				"GeodeDropsDefaultItems": false,
+				"GeodeDrops": [
+					{
+						"Id": "CosmosGemsMinerals",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": -500,
+						"Condition": "RANDOM 0.25, DAYS_PLAYED 112",
+						"PerItemCondition": null,
+						"ItemId": null,
+						"MinStack": 1,
+						"MaxStack": 2,
+						"MaxItems": 1,
+						"RandomItemId": [
+							"(O)Cosmos.Mineral5"
+						]
+					},
+					{
+						"Id": "StarFragments",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": -100,
+						"Condition": "{{HasMod|contains=Airyn.StarFragments}}, RANDOM 0.25, DAYS_PLAYED 56",
+						"PerItemCondition": "ITEM_CONTEXT_TAG Target starfragment_item",
+						"ItemId": "RANDOM_ITEMS (O)",
+						"MinStack": 1,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": []
+					},
+					{
+						"Id": "Default",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": 0,
+						"Condition": "MINE_LOWEST_LEVEL_REACHED 40",
+						"PerItemCondition": null,
+						"ItemId": null,
+						"MinStack": 1,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": [
+							"(O)535", //geode
+							"(O)749" //omni geode
+						]
+					},
+					{
+						"Id": "Fallback",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": 100,
+						"PerItemCondition": null,
+						"ItemId": "(O)390",
+						"MinStack": 5,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": []
+					}
+				]
+			},
+			"Cosmos.Meteorite3":{
+				"Name": "Cosmos.Meteorite3",
+				"DisplayName": "{{i18n:Meteorite.3.Name}}",
+				"Description": "{{i18n:Meteorite.3.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Price": 25,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 2,
+
+				"ContextTags":[
+					"Cosmos_spacerock_item",
+					"mirin_museum_curio"
+				],
+				"CustomData": {"selph.ExtraMachineConfig.SlingshotDamage": 5},
+				"GeodeDropsDefaultItems": false,
+				"GeodeDrops": [
+					{
+						"Id": "CosmosGemsMinerals",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": -500,
+						"Condition": "RANDOM 0.25, DAYS_PLAYED 112",
+						"PerItemCondition": null,
+						"ItemId": null,
+						"MinStack": 1,
+						"MaxStack": 2,
+						"MaxItems": 1,
+						"RandomItemId": [
+							"(O)Cosmos.Mineral1",
+							"(O)Cosmos.Mineral2"
+						]
+					},
+					{
+						"Id": "GemsMinerals",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": -100,
+						"Condition": "RANDOM 0.1, DAYS_PLAYED 56",
+						"PerItemCondition": "ITEM_CATEGORY Target -2 -12",
+						"ItemId": "RANDOM_ITEMS (O)",
+						"MinStack": 1,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": []
+					},
+					{
+						"Id": "Default",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": 0,
+						"Condition": "MINE_LOWEST_LEVEL_REACHED 40",
+						"PerItemCondition": null,
+						"ItemId": null,
+						"MinStack": 1,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": [
+							"(O)535", //geode
+							"(O)749" //omni geode
+						]
+					},
+					{
+						"Id": "Fallback",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": 100,
+						"Condition": null,
+						"PerItemCondition": null,
+						"ItemId": null,
+						"MinStack": 5,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": [
+							"(O)390", //stone
+							"(O)378", //copper ore
+							"(O)380", //iron ore
+							"(O)330" //clay
+						]
+					}
+				]
+			},
+			"Cosmos.Meteorite4":{
+				"Name": "Cosmos.Meteorite4",
+				"DisplayName": "{{i18n:Meteorite.4.Name}}",
+				"Description": "{{i18n:Meteorite.4.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Price": 25,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 3,
+
+				"ContextTags":[
+					"Cosmos_spacerock_item",
+					"Cosmos_starfragment_item",
+					"mirin_museum_curio"
+				],
+				"CustomData": {"selph.ExtraMachineConfig.SlingshotDamage": 5},
+				"GeodeDropsDefaultItems": false,
+				"GeodeDrops": [
+					{
+						"Id": "CosmosMushroom",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": -500,
+						"Condition": "RANDOM 0.25",
+						"PerItemCondition": null,
+						"ItemId": "(O)Cosmos.Mushroom",
+						"MinStack": 1,
+						"MaxStack": 2,
+						"MaxItems": 1,
+						"RandomItemId": []
+					},
+					{
+						"Id": "CosmosGemsMinerals",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": -500,
+						"Condition": "RANDOM 0.25, DAYS_PLAYED 112",
+						"PerItemCondition": null,
+						"ItemId": "(O)Cosmos.Mineral6",
+						"MinStack": 1,
+						"MaxStack": 2,
+						"MaxItems": 1,
+						"RandomItemId": []
+					},
+					{
+						"Id": "StarFragments",
+						"Chance": 0.75,
+						"SetFlagOnPickup": null,
+						"Precedence": -100,
+						"Condition": "{{HasMod|contains=Airyn.StarFragments}}, RANDOM 0.25, DAYS_PLAYED 56",
+						"PerItemCondition": "ITEM_CONTEXT_TAG Target starfragment_item",
+						"ItemId": "RANDOM_ITEMS (O)",
+						"MinStack": 1,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": []
+					},
+					{
+						"Id": "Default",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": 0,
+						"Condition": "MINE_LOWEST_LEVEL_REACHED 40",
+						"PerItemCondition": null,
+						"ItemId": null,
+						"MinStack": 1,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": [
+							"(O)535", //geode
+							"(O)749" //omni geode
+						]
+					},
+					{
+						"Id": "Fallback",
+						"Chance": 1.0,
+						"SetFlagOnPickup": null,
+						"Precedence": 100,
+						"Condition": null,
+						"PerItemCondition": null,
+						"ItemId": null,
+						"MinStack": 5,
+						"MaxStack": -1,
+						"MaxItems": 1,
+						"RandomItemId": [
+							"(O)390", //stone
+							"(O)378", //copper ore
+							"(O)380", //iron ore
+							"(O)330", //clay
+							"(O)386", //iridium ore
+							"(O)770" //mixed seeds
+						]
+					}
+				]
+			},
+			"Cosmos.Mushroom":{
+				"Name": "Cosmos.Mushroom",
+				"DisplayName": "{{i18n:Mushroom.Name}}",
+				"Description": "{{i18n:Mushroom.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Edibility": 2,
+				"Price": 5,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 4,
+				"ContextTags":[
+					"Cosmos_spacerock_outputitem_mushroom",
+					"mirin_museum_curio",
+					"edible_mushroom"
+				],
+				"CustomData": {
+					"selph.ExtraMachineConfig.SlingshotDamage": 5,
+					"selph.ExtraMachineConfig.SlingshotExplosiveRadius": 3,
+					"selph.ExtraMachineConfig.SlingshotExplosiveDamage": 10
+				}
+			},
+			"Cosmos.Mineral1":{
+				"Name": "Cosmos.Mineral1",
+				"DisplayName": "{{i18n:Mineral.1.Name}}",
+				"Description": "{{i18n:Mineral.1.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Price": 75,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 5,
+
+				"ContextTags":[
+					"Cosmos_spacerock_outputitem",
+					"mirin_museum_curio",
+					"crystalarium_cosmos"
+				]
+			},
+			"Cosmos.Mineral2":{
+				"Name": "Cosmos.Mineral2",
+				"DisplayName": "{{i18n:Mineral.2.Name}}",
+				"Description": "{{i18n:Mineral.2.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Price": 90,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 6,
+
+				"ContextTags":[
+					"Cosmos_spacerock_outputitem",
+					"mirin_museum_curio",
+					"crystalarium_cosmos"
+				]
+			},
+			"Cosmos.Mineral3":{
+				"Name": "Cosmos.Mineral3",
+				"DisplayName": "{{i18n:Mineral.3.Name}}",
+				"Description": "{{i18n:Mineral.3.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Price": 50,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 7,
+
+				"ContextTags":[
+					"Cosmos_spacerock_outputitem",
+					"mirin_museum_curio",
+					"crystalarium_cosmos"
+				]
+			},
+			"Cosmos.Mineral4":{
+				"Name": "Cosmos.Mineral4",
+				"DisplayName": "{{i18n:Mineral.4.Name}}",
+				"Description": "{{i18n:Mineral.4.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Price": 45,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 8,
+
+				"ContextTags":[
+					"Cosmos_spacerock_outputitem",
+					"mirin_museum_curio",
+					"crystalarium_cosmos"
+				]
+			},
+			"Cosmos.Mineral5":{
+				"Name": "Cosmos.Mineral5",
+				"DisplayName": "{{i18n:Mineral.5.Name}}",
+				"Description": "{{i18n:Mineral.5.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Price": 65,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 9,
+
+				"ContextTags":[
+					"Cosmos_spacerock_outputitem",
+					"mirin_museum_curio",
+					"crystalarium_cosmos"
+				]
+			},
+			"Cosmos.Mineral6":{
+				"Name": "Cosmos.Mineral6",
+				"DisplayName": "{{i18n:Mineral.6.Name}}",
+				"Description": "{{i18n:Mineral.6.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Price": 95,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 14,
+
+				"ContextTags":[
+					"Cosmos_spacerock_outputitem",
+					"crystalarium_cosmos",
+					"mirin_museum_curio"
+				],
+				"CustomData": {"selph.ExtraMachineConfig.SlingshotDamage": 25}
+			},
+            //POWER ITEMS
+			"Cosmos.PowerBook":{
+				"Name": "Cosmos.PowerBook",
+				"DisplayName": "{{i18n:Book.Name}}",
+				"Description": "{{i18n:Book.Description}}",
+				"Type": "asdf",
+				"Category": -102,
+				"Price": 0,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 13,
+
+				"ContextTags":[
+					"book_item",
+					"spu_book_color",
+					"not_giftable",
+					"color_dark_blue",
+					"Cosmos_items_book"
+				],
+				"CustomFields": {
+						"Spiderbuttons.SpecialPowerUtilities/Books/Message": "{{i18n:BookReading}}",
+						"Spiderbuttons.SpecialPowerUtilities/Books/Color": "#05093A"
+				}	
+			},
+			"Cosmos.StarfallIcon":{
+				"Name": "Cosmos.StarfallIcon",
+				"DisplayName": "{{i18n:StarfallIcon.Name}}",
+				"Description": "{{i18n:StarfallIcon.Description}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Edibility": 1,
+				"Price": 0,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 12,
+
+				"ContextTags":[
+					"not_museum_donatable",
+					"crystalarium_cosmos",
+					"not_giftable",
+					"not_placeable",
+					"color_white",
+					"Cosmos_items_poweritem"
+				],
+				"CustomFields": {}	
+			},
+			"Cosmos.IridiumiteIcon":{
+				"Name": "Cosmos.IridiumiteIcon",
+				"DisplayName": "{{i18n:Mineral.6.Name}}",
+				"Description": "{{i18n:Mineral.6.Description2}}",
+				"Type": "Basic",
+				"Category": 0,
+				"Edibility": 1,
+				"Price": 0,
+				"ExcludeFromShippingCollection": true,
+				"ExcludeFromRandomSale": true,
+				"Texture": "Mods/kath.cosmos/Objects",
+				"SpriteIndex": 14,
+
+				"ContextTags":[
+					"not_museum_donatable",
+					"crystalarium_cosmos",
+					"not_giftable",
+					"not_placeable",
+					"color_purple",
+					"color_blue",
+					"Cosmos_items_poweritem"
+				]
+			}
+		}
+	},
+//Adding the extras	
+	{
+		"LogName": "Add Categories",
+		"Action": "EditData",
+		"When":{"HasMod":"spacechase0.SpaceCore", "HasMod|contains=kath.museum":false},
+		"Target":"spacechase0.SpaceCore/ObjectExtensionData",
+		"Entries": {
+			"Cosmos.Meteorite1":{
+				"CategoryTextOverride": "{{i18n:CategoryChange}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.Meteorite2":{
+				"CategoryTextOverride": "{{i18n:CategoryChange}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.Meteorite3":{
+				"CategoryTextOverride": "{{i18n:CategoryChange}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.Meteorite4":{
+				"CategoryTextOverride": "{{i18n:CategoryChange}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.Mineral1":{
+				"CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.Mineral2":{
+				"CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.Mineral3":{
+				"CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.Mineral4":{
+				"CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.Mineral5":{
+				"CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.Mineral6":{
+				"CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.Mushroom":{
+				"CategoryTextOverride": "{{i18n:CategoryChangeBiology}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.PowerBook":{
+				"CanBeTrashed": false,
+				"MaxStackSizeOverride": 1
+			},
+			"Cosmos.StarfallIcon":{
+				"CanBeTrashed": false,
+				"EatenHealthRestoredOverride": 1,
+				"EatenStaminaRestoredOverride": 1,
+				"MaxStackSizeOverride": 1,
+				"CategoryTextOverride": "{{i18n:CategoryChangeStarfall}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			},
+			"Cosmos.IridiumiteIcon":{
+				"CanBeTrashed": false,
+				"EatenHealthRestoredOverride": 1,
+				"EatenStaminaRestoredOverride": 1,
+				"MaxStackSizeOverride": 1,
+				"CategoryTextOverride": "{{i18n:CategoryChangeMineral}}",
+				"CategoryColorOverride": {
+						"R": 153,
+						"G": 163,
+						"B": 186,
+						"A": 255
+				}
+			}
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/TriggerActions",
+		"When": {"HasMod |contains=spacechase0.SpaceCore": true, "HasMod |contains=Spiderbuttons.SpecialPowerUtilities": true},
+		"Entries": {
+			"Cosmos.StarfallIcon.Power": {
+				"Id": "Cosmos.StarfallIcon.Power",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input Cosmos.StarfallIcon",
+				"MarkActionApplied": true,
+				"Actions": [
+					"Spiderbuttons.SpecialPowerUtilities/Actions/SetPowerAvailable Current Cosmos.PowerStars",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Cosmos.Eaten.Power}}\" (O)Cosmos.StarfallIcon",
+					"spacechase0.SpaceCore_PlaySound CosmosBookNoPage false",
+					"AddMail Current CosmosStarfallIcon received"
+				]
+			},
+			"Cosmos.StarfallIcon.Power2": {
+				"Id": "Cosmos.StarfallIcon.Power2",
+				"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+				"Condition": "ITEM_ID Input Cosmos.IridiumiteIcon",
+				"MarkActionApplied": true,
+				"Actions": [
+					"Spiderbuttons.SpecialPowerUtilities/Actions/SetPowerAvailable Current Cosmos.PowerCrystal",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:Cosmos.Eaten.Power2}}\" (O)Cosmos.IridiumiteIcon",
+					"spacechase0.SpaceCore_PlaySound CosmosBookNoPage false",
+					"AddMail Current CosmosIridiumiteIcon received"
+				]
+			}
+		}
+	},
+	{
+		"LogName": "Add More Mail Flags",
+		"Action": "EditData",
+		"Target": "Data/Mail",
+		"Entries": {
+			"CosmosStarfallIcon": null,
+			"CosmosIridiumiteIcon": null
+		}
+	},
+//Adding the Power
+	{
+		"LogName": "Add Power Tab",
+		"Action": "EditData",
+		"When":{"HasMod":"Spiderbuttons.SpecialPowerUtilities"},
+		"Target":"Spiderbuttons.SpecialPowerUtilities/PowerTabs",
+		"Entries": {
+			"kath.cosmos": {
+				"TabDisplayName": "{{i18n:CosmosTab}}",
+				"IconPath": "Mods/kath.cosmos/Objects",
+				"IconSourceRect": {
+					"X": 32,
+					"Y": 32,
+					"Width": 16,
+					"Height": 16	
+				}
+			}		
+		}
+	},	
+	{
+		"LogName": "Add Power Data",
+		"Action": "EditData",
+		"Target": "Data/Powers",
+		"When":{"HasMod":"Spiderbuttons.SpecialPowerUtilities"},
+		"Entries": {
+			"Cosmos.PowerBook": {
+				"DisplayName": "{{i18n:CosmosPower.Name}}",
+				"Description": "{{i18n:CosmosPower.Description}}",
+				"TexturePath": "Mods/kath.cosmos/Objects",
+				"TexturePosition": { "X": 48, "Y": 32 },
+				"UnlockedCondition": "PLAYER_STAT Current Cosmos.PowerBook 1",
+				"CustomFields": {
+					"Spiderbuttons.SpecialPowerUtilities/Tab": "kath.cosmos"
+				}
+			},
+			"Cosmos.PowerCrystal": {
+				"DisplayName": "{{i18n:CosmosPower3.Name}}",
+				"Description": "{{i18n:CosmosPower3.Description}}",
+				"TexturePath": "Mods/kath.cosmos/Objects",
+				"TexturePosition": { "X": 64, "Y": 32 },
+				"UnlockedCondition": "PLAYER_HAS_RUN_TRIGGER_ACTION Current Cosmos.StarfallIcon.Power2",
+				"CustomFields": {
+					"Spiderbuttons.SpecialPowerUtilities/Tab": "kath.cosmos"
+				}
+			},
+			"Cosmos.PowerStars": {
+				"DisplayName": "{{i18n:CosmosPower2.Name}}",
+				"Description": "{{i18n:CosmosPower2.Description}}",
+				"TexturePath": "Mods/kath.cosmos/Objects",
+				"TexturePosition": { "X": 32, "Y": 32 },
+				"UnlockedCondition": "PLAYER_HAS_RUN_TRIGGER_ACTION Current Cosmos.StarfallIcon.Power",
+				"CustomFields": {
+					"Spiderbuttons.SpecialPowerUtilities/Tab": "kath.cosmos"
+				}
+			}
+		}
+	},
+
+	{
+		"Action": "EditData",
+		"Target": "Mods/mistyspring.ItemExtensions/Data",
+		"When": {"HasMod": "mistyspring.ItemExtensions"},
+		"Entries": {
+			"(O)Cosmos.Mushroom": {
+				"Light":{
+					"Size": 1.5,
+					"Hex": "#cafaef",
+					"R": 202,
+					"G": 250,
+					"B": 239,
+					"Transparency": 0.9
+				}
+			},
+			"(O)Cosmos.StarfallIcon": {
+				"FoodDialogue": {
+					"ConsumeQuestion":"{{i18n: EatCosmos}}",
+					"CannotConsume":"{{i18n: EatCosmosNot}}",
+					"Yes": "{{i18n: EatCosmosYes}}",
+					"No":"{{i18n: EatCosmosNo}}" 
+				},
+				"Light":{
+					"Size": 1.5,
+					"Hex": "#cafaef",
+					"R": 202,
+					"G": 250,
+					"B": 239,
+					"Transparency": 0.9
+				}
+			},
+			"(O)Cosmos.IridiumiteIcon": {
+				"FoodDialogue": {
+					"ConsumeQuestion":"{{i18n: EatCosmos}}",
+					"CannotConsume":"{{i18n: EatCosmosNot}}",
+					"Yes": "{{i18n: EatCosmosYes}}",
+					"No":"{{i18n: EatCosmosNo}}" 
+				},
+				"Light":{
+					"Size": 1.5,
+					"Hex": "#a9dbfc",
+					"R": 169,
+					"G": 219,
+					"B": 252,
+					"Transparency": 0.9
+				}
+			}
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/Objects",
+		"When": {"HasMod": "MindMeltMax.GlowBuff"},
+		"Priority": "Late",
+		"TargetField": ["Cosmos.Mushroom"],
+		"Entries": {
+		  	"Buffs": [
+				{
+					"BuffId": "MindMeltMax.GlowBuff/Glow",
+					"Duration": 240,
+					"CustomFields": {
+						"MindMeltMax.GlowBuff/GlowTexture": "4",
+						"MindMeltMax.GlowBuff/GlowRadius": 1,
+						"MindMeltMax.GlowBuff/GlowColor": "202,250,239",
+						"MindMeltMax.GlowBuff/DisplayName": "{{i18n:Glow.Name}}",
+						"MindMeltMax.GlowBuff/Description": "{{i18n:Glow.Description}}",
+						"MindMeltMax.GlowBuff/HoverText": "{{i18n:Glow.Hover}}"
+					}
+				}
+		  	]
+		}
+  	}	
+	]
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  

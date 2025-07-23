@@ -1,0 +1,129 @@
+{
+	"Changes":[
+		{
+			"LogName": "Load Telescope Furniture",
+			"Action": "Load",
+			"Target": "Mods/kath.cosmos/Telescope",
+			"FromFile": "assets/Telescope/furniture.png"
+		},
+		{
+			"LogName": "Telescope Texture",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Telescope",
+			"FromFile": "assets/Telescope/furniture.png",
+			"FromArea": {"X": 16, "Y": 0, "Width": 16, "Height": 32},
+			"ToArea": {"X": 0, "Y": 0, "Width": 16, "Height": 32},
+			"When": {"WoodGold":"Vanilla"}
+	    },
+	//Adding the furniture
+		{
+			"LogName": "Add Furniture",
+			"Action": "EditData",
+			"Target": "Data/Furniture",
+			"Entries": {
+				"KathCosmos_Telescope":"KathCosmos_Telescope/other/1 2/1 1/2/35000/2/{{i18n: KathCosmos_Telescope.Name}}/0/Mods\\kath.cosmos\\Telescope/false/cosmos_telescope_furniture"
+			}
+		},
+	//Adding the function	
+		{
+			"LogName": "Add Image to Telescope",
+			"Action": "EditData",
+			"Target":"sophie.Calcifer/FurnitureActions",
+			"Entries": {
+				"(F)KathCosmos_Telescope": {
+					"TileActions": [
+						{
+						"TileAction": "MEEP_CloseupInteraction_Image Mods/kath.cosmos/Galaxy 0 0 320 208"
+						}
+					]
+				}
+			}
+		},
+		{
+			"LogName": "Add Image to Telescope - Storm",
+			"Action": "EditData",
+			"Target":"sophie.Calcifer/FurnitureActions",
+			"When": {"Weather": "{{LightningWeather}}", "NoFlash": "false"},
+			"Entries": {
+				"(F)KathCosmos_Telescope": {
+					"TileActions": [
+						{
+						"TileAction": "MEEP_CloseupInteraction_Image Mods/kath.cosmos/GalaxyStorm 0 0 320 208"
+						}
+					]
+				}
+			}
+		},
+		{
+			"LogName": "Add Image to Telescope - Storm",
+			"Action": "EditData",
+			"Target":"sophie.Calcifer/FurnitureActions",
+			"When": {"Weather": "{{LightningWeather}}", "NoFlash": "true"},
+			"Entries": {
+				"(F)KathCosmos_Telescope": {
+					"TileActions": [
+						{
+						"TileAction": "MEEP_CloseupInteraction_Image Mods/kath.cosmos/GalaxyStormFixed 0 0 320 208"
+						}
+					]
+				}
+			}
+		},
+		{
+			"LogName": "Add Text to Telescope when Time",
+			"Action": "EditData",
+			"When": {"Time": "{{Range: 0600,1430}}", "Weather |contains={{CannotSee}},{{LightningWeather}},{{RainWeather}}":false},
+			"Update": "OnTimeChange",
+			"Target":"sophie.Calcifer/FurnitureActions",
+			"Entries": {
+				"(F)KathCosmos_Telescope": {
+					"TileActions": [
+						{
+						"TileAction": "Message \"No.View.Cosmos\""
+						}	
+					]
+				}
+			}
+		},	
+		{
+			"LogName": "Add Text to Telescope when Weather",
+			"Action": "EditData",
+			"When": {"Weather": "{{CannotSee}}"},
+			"Target":"sophie.Calcifer/FurnitureActions",
+			"Entries": {
+				"(F)KathCosmos_Telescope": {
+					"TileActions": [
+						{
+						"TileAction": "Message \"No.Stars.Cosmos\""
+						}	
+					]
+				}
+			}
+		},
+	
+		//Robin
+		{
+			"LogName": "Add Furniture to Robin",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+            "TargetField": [ "Carpenter", "Items" ],
+			"Entries": {
+				"KathCosmos_Telescope": {
+                    "Id": "KathCosmos_Telescope",
+                    "ItemId": "(F)KathCosmos_Telescope",
+                    "Price": 35000,
+					"Condition": "DAYS_PLAYED 14"
+                }
+			}		
+		}			
+	]
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  

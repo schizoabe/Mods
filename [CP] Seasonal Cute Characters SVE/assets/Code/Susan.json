@@ -1,0 +1,80 @@
+{
+	"Changes": [
+        
+        //Susan
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Susan_{{Season}}",
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall"
+            }            
+        },
+
+        {
+            "LogName": "Winter Variants",
+            "Action": "EditImage",
+            "Target": "Portraits/Susan_{{Season}}_Indoor , Portraits/Susan_{{Season}}_Outdoor", 
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "winter"
+            }            
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/Susan_FlowerDance , Portraits/Susan_SpiritsEve",
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"          
+        },
+        {
+            "LogName": "Beach",
+            "Action": "EditImage",
+            "Target": "Portraits/Susan_Beach",
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"          
+        },
+
+        //Redunant But Will Fix any issues of portraits not showing up for Temporary Actor Calls within SVE
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Susan",
+            "FromFile": "assets/BunBunz/Susan_{{Season}}.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall"
+            }            
+        },
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Susan",
+            "FromFile": "assets/BunBunz/Susan_Winter_Outdoor.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "winter",
+                "IsOutdoors": "true"
+            }            
+        },
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Susan",
+            "FromFile": "assets/BunBunz/Susan_Winter_Indoor.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "winter",
+                "IsOutdoors": "false"
+            }            
+        }
+
+    ]
+}

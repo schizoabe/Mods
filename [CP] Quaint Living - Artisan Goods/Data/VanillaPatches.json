@@ -1,0 +1,41 @@
+{
+    "Changes": [
+
+//VANILLA TAG PATCH
+        {
+            "LogName": "Vanilla Tag Edit - Fairy Rose",
+            "Action": "EditData",
+            "Target": "Data/ObjectContextTags",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Fairy Rose"],
+					"Value": "edible_flower_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Fairy Rose"],
+					"Value": "aromatic_flower_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Poppy"],
+					"Value": "aromatic_flower_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Sunflower"],
+					"Value": "edible_flower_item",
+					"Delimiter": ", "
+				},
+			]
+        }    
+
+		
+		
+		
+     ]
+}

@@ -1,0 +1,2395 @@
+{
+	"Format": "2.0.0", 
+	
+	//Set How children call Farmer and Spouse
+"ConfigSchema": {
+       "PlayerTitle": {
+            "Default": "Daddy"
+        },
+		"SpouseTitle": {
+            "Default": "Mommy"
+        },
+		"VanillaDarkSkinToddler": {
+            "AllowValues": "true, false",
+            "Default": "false"
+		},
+		"VanillaDarkSkinToddlerGirl": {
+            "AllowValues": "true, false",
+            "Default": "false"
+		},
+		"AlternativeTextureToddlerSprites": {
+            "AllowValues": "true, false",
+            "Default": "false"
+		},
+		"GirlName": {
+            "Default": "girl"
+		},
+		"BoyName": {
+            "Default": "boy"
+		},
+		"UsePortraitMOD": {
+            "AllowValues": "true, false",
+            "Default": "false"
+		},
+    },	
+	
+    "DynamicTokens": [
+	
+	//Dynamic Tokens for children gender in dialogues- Credits to Jello  //{{Baby1Gender}}  //{{Toddler1Skin}}
+				{
+            "Name": "Baby1Gender",
+            "Value": "",
+        },
+
+				{
+            "Name": "Baby2Gender",
+            "Value": "",
+        },
+
+				{
+            "Name": "Baby1Gender",
+            "Value": "_girl",
+						"When": {"ChildGenders |valueAt=0": "Female"},
+
+        },
+
+				{
+            "Name": "Baby2Gender",
+            "Value": "_girl",
+						"When": {"ChildGenders |valueAt=1": "Female"},
+        },	 
+	//Dynamic Tokens for loading toddler sprite according to gender //{{Baby1GenderToddler}}
+				{
+            "Name": "Baby1GenderToddler",
+            "Value": "Toddler",
+			"When": {"ChildGenders |valueAt=0": "Male"},
+        },
+				{
+            "Name": "Baby2GenderToddler",
+            "Value": "Toddler",
+			"When": {"ChildGenders |valueAt=1": "Male"},
+        },
+				{
+            "Name": "Baby1GenderToddler",
+            "Value": "Toddler_Girl",
+						"When": {"ChildGenders |valueAt=0": "Female"},
+
+        },
+				{
+            "Name": "Baby2GenderToddler",
+            "Value": "Toddler_Girl",
+						"When": {"ChildGenders |valueAt=1": "Female"},
+        },			
+		
+	//Dynamic Tokens for dialogue changes for a particular spouse //{{WhenRSV}}		
+			
+		// Kid1 Book Event	
+				{
+            "Name": "SpouseLovesBook",
+            "Value": "",
+        },
+				{
+            "Name": "SpouseLovesBook",
+            "Value": "_Abigail",
+						"When": {"spouse |contains=Abigail": true},
+        },
+				{
+            "Name": "SpouseLovesBook",
+            "Value": "_Penny",
+						"When": {"spouse |contains=Penny": true},
+        },
+				{
+            "Name": "SpouseLovesBook",
+            "Value": "_Flor",
+						"When": {"spouse |contains=Flor": true},
+        },	
+				{
+            "Name": "SpouseLovesBook",
+            "Value": "_Elliott",
+						"When": {"spouse |contains=Elliott": true},
+        },	
+		// Kid 2 Milk Event
+				{
+            "Name": "WhenSpouseIsAbigail",
+            "Value": "",
+        },
+				{
+            "Name": "WhenSpouseIsAbigail",
+            "Value": "_Abigail",
+						"When": {"spouse |contains=Abigail": true},
+        },
+		// Kid 2 Jodi Event
+				{
+            "Name": "WhenSpouseIsSam",
+            "Value": "",
+        },
+				{
+            "Name": "WhenSpouseIsSam",
+            "Value": "_Sam",
+						"When": {"spouse |contains=Sam": true},
+        },
+		//Kid 1 Sleep Event
+				{
+            "Name": "WhenSpouseIsMaruSeb",
+            "Value": "",
+        },
+				{
+            "Name": "WhenSpouseIsMaruSeb",
+            "Value": "_Maru",
+						"When": {"spouse |contains=Maru": true},
+        },
+				{
+            "Name": "WhenSpouseIsMaruSeb",
+            "Value": "_Sebastian",
+						"When": {"spouse |contains=Sebastian": true},
+        },
+		// Kid 2 Penny Event
+				{
+            "Name": "WhenSpouseIsPenny",
+            "Value": "",
+        },
+				{
+            "Name": "WhenSpouseIsPenny",
+            "Value": "_Penny",
+						"When": {"spouse |contains=Penny": true},
+        },
+		// Kid 2 Alex Event
+		{
+            "Name": "WhenSpouseIsAlex",
+            "Value": "",
+        },
+				{
+            "Name": "WhenSpouseIsAlex",
+            "Value": "_Alex",
+						"When": {"spouse |contains=Alex": true},
+        },
+		// Haley and Emily Events
+		{
+            "Name": "WhenSpouseIsHaley",
+            "Value": "",
+        },
+				{
+            "Name": "WhenSpouseIsHaley",
+            "Value": "_Haley",
+						"When": {"spouse |contains=Haley": true},
+        },
+
+
+// When Have MODs
+
+		//Penny Homework
+				{
+            "Name": "WhenRSV",
+            "Value": "",
+        },
+				{
+            "Name": "WhenRSV",
+            "Value": "_RSV",
+						"When": {"HasMod |contains=Rafseazz.RSVCP": true},
+        },
+				//Plush
+				{
+            "Name": "WhenSVE",
+            "Value": "",
+        },
+				{
+            "Name": "WhenSVE",
+            "Value": "_SVE",
+						"When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true},
+        },	
+		
+],
+	
+"Changes": [	
+
+// Load Toddler Portraits  
+	//Boy
+	{
+      "Action": "Load",
+      "Target": "Portraits/Toddler",
+      "FromFile": "assets/Portraits/Toddler.png",
+	  "When": {
+        "UsePortraitMOD": "false",
+	  }
+    },
+	//Girl
+	{
+      "Action": "Load",
+      "Target": "Portraits/Toddler_Girl",
+      "FromFile": "assets/Portraits/Toddler_Girl.png",
+	  "When": {
+        "UsePortraitMOD": "false",
+	  }
+    },
+		
+//Load Vanilla Toddler sprite
+	//Boy
+	{
+      "Action": "EditImage",
+      "Target": "Characters/Toddler",
+      "FromFile": "assets/Toddlers/Toddler_dark.png",
+	  "When": {
+        "VanillaDarkSkinToddler": "true",
+	  }
+    },
+	//Girl
+	{
+      "Action": "EditImage",
+      "Target": "Characters/Toddler_girl",
+      "FromFile": "assets/Toddlers/Toddler_girl_dark.png",
+	  "When": {
+        "VanillaDarkSkinToddlerGirl": "true",
+	  }
+    },
+//Load AT Toddler sprite- need to check on toddler_dark and girl
+	//Boy
+	{
+      "Action": "EditImage",
+      "Target": "Characters/Toddler",
+      "FromFile": "assets/AT Toddlers/Toddler.png",
+	  "When": {
+        "AlternativeTextureToddlerSprites": "true",
+	  }
+    },
+	//Girl
+	{
+      "Action": "EditImage",
+      "Target": "Characters/Toddler_girl",
+      "FromFile": "assets/AT Toddlers/Toddler_girl.png",
+	  "When": {
+        "AlternativeTextureToddlerSprites": "true",
+	  }
+    },	     
+// Load Assets (temporary actors)
+{       //Load Gifts1
+            "LogName": "Load Gifts",
+            "Action": "Load",
+            "Target": "Characters/Gift1IF",
+             "FromFile": "assets/Characters/Gift1_IF.png",
+},
+{       //Load Gifts2
+            "LogName": "Load Gifts",
+            "Action": "Load",
+            "Target": "Characters/Gift2IF",
+             "FromFile": "assets/Characters/Gift2_IF.png",
+},
+{       //Load Baby
+            "LogName": "Load Baby",
+            "Action": "Load",
+            "Target": "Characters/BabyIF",
+             "FromFile": "assets/Characters/Baby_IF.png",
+},
+{       //Load Cookie
+            "LogName": "Load Cookie",
+            "Action": "Load",
+            "Target": "Characters/CookieIF",
+             "FromFile": "assets/Characters/Cookie_IF.png",
+},
+{       //Load Bear Pancake
+            "LogName": "Load Bear Pancake",
+            "Action": "Load",
+            "Target": "Characters/bearpancakeIF",
+             "FromFile": "assets/Characters/bearpancake_IF.png",
+},
+{       //Load Squirrel White
+            "LogName": "Load Squirrel White",
+            "Action": "Load",
+            "Target": "Animals/SquirrelWIF",
+             "FromFile": "assets/Animals/SquirrelW_IF.png",
+},
+{       //Load Penguin
+            "LogName": "Load Penguin",
+            "Action": "Load",
+            "Target": "Animals/PenguinIF ",
+             "FromFile": "assets/Animals/Penguin_IF.png",
+},
+{       //Load PenguinFront
+            "LogName": "Load PenguinFront",
+            "Action": "Load",
+            "Target": "Characters/PenguinFrontIF",
+             "FromFile": "assets/Characters/PenguinFront_IF.png",
+},
+{       //Load Bear Pancake
+            "LogName": "Load Camera",
+            "Action": "Load",
+            "Target": "Characters/CameraIF",
+             "FromFile": "assets/Characters/Camera_IF.png",
+},
+{       //Load Pink Plush
+            "LogName": "Load Camera",
+            "Action": "Load",
+            "Target": "Characters/PlushPinkIF",
+             "FromFile": "assets/Characters/PlushPink_IF.png",
+},
+{       //Load Blue Plush
+            "LogName": "Load Camera",
+            "Action": "Load",
+            "Target": "Characters/PlushBlueIF",
+             "FromFile": "assets/Characters/PlushBlue_IF.png",
+},
+
+//Load Mail
+
+        {
+            "LogName": "Mother Mail",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "MotherMail": "{{i18n:MotherMail}}"
+            }
+        },
+
+// Lasting Conversation Topic Content Pack Patch
+
+{
+			"LogName": "Kid1 1st Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid1_0h": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid1_0h"
+			}
+		},
+{
+			"LogName": "Kid1 2nd Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid1_1h": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid1_1h"
+			}
+		},		
+{
+			"LogName": "Kid1 3rd Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid1_2h": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid1_2h"
+			}
+		},	
+{
+			"LogName": "Kid1 4th Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid1_MV": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid1_MV"
+			}
+		},	
+{
+			"LogName": "Kid1 5th Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid1_3h": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid1_3h"
+			}
+		},	
+{
+			"LogName": "Kid1 6th Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid1_intro1": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid1_intro1"
+			}
+		},	
+{
+			"LogName": "Kid1 ES1 Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid1_ES1": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid1_ES1"
+			}
+		},		
+{
+			"LogName": "Kid1 ES2 Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid1_ES2": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid1_ES2"
+			}
+		},	
+{
+			"LogName": "Kid1 ES3 Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid1_ES3": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid1_ES3"
+			}
+		},			
+{
+			"LogName": "Kid2 1st Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"Kid2_0H": "true"
+			},
+			"When": {
+				"HasConversationTopic": "Kid2_0H"
+			}
+		},		
+{
+			"LogName": "Kid2 2nd Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"Kid2_Milk": "true"
+			},
+			"When": {
+				"HasConversationTopic": "Kid2_Milk"
+			}
+		},	
+{
+			"LogName": "Kid2 3rd Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid2_1h": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid2_1h"
+			}
+		},		
+{
+			"LogName": "Kid2 4th Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid2_Forest": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid2_Forest"
+			}
+		},	
+{
+			"LogName": "Kid2 5th Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid2_3h": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid2_3h"
+			}
+		},		
+{
+			"LogName": "Kid2 6th Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid2_intro": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid2_intro"
+			}
+		},			
+{
+			"LogName": "Kid2 JJ Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"kid2_JJ1": "true"
+			},
+			"When": {
+				"HasConversationTopic": "kid2_JJ1"
+			}
+		},
+{
+			"LogName": "2 Kids Eat Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsEat01": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsEat01"
+			}
+		},		
+{
+			"LogName": "2 Kids Shop Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsShop2": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsShop2"
+			}
+		},	
+{
+			"LogName": "2 Kids Penguin Event",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsPenguin": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsPenguin"
+			}
+		},	
+{
+			"LogName": "2 Kids Torts Event1",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsTort1": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsTort1"
+			}
+		},	
+{
+			"LogName": "2 Kids Torts Event2",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsTort2": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsTort2"
+			}
+		},		
+{
+			"LogName": "2 Kids Torts Event3",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsTort3": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsTort3"
+			}
+		},
+{
+			"LogName": "2 Kids Torts Event4",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsTort4": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsTort4"
+			}
+		},	
+{
+			"LogName": "2 Kids SVE RSV ES Event1",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"Kid2_SRE1": "true"
+			},
+			"When": {
+				"HasConversationTopic": "Kid2_SRE1"
+			}
+		},
+{
+			"LogName": "2 Kids SVE RSV ES Event2",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"Kid2_SRE2": "true"
+			},
+			"When": {
+				"HasConversationTopic": "Kid2_SRE2"
+			}
+		},		
+{
+			"LogName": "2 Kids SVE RSV ES Event3",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"Kid2_SRE3": "true"
+			},
+			"When": {
+				"HasConversationTopic": "Kid2_SRE3"
+			}
+		},
+{
+			"LogName": "2 Kids Homework",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsPHW": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsPHW"
+			}
+		},
+{
+			"LogName": "2 Kids Ice Cream 1",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsIC1": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsIC1"
+			}
+		},		
+{
+			"LogName": "2 Kids Ice Cream 2",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsIC2": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsIC2"
+			}
+		},	
+{
+			"LogName": "2 Kids Plush 1",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsPlush1": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsPlush1"
+			}
+		},	
+{
+			"LogName": "2 Kids Plush 2",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsPlush2": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsPlush2"
+			}
+		},
+{
+			"LogName": "2 Kids Plush 3",
+			"Action": "EditData",
+			"Target": "sophie.ConversationTopics",
+			"Entries": {
+				"TwoKidsPlush3": "true"
+			},
+			"When": {
+				"HasConversationTopic": "TwoKidsPlush3"
+			}
+		},		
+// Kid1 Events
+        {   //Kid1 1st Event (Birth)   - done - need check time
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172420000/t 0610 2600":"wedding/33 18/{{Spouse}} 31 16 0 farmer 32 16 0/addTemporaryActor BabyIF 23 12 31 14 2 false/addConversationTopic kid1_0h 14/addConversationTopic IFKE1 3/skippable/pause 1500/emote farmer 20/pause 500/emote {{Spouse}} 20/pause 500/speak {{Spouse}} \"{{i18n:Kid1_0H_01}}\"/pause 200/faceDirection {{Spouse}} 1/pause 200/faceDirection farmer 3/pause 200/speak {{Spouse}} \"{{i18n:Kid1_0H_02}}\"/emote farmer 32/pause 500/faceDirection {{Spouse}} 0/faceDirection farmer 0/textAboveHead {{Spouse}} \"{{i18n:Kid1_0H_02.1}}\"/pause 2000/emote {{Spouse}} 20 true/emote farmer 20/speak {{Spouse}} \"{{i18n:Kid1_0H_03{{Baby1Gender}}}}\"/faceDirection {{Spouse}} 1 true/faceDirection farmer 3/speak {{Spouse}} \"{{i18n:Kid1_0H_04{{Baby1Gender}}}}\"/emote farmer 32/pause 500/question fork0 \"{{i18n:Kid1_0H_05}}\"/pause 1/speak {{Spouse}} \"{{i18n:Kid1_0H_06}}\"/emote {{Spouse}} 20 true/emote farmer 20/pause 1500/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 0": true
+            },	
+		},	
+				
+		{   //Kid1 2nd Event (Sleep)  - done - need check time
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172420001/e 172420000/t 0610 2600/A IFKE1":"CloudCountry/32 24/{{Spouse}} 23 24 0 farmer 22 24 0/addTemporaryActor BabyIF 23 12 31 14 2 false/addConversationTopic kid1_1h 14/addConversationTopic IFKE2 7/skippable/pause 1000/emote {{Spouse}} 24/emote farmer 24/pause 1000/emote farmer 24/emote {{Spouse}} 24/pause 1000/emote {{Spouse}} 24 true/emote farmer 24/pause 1000/speak {{Spouse}} \"{{i18n:Kid1_1H_01}}\"/emote farmer 24/pause 500/speak {{Spouse}} \"{{i18n:Kid1_1H_02}}\"/speak {{Spouse}} \"{{i18n:Kid1_1H_03}}\"/emote {{Spouse}} 28/speak {{Spouse}} \"{{i18n:Kid1_1H_04}}\"/speak {{Spouse}} \"{{i18n:Kid1_1H{{Baby1Gender}}_05}}\"/pause 200/emote farmer 24/pause 500/emote {{Spouse}} 16/speak {{Spouse}} \"{{i18n:Kid1_1H_06{{WhenSpouseIsMaruSeb}}}}\"/speak {{Spouse}} \"{{i18n:Kid1_1H_07}}\"/pause 200/emote farmer 24/pause 200/faceDirection {{Spouse}} 3 true/pause 500/speak {{Spouse}} \"{{i18n:Kid1_1H_08}}\"/faceDirection farmer 1 true/emote farmer 36/pause 500/emote farmer 32/pause 500/emote {{Spouse}} 20/pause 500/speak {{Spouse}} \"{{i18n:Kid1_1H_09}}\"/pause 500/speak {{Spouse}} \"{{i18n:Kid1_1H_10}}\"/pause 500/emote farmer 16 true/emote {{Spouse}} 16 true/jump farmer 4 true/jump {{Spouse}} 4 true/pause 500/playMusic wedding/speak {{Spouse}} \"{{i18n:Kid1_1H_11}}\"/speak {{Spouse}} \"{{i18n:Kid1_1H_12}}\"/speed farmer 10/speed {{Spouse}} 10/advancedMove farmer false 5 0 0 -3/advancedMove {{Spouse}} false 3 0 0 -3/pause 1000/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 4": true
+            },	
+		},	
+		{   //Kid1 3rd Event (Book) - done
+			"Action":"EditData",
+			"Target":"Data/Events/SeedShop",
+			"Entries":{
+				"172420002/e 172420001/t 0900 1800":"jaunty/20 9/{{Spouse}} 21 5 0 farmer -19997 -19914 0 Caroline 20 5 0 Pierre 6 17 2 Lewis 6 19 0/addConversationTopic kid1_2h 14/skippable/pause 1500/speak Caroline \"{{i18n:Kid1_2H_01}}\"/pause 200/textAboveHead {{Spouse}} \"{{i18n:Kid1_2H_02}}\"/pause 1000/faceDirection Caroline 1/speak Caroline \"{{i18n:Kid1_2H_03}}\"/pause 200/speak {{Spouse}} \"{{i18n:Kid1_2H_04}}\"/faceDirection {{Spouse}} 3/pause 500/speak {{Spouse}} \"{{i18n:Kid1_2H_05{{WhenSpouseIsAbigail}}}}\"/emote Caroline 32/pause 500/speak Caroline \"{{i18n:Kid1_2H_06{{SpouseLovesBook}}}}\"/emote {{Spouse}} 32/pause 500/globalFade/viewport -9999 -9999/faceDirection {{Spouse}} 0/faceDirection Caroline 0/warp Caroline 33 5/warp Lewis 19999 19999/viewport 20 9 true/pause 1500/speak {{Spouse}} \"{{i18n:Kid1_2H_07}}\"/pause 200/move {{Spouse}} -1 0 0/pause 1000/emote {{Spouse}} 40/pause 1000/speak {{Spouse}} \"{{i18n:Kid1_2H_08}}\"/faceDirection {{Spouse}} 3/pause 200/emote {{Spouse}} 8/pause 500/speak {{Spouse}} \"{{i18n:Kid1_2H_09}}\"/move {{Spouse}} -1 0 0/pause 500/emote {{Spouse}} 16/pause 500/speak {{Spouse}} \"{{i18n:Kid1_2H_10}}\"/emote {{Spouse}} 40/pause 1000/speak {{Spouse}} \"{{i18n:Kid1_2H_11}}\"/pause 1500/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 10": true
+            },
+		},		
+		{   //Kid1 4th Event (Mother Visit) Part 1 - done
+			"Action":"EditData",
+			"Target":"Data/Events/BusStop",
+			"Entries":{
+				"172420003/e 172420001/t 0600 1400/A IFKE2":"jaunty/-1000 -1000/{{Spouse}} 38 72 3 Gus 1999 1000 2/changeLocation Town/viewport -1000 -1000/skippable/pause 1500/speak {{Spouse}} \"{{i18n:Kid1_MV_01}}\"/pause 1000/viewport 45 73/pause 1000/emote {{Spouse}} 40/pause 500/move {{Spouse}} 4 0 2/emote {{Spouse}} 40/pause 500/move {{Spouse}} -4 0 0/emote {{Spouse}} 60/pause 500/playSound doorOpen/warp Gus 45 72/pause 300/playSound doorClose/faceDirection Gus 3/emote Gus 32 true/emote {{Spouse}} 16/faceDirection {{Spouse}} 1/speak Gus \"{{i18n:Kid1_MV_02}}\"/emote {{Spouse}} 32/speed {{Spouse}} 5/move {{Spouse}} 6 0 1/speak {{Spouse}} \"{{i18n:Kid1_MV_03}}\"/emote Gus 32/pause 500/speak Gus \"{{i18n:Kid1_MV_04}}\"/jump {{Spouse}} 5/speak {{Spouse}} \"{{i18n:Kid1_MV_05}}\"/textAboveHead {{Spouse}} \"{{i18n:Kid1_MV_06}}\"/pause 500/speed {{Spouse}} 5/advancedMove {{Spouse}} false -6 0 0 -3 -1 0 0 -5/textAboveHead Gus \"{{i18n:Kid1_MV_07}}\"/pause 1500/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 16": true
+            },			
+		},		
+		{   //Kid1 4th Event (Mother Visit) - done
+			"Action":"EditData",
+			"Target":"Data/Events/BusStop",
+			"Entries":{
+				"172420004/e 172420003/t 0600 1500":"tickTock/26 17/{{Spouse}} -1000 -1999 3 farmer 21 14 0/addConversationTopic kid1_MV 14/addConversationTopic IFKE4 7/addConversationTopic IFKE4ES 1/skippable/mail MotherMail/pause 1500/emote farmer 40/pause 500/warp {{Spouse}} 42 23/pause 100/speed {{Spouse}} 5/move {{Spouse}} -20 0 3/textAboveHead {{Spouse}} \"{{i18n:Kid1_MV_08}}\"/pause 2000/faceDirection {{Spouse}} 0/pause 100/jump {{Spouse}} 5/textAboveHead {{Spouse}} \"{{i18n:Kid1_MV_09}}\"/pause 1000/emote farmer 16/pause 100/faceDirection farmer 2/speak {{Spouse}} \"{{i18n:Kid1_MV_10}}\"/emote farmer 36/pause 500/emote {{Spouse}} 32/pause 500/speak {{Spouse}} \"{{i18n:Kid1_MV_11}}\"/emote farmer 32/textAboveHead {{Spouse}} \"{{i18n:Kid1_MV_12}}\"/speed {{Spouse}} 5/advancedMove {{Spouse}} false -13 0/pause 1000/globalFade/viewport -9999 -9999/speak {{Spouse}} \"{{i18n:Kid1_MV_13}}\"/pause 1000/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 16": true
+            },			
+		},				
+		{   //Kid1 5th Event (Talk) - done
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172420005/e 172420004/t 0700 2600/A IFKE4":"jaunty/27 27/{{Spouse}} 27 25 3 farmer 27 29 0/addTemporaryActor BabyIF 23 12 31 14 2 false/addConversationTopic kid1_3h 14/addConversationTopic IFKE5 7/skippable/pause 1000/speed {{Spouse}} 4/move {{Spouse}} -2 0 3/jump {{Spouse}} 4 true/emote {{Spouse}} 32/speed {{Spouse}} 4/move {{Spouse}} 3 0 1/jump {{Spouse}} 4 true/emote {{Spouse}} 20/speed {{Spouse}} 4/advancedMove {{Spouse}} false -2 0 0 -2/speak {{Spouse}} \"{{i18n:Kid1_3H_01}}\"/emote farmer 28/speak {{Spouse}} \"{{i18n:Kid1_3H_02}}\"/pause 500/move farmer 0 -2 0/emote farmer 8/emote {{Spouse}} 16/faceDirection {{Spouse}} 2 true/speak {{Spouse}} \"{{i18n:Kid1_3H_03}}\"/pause 500/advancedMove {{Spouse}} false 1 0 0 2/speak {{Spouse}} \"{{i18n:Kid1_3H_04}}\"/speak {{Spouse}} \"{{i18n:Kid1_3H_05{{Baby1Gender}}}}\"/emote {{Spouse}} 20/speak {{Spouse}} \"{{i18n:Kid1_3H_06}}\"/jump {{Spouse}} 4/speak {{Spouse}} \"{{i18n:Kid1_3H_07}}\"/jump {{Spouse}} 4/speak {{Spouse}} \"{{i18n:Kid1_3H_08}}\"/pause 500/emote {{Spouse}} 32/speak {{Spouse}} \"{{i18n:Kid1_3H_09}}\"/emote farmer 32/pause 500/globalFade/viewport -9999 -9999/speak {{Spouse}} \"{{i18n:Kid1_3H_10}}\"/pause 1000/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 29": true
+            },
+		},	
+		{   //Kid1 6th Event (Town Intro) - done
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172420006/e 172420005/t 1400 2600/A IFKE5":"jaunty/27 27/{{Spouse}} 27 25 3 farmer 27 29 0/addTemporaryActor Gift1IF 16 16 26 25 2 false/addTemporaryActor Gift2IF 16 16 28 25 2 false/addTemporaryActor Gift1IF 16 16 27 24 2 false/addConversationTopic kid1_intro1 14/addConversationTopic IFKE6 10/skippable/pause 1500/emote {{Spouse}} 20/faceDirection {{Spouse}} 0 true/emote {{Spouse}} 28/faceDirection {{Spouse}} 1 true/emote {{Spouse}} 36/move farmer 0 -2 0/emote farmer 8/emote {{Spouse}} 16/faceDirection {{Spouse}} 2 true/speak {{Spouse}} \"{{i18n:Kid1_Events_01}}\"/pause 500/emote farmer 16 true/emote {{Spouse}} 16 true/faceDirection {{Spouse}} 1 true/faceDirection farmer 1 true/pause 500/speak {{Spouse}} \"{{i18n:Kid1_Events_03}}\"/emote {{Spouse}} 28/speak {{Spouse}} \"{{i18n:Kid1_Events_04}}\"/emote farmer 8/pause 200/pause 500/faceDirection {{Spouse}} 2 true/pause 500/speak {{Spouse}} \"{{i18n:Kid1_Events_05{{Baby1Gender}}}}\"/pause 500/faceDirection {{Spouse}} 3 true/speak {{Spouse}} \"{{i18n:Kid1_Events_06}}\"/faceDirection farmer 0 true/emote farmer 8/pause 500/faceDirection {{Spouse}} 2 true/pause 500/speak {{Spouse}} \"{{i18n:Kid1_Events_07{{Baby1Gender}}}}\"/emote farmer 32/pause 200/speak {{Spouse}} \"{{i18n:Kid1_Events_08}}\"/pause 500/faceDirection {{Spouse}} 3 true/emote {{Spouse}} 28/pause 500/speak {{Spouse}} \"{{i18n:Kid1_Events_09}}\"/speak {{Spouse}} \"{{i18n:Kid1_Events_10}}\"/pause 200/emote farmer 28/pause 500/faceDirection {{Spouse}} 2 true/pause 500/speak {{Spouse}} \"{{i18n:Kid1_Events_11}}\"/emote farmer 56/pause 200/speak {{Spouse}} \"{{i18n:Kid1_Events_12{{Baby1Gender}}}}\"/emote farmer 32/pause 500/emote {{Spouse}} 16 true/faceDirection {{Spouse}} 0 true/pause 500/speak {{Spouse}} \"{{i18n:Kid1_Events_13}}\"/pause 500/faceDirection {{Spouse}} 1 true/pause 500/speak {{Spouse}} \"{{i18n:Kid1_Events_14}}\"/faceDirection farmer 1 true/emote farmer 28/pause 500/move farmer 4 0 1/pause 1000/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 56": true
+            },
+		},	
+		
+/////////////////////////////		
+		
+// Kid2 Events		
+
+		{   //Kid2 1st Event (Intro baby) - Portrait 
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172421000/e 172420006/t 0610 2600/A IFKE6":"wedding/33 18/{{Spouse}} 30 16 0 farmer 32 16 0 {{Baby1GenderToddler}} 31 16 0/addTemporaryActor BabyIF 23 12 31 14 2 false/addConversationTopic Kid2_0H 14/addConversationTopic IFKE7 7/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1000/jump {{Baby1GenderToddler}} 4/pause 500/speak {{Baby1GenderToddler}} \"{{i18n:Kid2_0H_01}}\"/pause 200/emote {{Spouse}} 32/pause 500/speak {{Spouse}} \"{{i18n:Kid2_0H_02{{Baby2Gender}}}}\"/emote {{Baby1GenderToddler}} 32/pause 500/speak {{Baby1GenderToddler}} \"{{i18n:Kid2_0H_03{{Baby2Gender}}}}\"/pause 200/speak {{Spouse}} \"{{i18n:Kid2_0H_04{{Baby2Gender}}}}\"/emote BabyIF 32/pause 200/emote {{Baby1GenderToddler}} 16/pause 500/jump {{Baby1GenderToddler}} 4/pause 500/speak {{Baby1GenderToddler}} \"{{i18n:Kid2_0H_05{{Baby2Gender}}}}\"/pause 200/emote farmer 20 true/emote {{Spouse}} 20/pause 500/speak {{Spouse}} \"{{i18n:Kid2_0H_06{{Baby2Gender}}}}\"/emote {{Baby1GenderToddler}} 20/pause 500/faceDirection {{Spouse}} 1/pause 200/speak {{Spouse}} \"{{i18n:Kid2_0H_07}}\"/faceDirection {{Baby1GenderToddler}} 3 true/faceDirection farmer 3/pause 200/speak {{Spouse}} \"{{i18n:Kid2_0H_08{{Baby1Gender}}}}\"/jump {{Baby1GenderToddler}} 4/speak {{Baby1GenderToddler}} \"{{i18n:Kid2_0H_09}}\"/pause 200/emote farmer 32 true/emote {{Spouse}} 32/pause 500/faceDirection {{Baby1GenderToddler}} 0 true/faceDirection farmer 0 true/faceDirection {{Spouse}} 0/pause 200/emote {{Baby1GenderToddler}} 20/pause 1500/end"
+			},	
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 57": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 0": true
+            },
+		},	
+		
+		{   //Kid2 2nd Event (Milk baby) - Portrait 
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172421001/e 172421000/t 0610 2600/A IFKE7":"jaunty/-999 -999/{{Spouse}} 52 25 3 farmer 51 25 1 {{Baby1GenderToddler}} 48 24 0/addTemporaryActor BabyIF 23 12 31 14 2 false/addConversationTopic Kid2_Milk 14/addConversationTopic IFKE8 8/addConversationTopic IFKE8Clinic 2/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/showFrame {{Baby1GenderToddler}} 23/viewport 51 27 true/pause 1500/emote {{Baby1GenderToddler}} 24/pause 500/emote farmer 40/pause 500/emote {{Spouse}} 40/pause 500/speak {{Spouse}} \"{{i18n:Kid2_Milk_01}}\"/emote farmer 12/pause 500/speak {{Spouse}} \"{{i18n:Kid2_Milk_02{{WhenSpouseIsAbigail}}}}\"/pause 300/emote {{Baby1GenderToddler}} 16 true/emote farmer 16 true/emote {{Spouse}} 16 true/showFrame {{Baby1GenderToddler}} 10/speak {{Spouse}} \"{{i18n:Kid2_Milk_03}}\"/faceDirection farmer 3/speak {{Spouse}} \"{{i18n:Kid2_Milk_04}}\"/globalFade/viewport -999 -999/warp {{Spouse}} 30 18/warp farmer 32 18/faceDirection {{Spouse}} 0 true/faceDirection farmer 0 true/warp {{Baby1GenderToddler}} 31 16/speak {{Spouse}} \"{{i18n:Kid2_Milk_05}}\"/pause 500/playMusic playful/viewport 33 18 true/pause 1500/emote {{Baby1GenderToddler}} 32/pause 500/speak {{Baby1GenderToddler}} \"{{i18n:Kid2_Milk_06{{Baby1Gender}}}}\"/pause 200/emote {{Baby1GenderToddler}} 40/pause 200/jump {{Baby1GenderToddler}} 5/pause 500/speak {{Baby1GenderToddler}} \"{{i18n:Kid2_Milk_08}}\"/pause 200/emote farmer 16 true/emote {{Spouse}} 16/pause 300/emote BabyIF 40/pause 500/emote BabyIF 56 true/speak {{Spouse}} \"{{i18n:Kid2_Milk_10{{Baby2Gender}}}}\"/emote {{Baby1GenderToddler}} 32/pause 300/emote farmer 20 true/emote {{Spouse}} 20/pause 500/textAboveHead {{Baby1GenderToddler}} \"{{i18n:Kid2_Milk_11{{Baby2Gender}}}}\"/pause 2000/textAboveHead {{Baby1GenderToddler}} \"{{i18n:Kid2_Milk_12}}\"/pause 2000/speak {{Spouse}} \"{{i18n:Kid2_Milk_13{{Baby1Gender}}}}\"/emote {{Spouse}} 20/pause 500/move {{Spouse}} 1 0 0/speak {{Spouse}} \"{{i18n:Kid2_Milk_14}}\"/emote farmer 20/pause 500/speak {{Spouse}} \"{{i18n:Kid2_Milk_15}}\"/faceDirection {{Spouse}} 1/pause 200/speak {{Spouse}} \"{{i18n:Kid2_Milk_16}}\"/faceDirection farmer 3/pause 200/speak {{Spouse}} \"{{i18n:Kid2_Milk_17}}\"/emote farmer 32/pause 1500/end"
+			},	
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 57": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 8": true
+            },
+		},	
+
+		{   //Kid2 3rd Event (Clinic) Part 1 - done
+			"Action":"EditData",
+			"Target":"Data/Events/Town",
+			"Entries":{
+				"172421003/e 172421001/t 1700 2600/A IFKE8Clinic":"none/36 57/{{Spouse}} -9999 -9999 3 farmer 26 55 2/skippable/pause 1000/speed farmer 6/advancedMove farmer false 0 3 12 0 0 2 -2 0 0 -4/speak {{Spouse}} \"{{i18n:Kid2_1H_01}}\"/pause 1000/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 57": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 15": true
+            },
+			"When": {
+			"spouse |contains=Harvey": false
+            },
+		},
+		{   //Kid2 3rd Event (Clinic) Part 2 - done - check open door
+			"Action":"EditData",
+			"Target":"Data/Events/Town",
+			"Entries":{
+				"172421004/e 172421003/t 1700 2600":"echos/-1000 -1000/{{Spouse}} 5 17 1 farmer -9999 -9999 0 Harvey 13 5 1/addTemporaryActor BabyIF 23 12 14 4 2 true/changeLocation Hospital/viewport 10 14/addConversationTopic kid2_1h 14/skippable/pause 1500/emote {{Spouse}} 28/advancedMove {{Spouse}} true 3 0 -3 0/pause 5000/stopAdvancedMoves/emote {{Spouse}} 12/warp farmer 10 19/pause 500/emote {{Spouse}} 16/faceDirection {{Spouse}} 1/speak {{Spouse}} \"{{i18n:Kid2_1H_02}}\"/move {{Spouse}} 2 0 1/move farmer 0 -2 3/pause 500/speak {{Spouse}} \"{{i18n:Kid2_1H_03}}\"/shake {{Spouse}} 2000/emote farmer 40/pause 500/emote farmer 8/pause 500/emote {{Spouse}} 28/pause 1000/speak {{Spouse}} \"{{i18n:Kid2_1H_04{{Baby2Gender}}}}\"/shake {{Spouse}} 1000/pause 500/speak {{Spouse}} \"{{i18n:Kid2_1H_05{{Baby2Gender}}}}\"/faceDirection {{Spouse}} 3/pause 500/speak {{Spouse}} \"{{i18n:Kid2_1H_06{{Baby2Gender}}}}\"/shake {{Spouse}} 1000/pause 500/faceDirection {{Spouse}} 1/pause 500/speak {{Spouse}} \"{{i18n:Kid2_1H_07}}\"/emote farmer 36/advancedMove Harvey false 0 2 -3 0 0 7/pause 6000/emote {{Spouse}} 16 true/faceDirection {{Spouse}} 0 true/emote farmer 16 true/faceDirection farmer 0 true/pause 500/speak Harvey \"{{i18n:Kid2_1H_08}}\"/speed farmer 4/speed {{Spouse}} 4/move farmer 0 -1 0 true/move {{Spouse}} 0 -1 0 true/speak {{Spouse}} \"{{i18n:Kid2_1H_09{{Baby2Gender}}}}\"/pause 500/speak Harvey \"{{i18n:Kid2_1H_10}}\"/emote farmer 60 true/emote {{Spouse}} 60/playMusic sadpiano/pause 500/speak Harvey \"{{i18n:Kid2_1H_11{{Baby2Gender}}}}\"/emote {{Spouse}} 60/pause 500/speak {{Spouse}} \"{{i18n:Kid2_1H_12{{Baby2Gender}}}}\"/pause 500/speak Harvey \"{{i18n:Kid2_1H_13{{Baby2Gender}}}}\"/emote {{Spouse}} 32 true/emote farmer 32/pause 500/speak {{Spouse}} \"{{i18n:Kid2_1H_14}}\"/faceDirection Harvey 3/pause 500/speak Harvey \"{{i18n:Kid2_1H_15}}\"/pause 1000/end"
+			},
+			"When": {
+			"spouse |contains=Harvey": false
+            },
+		},
+		
+		{   //Kid2 4th Event (Picnic) - Portrait 
+			"Action":"EditData",
+			"Target":"Data/Events/Forest",
+			"Entries":{
+				"172421005/e 172421001/t 0600 1800/w sunny/A IFKE8":"50s/70 49/{{Spouse}} 70 47 0 farmer 72 47 0 Jas 71 46 0 Vincent 69 48 3 {{Baby1GenderToddler}} 68 48 1/addTemporaryActor BabyIF 23 12 71 45 2 false/addTemporaryActor SquirrelWIF 32 32 69 50 1 false animal/addConversationTopic kid2_Forest 14/addConversationTopic IFKE10 7/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/specificTemporarySprite pennyFieldTrip/pause 1500/speak Jas \"{{i18n:kid2_Forest_01}}\"/emote Jas 20/pause 500/move Jas -1 0 2/faceDirection farmer 3/pause 300/speak Jas \"{{i18n:kid2_Forest_02{{Baby2Gender}}}}\"/emote {{Spouse}} 32/pause 500/speak {{Spouse}} \"{{i18n:kid2_Forest_03{{Baby2Gender}}}}\"/textAboveHead Jas \"{{i18n:kid2_Forest_04}}\"/pause 1000/speak {{Spouse}} \"{{i18n:kid2_Forest_05}}\"/jump Jas 4/waitForAllStationary/advancedMove Jas false 0 -2 1 0/advancedMove {{Spouse}} false 1 0/faceDirection {{Spouse}} 0/faceDirection farmer 0/pause 1000/faceDirection Jas 2/textAboveHead Jas \"{{i18n:kid2_Forest_06}}\"/pause 2000/emote farmer 32 true/emote {{Spouse}} 32/pause 500/speak {{Spouse}} \"{{i18n:kid2_Forest_07}}\"/emote farmer 20 true/emote {{Spouse}} 20/faceDirection Vincent 2/pause 500/jump Vincent 4/speak Vincent \"{{i18n:kid2_Forest_08}}\"/pause 20/emote {{Baby1GenderToddler}} 16/faceDirection {{Baby1GenderToddler}} 2/speak {{Baby1GenderToddler}} \"{{i18n:kid2_Forest_09}}\"/pause 200/emote Vincent 40/pause 500/emote {{Baby1GenderToddler}} 40/pause 500/speak {{Spouse}} \"{{i18n:kid2_Forest_11}}\"/emote farmer 32 true/advancedMove Vincent false 2 0/move {{Baby1GenderToddler}} -1 0 2/faceDirection Vincent 2/speak {{Spouse}} \"{{i18n:kid2_Forest_11.1}}\"/emote Vincent 40 true/emote {{Baby1GenderToddler}} 40/pause 500/advancedMove Vincent false 0 1/move {{Baby1GenderToddler}} 0 1 2/speak {{Spouse}} \"{{i18n:kid2_Forest_12{{Baby2Gender}}}}\"/advancedMove Vincent false 0 1 3 1/move {{Baby1GenderToddler}} 0 1 1/emote SquirrelWIF 16/faceDirection {{Spouse}} 2/faceDirection farmer 2/speak {{Spouse}} \"{{i18n:kid2_Forest_13{{Baby1Gender}}}}\"/emote {{Spouse}} 40/pause 500/speak {{Spouse}} \"{{i18n:kid2_Forest_14}}\"/faceDirection SquirrelWIF 3/pause 500/faceDirection SquirrelWIF 1/pause 1000/move {{Baby1GenderToddler}} 1 0 1/jump SquirrelWIF 4/faceDirection SquirrelWIF 3/pause 200/faceDirection SquirrelWIF 1/pause 200/speed SquirrelWIF 10/move SquirrelWIF -10 0 1/faceDirection {{Baby1GenderToddler}} 3/emote Vincent 60 true/emote {{Baby1GenderToddler}} 60/pause 500/emote {{Spouse}} 40/pause 500/emote farmer 28/pause 500/speak {{Spouse}} \"{{i18n:kid2_Forest_15}}\"/emote farmer 56/pause 1500/end"
+			},	
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 57": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 22": true
+            },
+        },
+
+		{   //Kid2 5th Event (Jodi) - done
+			"Action":"EditData",
+			"Target":"Data/Events/Town",
+			"Entries":{
+				"172421006/e 172421005/t 0600 1600/A IFKE10":"jaunty/-1000 -1000/{{Spouse}} 3 16 1 Jodi 5 16 3 Jas 4 13 0 Vincent 5 13 0/addTemporaryActor BabyIF 23 12 4 12 2 false/changeLocation SamHouse/viewport 12 16/addConversationTopic kid2_3h 14/addConversationTopic IFKE11 14/addConversationTopic IFKE11JJ 4/skippable/pause 1500/emote {{Spouse}} 40/emote Jodi 40/emote Vincent 20 true/emote Jas 20/speak {{Spouse}} \"{{i18n:Kid2_3H_01{{WhenSpouseIsSam}}}}\"/emote {{Spouse}} 28/speak {{Spouse}} \"{{i18n:Kid2_3H_02{{Baby2Gender}}}}\"/pause 500/faceDirection Vincent 3 true/faceDirection Jas 1/emote Vincent 32/emote Jas 36 true/emote Jodi 32/speak Jodi \"{{i18n:Kid2_3H_03{{WhenSpouseIsSam}}}}\"/faceDirection Vincent 0 true/faceDirection Jas 0/jump Vincent 5/speak {{Spouse}} \"{{i18n:Kid2_3H_04{{WhenSpouseIsSam}}}}\"/pause 500/faceDirection {{Spouse}} 2/emote {{Spouse}} 16/speak {{Spouse}} \"{{i18n:Kid2_3H_05{{Baby2Gender}}}}\"/faceDirection Jodi 2 true/emote Jodi 28/speak Jodi \"{{i18n:Kid2_3H_06}}\"/emote Vincent 16 true/emote Jas 16/speak Vincent \"{{i18n:Kid2_3H_07}}\"/faceDirection Jodi 0 true/faceDirection {{Spouse}} 0 true/emote {{Spouse}} 16 true/emote Jodi 16/speak Jas \"{{i18n:Kid2_3H_08}}\"/jump {{Spouse}} 5/speed {{Spouse}} 7/move {{Spouse}} 0 -1 1/speed {{Spouse}} 7/move {{Spouse}} 1 0 0/speed {{Spouse}} 7/move {{Spouse}} 0 -2 0 true/move Jas -1 0 1 true/move Vincent 1 0 3 true/emote Vincent 28/textAboveHead {{Spouse}} \"{{i18n:Kid2_3H_09}}\"/jump Jodi 5 true/speak Jodi \"{{i18n:Kid2_3H_10}}\"/pause 500/globalFade/viewport -999 -999/speak Jodi \"{{i18n:Kid2_3H_11{{Baby2Gender}}}}\"/pause 1000/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 57": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 30": true
+            },
+		},
+		{   //Kid2 6th Event (Town Intro) - done
+			"Action":"EditData",
+			"Target":"Data/Events/Town",
+			"Entries":{
+				"172421007/e 172421006/w sunny/t 0900 2000/A IFKE11":"jaunty/34 61/{{Spouse}} 31 57 1 farmer 34 66 0 Lewis 36 57 3 Clint 36 60 3 Kent 32 61 0/addTemporaryActor Gift1IF 16 16 32 57 2 false/addTemporaryActor Gift2IF 16 16 33 57 2 false/addTemporaryActor Gift2IF 16 16 34 57 2 false/addTemporaryActor Gift1IF 16 16 35 57 2 false/addTemporaryActor Gift2IF 16 16 32 58 2 false/addTemporaryActor Gift1IF 16 16 33 58 2 false/addTemporaryActor Gift1IF 16 16 34 58 2 false/addTemporaryActor Gift2IF 16 16 35 58 2 false/addTemporaryActor Gift1IF 16 16 32 59 2 false/addTemporaryActor Gift2IF 16 16 33 59 2 false/addTemporaryActor Gift1IF 16 16 34 59 2 false/addTemporaryActor Gift1IF 16 16 35 59 2 false/addTemporaryActor Gift1IF 16 16 32 60 2 false/addTemporaryActor Gift1IF 16 16 33 60 2 false/addTemporaryActor Gift1IF 16 16 34 60 2 false/addTemporaryActor Gift2IF 16 16 35 60 2 false/addConversationTopic kid2_intro 14/addConversationTopic IFKE12 14/addConversationTopic IFKE12PD 5/skippable/pause 1000/textAboveHead {{Spouse}} \"{{i18n:Kid2_6H_01}}\"/pause 2000/textAboveHead Lewis \"{{i18n:Kid2_6H_02}}\"/pause 1000/textAboveHead Clint \"{{i18n:Kid2_6H_03}}\"/pause 500/textAboveHead Kent \"{{i18n:Kid2_6H_04}}\"/pause 1000/move farmer 0 -4 0/emote farmer 8/pause 500/faceDirection {{Spouse}} 2 true/emote {{Spouse}} 16/faceDirection Clint 2 true/faceDirection Kent 1 true/faceDirection Lewis 2/speak {{Spouse}} \"{{i18n:Kid2_6H_05}}\"/speed {{Spouse}} 5/move {{Spouse}} 0 5 1/speed {{Spouse}} 5/move {{Spouse}} 2 0 1 true/faceDirection farmer 3/speak {{Spouse}} \"{{i18n:Kid2_6H_06}}\"/pause 500/faceDirection Clint 3 true/faceDirection Kent 0 true/faceDirection Lewis 3/emote farmer 8/pause 1000/faceDirection {{Spouse}} 0 true/speak {{Spouse}} \"{{i18n:Kid2_6H_07}}\"/move Kent -1 0 0 /faceDirection {{Spouse}} 1/move Kent 0 -4 1 true/speak {{Spouse}} \"{{i18n:Kid2_6H_08}}\"/faceDirection {{Spouse}} 0 true/faceDirection farmer 0 true/emote {{Spouse}} 28/speak {{Spouse}} \"{{i18n:Kid2_6H_09}}\"/faceDirection Lewis 2 true/faceDirection Clint 0/faceDirection farmer 3 true/jump farmer 4 true/faceDirection {{Spouse}} 1/speak {{Spouse}} \"{{i18n:Kid2_6H_10}}\"/emote Lewis 40 true/faceDirection {{Spouse}} 3 true/speak {{Spouse}} \"{{i18n:Kid2_6H_11}}\"/emote Clint 40 true/faceDirection {{Spouse}} 2 true/speak {{Spouse}} \"{{i18n:Kid2_6H_12}}\"/emote farmer 28/pause 500/jump farmer 4/emote farmer 32/faceDirection {{Spouse}} 1/speak {{Spouse}} \"{{i18n:Kid2_6H_13}}\"/pause 500/emote farmer 20/emote {{Spouse}} 20/pause 500/textAboveHead Lewis \"{{i18n:Kid2_6H_14}}\"/faceDirection {{Spouse}} 0 true/faceDirection farmer 0 true/emote farmer 16 true/emote {{Spouse}} 16/speak Lewis \"{{i18n:Kid2_6H_15}}\"/faceDirection Clint 2 true/faceDirection Kent 2/textAboveHead Clint \"{{i18n:Kid2_6H_16}}\"/pause 500/textAboveHead Kent \"{{i18n:Kid2_6H_17}}\"/pause 500/emote farmer 60 true/emote {{Spouse}} 60/pause 500/faceDirection {{Spouse}} 1 true/faceDirection farmer 3/jump {{Spouse}} 3/speak {{Spouse}} \"{{i18n:Kid2_6H_18}}\"/pause 1000/faceDirection farmer 0/move {{Spouse}} -3 0 0/pause 1000/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 57": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 57": true
+            },
+		},
+		
+/////////////////////////////////////		
+
+// Both toddlers appearing in event		
+
+	//Eat More
+        {   //Two Kids Eating Part 1 - Portrait 
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172426001/e 172421007/t 0800 1500/A IFKE12":"playful/22 24/Toddler 24 24 3 Toddler_Girl 22 24 1 {{Spouse}} 23 24 0 farmer 27 24 3/addConversationTopic TwoKidsEat01 14/addConversationTopic IF2KEat 7/addConversationTopic IF2KEatIC 14/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/jump Toddler 6/speak Toddler \"{{i18n:TwoKids01_01 | SpouseTitle ={{SpouseTitle}} }}\"/pause 200/speak {{Spouse}} \"{{i18n:TwoKids01_02}}\"/pause 200/jump Toddler_Girl 6/speak Toddler_Girl \"{{i18n:TwoKids01_03}}\"/pause 200/pause 200/speak {{Spouse}} \"{{i18n:TwoKids01_04}}\"/pause 200/emote Toddler 40/pause 200/emote Toddler_Girl 40/pause 500/speak Toddler \"{{i18n:TwoKids01_05}}\"/pause 200/speak Toddler \"{{i18n:TwoKids01_05.1}}\"/pause 200/jump Toddler_Girl 6/speak Toddler_Girl \"{{i18n:TwoKids01_06}}\"/pause 200/pause 200/emote {{Spouse}} 36/pause 500/speak {{Spouse}} \"{{i18n:TwoKids01_07}}\"/pause 200/emote Toddler 12/pause 200/emote Toddler_Girl 12/pause 1000/emote farmer 28/pause 1500/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 57": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 57": true
+            },
+		},	
+		
+		        {   //Two Kids Eating Part 2 - done - check on 1.6
+			"Action":"EditData",
+			"Target":"Data/Events/Farm",
+			"Entries":{
+				"172426002/e 172426001/t 0600 1400/w sunny/A IF2KEat":"jaunty/64 15/farmer 64 15 2 {{Spouse}} -100 -100 2 Mia 64 17 0/addConversationTopic TwoKidsEat02 3/skippable/pause 1500/move farmer -1 0 2/warp {{Spouse}} 64 15/faceDirection {{Spouse}} 2/playSound doorClose/emote Mia 32/pause 500/emote {{Spouse}} 32/pause 200/emote farmer 32/pause 500/speak Mia \"{{i18n:TwoKids02_01}}\"/emote {{Spouse}} 20 true/emote farmer 20/pause 500/speak {{Spouse}} \"{{i18n:TwoKids02_02}}\"/pause 200/speak Mia \"{{i18n:TwoKids02_03}}\"/emote {{Spouse}} 32 true/emote farmer 32/pause 500/speak {{Spouse}} \"{{i18n:TwoKids02_04}}\"/emote Mia 32/pause 1500/end"
+			},
+			"When": {
+			"HasMod |contains=Himetarts.ARV.CP": true,
+            },
+		},	
+		
+        {   //Two Kids Eating Part 3 - Portrait 
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172426003/e 172426002/t 1500 2100":"playful/22 24/Toddler 24 24 3 Toddler_Girl 22 24 1 {{Spouse}} 23 24 0 farmer 27 25 3/addTemporaryActor bearpancakeIF 16 16 1999 1999 2 false/addConversationTopic TwoKidsEat03 3/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/jump Toddler 6/speak Toddler \"{{i18n:TwoKids03_01 | SpouseTitle ={{SpouseTitle}} }}\"/pause 200/jump Toddler_Girl 6/speak Toddler_Girl \"{{i18n:TwoKids03_02}}\"/pause 200/speak {{Spouse}} \"{{i18n:TwoKids03_03}}\"/pause 200/emote Toddler 40/pause 200/emote Toddler_Girl 40/pause 500/speak Toddler \"{{i18n:TwoKids03_04}}\"/pause 200/speak Toddler \"{{i18n:TwoKids03_04.1}}\"/pause 20/jump Toddler_Girl 6/speak Toddler_Girl \"{{i18n:TwoKids03_05}}\"/pause 200/emote {{Spouse}} 36/pause 500/speak {{Spouse}} \"{{i18n:TwoKids03_06}}\"/pause 200/emote Toddler 12/pause 200/emote Toddler_Girl 12/pause 1000/emote farmer 40/pause 1500/globalFade/viewport -9999 -9999/warp {{Spouse}} 24 17/faceDirection {{Spouse}} 0/warp Toddler 26 25/faceDirection Toddler 1/warp Toddler_Girl 28 25/faceDirection Toddler_Girl 3/warp farmer 24 24/faceDirection farmer 0/speak {{Spouse}} \"{{i18n:TwoKids03_07}}\"/viewport 22 24/pause 1000/emote Toddler_Girl 12/pause 200/emote Toddler 12/pause 1000/move farmer 3 0 2/pause 200/emote farmer 56/warp bearpancakeIF 27 25/emote Toddler 16 true/emote Toddler_Girl 16/pause 500/jump Toddler 8/speak Toddler \"{{i18n:TwoKids03_08 | PlayerTitle ={{PlayerTitle}} }}\"/emote {{Spouse}} 16/pause 20/jump Toddler_Girl 6/speak Toddler_Girl \"{{i18n:TwoKids03_09 | PlayerTitle ={{PlayerTitle}} }}\"/pause 20/move {{Spouse}} 2 0 2/emote Toddler 20 true/emote Toddler_Girl 20 true/move {{Spouse}} 0 2 2/pause 1000/emote {{Spouse}} 40/pause 500/textAboveHead {{Spouse}} \"{{i18n:TwoKids03_10}}\"/emote farmer 16/pause 1000/speak {{Spouse}} \"{{i18n:TwoKids03_11}}\"/emote farmer 28/pause 1500/end"
+			},
+			"When": {
+			"HasMod |contains=Himetarts.ARV.CP": true,
+            },
+		},			
+		
+	// Shopping - Boy
+		{   //Shopping 1 (Spring Event) 
+			"Action":"EditData",
+			"Target":"Data/Events/SeedShop",
+			"Entries":{
+				"172426004/e 172421007/t 0900 1500/w sunny/z summer/z fall/z winter/A IFKE12":"jaunty/-1000 -1000/{{Spouse}} 43 58 1 farmer -9999 -9999 2 Toddler 44 58 3 Toddler_Girl 46 61 1 Vincent 47 61 3 Jodi 47 60 3/changeLocation Town/viewport 40 56/skippable/pause 1500/playSound doorOpen/warp farmer 36 56/playSound doorClose/pause 500/move farmer 0 2 1/pause 500/emote farmer 8/pause 500/textAboveHead {{Spouse}} \"{{i18n:TwoKidsShop1_01}}\"/pause 2000/textAboveHead Toddler \"{{i18n:TwoKidsShop1_02}}\"/pause 2000/textAboveHead {{Spouse}} \"{{i18n:TwoKidsShop1_03}}\"/pause 2000/textAboveHead Toddler \"{{i18n:TwoKidsShop1_04}}\"/pause 2000/move Toddler 0 -1 0/faceDirection {{Spouse}} 0/playSound doorOpen/warp Toddler -999 -999/emote {{Spouse}} 32/pause 1000/emote farmer 40/pause 500/move farmer 5 0 1/emote farmer 8 true/emote {{Spouse}} 16/pause 200/faceDirection {{Spouse}} 3/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsShop1_05}}\"/emote farmer 32/pause 1500/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 80": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 80": true
+            },
+		},
+		{   //Shopping 2 - Portrait 
+			"Action":"EditData",
+			"Target":"Data/Events/SeedShop",
+			"Entries":{
+				"172426005/e 172426004/t 0900 1600":"playful/13 20/Pierre 4 17 2 Caroline 9 19 3 {{Spouse}} 10 23 3 farmer 11 23 3 Toddler 6 19 1/addConversationTopic TwoKidsShop2 14/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/speak Toddler \"{{i18n:TwoKidsShop2_01{{WhenSpouseIsAbigail}}}}\"/pause 20/speak Caroline \"{{i18n:TwoKidsShop2_02}}\"/pause 20/emote Caroline 20/pause 500/move Toddler -2 0 0/pause 200/speak Toddler \"{{i18n:TwoKidsShop2_03{{WhenSpouseIsAbigail}}}}\"/pause 20/speak Pierre \"{{i18n:TwoKidsShop2_04}}\"/pause 25/jump Toddler 4/pause 200/speak Toddler \"{{i18n:TwoKidsShop2_05 | SpouseTitle ={{SpouseTitle}} }}\"/pause 25/emote Toddler 40/pause 500/speak Toddler \"{{i18n:TwoKidsShop2_06}}\"/emote Toddler 40/pause 500/speak Toddler \"{{i18n:TwoKidsShop2_07{{WhenSpouseIsAbigail}}}}\"/pause 25/emote Toddler 40/pause 500/jump Toddler 4/pause 200/speak Toddler \"{{i18n:TwoKidsShop2_08}}\"/pause 25/emote Pierre 16/speak Pierre \"{{i18n:TwoKidsShop2_09}}\"/pause 25/speak Toddler \"{{i18n:TwoKidsShop2_10}}\"/pause 100/emote {{Spouse}} 32 true/emote farmer 32/emote Caroline 20/pause 500/emote Pierre 40/pause 500/emote Pierre 40/pause 500/speak Pierre \"{{i18n:TwoKidsShop2_11}}\"/pause 25/speak Toddler \"{{i18n:TwoKidsShop2_12}}\"/pause 20/speak Pierre \"{{i18n:TwoKidsShop2_13}}\"/pause 15/move Toddler 0 1 2/speak {{Spouse}} \"{{i18n:TwoKidsShop2_13.1}}\"/emote Toddler 40/pause 1000/faceDirection Toddler 3/pause 1000/faceDirection Toddler 1/pause 1000/faceDirection Toddler 0/pause 200/emote Toddler 40/pause 500/emote Pierre 8/pause 500/speak Pierre \"{{i18n:TwoKidsShop2_14}}\"/pause 200/emote {{Spouse}} 8/emote Toddler 40/pause 500/speak Toddler \"{{i18n:TwoKidsShop2_15{{WhenSpouseIsAbigail}}}}\"/pause 200/jump Toddler 6/speak Toddler \"{{i18n:TwoKidsShop2_16}}\"/pause 20/emote Pierre 40/pause 500/emote {{Spouse}} 12/emote farmer 32/emote Caroline 20/speak Pierre \"{{i18n:TwoKidsShop2_17}}\"/pause 1500/emote Toddler 20/pause 1500/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 80": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 80": true
+            },
+		},			
+		{   //Two Kids Penguin (Winter Event) - Portrait
+			"Action":"EditData",
+			"Target":"Data/Events/Beach",
+			"Entries":{
+				"172426006/e 172421007/t 0900 1800/w sunny/z spring/z summer/z fall/A IFKE12":"50s/-999 -999/farmer -1999 -1999 2 {{Spouse}} 38 24 0 Toddler 39 20 2 Toddler_Girl 38 20 2 Willy 38 33 3/addTemporaryActor PenguinIF 32 32 75 23 0 true animal/addTemporaryActor CameraIF 16 32 39 24 2 false/addTemporaryActor PenguinFrontIF 16 24 -1999 -1999 2 false/addConversationTopic TwoKidsPenguin 14/addConversationTopic IF2KPengu 7/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/addObject 43 20 392 1/addObject 44 24 723 1/viewport 41 25 true/pause 1000/speak {{Spouse}} \"{{i18n:TwoKidsPenguin_01}}\"/textAboveHead Toddler \"{{i18n:TwoKidsPenguin_02}}\"/pause 500/textAboveHead Toddler_Girl \"{{i18n:TwoKidsPenguin_02}}\"/pause 500/faceDirection {{Spouse}} 1/pause 500/emote {{Spouse}} 40/pause 500/faceDirection {{Spouse}} 0/textAboveHead {{Spouse}} \"{{i18n:TwoKidsPenguin_03}}\"/pause 2000/faceDirection Toddler 1/emote Toddler 16/pause 500/jump Toddler 4/speak Toddler \"{{i18n:TwoKidsPenguin_04}}\"/pause 20/speed Toddler 5/move Toddler 3 0 1 true/faceDirection Toddler_Girl 1/speak Toddler_Girl \"{{i18n:TwoKidsPenguin_05}}\"/pause 10/speed Toddler_Girl 4/move Toddler_Girl 0 -1 1/speed Toddler_Girl 4/move Toddler_Girl 5 0 2/waitForAllStationary/emote Toddler_Girl 20 true/emote Toddler 20/pause 500/emote {{Spouse}} 12/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsPenguin_06}}\"/textAboveHead Toddler \"{{i18n:TwoKidsPenguin_07 | SpouseTitle ={{SpouseTitle}} }}\"/pause 500/move Toddler_Girl -1 0 2/move Toddler -1 0 3 /move Toddler_Girl 0 1 1/move Toddler -3 0 2 true/emote Toddler_Girl 40/pause 500/playSound pickUpItem/removeObject 43 20/move Toddler_Girl -3 0 2/waitForAllStationary/pause 500/textAboveHead {{Spouse}} \"{{i18n:TwoKidsPenguin_08}}\"/pause 2000/playSound pullItemFromWater/warp PenguinIF 42 25/faceDirection PenguinIF 0/faceDirection PenguinIF 1/pause 200/emote Toddler_Girl 16 true/emote Toddler 16 true/emote {{Spouse}} 16 true/faceDirection {{Spouse}} 1/pause 500/speed Toddler 5/speed Toddler_Girl 4/advancedMove Toddler_Girl false 3 0 2 100/advancedMove Toddler false 3 0 2 100/pause 1000/emote Toddler_Girl 20 true/emote Toddler 20/pause 500/stopAdvancedMoves/jump Toddler 4/speak Toddler \"{{i18n:TwoKidsPenguin_09}}\"/pause 20/jump Toddler_Girl 4/speak Toddler_Girl \"{{i18n:TwoKidsPenguin_10}}\"/pause 20/move Toddler 0 1 2/move Toddler_Girl 0 1 2/textAboveHead {{Spouse}} \"{{i18n:TwoKidsPenguin_11}}\"/move {{Spouse}} 0 -1 1/move {{Spouse}} 2 0 1 true/speak {{Spouse}} \"{{i18n:TwoKidsPenguin_12}}\"/pause 200/emote Toddler_Girl 60 true/emote Toddler 60/pause 500/faceDirection {{Spouse}} 3/emote {{Spouse}} 40/pause 500/faceDirection {{Spouse}} 2/pause 500/emote {{Spouse}} 56/speak {{Spouse}} \"{{i18n:TwoKidsPenguin_13}}\"/globalFade/viewport -999 -999/removeObject 44 24/warp {{Spouse}} 42 21/faceDirection {{Spouse}} 2/warp Toddler 40 23/faceDirection Toddler 1/warp Toddler_Girl 40 24/faceDirection Toddler_Girl 1/move Willy 1 0 0/move Willy 0 -2 0/move PenguinIF 1 0 2/move PenguinIF 0 -1 2/viewport 41 25 true/pause 1000/emote {{Spouse}} 32/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsPenguin_14}}\"/textAboveHead Toddler \"{{i18n:TwoKidsPenguin_16}}\"/pause 1000/textAboveHead Toddler_Girl \"{{i18n:TwoKidsPenguin_15}}\"/pause 1000/faceDirection Toddler 2/faceDirection Toddler_Girl 0/pause 500/emote Toddler_Girl 56 true/emote Toddler 56/pause 500/faceDirection Toddler 1/faceDirection Toddler_Girl 1/pause 1000/move Toddler_Girl 1 0 1/speak Toddler_Girl \"{{i18n:TwoKidsPenguin_17}}\"/pause 15/emote PenguinIF 16/faceDirection PenguinIF 3/pause 1000/move Toddler_Girl 1 0 1/move PenguinIF 1 0 3/emote PenguinIF 40/pause 500/emote Toddler_Girl 40/pause 1000/playSound pickUpItem/addObject 43 24 130 1/speak Toddler_Girl \"{{i18n:TwoKidsPenguin_18}}\"/pause 20/emote PenguinIF 40/pause 1000/move PenguinIF -1 0 3/pause 500/emote PenguinIF 40/pause 1500/textAboveHead PenguinIF \"{{i18n:TwoKidsPenguin_19}}\"/pause 2000/jump Toddler 4/speak Toddler \"{{i18n:TwoKidsPenguin_20}}\"/pause 200/emote Toddler_Girl 56 true/emote Toddler 56 true/emote Willy 56 true/emote {{Spouse}} 56/pause 1000/removeObject 43 24/emote PenguinIF 56/pause 500/speak Toddler_Girl \"{{i18n:TwoKidsPenguin_21}}\"/pause 20/jump Toddler 5/speak Toddler \"{{i18n:TwoKidsPenguin_22}}\"/pause 20/move Toddler_Girl -1 0 1/move Toddler 1 0 1/playSound pickUpItem/addObject 42 23 130 1/pause 500/emote Willy 32 true/emote {{Spouse}} 32/pause 500/globalFade/viewport -999 -999/warp Willy -1999 -1999/warp CameraIF 41 24/warp PenguinFrontIF 41 21/warp PenguinIF -1999 -1999/warp Toddler 40 21/faceDirection Toddler 1/warp Toddler_Girl 42 21/faceDirection Toddler_Girl 3/warp {{Spouse}} 40 24/faceDirection {{Spouse}} 1/removeObject 42 23/viewport 41 25 true/pause 1500/emote Toddler_Girl 20/pause 500/emote Toddler 20/pause 500/emote PenguinFrontIF 32/pause 1000/faceDirection {{Spouse}} 0/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsPenguin_23}}\"/faceDirection Toddler 2 true/faceDirection Toddler_Girl 2/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsPenguin_24}}\"/emote Toddler_Girl 32 true/emote Toddler 32 true/emote PenguinFrontIF 32/pause 2000/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 70": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 70": true
+            },
+		},	
+			{   //Two Kids Tort1 -Portrait 
+			"Action":"EditData",
+			"Target":"Data/Events/Custom_Ridgeside_RidgesideVillage",
+			"Entries":{
+				"172426007/e 172421007/f Torts 2000/t 0900 1700/w sunny/z winter/A IFKE12":"jaunty/60 60/farmer -1999 -1999 2 {{Spouse}} 60 60 1 Olga 61 60 3 Torts 55 57 1 Toddler_Girl 55 60 2 Toddler 54 60 2/addConversationTopic TwoKidsTort1 14/addConversationTopic IF2KTorts 7/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/emote {{Spouse}} 40/pause 500/emote Olga 40/pause 1000/emote Toddler_Girl 40/pause 500/speak Toddler \"{{i18n:TwoKidsTort_01}}\"/pause 20/emote Toddler 60/pause 500/speak Toddler_Girl \"{{i18n:TwoKidsTort_02 | SpouseTitle ={{SpouseTitle}} }}\"/pause 20/faceDirection Toddler 3/emote Toddler 40/pause 500/faceDirection Toddler 0/pause 500/emote Toddler 16/pause 500/speak Toddler \"{{i18n:TwoKidsTort_04}}\"/pause 20/faceDirection Toddler_Girl 0 true/emote Toddler_Girl 8/pause 500/speak Toddler_Girl \"{{i18n:TwoKidsTort_05}}\"/pause 20/emote Torts 56 true/speak Torts \"{{i18n:TwoKidsTort_06}}\"/advancedMove Toddler false 0 -1 4 100/move Toddler_Girl 0 -1 0/pause 1000/jump Toddler 3/speak Toddler \"{{i18n:TwoKidsTort_07}}\"/pause 20/move Toddler 0 -2 1 true/emote Toddler_Girl 32/pause 500/speak Toddler_Girl \"{{i18n:TwoKidsTort_08}}\"/pause 20/emote Torts 16 true/jump Torts 10/speak Torts \"{{i18n:TwoKidsTort_09{{Baby1Gender}}}}\"/faceDirection Torts 3 true/emote Torts 12 true/jump Torts 4/speak Torts \"{{i18n:TwoKidsTort_10}}\"/emote Toddler 28 true/faceDirection {{Spouse}} 3/pause 500/emote Toddler_Girl 32/pause 500/speak Toddler_Girl \"{{i18n:TwoKidsTort_11}}\"/pause 20/move Toddler_Girl 0 -1 0/emote Torts 16 true/emote {{Spouse}} 16 true/emote Olga 16 true/jump Torts 10/speak Torts \"{{i18n:TwoKidsTort_12{{Baby1Gender}}}}\"/faceDirection Torts 2 true/emote Torts 12 true/jump Torts 4/speak Torts \"{{i18n:TwoKidsTort_13}}\"/textAboveHead {{Spouse}} \"{{i18n:TwoKidsTort_14}}\"/pause 1000/jump Toddler_Girl 5/jump Toddler 5/faceDirection Toddler_Girl 2 true/faceDirection Toddler 2/speed {{Spouse}} 10/move {{Spouse}} -5 0 0 true/move Torts 0 -2 2/jump {{Spouse}} 5/speak {{Spouse}} \"{{i18n:TwoKidsTort_15}}\"/emote Toddler 60 true/emote Toddler_Girl 60 true/emote Olga 28/globalFade/viewport -999 -999/speak {{Spouse}} \"{{i18n:TwoKidsTort_16}}\"/warp Olga -1999 -1999/warp Torts 55 52/warp Toddler_Girl 55 57/warp {{Spouse}} 55 58/viewport 60 58/pause 1500/speak {{Spouse}} \"{{i18n:TwoKidsTort_17}}\"/textAboveHead Toddler_Girl \"{{i18n:TwoKidsTort_18}}\"/pause 1000/textAboveHead Toddler \"{{i18n:TwoKidsTort_18}}\"/pause 1000/speak {{Spouse}} \"{{i18n:TwoKidsTort_19}}\"/speak Toddler_Girl \"{{i18n:TwoKidsTort_20 | SpouseTitle ={{SpouseTitle}} }}\"/pause 20/speak Toddler \"{{i18n:TwoKidsTort_21}}\"/pause 20/emote {{Spouse}} 40/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsTort_22}}\"/faceDirection Toddler_Girl 0 true/faceDirection Toddler 0/pause 500/emote Toddler 60 true/emote Toddler_Girl 60/pause 500/move Toddler 0 -3 0/move Toddler_Girl 0 -3 0/pause 500/speak Toddler \"{{i18n:TwoKidsTort_23}}\"/pause 20/emote Torts 12 true/speak Torts \"{{i18n:TwoKidsTort_24}}\"/speak Toddler \"{{i18n:TwoKidsTort_25}}\"/pause 20/emote Toddler_Girl 60/pause 500/speak Toddler_Girl \"{{i18n:TwoKidsTort_26}}\"/pause 20/advancedMove Torts false 0 -2 2 0/speak Torts \"{{i18n:TwoKidsTort_27}}\"/textAboveHead Toddler_Girl \"{{i18n:TwoKidsTort_18}}\"/pause 1000/textAboveHead Toddler \"{{i18n:TwoKidsTort_18}}\"/pause 1000/emote {{Spouse}} 60/pause 500/pause 1000/end"
+			},
+			"When": {
+			"HasMod |contains=Rafseazz.RSVCP": true,
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 80": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 80": true
+            },
+		},	
+		{   //Two Kids Tort2 -Portrait
+			"Action":"EditData",
+			"Target":"Data/Events/Custom_Ridgeside_RidgesideVillage",
+			"Entries":{
+				"172426008/e 172426007/t 0900 1900/w sunny/A IF2KTorts":"CloudCountry/55 52/farmer 49 46 2 {{Spouse}} 49 54 1 Torts 55 53 0 Toddler_Girl 55 50 2 Toddler 54 50 2/addConversationTopic TwoKidsTort2 14/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/move farmer 0 2 2/emote farmer 8/pause 500/move farmer 0 3 2/faceDirection farmer 1/pause 1000/speak Toddler_Girl \"{{i18n:TwoKidsTort2_01}}\"/pause 20/emote Torts 40 true/speak Torts \"{{i18n:TwoKidsTort2_03}}\"/shake Toddler 1000/pause 500/speak Toddler \"{{i18n:TwoKidsTort2_04}}\"/pause 20/shake Toddler_Girl 1000/pause 500/move Toddler_Girl 0 1 2/pause 500/speak Toddler_Girl \"{{i18n:TwoKidsTort2_06}}\"/pause 20/playSound pickUpItem/addObject 55 52 184 1/pause 500/emote Torts 12/pause 500/advancedMove Torts false 0 1 2 0/playSound hitEnemy/speak Torts \"{{i18n:TwoKidsTort2_07}}\"/speak Toddler \"{{i18n:TwoKidsTort2_08}}\"/pause 20/shake Toddler_Girl 1000/textAboveHead Toddler_Girl \"{{i18n:TwoKidsTort2_09}}\"/pause 1000/shake Toddler 1000/textAboveHead Toddler \"{{i18n:TwoKidsTort2_09}}\"/pause 1000/textAboveHead {{Spouse}} \"{{i18n:TwoKidsTort2_10}}\"/pause 2000/faceDirection farmer 2/pause 500/emote farmer 8 true/emote {{Spouse}} 16/pause 500/faceDirection {{Spouse}} 0/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsTort2_11}}\"/move {{Spouse}} 0 -1 0/speak {{Spouse}} \"{{i18n:TwoKidsTort2_12}}\"/pause 500/emote {{Spouse}} 40 true/move Toddler_Girl 0 -1 3 true/faceDirection Toddler 1 true/speak {{Spouse}} \"{{i18n:TwoKidsTort2_13}}\"/pause 1000/speak {{Spouse}} \"{{i18n:TwoKidsTort2_14}}\"/faceDirection {{Spouse}} 1/emote {{Spouse}} 28/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsTort2_15}}\"/faceDirection farmer 1/emote farmer 40/pause 500/message \"{{i18n:TwoKidsTort2_16}}\"/pause 1500/end"
+			},
+			"When": {
+			"HasMod |contains=Rafseazz.RSVCP": true,
+            },
+		},	
+		{   //Two Kids Tort3 -Portrait
+			"Action":"EditData",
+			"Target":"Data/Events/Custom_Ridgeside_RidgesideVillage",
+			"Entries":{
+				"172426009/e 172426008/i 454/t 0900 2100/w sunny":"jaunty/58 58/farmer 58 64 0 Torts 58 58 1 Toddler_Girl 59 62 2 Toddler 58 62 2/addConversationTopic TwoKidsTort3 14/addConversationTopic IF2KTorts3 7/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/emote farmer 32/pause 500/message \"{{i18n:TwoKidsTort3_01}}\"/pause 500/textAboveHead Toddler \"{{i18n:TwoKidsTort3_02 | PlayerTitle ={{PlayerTitle}} }}\"/pause 2000/faceDirection Toddler_Girl 0 true/faceDirection Toddler 0/move Toddler 0 -1 0/faceDirection Torts 2 true/textAboveHead Toddler_Girl \"{{i18n:TwoKidsTort3_03}}\"/pause 1000/move Toddler_Girl 0 -1 0/pause 500/speak Toddler \"{{i18n:TwoKidsTort3_04}}\"/pause 20/speak Torts \"{{i18n:TwoKidsTort3_06}}\"/shake Toddler_Girl 1000/speak Toddler_Girl \"{{i18n:TwoKidsTort3_07}}\"/pause 20/playSound pickUpItem/addObject 58 59 454 1/pause 1000/emote Torts 40/pause 500/textAboveHead Toddler_Girl \"{{i18n:TwoKidsTort3_08}}\"/pause 2000/emote Torts 40/pause 500/speak Torts \"{{i18n:TwoKidsTort3_09}}\"/emote Torts 56/pause 500/emote Toddler 20/pause 500/speak Toddler \"{{i18n:TwoKidsTort3_10}}\"/pause 20/emote Toddler_Girl 20/pause 500/speak Toddler_Girl \"{{i18n:TwoKidsTort3_11}}\"/pause 20/emote farmer 32/pause 1000/message \"{{i18n:TwoKidsTort3_12}}\"/pause 1500/end"
+			},
+			"When": {
+			"HasMod |contains=Rafseazz.RSVCP": true,
+            },
+		},			
+		{   //Two Kids Tort4 - done - check on 1.6
+			"Action":"EditData",
+			"Target":"Data/Events/Custom_Ridgeside_RidgesideVillage",
+			"Entries":{
+				"172426010/e 172426009/t 0900 1700/w sunny/A IF2KTorts3":"playful/68 46/farmer 70 41 2 {{Spouse}} 69 41 2 Torts 68 48 2 Toddler_Girl 69 48 3 Toddler 67 48 1 Keahi 68 43 2 Trinnie 67 43 2 Lewis 87 45 2 Lenny 87 46 0/addConversationTopic TwoKidsTort4 14/skippable/pause 1500/textAboveHead Toddler_Girl \"{{i18n:TwoKidsTort4_01}}\"/pause 2000/emote Torts 56 true/speak Torts \"{{i18n:TwoKidsTort4_02}}\"/emote Keahi 32 true/emote Trinnie 32/pause 500/textAboveHead Toddler \"{{i18n:TwoKidsTort4_03}}\"/pause 2000/emote Torts 56 true/speak Torts \"{{i18n:TwoKidsTort4_04}}\"/emote farmer 32 true/emote {{Spouse}} 32/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsTort4_05}}\"/jump Keahi 5/speak Keahi \"{{i18n:TwoKidsTort4_06}}\"/speed Keahi 5/move Keahi 0 2 2 true/faceDirection Torts 0/emote Torts 36 true/speak Torts \"{{i18n:TwoKidsTort4_07}}\"/emote Keahi 28/pause 500/textAboveHead Keahi \"{{i18n:TwoKidsTort4_08}}\"/pause 1000/faceDirection Torts 2/speak Trinnie \"{{i18n:TwoKidsTort4_09}}\"/emote Keahi 60/pause 500/emote farmer 32 true/emote {{Spouse}} 32/pause 500/emote Toddler 20 true/emote Toddler_Girl 20/emote Torts 56/pause 1000/message \"{{i18n:TwoKidsTort4_10}}\"/pause 1500/end"
+			},
+			"When": {
+			"HasMod |contains=Rafseazz.RSVCP": true,
+            },
+		},			
+		{   //Two Kids (Homework) -Portrait
+			"Action":"EditData",
+			"Target":"Data/Events/BusStop",
+			"Entries":{
+				"172426011/e 172421007/f Penny 1000/t 0800 1200/w sunny/A IFKE12":"jaunty/16 21/{{Spouse}} 15 23 3 farmer -1000 -1999 0 Penny 34 23 3 Toddler 14 23 1 Toddler_Girl 14 22 1/addConversationTopic TwoKidsPHW 14/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/advancedMove Penny false -16 0/textAboveHead {{Spouse}} \"{{i18n:TwoKidsHomework_01}}\"/pause 2000/textAboveHead {{Spouse}} \"{{i18n:TwoKidsHomework_02}}\"/pause 2000/textAboveHead Toddler_Girl \"{{i18n:TwoKidsHomework_03}}\"/pause 2000/textAboveHead Toddler \"{{i18n:TwoKidsHomework_03.1 | SpouseTitle ={{SpouseTitle}} }}\"/pause 2000/stopAdvancedMoves/emote Toddler_Girl 16/pause 300/faceDirection Penny 3/emote Penny 32/pause 300/speak Toddler_Girl \"{{i18n:TwoKidsHomework_04}}\"/pause 20/faceDirection Penny 3 true/faceDirection {{Spouse}} 1/shake Toddler 1000/speak Toddler \"{{i18n:TwoKidsHomework_05}}\"/pause 20/textAboveHead Toddler_Girl \"{{i18n:TwoKidsHomework_06}}\"/pause 500/emote Toddler_Girl 60 true/emote Toddler 12/pause 300/speak Toddler \"{{i18n:TwoKidsHomework_07}}\"/pause 20/speed Toddler 10/speed Toddler_Girl 10/advancedMove Toddler false -14 0/emote Penny 28/pause 100/speak Toddler_Girl \"{{i18n:TwoKidsHomework_07.1}}\"/pause 200/advancedMove Toddler_Girl false -14 0/faceDirection {{Spouse}} 3/pause 1500/warp Toddler -999 -999/warp Toddler_Girl -999 -999/jump {{Spouse}} 5/emote {{Spouse}} 12/pause 500/textAboveHead {{Spouse}} \"{{i18n:TwoKidsHomework_08}}\"/pause 2000/faceDirection {{Spouse}} 1/pause 100/emote {{Spouse}} 28 true/speak {{Spouse}} \"{{i18n:TwoKidsHomework_09}}\"/emote Penny 32/pause 200/move Penny -1 0 3/speak Penny \"{{i18n:TwoKidsHomework_10}}\"/emote {{Spouse}} 60/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsHomework_11}}\"/speak Penny \"{{i18n:TwoKidsHomework_12}}\"/textAboveHead Penny \"{{i18n:TwoKidsHomework_13}}\"/pause 1000/playSound pickUpItem/addObject 16 23 102 1/speak Penny \"{{i18n:TwoKidsHomework_14}}\"/emote {{Spouse}} 20/pause 500/textAboveHead {{Spouse}} \"{{i18n:TwoKidsHomework_15}}\"/pause 2000/playSound pickUpItem/removeObject 16 23/speak {{Spouse}} \"{{i18n:TwoKidsHomework_16{{WhenRSV}}}}\"/speak Penny \"{{i18n:TwoKidsHomework_17}}\"/speak {{Spouse}} \"{{i18n:TwoKidsHomework_18}}\"/emote {{Spouse}} 32 true/emote Penny 32/pause 1500/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 70": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 70": true
+            },
+			"When": {
+			"spouse |contains=Penny": false,
+			"spouse |contains=Flor": false
+            },		
+		},
+		{   //Two Kids (Ice Cream Event 1) (Summer) -Portrait 
+			"Action":"EditData",
+			"Target":"Data/Events/Town",
+			"Entries":{
+				"172426012/e 172426001/t 0900 1700/w sunny/z spring/z fall/z winter/A IF2KEatIC":"jaunty/90 93/{{Spouse}} 91 93 1 farmer 91 94 1 Alex 88 91 2 {{Baby1GenderToddler}} 88 93 1 {{Baby2GenderToddler}} 87 93 1 Jas 83 98 3 Vincent 83 97 3 Clint 77 85 3 Willy 81 95 2/addConversationTopic TwoKidsIC1 14/addConversationTopic TwoKidsICFall 7/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/advancedMove farmer false 2 0 1 100/advancedMove {{Spouse}} false 2 0/pause 1000/faceDirection {{Baby1GenderToddler}} 0/textAboveHead {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream1_01}}\"/pause 500/emote farmer 16 true/emote {{Spouse}} 16 true/faceDirection {{Baby2GenderToddler}} 0/pause 500/faceDirection {{Spouse}} 3 true/faceDirection farmer 3/textAboveHead Alex \"{{i18n:TwoKidsIcecream1_02}}\"/pause 2000/emote {{Baby1GenderToddler}} 32/pause 500/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream1_03}}\"/pause 200/jump {{Baby2GenderToddler}} 4/pause 200/speak {{Baby2GenderToddler}} \"{{i18n:TwoKidsIcecream1_04}}\"/pause 200/emote Alex 32/pause 500/speak Alex \"{{i18n:TwoKidsIcecream1_06}}\"/pause 200/emote {{Baby1GenderToddler}} 40/pause 500/faceDirection {{Baby1GenderToddler}} 3/pause 300/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream1_08}}\"/pause 200/faceDirection {{Baby2GenderToddler}} 1/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream1_09 | SpouseTitle ={{SpouseTitle}} }}\"/pause 200/emote {{Baby2GenderToddler}} 12/pause 500/emote {{Baby1GenderToddler}} 12/pause 300/emote {{Spouse}} 28/pause 500/emote {{Spouse}} 40/pause 500/faceDirection {{Spouse}} 2/pause 200/speak {{Spouse}} \"{{i18n:TwoKidsIcecream1_10}}\"/faceDirection farmer 0/pause 200/emote farmer 40/pause 500/question fork0 \"{{i18n:TwoKidsIcecream1_11}}\"/speak {{Spouse}} \"{{i18n:TwoKidsIcecream1_12}}\"/faceDirection {{Spouse}} 3/pause 300/emote {{Spouse}} 40/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsIcecream1_13}}\"/advancedMove {{Spouse}} false -1 0 0 -1 3 100/faceDirection farmer 3/speak {{Spouse}} \"{{i18n:TwoKidsIcecream1_14}}\"/faceDirection Alex 1/faceDirection {{Baby1GenderToddler}} 1 true/emote {{Baby1GenderToddler}} 16 true/emote {{Baby2GenderToddler}} 16/pause 300/speak Alex \"{{i18n:TwoKidsIcecream1_15}}\"/faceDirection Alex 2/jump {{Baby2GenderToddler}} 5/textAboveHead {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream1_16}}\"/pause 1000/jump {{Baby1GenderToddler}} 5/textAboveHead {{Baby2GenderToddler}} \"{{i18n:TwoKidsIcecream1_17}}\"/pause 1000/faceDirection Willy 1 true/speed Vincent 5/speed Jas 5/advancedMove Vincent false 1 0 4 100/advancedMove Jas false 2 0 0 -1 4 100/speak {{Baby2GenderToddler}} \"{{i18n:TwoKidsIcecream1_18 | SpouseTitle ={{SpouseTitle}} }}\"/pause 200/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream1_19 | SpouseTitle ={{SpouseTitle}} }}\"/pause 200/jump {{Baby1GenderToddler}} 5/pause 300/jump {{Baby2GenderToddler}} 5/pause 300/jump {{Baby1GenderToddler}} 5/pause 300/jump {{Baby2GenderToddler}} 5/pause 300/jump {{Baby1GenderToddler}} 5/emote {{Spouse}} 20/pause 300/emote farmer 32/pause 1500/end"
+			},
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 70": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 70": true
+            },
+			"When": {
+			"spouse |contains=Alex": false,
+            },		
+		},
+	{   //Two Kids (Ice Cream Event 2) (Fall) -Portrait 
+			"Action":"EditData",
+			"Target":"Data/Events/Town",
+			"Entries":{
+				"172426013/e 172426012/t 0900 1700/w sunny/z spring/z summer/z winter/A TwoKidsICFall":"playful/-1000 -1000/farmer -888 -888 1 {{Spouse}} 37 15 3 {{Baby1GenderToddler}} 88 93 1 {{Baby2GenderToddler}} 87 93 1/changeLocation Farmhouse/viewport -1000 -1000/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/warp {{Spouse}} 51 25/warp {{Baby1GenderToddler}} 50 25/warp {{Baby2GenderToddler}} 50 26/warp farmer -888 -888/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsIcecream2_01}}\"/viewport 50 27 true/pause 1500/emote {{Spouse}} 8/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsIcecream2_02}}\"/jump {{Baby2GenderToddler}} 4/pause 200/speak {{Baby2GenderToddler}} \"{{i18n:TwoKidsIcecream2_03}}\"/pause 20/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream2_04}}\"/pause 20/speak {{Baby2GenderToddler}} \"{{i18n:TwoKidsIcecream2_05}}\"/pause 200/emote {{Baby1GenderToddler}} 32 true/emote {{Baby2GenderToddler}} 32 true/speak {{Spouse}} \"{{i18n:TwoKidsIcecream2_06}}\"/emote {{Spouse}} 40/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsIcecream2_07}}\"/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream2_08 | SpouseTitle ={{SpouseTitle}} }}\"/pause 200/jump {{Baby2GenderToddler}} 4/pause 200/speak {{Baby2GenderToddler}} \"{{i18n:TwoKidsIcecream2_09}}\"/pause 200/faceDirection {{Baby1GenderToddler}} 2/faceDirection {{Baby2GenderToddler}} 0/emote {{Baby1GenderToddler}} 32 true/emote {{Baby2GenderToddler}} 32/pause 500/emote {{Spouse}} 40/pause 1500/end",
+				"172426014/e 172426013/t 0900 1800":"jaunty/90 93/farmer -888 -888 1 Gunther -888 -888 2 {{Spouse}} 91 93 1 {{Baby1GenderToddler}} 88 93 1 {{Baby2GenderToddler}} 87 93 1 Clint 83 98 3 Lewis 81 95 2 Marnie 80 95 2/addConversationTopic TwoKidsIC2 14/addConversationTopic TwoKidsICHouse 7/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/advancedMove {{Spouse}} false 2 0/pause 1000/faceDirection {{Baby1GenderToddler}} 0/textAboveHead {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream2_10}}\"/pause 500/emote {{Spouse}} 16 true/faceDirection {{Baby2GenderToddler}} 0/pause 500/faceDirection {{Spouse}} 3/pause 500/emote {{Baby1GenderToddler}} 8 true/emote {{Baby2GenderToddler}} 8/pause 500/faceDirection {{Baby1GenderToddler}} 1 true/faceDirection {{Baby2GenderToddler}} 3/pause 500/emote {{Spouse}} 8 true/faceDirection {{Baby1GenderToddler}} 2 true/faceDirection {{Baby2GenderToddler}} 2/pause 500/faceDirection {{Baby1GenderToddler}} 3 true/faceDirection {{Baby2GenderToddler}} 1/pause 200/emote {{Baby1GenderToddler}} 60/pause 500/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream2_11}}\"/pause 200/emote {{Baby2GenderToddler}} 60/pause 500/speak {{Baby2GenderToddler}} \"{{i18n:TwoKidsIcecream2_12}}\"/pause 200/faceDirection {{Baby2GenderToddler}} 0/faceDirection {{Baby1GenderToddler}} 0/speak {{Baby2GenderToddler}} \"{{i18n:TwoKidsIcecream2_13}}\"/pause 200/emote {{Spouse}} 40/pause 500/advancedMove {{Spouse}} false -1 0/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsIcecream2_14}}\"/emote {{Baby1GenderToddler}} 40 true/emote {{Baby2GenderToddler}} 40/pause 500/shake {{Baby2GenderToddler}} 500/faceDirection {{Baby2GenderToddler}} 1/move {{Baby1GenderToddler}} 1 0 1/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream2_15}}\"/pause 200/textAboveHead {{Spouse}} \"{{i18n:TwoKidsIcecream2_16}}\"/pause 2000/emote {{Baby1GenderToddler}} 60/pause 300/shake {{Baby1GenderToddler}} 1000/shake {{Baby2GenderToddler}} 1000/pause 100/showFrame {{Baby2GenderToddler}} 23/speak {{Baby2GenderToddler}} \"{{i18n:TwoKidsIcecream2_17}}\"/pause 200/faceDirection Clint 1/showFrame {{Baby1GenderToddler}} 23/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream2_18}}\"/pause 200/faceDirection Lewis 1 true/faceDirection Marnie 1/speak {{Spouse}} \"{{i18n:TwoKidsIcecream2_19}}\"/emote {{Baby2GenderToddler}} 60 true/emote {{Baby1GenderToddler}} 60/speak {{Baby2GenderToddler}} \"{{i18n:TwoKidsIcecream2_20}}\"/pause 200/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream2_21}}\"/pause 200/textAboveHead {{Baby2GenderToddler}} \"{{i18n:TwoKidsIcecream2_22}}\"/pause 2000/textAboveHead {{Baby1GenderToddler}} \"{{i18n:TwoKidsIcecream2_22}}\"/pause 2000/speak {{Spouse}} \"{{i18n:TwoKidsIcecream2_23}}\"/playSound doorOpen/warp Gunther 101 91/pause 200/playSound doorClose/emote Gunther 12/faceDirection {{Spouse}} 1/pause 100/faceDirection {{Spouse}} 2/emote {{Spouse}} 60 true/pause 100/faceDirection {{Spouse}} 3/pause 100/faceDirection {{Spouse}} 0/pause 100/faceDirection {{Spouse}} 1/pause 100/emote {{Spouse}} 60/pause 1000/globalFade/viewport -9999 -9999/pause 1000/speak {{Spouse}} \"{{i18n:TwoKidsIcecream2_24}}\"/pause 1000/end"
+			},
+		},	
+	{   //Two Kids (Ice Cream Event 3) - done
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172426015/e 172426014/t 0800 2000/A TwoKidsICHouse":"jaunty/23 24/{{Spouse}} 24 24 0 farmer -999 -999 0/addConversationTopic TwoKidsIC3 3/skippable/pause 1500/emote {{Spouse}} 28/pause 500/playSound doorOpen/warp farmer 27 29/pause 200/playSound doorClose/move farmer 0 -2 1/emote farmer 40/pause 500/move farmer 0 -3 3/emote farmer 32 true/emote {{Spouse}} 16/pause 500/faceDirection {{Spouse}} 1/pause 200/speak {{Spouse}} \"{{i18n:TwoKidsIcecream3_01}}\"/emote farmer 56/pause 500/faceDirection {{Spouse}} 0/pause 200/speak {{Spouse}} \"{{i18n:TwoKidsIcecream3_02}}\"/emote farmer 28/pause 500/move farmer -1 0 3/emote farmer 40 true/faceDirection {{Spouse}} 1/speak {{Spouse}} \"{{i18n:TwoKidsIcecream3_03}}\"/emote {{Spouse}} 40/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsIcecream3_04}}\"/emote {{Spouse}} 28/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsIcecream3_05}}\"/emote farmer 20/pause 500/faceDirection {{Spouse}} 0/emote {{Spouse}} 40/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsIcecream3_06}}\"/faceDirection {{Spouse}} 1/pause 200/speak {{Spouse}} \"{{i18n:TwoKidsIcecream3_07}}\"/move farmer -1 0 3/emote farmer 56/pause 500/globalFade/viewport -9999 -9999/pause 1000/speak {{Spouse}} \"{{i18n:TwoKidsIcecream3_08}}\"/pause 1000/end"
+			},	
+		},	
+	{   //Two Kids Parenting Talk - done
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172426016/e 172421007/t 0900 2100/A IFKE12PD":"jaunty/51 27/{{Spouse}} 52 25 0 farmer 48 23 2/addConversationTopic TwoKidsPD 3/skippable/pause 1500/emote {{Spouse}} 40 true/move farmer 0 1 1/pause 500/emote farmer 8 true/emote {{Spouse}} 16/pause 500/faceDirection {{Spouse}} 3/pause 200/speak {{Spouse}} \"{{i18n:TwoKidsPD_01}}\"/move farmer 0 1 1/move farmer 3 0 1/pause 200/faceDirection {{Spouse}} 0/speak {{Spouse}} \"{{i18n:TwoKidsPD_02}}\"/faceDirection {{Spouse}} 3/pause 200/playSound pickUpItem/faceDirection farmer 0/pause 200/speak {{Spouse}} \"{{i18n:TwoKidsPD_03}}\"/emote farmer 28/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsPD_04}}\"/emote farmer 40/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsPD_05}}\"/pause 300/speak {{Spouse}} \"{{i18n:TwoKidsPD_06}}\"/emote farmer 40/pause 500/faceDirection farmer 1/emote farmer 56/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsPD_07}}\"/emote {{Spouse}} 40/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsPD_08}}\"/emote farmer 40/pause 500/question fork0 \"{{i18n:TwoKidsPD_09}}\"/emote {{Spouse}} 40 true/speak {{Spouse}} \"{{i18n:TwoKidsPD_10}}\"/faceDirection {{Spouse}} 2/pause 200/speak {{Spouse}} \"{{i18n:TwoKidsPD_11}}\"/faceDirection {{Spouse}} 1/pause 200/emote {{Spouse}} 60 true/speak {{Spouse}} \"{{i18n:TwoKidsPD_12}}\"/jump farmer 5/emote farmer 16/pause 500/question fork0 \"{{i18n:TwoKidsPD_13}}\"/faceDirection {{Spouse}} 3/pause 200/speak {{Spouse}} \"{{i18n:TwoKidsPD_14}}\"/emote {{Spouse}} 32/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsPD_15}}\"/emote farmer 40/pause 500/emote farmer 32/pause 1500/end"
+			},	
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 60": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 60": true
+            },
+		},
+	{   //Two Kids Plush (Event 1) - Portrait 
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172426017/e 172426006/t 0610 2100/A IF2KPengu":"playful/50 27/farmer 999 999 2 {{Spouse}} 51 25 3 {{Baby1GenderToddler}} 50 25 1 {{Baby2GenderToddler}} 50 26 1/addConversationTopic TwoKidsPlush1 3/addConversationTopic IF2KPlush1 1/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsPlush1_01}}\"/pause 20/speak {{Baby2GenderToddler}} \"{{i18n:TwoKidsPlush1_02}}\"/pause 20/emote {{Spouse}} 40/pause 500/speak {{Spouse}} \"{{i18n:TwoKidsPlush1_03}}\"/jump {{Baby1GenderToddler}} 5/pause 200/speak {{Baby1GenderToddler}} \"{{i18n:TwoKidsPlush1_04}}\"//pause 20/jump {{Baby2GenderToddler}} 5/pause 200/speak {{Baby2GenderToddler}} \"{{i18n:TwoKidsPlush1_06}}\"/pause 200/emote {{Spouse}} 40/pause 500/faceDirection {{Spouse}} 0/pause 100/speak {{Spouse}} \"{{i18n:TwoKidsPlush1_08}}\"/emote {{Spouse}} 60/pause 1500/end"
+			},	
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 70": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 70": true
+            },
+			"When": {
+			"spouse |contains=Emily": false,
+            },	
+		},	
+	{   //Two Kids Plush (Event 2) 
+			"Action":"EditData",
+			"Target":"Data/Events/Town",
+			"Entries":{
+				"172426018/e 172426017/t 0900 1900/w sunny/A IF2KPlush1":"jaunty/20 91/{{Spouse}} 20 91 0 Emily 20 90 2 farmer 29 81 2 Kent 28 100 2 Vincent 10 86 2 Toddler 10 87 0 Toddler_Girl 11 87 0/addConversationTopic TwoKidsPlush2 3/addConversationTopic IF2KPlush2 7/skippable/pause 1500/advancedMove farmer false 0 10 3 500/speak {{Spouse}} \"{{i18n:TwoKidsPlush2_01{{WhenSpouseIsHaley}}}}\"/emote Emily 32/pause 500/speak Emily \"{{i18n:TwoKidsPlush2_02{{WhenSpouseIsHaley}}}}\"/emote farmer 8/pause 300/emote {{Spouse}} 56 true/speak {{Spouse}} \"{{i18n:TwoKidsPlush2_03}}\"/textAboveHead Emily \"{{i18n:TwoKidsPlush2_04}}\"/pause 2000/textAboveHead {{Spouse}} \"{{i18n:TwoKidsPlush2_05}}\"/pause 2000/move Emily 0 -1 0/playSound doorOpen/warp Emily 999 999/playSound doorClose/pause 500/advancedMove farmer false -5 0 3 100/emote farmer 8/pause 200/emote {{Spouse}} 16/pause 200/faceDirection {{Spouse}} 1/pause 300/speak {{Spouse}} \"{{i18n:TwoKidsPlush2_06}}\"/advancedMove farmer false -3 0 3 10/pause 1500/end"
+			},	
+		},	
+	{   //Two Kids Plush (Event 3)  -Portrait
+			"Action":"EditData",
+			"Target":"Data/Events/HaleyHouse",
+			"Entries":{
+				"172426019/e 172426018/t 0900 1900/w sunny/A IF2KPlush2":"playful/16 19/{{Spouse}} 15 21 0 Emily 16 17 2 farmer 16 21 0 Toddler 15 19 2 Toddler_Girl 16 19 2/addTemporaryActor PlushPinkIF 16 16 999 999 2 false/addTemporaryActor PlushBlueIF 16 16 999 999 2 false/addConversationTopic TwoKidsPlush3 14/addConversationTopic IF2KPlush3 7/skippable/changeName Toddler_Girl {{GirlName}}/changeName Toddler {{BoyName}}/pause 1500/speak Toddler \"{{i18n:TwoKidsPlush3_01 | SpouseTitle ={{SpouseTitle}} }}\"/pause 20/emote Toddler_Girl 8/pause 500/speak Toddler_Girl \"{{i18n:TwoKidsPlush3_02 | PlayerTitle ={{PlayerTitle}} }}\"/pause 10/emote {{Spouse}} 32 true/emote farmer 32 true/emote Emily 32/pause 200/speak {{Spouse}} \"{{i18n:TwoKidsPlush3_03{{WhenSpouseIsHaley}}}}\"/emote Toddler 40 true/emote Toddler_Girl 40/pause 500/faceDirection Toddler 0 true/faceDirection Toddler_Girl 0/pause 100/textAboveHead Emily \"{{i18n:TwoKidsPlush3_04}}\"/pause 2000/textAboveHead Toddler_Girl \"{{i18n:TwoKidsPlush3_05{{WhenSpouseIsHaley}}}}\"/pause 2000/textAboveHead Toddler \"{{i18n:TwoKidsPlush3_06}}\"/pause 2000/speak Emily \"{{i18n:TwoKidsPlush3_07}}\"/emote Emily 32 true/speak Emily \"{{i18n:TwoKidsPlush3_08}}\"/emote Toddler 8 true/emote Toddler_Girl 8/pause 500/emote Emily 40/pause 500/playSound pickUpItem/warp PlushPinkIF 17 18/warp PlushBlueIF 15 18/textAboveHead Emily \"{{i18n:TwoKidsPlush3_09}}\"/pause 500/emote Toddler 16 true/emote Toddler_Girl 16/pause 500/jump Toddler 5/speak Toddler \"{{i18n:TwoKidsPlush3_10}}\"/pause 20/speed Toddler_Girl 5/move Toddler_Girl 1 0 0/pause 1/jump Toddler_Girl 5/speak Toddler_Girl \"{{i18n:TwoKidsPlush3_11}}\"/emote {{Spouse}} 32 true/emote farmer 32 true/pause 2000/speak Emily \"{{i18n:TwoKidsPlush3_12{{WhenSpouseIsHaley}}}}\"/jump Toddler 5/speak Toddler \"{{i18n:TwoKidsPlush3_13}}\"/pause 20/jump Toddler_Girl 5/speak Toddler_Girl \"{{i18n:TwoKidsPlush3_14}}\"/pause 20/textAboveHead Emily \"{{i18n:TwoKidsPlush3_16}}\"/pause 1000/jump Toddler_Girl 5/textAboveHead Toddler_Girl \"{{i18n:TwoKidsPlush3_17}}\"/pause 1500/jump Toddler 5/textAboveHead Toddler \"{{i18n:TwoKidsPlush3_18}}\"/pause 1000/emote Emily 20 true/jump Toddler_Girl 5/pause 200/jump Toddler 5/pause 200/jump Toddler_Girl 5/pause 200/jump Toddler 5/pause 200/emote {{Spouse}} 20 true/emote farmer 20 true/jump Toddler_Girl 5/pause 200/jump Toddler 5/pause 200/jump Toddler_Girl 5/pause 200/jump Toddler 5/pause 100/speak {{Spouse}} \"{{i18n:TwoKidsPlush3_19{{WhenSpouseIsHaley}}}}\"/speak Toddler \"{{i18n:TwoKidsPlush3_20{{WhenSpouseIsHaley}}}}\"/pause 20/emote Toddler_Girl 20/pause 500/speak Toddler_Girl \"{{i18n:TwoKidsPlush3_21}}\"/pause 20/emote Emily 20/pause 300/emote {{Spouse}} 56 true/emote farmer 56 true/pause 1000/speak Toddler_Girl \"{{i18n:TwoKidsPlush3_22}}\"/pause 20/emote Toddler 20/pause 500/speak Toddler \"{{i18n:TwoKidsPlush3_23}}\"/pause 20/emote Toddler_Girl 40/pause 500/faceDirection Toddler_Girl 3/pause 100/jump Toddler_Girl 5/speak Toddler_Girl \"{{i18n:TwoKidsPlush3_24}}\"/pause 15/faceDirection Toddler 1/pause 100/faceDirection Toddler_Girl 0/speak Toddler_Girl \"{{i18n:TwoKidsPlush3_25}}\"/pause 20/emote Toddler_Girl 20/pause 500/emote Toddler 40/pause 500/jump Toddler 5/speak Toddler \"{{i18n:TwoKidsPlush3_26}}\"/pause 20/faceDirection Toddler_Girl 3/speak Toddler \"{{i18n:TwoKidsPlush3_27}}\"/pause 20/emote Toddler_Girl 12/pause 500/emote Toddler 12/pause 500/emote {{Spouse}} 28 true/emote farmer 28 true/emote Emily 28 true/speak {{Spouse}} \"{{i18n:TwoKidsPlush3_28}}\"/jump {{Spouse}} 4/speak {{Spouse}} \"{{i18n:TwoKidsPlush3_29}}\"/pause 1500/end"
+			},	
+		},				
+	
+////////////////////////////		
+		
+		//Additional Events for MODs
+		
+		
+{   //East Scarp Bonus Events 
+	//Kid 1
+		//Yri's House - done - check on 1.6
+			"Action":"EditData",
+			"Target":"Data/Events/Custom_Yri_House",
+			"Entries":{
+				"172422001/e 172420004/t 0600 1800/A IFKE4ES":"playful/14 16/farmer 14 17 0 {{Spouse}} 13 17 0 Yri 17 19 1 Charles 14 16 2/addTemporaryActor BabyIF 23 12 18 19 2 false/addConversationTopic kid1_ES1 14/skippable/pause 1500/emote farmer 40/pause 500/emote Charles 40/emote Yri 20/pause 500/speak Charles \"{{i18n:Kid1_ES1_01{{Baby1Gender}}}}\"/pause 500/emote {{Spouse}} 32/speak {{Spouse}} \"{{i18n:Kid1_ES1_02}}\"/faceDirection {{Spouse}} 1/speak {{Spouse}} \"{{i18n:Kid1_ES1_03}}\"/faceDirection {{Spouse}} 0/speak {{Spouse}} \"{{i18n:Kid1_ES1_04}}\"/jump Yri 4/textAboveHead Yri \"{{i18n:Kid1_ES1_05}}\"/pause 500/faceDirection {{Spouse}} 1 true/faceDirection farmer 1 true/faceDirection Charles 1/pause 500/speak Yri \"{{i18n:Kid1_ES1_06}}\"/emote Yri 32/pause 500/faceDirection {{Spouse}} 0 true/faceDirection farmer 0 true/faceDirection Charles 2/emote {{Spouse}} 40/speak {{Spouse}} \"{{i18n:Kid1_ES1_07}}\"/pause 500/speak Charles \"{{i18n:Kid1_ES1_08}}\"/emote {{Spouse}} 32 true/emote farmer 32/pause 500/speak {{Spouse}} \"{{i18n:Kid1_ES1_09}}\"/jump Yri 4/textAboveHead Yri \"{{i18n:Kid1_ES1_10}}\"/pause 500/faceDirection {{Spouse}} 1 true/faceDirection farmer 1 true/faceDirection Charles 1/pause 500/speak Yri \"{{i18n:Kid1_ES1_11}}\"/jump Yri 4/jump Yri 4/emote Yri 20/pause 100/emote farmer 28 true/emote {{Spouse}} 28 true/emote Charles 28/pause 500/faceDirection {{Spouse}} 0 true/faceDirection Charles 2/speak {{Spouse}} \"{{i18n:Kid1_ES1_12}}\"/faceDirection farmer 0 true/emote Charles 40/speak Charles \"{{i18n:Kid1_ES1_13}}\"/pause 500/emote farmer 28 true/emote {{Spouse}} 28/faceDirection {{Spouse}} 1 true/faceDirection farmer 3/speak {{Spouse}} \"{{i18n:Kid1_ES1_14}}\"/faceDirection {{Spouse}} 0 true/faceDirection farmer 0/speak Charles \"{{i18n:Kid1_ES1_15}}\"/pause 100/move {{Spouse}} -3 0 3 true/move farmer -3 0 3 true/emote Yri 16/pause 200/speak Yri \"{{i18n:Kid1_ES1_16{{Baby1Gender}}}}\"/faceDirection {{Spouse}} 1 true/faceDirection farmer 1 true/emote farmer 16 true/emote {{Spouse}} 16/pause 500/move {{Spouse}} 1 0 1 true/move farmer 1 0 1/move Charles 0 1 3/pause 200/emote Charles 32/speak Charles \"{{i18n:Kid1_ES1_17}}\"/pause 500/emote farmer 28 true/emote {{Spouse}} 28/pause 1500/end"
+			},
+			"When": {
+			"HasMod |contains=yri.yri": true,	
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 22": true
+            },	 
+		},	
+
+//////
+
+		
+	{   //Part 1 East Scarp Main Rosa
+			"Action":"EditData",
+			"Target":"Data/Events/EastScarp_Village",
+			"Entries":{
+				"172422002/e 172420004/t 0600 1800/A IFKE4ES/w sunny":"jaunty/-1000 -1000/farmer 30 29 3 {{Spouse}} 30 28 3 Rosa 28 28 1/addTemporaryActor BabyIF 23 12 28 26 2 false/changeLocation EastScarp_VillageInn/viewport -1000 -1000/addConversationTopic kid1_ES2 14/skippable/pause 1000/speak Rosa \"{{i18n:Kid1_ES2_01}}\"/pause 1000/viewport 28 28/pause 1000/speak Rosa \"{{i18n:Kid1_ES2_02}}\"/emote Rosa 32/pause 500/speak Rosa \"{{i18n:Kid1_ES2_03}}\"/faceDirection Rosa 0/pause 200/emote Rosa 20/pause 500/speak Rosa \"{{i18n:Kid1_ES2_04}}\"/emote BabyIF 32 true/emote Rosa 16 true/emote farmer 16 true/emote {{Spouse}} 16/pause 200/speak Rosa \"{{i18n:Kid1_ES2_05}}\"/faceDirection {{Spouse}} 0 true/faceDirection farmer 0 true/emote Rosa 20/pause 500/textAboveHead Rosa \"{{i18n:Kid1_ES2_06}}\"/pause 500/speed Rosa 4/move Rosa 0 -1 0/pause 200/emote {{Spouse}} 32/pause 500/faceDirection {{Spouse}} 2/speak {{Spouse}} \"{{i18n:Kid1_ES2_07}}\"/faceDirection {{Spouse}} 1/pause 300/faceDirection {{Spouse}} 2/speak {{Spouse}} \"{{i18n:Kid1_ES2_08{{Baby1Gender}}}}\"/emote farmer 32/pause 500/end"
+			},
+			"When": {
+			"HasMod |contains=LemurKat.EastScarpe.CP": true,		
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 16": true
+            },
+		},		
+	{   //Part 2- East Scarp Main Juliet
+			"Action":"EditData",
+			"Target":"Data/Events/EastScarp_Village",
+			"Entries":{
+				"172422003/e 172422002/t 0600 1900/w sunny":"continue/-1000 -1000/farmer 38 35 1 {{Spouse}} 38 34 1 Rosa 28 27 0 Juliet -900 -900 0/addTemporaryActor BabyIF 23 12 28 26 2 false/changeLocation EastScarp_VillageInn/viewport 44 33/skippable/pause 500/advancedMove farmer false 2 0/advancedMove {{Spouse}} false 2 0/pause 1000/faceDirection farmer 1/playSound doorOpen/warp Juliet 44 35/pause 300/playSound doorClose/emote farmer 16 true/emote {{Spouse}} 16/pause 300/move Juliet -1 0 3/emote Juliet 32/pause 300/speak Juliet \"{{i18n:Kid1_ES2_09}}\"/showFrame {{Spouse}} 6/textAboveHead {{Spouse}} \"{{i18n:Kid1_ES2_10}}\"/pause 500/move Juliet -1 0 3/speak Juliet \"{{i18n:Kid1_ES2_11}}\"/faceDirection {{Spouse}} 2 true/faceDirection farmer 0/pause 500/faceDirection {{Spouse}} 1 true/faceDirection farmer 1/move farmer 1 0 1/emote farmer 40/pause 300/emote farmer 8/pause 500/speak Juliet \"{{i18n:Kid1_ES2_12}}\"/emote BabyIF 12 true/emote farmer 16 true/emote {{Spouse}} 16 true/emote Rosa 16 true/emote Juliet 16/pause 200/speak Juliet \"{{i18n:Kid1_ES2_13}}\"/faceDirection {{Spouse}} 3 true/faceDirection farmer 3/pause 300/playMusic tickTock/speak Juliet \"{{i18n:Kid1_ES2_14}}\"/faceDirection {{Spouse}} 1 true/faceDirection farmer 1/emote Juliet 32/pause 100/speak Juliet \"{{i18n:Kid1_ES2_15}}\"/emote farmer 28 true/emote {{Spouse}} 28/textAboveHead Juliet \"{{i18n:Kid1_ES2_16}}\"/speed farmer 4/advancedMove farmer false 0 -1 2 50/faceDirection {{Spouse}} 2/speed Juliet 4/advancedMove Juliet false -8 0 4 10/pause 2000/end position 44 35"
+			},
+			"When": {
+			"HasMod |contains=LemurKat.JulietHouse.NPC": true,	
+			"spouse |contains=Juliet": false,		
+            },
+		},				
+	{   //Part 3- East Scarp Main Ellie 
+			"Action":"EditData",
+			"Target":"Data/Events/EastScarp_Village",
+			"Entries":{
+				"172422004/e 172422002/t 0600 2100/w sunny":"tickTock/31 59/farmer 35 58 3 {{Spouse}} 35 59 3 Jacob 17 57 2 Eloise 17 58 0 LadySheba 31 62 2/addTemporaryActor CookieIF 16 16 -9999 -9999 2 false/addConversationTopic kid1_ES3 14/skippable/pause 1500/move farmer -4 0 3 true/move {{Spouse}} -4 0 3 true/jump Eloise 5/emote Eloise 32/pause 500/faceDirection {{Spouse}} 2/emote {{Spouse}} 20/pause 1000/speed Eloise 4/advancedMove Eloise false 13 0 1 50/pause 500/advancedMove Jacob false 0 1 9 0 1 50/pause 500/advancedMove {{Spouse}} false 0 1 2 50/pause 500/jump Eloise 5/emote farmer 16/pause 500/speak Eloise \"{{i18n:Kid1_ES3_01}}\"/pause 200/textAboveHead Jacob \"{{i18n:Kid1_ES3_02}}\"/emote Eloise 8/playSound pickUpItem/warp CookieIF 31 61/faceDirection LadySheba 0/pause 500/speed Eloise 3/advancedMove Eloise false 0 -1 1 0 2 50/emote LadySheba 12 true/speed LadySheba 5/pause 1000/textAboveHead Eloise \"{{i18n:Kid1_ES3_03}}\"/pause 500/advancedMove LadySheba false 4 0 2 50/pause 500/faceDirection {{Spouse}} 1/emote {{Spouse}} 28/advancedMove Eloise false 1 0 0 1 3 50/faceDirection farmer 1/pause 1000/emote Eloise 16/pause 100/speak Eloise \"{{i18n:Kid1_ES3_04}}\"/playSound pickUpItem/warp CookieIF -9999 -9999/faceDirection {{Spouse}} 0/emote farmer 32/pause 500/speak Eloise \"{{i18n:Kid1_ES3_05}}\"/jump Eloise 5/speed Eloise 4/move Eloise 7 0 1/textAboveHead Jacob \"{{i18n:Kid1_ES3_06}}\"/pause 1000/end"
+			},
+			"When": {
+			"HasMod |contains=LemurKat.EastScarpe.CP": true,			
+            },
+		},		
+	{   //Part 4- East Scarp Main Sen -change unique id to nexus one
+			"Action":"EditData",
+			"Target":"Data/Events/EastScarp_Village",
+			"Entries":{
+				"172422005/e 172422004/t 0600 2200/w sunny":"continue/42 59/farmer 935 958 3 SenS 42 58 0 LadySheba 33 64 3/skippable/pause 1000/move SenS 6 0 1/emote SenS 32/pause 500/speak SenS \"{{i18n:Kid1_ES3_07}}\"/speed SenS 4/move SenS 3 0 2/speed SenS 4/move SenS 0 1 2/pause 500/speed SenS 1/faceDirection SenS 3/pause 300/faceDirection SenS 1/pause 300/faceDirection SenS 2/emote SenS 40/pause 500/speak SenS \"{{i18n:Kid1_ES3_08}}\"/emote SenS 40/pause 500/speed SenS 5/faceDirection SenS 1/faceDirection SenS 3/faceDirection SenS 1/faceDirection SenS 3/faceDirection SenS 2/jump SenS 4/speak SenS \"{{i18n:Kid1_ES3_09}}\"/emote SenS 20/speed SenS 4/move SenS 0 5 2 true/pause 1000/end"
+			},
+			"When": {
+			"HasMod |contains=7thAxis.DitR, 7thAxis.LitD.CP": true,	
+			"spouse |contains=SenS": false,		
+            },
+		},			
+		
+               /////////////////////////		
+		
+{   //Jorts and Jean Extra Events - done - check on 1.6
+	//Kid 2
+			"Action":"EditData",
+			"Target":"Data/Events/Farmhouse",
+			"Entries":{
+				"172429001/e 172421006/t 0700 1800/A IFKE11JJ":"jaunty/27 27/{{Spouse}} 28 24 1 farmer 27 26 2 JeanCat -19999 -19999 0 JortsCat -19999 -19999 0/addTemporaryActor BabyIF 23 12 31 14 2 false/addConversationTopic kid2_JJ1 14/skippable/pause 1500/move {{Spouse}} -2 0 3/emote {{Spouse}} 40/pause 500/move {{Spouse}} 2 0 1/emote {{Spouse}} 40/pause 500/move {{Spouse}} -1 0 2/speak {{Spouse}} \"{{i18n:Kid2_JJ1_01}}\"/faceDirection farmer 0/pause 500/faceDirection {{Spouse}} 1/speak {{Spouse}} \"{{i18n:Kid2_JJ1_02{{Baby1Gender}}}}\"/faceDirection farmer 1/pause 200/speak {{Spouse}} \"{{i18n:Kid2_JJ1_03}}\"/emote farmer 28 true/emote {{Spouse}} 28/pause 500/faceDirection {{Spouse}} 2 true/faceDirection farmer 0/pause 200/speak {{Spouse}} \"{{i18n:Kid2_JJ1_04}}\"/faceDirection farmer 3/emote farmer 40/pause 500/faceDirection farmer 1/emote farmer 40/pause 500/emote farmer 16/pause 200/faceDirection farmer 0/jump farmer 3/emote farmer 40/pause 500/speak {{Spouse}} \"{{i18n:Kid2_JJ1_05}}\"/emote farmer 32/pause 500/speak {{Spouse}} \"{{i18n:Kid2_JJ1_06}}\"/globalFade/viewport -9999 -9999/warp JortsCat 26 27/warp JeanCat 27 27/warp farmer 27 25/warp {{Spouse}} 26 24/faceDirection farmer 2/speak {{Spouse}} \"{{i18n:Kid2_JJ1_07}}\"/playMusic playful/viewport 27 27 true/pause 1000/playSound doorClose/pause 500/jump JortsCat 3/speak JortsCat \"{{i18n:Kid2_JJ1_08}}\"/speak JeanCat \"{{i18n:Kid2_JJ1_09}}\"/speak JortsCat \"{{i18n:Kid2_JJ1_10}}\"/pause 200/jump farmer 3/emote farmer 32/pause 500/emote {{Spouse}} 40/pause 500/speak {{Spouse}} \"{{i18n:Kid2_JJ1_11}}\"/faceDirection farmer 3/emote JortsCat 40 true/emote JeanCat 40/pause 500/jump farmer 4/emote farmer 60/pause 500/emote {{Spouse}} 28/speak {{Spouse}} \"{{i18n:Kid2_JJ1_12}}\"/move {{Spouse}} 0 1 2 true/emote JortsCat 32 true/emote JeanCat 32/pause 500/speak {{Spouse}} \"{{i18n:Kid2_JJ1_13}}\"/emote {{Spouse}} 28/pause 500/speak {{Spouse}} \"{{i18n:Kid2_JJ1_14}}\"/emote farmer 40/emote JeanCat 40/emote JortsCat 40/pause 500/emote farmer 28/speak JortsCat \"{{i18n:Kid2_JJ1_15}}\"/pause 1500/end"
+			},
+			"When": {
+			"HasMod |contains=tiakall.jortsandjean": true,	
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 57": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 35": true
+            },
+		},	
+		
+               /////////////////////////				
+
+{   //SVE RSV ES Bonus Events - done - check on 1.6
+
+	//Kid 2
+		//Part 1
+			"Action":"EditData",
+			"Target":"Data/Events/Custom_BlueMoonVineyard",
+			"Entries":{
+				"172425001/e 172421007/f Morgan 500/t 0800 1700/w sunny/z winter/A IFKE12":"playful/28 34/farmer -19999 -19999 0 Sophia 28 33 2 Keahi 27 35 0 Trinnie 28 35 0 Eloise 29 35 0/addConversationTopic Kid2_SRE1 14/skippable/pause 1500/speak Eloise \"{{i18n:Kid2_SRE1_01}}\"/jump Trinnie 3/speak Trinnie \"{{i18n:Kid2_SRE1_02}}\"/jump Keahi 3/speak Keahi \"{{i18n:Kid2_SRE1_03}}\"/emote Sophia 32/pause 200/speak Sophia \"{{i18n:Kid2_SRE1_04}}\"/pause 500/textAboveHead Eloise \"{{i18n:Kid2_SRE1_05}}\"/pause 1000/textAboveHead Keahi \"{{i18n:Kid2_SRE1_06}}\"/pause 1500/textAboveHead Trinnie \"{{i18n:Kid2_SRE1_07}}\"/pause 1000/faceDirection Trinnie 2/move Eloise 0 1 3 True/move Keahi 0 1 1/speak Eloise \"{{i18n:Kid2_SRE1_08}}\"/jump Trinnie 3/textAboveHead Trinnie \"{{i18n:Kid2_SRE1_09}}\"/pause 1500/jump Keahi 3/textAboveHead Keahi \"{{i18n:Kid2_SRE1_10}}\"/pause 1500/emote Sophia 32/pause 500/globalFade/viewport -9999 -9999/warp Sophia 25 39/faceDirection Sophia 0/warp Keahi 14 41/faceDirection Keahi 0/warp Trinnie 21 41/faceDirection Trinnie 0/warp Eloise 22 41/faceDirection Eloise 0/viewport 19 39/pause 1000/emote Trinnie 32/pause 500/emote Eloise 32/pause 500/textAboveHead Keahi \"{{i18n:Kid2_SRE1_11}}\"/pause 500/emote Eloise 32/pause 500/emote Trinnie 32/pause 500/textAboveHead Keahi \"{{i18n:Kid2_SRE1_12}}\"/pause 500/emote Trinnie 40/pause 1000/faceDirection Trinnie 3/pause 500/emote Trinnie 16/pause 500/faceDirection Trinnie 1/pause 200/faceDirection Eloise 3/pause 200/Jump Trinnie 4/pause 500/emote Eloise 16/pause 500/speed Eloise 4/move Eloise -2 0 3/faceDirection Trinnie 3/pause 200/Jump Eloise 4/speak Eloise \"{{i18n:Kid2_SRE1_13}}\"/faceDirection Keahi 1 true/faceDirection Sophia 3 true/textAboveHead Sophia \"{{i18n:Kid2_SRE1_14}}\"/pause 500/speak Keahi \"{{i18n:Kid2_SRE1_15}}\"/Jump Trinnie 4/speak Trinnie \"{{i18n:Kid2_SRE1_16}}\"/emote Eloise 60/pause 300/emote Sophia 28/pause 1500/end"
+			},
+			"When": {
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+			"HasMod |contains=Rafseazz.RSVCP": true,
+			"HasMod |contains=LemurKat.EastScarpe.CP": true,
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=0|daysold}}' >= 100": true
+            },
+			"When": {
+			"Query: '{{TheMightyAmondee.CustomTokens/Child:player=local|childindex=1|daysold}}' >= 100": true
+            },
+		},	
+{   
+		//Part 2 Yuuma Jas Vincent Morgan - done - check on 1.6
+			"Action":"EditData",
+			"Target":"Data/Events/Forest",
+			"Entries":{
+				"172425002/e 172425001/t 0800 1700/w sunny":"jaunty/88 19/farmer -19999 -19999 0 Morgan 72 16 2 Vincent 89 18 0 Yuuma 90 18 0 Jas 91 18 0 Marnie 90 16 2/addConversationTopic Kid2_SRE2 14/addConversationTopic IF2KSRE 14/skippable/pause 1500/speak Yuuma \"{{i18n:Kid2_SRE2_01}}\"/speak Jas \"{{i18n:Kid2_SRE2_02}}\"/emote Morgan 8 /pause 200/move Morgan 0 2 1/move Morgan 12 0 1 true/emote Marnie 28/pause 500/speak Marnie \"{{i18n:Kid2_SRE2_03}}\"/emote Vincent 8/faceDirection Vincent 3/pause 200/textAboveHead Vincent \"{{i18n:Kid2_SRE2_04}}\"/pause 1000/FaceDirection Marnie 3 true/FaceDirection Yuuma 3/FaceDirection Jas 3/emote Morgan 8/pause 500/emote Vincent 40/FaceDirection Yumma 1/textAboveHead Yuuma \"{{i18n:Kid2_SRE2_05}}\"/pause 1000/textAboveHead Jas \"{{i18n:Kid2_SRE2_06}}\"/pause 1000/pause 1500/end"
+			},
+			"When": {
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+			"HasMod |contains=Rafseazz.RSVCP": true,
+			"HasMod |contains=LemurKat.EastScarpe.CP": true,
+            },
+		},				
+{   
+		//Part 3 Ridgeside Village - done - check on 1.6
+			"Action":"EditData",
+			"Target":"Data/Events/Custom_Ridgeside_RidgesideVillage",
+			"Entries":{
+				"172425003/e 172425002/t 0800 1800/w sunny/A IF2KSRE":"playful/78 42/farmer 91 41 0 {{Spouse}} 90 40 1 Pika 92 40 3 Sonny 84 40 2 Louie 83 40 2 Eloise 78 42 2 Morgan 76 44 1 Vincent 80 44 3 Yuuma 76 45 1 Jas 76 43 1 Trinnie 80 43 3 Keahi 80 45 3 Kiwi 85 36 2 Jacob 89 48 0 Bert 88 47 2 Lenny 90 47 2/addConversationTopic Kid2_SRE3 14/skippable/pause 1500/emote farmer 32/move farmer -6 0 3 true/emote Louie 28/speak Sonny \"{{i18n:Kid2_SRE3_01}}\"/emote farmer 8/pause 500/emote Eloise 40/pause 200/emote Sonny 32/move Eloise 0 -1 0 true/emote Louie 36/speak Eloise \"{{i18n:Kid2_SRE3_02}}\"/emote farmer 28/shake Vincent 1000/pause 200/emote Sonny 56/FaceDirection Eloise 2/pause 200/speak Eloise \"{{i18n:Kid2_SRE3_03}}\"/move Jas 1 0 0/speak Jas \"{{i18n:Kid2_SRE3_04}}\"/pause 200/speak Eloise \"{{i18n:Kid2_SRE3_05}}\"/Emote Jas 32/pause 200/move Jas -1 0 1/speak Eloise \"{{i18n:Kid2_SRE3_06}}\"/move Morgan 1 0 0/speak Morgan \"{{i18n:Kid2_SRE3_07}}\"/pause 200/speak Eloise \"{{i18n:Kid2_SRE3_08}}\"/textAboveHead Morgan \"{{i18n:Kid2_SRE3_09}}\"/pause 500/move Morgan -1 0 1/textAboveHead Eloise \"{{i18n:Kid2_SRE3_10}}\"/pause 500/move Yuuma 1 0 0/speak Yuuma \"{{i18n:Kid2_SRE3_11}}\"/pause 200/emote Eloise 16 true/emote Jas 16 true/emote Morgan 16 true/emote Trinnie 16 true/emote Keahi 16/pause 500/shake Vincent 1000/speak Eloise \"{{i18n:Kid2_SRE3_12}}\"/emote Louie 60/speak Yuuma \"{{i18n:Kid2_SRE3_13}}\"/emote Yuuma 28/pause 200/move Yuuma -1 0 1/textAboveHead Eloise \"{{i18n:Kid2_SRE3_14}}\"/pause 500/faceDirection Keahi 2/faceDirection Vincent 1/move Trinnie -1 0 0/speak Trinnie \"{{i18n:Kid2_SRE3_15}}\"/shake Vincent 1000/pause 200/speak Eloise \"{{i18n:Kid2_SRE3_16}}\"/emote Eloise 40/pause 200/move Trinnie 1 0 3/textAboveHead Eloise \"{{i18n:Kid2_SRE3_16_1}}\"/pause 500/shake Vincent 1500/speak Vincent \"{{i18n:Kid2_SRE3_17}}\"/emote Eloise 40/pause 200/speak Eloise \"{{i18n:Kid2_SRE3_18}}\"/playMusic sadpiano/move Vincent -1 0 3/shake Vincent 1000/speak Vincent \"{{i18n:Kid2_SRE3_19}}\"/emote Eloise 16 true/emote Jas 16 true/emote Yuuma 16 true/emote Morgan 16 true/emote Trinnie 16 true/emote Keahi 40/pause 500/move Jas 1 0 1/pause 100/Jump Jas 6/speak Jas \"{{i18n:Kid2_SRE3_20}}\"/emote Vincent 60/speak Vincent \"{{i18n:Kid2_SRE3_21}}\"/Jump Jas 5/speak Jas \"{{i18n:Kid2_SRE3_22}}\"/emote Eloise 28 true/emote farmer 28/emote Louie 32/pause 500/speak Eloise \"{{i18n:Kid2_SRE3_23}}\"/emote Keahi 16/pause 1000/speak Eloise \"{{i18n:Kid2_SRE3_24}}\"/faceDirection Vincent 2/faceDirection Trinnie 2/emote Keahi 28/pause 500/move Keahi -2 0 0/faceDirection Jas 2/faceDirection Trinnie 3/speak Keahi \"{{i18n:Kid2_SRE3_25}}\"/emote Eloise 16 true/emote Jas 16 true/emote Yuuma 16 true/emote Morgan 16 true/emote Trinnie 16 true/emote Vincent 16/pause 500/emote farmer 28/pause 500/jump Trinnie 6/speak Trinnie \"{{i18n:Kid2_SRE3_26}}\"/emote Louie 32/pause 200/speak Keahi \"{{i18n:Kid2_SRE3_27}}\"/textAboveHead Eloise \"{{i18n:Kid2_SRE3_28}}\"/pause 500/speak Eloise \"{{i18n:Kid2_SRE3_29}}\"/pause 200/faceDirection Jas 0/faceDirection Vincent 0/emote Jas 40 true/emote Yuuma 40 true/emote Morgan 40/pause 500/textAboveHead Vincent \"{{i18n:Kid2_SRE3_30}}\"/textAboveHead Louie \"{{i18n:Kid2_SRE3_31}}\"/speak Jas \"{{i18n:Kid2_SRE3_32}}\"/textAboveHead Eloise \"{{i18n:Kid2_SRE3_33}}\"/pause 500/emote Yuuma 60 true/emote Morgan 60 true/emote Trinnie 60 true/emote Vincent 28/pause 500/emote farmer 28/pause 200/move Louie 0 2 3/move Louie -1 0 3/emote Louie 56/pause 200/faceDirection Keahi 1 true/faceDirection Jas 1 true/faceDirection Eloise 1 true/faceDirection Trinnie 1 true/faceDirection Vincent 1/pause 200/speak Louie \"{{i18n:Kid2_SRE3_34}}\"/emote Jas 40 true/emote Eloise 40 true/emote Trinnie 40/pause 500/speak Eloise \"{{i18n:Kid2_SRE3_35}}\"/speak Louie \"{{i18n:Kid2_SRE3_36}}\"/emote Louie 60/emote Sonny 28/pause 200/move Sonny 0 1 3/move Sonny -3 0 3/emote Sonny 32/speak Sonny \"{{i18n:Kid2_SRE3_37}}\"/faceDirection Keahi 0 true/faceDirection Jas 0 true/faceDirection Yuuma 0 true/faceDirection Trinnie 0 true/faceDirection Morgan 0 true/faceDirection Vincent 0/pause 200/speak Sonny \"{{i18n:Kid2_SRE3_38}}\"/emote Eloise 40/pause 500/playMusic tickTock/speak Eloise \"{{i18n:Kid2_SRE3_39}}\"/pause 200/emote Yuuma 32 true/emote Morgan 32 true/emote Trinnie 32 true/emote Jas 32 true/emote Keahi 32 true/emote Louie 32 true/emote Vincent 32/pause 500/speak Louie \"{{i18n:Kid2_SRE3_40}}\"/emote Louie 16/speak Louie \"{{i18n:Kid2_SRE3_41}}\"/warp Kiwi 83 38/emote Kiwi 12/pause 200/faceDirection Eloise 2/textAboveHead Kiwi \"{{i18n:Kid2_SRE3_42}}\"/pause 1000/warp Kiwi 85 36/faceDirection farmer 0/emote farmer 8/speak Eloise \"{{i18n:Kid2_SRE3_43}}\"/speak Trinnie \"{{i18n:Kid2_SRE3_44}}\"/Jump Vincent 6/pause 200/Jump Trinnie 6/pause 200/Jump Keahi 6/pause 200/Jump Morgan 6/pause 200/Jump Jas 6/Jump Yuuma 6/pause 500/globalFade/viewport -9999 -9999/pause 2000/speak Sonny \"{{i18n:Kid2_SRE3_45}}\"/pause 2000/speak Sonny \"{{i18n:Kid2_SRE3_46}}\"/pause 1500/end"
+			},
+			"When": {
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+			"HasMod |contains=Rafseazz.RSVCP": true,
+			"HasMod |contains=LemurKat.EastScarpe.CP": true,
+            },
+		},	
+		
+//////////////////////////////////		
+		
+		
+		
+//Load Dialogues
+
+//CT for Vanilla NPCs
+{ 
+            "LogName": "Linus Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Linus",
+            "Entries": {
+                "kid2_intro": "{{i18n:kid2_intro_Linus}}",	
+            },
+}, 
+{ 
+            "LogName": "Caroline Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Caroline",
+            "Entries": {
+                "kid1_2h": "{{i18n:kid1_2h_Caroline}}",
+				"Kid2_0H": "{{i18n:Kid2_0H_Caroline}}",
+				"kid2_intro": "{{i18n:kid2_intro_Caroline}}",
+				"TwoKidsShop2": "{{i18n:TwoKidsShop2_Caroline}}",
+				"kid2_JJ1": "{{i18n:kid2_JJ1_Caroline}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Caroline}}",
+				"TwoKidsEat01": "{{i18n:TwoKidsEat01_Caroline{{WhenSpouseIsAbigail}}}}",
+            },
+}, 
+{ 
+            "LogName": "Pierre Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Pierre",
+            "Entries": {
+                "kid1_1h": "{{i18n:kid1_1h_Pierre}}",
+				"Kid2_0H": "{{i18n:Kid2_0H_Pierre}}",
+				"kid1_2h": "{{i18n:kid1_2h_Pierre}}",
+				"kid2_1h": "{{i18n:kid2_1h_Pierre}}",
+				"TwoKidsShop2": "{{i18n:TwoKidsShop2_Pierre}}",
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Pierre}}",
+				"TwoKidsEat01": "{{i18n:TwoKidsEat01_Pierre{{WhenSpouseIsAbigail}}}}",
+            },
+}, 
+{ 
+            "LogName": "Robin Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Robin",
+            "Entries": {
+                "kid1_0h": "{{i18n:kid1_0h_Robin}}",
+				"Kid2_0H": "{{i18n:Kid2_0H_Robin}}",
+				"kid2_intro": "{{i18n:kid2_intro_Robin}}",
+				"kid2_JJ1": "{{i18n:kid2_JJ1_Robin}}",
+				"TwoKidsEat01": "{{i18n:TwoKidsEat01_Robin{{WhenSpouseIsMaruSeb}}}}",
+            },
+}, 
+{ 
+            "LogName": "Marnie Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Marnie",
+            "Entries": {
+                "kid1_1h": "{{i18n:kid1_1h_Marnie}}",
+				"kid2_1h": "{{i18n:kid2_1h_Marnie{{Baby2Gender}}}}",
+				"kid2_JJ1": "{{i18n:kid2_JJ1_Marnie}}",
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Marnie}}",
+            },
+}, 
+{ 
+            "LogName": "Jodi Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Jodi",
+            "Entries": {
+                "kid1_1h": "{{i18n:kid1_1h_Jodi}}",
+				"Kid2_Milk": "{{i18n:Kid2_Milk_Jodi{{Baby1Gender}}}}",
+				"kid2_1h": "{{i18n:kid2_1h_Jodi}}",
+				"kid2_3h": "{{i18n:kid2_3h_Jodi}}",
+				"kid2_JJ1": "{{i18n:kid2_JJ1_Jodi}}",
+				"TwoKidsEat01": "{{i18n:TwoKidsEat01_Jodi{{WhenSpouseIsSam}}}}",
+            },
+}, 
+{ 
+            "LogName": "Kent Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Kent",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Kent}}",
+				"TwoKidsEat01": "{{i18n:TwoKidsEat01_Kent{{WhenSpouseIsSam}}}}",
+            },
+}, 
+{ 
+            "LogName": "George Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/George",
+            "Entries": {
+                "kid1_1h": "{{i18n:kid1_1h_George}}",
+				"kid1_MV": "{{i18n:kid1_MV_George}}",
+				"kid2_intro": "{{i18n:kid2_intro_George}}",
+				"TwoKidsEat01": "{{i18n:TwoKidsEat01_George{{WhenSpouseIsAlex}}}}",
+            },
+}, 
+{ 
+            "LogName": "Evelyn Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Evelyn",
+            "Entries": {
+                "kid1_1h": "{{i18n:kid1_1h_Evelyn}}",
+				"kid1_MV": "{{i18n:kid1_MV_Evelyn}}",
+				"kid2_1h": "{{i18n:kid2_1h_Evelyn}}",
+				"kid2_intro": "{{i18n:kid2_intro_Evelyn}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Evelyn}}",
+				"TwoKidsEat01": "{{i18n:TwoKidsEat01_Evelyn{{WhenSpouseIsAlex}}}}",
+            },
+}, 
+{ 
+            "LogName": "Demetrius Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Demetrius",
+            "Entries": {
+                "kid1_3h": "{{i18n:kid1_3h_Demetrius}}",
+				"TwoKidsEat01": "{{i18n:TwoKidsEat01_Demetrius{{WhenSpouseIsMaruSeb}}}}",
+            },
+}, 
+{ 
+            "LogName": "Gus Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Gus",
+            "Entries": {
+                "kid1_MV": "{{i18n:kid1_MV_Gus}}",
+				"kid1_3h": "{{i18n:kid1_3h_Gus}}",
+				"Kid2_0H": "{{i18n:Kid2_0H_Gus}}",
+				"kid2_JJ1": "{{i18n:kid2_JJ1_Gus}}",
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Gus}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Gus}}",
+            },
+}, 
+{ 
+            "LogName": "Clint Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Clint",
+            "Entries": {
+                "kid1_3h": "{{i18n:kid1_3h_Clint}}",
+				"kid2_intro": "{{i18n:kid2_intro_Clint}}",
+            },
+}, 
+{ 
+            "LogName": "Willy Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Willy",
+            "Entries": {         
+				"kid2_3h": "{{i18n:kid2_3h_Willy}}",
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Willy}}",
+            },
+}, 
+{ 
+            "LogName": "Lewis Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Lewis",
+            "Entries": {         
+				"kid1_0h": "{{i18n:kid1_0h_Lewis}}",
+				"kid1_MV": "{{i18n:kid1_MV_Lewis}}",
+				"kid2_3h": "{{i18n:kid2_3h_Lewis}}",
+				"kid2_intro": "{{i18n:kid2_intro_Lewis}}",
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Lewis}}",
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Lewis}}",
+            },
+}, 
+{ 
+            "LogName": "Pam Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Pam",
+            "Entries": {         
+				"kid2_1h": "{{i18n:kid2_1h_Pam{{Baby2Gender}}}}",
+				"kid2_JJ1": "{{i18n:kid2_JJ1_Pam}}",
+				"TwoKidsPHW": "{{i18n:TwoKidsPHW_Pam}}",
+				"TwoKidsEat01": "{{i18n:TwoKidsEat01_Pam{{WhenSpouseIsPenny}}}}",
+            },
+}, 
+{ 
+            "LogName": "Sandy Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sandy",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Sandy}}",
+				"kid2_intro": "{{i18n:kid2_intro_Sandy}}",
+            },
+},
+{ 
+            "LogName": "Krobus Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Krobus",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Krobus}}",
+				"kid2_intro": "{{i18n:kid2_intro_Krobus}}",
+            },
+},
+//CT for Vanilla Spouses
+{ 
+            "LogName": "Penny Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Penny",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_penny}}",
+				"Kid2_Milk": "{{i18n:Kid2_Milk_Penny}}",
+				"TwoKidsPHW": "{{i18n:TwoKidsPHW_Penny}}",
+            },
+},  
+{ 
+            "LogName": "Abigail Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Abigail",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Abigail}}",
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Abigail}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Abigail}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Abigail}}",
+            },
+},  
+{ 
+            "LogName": "Alex Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Alex",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Alex{{Baby1Gender}}}}",
+				"TwoKidsIC1": "{{i18n:TwoKidsIC1_Alex}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Alex}}",
+            },
+},  
+{ 
+            "LogName": "Harvey Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Harvey}}",
+				"kid2_1h": "{{i18n:kid2_1h_Harvey{{Baby2Gender}}}}",
+            },
+},  
+{ 
+            "LogName": "Sam Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sam",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Sam}}",
+				"kid2_3h": "{{i18n:kid2_3h_Sam}}",
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Sam}}",
+            },
+			"When": {"spouse |contains=Sam": false},
+},  
+{ 
+            "LogName": "Sam-Spouse Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sam",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Sam}}",
+				"kid2_3h": "{{i18n:kid2_3h_Sam}}",
+            },
+			"When": {"spouse |contains=Sam": true},
+}, 
+{ 
+            "LogName": "Leah Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Leah",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Leah{{Baby1Gender}}}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Leah}}",
+            },
+},  
+{ 
+            "LogName": "Maru Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Maru",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Maru}}",
+				"kid2_1h": "{{i18n:kid2_1h_Maru}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Maru}}",
+            },
+},  
+{ 
+            "LogName": "Emily Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Emily",
+            "Entries": {
+                "kid2_intro": "{{i18n:kid2_intro_Emily}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Emily{{WhenSpouseIsHaley}}}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Emily{{WhenSVE}}}}",
+            },
+},
+{ 
+            "LogName": "Haley Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "kid2_intro": "{{i18n:kid2_intro_Haley{{Baby2Gender}}}}",
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Haley}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Haley}}",
+            },
+},
+{ 
+            "LogName": "Sebastian Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "kid2_intro": "{{i18n:kid2_intro_Sebastian}}",
+            },
+},
+{ 
+            "LogName": "Shane Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "kid2_intro": "{{i18n:kid2_intro_Shane}}",
+            },
+},
+{ 
+            "LogName": "Elliott Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "kid2_intro": "{{i18n:kid2_intro_Elliott}}",
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Elliott}}",
+            },
+			"When": {"spouse |contains=Elliott": false},
+},
+{ 
+            "LogName": "Elliott Spouse Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Elliott",
+            "Entries": {
+                "kid2_intro": "{{i18n:kid2_intro_Elliott}}",
+            },
+			"When": {"spouse |contains=Elliott": true},
+},
+//CT for Vanilla Kids 
+{ 
+            "LogName": "Vincent Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Vincent",
+            "Entries": {
+				"kid1_0h": "{{i18n:kid1_0h_Vincent{{Baby1Gender}}}}",
+				"Kid2_0H": "{{i18n:Kid2_0H_Vincent{{Baby1Gender}}}}",
+                "kid2_Forest": "{{i18n:kid2_Forest_Vincent}}",
+				"kid2_3h": "{{i18n:kid2_3h_Vincent}}",
+				"kid2_intro": "{{i18n:kid2_intro_Vincent}}",
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Vincent}}",
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Vincent}}",	
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Vincent}}",
+				"TwoKidsIC1": "{{i18n:TwoKidsIC1_Vincent{{Baby2Gender}}}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Vincent}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Vincent}}",
+            },
+},
+{ 
+            "LogName": "Jas Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Jas",
+            "Entries": {
+				"kid1_0h": "{{i18n:kid1_0h_Jas}}",
+				"Kid2_0H": "{{i18n:Kid2_0H_Jas{{Baby2Gender}}}}",
+                "kid2_Forest": "{{i18n:kid2_Forest_Jas}}",
+				"kid2_3h": "{{i18n:kid2_3h_Jas}}",
+				"kid2_intro": "{{i18n:kid2_intro_Jas}}",
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Jas}}",
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Jas}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Jas{{Baby1Gender}}}}",				
+            },
+},
+//CT for SVE
+{ 
+            "LogName": "Marlon Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarlonFay",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Marlon}}",
+				"kid2_JJ1": "{{i18n:kid2_JJ1_Marlon}}",
+            },
+},
+{ 
+            "LogName": "Wizard Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Wizard",
+            "Entries": { 
+				"kid2_intro": "{{i18n:kid2_intro_Wizard}}",	
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Wizard}}",
+            },
+}, 
+{ 
+            "LogName": "MorrisTod Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MorrisTod",
+            "Entries": { 
+				"kid2_1h": "{{i18n:kid2_1h_MorrisTod}}",	
+            },
+},
+{ 
+            "LogName": "Gunther Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/GuntherSilvian",
+            "Entries": { 
+				"kid1_1h": "{{i18n:kid1_1h_Gunther}}",	
+				"TwoKidsPHW": "{{i18n:TwoKidsPHW_Gunther}}",
+            },
+}, 
+{ 
+            "LogName": "Andy Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Andy",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Andy{{Baby1Gender}}}}",
+				"kid2_intro": "{{i18n:kid2_intro_Andy}}",	
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Andy}}",
+            },
+}, 
+{ 
+            "LogName": "Claire Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Claire",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Claire}}",	
+            },
+},
+{ 
+            "LogName": "Morgan Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Morgan",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Morgan}}",
+				"kid2_intro": "{{i18n:kid2_intro_Morgan{{Baby2Gender}}}}",	
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Morgan}}",
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Morgan}}",
+            },
+}, 
+{ 
+            "LogName": "Scarlett Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Scarlett",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Scarlett}}",
+				"kid2_intro": "{{i18n:kid2_intro_Scarlett{{Baby2Gender}}}}",	
+            },
+},
+{ 
+            "LogName": "Sophia Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sophia",
+            "Entries": {
+				"Kid2_0H": "{{i18n:Kid2_0H_Sophia}}",
+				"kid2_intro": "{{i18n:kid2_intro_Sophia}}",		
+				"Kid2_SRE1": "{{i18n:kid2_SRE1_Sophia}}",	
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Sophia}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Sophia}}",
+            },
+},
+{ 
+            "LogName": "Susan Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Susan",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Susan}}",
+				"kid2_intro": "{{i18n:kid2_intro_Susan}}",	
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Susan}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Susan}}",
+            },
+},
+{ 
+            "LogName": "Olivia Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Olivia",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Olivia}}",		
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Olivia}}",
+            },
+},
+{ 
+            "LogName": "Victor Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Victor",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Victor}}",		
+            },
+},
+//CT for Ridgeside Village
+//Spouse NPC
+{ 
+            "LogName": "Anton Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Anton",
+            "Entries": {
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Anton}}",
+            },
+},
+{ 
+            "LogName": "Alissa Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Alissa",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Alissa{{Baby2Gender}}}}",
+				"TwoKidsTort4": "{{i18n:TwoKidsTort4_Alissa}}",
+            },
+},
+{ 
+            "LogName": "Flor Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Flor",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Flor}}",	
+				"TwoKidsPHW": "{{i18n:TwoKidsPHW_Flor}}",
+				"TwoKidsShop2": "{{i18n:TwoKidsShop2_Flor}}",
+            },
+},
+{ 
+            "LogName": "June Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/June",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_June{{Baby2Gender}}}}",			
+            },
+},
+{ 
+            "LogName": "Irene Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Irene",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Irene}}",		
+				"TwoKidsTort4": "{{i18n:TwoKidsTort4_Irene}}",		
+            },
+},
+{ 
+            "LogName": "Blair Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Blair",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Blair{{Baby1Gender}}}}",
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Blair}}",
+				"TwoKidsTort1": "{{i18n:TwoKidsTort1_Blair}}",
+            },
+},
+{ 
+            "LogName": "Corine Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Corine",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Corine}}",	
+				"TwoKidsTort4": "{{i18n:TwoKidsTort4_Corine}}",	
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Corine}}",
+            },
+},
+{ 
+            "LogName": "Ysabelle Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Ysabelle",
+            "Entries": {
+				"TwoKidsTort4": "{{i18n:TwoKidsTort4_Ysabelle}}",	
+            },
+},
+{ 
+            "LogName": "Philip Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Philip",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Philip}}",		
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Philip}}",
+            },
+},
+{ 
+            "LogName": "Maddie Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Maddie",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Maddie}}",		
+            },
+},
+{ 
+            "LogName": "Sean Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sean",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Sean{{Baby1Gender}}}}",	
+				"Kid2_0H": "{{i18n:Kid2_0H_Sean}}",	
+            },
+			"When": {"spouse |contains=Sean": false},
+},
+{ 
+            "LogName": "Sean Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sean",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Sean{{Baby1Gender}}}}",		
+            },
+			"When": {"spouse |contains=Sean": true},
+},
+{ 
+            "LogName": "Ian Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Ian",
+            "Entries": {
+				"Kid2_0H": "{{i18n:Kid2_0H_Ian}}",
+				"kid2_intro": "{{i18n:kid2_intro_Ian}}",					
+            },
+			"When": {"spouse |contains=Ian": false},
+},
+{ 
+            "LogName": "Ian Spouse Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Ian",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Ian}}",					
+            },
+			"When": {"spouse |contains=Ian": true},
+},
+{ 
+            "LogName": "Faye Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Faye",
+            "Entries": {
+				"kid1_3h": "{{i18n:kid1_3h_Faye}}",	
+				"kid2_intro": "{{i18n:kid2_intro_Faye}}",	
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Faye}}",	
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Faye}}",
+            },
+},
+{ 
+            "LogName": "Jeric Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Jeric",
+            "Entries": {
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Jeric}}",
+				"TwoKidsTort2": "{{i18n:TwoKidsTort2_Jeric}}",
+            },
+},
+{ 
+            "LogName": "Shiro Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Shiro",
+            "Entries": {
+				"TwoKidsTort3": "{{i18n:TwoKidsTort3_Shiro}}",					
+            },
+},
+{ 
+            "LogName": "Kiarra Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Kiarra",
+            "Entries": {
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Kiarra}}",					
+            },
+},
+{ 
+            "LogName": "Paula Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Paula",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Paula{{Baby1Gender}}}}",
+				"kid2_1h": "{{i18n:kid2_1h_Paula}}",
+				"TwoKidsTort4": "{{i18n:TwoKidsTort4_Paula{{Baby2Gender}}}}",				
+            },
+			"When": {"spouse |contains=Paula": false},
+},
+//Adult NPC
+{ 
+            "LogName": "Lenny Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Lenny",
+            "Entries": {
+				"kid1_0h": "{{i18n:kid1_0h_Lenny{{Baby1Gender}}}}",
+				"kid1_MV": "{{i18n:kid1_MV_Lenny}}",
+				"kid1_intro1": "{{i18n:kid1_intro1_Lenny}}",
+				"kid2_1h": "{{i18n:kid2_1h_Lenny{{Baby2Gender}}}}",
+				"kid2_Forest": "{{i18n:kid2_Forest_Lenny}}",			
+            },
+},
+{ 
+            "LogName": "Shanice Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Shanice",
+            "Entries": {
+				"kid1_1h": "{{i18n:kid1_1h_Shanice}}",			
+				"kid2_1h": "{{i18n:kid2_1h_Shanice}}",	
+				"TwoKidsShop2": "{{i18n:TwoKidsShop2_Shanice}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Shanice}}",
+            },
+},
+{ 
+            "LogName": "Lorenzo Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Lorenzo",
+            "Entries": {			
+				"kid2_1h": "{{i18n:kid2_1h_Lorenzo{{Baby2Gender}}}}",		
+				"TwoKidsShop2": "{{i18n:TwoKidsShop2_Lorenzo}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Lorenzo}}",
+            },
+},
+{ 
+            "LogName": "Aguar Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Aguar",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Aguar}}",
+				"TwoKidsTort2": "{{i18n:TwoKidsTort2_Aguar}}",
+            },
+},
+{ 
+            "LogName": "Pika Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Pika",
+            "Entries": {
+				"kid1_0h": "{{i18n:kid1_0h_Pika}}",
+				"kid2_intro": "{{i18n:kid2_intro_Pika}}",
+				"TwoKidsTort1": "{{i18n:TwoKidsTort1_Pika}}",
+				"TwoKidsTort3": "{{i18n:TwoKidsTort3_Pika}}",
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Pika}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Pika}}",
+            },
+},
+{ 
+            "LogName": "Carmen Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Carmen",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Carmen}}",		
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Carmen}}",		
+            },
+},
+{ 
+            "LogName": "Naomi Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Naomi",
+            "Entries": {
+				"Kid2_Milk": "{{i18n:Kid2_Milk_Naomi}}",
+				"kid2_intro": "{{i18n:kid2_intro_Naomi}}",	
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Naomi}}",				
+            },
+},
+{ 
+            "LogName": "Olga Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Olga",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Olga}}",
+				"Kid2_Milk": "{{i18n:Kid2_Milk_Olga}}",
+				"TwoKidsTort1": "{{i18n:TwoKidsTort1_Olga}}",
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Olga}}",				
+            },
+},
+{ 
+            "LogName": "Bert Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Bert",
+            "Entries": {
+				"kid1_3h": "{{i18n:kid1_3h_Bert}}",	
+				"Kid2_Milk": "{{i18n:Kid2_Milk_Bert{{Baby1Gender}}}}",
+            },
+},
+{ 
+            "LogName": "Ezekiel Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Ezekiel",
+            "Entries": {
+				"kid1_3h": "{{i18n:kid1_3h_Ezekiel}}",			
+            },
+},
+{ 
+            "LogName": "Richard Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Richard",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Richard}}",
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Richard{{Baby1Gender}}}}",				
+            },
+},
+{ 
+            "LogName": "Sonny Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sonny",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Sonny}}",	
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Sonny}}",				
+            },
+},
+{ 
+            "LogName": "Maive Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Maive",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Maive}}",							
+            },
+},
+{ 
+            "LogName": "Lola Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Lola",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Lola}}",
+				"TwoKidsTort1": "{{i18n:TwoKidsTort1_Lola}}",	
+				"TwoKidsTort2": "{{i18n:TwoKidsTort2_Lola}}",	
+            },
+},
+{ 
+            "LogName": "Freddie Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Freddie",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Freddie}}",
+				"TwoKidsTort2": "{{i18n:TwoKidsTort2_Freddie}}",
+            },
+},
+{ 
+            "LogName": "Kimpoi Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Kimpoi",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Kimpoi}}",							
+            },
+},
+{ 
+            "LogName": "Malaya Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Malaya",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Malaya}}",			
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Malaya}}",
+            },
+},
+{ 
+            "LogName": "Torts Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Torts",
+            "Entries": {
+				"TwoKidsTort1": "{{i18n:TwoKidsTort1_Torts}}",
+				"TwoKidsTort4": "{{i18n:TwoKidsTort4_Torts}}",					
+            },
+},
+//Kids NPC
+{ 
+            "LogName": "Trinnie Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Trinnie",
+            "Entries": {
+				"kid1_0h": "{{i18n:kid1_0h_Trinnie}}",
+				"kid2_Forest": "{{i18n:kid2_Forest_Trinnie}}",
+				"kid1_intro1": "{{i18n:kid1_intro1_Trinnie{{Baby1Gender}}}}",
+				"TwoKidsTort3": "{{i18n:TwoKidsTort3_Trinnie}}",
+				"Kid2_SRE1": "{{i18n:kid2_SRE1_Trinnie}}",	
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Trinnie}}",		
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Trinnie{{Baby2Gender}}}}",
+            },
+},
+{ 
+            "LogName": "Keahi Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Keahi",
+            "Entries": {
+				"kid1_0h": "{{i18n:kid1_0h_Keahi}}",
+				"kid2_Forest": "{{i18n:kid2_Forest_Keahi}}",
+				"TwoKidsTort1": "{{i18n:TwoKidsTort1_Keahi}}",
+				"Kid2_SRE1": "{{i18n:kid2_SRE1_Keahi}}",	
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Keahi}}",
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Keahi}}",				
+            },
+},
+{ 
+            "LogName": "Yuuma Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Yuuma",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Yuuma{{Baby1Gender}}}}",	
+				"kid2_Forest": "{{i18n:kid2_Forest_Yuuma}}",
+				"TwoKidsTort3": "{{i18n:TwoKidsTort3_Yuuma}}",
+				"Kid2_SRE2": "{{i18n:kid2_SRE2_Yuuma}}",
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Yuuma}}",					
+            },
+},
+{ 
+            "LogName": "Louie Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Louie",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Louie}}",
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Louie}}",					
+            },
+},
+{ 
+            "LogName": "Ariah Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Ariah",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Ariah}}",							
+            },
+},
+{ 
+            "LogName": "Kiwi Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Kiwi",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Kiwi}}",								
+            },
+},
+//CT for East Scarp
+{ 
+            "LogName": "Rosa Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Rosa",
+            "Entries": {
+				"kid1_ES2": "{{i18n:kid1_ES2_Rosa}}",	
+				"Kid2_Milk": "{{i18n:Kid2_Milk_Rosa{{Baby1Gender}}}}",
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Rosa}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Rosa}}",				
+            },
+},
+{ 
+            "LogName": "Jacob Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Jacob",
+            "Entries": {
+				"kid2_intro": "{{i18n:kid2_intro_Jacob}}",	
+				"kid1_ES3": "{{i18n:kid1_ES3_Jacob}}",	
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Jacob}}",
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Jacob}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Jacob}}",
+            },
+},
+{ 
+            "LogName": "Eloise Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Eloise",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Eloise{{Baby1Gender}}}}",
+				"kid2_Forest": "{{i18n:kid2_Forest_Eloise}}",
+				"kid2_3h": "{{i18n:kid2_3h_Eloise}}",
+				"TwoKidsTort4": "{{i18n:TwoKidsTort4_Eloise}}",
+				"kid1_ES3": "{{i18n:kid1_ES3_Eloise{{Baby1Gender}}}}",
+				"Kid2_SRE1": "{{i18n:kid2_SRE1_Eloise}}",	
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Eloise}}",	
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Eloise}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Eloise}}",
+            },
+},
+{ 
+            "LogName": "LadySheba Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/LadySheba",
+            "Entries": {
+				"kid1_ES3": "{{i18n:kid1_ES3_LadySheba}}",				
+            },
+},
+{ 
+            "LogName": "Aideen Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Aideen",
+            "Entries": {
+				"kid1_ES2": "{{i18n:kid1_ES2_Aideen}}",		
+				"Kid2_Milk": "{{i18n:Kid2_Milk_Aideen{{Baby1Gender}}}}",
+            },
+			"When": {"spouse |contains=Aideen": false},
+},
+{ 
+            "LogName": "Aideen Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Aideen",
+            "Entries": {
+				"kid1_ES2": "{{i18n:kid1_ES2_Aideen}}",				
+            },
+			"When": {"spouse |contains=Aideen": true},
+},
+{ 
+            "LogName": "JosephineK Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/JosephineK",
+            "Entries": {
+				"kid1_ES2": "{{i18n:kid1_ES2_JosephineK}}",				
+            },
+},
+{ 
+            "LogName": "Lexi Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Leximonster",
+            "Entries": {
+				"kid1_ES2": "{{i18n:kid1_ES2_Lexi}}",				
+            },
+},
+{ 
+            "LogName": "Rodney Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/RodneyOBrien",
+            "Entries": {
+                "kid1_1h": "{{i18n:kid1_1h_Rodney}}",
+				"kid1_3h": "{{i18n:kid1_3h_Rodney}}",
+				"kid2_intro": "{{i18n:kid2_intro_Rodney{{Baby2Gender}}}}",	
+				"kid2_JJ1": "{{i18n:kid2_JJ1_Rodney}}",		
+				"kid1_ES2": "{{i18n:kid1_ES2_Rodney}}",	
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Rodney{{Baby1Gender}}}}",
+				
+            },
+},
+{ 
+            "LogName": "Mateo Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Mateo",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Mateo}}",	
+				"kid1_ES2": "{{i18n:kid1_ES2_Mateo}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Mateo}}",
+            },
+},
+{ 
+            "LogName": "Yri Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Yri",
+            "Entries": {
+                "kid2_3h": "{{i18n:kid2_3h_Yri{{Baby2Gender}}}}",
+				"kid1_ES1": "{{i18n:kid1_ES1_Yri}}",
+				"kid2_JJ1": "{{i18n:kid2_JJ1_Yri}}",
+            },
+},
+{ 
+            "LogName": "Charles Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Charles",
+            "Entries": {
+                "kid2_intro": "{{i18n:kid2_intro_Charles}}",
+				"kid1_ES1": "{{i18n:kid1_ES1_Charles}}",
+            },
+},
+{ 
+            "LogName": "Mia Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Mia",
+            "Entries": {
+                "kid1_ES2": "{{i18n:kid1_ES2_Mia}}",
+            },
+},
+{ 
+            "LogName": "Henry Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Henry",
+            "Entries": {
+                "kid1_ES2": "{{i18n:kid1_ES2_Henry}}",
+            },
+},
+{ 
+            "LogName": "Sterling Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sterling",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Sterling}}",	
+				"kid2_intro": "{{i18n:kid2_intro_Sterling}}",
+				"kid1_ES2": "{{i18n:kid1_ES2_Sterling}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Sterling}}",
+            },
+},
+{ 
+            "LogName": "Barron Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/FC.Barron",
+            "Entries": {
+				"kid1_0h": "{{i18n:kid1_0h_Barron}}",
+				"kid1_1h": "{{i18n:kid1_1h_Barron}}",
+				"kid1_2h": "{{i18n:kid1_2h_Barron}}",
+				"kid1_3h": "{{i18n:kid1_3h_Barron{{Baby1Gender}}}}",
+				"kid1_intro1": "{{i18n:kid1_intro1_Barron{{Baby1Gender}}}}",
+				"Kid2_0H": "{{i18n:Kid2_0H_Barron}}",
+				"kid2_1h": "{{i18n:kid2_1h_Barron}}",
+				"kid2_intro": "{{i18n:kid2_intro_Barron}}",
+				"kid1_ES2": "{{i18n:kid1_ES2_Barron{{Baby1Gender}}}}",				
+            },
+			"When": {"spouse |contains=Barron": false},
+},
+{ 
+            "LogName": "Lavril Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Lavril",
+            "Entries": {
+				"Kid2_0H": "{{i18n:Kid2_0H_Lavril}}",
+				"kid2_Forest": "{{i18n:kid2_Forest_Lavril}}",
+				"kid1_ES2": "{{i18n:kid1_ES2_Lavril}}",
+				"TwoKidsTort4": "{{i18n:TwoKidsTort4_Lavril}}",	
+				"Kid2_SRE3": "{{i18n:kid2_SRE3_Lavril}}",
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Lavril{{Baby1Gender}}}}",	
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Lavril}}",
+            },
+},
+{ 
+            "LogName": "Juliet Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Juliet",
+            "Entries": {
+				"kid1_ES2": "{{i18n:kid1_ES2_Juliet}}",
+				"kid1_intro1": "{{i18n:kid1_intro1_Juliet}}",		
+				"kid2_intro": "{{i18n:kid2_intro_Juliet}}",					
+            },
+},
+{ 
+            "LogName": "Jessie Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Jessie",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Jessie}}",						
+            },
+},
+{ 
+            "LogName": "Sen Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/SenS",
+            "Entries": {		
+				"kid1_0h": "{{i18n:kid1_0h_Sen}}",	
+				"kid1_ES2": "{{i18n:kid1_ES2_Sen{{Baby1Gender}}}}",	
+				"kid2_intro": "{{i18n:kid2_intro_Sen}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Sen}}",
+            },
+			"When": {"spouse |contains=SenS": false},
+},
+{ 
+            "LogName": "Eli Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Nova.Eli",
+            "Entries": {		
+				"kid1_ES2": "{{i18n:kid1_ES2_Eli{{Baby1Gender}}}}",	
+				"kid1_intro1": "{{i18n:kid1_intro1_Eli}}",
+				"kid2_intro": "{{i18n:kid2_intro_Eli}}",
+				"TwoKidsShop2": "{{i18n:TwoKidsShop2_Eli}}",
+            },
+			"When": {"spouse |contains=Nova.Eli": false},
+},
+{ 
+            "LogName": "Dylan Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Nova.Dylan",
+            "Entries": {		
+				"kid1_ES2": "{{i18n:kid1_ES2_Dylan}}",	
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Dylan}}",
+				"TwoKidsPlush3": "{{i18n:TwoKidsPlush3_Dylan}}",
+            },
+},
+
+//CT for Standalone NPC MODs
+{ 
+            "LogName": "JortsCat Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/JortsCat",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Jorts}}",
+				"kid2_Forest": "{{i18n:kid2_Forest_Jorts}}",
+				"kid2_JJ1": "{{i18n:kid2_JJ1_Jorts}}",
+				"TwoKidsIC2": "{{i18n:TwoKidsIC2_Jorts}}",
+            },
+},
+{ 
+            "LogName": "JeanCat Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/JeanCat",
+            "Entries": {
+                "kid1_intro1": "{{i18n:kid1_intro1_Jean}}",
+				"kid2_Forest": "{{i18n:kid2_Forest_Jean{{Baby2Gender}}}}",
+				"kid2_JJ1": "{{i18n:kid2_JJ1_Jean}}",
+				"TwoKidsPenguin": "{{i18n:TwoKidsPenguin_Jean}}",
+            },
+},
+{ 
+            "LogName": "Lucikiel Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Lucikiel",
+            "Entries": {		
+				"kid2_intro": "{{i18n:kid2_intro_Lucikiel}}",					
+            },
+			"When": {"spouse |contains=Lucikiel": false},
+},
+{ 
+            "LogName": "Jasper Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Jasper",
+            "Entries": {
+				"kid1_intro1": "{{i18n:kid1_intro1_Jasper{{Baby1Gender}}}}",						
+            },
+},
+    ]
+}

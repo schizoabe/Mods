@@ -1,0 +1,191 @@
+{
+	"Changes": [
+//Clothes Load
+		{
+			"LogName": "Add Hats",
+			"Action": "EditData",
+			"Target": "Data/Hats",
+			"Entries": {
+				"PDWKittyMuffs": "PDWKittyMuffs/{{i18n:KittyMuffs.Desc}}/false/true//{{i18n:KittyMuffs.Name}}/0/Mods\\kath.weathering\\Hats",
+				"PDWShader": "PDWShader/{{i18n:Shader.Desc}}/false/true//{{i18n:Shader.Name}}/1/Mods\\kath.weathering\\Hats",
+				"PDWMask": "PDWMask/{{i18n:Mask.Desc}}/true/true//{{i18n:Mask.Name}}/2/Mods\\kath.weathering\\Hats",
+				"PDWUVGoggles": "PDWUVGoggles/{{i18n:UVG.Desc}}/false/true//{{i18n:UVG.Name}}/3/Mods\\kath.weathering\\Hats",
+				"PDWBugNet": "PDWBugNet/{{i18n:BugNet.Desc}}/false/true//{{i18n:BugNet.Name}}/4/Mods\\kath.weathering\\Hats",
+			}
+		},
+
+//Shopping	
+	        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "HatMouse", "Items" ],
+			"When": {"HasFlag |contains=Emily.ClothesStart": true,},
+            "Entries": {
+                "PDWKittyMuffs": {
+                    "Id": "PDWKittyMuffs",
+                    "ItemId": "(H)PDWKittyMuffs",
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"Conditions": "SEASON Fall Winter",
+					"IsRecipe": false,
+                		},
+                "PDWShader": {
+                    "Id": "PDWShader",
+                    "ItemId": "(H)PDWShader",
+                    "Price": 15000,
+					"AvailableStock": 1,
+					"Conditions": "WEATHER Rain Storm",
+					"IsRecipe": false,
+                		},
+				"PDWMask": {
+                    "Id": "PDWMask",
+                    "ItemId": "(H)PDWMask",
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"Conditions": "TRUE",
+					"IsRecipe": false,
+                		},
+                "PDWUVGoggles": {
+                    "Id": "PDWUVGoggles",
+                    "ItemId": "(H)PDWUVGoggles",
+                    "Price": 20000,
+					"AvailableStock": 1,
+					"Conditions": "PLAYER_VISITED_LOCATION Current Desert",
+					"IsRecipe": false,
+                		},
+				"PDWBugNet": {
+                    "Id": "PDWBugNet",
+                    "ItemId": "(H)PDWBugNet",
+                    "Price": 5000,
+					"AvailableStock": 1,
+					"Conditions": "TRUE",
+					"IsRecipe": false,
+                		},
+				}
+			},
+	        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Joja", "Items" ],
+			"When": {"HasFlag |contains=Emily.ClothesJoja": true,},
+            "Entries": {
+                "PDWKittyMuffs": {
+                    "Id": "PDWKittyMuffs",
+                    "ItemId": "(H)PDWKittyMuffs",
+                    "Price": 10000,
+					"AvailableStock": 1,
+					"Conditions": "SEASON Fall Winter",
+					"IsRecipe": false,
+                		},
+                "PDWShader": {
+                    "Id": "PDWShader",
+                    "ItemId": "(H)PDWShader",
+                    "Price": 50000,
+					"AvailableStock": 1,
+					"Conditions": "WEATHER Rain Storm",
+					"IsRecipe": false,
+                		},
+				"PDWMask": {
+                    "Id": "PDWMask",
+                    "ItemId": "(H)PDWMask",
+                    "Price": 10000,
+					"AvailableStock": 1,
+					"Conditions": "TRUE",
+					"IsRecipe": false,
+                		},
+                "PDWUVGoggles": {
+                    "Id": "PDWUVGoggles",
+                    "ItemId": "(H)PDWUVGoggles",
+                    "Price": 40000,
+					"AvailableStock": 1,
+					"Conditions": "PLAYER_VISITED_LOCATION Current Desert",
+					"IsRecipe": false,
+                		},
+				"PDWBugNet": {
+                    "Id": "PDWBugNet",
+                    "ItemId": "(H)PDWBugNet",
+                    "Price": 10000,
+					"AvailableStock": 1,
+					"Conditions": "TRUE",
+					"IsRecipe": false,
+                		},
+				}
+			},
+			
+//Protect Triggers
+		/*{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/WearableData",
+			"When": {"HasMod": "spacechase0.SpaceCore"},
+			"Entries": {
+				"(H)PDWKittyMuffs": {
+					"BuffIdToApply": "PDWKittyMuffs",
+				},
+				"(H)PDWShader": {
+					"BuffIdToApply": "PDWShader",
+				},
+				"(H)PDWMask": {
+					"BuffIdToApply": "PDWMask",
+				},
+				"(H)PDWUVGoggles": {
+					"BuffIdToApply": "PDWUVGoggles",
+				},
+				"(H)PDWBugNet": {
+					"BuffIdToApply": "PDWBugNet",
+				},							
+			}
+		},*/
+	  
+	  
+{
+  "Action": "EditData",
+  "Target": "Mods/mistyspring.ItemExtensions/Data",
+  "When": {"HasMod": "mistyspring.ItemExtensions"},
+  "Entries": {
+	  "(H)PDWKittyMuffs": {
+		"OnEquip":{
+			"TriggerAction": "AddBuff PDWKittyMuffs",
+		},
+		"OnUnequip":{
+			"TriggerAction": "RemoveBuff PDWKittyMuffs",
+		},
+	  },
+	  "(H)PDWShader": {
+		"OnEquip":{
+			"TriggerAction": "AddBuff PDWShader",
+		},
+		"OnUnequip":{
+			"TriggerAction": "RemoveBuff PDWShader",
+		},
+	  },
+	  "(H)PDWMask": {
+		"OnEquip":{
+			"TriggerAction": "AddBuff PDWMask",
+		},
+		"OnUnequip":{
+			"TriggerAction": "RemoveBuff PDWMask",
+		},
+	  },
+	  "(H)PDWUVGoggles": {
+		"OnEquip":{
+			"TriggerAction": "AddBuff PDWUVGoggles",
+		},
+		"OnUnequip":{
+			"TriggerAction": "RemoveBuff PDWUVGoggles",
+		},
+	  },
+	  "(H)PDWBugNet": {
+		"OnEquip":{
+			"TriggerAction": "AddBuff PDWBugNet",
+		},
+		"OnUnequip":{
+			"TriggerAction": "RemoveBuff PDWBugNet",
+		},
+	  },
+	   
+  },
+},
+						
+//End
+]
+}

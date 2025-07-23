@@ -1,0 +1,596 @@
+{
+ "Changes": [
+ 
+ //standard
+ 
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "FishShop",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)219": null,
+	  "(O)685": null,
+	  "(O)DeluxeBait": null,
+	  "(O)710": null,
+	  "(O)SonarBobber": null,
+	  "(O)686": null,
+	  "(O)694": null,
+	  "(O)692": null,
+	  "(O)693": null,
+	  "(O)695": null,
+	  "(O)691": null,
+	  "(O)687": null,
+	  "(O)703": null,
+	  "(F)2304": null,
+	  "(F)2322": null,
+	  "(F)2312": null,
+	  "(F)HangingFish": null,
+	  "(F)2502": null,
+	  
+	  "boringvlln.rshops_SpringFish": {
+		  "Condition": "SEASON spring",
+      "Id": "boringvlln.rshops_SpringFish",
+	  "RandomItemId": [ "(O)129", "(O)131", "(O)132", "(O)136", "(O)137", "(O)142", "(O)143" ],	  
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_SummerFish": {
+		  "Condition": "SEASON summer",
+      "Id": "boringvlln.rshops_SummerFish",
+	  "RandomItemId": [ "(O)130", "(O)138", "(O)132", "(O)136", "(O)143", "(O)144", "(O)150" ],
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_FallFish": {
+		  "Condition": "SEASON fall",
+      "Id": "boringvlln.rshops_FallFish",
+	  "RandomItemId": [ "(O)129", "(O)131", "(O)139", "(O)140", "(O)132", "(O)136", "(O)137", "(O)142", "(O)143", "(O)150" ],
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_WinterFish": {
+		  "Condition": "SEASON winter",
+      "Id": "boringvlln.rshops_WinterFish",
+	  "RandomItemId": [ "(O)130", "(O)131", "(O)140", "(O)132", "(O)136", "(O)141", "(O)142", "(O)144", "(O)150" ],
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_Weed": {
+      "Id": "boringvlln.rshops_Weed",
+      "RandomItemId": [ "(O)152", "(O)153", "(O)157" ],
+	  "Price": 100,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_Bait": {
+		  "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_Bait",
+      "ItemId": "(O)685",
+	  "Price": 5,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_BaitComm": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_BaitComm",
+      "ItemId": "(O)685",
+	  "Price": 10,
+	  "AvailableStock": 50,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_DeBait": {
+		  "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_DeBait",
+      "ItemId": "(O)DeluxeBait",
+	  "Price": 100,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_DeBaitComm": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_DeBaitComm",
+      "ItemId": "(O)DeluxeBait",
+	  "Price": 200,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },	  
+	  "boringvlln.rshops_Bobs": {
+      "Id": "boringvlln.rshops_Bobs",
+      "RandomItemId": [ "(O)SonarBobber", "(O)686", "(O)694", "(O)692", "(O)693", "(O)695", "(O)691", "(O)687", "(O)703" ],
+	  "Price": 1000,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_CrabPot": {
+      "Id": "boringvlln.rshops_CrabPot",
+      "ItemId": "(O)710",
+	  "Price": 1500,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_DeluxTank": {
+		  "Condition": "PLAYER_HAS_MAIL Current WillyTropicalFish, SYNCED_RANDOM day boringvlln.rshops_DeluxTank 0.6",
+      "Id": "boringvlln.rshops_DeluxTank",
+      "ItemId": "(F)2312",
+	  "Price": 7000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_Furn": {
+		   "Condition": "SYNCED_RANDOM day boringvlln.rshops_Furn 0.6",
+      "Id": "boringvlln.rshops_Furn",
+      "RandomItemId": [ "(F)2304", "(F)2322", "(F)HangingFish", "(F)2502" ],
+	  "Price": 5000,
+	  "AvailableStock": 1,
+	  }	  
+ },
+  "When": { "FishShop": "standard" }
+},
+
+//hardmode
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "FishShop",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)219": null,
+	  "(O)685": null,
+	  "(O)DeluxeBait": null,
+	  "(O)710": null,
+	  "(O)SonarBobber": null,
+	  "(O)686": null,
+	  "(O)694": null,
+	  "(O)692": null,
+	  "(O)693": null,
+	  "(O)695": null,
+	  "(O)691": null,
+	  "(O)687": null,
+	  "(O)703": null,
+	  "(F)2304": null,
+	  "(F)2322": null,
+	  "(F)2312": null,
+	  "(F)HangingFish": null,
+	  "(F)2502": null,
+	  
+	  "boringvlln.rshops_SpringFish": {
+		  "Condition": "SEASON spring",
+      "Id": "boringvlln.rshops_SpringFish",
+	  "RandomItemId": [ "(O)129", "(O)131", "(O)132", "(O)136", "(O)137", "(O)142", "(O)143" ],	  
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_SummerFish": {
+		  "Condition": "SEASON summer",
+      "Id": "boringvlln.rshops_SummerFish",
+	  "RandomItemId": [ "(O)130", "(O)138", "(O)132", "(O)136", "(O)143", "(O)144", "(O)150" ],
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_FallFish": {
+		  "Condition": "SEASON fall",
+      "Id": "boringvlln.rshops_FallFish",
+	  "RandomItemId": [ "(O)129", "(O)131", "(O)139", "(O)140", "(O)132", "(O)136", "(O)137", "(O)142", "(O)143", "(O)150" ],
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_WinterFish": {
+		  "Condition": "SEASON winter",
+      "Id": "boringvlln.rshops_WinterFish",
+	  "RandomItemId": [ "(O)130", "(O)131", "(O)140", "(O)132", "(O)136", "(O)141", "(O)142", "(O)144", "(O)150" ],
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_Weed": {
+      "Id": "boringvlln.rshops_Weed",
+      "RandomItemId": [ "(O)152", "(O)153", "(O)157" ],
+	  "Price": 200,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_Bait": {
+		  "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_Bait",
+      "ItemId": "(O)685",
+	  "Price": 10,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_BaitComm": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_BaitComm",
+      "ItemId": "(O)685",
+	  "Price": 20,
+	  "AvailableStock": 50,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_DeBait": {
+		  "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_DeBait",
+      "ItemId": "(O)DeluxeBait",
+	  "Price": 200,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_DeBaitComm": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_DeBaitComm",
+      "ItemId": "(O)DeluxeBait",
+	  "Price": 400,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },	  
+	  "boringvlln.rshops_Bobs": {
+      "Id": "boringvlln.rshops_Bobs",
+      "RandomItemId": [ "(O)SonarBobber", "(O)686", "(O)694", "(O)692", "(O)693", "(O)695", "(O)691", "(O)687", "(O)703" ],
+	  "Price": 1500,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_CrabPot": {
+      "Id": "boringvlln.rshops_CrabPot",
+      "ItemId": "(O)710",
+	  "Price": 2000,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_DeluxTank": {
+		  "Condition": "PLAYER_HAS_MAIL Current WillyTropicalFish, SYNCED_RANDOM day boringvlln.rshops_DeluxTank 0.3",
+      "Id": "boringvlln.rshops_DeluxTank",
+      "ItemId": "(F)2312",
+	  "Price": 9000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_Furn": {
+		   "Condition": "SYNCED_RANDOM day boringvlln.rshops_Furn 0.3",
+      "Id": "boringvlln.rshops_Furn",
+      "RandomItemId": [ "(F)2304", "(F)2322", "(F)HangingFish", "(F)2502" ],
+	  "Price": 7000,
+	  "AvailableStock": 1,
+	  }	  
+ },
+  "When": { "FishShop": "hardmode" }
+},
+]
+}

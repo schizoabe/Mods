@@ -1,0 +1,38 @@
+﻿{
+  "Format": "2.0.0",
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "Sharogg.Attic": {
+          "DisplayName": "{{i18n:Sharogg.Attic.name}}",
+          "DefaultArrivalTile": { "X": 9, "Y": 8 },
+          "ExcludeFromNpcPathfinding": true,
+
+          "ArrivalTile_T0": { "X": 9, "Y": 8 },
+          "ArrivalTile_T1": { "X": 9, "Y": 8 },
+          "ArrivalTile_T2": { "X": 9, "Y": 8 },
+
+          "MapAsset_T0": "Maps/PIF/AtticT0",
+          "MapAsset_T1": "Maps/PIF/AtticT1",
+          "MapAsset_T2": "Maps/PIF/AtticT2",
+
+          "Preview": "Sharogg.Attic_Preview"
+        }
+      }
+    },
+    {
+      "LogName": "Load Maps",
+      "Action": "Load",
+      "Target": "Maps/PIF/AtticT0, Maps/PIF/AtticT1, Maps/PIF/AtticT2",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "LogName": "Load Preview",
+      "Action": "Load",
+      "Target": "Sharogg.Attic_Preview",
+      "FromFile": "assets/{{TargetWithoutPath}}.png"
+    }
+  ]
+}

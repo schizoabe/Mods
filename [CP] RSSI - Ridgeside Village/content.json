@@ -1,0 +1,1786 @@
+{
+    "Format": "2.3.0",
+	"ConfigSchema": {
+	
+	"RSVKimpoiShop": {
+	"AllowValues": "standard, hardmode, off",
+    "Default": "standard"
+	},
+	"RSVHeapsStore": {
+	"AllowValues": "standard, hardmode, off",
+    "Default": "standard"
+	},
+	},
+    "Changes": [
+	//standard RSVKimpoiShop
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "RSVKimpoiShop", "Items" ],
+            "Entries": {
+				
+				"Rafseazz.RSVCP.KimpoiShopItem1": null,
+				"Rafseazz.RSVCP.KimpoiShopItem2": null,
+				"Rafseazz.RSVCP.KimpoiShopItem3": null,
+				"Rafseazz.RSVCP.KimpoiShopItem4": null,
+				"Rafseazz.RSVCP.KimpoiShopItem5": null,
+				"Rafseazz.RSVCP.KimpoiShopItem6": null,
+				"Rafseazz.RSVCP.KimpoiShopItem7": null,
+				"Rafseazz.RSVCP.KimpoiShopItem8": null,
+				"Rafseazz.RSVCP.KimpoiShopItem9": null,
+				
+				
+				
+				"RSSI_Rafseazz.RSVCP.FruitKSpring": {
+					"Condition": "SEASON spring",
+					"RandomItemId": [ "(O)Rafseazz.RSVCP_Cherry_Pluot", "(O)Rafseazz.RSVCP_Mountain_Plumcot" ],
+					"Id": "RSSI_Rafseazz.RSVCP.FruitKSpring",
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+					}, 
+					
+				"RSSI_Rafseazz.RSVCP.FruitKSummer": {
+					"Condition": "SEASON summer",
+					"RandomItemId": [ "(O)Rafseazz.RSVCP_Paradise_Rangpur", "(O)Rafseazz.RSVCP_Tropi_Ugli_Fruit", "(O)Rafseazz.RSVCP_Desert_Tangelo" ],
+					"Id": "RSSI_Rafseazz.RSVCP.FruitKSummer",
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+					}, 
+
+				"RSSI_Rafseazz.RSVCP.FruitKFall": {
+					"Condition": "SEASON fall",
+					"RandomItemId": [ "(O)Rafseazz.RSVCP_Highland_Jostaberry", "(O)Rafseazz.RSVCP_Northern_Limequat", "(O)Rafseazz.RSVCP_Ember_Blood_Lime" ],
+					"Id": "RSSI_Rafseazz.RSVCP.FruitKFall",
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+					},
+					
+				"RSSI_Rafseazz.RSVCP.FruitKWinter": {
+					"Condition": "SEASON winter",
+					"RandomItemId": [ "(O)Rafseazz.RSVCP_Highland_Jostaberry", "(O)Rafseazz.RSVCP_Northern_Limequat", "(O)Rafseazz.RSVCP_Ember_Blood_Lime", "(O)Rafseazz.RSVCP_Cherry_Pluot", "(O)Rafseazz.RSVCP_Mountain_Plumcot", "(O)Rafseazz.RSVCP_Paradise_Rangpur", "(O)Rafseazz.RSVCP_Tropi_Ugli_Fruit", "(O)Rafseazz.RSVCP_Desert_Tangelo" ],
+					"Id": "RSSI_Rafseazz.RSVCP.FruitKWinter",
+					"Price": 5000,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+					},				
+				
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem1": {
+					"Condition": "SEASON spring",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem1",
+                    "ItemId": "(O)Rafseazz.RSVCP_Cherry_Pluot_Sapling",
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem2": {
+					"Condition": "SEASON fall",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem2",
+                    "ItemId": "(O)Rafseazz.RSVCP_Highland_Jostaberry_Sapling",
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem3": {
+					"Condition": "SEASON spring",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem3",
+                    "ItemId": "(O)Rafseazz.RSVCP_Mountain_Plumcot_Sapling",
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem4": {
+					"Condition": "SEASON fall",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem4",
+                    "ItemId": "(O)Rafseazz.RSVCP_Northern_Limequat_Sapling",
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem5": {
+					"Condition": "SEASON summer",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem5",
+                    "ItemId": "(O)Rafseazz.RSVCP_Paradise_Rangpur_Sapling",
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem6": {
+					"Condition": "SEASON summer",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem6",
+                    "ItemId": "(O)Rafseazz.RSVCP_Tropi_Ugli_Fruit_Sapling",
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem7": {					
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem7",
+                    "ItemId": "(O)Rafseazz.RSVCP_Desert_Tangelo_Sapling",
+					"Condition": "SEASON summer, YEAR 2",
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem8": {
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem8",
+                    "ItemId": "(O)Rafseazz.RSVCP_Ember_Blood_Lime_Sapling",
+					"Condition": "SEASON fall, YEAR 2",
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem9": {
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem9",
+                    "ItemId": "(O)805",
+					"Price": 150,
+					"Condition": "SEASON spring summer fall, YEAR 2",
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+                },	
+                
+            },
+		"When": { "RSVKimpoiShop": "standard" }	
+	},
+	//hardmode RSVKimpoiShop
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "RSVKimpoiShop", "Items" ],
+            "Entries": {
+				
+				"Rafseazz.RSVCP.KimpoiShopItem1": null,
+				"Rafseazz.RSVCP.KimpoiShopItem2": null,
+				"Rafseazz.RSVCP.KimpoiShopItem3": null,
+				"Rafseazz.RSVCP.KimpoiShopItem4": null,
+				"Rafseazz.RSVCP.KimpoiShopItem5": null,
+				"Rafseazz.RSVCP.KimpoiShopItem6": null,
+				"Rafseazz.RSVCP.KimpoiShopItem7": null,
+				"Rafseazz.RSVCP.KimpoiShopItem8": null,
+				"Rafseazz.RSVCP.KimpoiShopItem9": null,
+				
+				
+				
+				"RSSI_Rafseazz.RSVCP.FruitKSpring": {
+					"Condition": "SEASON spring",
+					"RandomItemId": [ "(O)Rafseazz.RSVCP_Cherry_Pluot", "(O)Rafseazz.RSVCP_Mountain_Plumcot" ],
+					"Id": "RSSI_Rafseazz.RSVCP.FruitKSpring",
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+					}, 
+					
+				"RSSI_Rafseazz.RSVCP.FruitKSummer": {
+					"Condition": "SEASON summer",
+					"RandomItemId": [ "(O)Rafseazz.RSVCP_Paradise_Rangpur", "(O)Rafseazz.RSVCP_Tropi_Ugli_Fruit", "(O)Rafseazz.RSVCP_Desert_Tangelo" ],
+					"Id": "RSSI_Rafseazz.RSVCP.FruitKSummer",
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+					}, 
+
+				"RSSI_Rafseazz.RSVCP.FruitKFall": {
+					"Condition": "SEASON fall",
+					"RandomItemId": [ "(O)Rafseazz.RSVCP_Highland_Jostaberry", "(O)Rafseazz.RSVCP_Northern_Limequat", "(O)Rafseazz.RSVCP_Ember_Blood_Lime" ],
+					"Id": "RSSI_Rafseazz.RSVCP.FruitKFall",
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+					},
+					
+				"RSSI_Rafseazz.RSVCP.FruitKWinter": {
+					"Condition": "SEASON winter",
+					"RandomItemId": [ "(O)Rafseazz.RSVCP_Highland_Jostaberry", "(O)Rafseazz.RSVCP_Northern_Limequat", "(O)Rafseazz.RSVCP_Ember_Blood_Lime", "(O)Rafseazz.RSVCP_Cherry_Pluot", "(O)Rafseazz.RSVCP_Mountain_Plumcot", "(O)Rafseazz.RSVCP_Paradise_Rangpur", "(O)Rafseazz.RSVCP_Tropi_Ugli_Fruit", "(O)Rafseazz.RSVCP_Desert_Tangelo" ],
+					"Id": "RSSI_Rafseazz.RSVCP.FruitKWinter",
+					"Price": 5000,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+					},				
+				
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem1": {
+					"Condition": "SEASON spring",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem1",
+                    "ItemId": "(O)Rafseazz.RSVCP_Cherry_Pluot_Sapling",
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem2": {
+					"Condition": "SEASON fall",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem2",
+                    "ItemId": "(O)Rafseazz.RSVCP_Highland_Jostaberry_Sapling",
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem3": {
+					"Condition": "SEASON spring",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem3",
+                    "ItemId": "(O)Rafseazz.RSVCP_Mountain_Plumcot_Sapling",
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem4": {
+					"Condition": "SEASON fall",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem4",
+                    "ItemId": "(O)Rafseazz.RSVCP_Northern_Limequat_Sapling",
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem5": {
+					"Condition": "SEASON summer",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem5",
+                    "ItemId": "(O)Rafseazz.RSVCP_Paradise_Rangpur_Sapling",
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem6": {
+					"Condition": "SEASON summer",
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem6",
+                    "ItemId": "(O)Rafseazz.RSVCP_Tropi_Ugli_Fruit_Sapling",
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem7": {					
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem7",
+                    "ItemId": "(O)Rafseazz.RSVCP_Desert_Tangelo_Sapling",
+					"Condition": "SEASON summer, YEAR 2",
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem8": {
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem8",
+                    "ItemId": "(O)Rafseazz.RSVCP_Ember_Blood_Lime_Sapling",
+					"Condition": "SEASON fall, YEAR 2",
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+                },
+				"RSSI_Rafseazz.RSVCP.KimpoiShopItem9": {
+                    "Id": "RSSI_Rafseazz.RSVCP.KimpoiShopItem9",
+                    "ItemId": "(O)805",
+					"Price": 150,
+					"Condition": "SEASON spring summer fall, YEAR 2",
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+                },	
+                
+            },
+		"When": { "RSVKimpoiShop": "hardmode" }	
+	},
+	//standard RSVHeapsStore
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "RSVHeapsStore", "Items" ],
+            "Entries": {
+				
+				"Rafseazz.RSVCP.HeapsItem1": null,
+				"Rafseazz.RSVCP.HeapsItem2": null,
+				"Rafseazz.RSVCP.HeapsItem3": null,
+				"Rafseazz.RSVCP.HeapsItem4": null,
+				"Rafseazz.RSVCP.HeapsItem5": null,
+				"Rafseazz.RSVCP.HeapsItem6": null,
+				"Rafseazz.RSVCP.HeapsItem7": null,
+				"Rafseazz.RSVCP.HeapsItem8": null,
+				"Rafseazz.RSVCP.HeapsItem9": null,
+				"Rafseazz.RSVCP.HeapsItem10": null,
+				"Rafseazz.RSVCP.HeapsItem11": null,
+				"Rafseazz.RSVCP.HeapsItem12": null,
+				"Rafseazz.RSVCP.HeapsItem13": null,
+				"Rafseazz.RSVCP.HeapsItem14": null,
+				"Rafseazz.RSVCP.HeapsItem15": null,
+				"Rafseazz.RSVCP.HeapsItem16": null,
+				"Rafseazz.RSVCP.HeapsItem17": null,
+				"Rafseazz.RSVCP.HeapsItem18": null,
+				"Rafseazz.RSVCP.HeapsItem19": null,
+	
+	
+	"RSSI_Rafseazz.RSVCP.Bread": {
+      "Id": "RSSI_Rafseazz.RSVCP.Bread",
+      "ItemId": "(O)216",
+	  "AvailableStock": 16,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.Sugar": {
+      "Id": "RSSI_Rafseazz.RSVCP.Sugar",
+      "ItemId": "(O)245",
+	  "AvailableStock": 30,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.Wflour": {
+      "Id": "RSSI_Rafseazz.RSVCP.Wflour",
+      "ItemId": "(O)246",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.Rice": {
+      "Id": "RSSI_Rafseazz.RSVCP.Rice",
+      "ItemId": "(O)423",
+	  "AvailableStock": 12,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.Sauces": {
+	"RandomItemId": [ "(O)247", "(O)419", "(O)306", "(O)307" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.Sauces",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.SSweets": {
+      "RandomItemId": [ "(O)340", "(O)724" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.SSweets",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+    },	
+	"RSSI_Rafseazz.RSVCP.VeggieSpringMany": {
+		  "Condition": "SEASON spring",
+      "RandomItemId": [ "(O)24", "(O)188", "(O)190", "(O)192", "(O)248", "(O)250", "(O)Carrot" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieSpringMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    }, 
+	"RSSI_Rafseazz.RSVCP.VeggieSpringFew": {
+		  "Condition": "SEASON spring",
+      "RandomItemId": [ "(O)248", "(O)250", "(O)Carrot", "(O)24", "(O)188", "(O)190", "(O)192", "(O)400" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieSpringFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    }, 
+	"RSSI_Rafseazz.RSVCP.VeggieSummerMany": {
+		  "Condition": "SEASON summer",
+      "RandomItemId": [ "(O)266", "(O)SummerSquash", "(O)270", "(O)256", "(O)264" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieSummerMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    }, 
+	"RSSI_Rafseazz.RSVCP.VeggieSummerFew": {
+		  "Condition": "SEASON summer",
+      "RandomItemId": [ "(O)256", "(O)264", "(O)266", "(O)SummerSquash", "(O)270" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieSummerFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.VeggieFallMany": {
+		  "Condition": "SEASON fall",
+      "RandomItemId": [ "(O)280", "(O)284", "(O)Broccoli", "(O)272", "(O)274", "(O)276", "(O)278" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieFallMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.VeggieFallFew": {
+		  "Condition": "SEASON fall",
+      "RandomItemId": [ "(O)272", "(O)274", "(O)276", "(O)278", "(O)280", "(O)284", "(O)Broccoli" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieFallFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.VeggieWinter": {
+		  "Condition": "SEASON winter",
+      "RandomItemId": [ "(O)280", "(O)284", "(O)Broccoli", "(O)272", "(O)274", "(O)276", "(O)278", "(O)266", "(O)SummerSquash", "(O)270", "(O)256", "(O)264", "(O)24", "(O)188", "(O)190", "(O)192", "(O)248", "(O)250", "(O)Carrot" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieWinter",
+	  "Price": 4000,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+
+
+						"RSSI_Rafseazz.RSVCP.HeapsItem8":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem8",
+							"ItemId": "(O)368",
+							"Price": 80,
+							 "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+				6,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem9":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem9",
+							"ItemId": "(O)370",
+							"Price": 80,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+				6,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem10":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem10",
+							"ItemId": "(O)371",
+							"Price": 160,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+				6,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem11":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem11",
+							"ItemId": "(O)465",
+							"Price": 80,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+				6,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem12":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem12",
+							"ItemId": "(O)466",
+							"Price": 160,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+				6,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem13":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem13",
+							"ItemId": "(O)369",
+							"Price": 100,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+				6,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999, YEAR 2"
+						},
+
+						"RSSI_Rafseazz.RSVCP.HeapsItem14":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem14",
+							"ItemId": "(O)368",
+							"Price": 60,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem15":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem15",
+							"ItemId": "(O)370",
+							"Price": 60,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem16":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem16",
+							"ItemId": "(O)371",
+							"Price": 120,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem17":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem17",
+							"ItemId": "(O)465",
+							"Price": 60,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem18":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem18",
+							"ItemId": "(O)466",
+							"Price": 120,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem19":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem19",
+							"ItemId": "(O)369",
+							"Price": 80,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000, YEAR 2"
+						},
+	
+	
+    },
+	"When": { "RSVHeapsStore": "standard" }
+	},
+	//hardmode RSVHeapsStore
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "RSVHeapsStore", "Items" ],
+            "Entries": {
+				
+				"Rafseazz.RSVCP.HeapsItem1": null,
+				"Rafseazz.RSVCP.HeapsItem2": null,
+				"Rafseazz.RSVCP.HeapsItem3": null,
+				"Rafseazz.RSVCP.HeapsItem4": null,
+				"Rafseazz.RSVCP.HeapsItem5": null,
+				"Rafseazz.RSVCP.HeapsItem6": null,
+				"Rafseazz.RSVCP.HeapsItem7": null,
+				"Rafseazz.RSVCP.HeapsItem8": null,
+				"Rafseazz.RSVCP.HeapsItem9": null,
+				"Rafseazz.RSVCP.HeapsItem10": null,
+				"Rafseazz.RSVCP.HeapsItem11": null,
+				"Rafseazz.RSVCP.HeapsItem12": null,
+				"Rafseazz.RSVCP.HeapsItem13": null,
+				"Rafseazz.RSVCP.HeapsItem14": null,
+				"Rafseazz.RSVCP.HeapsItem15": null,
+				"Rafseazz.RSVCP.HeapsItem16": null,
+				"Rafseazz.RSVCP.HeapsItem17": null,
+				"Rafseazz.RSVCP.HeapsItem18": null,
+				"Rafseazz.RSVCP.HeapsItem19": null,
+	
+	
+	"RSSI_Rafseazz.RSVCP.Bread": {
+      "Id": "RSSI_Rafseazz.RSVCP.Bread",
+      "ItemId": "(O)216",
+	  "AvailableStock": 16,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.Sugar": {
+      "Id": "RSSI_Rafseazz.RSVCP.Sugar",
+      "ItemId": "(O)245",
+	  "AvailableStock": 30,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.Wflour": {
+      "Id": "RSSI_Rafseazz.RSVCP.Wflour",
+      "ItemId": "(O)246",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.Rice": {
+      "Id": "RSSI_Rafseazz.RSVCP.Rice",
+      "ItemId": "(O)423",
+	  "AvailableStock": 12,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.Sauces": {
+	"RandomItemId": [ "(O)247", "(O)419", "(O)306", "(O)307" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.Sauces",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.SSweets": {
+      "RandomItemId": [ "(O)340", "(O)724" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.SSweets",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },	
+	"RSSI_Rafseazz.RSVCP.VeggieSpringMany": {
+		  "Condition": "SEASON spring",
+      "RandomItemId": [ "(O)24", "(O)188", "(O)190", "(O)192", "(O)248", "(O)250", "(O)Carrot" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieSpringMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    }, 
+	"RSSI_Rafseazz.RSVCP.VeggieSpringFew": {
+		  "Condition": "SEASON spring",
+      "RandomItemId": [ "(O)248", "(O)250", "(O)Carrot", "(O)24", "(O)188", "(O)190", "(O)192", "(O)400" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieSpringFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    }, 
+	"RSSI_Rafseazz.RSVCP.VeggieSummerMany": {
+		  "Condition": "SEASON summer",
+      "RandomItemId": [ "(O)266", "(O)SummerSquash", "(O)270", "(O)256", "(O)264" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieSummerMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    }, 
+	"RSSI_Rafseazz.RSVCP.VeggieSummerFew": {
+		  "Condition": "SEASON summer",
+      "RandomItemId": [ "(O)256", "(O)264", "(O)266", "(O)SummerSquash", "(O)270" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieSummerFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.VeggieFallMany": {
+		  "Condition": "SEASON fall",
+      "RandomItemId": [ "(O)280", "(O)284", "(O)Broccoli", "(O)272", "(O)274", "(O)276", "(O)278" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieFallMany",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.VeggieFallFew": {
+		  "Condition": "SEASON fall",
+      "RandomItemId": [ "(O)272", "(O)274", "(O)276", "(O)278", "(O)280", "(O)284", "(O)Broccoli" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieFallFew",
+	  "AvoidRepeat": true,
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"RSSI_Rafseazz.RSVCP.VeggieWinter": {
+		  "Condition": "SEASON winter",
+      "RandomItemId": [ "(O)280", "(O)284", "(O)Broccoli", "(O)272", "(O)274", "(O)276", "(O)278", "(O)266", "(O)SummerSquash", "(O)270", "(O)256", "(O)264", "(O)24", "(O)188", "(O)190", "(O)192", "(O)248", "(O)250", "(O)Carrot" ],
+	  "Id": "RSSI_Rafseazz.RSVCP.VeggieWinter",
+	  "Price": 4000,
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+
+
+						"RSSI_Rafseazz.RSVCP.HeapsItem8":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem8",
+							"ItemId": "(O)368",
+							"Price": 80,
+							 "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem9":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem9",
+							"ItemId": "(O)370",
+							"Price": 80,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem10":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem10",
+							"ItemId": "(O)371",
+							"Price": 160,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem11":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem11",
+							"ItemId": "(O)465",
+							"Price": 80,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem12":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem12",
+							"ItemId": "(O)466",
+							"Price": 160,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem13":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem13",
+							"ItemId": "(O)369",
+							"Price": 100,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999, YEAR 2"
+						},
+
+						"RSSI_Rafseazz.RSVCP.HeapsItem14":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem14",
+							"ItemId": "(O)368",
+							"Price": 60,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem15":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem15",
+							"ItemId": "(O)370",
+							"Price": 60,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem16":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem16",
+							"ItemId": "(O)371",
+							"Price": 120,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem17":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem17",
+							"ItemId": "(O)465",
+							"Price": 60,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem18":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem18",
+							"ItemId": "(O)466",
+							"Price": 120,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						"RSSI_Rafseazz.RSVCP.HeapsItem19":{
+							"Id": "RSSI_Rafseazz.RSVCP.HeapsItem19",
+							"ItemId": "(O)369",
+							"Price": 80,
+							"AvailableStock": 10,
+							"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+							"AvoidRepeat": true,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000, YEAR 2"
+						},
+	
+	
+    },
+	"When": { "RSVHeapsStore": "hardmode" }
+	},
+]
+ }

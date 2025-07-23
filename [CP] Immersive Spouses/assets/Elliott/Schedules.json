@@ -1,0 +1,67 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Elliott",
+			"Entries": {
+				"marriage_Wed": "800 BusStop 12 22 2 elliott_read \"Strings\\schedules\\Elliott:marriage_{{Random:bus, bus2, bus3, bus4, bus5, bus6, bus7, bus8, bus9}}\"/1000 ArchaeologyHouse 21 11 2 elliott_read \"Strings\\schedules\\Elliott:marriage_{{Random:r, r2, r3}}\"/1500 Town 55 104 1 \"Strings\\schedules\\Elliott:marriage_{{Random:bridge, bridge2, bridge3}}\"/1730 BusStop 9 23 3",
+				"marriage_Fri": "800 Beach 24 32 3 square_1_5_3 \"Strings\\schedules\\Elliott:marriage_{{Random:beach, beach2, beach3}}\"/1500 FishShop 4 6 0 \"Strings\\schedules\\Elliott:marriage_{{Random:willy, willy2}}\"/1700 Saloon 18 22 2 elliott_drink \"Strings\\schedules\\Elliott:marriage_{{Random:saloon, saloon2, saloon3, saloon4}}\"/2010 BusStop 9 23 3",
+				"marriage_Sun": "900 Town 86 103 2 \"Strings\\schedules\\Elliott:marriage_lake\"/1230 ArchaeologyHouse 21 11 2 elliott_read \"Strings\\schedules\\Elliott:marriage_{{Random:r, r2, r3}}\"/1700 Saloon 4 19 2 elliott_drink \"Strings\\schedules\\Elliott:marriage_{{Random:saloon2, saloon3, saloon4}}\"/2000 BusStop 9 23 3"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Elliott",
+			"Entries": {
+				"marriage_Fri": "800 Beach 24 32 3 square_1_5_3 \"Strings\\schedules\\Elliott:marriage_{{Random:beach, beach2, beach3}}\"/1500 FishShop 4 6 0 \"Strings\\schedules\\Elliott:marriage_{{Random:willy, willy2}}\"/1700 Saloon 3 21 0 \"Strings\\schedules\\Elliott:marriage_{{Random:leah, leah2, leah3, leah4}}\"/2010 BusStop 9 23 3"
+			},
+			"When": {
+				"Day": "12, 26"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Elliott",
+			"Entries": {
+				"marriage_Mon": "830 SeedShop 10 20 0 \"Strings\\schedules\\Elliott:marriage_shop\"/1200 CommunityCenter 26 17 2 elliott_read \"Strings\\schedules\\Elliott:marriage_{{Random:cc, r, r2, r3}}\"/1600 Town 69 58 1 \"Strings\\schedules\\Elliott:marriage_lake\"/1800 BusStop 9 23 3"
+			},
+			"When": {
+				"IsCommunityCenterComplete": true
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Elliott",
+			"Entries": {
+				"marriage_Mon": "830 SeedShop 10 20 0 \"Strings\\schedules\\Elliott:marriage_shop\"/1200 ArchaeologyHouse 21 11 2 elliott_read \"Strings\\schedules\\Elliott:marriage_{{Random:r, r2, r3}}\"/1600 Town 86 103 2 \"Strings\\schedules\\Elliott:marriage_lake\"/1800 BusStop 9 23 3"
+			},
+			"When": {
+				"IsCommunityCenterComplete": false
+			}
+		},
+		// DOCTORS CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Elliott",
+			"Entries": {
+				"marriage_Tue": "1000 Hospital 12 14 0 \"Strings\\schedules\\Elliott:marriage_doc\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Elliott:summer_9.001\"/1600 Town 69 58 1 \"Strings\\schedules\\Elliott:marriage_docafter\"/1830 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Summer",
+				"Day": "9"
+			}
+		},
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Elliott",
+			"Entries": {
+				"marriage_Wed": "800 BusStop 12 22 2 elliott_read \"Strings\\schedules\\Elliott:marriage_nmpre\"/1000 ArchaeologyHouse 21 11 2 elliott_read \"Strings\\schedules\\Elliott:marriage_nmpre2\"/1600 Beach 38 36 2 \"Strings\\schedules\\Elliott:marriage_nm\"/2300 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "17"
+			}
+		},
+	]
+}

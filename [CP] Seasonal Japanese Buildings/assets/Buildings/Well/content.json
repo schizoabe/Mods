@@ -1,0 +1,50 @@
+{
+	"Changes": [
+		{
+			"LogName": "Static Well",
+			"Action": "EditImage",
+			"Target": "Buildings/Well",
+			"FromFile": "assets/Buildings/Well/Well_{{season}}.png",
+			"When": {
+				"Well": "static"
+			}
+   		},
+
+		{
+			"LogName": "Animated Well",
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/TextureOverrides",
+            "Entries": {
+                "leroymilo.USJB_Buildings/Well": {
+                    "TargetTexture": "Buildings/Well",
+                    "TargetRect": {
+                        "X": 0,
+                        "Y": 0,
+                        "Width": 48,
+                        "Height": 80
+                    },
+                    "SourceTexture": "{{InternalAssetKey: assets/Buildings/Well/Well_{{season}}_anim.png}}:0..11@20"
+                }
+            },
+			"When": {
+				"HasMod": "spacechase0.SpaceCore",
+				"Well": "animated"
+			}
+		},
+
+		{
+			"LogName": "Remove Well Shadow",
+			"Action": "EditData",
+			"Target": "Data/Buildings",
+			"When": {
+				"Well": "static, animated"
+			},
+			
+			"Fields": {
+				"Well": {
+					"DrawShadow": false
+				}
+			}
+		}
+	]
+}

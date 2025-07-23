@@ -1,0 +1,60 @@
+{
+	"Changes":[
+	//Bookseller
+		{
+			"LogName": "Add Book and Power Food",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+            "TargetField": [ "BooksellerTrade", "Items" ],
+			"Entries": {
+				"Cosmos.PowerBook": {
+                    "Id": "Cosmos.PowerBook",
+                    "ItemId": "(O)Cosmos.PowerBook",
+                    "Price": 15000,
+					"Condition": "!PLAYER_HAS_MAIL Current CosmosBoughtBook, RANDOM 0.75",
+					"ActionsOnPurchase": [
+    					"If !PLAYER_HAS_MAIL Current CosmosBoughtBook ## AddMail Current CosmosBoughtBook received"
+					]
+                },
+				"Cosmos.StarfallIcon": {
+                    "Id": "Cosmos.StarfallIcon",
+                    "ItemId": "(O)Cosmos.StarfallIcon",
+                    "Price": 25000,
+					"Condition": "!PLAYER_HAS_MAIL Current CosmosBoughtIcon, PLAYER_HAS_MAIL Current CosmosBoughtBook, RANDOM 0.85",
+					"ActionsOnPurchase": [
+    					"If !PLAYER_HAS_MAIL Current CosmosBoughtIcon ## AddMail Current CosmosBoughtIcon received"
+					]
+                },
+				"Cosmos.IridiumiteIcon": {
+                    "Id": "Cosmos.IridiumiteIcon",
+                    "ItemId": "(O)Cosmos.IridiumiteIcon",
+                    "Price": 25000,
+					"Condition": "!PLAYER_HAS_MAIL Current CosmosBoughtCrystal, PLAYER_HAS_MAIL Current CosmosBoughtBook, RANDOM 0.85",
+					"ActionsOnPurchase": [
+    					"If !PLAYER_HAS_MAIL Current CosmosBoughtCrystal ## AddMail Current CosmosBoughtCrystal received"
+					]
+                }
+			}
+		},
+	//Mail
+		{
+			"LogName": "Add Mail Flags",
+			"Action": "EditData",
+			"Target": "Data/Mail",
+			"Entries": {
+				"CosmosBoughtBook": null,
+				"CosmosBoughtIcon": null,
+				"CosmosBoughtCrystal": null
+			}
+		}
+	]
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  

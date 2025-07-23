@@ -1,0 +1,78 @@
+{
+    "Changes": [
+			{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Saloon",
+                "Items"
+            ],
+            "Entries": {
+                "FSTS_Laverbread": {
+                    "ItemId": "FSTS_Laverbread",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY spring 5",					
+				},
+                "FSTS_Popcorn_Cockles": {
+                    "ItemId": "FSTS_Popcorn_Cockles",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY spring 19",					
+				},
+                "FSTS_Seared_Ferngill_Scallops": {
+                    "ItemId": "FSTS_Seared_Ferngill_Scallops",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY summer 5",					
+				},
+                "FSTS_Seaweed_Salad": {
+                    "ItemId": "FSTS_Seaweed_Salad",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY summer 19",					
+				},
+                "FSTS_Shucked_Oyster": {
+                    "ItemId": "FSTS_Shucked_Oyster",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY fall 5",					
+				},
+                "FSTS_Spicy_Mussels": {
+                    "ItemId": "FSTS_Spicy_Mussels",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY fall 19",					
+				},
+                "FSTS_Fishermans_Omelet": {
+                    "ItemId": "FSTS_Fishermans_Omelet",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY winter 5",		
+				},
+                "FSTS_Mullet_Salad": {
+                    "ItemId": "FSTS_Mullet_Salad",
+					"PriceModifiers": [{"Modification": "Multiply", "Amount": 0.25}],
+                    "IsRecipe": "true",
+					"Condition": "SEASON_DAY winter 19",		
+					}
+			}
+        },
+///ADDING TO RIDGESIDE VILLAGE PIKAS
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "When": {"HasMod |contains=Rafseazz.RSVCP": "true"},
+            "TargetField": [
+                "RSVPikaShop",
+                "Items"
+            ],
+            "Entries": {
+                "FSTS_Seafood_Dishes": {
+                    "RandomItemId": ["FSTS_Laverbread", "FSTS_Popcorn_Cockles", "FSTS_Seared_Ferngill_Scallops", "FSTS_Seaweed_Salad", "FSTS_Shucked_Oyster", "FSTS_Spicy_Mussels", "FSTS_Fishermans_Omelet", "FSTS_Mullet_Salad"],
+					"Condition": "DAY_OF_WEEK Friday ",	
+				}
+			}
+		},
+	]
+}

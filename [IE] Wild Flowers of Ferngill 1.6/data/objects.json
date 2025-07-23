@@ -1,0 +1,36 @@
+{
+    "Changes": [
+///ADDING SEEDS
+ {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+			"FOF_Wildflower_Seeds": {
+                    "Name": "Ferngill Wildflower Seeds",
+					"DisplayName": "{{i18n:FOF-Wildflower-Seeds.name}}",
+					"Description": "{{i18n:FOF-Wildflower-Seeds.description}}",
+                    "Price": 5,
+                    "Type": "Seed",
+                    "Category": -74,
+                    "Texture": "StunkyMcDoo.WildFlowersofFerngill.IE/objects",
+                    "SpriteIndex": 0,
+				}
+			}
+        },
+///ADDING TO SHOPS
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Festival_FlowerDance_Pierre",
+                "Items"
+            ],
+            "Entries": {
+                "FOF_Wildflower_Seeds_Shop": {
+                    "ItemId": "FOF_Wildflower_Seeds",
+					"Price": "50",
+				}
+			}
+		},
+	]
+}

@@ -1,0 +1,15 @@
+{ // Hospital Death - Harvey Spouse
+  "Changes": [
+    {
+      "LogName": "KO Generic - Harvey",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "When": {
+        "Spouse": "Harvey",
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 9 2/skippable/pause 1500/showFrame 5/message \"{{i18n:PlayerKilled.{{SpouseName}}.01}}\"/pause 1000/message \"{{i18n:PlayerKilled.{{SpouseName}}.02}}\"/viewport 20 12 true/pause 1000/speak Harvey \"{{i18n:PlayerKilled.{{SpouseName}}.03}}\"/move {{Spouse}} 1 0 2/move {{Spouse}} 0 3 3/faceDirection farmer 1/textAboveHead {{Spouse}} \"{{i18n:PlayerKilled.Harvey.09}}\"/move Harvey -1 0 3/pause 1500/speak {{Spouse}} \"{{i18n:PlayerKilled.{{SpouseName}}.04}}\"/emote farmer 16/pause 500/speak {{Spouse}} \"{{i18n:PlayerKilled.{{SpouseName}}.05}}\"/emote {{Spouse}} 40/pause 1500/emote farmer 28/pause 500/pause 500/speak Harvey \"{{i18n:PlayerKilled.{{SpouseName}}.06}}\"/pause 500/speak Harvey \"{{i18n:PlayerKilled.{{SpouseName}}.07}}\"/pause 500/move Harvey 1 0 0/move Harvey 0 -4 0/pause 500/faceDirection {{Spouse}} 3/speak {{Spouse}} \"{{i18n:PlayerKilled.{{SpouseName}}.08}}\"/move Harvey -8 0 0 true/move Harvey 0 -1 0/move Harvey -4 0 0/move Harvey 0 -1 0/playSound doorClose/warp Harvey -100 -100/faceDirection farmer 2/pause 1000/emote farmer 28/hospitaldeath/end dialogue {{Spouse}} \"{{i18n:HospitalEnd.{{SpouseName}}.01}}#$c 0.7#{{i18n:HospitalEnd.{{SpouseName}}.02}}\""
+      }
+    }
+  ]
+}

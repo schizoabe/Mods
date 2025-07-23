@@ -1,0 +1,232 @@
+{
+
+	"Format": "2.6.0",
+    "DynamicTokens": [
+        {
+			"Name": "MirinExtras",
+			"Value": "1,1"	
+		},	
+		{
+			"Name": "MirinExtras",
+			"Value": "2,2",	
+			"When": {
+				"HasSeenEvent": "KathMuseum.Expansion"
+			}			
+		},
+        {
+			"Name": "SVELoadingExpansion",
+			"Value": ""	
+		},
+        {
+			"Name": "SVELoadingExpansion",
+			"Value": "_SVE",
+            "When": {
+				"HasMod|contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+        {
+			"Name": "LoadingExpansion",
+			"Value": "_pre"	
+		},	
+		{
+			"Name": "LoadingExpansion",
+			"Value": "_expanded",	
+			"When": {
+				"HasMod|contains=kath.cosmos, kath.wth.holidays": true,
+                "HasSeenEvent|contains=KathMuseum.CompleteMirin": true
+			}			
+		},
+        {
+			"Name": "LoadingExpansion",
+			"Value": "_expanded_cosmos",	
+			"When": {
+				"HasSeenEvent|contains=KathMuseum.Expansion":true,
+                "HasMod|contains=kath.cosmos": true,
+                "HasMod|contains=kath.wth.holidays": false
+			}			
+		},
+        {
+			"Name": "LoadingExpansion",
+			"Value": "_expanded_wth",	
+			"When": {
+				"HasSeenEvent|contains=KathMuseum.Expansion":true,
+                "HasMod|contains=kath.cosmos": false,
+                "HasMod|contains=kath.wth.holidays": true
+			}			
+		},
+        {
+			"Name": "LoadingExpansion",
+			"Value": "_expanded_cosmoswth",	
+			"When": {
+				"HasSeenEvent|contains=KathMuseum.Expansion":true,
+                "HasMod|contains=kath.cosmos": true,
+                "HasMod|contains=kath.wth.holidays": true
+			}			
+		}
+    ],
+    "ConfigSchema": {
+        "Luck": {
+			"AllowValues": "0,1,2,3,4,5",
+			"Default": "5",
+        	"AllowBlank": false,
+			"AllowMultiple": false,
+			"Section": "Buff"
+		},
+        "DefenseAttack": {
+			"AllowValues": "0,2,4,6,8,10",
+			"Default": "10",
+        	"AllowBlank": false,
+			"AllowMultiple": false,
+			"Section": "Buff"
+		},
+        "Immunity": {
+			"AllowValues": "0,5,10",
+			"Default": "10",
+        	"AllowBlank": false,
+			"AllowMultiple": false,
+			"Section": "Buff"
+		}
+    },
+	"Changes": [
+    ///////////////////
+    //// L O A D S ////
+    ///////////////////   
+		{
+			"LogName": "Load Custom Museum Map",
+			"Action": "Load",
+			"Target": "Maps/Kath_Museum",
+			"FromFile": "assets/maps/museum/kath_museum{{LoadingExpansion}}{{SVELoadingExpansion}}.tmx"
+		},
+        {
+      		"LogName": "Load Tilesheets - Doors",
+			"Action": "Load",
+			"Target": "Maps/Mirin_Doors",
+			"FromFile": "assets/Tilesheets/doors.png"
+		},
+
+        {
+			"LogName": "Load Lost Book Textures",
+			"Action": "Load",
+			"Target": "Mods/kath.museum/LostBooks",
+			"FromFile": "assets/lostbooks.png"
+		},
+		{
+			"LogName": "Load Lost Book Letter Textures",
+			"Action": "Load",
+			"Target": "Mods/kath.museum/Letters",
+			"FromFile": "assets/letter.png"
+		},
+		{
+			"LogName": "Load Donatables Textures",
+			"Action": "Load",
+			"Target": "Mods/kath.museum/Curio",
+			"FromFile": "assets/curios.png"
+		},
+        {
+			"LogName": "Blank Load", 
+			"Action": "Load",
+			"Target": "Characters/Dialogue/Mirin, Strings/schedules/Mirin, Characters/schedules/Mirin, Data/Events/KathMuseum_Mirin",
+			"FromFile": "assets/blank.json"
+		},
+		{
+			"LogName": "Sprites and Portraits", 
+			"Action": "Load",
+			"Target": "Characters/Mirin, Portraits/Mirin, Portraits/Mirin_Winter, Characters/Mirin_Winter, Characters/Mirin_Blanket, Characters/Mirin_BlanketWinter",
+			"FromFile": "assets/NPC/{{Target}}.png"
+		},
+        {
+			"LogName": "Load Buffs Textures",
+			"Action": "Load",
+			"Target": "Mods/kath.museum/Buffs",
+			"FromFile": "assets/buffs.png"
+		},
+
+
+    /////////////////////////
+    //// I N C L U D E S ////
+    /////////////////////////
+        {
+      	    "LogName": "Load Location",
+			"Action": "Include",
+			"FromFile": "Data/locations.json"
+		},
+        {
+      	    "LogName": "Load Museum Data",
+			"Action": "Include",
+			"FromFile": "Data/museumdata.json"
+		},
+        {
+      	    "LogName": "Load Map Changes in Museum",
+			"Action": "Include",
+			"FromFile": "Data/mapchanges_museum.json"
+		},
+        {
+      	    "LogName": "Load Object Data",
+			"Action": "Include",
+			"FromFile": "Data/objects.json"
+		},
+        {
+      	    "LogName": "Load Spacecore Object Data",
+			"Action": "Include",
+			"FromFile": "Data/spacecoreobjects.json",
+            "When": {"HasMod": "spacechase0.SpaceCore"}
+		},
+        {
+      	    "LogName": "Load Strings",
+			"Action": "Include",
+			"FromFile": "Data/strings.json"
+		},
+        {
+      	    "LogName": "Load TAS",
+			"Action": "Include",
+			"FromFile": "Data/TAS.json"
+		},
+        {
+      	    "LogName": "Load MapChanges Vanilla",
+			"Action": "Include",
+			"FromFile": "Data/mapchanges.json",
+            "When": {"HasMod|contains=FlashShifter.StardewValleyExpandedCP": false}
+		},
+        {
+      	    "LogName": "Load MapChanges SVE",
+			"Action": "Include",
+			"FromFile": "Data/mapchangesSVE.json",
+            "When": {"HasMod|contains=FlashShifter.StardewValleyExpandedCP": true}
+		},
+        {
+      	    "LogName": "Load Spawn Data",
+			"Action": "Include",
+			"FromFile": "Data/spawns.json"
+		},
+        {
+      	    "LogName": "Load Shop Data",
+			"Action": "Include",
+			"FromFile": "Data/shops.json"
+		},
+        {
+      	    "LogName": "Load Mail Data",
+			"Action": "Include",
+			"FromFile": "Data/mail.json"
+		},
+        {
+      	    "LogName": "Load Buffs Data",
+			"Action": "Include",
+			"FromFile": "Data/buffs.json"
+		},
+        {
+      	    "LogName": "Load NPC Data",
+			"Action": "Include",
+			"FromFile": "Data/mirin.json"
+		},
+        {
+      	    "LogName": "Load Events Data",
+			"Action": "Include",
+			"FromFile": "Data/events.json"
+		},
+        {
+      	    "LogName": "Load EMA Data",
+			"Action": "Include",
+			"FromFile": "Data/EMA.json"
+		}
+	]
+}

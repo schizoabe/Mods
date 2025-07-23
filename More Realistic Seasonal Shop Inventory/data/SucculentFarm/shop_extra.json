@@ -1,0 +1,391 @@
+{
+	"Changes": [
+		//Entries Vanilla  
+		{
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring", "BeforeID": "(O)628" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer", "BeforeID": "(O)628" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall", "BeforeID": "(O)628" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring": true,
+              "HasMod |contains=boringvlln.rshops": false
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring", "AfterID": "(O)494" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer": true,
+              "HasMod |contains=boringvlln.rshops": false
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer", "AfterID": "(O)494" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall": true,
+              "HasMod |contains=boringvlln.rshops": false
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall", "AfterID": "(O)494" }
+      ]
+    },
+    //Entries RSSI
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+      				"Pierre": "Standard, Hardmode",
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring", "AfterID": "boringvlln.rshops_Saplings" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+      				"Pierre": "Standard, Hardmode",
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer", "AfterID": "boringvlln.rshops_Saplings" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+      				"Pierre": "Standard, Hardmode",
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall", "AfterID": "boringvlln.rshops_Saplings" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+      				"Pierre": "Standard, Hardmode",
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring", "AfterID": "boringvlln.rshops_SaplingsComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+      				"Pierre": "Standard, Hardmode",
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer", "AfterID": "boringvlln.rshops_SaplingsComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+      				"Pierre": "Standard, Hardmode",
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall", "AfterID": "boringvlln.rshops_SaplingsComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+      				"Sandy": "Standard, Hardmode",
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring": true,
+              "HasMod |contains=boringvlln.rshops": true
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring", "BeforeID": "boringvlln.rshops_Sandysnack" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+      				"Sandy": "Standard, Hardmode",
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer": true,
+              "HasMod |contains=boringvlln.rshops": true
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer", "BeforeID": "boringvlln.rshops_Sandysnack" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+      				"Sandy": "Standard, Hardmode",
+              "HasValue: MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall": true,
+              "HasMod |contains=boringvlln.rshops": true
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall", "BeforeID": "boringvlln.rshops_Sandysnack" }
+      ]
+    },
+		//Shop data
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"SeedShop",
+				"Items"
+			],
+			"When": {"Pierre": "Standard, Hardmode"},
+			"Entries": {
+				"NoraCharles.NeosSucculentFarmRedux_AlbinoHoodiaSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_AloeVeraSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_BarrelSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_BlueCandleSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_CandelabraSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_DevilsHornsSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_EstevesiiSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_FlapjackSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_FlowerCrownSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_HereroaSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_HoodiaSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_JadeSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_LipstickEcheveriaSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_PaddleSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_PowderPuffSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_SaguaroSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_SeaBeanSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_StarSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_WaxAgaveSeed": null,
+				"NoraCharles.NeosSucculentFarmRedux_ZebraSeed": null,
+			}
+		},
+		//Seeds data
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Fields": {
+				"NoraCharles.NeosSucculentFarmRedux_AlbinoHoodiaSeed": {
+					"Price": 120,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_AloeVeraSeed": {
+					"Price": 100,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_BarrelSeed": {
+					"Price": 70,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_BlueCandleSeed": {
+					"Price": 80,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_CandelabraSeed": {
+					"Price": 80,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_DevilsHornsSeed": {
+					"Price": 70,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_EstevesiiSeed": {
+					"Price": 80,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_FlapjackSeed": {
+					"Price": 80,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_FlowerCrownSeed": {
+					"Price": 60,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_HereroaSeed": {
+					"Price": 100,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_HoodiaSeed": {
+					"Price": 120,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_JadeSeed": {
+					"Price": 90,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_LipstickEcheveriaSeed": {
+					"Price": 80,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_PaddleSeed": {
+					"Price": 100,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_PowderPuffSeed": {
+					"Price": 70,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_summer"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_SaguaroSeed": {
+					"Price": 100,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_SeaBeanSeed": {
+					"Price": 80,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_StarSeed": {
+					"Price": 90,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_WaxAgaveSeed": {
+					"Price": 90,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				},
+				"NoraCharles.NeosSucculentFarmRedux_ZebraSeed": {
+					"Price": 80,
+					"ContextTags": [
+						"NeosSucculentFarmRedux_season_spring",
+						"NeosSucculentFarmRedux_season_summer",
+						"NeosSucculentFarmRedux_season_fall"
+					]
+				}
+			}
+		}
+	]
+}

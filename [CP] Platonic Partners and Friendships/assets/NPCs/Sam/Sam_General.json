@@ -1,0 +1,159 @@
+{
+    "Changes": [
+        // CONTENT INCLUDES
+        {
+            "LogName": "Enable Sam's aromantic content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Sam/Sam_AroContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, SexWithoutRomance"
+            }
+        },
+        // ACE CONTENT
+        {
+            "LogName": "Sam ace dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sam",
+            "Entries": {
+                "SpouseStardrop": "{{i18n:PPAF.Sam.DialogueEdits.Shared.SpouseStardrop |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            }
+        },
+        {
+            "LogName": "Sam ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueSam",
+            "Entries": {
+                "Indoor_Night_0": "{{i18n:PPAF.Sam.PartnerDialogue.Ace.Indoor_Night_0}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueSam",
+            "Entries": {
+                "OneKid_3": "{{i18n:PPAF.Sam.PartnerDialogue.Ace.OneKid_3}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:AlwaysAdopt": false
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "Entries": {
+                "Sam_spouse_y2": "{{i18n:PPAF.Sam.PartnerDialogue.Ace.WinterStar.Sam_spouse_y2}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:SamRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/SamHouse",
+            "Fields": {
+                "233104/f Sam 2500/t 2000 2400/w sunny/n samMessage": {
+                    41: "speak Sam \"{{i18n: PPAF.Sam.Events.Ace.10Heart.41 |LovePortraitsSam={{LovePortraitsSamToken}}}}\"",
+                    75: "speak Sam \"{{i18n: PPAF.Sam.Events.Ace.10Heart.75}}\"",
+                    76: "pause 10",
+                    77: "pause 10",
+                    78: "pause 10",
+                    118: "end dialogue Sam \"{{i18n: PPAF.Sam.Events.Ace.10Heart.118 |LovePortraitsSam={{LovePortraitsSamToken}}}}\""
+                }
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:SamRelationshipType": "RomanceWithoutSex"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/SamHouse",
+            "Entries": {
+                "stayPut": null
+            }
+        },
+        // TERMS OF ENDEARMENT
+        {
+            "LogName": "Sam terms of endearment, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Sam",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Sam terms of endearment, poly with CFD",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sam",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": true,
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // NO BLUSH EDITS
+        {
+            "LogName": "Sam no blush edit",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam, Portraits/Sam_Winter, Portraits/Sam_Beach, Portraits/Sam_JojaMart",
+            "FromFile": "assets/Portraits/{{TargetWithoutPath}}_NoBlush.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Sam": true,
+                "HasMod |contains=DSVTeam.DiverseStardewValley, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        {
+            "LogName": "Sam no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam_Spring, Portraits/Sam_Summer, Portraits/Sam_Fall, Portraits/Sam_Winter_Indoor, Portraits/Sam_FlowerDance, Portraits/Sam_EggF, Portraits/Sam_Jellies, Portraits/Sam_Luau, Portraits/Sam_Winter_IceF, Portraits/Sam_Winter_WinterStar, Portraits/Sam_Work, Portraits/Sam_Beach",
+            "FromFile": "assets/Portraits/Sam_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Sam": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        },
+        {
+            "LogName": "Sam no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam_Winter_Outdoor, Portraits/Sam_SpiritsEve, Portraits/Sam_Fair",
+            "FromFile": "assets/Portraits/{{TargetWithoutPath}}_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Sam": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        },
+        // COMPATIBILITY
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/SamHouse",
+            "Fields": {
+                "233104/f Sam 2500/t 2000 2400/w sunny/n samMessage": {
+                    2: "farmer 5 90 1 Sam 10 87 2 Vincent 8 22 3 Jodi 6 13 0",
+                    5: "move farmer 5 0 0"
+                }
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:SamRelationshipType": "RomanceWithoutSex",
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        }
+    ]
+}

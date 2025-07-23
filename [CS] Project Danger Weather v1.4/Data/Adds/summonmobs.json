@@ -1,0 +1,77 @@
+{
+	"Changes": [
+//What are you doing here?
+//This is bare bones for now...
+	
+//Monster Load
+//HP/Attack/0/0/flies?/1000 or random movement duration/ITEM ID %/Defense/.01 or jitters/distance to aggro/speed/% for miss attack/mine monst?/EXP/display name
+        {
+            "LogName":"Making Monster Data",
+            "Action": "EditData",
+            "Target": "Data/Monsters",
+            "Entries": {
+				"DarkBat": "100/5/0/0/true/1000/769 .95 767 .05/2/.01/10/4/.00/true/20/???",
+			},
+		},
+//Spawn Definition
+        {
+            "LogName":"Making the Spawn Data",
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/SpawnableDefinitions",
+            "Entries": {
+                "DarkEclipse.Bat": {
+					"Type": "Monster",
+					"MonsterType": "Bat",
+					"MonsterName": "DarkBat",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},
+				
+				//
+			}
+		},
+//Spawn Groups
+        {
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/SpawningGroups",
+            "Entries": {
+                "DarkEclipse_Spawn.Town": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "DarkEclipse.Bat"
+									}
+								],
+								"Minimum": 40,
+								"Maximum": 100,
+							},
+						]
+				},
+				
+				//
+			}
+		},
+		
+//Spawning Stuff in
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {		
+			"kath.weathering_SpawnTown": {
+				"Id": "kath.weathering_SpawnTown",
+                "Trigger": "DayStarted",
+                "Condition": "WEATHER Town kath.weathering_Darkness",
+				"MarkActionApplied": false,
+                "Actions": [
+					"spacechase0.SpaceCore_TriggerSpawnGroup DarkEclipse_Spawn.Town Town",
+                    ],
+				},	
+			//
+			}
+		},
+
+//End
+]
+}

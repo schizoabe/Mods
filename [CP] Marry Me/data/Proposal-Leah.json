@@ -1,0 +1,53 @@
+{
+"Changes": [
+
+//Load audio
+{
+    "Action": "EditData",
+    "Target": "Data/AudioChanges",
+    "Entries": {
+       
+        "{{ModId}}_Audio_Waterfall": {
+            "ID": "{{ModId}}_Waterfall",
+            "Category": "Ambient",
+            "FilePaths": [ "{{AbsoluteFilePath: assets/sound/waterfall-loop.ogg}}" ],
+            "StreamedVorbis": true,
+            "Looped": true
+        },
+    }
+},
+
+//Load map
+{
+     "Action": "Load",
+     "Priority": "Low",
+     "Target": "Maps/MM-LeahWhite",
+     "FromFile": "assets/maps/Forest-Cropped.tmx",
+},
+
+//LEAH -- proposes by the waterfall in Cindersnap
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Forest",
+    "Entries": {
+        "{{ModId}}_Proposal_Leah/Dating Leah/f Leah 2500/t 900 1800/w sunny/z winter/c 2/LocalMail {{ModId}}_Letter_Leah": "{{ModId}}_Waterfall/-1000 -1000/farmer 69 85 1 Leah 71 95 3/--skippable/mailReceived {{ModId}}_StopBlack_Leah/changeToTemporaryMap MM-LeahWhite false/warp Leah 30 16/faceDirection Leah 2/warp farmer 29 0/advancedMove farmer false 0 15 2 500/viewport 27 16 clamp true/positionOffset Leah 0 -28/pause 3000/playSound grassyStep/pause 400/playSound grassyStep/pause 1300/faceDirection Leah 0/pause 200/emote Leah 16/pause 800/speak Leah \"{{i18n:White_Leah.0}}\"/waitForAllStationary/pause 200/emote farmer 32/pause 800/faceDirection Leah 3/pause 200/faceDirection Leah 0/pause 800/speak Leah \"{{i18n:White_Leah.1}}\"/pause 500/advancedMove Leah false -5 0 3 100/pause 500/faceDirection farmer 3/pause 500/waitForAllStationary/pause 1000/speak Leah \"{{i18n:White_Leah.2}}\"/pause 200/advancedMove farmer false -4 0 3 100/pause 500/faceDirection Leah 3/pause 2000/emote farmer 56/pause 1800/speak Leah \"{{i18n:White_Leah.3}}\"/pause 1000/emote farmer 56/pause 5000/advancedMove Leah false 6 0 3 1000 2 500/pause 1800/faceDirection farmer 1/waitForAllStationary/emote Leah 40/pause 1000/speak Leah \"{{i18n:White_Leah.4}}\"/emote farmer 40/pause 500/advancedMove farmer false 4 0 0 1 1 1500 2 500/pause 2000/speak Leah \"{{i18n:White_Leah.5}}\"/pause 100/faceDirection farmer 1/emote farmer 8/pause 800/faceDirection Leah 3/pause 1000/faceDirection Leah 1/emote Leah 60/pause 2000/jump Leah/emote Leah 16/faceDirection Leah 3/speak Leah \"{{i18n:White_Leah.6}}\"/pause 800/playSound dwop/addObject 30 16 630 1/pause 600/faceDirection farmer 2/pause 800/emote farmer 16/pause 1000/faceDirection farmer 1/pause 800/quickQuestion #{{i18n:White_Leah.7}}#{{i18n:White_Leah.8}}#{{i18n:White_Leah.9}}(break)pause 200\\emote Leah 32\\pause 600\\speak Leah \"{{i18n:White_Leah.10}}\"(break)pause 1200\\speak Leah \"{{i18n:White_Leah.11}}\"(break)pause 200\\emote Leah 16\\pause 1000\\speak Leah \"{{i18n:White_Leah.12}}\"/pause 200/speak Leah \"{{i18n:White_Leah.13}}\"/pause 800/emote farmer 56/pause 1000/faceDirection Leah 2/pause 200/speak Leah \"{{i18n:White_Leah.14}}\"/pause 200/faceDirection farmer 1/pause 200/emote farmer 8/pause 500/emote Leah 60/pause 1200/shake Leah 500/pause 1600/playMusic musicboxsong/pause 3000/faceDirection Leah 3/pause 200/speak Leah \"{{i18n:White_Leah.15}}\"/pause 500/emote Leah 40/pause 200/speak Leah \"{{i18n:White_Leah.16}}\"/pause 800/speed Leah 1/advancedMove Leah false -1 0 3 500/waitForAllStationary/pause 500/message \"{{i18n:White_Leah.17 |Your={{Your}}}}\"/pause 600/speak Leah \"{{i18n:White_Leah.18}}\"/pause 800/speak Leah \"{{i18n:White_Leah.19}}\"/pause 200/speak Leah \"{{i18n:White_Leah.20}}\"/pause 400/emote farmer 16/pause 200/question fork1 \"{{i18n:proposalResponse}}\"/fork {{ModId}}_Leah_No/switchEvent {{ModId}}_Leah_Yes",
+        }
+},
+{
+       "Action": "EditData",
+       "Target": "Data/Events/Temp",
+       "Entries": {
+           "{{ModId}}_Leah_Yes": "stopAnimation Leah 12/emote Leah 20/pause 200/message \"{{i18n:White_Leah.YES.0 |Your={{Your}}}}\"/pause 200/speak Leah \"{{i18n:White_Leah.YES.1}}\"/pause 200/positionOffset farmer 4 0/positionOffset Leah -4 0/{{Farmer_Kiss}}/{{Leah_Kiss}}/emote Leah 20/pause 200/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Leah 12/pause 1000/speak Leah \"{{i18n:White_Leah.YES.2}}\"/pause 200/faceDirection Leah 2/pause 400/faceDirection farmer 2/pause 400/speak Leah \"{{i18n:White_Leah.YES.3}}\"/pause 1200/faceDirection Leah 3/pause 200/faceDirection farmer 1/pause 800/speak Leah \"{{i18n:White_Leah.YES.4}}\"/pause 200/emote farmer 32/globalFade/viewport -1000 -1000/pause 2000/action Kantrip.HeartActions_DoEngagement Leah/action AddItem 460/action AddItem 630/pause 3000/stopMusic/end/",
+        
+        "{{ModId}}_Leah_No": "stopAnimation Leah 12/speed Leah 2/jump Leah/emote Leah 16/pause 800/emote Leah 28/pause 2000/speak Leah \"{{i18n:White_Leah.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_Leah_notReady(break)switchEvent {{ModId}}_Leah_noMarriage(break)switchEvent {{ModId}}_Leah_breakup/",
+        
+        "{{ModId}}_Leah_notReady": "pause 400/emote Leah 60/pause 800/speak Leah \"{{i18n:White_Leah.NO1.0}}\"/pause 500/speak Leah \"{{i18n:White_Leah.NO1.1}}\"/pause 200/emote farmer 32/pause 400/emote Leah 32/pause 200/speak Leah \"{{i18n:White_Leah.NO1.2}}\"/pause 200/{{Farmer_Kiss}}/{{Leah_Kiss}}/pause 2000/globalFade/viewport -1000 -1000/pause 1000/pause 1000/action AddItem 630/pause 2000/stopMusic/end",
+        
+        "{{ModId}}_Leah_noMarriage": "pause 200/speak Leah \"{{i18n:White_Leah.NO2.0}}\"/pause 200/faceDirection Leah 1/emote Leah 40/pause 2000/faceDirection Leah 3/pause 100/speak Leah \"{{i18n:White_Leah.NO2.1}}\"/pause 200/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/pause 1000/pause 1000/action AddItem 630/pause 2000/stopMusic/end/",
+        
+        "{{ModId}}_Leah_breakup": "pause 400/playSound dwop/positionOffset Leah 2 0/pause 100/positionOffset Leah 2 0/pause 100/positionOffset Leah 2 0/pause 100/playSound dwop/positionOffset Leah 2 0/pause 100/positionOffset Leah 2 0/pause 100/positionOffset Leah 2 0/pause 1500/faceDirection Leah 2/shake Leah 500/pause 1000/emote Leah 28/pause 2500/faceDirection Leah 3/speak Leah \"{{i18n:White_Leah.NO3.0}}\"/pause 600/advancedMove Leah false 0 -3/pause 400/faceDirection farmer 0/pause 3000/shake Leah 500/pause 3000/faceDirection Leah 2/pause 500/speak Leah \"{{i18n:White_Leah.NO3.1}}\"/pause 100/faceDirection Leah 0/pause 1000/advancedMove Leah false 4 0/pause 600/faceDirection farmer 1/pause 3000/shake Leah 500/pause 1500/speak Leah \"{{i18n:White_Leah.NO3.2}}\"/pause 1200/advancedMove Leah false 12 0/pause 1500/action Kantrip.HeartActions_DoBreakup Leah/friendship Leah -1000/globalFade/viewport -1000 -1000/pause 2000/action AddItem 630/pause 2000/stopMusic/end/",
+    },
+},
+
+]
+}

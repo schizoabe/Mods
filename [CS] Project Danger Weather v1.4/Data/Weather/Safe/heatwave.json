@@ -1,0 +1,109 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data HeatWave",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_HeatWave": {
+					"Id": "kath.weathering_HeatWave",
+					"DisplayName": "{{i18n: Weather.HeatWave}}",
+
+					"Forecast": "{{i18n: Weather.HeatWave.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.HeatWave.ForecastIsland}}", "Desert": "{{i18n: Weather.HeatWave.ForecastDesert}}",},
+					
+					"UseNightTiles": false,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"SpawnCritters": true,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 32},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 65},
+					"TVFrames": 4,
+
+
+					"TotemMessage": "{{i18n: Weather.HeatWaveTotem}}",
+					"TotemScreenTint": "orangered",
+					"TotemSound": "furnace",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDHeatwave 3",
+								"AddMail Current HeatWaveMapFlag received",
+							],
+						},					
+					],//close effect
+
+					"Critters":[
+						{
+							"Id": "Fireflies",
+							"Group": "Flies",
+							"Condition": "!CS_LOCATION_IS_TYPE Here Beach, CS_LOCATION_TIME Here Dark",
+							"Chance": 1.5,
+
+							"Type": "Firefly"
+						},
+					],
+
+					"Layers": [
+						{
+							"Id": "HotColour",
+							"Condition": "ANY \"!LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_Highlands\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "236, 166, 52",
+							"Opacity": 0.27
+						},
+						{
+							"Id": "Foggy1",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 64, "Y": 0, "Width": 64, "Height": 64 },
+							"Color": "210, 210, 210",
+							"Opacity": 0.28,
+							"Speed": "-0.05, -0.05",
+							"ViewSpeed": "-1, -1",
+							"Scale": 4
+						},
+						{
+							"Id": "Foggy2",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 64, "Y": 0, "Width": 64, "Height": 64 },
+							"Color": "210, 210, 210",
+							"Opacity": 0.28,
+							"Speed": "0, -0.05",
+							"ViewSpeed": "-1, -1",
+							"Scale": 4
+						},
+						{
+							"Id": "HeatHaze",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine",							
+							"TargetMapType": "Outdoors",
+							"Type": "Shader",
+							"Shader": "Distortion",
+							"Strength": 0.002,
+							"Frequency": 100
+						},
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

@@ -1,0 +1,107 @@
+{
+  "Changes": [
+    {
+        "Action": "EditData",
+        "Target": "Data/Objects",  
+        "Entries": {
+          "LimeMacaron": {
+            "Name": "LimeMacaron", 
+            "DisplayName": "Lime Macaron",
+            "Description": "Lime-flavored macarons made by Noah. Light and delicate in texture, with a perfect taste.", 
+            "Type": "Object",
+            "Category": -7,
+            "Price": 450,
+            "Texture": "Mods/{{ModId}}/objects14px", 
+            "SpriteIndex": 11,
+            "Edibility": 80,
+            "IsDrink": false, 
+            "ExcludeFromFishingCollection": true,
+            "ExcludeFromShippingCollection": true,
+            "ExcludeFromRandomSale": true,
+            "Buffs": [ 
+              {
+                "Duration": 250,
+                "CustomAttributes": {
+                  "FarmingLevel": 0, 
+                  "FishingLevel": 0,
+                  "MiningLevel": 0, 
+                  "LuckLevel": 2,
+                  "ForagingLevel": 1, 
+                  "MaxStamina": 0,
+                  "MagneticRadius": 0,
+                  "Speed": 1, 
+                  "Defense": 0,
+                  "Attack": 0 
+                }
+              }
+            ]
+          }
+        }
+      },
+              {
+                  "Action": "EditData",
+                  "Target": "Data/NPCGiftTastes",
+                  "TextOperations": [
+          { "Operation": "Append",
+                    "Target": ["Entries", "Universal_like"], 
+                    "Value": "LimeMacaron",
+                    "Delimiter": " "
+                  },
+            {
+              "Operation": "Append",
+              "Target": ["Fields", "Maru", "1"], 
+              "Value": "LimeMacaron",
+              "Delimiter": " "
+            },
+            {
+              "Operation": "Append",
+              "Target": ["Fields", "Caroline", "1"], 
+              "Value": "LimeMacaron",
+              "Delimiter": " "
+            },
+            {
+              "Operation": "Append",
+              "Target": ["Fields", "Elliott", "1"],
+              "Value": "LimeMacaron",
+              "Delimiter": " "
+            },
+            {
+              "Operation": "Append",
+              "Target": ["Fields", "Leah", "1"],
+              "Value": "LimeMacaron",
+              "Delimiter": " "
+            },
+            {
+              "Operation": "Append",
+              "Target": ["Fields", "Olivia", "1"],
+              "Value": "LimeMacaron",
+              "Delimiter": " "
+            },
+            {
+              "Operation": "Append",
+              "Target": ["Fields", "Haley", "1"],
+              "Value": "LimeMacaron",
+              "Delimiter": " "
+            },
+            {
+              "Operation": "Append",
+              "Target": ["Fields", "Scarlett", "1"],
+              "Value": "LimeMacaron",
+              "Delimiter": " "
+            },
+            {
+              "Operation": "Append",
+              "Target": ["Fields", "Krobus", "5"],
+              "Value": "LimeMacaron",
+              "Delimiter": " "
+            },
+            {
+              "Operation": "Append",
+              "Target": ["Fields", "Willy", "5"], 
+              "Value": "LimeMacaron",
+              "Delimiter": " "
+            }
+          ]
+          }
+        ]
+      }

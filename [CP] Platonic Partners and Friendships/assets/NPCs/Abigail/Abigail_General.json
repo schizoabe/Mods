@@ -1,0 +1,117 @@
+{
+    "Changes": [
+        // CONTENT INCLUDES
+        {
+            "LogName": "Enable Abigail's aromantic content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Abigail/Abigail_AroContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, SexWithoutRomance"
+            }
+        },
+        // ACE CONTENT
+        {
+            "LogName": "Abigail ace dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Abigail",
+            "Entries":
+            {
+                "SpouseStardrop": "{{i18n:PPAF.Abigail.DialogueEdits.Romance.SpouseStardrop |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:AbigailRelationshipType": "RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Abigail ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries":
+            {
+                "Indoor_Night_Abigail": "{{i18n:PPAF.Abigail.DialogueEdits.Ace.Indoor_Night_Abigail}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Abigail ace schedule strings edit",
+            "Action": "EditData",
+            "Target": "Strings/schedules/Abigail",
+            "Entries":
+            {
+                "spring_4.001": "{{i18n:PPAF.Abigail.Strings.Ace.spring_4.001}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        // TERMS OF ENDEARMENT
+        {
+            "LogName": "Abigail terms of endearment, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Abigail",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Abigail terms of endearment",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Abigail",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // NO BLUSH EDITS
+        {
+            "LogName": "Abigail no blush edit",
+            "Action": "EditImage",
+            "Target": "Portraits/Abigail, Portraits/Abigail_Winter, Portraits/Abigail_Beach",
+            "FromFile": "assets/Portraits/{{TargetWithoutPath}}_NoBlush.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Abigail": true,
+                "HasMod |contains=DSVTeam.DiverseStardewValley, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        {
+            "LogName": "Abigail no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Abigail_Spring, Portraits/Abigail_Summer, Portraits/Abigail_Fall, Portraits/Abigail_Winter_Outdoor, Portraits/Abigail_Winter_Indoor, Portraits/Abigail_FlowerDance, Portraits/Abigail_SpiritsEve, Portraits/Abigail_EggF, Portraits/Abigail_Fair, Portraits/Abigail_Jellies, Portraits/Abigail_Luau, Portraits/Abigail_Winter_IceF, Portraits/Abigail_Winter_WinterStar, Portraits/Abigail_Beach",
+            "FromFile": "assets/Portraits/Abigail_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Abigail": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        },
+        // COMPATIBILITY
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Abigail",
+            "Entries": {
+                "marriage_forest2": "{{i18n:PPAF.Abigail.DialogueEdits.Ace.ISS.marriage_forest2}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:AbigailRelationshipType": "FullyPlatonic, RomanceWithoutSex",
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,288 @@
+{
+	"Changes": [
+		//Joja Standard
+		{
+			//---------------------------
+			//      Daffodil Bulbs
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Joja", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_DaffodilSeeds": {
+					"AvailableStock": 30,
+        "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+                1.4,
+                1.3,
+                1.2,
+                1.1,
+                1.0,
+                0.9,
+                0.8,
+                0.7,
+                0.6,
+                0.5,                
+              ]
+            }
+          ],
+					"Condition": "SEASON spring, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_DaffodilSeeds 0.6"
+				}
+			},
+			"When": {
+				"Joja": "Standard",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, DaffodilCrop": true
+			}
+		},
+		{
+			//---------------------------
+			//      Leek Seeds
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Joja", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_LeekSeeds": {
+					"AvailableStock": 30,
+        "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+                1.4,
+                1.3,
+                1.2,
+                1.1,
+                1.0,
+                0.9,
+                0.8,
+                0.7,
+                0.6,
+                0.5,                
+              ]
+            }
+          ],
+					"Condition": "SEASON spring, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_LeekSeeds 0.6"
+				}
+			},
+			"When": {
+				"Joja": "Standard",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, LeekCrop": true
+			}
+		},
+		{
+			//---------------------------
+			//   Fiddlehead Fern Spores
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Joja", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_FiddleheadFernSeeds": {
+					"AvailableStock": 20,
+        "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+                1.4,
+                1.3,
+                1.2,
+                1.1,
+                1.0,
+                0.9,
+                0.8,
+                0.7,
+                0.6,
+                0.5,                
+              ]
+            }
+          ],
+					"Condition": "SEASON summer, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_FiddleheadFernSeeds 0.6"
+				}
+			},
+			"When": {
+				"Joja": "Standard",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, FiddleheadFernCrop": true,
+        "HasVisitedLocation": "Woods"
+			}
+		},
+		{
+			//---------------------------
+			//     Snow Yam Seeds
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Joja", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_SnowYamSeeds": {
+					"AvailableStock": 30,
+        "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+                1.4,
+                1.3,
+                1.2,
+                1.1,
+                1.0,
+                0.9,
+                0.8,
+                0.7,
+                0.6,
+                0.5,                
+              ]
+            }
+          ],
+					"Condition": "SEASON winter, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_SnowYamSeeds 0.6"
+				}
+			},
+			"When": {
+				"Joja": "Standard",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, SnowYamCrop": true
+			}
+		},
+		//Joja Hardmode
+		{
+			//---------------------------
+			//      Daffodil Bulbs
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Joja", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_DaffodilSeeds": {
+					"AvailableStock": 30,
+        "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,                
+              ]
+            }
+          ],
+					"Condition": "SEASON spring, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_DaffodilSeeds 0.3"
+				}
+			},
+			"When": {
+				"Joja": "Hardmode",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, DaffodilCrop": true
+			}
+		},
+		{
+			//---------------------------
+			//      Leek Seeds
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Joja", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_LeekSeeds": {
+					"AvailableStock": 30,
+        "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,                
+              ]
+            }
+          ],
+					"Condition": "SEASON spring, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_LeekSeeds 0.3"
+				}
+			},
+			"When": {
+				"Joja": "Hardmode",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, LeekCrop": true
+			}
+		},
+		{
+			//---------------------------
+			//   Fiddlehead Fern Spores
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Joja", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_FiddleheadFernSeeds": {
+					"AvailableStock": 20,
+        "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,                
+              ]
+            }
+          ],
+					"Condition": "SEASON summer, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_FiddleheadFernSeeds 0.3"
+				}
+			},
+			"When": {
+				"Joja": "Hardmode",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, FiddleheadFernCrop": true,
+        "HasVisitedLocation": "Woods"
+			}
+		},
+		{
+			//---------------------------
+			//     Snow Yam Seeds
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Joja", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_SnowYamSeeds": {
+					"AvailableStock": 30,
+        "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,                
+              ]
+            }
+          ],
+					"Condition": "SEASON winter, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_SnowYamSeeds 0.3"
+				}
+			},
+			"When": {
+				"Joja": "Hardmode",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, SnowYamCrop": true
+			}
+		}
+	]
+}

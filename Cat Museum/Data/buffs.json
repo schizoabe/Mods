@@ -1,0 +1,36 @@
+{
+	"Changes": [
+		{
+      	    "LogName": "Add Buffs",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+				"MirinBlessing": {
+					"DisplayName": "{{i18n: buff.mirin}}",
+					"Description": "{{i18n: buff.mirin.description}}",
+					"IsDebuff": false,
+					"GlowColor": null,
+					"Duration": -2,
+					"MaxDuration": -1,
+					"IconTexture": "Mods/kath.museum/Buffs",
+					"IconSpriteIndex": 0,
+					"Effects":  {
+						"FarmingLevel": 0.0,
+						"FishingLevel": 0.0,
+						"MiningLevel": 0.0,
+						"LuckLevel": "{{Luck}}",
+						"ForagingLevel": 0.0,
+						"MaxStamina": 0.0,
+						"MagneticRadius": 0.0,
+						"Speed": 0.0,
+						"Defense": "{{DefenseAttack}}",
+						"Attack": "{{DefenseAttack}}",
+						"Immunity": "{{Immunity}}"	
+						},
+					"ActionsOnApply": [],
+					"CustomFields": null
+                }
+			}
+		}
+	]
+}

@@ -1,0 +1,124 @@
+{
+  "Changes": [
+  	//Standard Clint
+    {
+      "LogName": "MRSSI_Clint_TownFair",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["br93.FarmersMarket_Clint_TownFair", "Items"],
+      "When": {"Clint": "Standard"},
+      "Fields": 
+      	{
+          "br93.FarmersMarket_Clint_CopperAxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 30, PLAYER_BASE_FORAGING_LEVEL Any 1, !ANY \"PLAYER_HAS_ITEM Current (T)CopperAxe\" \"PLAYER_HAS_ITEM Current (T)SteelAxe\" \"PLAYER_HAS_ITEM Current (T)GoldAxe\" \"PLAYER_HAS_ITEM Current (T)IridiumAxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_SteelAxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 70, PLAYER_BASE_FORAGING_LEVEL Any 3, !ANY \"PLAYER_HAS_ITEM Current (T)SteelAxe\" \"PLAYER_HAS_ITEM Current (T)GoldAxe\" \"PLAYER_HAS_ITEM Current (T)IridiumAxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_GoldAxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 110, PLAYER_BASE_FORAGING_LEVEL Any 5, !ANY \"PLAYER_HAS_ITEM Current (T)GoldAxe\" \"PLAYER_HAS_ITEM Current (T)IridiumAxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_IridiumAxe":{
+          	"Condition": "PLAYER_HAS_MAIL Any QiChallengeComplete Mailbox, PLAYER_BASE_FORAGING_LEVEL Any 7, !ANY \"PLAYER_HAS_ITEM Current (T)IridiumAxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_CopperHoe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 30, PLAYER_BASE_FARMING_LEVEL Any 1, !ANY \"PLAYER_HAS_ITEM Current (T)CopperHoe\" \"PLAYER_HAS_ITEM Current (T)SteelHoe\" \"PLAYER_HAS_ITEM Current (T)GoldHoe\" \"PLAYER_HAS_ITEM Current (T)IridiumHoe\"",
+				  },
+				  "br93.FarmersMarket_Clint_SteelHoe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 70, PLAYER_BASE_FARMING_LEVEL Any 3, !ANY \"PLAYER_HAS_ITEM Current (T)SteelHoe\" \"PLAYER_HAS_ITEM Current (T)GoldHoe\" \"PLAYER_HAS_ITEM Current (T)IridiumHoe\"",
+				  },
+				  "br93.FarmersMarket_Clint_GoldHoe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 110, PLAYER_BASE_FARMING_LEVEL Any 5, !ANY \"PLAYER_HAS_ITEM Current (T)GoldHoe\" \"PLAYER_HAS_ITEM Current (T)IridiumHoe\"",
+				  },
+				  "br93.FarmersMarket_Clint_IridiumHoe":{
+          	"Condition": "PLAYER_HAS_MAIL Any QiChallengeComplete Mailbox, PLAYER_BASE_FARMING_LEVEL Any 7, !ANY \"PLAYER_HAS_ITEM Current (T)IridiumHoe\"",
+				  },
+				  "br93.FarmersMarket_Clint_CopperPickaxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 30, PLAYER_BASE_MINING_LEVEL Any 1, !ANY \"PLAYER_HAS_ITEM Current (T)CopperPickaxe\" \"PLAYER_HAS_ITEM Current (T)SteelPickaxe\" \"PLAYER_HAS_ITEM Current (T)GoldPickaxe\" \"PLAYER_HAS_ITEM Current (T)IridiumPickaxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_SteelPickaxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 70, PLAYER_BASE_MINING_LEVEL Any 3, !ANY \"PLAYER_HAS_ITEM Current (T)SteelPickaxe\" \"PLAYER_HAS_ITEM Current (T)GoldPickaxe\" \"PLAYER_HAS_ITEM Current (T)IridiumPickaxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_GoldPickaxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 110, PLAYER_BASE_MINING_LEVEL Any 5, !ANY \"PLAYER_HAS_ITEM Current (T)GoldPickaxe\" \"PLAYER_HAS_ITEM Current (T)IridiumPickaxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_IridiumPickaxe":{
+          	"Condition": "PLAYER_HAS_MAIL Any QiChallengeComplete Mailbox, PLAYER_BASE_MINING_LEVEL Any 7, !ANY \"PLAYER_HAS_ITEM Current (T)IridiumPickaxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_CopperWateringCan":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 30, PLAYER_BASE_FARMING_LEVEL Any 1, !ANY \"PLAYER_HAS_ITEM Current (T)CopperWateringCan\" \"PLAYER_HAS_ITEM Current (T)SteelWateringCan\" \"PLAYER_HAS_ITEM Current (T)GoldWateringCan\" \"PLAYER_HAS_ITEM Current (T)IridiumWateringCan\"",
+				  },
+				  "br93.FarmersMarket_Clint_SteelWateringCan":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 70, PLAYER_BASE_FARMING_LEVEL Any 3, !ANY \"PLAYER_HAS_ITEM Current (T)SteelWateringCan\" \"PLAYER_HAS_ITEM Current (T)GoldWateringCan\" \"PLAYER_HAS_ITEM Current (T)IridiumWateringCan\"",
+				  },
+				  "br93.FarmersMarket_Clint_GoldWateringCan":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 110, PLAYER_BASE_FARMING_LEVEL Any 5, !ANY \"PLAYER_HAS_ITEM Current (T)GoldWateringCan\" \"PLAYER_HAS_ITEM Current (T)IridiumWateringCan\"",
+				  },
+				  "br93.FarmersMarket_Clint_IridiumWateringCan":{
+          	"Condition": "PLAYER_HAS_MAIL Any QiChallengeComplete Mailbox, PLAYER_BASE_FARMING_LEVEL Any 7, !ANY \"PLAYER_HAS_ITEM Current (T)IridiumWateringCan\"",
+				  },
+
+                        }
+    },
+    //Hardmode Clint
+    {
+      "LogName": "MRSSI_Clint_TownFair",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["br93.FarmersMarket_Clint_TownFair", "Items"],
+      "When": {"Clint": "Hardmode"},
+      "Fields": 
+      	{
+          "br93.FarmersMarket_Clint_CopperAxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 40, PLAYER_BASE_FORAGING_LEVEL Any 3, !ANY \"PLAYER_HAS_ITEM Current (T)CopperAxe\" \"PLAYER_HAS_ITEM Current (T)SteelAxe\" \"PLAYER_HAS_ITEM Current (T)GoldAxe\" \"PLAYER_HAS_ITEM Current (T)IridiumAxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_SteelAxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 80, PLAYER_BASE_FORAGING_LEVEL Any 5, !ANY \"PLAYER_HAS_ITEM Current (T)SteelAxe\" \"PLAYER_HAS_ITEM Current (T)GoldAxe\" \"PLAYER_HAS_ITEM Current (T)IridiumAxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_GoldAxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 120, PLAYER_BASE_FORAGING_LEVEL Any 7, !ANY \"PLAYER_HAS_ITEM Current (T)GoldAxe\" \"PLAYER_HAS_ITEM Current (T)IridiumAxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_IridiumAxe":{
+          	"Condition": "PLAYER_HAS_MAIL Any QiChallengeComplete Mailbox, PLAYER_BASE_FORAGING_LEVEL Any 9, !ANY \"PLAYER_HAS_ITEM Current (T)IridiumAxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_CopperHoe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 40, PLAYER_BASE_FARMING_LEVEL Any 3, !ANY \"PLAYER_HAS_ITEM Current (T)CopperHoe\" \"PLAYER_HAS_ITEM Current (T)SteelHoe\" \"PLAYER_HAS_ITEM Current (T)GoldHoe\" \"PLAYER_HAS_ITEM Current (T)IridiumHoe\"",
+				  },
+				  "br93.FarmersMarket_Clint_SteelHoe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 80, PLAYER_BASE_FARMING_LEVEL Any 5, !ANY \"PLAYER_HAS_ITEM Current (T)SteelHoe\" \"PLAYER_HAS_ITEM Current (T)GoldHoe\" \"PLAYER_HAS_ITEM Current (T)IridiumHoe\"",
+				  },
+				  "br93.FarmersMarket_Clint_GoldHoe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 120, PLAYER_BASE_FARMING_LEVEL Any 7, !ANY \"PLAYER_HAS_ITEM Current (T)GoldHoe\" \"PLAYER_HAS_ITEM Current (T)IridiumHoe\"",
+				  },
+				  "br93.FarmersMarket_Clint_IridiumHoe":{
+          	"Condition": "PLAYER_HAS_MAIL Any QiChallengeComplete Mailbox, PLAYER_BASE_FARMING_LEVEL Any 9, !ANY \"PLAYER_HAS_ITEM Current (T)IridiumHoe\"",
+				  },
+				  "br93.FarmersMarket_Clint_CopperPickaxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 40, PLAYER_BASE_MINING_LEVEL Any 3, !ANY \"PLAYER_HAS_ITEM Current (T)CopperPickaxe\" \"PLAYER_HAS_ITEM Current (T)SteelPickaxe\" \"PLAYER_HAS_ITEM Current (T)GoldPickaxe\" \"PLAYER_HAS_ITEM Current (T)IridiumPickaxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_SteelPickaxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 80, PLAYER_BASE_MINING_LEVEL Any 5, !ANY \"PLAYER_HAS_ITEM Current (T)SteelPickaxe\" \"PLAYER_HAS_ITEM Current (T)GoldPickaxe\" \"PLAYER_HAS_ITEM Current (T)IridiumPickaxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_GoldPickaxe":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 120, PLAYER_BASE_MINING_LEVEL Any 7, !ANY \"PLAYER_HAS_ITEM Current (T)GoldPickaxe\" \"PLAYER_HAS_ITEM Current (T)IridiumPickaxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_IridiumPickaxe":{
+          	"Condition": "PLAYER_HAS_MAIL Any QiChallengeComplete Mailbox, PLAYER_BASE_MINING_LEVEL Any 9, !ANY \"PLAYER_HAS_ITEM Current (T)IridiumPickaxe\"",
+				  },
+				  "br93.FarmersMarket_Clint_CopperWateringCan":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 40, PLAYER_BASE_FARMING_LEVEL Any 3, !ANY \"PLAYER_HAS_ITEM Current (T)CopperWateringCan\" \"PLAYER_HAS_ITEM Current (T)SteelWateringCan\" \"PLAYER_HAS_ITEM Current (T)GoldWateringCan\" \"PLAYER_HAS_ITEM Current (T)IridiumWateringCan\"",
+				  },
+				  "br93.FarmersMarket_Clint_SteelWateringCan":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 80, PLAYER_BASE_FARMING_LEVEL Any 5, !ANY \"PLAYER_HAS_ITEM Current (T)SteelWateringCan\" \"PLAYER_HAS_ITEM Current (T)GoldWateringCan\" \"PLAYER_HAS_ITEM Current (T)IridiumWateringCan\"",
+				  },
+				  "br93.FarmersMarket_Clint_GoldWateringCan":{
+          	"Condition": "MINE_LOWEST_LEVEL_REACHED 120, PLAYER_BASE_FARMING_LEVEL Any 7, !ANY \"PLAYER_HAS_ITEM Current (T)GoldWateringCan\" \"PLAYER_HAS_ITEM Current (T)IridiumWateringCan\"",
+				  },
+				  "br93.FarmersMarket_Clint_IridiumWateringCan":{
+          	"Condition": "PLAYER_HAS_MAIL Any QiChallengeComplete Mailbox, PLAYER_BASE_FARMING_LEVEL Any 9, !ANY \"PLAYER_HAS_ITEM Current (T)IridiumWateringCan\"",
+				  },
+
+        }
+    }
+  ]
+}

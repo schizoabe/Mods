@@ -1,0 +1,132 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data Acid Rain",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_AcidRain": {
+					"Id": "kath.weathering_AcidRain",
+					"DisplayName": "{{i18n: Weather.AcidRain}}",
+
+					"Forecast": "{{i18n: Weather.AcidRain.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.AcidRain.ForecastIsland}}", "Desert": "{{i18n: Weather.AcidRain.ForecastDesert}}",},
+					
+					"UseNightTiles": true,
+					"IsSnowing": false,
+					"IsRaining": true,
+					"IsLightning": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+										
+					"MusicOverride": "rain",
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 40},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 78},			
+					"TVFrames": 4,		
+
+					"TotemMessage": "{{i18n: Weather.AcidRainTotem}}",
+					"TotemScreenTint": "orangered",
+					"TotemSound": "rainsound",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDAcidRain 3",
+							],
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "MakeItRain1",
+							"Condition": "ANY \"!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2\" \"LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom\" \"LOCATION_NAME Target Desert\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Group": "Rain",
+							"Color": "194, 163, 0",
+							"Opacity": 1,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 100,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "MakeItRain2",
+							"Condition": "ANY \"!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2\"  \"LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom\" \"LOCATION_NAME Target Desert\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": "194, 163, 0",
+							"Opacity": 1,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 100,
+							"Speed": "-8, 32",
+						},
+						{
+							"Id": "MakeItRainLess",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target IslandEast\" \"LOCATION_NAME Target IslandShrine\" \"LOCATION_NAME Target CaptainRoom\" \"LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Group": "Rain",
+							"Color": "194, 163, 0",
+							"Opacity": 1,
+							"Vibrancy": 1,
+							"Scale": 4,
+							"Count": 80,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "LightingDarken",
+							"Condition": "ANY \"!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2\" \"LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom\" \"LOCATION_NAME Target Desert\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "27, 44, 126",
+							"Opacity": 0.13
+						},
+						{
+							"Id": "LightingOrange",
+							"Condition": "ANY \"!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2\" \"LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom\" \"LOCATION_NAME Target Desert\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "255, 163, 16",
+							"Opacity": 0.35
+						},
+						{
+							"Id": "LightingGreen",
+							"Condition": "ANY \"!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2\" \"LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom\" \"LOCATION_NAME Target Desert\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "0, 101, 1",
+							"Opacity": 0.31
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "!LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.47
+						},	
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

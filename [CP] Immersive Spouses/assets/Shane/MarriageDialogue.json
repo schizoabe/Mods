@@ -1,0 +1,29 @@
+{
+	"Changes": [
+	//STANDARD LEAVE/RETURN DIALOGUE
+	{
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/MarriageDialogueShane",
+		"Entries": {
+			"funLeave_Shane": "I'm heading out early. Gotta take over the shop for Marnie.#$e#Have a good day, alright?"
+		},
+		"When": {
+			"DayOfWeek": "Tuesday",
+			"ShaneTuesdaySchedule": true
+		}
+	},
+
+	//SPECIFIC DAYS
+
+		//DOCTOR CHECKUP
+		
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries": {
+				"winter_15": "Jas wants me to go to the Night Market tonight with her today.#$e#I guess it's the least I could do for her.$h#$b#You wanna tag along?"
+			}
+		},
+	]
+}

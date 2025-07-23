@@ -1,0 +1,62 @@
+{
+	"Changes": [
+		{
+			"LogName": "Edit Museum to Add Entrance",
+			"Action": "EditMap",
+			"Target": "Maps/ArchaeologyHouse",
+			"When": {"HasSeenEvent|contains=0": true},
+			"PatchMode": "Replace",
+			"Update": "OnTimeChange",
+			"FromFile": "assets/maps/patches/catmuseumpatch.tmx",
+            "FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+            "ToArea": { "X": 27, "Y": 3, "Width": 1, "Height": 2 }
+		},
+        {
+			"LogName": "Edit Museum to Add Entrance",
+			"Action": "EditMap",
+			"Target": "Maps/ArchaeologyHouse",
+			"When": {"DaysPlayed": "{{Range: 27, 9999}}"},
+			"PatchMode": "Replace",
+			"FromFile": "assets/maps/patches/catmuseumpatch.tmx",
+            "FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+            "ToArea": { "X": 27, "Y": 3, "Width": 1, "Height": 2 }
+		},
+        {
+			"LogName": "Edit Museum to Add Entrance",
+			"Action": "EditMap",
+			"Target": "Maps/ArchaeologyHouse",
+			"When": {"HasSeenEvent|contains=KathMuseum.OpeningRoom": true},
+			"PatchMode": "Replace",
+			"Update": "OnLocationChange",
+			"FromFile": "assets/maps/patches/catmuseumpatch2.tmx",
+            "FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+            "ToArea": { "X": 27, "Y": 3, "Width": 1, "Height": 2 }
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/ArchaeologyHouse",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 27,
+						"Y": 3
+					},
+					"Layer": "Back",
+					"SetProperties": {
+						"mushymato.MMAP_TAS": "KathMuseum_Plant"
+					}
+				},
+                {
+					"Position": {
+						"X": 26,
+						"Y": 3
+					},
+					"Layer": "Back",
+					"SetProperties": {
+						"mushymato.MMAP_TAS": "KathMuseum_Plant2"
+					}
+				}
+			]
+		}
+	]
+}

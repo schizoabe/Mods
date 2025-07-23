@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    {
+      "LogName": "Trick or Treat",
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "Entries": {
+        "1031328/z spring/z summer/z winter/d Mon Tue Wed Thu Fri Sun/w sunny/t 1600 1900": "continue/64 30/farmer 64 16 2 Jas 63 16 0 Vincent 65 16 0 Penny 64 16 0/skippable/changePortrait Jas Spirit/changeSprite Jas Spirit/changePortrait Vincent Spirit/changeSprite Vincent Spirit/changePortrait Penny Spirit/changeSprite Penny Spirit/viewport 64 26/beginSimultaneousCommand/viewport move 0 -1 10000/positionOffset Penny 0 10/move Jas 1 0 0/move Vincent -1 0 0/positionOffset Vincent 0 10/positionOffset Jas 0 10/faceDirection Jas 0/faceDirection Vincent 0/pause 500/endSimultaneousCommand/speak Jas \"Trick or treat!$h\"/pause 500/speak Vincent \"Trick or Treat~$h\"/pause 500/speak Jas \"I'm a witch in training! Robin even helped me make my broom!\"/pause 500/speak Vincent \"I wanted to be a witch but mom put goop in my hair instead.$s\"/pause 500/speak Penny \"I'm just taking them around town to celebrate the season.\"/pause 500/speak Jas \"With candy!\"/pause 500/question fork0 \"Trick or treat!#Trick#Treat\"/pause 500/fork 1031328_Trick/pause 500/positionOffset farmer 0 1/pause 100/move Jas 0 -1 0/faceDirection Jas 3/faceDirection farmer 1/beginSimultaneousCommand/positionOffset farmer 5 0/positionOffset Jas -10 0/endSimultaneousCommand/pause 500/beginSimultaneousCommand/positionOffset farmer -10 0/positionOffset Jas 10 10/endSimultaneousCommand/faceDirection farmer 2/move Jas 0 1 2/positionOffset Jas 5 -5/faceDirection Jas 0/pause 500/positionOffset farmer 0 -1/pause 100/move Vincent 0 -1 0/faceDirection Vincent 1/faceDirection farmer 3/beginSimultaneousCommand/positionOffset farmer -5 0/positionOffset Vincent 10 0/endSimultaneousCommand/pause 500/beginSimultaneousCommand/positionOffset farmer 10 0/positionOffset Vincent -10 10/endSimultaneousCommand/faceDirection farmer 2/move Vincent 0 1 2/positionOffset Vincent -5 -5/faceDirection Vincent 0/pause 500/speak Penny \"What do we say?\"/pause 500/speak Jas \"Thank you!$h\"/speak Vincent \"Thank you!\"/pause 500/speak Penny \"Happy Spirit's Eve, @.$h\"/friendship Penny 10/friendship Jas 10/friendship Vincent 10/pause 500/end",
+        "1031328_Trick": "pause 500/beginSimultaneousCommand/showFrame farmer 94/showFrame farmer 94/showFrame farmer 94/showFrame farmer 94/emote Jas 16/emote Vincent 16/faceDirection Jas 2/positionOffset Vincent 0 20/endSimultaneousCommand/beginSimultaneousCommand/emote Penny 60/emote Vincent 28/faceDirection Jas 3/endSimultaneousCommand/positionOffset Jas -20 10/friendship Penny -10/friendship Jas -10/friendship Vincent -10/pause 500/end"
+      }
+    }
+  ]
+}

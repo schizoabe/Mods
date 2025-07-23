@@ -1,0 +1,62 @@
+{
+"Changes": [
+    
+//PRECONDITIONS:
+// Dating Suitor
+// At 10 hearts with Suitor
+// Have not seen a black proposal event yet (that version will set the StopBlack_{{Suitor}} flag)
+// Have seen the 10 hearts event for that Suitor (Start flag is set)
+// (implied): Must be dating at least one other person
+// (implied): Must not have seen the normal proposal event for this character
+
+//EFFECTS:
+//Normal proposal event for this suitor is marked as seen
+//If YES: Engagement, with wedding 3 days later
+//If NO: Lose 4 hearts with the suitor and end the relationship
+
+//Weather is not needed as a precondition because we select the appropriate black heart suitor based on the current weather
+{
+    "Action": "EditData",
+    "Target": "Data/Events/BusStop",
+    "When": {
+        "VanillaSuitors|contains={{Suitor}}" : true,
+    },
+    "LocalTokens": {
+        "Suitor": "{{BlackHeartSuitor}}",
+        "Rival": "{{Random: {{Kantrip.ReverseProposals/RivalSuitors:for={{BlackHeartSuitor}} }} }}",
+    },
+    "Entries": {
+        
+        "{{ModId}}_Proposal_Black/Dating {{Suitor}}/n {{ModId}}_Start{{Suitor}}/f {{Suitor}} 2500/!n {{ModId}}_StopBlack_{{Suitor}}/t 600 2300/c 1/": "{{BlackHeartMusic}}/-1000 -1000/farmer 12 23 1 {{Suitor}} 27 18 3/switchEvent {{ModId}}_{{Suitor}}_Black_Start",
+        
+        "{{ModId}}_{{Suitor}}_Black_Start": "--skippable/eventSeen {{ModId}}_Proposal_{{Suitor}}/makeInvisible 10 22 26 4/makeInvisible 20 16 7 4/viewport 24 25 clamp true/advancedMove farmer false 11 0 4 500/pause 4000/faceDirection {{Suitor}} 2/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.0 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 200/faceDirection farmer 0/emote farmer 8/pause 800/advancedMove {{Suitor}} false 2 1000 -3 0 2 500/move farmer 0 -2 0/pause 2500/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.1 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 500/faceDirection {{Suitor}} 1/pause 1500/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.2 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 1000/emote farmer 40/pause 1200/faceDirection {{Suitor}} 2/pause 400/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.3 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 500/speed {{Suitor}} 1/advancedMove {{Suitor}} false 0 3 3 500/pause 2500/faceDirection farmer 1/waitForAllStationary/pause 1500/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.4 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 1500/message \"{{i18n:Black_{{Suitor}}.action |Suitor={{Suitor}} |You={{You}} |Your={{Your}}}}\"/pause 500/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.Q}}\"/pause 400/emote farmer 16/pause 200/question fork1 \"{{i18n:proposalResponse}}\"/fork {{ModId}}_{{Suitor}}_Black_No/switchEvent {{ModId}}_{{Suitor}}_Black_Yes",
+        
+        "{{ModId}}_{{Suitor}}_Black_Yes": "emote {{Suitor}} 16/pause 200/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.YES.1}}\"/pause 200/emote {{Suitor}} 32/pause 200/emote farmer 32/pause 1000/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.YES.2}}\"/pause 200/emote farmer 20/pause 400/emote {{Suitor}} 20/pause 1500/action Kantrip.HeartActions_DoEngagement {{Suitor}}/action AddItem 460/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_{{Suitor}}_Black_No": "speed {{Suitor}} 2/emote {{Suitor}} 16/pause 500/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.NO.1 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 200/faceDirection {{Suitor}} 2/emote {{Suitor}} 28/pause 2500/advancedMove {{Suitor}} false 0 2 1 0 1 3500/pause 100/faceDirection farmer 2/pause 2500/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.NO.2 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 1500/advancedMove {{Suitor}} false 12 0/pause 500/faceDirection farmer 1/pause 1500/action Kantrip.HeartActions_DoBreakup {{Suitor}}/friendship {{Suitor}} -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+
+//If this isn't a vanilla suitor, the event is identical but the prereqs are not. Can't easily check for seeing the 10h event of a modded NPC
+//Non-modded black events will also have default i18n lines (e.g. Black_Default.1), so that will be different, too
+{
+    "Action": "EditData",
+    "Target": "Data/Events/BusStop",
+    "When": {
+        "VanillaSuitors|contains={{Suitor}}" : false,
+    },
+    "LocalTokens": {
+        "Suitor": "{{BlackHeartSuitor}}",
+        "Rival": "{{Random: {{Kantrip.ReverseProposals/RivalSuitors:for={{BlackHeartSuitor}} }} }}",
+    },
+    "Entries": {
+        "{{ModId}}_Proposal_Black/Dating {{Suitor}}/n {{ModId}}_Start{{Suitor}}/f {{Suitor}} 2500/!n {{ModId}}_StopBlack_{{Suitor}}/t 600 2300/c 1/": "{{BlackHeartMusic}}/-1000 -1000/farmer 12 23 1 {{Suitor}} 27 18 3/--skippable/eventSeen {{ModId}}_Proposal_{{Suitor}}/makeInvisible 11 25 27 1/viewport 24 25 clamp true/advancedMove farmer false 11 0 4 500/pause 4000/faceDirection {{Suitor}} 2/speak {{Suitor}} \"{{i18n:Black_Default.0 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 200/faceDirection farmer 0/emote farmer 8/pause 800/advancedMove {{Suitor}} false 2 1000 -3 0 2 500/move farmer 0 -2 0/pause 2500/speak {{Suitor}} \"{{i18n:Black_Default.1 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 500/faceDirection {{Suitor}} 1/pause 1500/speak {{Suitor}} \"{{i18n:Black_Default.2 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 1000/emote farmer 40/pause 1200/faceDirection {{Suitor}} 2/pause 400/speak {{Suitor}} \"{{i18n:Black_Default.3 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 500/speed {{Suitor}} 1/advancedMove {{Suitor}} false 0 3 3 500/pause 2500/faceDirection farmer 1/waitForAllStationary/pause 1500/speak {{Suitor}} \"{{i18n:Black_Default.4 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 1500/message \"{{i18n:Black_Default.action |Suitor={{Suitor}} |You={{You}} |Your={{Your}}}}\"/pause 500/speak {{Suitor}} \"{{i18n:Black_Default.Q}}\"/pause 400/emote farmer 16/pause 200/question fork1 \"{{i18n:proposalResponse}}\"/fork {{ModId}}_{{Suitor}}_Black_No/switchEvent {{ModId}}_{{Suitor}}_Black_Yes",
+        
+            "{{ModId}}_{{Suitor}}_Black_Yes": "emote {{Suitor}} 16/pause 200/speak {{Suitor}} \"{{i18n:Black_Default.YES.1}}\"/pause 200/emote {{Suitor}} 32/pause 200/emote farmer 32/pause 1000/speak {{Suitor}} \"{{i18n:Black_Default.YES.2}}\"/pause 200/emote farmer 20/pause 400/emote {{Suitor}} 20/pause 1500/action Kantrip.HeartActions_DoEngagement {{Suitor}}/action AddItem 460/globalFade/viewport -1000 -1000/stopMusic/end/",
+            
+            "{{ModId}}_{{Suitor}}_Black_No": "speed {{Suitor}} 2/emote {{Suitor}} 16/pause 500/speak {{Suitor}} \"{{i18n:Black_Default.NO.1 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 200/faceDirection {{Suitor}} 2/emote {{Suitor}} 28/pause 2500/advancedMove {{Suitor}} false 0 2 1 0 1 3500/pause 100/faceDirection farmer 2/pause 2500/speak {{Suitor}} \"{{i18n:Black_Default.NO.2 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 1500/advancedMove {{Suitor}} false 12 0/pause 500/faceDirection farmer 1/pause 1500/action Kantrip.HeartActions_DoBreakup {{Suitor}}/friendship {{Suitor}} -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+    
+]
+}

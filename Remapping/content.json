@@ -1,0 +1,99 @@
+{
+  "Format": "2.4.0",
+  "Changes": [
+		//INCLUIR ARQUIVOS NO JOGO
+		{
+			"LogName": "RMP Arts Mapa",
+			"Action": "Include",
+			"FromFile": "assets/MapArts.json"
+		},
+		{
+			"LogName": "RMP Map Location",
+			"Action": "Include",
+			"FromFile": "assets/MapLocation.json"
+		},/*
+
+		//NOVOS MAPAS
+		{
+			"LogName": "RMP CapeStardew World",
+			"Action": "Include",
+			"FromFile": "assets/NewMaps/RMPCapeStardew.json"
+		},*/
+
+		//MENSAGENS
+		{
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+				"Entries": {
+					"RMP.aspen": "{{i18n: RMP.aspen}}",
+					"RMP.aspen1": "{{i18n: RMP.aspen1}}",
+					"RMP.alecto": "{{i18n: RMP.alecto}}",
+					"RMP.ayeish": "{{i18n: RMP.ayeish}}",
+					"RMP.backwood.hill": "{{i18n: RMP.backwood.hill}}",
+					"RMP.beach.additional": "{{i18n: RMP.beach.additional}}",
+					"RMP.cape.stardew": "{{i18n: RMP.cape.stardew}}",
+					"RMP.cape.stardew1": "{{i18n: RMP.cape.stardew1}}",
+					"RMP.cape.stardew2": "{{i18n: RMP.cape.stardew2}}",
+					"RMP.cape.stardew3": "{{i18n: RMP.cape.stardew3}}",
+					"RMP.cape.stardew4": "{{i18n: RMP.cape.stardew4}}",
+					"RMP.cape.stardew5": "{{i18n: RMP.cape.stardew5}}",
+					"RMP.demon.slayer": "{{i18n: RMP.demon.slayer}}",
+					"RMP.demon.slayer1": "{{i18n: RMP.demon.slayer1}}",
+					"RMP.demon.slayer2": "{{i18n: RMP.demon.slayer2}}",
+					"RMP.demon.slayer3": "{{i18n: RMP.demon.slayer3}}",
+					"RMP.demon.slayer4": "{{i18n: RMP.demon.slayer4}}",
+					"RMP.demon.slayer5": "{{i18n: RMP.demon.slayer5}}",
+					"RMP.demon.slayer6": "{{i18n: RMP.demon.slayer6}}",
+					"RMP.demon.slayer7": "{{i18n: RMP.demon.slayer7}}",
+					"RMP.demon.slayer8": "{{i18n: RMP.demon.slayer8}}",
+					"RMP.fiasa": "{{i18n: RMP.fiasa}}",
+					"RMP.fishing.pond": "{{i18n: RMP.fishing.pond}}",
+					"RMP.fishing.pond1": "{{i18n: RMP.fishing.pond1}}",
+					"RMP.fishmonger": "{{i18n: RMP.fishmonger}}",
+					"RMP.fishmonger1": "{{i18n: RMP.fishmonger1}}",
+					"RMP.garden.village": "{{i18n: RMP.garden.village}}",
+					"RMP.haley.bakery": "{{i18n: RMP.haley.bakery}}",
+					"RMP.isla": "{{i18n: RMP.isla}}",
+					"RMP.isla1": "{{i18n: RMP.isla1}}",
+					"RMP.jane": "{{i18n: RMP.jane}}",
+					"RMP.juliet": "{{i18n: RMP.juliet}}",
+					"RMP.juna": "{{i18n: RMP.juna}}",
+					"RMP.kid.treehouse": "{{i18n: RMP.kid.treehouse}}",
+					"RMP.law.order": "{{i18n: RMP.law.order}}",
+					"RMP.law.order1": "{{i18n: RMP.law.order1}}",
+					"RMP.louis.garage": "{{i18n: RMP.louis.garage}}",
+					"RMP.lunna.house": "{{i18n: RMP.lunna.house}}",
+					"RMP.lunna.lake": "{{i18n: RMP.lunna.lake}}",
+					"RMP.mineral.town": "{{i18n: RMP.mineral.town}}",
+					"RMP.mineral.town1": "{{i18n: RMP.mineral.town1}}",
+					"RMP.my.submarine": "{{i18n: RMP.my.submarine}}",
+					"RMP.northwest.coast": "{{i18n: RMP.northwest.coast}}",
+					"RMP.ornithologist.guild": "{{i18n: RMP.ornithologist.guild}}",
+					"RMP.ranger.taro": "{{i18n: RMP.ranger.taro}}",
+					"RMP.ranger.taro1": "{{i18n: RMP.ranger.taro}}",
+					"RMP.ranger.taro2": "{{i18n: RMP.ranger.taro}}",
+					"RMP.red.school.old": "{{i18n: RMP.red.school.old}}",
+					"RMP.red.school.new": "{{i18n: RMP.red.school.new}}",
+					"RMP.RSV": "{{i18n: RMP.RSV}}",
+					"RMP.stray.catfe": "{{i18n: RMP.stray.catfe}}",
+					"RMP.stray.catfe1": "{{i18n: RMP.stray.catfe1}}",
+					"RMP.sunberry": "{{i18n: RMP.sunberry}}",
+					"RMP.sunberry1": "{{i18n: RMP.sunberry1}}",
+					"RMP.sunberry2": "{{i18n: RMP.sunberry2}}",
+					"RMP.sydney": "{{i18n: RMP.sydney}}",
+					"RMP.wilford": "{{i18n: RMP.wilford}}",
+					"RMP.wilford1": "{{i18n: RMP.wilford1}}",
+					"RMP.walk.desert": "{{i18n: RMP.walk.desert}}",
+					"RMP.walk.desert1": "{{i18n: RMP.walk.desert1}}",
+					"RMP.walk.desert2": "{{i18n: RMP.walk.desert2}}",
+					"RMP.walk.desert3": "{{i18n: RMP.walk.desert3}}",
+					"RMP.walk.desert4": "{{i18n: RMP.walk.desert4}}",
+
+					
+					"RMP.cape.stardew6": "{{i18n: RMP.cape.stardew6}}",
+					"RMP.cape.stardew7": "{{i18n: RMP.cape.stardew7}}",
+					"RMP.cape.stardew8": "{{i18n: RMP.cape.stardew8}}",
+			}
+		}
+	]
+}

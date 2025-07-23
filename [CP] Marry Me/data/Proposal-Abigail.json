@@ -1,0 +1,24 @@
+{
+"Changes": [
+
+//ABIGAIL -- proposes in the town center
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Forest",
+    "Entries": {
+        "{{ModId}}_Proposal_Abigail/Dating Abigail/f Abigail 2500/t 1000 1800/w sunny/c 1/LocalMail {{ModId}}_Letter_Abigail": "{{DayAmbient}}/-1000 -1000/farmer 27 12 1 Abigail 40 11 0/--skippable/mailReceived {{ModId}}_StopBlack_Abigail/makeInvisible 34 10 11 5/advancedMove farmer false 10 0 1 500/viewport 40 11 clamp true/pause 2500/faceDirection Abigail 3/pause 200/speak Abigail \"{{i18n:White_Abigail.0}}\"/waitForAllStationary/pause 200/speak Abigail \"{{i18n:White_Abigail.1}}\"/pause 200/emote farmer 8/pause 800/advancedMove farmer false 2 0 0 -1 1 500/pause 2000/speak Abigail \"{{i18n:White_Abigail.2}}\"/pause 100/faceDirection Abigail 3/pause 200/speak Abigail \"{{i18n:White_Abigail.3}}\"/pause 800/faceDirection Abigail 0/pause 200/faceDirection farmer 0/pause 800/speak Abigail \"{{i18n:White_Abigail.4}}\"/pause 400/emote farmer 32/pause 400/speak Abigail \"{{i18n:White_Abigail.5}}\"/pause 400/faceDirection Abigail 3/pause 200/faceDirection farmer 1/playMusic musicboxsong/pause 2000/speak Abigail \"{{i18n:White_Abigail.6}}\"/pause 500/emote Abigail 40/pause 200/speak Abigail \"{{i18n:White_Abigail.7}}\"/pause 200/animate Abigail true true 100 39/pause 200/message \"{{i18n:White_Abigail.8 |Your={{Your}}}}\"/pause 100/jump farmer/pause 400/speak Abigail \"{{i18n:White_Abigail.9}}\"/pause 800/message \"{{i18n:White_Abigail.10 |You={{You}}}}\"/pause 200/speak Abigail \"{{i18n:White_Abigail.11}}\"/pause 400/emote farmer 16/pause 200/question fork1  \"{{i18n:proposalResponse}}\"/fork {{ModId}}_Abigail_No/switchEvent {{ModId}}_Abigail_Yes",
+        
+        "{{ModId}}_Abigail_Yes": "stopAnimation Abigail 12/emote Abigail 20/pause 200/message \"{{i18n:White_Abigail.YES.0 |Your={{Your}}}}\"/pause 200/speak Abigail \"{{i18n:White_Abigail.YES.1}}\"/pause 200/emote farmer 32/pause 200/{{Farmer_Kiss}}/{{Abigail_Kiss}}/emote Abigail 20/pause 200/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Abigail 12/pause 1000/speak Abigail \"{{i18n:White_Abigail.YES.2}}\"/pause 200/faceDirection Abigail 0/pause 800/faceDirection farmer 0/pause 1500/playSound crafting/globalFade/viewport -1000 -1000/playSound crafting/pause 400/playSound crafting/pause 200/playSound crafting/pause 1500/speak Abigail \"{{i18n:White_Abigail.YES.3}}\"/action Kantrip.HeartActions_DoEngagement Abigail/action AddItem 460/pause 1000/stopMusic/end/",
+        
+        "{{ModId}}_Abigail_No": "stopAnimation Abigail 12/speed Abigail 2/jump Abigail/emote Abigail 16/pause 800/emote Abigail 28/pause 2000/speak Abigail \"{{i18n:White_Abigail.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_Abigail_notReady(break)switchEvent {{ModId}}_Abigail_noMarriage(break)switchEvent {{ModId}}_Abigail_breakup/",
+        
+        "{{ModId}}_Abigail_notReady": "pause 400/emote Abigail 60/pause 800/speak Abigail \"{{i18n:White_Abigail.NO1.0}}\"/pause 500/speak Abigail \"{{i18n:White_Abigail.NO1.1 |Your={{Your}}}}\"/pause 200/emote farmer 32/pause 400/emote Abigail 32/pause 200/speak Abigail \"{{i18n:White_Abigail.NO1.2}}\"/pause 200/{{Farmer_Kiss}}/{{Abigail_Kiss}}/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end",
+        
+        "{{ModId}}_Abigail_noMarriage": "pause 200/speak Abigail \"{{i18n:White_Abigail.NO2.0}}\"/pause 200/faceDirection Abigail 1/emote Abigail 40/pause 2000/faceDirection Abigail 3/pause 100/speak Abigail \"{{i18n:White_Abigail.NO2.1}}\"/pause 200/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_Abigail_breakup": "pause 400/playSound dwop/positionOffset Abigail 2 0/pause 100/positionOffset Abigail 2 0/pause 100/positionOffset Abigail 2 0/pause 100/playSound dwop/positionOffset Abigail 2 0/pause 100/positionOffset Abigail 2 0/pause 100/positionOffset Abigail 2 0/pause 1500/faceDirection Abigail 2/shake Abigail 500/pause 1000/emote Abigail 28/pause 2500/faceDirection Abigail 3/speak Abigail \"{{i18n:White_Abigail.NO3.0}}\"/advancedMove Abigail false 0 2 2 3500/pause 100/faceDirection farmer 2/pause 3500/speak Abigail \"{{i18n:White_Abigail.NO3.1}}\"/pause 1000/shake Abigail 500/pause 1500/advancedMove Abigail false 15 0/pause 1500/faceDirection farmer 1/pause 1500/action Kantrip.HeartActions_DoBreakup Abigail/friendship Abigail -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+
+]
+}

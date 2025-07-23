@@ -1,0 +1,320 @@
+{
+    "Changes": [
+        //Standard Marnie
+        {
+            "LogName": "MRSSI_Marnie_TownFair",
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["br93.FarmersMarket_Marnie_TownFair", "Items"],
+            "When": {"Marnie": "Standard"},
+            "Fields":{
+                "br93.FarmersMarket_Marnie_174":{//large egg
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_174 0.8, ANY \"BUILDINGS_CONSTRUCTED All Coop\" \"BUILDINGS_CONSTRUCTED All \\\"Big Coop\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Coop\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumCoop\", PLAYER_FRIENDSHIP_POINTS Any Marnie 500"
+                },
+                "br93.FarmersMarket_Marnie_176":{//egg
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_176 0.8"
+                },
+                "br93.FarmersMarket_Marnie_180":{//egg
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_180 0.8"
+                },
+                "br93.FarmersMarket_Marnie_182":{//large egg
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_182 0.8, ANY \"BUILDINGS_CONSTRUCTED All Coop\" \"BUILDINGS_CONSTRUCTED All \\\"Big Coop\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Coop\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumCoop\", PLAYER_FRIENDSHIP_POINTS Any Marnie 500"
+                },
+                "br93.FarmersMarket_Marnie_184":{//milk
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_184 0.8"
+                },
+                "br93.FarmersMarket_Marnie_186":{//large milk
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_186 0.8, ANY \"BUILDINGS_CONSTRUCTED All Barn\" \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 500"
+                },
+                "br93.FarmersMarket_Marnie_306":{//mayonnaise
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_306 0.8"
+                },
+                "br93.FarmersMarket_Marnie_306Gold":{
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_306Gold 0.6, ANY \"BUILDINGS_CONSTRUCTED All Coop\" \"BUILDINGS_CONSTRUCTED All \\\"Big Coop\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Coop\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumCoop\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1500"
+                },
+                "br93.FarmersMarket_Marnie_307":{//duck mayonnaise
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_307 0.8, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Coop\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Coop\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumCoop\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1000"
+                },
+                "br93.FarmersMarket_Marnie_307Gold":{
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_307Gold 0.6, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Coop\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Coop\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumCoop\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1500"
+                },
+                "br93.FarmersMarket_Marnie_424":{//cheese
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_424 0.8"
+                },
+                "br93.FarmersMarket_Marnie_424Gold":{
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_424Gold 0.6, ANY \"BUILDINGS_CONSTRUCTED All Barn\" \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1500"
+                },
+                "br93.FarmersMarket_Marnie_424Iridium":{
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_424Iridium 0.6, ANY \"BUILDINGS_CONSTRUCTED All Barn\" \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 2000"
+                },
+                "br93.FarmersMarket_Marnie_426":{//goat cheese
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_426 0.8, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1000"
+                },
+                "br93.FarmersMarket_Marnie_426Gold":{
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_426Gold 0.6, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1500"
+                },
+                "br93.FarmersMarket_Marnie_428":{//cloth
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_428 0.8, PLAYER_FRIENDSHIP_POINTS Any Marnie 500"
+                },
+                "br93.FarmersMarket_Marnie_436":{//goat milk
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_436 0.8, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 500"
+                },
+                "br93.FarmersMarket_Marnie_438":{//large goat milk
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_438 0.8, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1000"
+                },
+                "br93.FarmersMarket_Marnie_440":{//wool
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [5, 6, 7, 8]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_440 0.8"
+                },
+            }
+         },
+        //Hardmode Marnie
+        {
+            "LogName": "MRSSI_Marnie_TownFair",
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["br93.FarmersMarket_Marnie_TownFair", "Items"],
+            "When": {"Marnie": "Hardmode"},
+            "Fields":{
+                "br93.FarmersMarket_Marnie_174":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_174 0.5, ANY \"BUILDINGS_CONSTRUCTED All Coop\" \"BUILDINGS_CONSTRUCTED All \\\"Big Coop\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Coop\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumCoop\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1000"
+                },
+                "br93.FarmersMarket_Marnie_176":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_176 0.5"
+                },
+                "br93.FarmersMarket_Marnie_180":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_180 0.5"
+                },
+                "br93.FarmersMarket_Marnie_182":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_182 0.5, ANY \"BUILDINGS_CONSTRUCTED All Coop\" \"BUILDINGS_CONSTRUCTED All \\\"Big Coop\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Coop\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumCoop\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1000"
+                },
+                "br93.FarmersMarket_Marnie_184":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_184 0.5"
+                },
+                "br93.FarmersMarket_Marnie_186":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_186 0.5, ANY \"BUILDINGS_CONSTRUCTED All Barn\" \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1000"
+                },
+                "br93.FarmersMarket_Marnie_306":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_306 0.5"
+                },
+                "br93.FarmersMarket_Marnie_306Gold":{
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_306Gold 0.3, ANY \"BUILDINGS_CONSTRUCTED All Coop\" \"BUILDINGS_CONSTRUCTED All \\\"Big Coop\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Coop\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumCoop\", PLAYER_FRIENDSHIP_POINTS Any Marnie 2000"
+                },
+                "br93.FarmersMarket_Marnie_307":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_307 0.5, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Coop\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Coop\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumCoop\" PLAYER_FRIENDSHIP_POINTS Any Marnie 1500"
+                },
+                "br93.FarmersMarket_Marnie_307Gold":{
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_307Gold 0.3, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Coop\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Coop\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumCoop\", PLAYER_FRIENDSHIP_POINTS Any Marnie 2000"
+                },
+                "br93.FarmersMarket_Marnie_424":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_424 0.5"
+                },
+                "br93.FarmersMarket_Marnie_424Gold":{
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_424Gold 0.3, ANY \"BUILDINGS_CONSTRUCTED All Barn\" \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 2000"
+                },
+                "br93.FarmersMarket_Marnie_424Iridium":{
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_424Iridium 0.3, ANY \"BUILDINGS_CONSTRUCTED All Barn\" \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 2500"
+                },
+                "br93.FarmersMarket_Marnie_426":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_426 0.5, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1500"
+                },
+                "br93.FarmersMarket_Marnie_426Gold":{
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_426Gold 0.3, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 2000"
+                },
+                "br93.FarmersMarket_Marnie_428":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_428 0.5, PLAYER_FRIENDSHIP_POINTS Any Marnie 1000"
+                },
+                "br93.FarmersMarket_Marnie_436":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_436 0.5, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1000"
+                },
+                "br93.FarmersMarket_Marnie_438":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_438 0.5, ANY \"BUILDINGS_CONSTRUCTED All \\\"Big Barn\\\"\" \"BUILDINGS_CONSTRUCTED All \\\"Deluxe Barn\\\"\" \"BUILDINGS_CONSTRUCTED All FlashShifter.StardewValleyExpandedCP_PremiumBarn\", PLAYER_FRIENDSHIP_POINTS Any Marnie 1500"
+                },
+                "br93.FarmersMarket_Marnie_440":{
+                    "AvailableStock": 4,
+                    "AvailableStockModifiers":[
+                        {
+                            "Modification": "Set",
+                            "RandomAmount": [1, 2, 3, 4]
+                                                        }
+                    ],
+                    "Condition": "SYNCED_RANDOM year br93.FarmersMarket_Marnie_440 0.5"
+                },
+            }
+         }
+    ]
+}

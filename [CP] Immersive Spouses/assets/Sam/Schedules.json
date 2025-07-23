@@ -1,0 +1,83 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				"marriage_Mon": "730 JojaMart 17 5 2 sam_workmarriage \"Strings\\schedules\\Sam:marriage_{{Random:w, w2, w3, w4, w5, w6, w7}}\"/1500 SamHouse 8 5 3 \"Strings\\schedules\\Sam:marriage_{{Random:worka, worka2}}\"/1900 SamHouse 10 23 1 \"Strings\\schedules\\Sam:marriage_{{Random:vincent, vincent2, vincent3, vincent4, vincent5}}\"/2000 BusStop 9 23 3",
+				"marriage_Wed": "730 JojaMart 17 5 2 sam_workmarriage \"Strings\\schedules\\Sam:marriage_{{Random:w, w2, w3, w4, w5, w6, w7}}\"/1500 Town 83 101 3/1620 Town 14 90 1 \"Strings\\schedules\\Sam:marriage_wh\"/1740 SamHouse 5 5 0 \"Strings\\schedules\\Sam:marriage_wh2\"/1900 BusStop 9 23 3",
+				"marriage_Fri": "800 SamHouse 8 5 3 \"Strings\\schedules\\Sam:marriage_{{Random:Fri.000, Mon1, Mon2, Mon3}}\"/1100 Town 43 79 2 sam_skateboarding/1500 Saloon 36 21 3 sam_pool \"Strings\\schedules\\Sam:marriage_Fri.001\"/2000 BusStop 9 23 3",
+				"marriage_Sat": "700 Town 25 98 2 \"Strings\\schedules\\Sam:marriage_{{Random:SatA, SatA2, SatA3, SatA4, SatA5, SatA6, SatA7, SatA8}}\"/1100 Town 18 94 3 sam_gameboymarriage \"Strings\\schedules\\Sam:marriage_{{Random:gm, gm2, gm3, gm4, gm5}}\"/1230 SamHouse 17 15 2 sam_guitarmarriage \"Strings\\schedules\\Sam:marriage_{{Random:guitar, guitar2, guitar3, guitar4, guitar5, guitar6, guitar7}}\"/1500 SamHouse 19 13 3 \"Strings\\schedules\\Sam:marriage_{{Random:guitara, guitara2, guitara3}}\"/1800 Town 12 94 3 \"Strings\\schedules\\Sam:marriage_{{Random:Sat, Sat2, Sat3, Sat4, Sat5}}\"/1930 BusStop 9 23 3"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				"marriage_Mon": "730 SamHouse 8 5 3 \"Strings\\schedules\\Sam:marriage_{{Random:Mon.000, Mon1, Mon2, Mon3}}\"/1100 SamHouse 3 13 2 \"Strings\\schedules\\Sam:marriage_{{Random:Mon.001, b, b4, b5, b6, b7, b8a, b8b}}\"/1400 Town 10 68 2 \"Strings\\schedules\\Sam:marriage_{{Random:fall, fall2, fall3a, fall3b, fall4}}\"/1700 Town 11 94 2 \"Strings\\schedules\\Sam:marriage_{{Random:fallb, fallb2, fallb3, fallb4, fallb5a, fallb5b}}\"/1900 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Fall"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				"marriage_Mon": "800 SamHouse 3 13 2 \"Strings\\schedules\\Sam:marriage_{{Random:b, b2, b3, b4, b5}}\"/1340 Beach 46 24 2 \"Strings\\schedules\\Sam:marriage_{{Random:beach, beach2, beach3, beach4, beach5, beach6}}\"/1900 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Summer"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				"marriage_Fri": "800 SamHouse 8 5 3 \"Strings\\schedules\\Sam:marriage_{{Random:Fri.000, Mon1, Mon2, Mon3}}\"/1320 Saloon 20 19 3/1500 Saloon 36 21 3 sam_pool \"Strings\\schedules\\Sam:marriage_Fri.001\"/2000 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter"
+			}
+		},
+
+		//Schedule Mon/Wed after seeing 14 heart event (NOT TESTED AND INCOMPLETE)
+//		{
+//			"Action": "EditData",
+//			"Target": "Characters/schedules/Sam",
+//			"Entries": {
+//				"marriage_Mon": "800 SamHouse 8 5 3 \"Strings\\schedules\\Sam:marriage_Mon.000\"/1100 SamHouse 17 15 2 sam_guitarmarriage/1600 SamHouse 3 13 2 \"Strings\\schedules\\Sam:marriage_Mon.001\"/1800 SamHouse 10 21 2 \"Strings\\schedules\\Sam:marriage_{{Random:vincent, vincent2, vincent3, vincent4, vincent5}}\"/2000 BusStop 9 23 3",
+//				"marriage_Wed": "800 SamHouse 17 15 2 sam_guitarmarriage/1500 Town 83 101 3/1620 Town 14 90 1 \"Strings\\schedules\\Sam:marriage_wh\"/1730 SamHouse 3 13 2 \"Strings\\schedules\\Sam:marriage_wh2\"/1900 BusStop 9 23 3"
+//			},
+//			"When": {
+//				"HasSeenEvent: 3918603": true
+//			}
+//		},
+
+		// DOCTORS CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				"marriage_Thu": "1000 Hospital 14 15 3 sam_gameboymarriage \"Strings\\schedules\\Sam:marriage_doctormarriage\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Sam:fall_11.001\"/1600 Town 71 99 2 sam_gameboymarriage \"Strings\\schedules\\Sam:marriage_doctorafter\"/2000 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Fall",
+				"Day": "11"
+			}
+		},
+		
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sam",
+			"Entries": {
+				"marriage_Wed": "730 SamHouse 8 5 3 \"Strings\\schedules\\Sam:marriage_nmpre\"/1100 SamHouse 17 15 2 sam_guitarmarriage \"Strings\\schedules\\Sam:marriage_nmpre2\"/1700 Beach 11 34 3 \"Strings\\schedules\\Sam:marriage_nm\"/2300 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "17"
+			}
+		},
+	]
+}

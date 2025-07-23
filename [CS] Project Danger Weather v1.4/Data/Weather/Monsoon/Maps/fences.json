@@ -1,0 +1,153 @@
+{
+	"Changes": [
+	//Warp Stopper 
+	{
+		"Action": "EditData",
+		"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+		"When": {"HasMod": "spacechase0.SpaceCore"},
+		"Entries": {
+			"261": {
+				"UseForTriggerAction": true,
+				"ConsumeForTriggerAction": false
+			},
+			"689": {
+				"UseForTriggerAction": true,
+				"ConsumeForTriggerAction": false
+			},
+			"690": {
+				"UseForTriggerAction": true,
+				"ConsumeForTriggerAction": false
+			}
+		}
+	},	
+	{
+		"Action": "EditData",
+		"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+		"When": {"HasMod": "spacechase0.SpaceCore, Rafseazz.RSVCP"},
+		"Entries": {
+			"Rafseazz.RSVCP_Warp_Totem__Ridgeside": {
+				"UseForTriggerAction": true,
+				"ConsumeForTriggerAction": false
+			}
+		}
+	},		
+	{
+		"Action": "EditData",
+		"Target": "Data/TriggerActions",
+		"When": {"HasMod": "spacechase0.SpaceCore"},
+		"Entries": {	
+				  	"PreventWarpTotem261": {
+						"Id": "PreventWarpTotem261",
+						"Trigger": "spacechase0.SpaceCore_OnItemUsed",
+						"Condition": "ITEM_ID Input 261",
+						"MarkActionApplied": false,
+						"Actions": [
+							"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: UnableTravel}}\" (O)261"
+						]
+					},	
+					"PreventWarpTotem689": {
+						"Id": "PreventWarpTotem689",
+						"Trigger": "spacechase0.SpaceCore_OnItemUsed",
+						"Condition": "ITEM_ID Input 689",
+						"MarkActionApplied": false,
+						"Actions": [
+							"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: UnableTravel}}\" (O)689"
+						]
+					},
+					"PreventWarpTotem690": {
+						"Id": "PreventWarpTotem690",
+						"Trigger": "spacechase0.SpaceCore_OnItemUsed",
+						"Condition": "ITEM_ID Input 690",
+						"MarkActionApplied": false,
+						"Actions": [
+							"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: UnableTravel}}\" (O)690"
+						]
+					}			
+		}
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/TriggerActions",
+		"When": {"HasMod": "spacechase0.SpaceCore, Rafseazz.RSVCP"},
+		"Entries": {	
+				  	"PreventWarpTotemRSV": {
+						"Id": "PreventWarpTotemRSV",
+						"Trigger": "spacechase0.SpaceCore_OnItemUsed",
+						"Condition": "ITEM_ID Input Rafseazz.RSVCP_Warp_Totem__Ridgeside",
+						"MarkActionApplied": false,
+						"Actions": [
+							"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: UnableTravel}}\" (O)Rafseazz.RSVCP_Warp_Totem__Ridgeside"
+						]
+					}			
+		}
+	},	
+	
+	//Town
+        {
+      	    "LogName": "Add Town to Mountain",
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+			"FromFile": "assets/Maps/Vanilla/monsoon/fence/{{TargetWithoutPath}}_1.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 5, "Height": 2 },
+			"ToArea": { "X": 79, "Y": 2, "Width": 5, "Height": 2 },
+			"Priority": "Late + 5"
+		},
+		{
+			"LogName": "Add Town to Forest - Upper Fence",
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"FromFile": "assets/Maps/Vanilla/monsoon/fence/{{TargetWithoutPath}}_2.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 4 },
+			"ToArea": { "X": 1, "Y": 53, "Width": 1, "Height": 4 },
+			"Priority": "Late + 5"
+		},
+		{
+			"LogName": "Add Town to Forest - Lower Fence",
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"FromFile": "assets/Maps/Vanilla/monsoon/fence/{{TargetWithoutPath}}_3.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 5 },
+			"ToArea": { "X": 1, "Y": 89, "Width": 1, "Height": 5 },
+			"Priority": "Late + 5"
+		},		
+		{
+			"LogName": "Add Town to Beach Fence",
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"FromFile": "assets/Maps/Vanilla/monsoon/fence/{{TargetWithoutPath}}_4.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 3, "Height": 2 },
+			"ToArea": { "X": 53, "Y": 100, "Width": 3, "Height": 2 },
+			"Priority": "Late + 5"
+		},
+		{
+			"LogName": "Add Town to Sewer Fence",
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"FromFile": "assets/Maps/Vanilla/monsoon/fence/{{TargetWithoutPath}}_5.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 2 },
+			"ToArea": { "X": 34, "Y": 98, "Width": 2, "Height": 2 },
+			"Priority": "Late + 5"
+		},		
+	//Island
+		{
+			"LogName": "Add Island to Beach Fence",
+			"Action": "EditMap",
+			"Target": "Maps/Island_S",
+			"FromFile": "assets/Maps/Vanilla/monsoon/fence/{{TargetWithoutPath}}_1.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 3, "Height": 2 },
+			"ToArea": { "X": 20, "Y": 35, "Width": 3, "Height": 2 },
+			"Priority": "Late + 5"
+		},
+	//Railroad
+		{
+			"LogName": "Add Island to Beach Fence",
+			"Action": "EditMap",
+			"Target": "Maps/Railroad",
+			"FromFile": "assets/Maps/Vanilla/monsoon/fence/{{TargetWithoutPath}}_1.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 6, "Height": 3 },
+			"ToArea": { "X": 25, "Y": 58, "Width": 6, "Height": 3 },
+			"Priority": "Late + 5"
+		}
+//End
+]
+}

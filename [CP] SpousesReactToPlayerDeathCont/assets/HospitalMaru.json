@@ -1,0 +1,15 @@
+{ // Hospital Death - Maru Spouse
+  "Changes": [
+    {
+      "LogName": "KO Generic - Maru",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "When": {
+        "Spouse": "Maru",
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 12 3 Maru 22 8 2/skippable/pause 1500/showFrame 5/message \"{{i18n:PlayerKilled.doctor.01}}\"/pause 1000/message \"{{i18n:PlayerKilled.doctor.02}}\"/viewport 20 12 true/pause 1000/speak Harvey \"{{i18n:PlayerKilled.doctor.04}}\"/move {{Spouse}} 0 3 2/textAboveHead {{Spouse}} \"{{i18n:Spouse.Enter}}\"/emote farmer 16/move {{Spouse}} -1 0 2/faceDirection farmer 1/move Harvey 1 0 3/move {{Spouse}} 0 1 3/speak {{Spouse}} \"{{i18n:PlayerKilled.Maru.04}}\"/emote farmer 60/pause 500/speak {{Spouse}} \"{{i18n:PlayerKilled.Maru.05}}\"/emote {{Spouse}} 40/pause 1500/emote farmer 28/pause 500/pause 500/speak Harvey \"{{i18n:PlayerKilled.doctor.08}}\"/pause 500/speak Harvey \"{{i18n:PlayerKilled.doctor.09}}\"/pause 500/faceDirection {{Spouse}} 1/textAboveHead {{Spouse}} \"{{i18n:Spouse.Thanks}}\"/move Harvey 0 -4 0/move Harvey -8 0 0 true/faceDirection {{Spouse}} 3/move Harvey 0 -1 0/move Harvey -4 0 0/move Harvey 0 -1 0/playSound doorClose/warp Harvey -100 -100/pause 500/speak {{Spouse}} \"{{i18n:PlayerKilled.{{SpouseName}}.08}}\"/faceDirection farmer 2/pause 500/speak Maru \"{{i18n:PlayerKilled.Maru.09}}\"/pause 1000/emote farmer 28/hospitaldeath/end dialogue {{Spouse}} \"{{i18n:HospitalEnd.{{SpouseName}}.01}}#$c 0.7#{{i18n:HospitalEnd.{{SpouseName}}.02}}\""
+      }
+    }
+  ]
+}

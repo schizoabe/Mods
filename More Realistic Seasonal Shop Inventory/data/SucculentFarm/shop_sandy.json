@@ -1,0 +1,108 @@
+{
+  "Changes": [
+    //Standard Sandy
+    {
+    "Action": "EditData",
+    "Target": "Data/Shops",
+    "TargetField": [ "Sandy", "Items" ],
+    "When": {"Sandy": "Standard"},
+    "Entries": {
+
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON spring, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring 0.8",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_spring",
+      "AvailableStock": 1,
+      "PriceModifiers": [
+        {
+          "Modification": "Multiply",
+          "Amount": 2
+        }
+      ]
+        },
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON summer, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer 0.8",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_summer",
+      "AvailableStock": 1,
+      "PriceModifiers": [
+        {
+          "Modification": "Multiply",
+          "Amount": 2
+        }
+      ]
+        },
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON fall, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall 0.8",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_fall",
+      "AvailableStock": 1,
+      "PriceModifiers": [
+        {
+          "Modification": "Multiply",
+          "Amount": 2
+        }
+      ]
+        }
+      }
+    },
+    //Hardmode Sandy
+    {
+    "Action": "EditData",
+    "Target": "Data/Shops",
+    "TargetField": [ "Sandy", "Items" ],
+    "When": {"Sandy": "Hardmode"},
+    "Entries": {
+
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON spring, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring 0.5",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_spring",
+      "AvailableStock": 1,
+      "PriceModifiers": [
+        {
+          "Modification": "Multiply",
+          "Amount": 2
+        }
+      ]
+        },
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON summer, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer 0.5",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_summer",
+      "AvailableStock": 1,
+      "PriceModifiers": [
+        {
+          "Modification": "Multiply",
+          "Amount": 2
+        }
+      ]
+        },
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON fall, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall 0.5",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_fall",
+      "AvailableStock": 1,
+      "PriceModifiers": [
+        {
+          "Modification": "Multiply",
+          "Amount": 2
+        }
+      ]
+        }
+      }
+    },
+  ]
+}

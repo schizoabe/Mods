@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="21" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="36" nextobjectid="441">
+ <properties>
+  <property name="AllowBeds" value="true"/>
+  <property name="AllowMiniFridges" value="true"/>
+  <property name="AmbientLight" value="255 255 255"/>
+  <property name="AmbientNightLight" value="180 180 0"/>
+  <property name="FloorIDs" value="AtticFloor"/>
+  <property name="IsFarm" value="T"/>
+  <property name="WallIDs" value="AtticWall"/>
+ </properties>
+ <tileset firstgid="1" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior.png" width="512" height="1088"/>
+  <tile id="2046">
+   <animation>
+    <frame tileid="2046" duration="250"/>
+    <frame tileid="2046" duration="250"/>
+    <frame tileid="2046" duration="250"/>
+    <frame tileid="2046" duration="250"/>
+    <frame tileid="2009" duration="250"/>
+    <frame tileid="2009" duration="250"/>
+    <frame tileid="2009" duration="250"/>
+    <frame tileid="2009" duration="250"/>
+   </animation>
+  </tile>
+  <tile id="2047">
+   <animation>
+    <frame tileid="2047" duration="250"/>
+    <frame tileid="2047" duration="250"/>
+    <frame tileid="2047" duration="250"/>
+    <frame tileid="1977" duration="250"/>
+    <frame tileid="1977" duration="250"/>
+    <frame tileid="1977" duration="250"/>
+    <frame tileid="1977" duration="250"/>
+    <frame tileid="2047" duration="250"/>
+   </animation>
+  </tile>
+  <tile id="2075">
+   <properties>
+    <property name="Diggable" value="T"/>
+    <property name="Type" value="Dirt"/>
+   </properties>
+  </tile>
+  <tile id="2076">
+   <properties>
+    <property name="Diggable" value="T"/>
+    <property name="Type" value="Dirt"/>
+   </properties>
+  </tile>
+  <tile id="2078">
+   <properties>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
+  <tile id="2079">
+   <properties>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
+  <tile id="2106">
+   <properties>
+    <property name="Type" value="Wood"/>
+   </properties>
+  </tile>
+  <tile id="2107">
+   <properties>
+    <property name="Diggable" value="T"/>
+    <property name="Type" value="Dirt"/>
+   </properties>
+  </tile>
+  <tile id="2108">
+   <properties>
+    <property name="Diggable" value="T"/>
+    <property name="Type" value="Dirt"/>
+   </properties>
+  </tile>
+  <tile id="2109">
+   <properties>
+    <property name="Type" value="Stone"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="2177" name="walls_and_floors" tilewidth="16" tileheight="16" tilecount="688" columns="16">
+  <image source="walls_and_floors" width="256" height="688"/>
+ </tileset>
+ <tileset firstgid="2865" name="untitled tile sheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
+ </tileset>
+ <layer id="29" name="Back" width="21" height="14">
+  <data encoding="base64" compression="zlib">
+   eJxjYBjaoJGDMCYVTOQgjEkFDzkZGB5x4qZBmFRwEajnEidhmprufEiGW4eTO0kFxLiTVDBU3EkJAAAXcFWu
+  </data>
+ </layer>
+ <layer id="30" name="Back1" width="21" height="14">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILBBQAEmAAB
+  </data>
+ </layer>
+ <objectgroup id="31" name="Back">
+  <object id="439" name="TileData" x="96" y="64" width="144" height="128">
+   <properties>
+    <property name="FloorID" value="AtticFloor"/>
+   </properties>
+  </object>
+  <object id="440" name="TileData" x="96" y="32" width="144" height="16">
+   <properties>
+    <property name="WallID" value="AtticWall"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="28" name="Buildings" width="21" height="14">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAP4AJiZiIwDwlmOhKpznUQmLmQgzAm1cwOFuq7kxgwaubAmZlIpLpmEsxkJAHTCwAATwcMVA==
+  </data>
+ </layer>
+ <layer id="35" name="Buildings1" width="21" height="14">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF6MCbCEwqyCYCj4JRMAogAADiAAZn
+  </data>
+ </layer>
+ <objectgroup id="27" name="Buildings">
+  <object id="435" name="TileData" x="96" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="DLX.PIF_DoorToFarmHouse"/>
+    <property name="FloorID" value="Middle"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="34" name="Front" width="21" height="14">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYKQDJgWMmjlq5qiZuM1cRgQmxczBiAFVBgaE
+  </data>
+ </layer>
+ <layer id="7" name="AlwaysFront" width="21" height="14">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILBBQAEmAAB
+  </data>
+ </layer>
+</map>

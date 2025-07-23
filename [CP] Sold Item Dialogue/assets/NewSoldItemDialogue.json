@@ -1,0 +1,52 @@
+{
+    "Changes": [
+        { //New Sold Item Dialogue
+            "Action": "EditData",
+            "Target": "Data/ExtraDialogue",
+            "Entries": {
+
+            //Pierre's
+                "PurchasedItem_1_QualityLow": "Hey, @. So I stopped by Pierre's the other day and bought {1} {2}. He said you sold it to him. #$b#It’s nice to be able to support both you and Pierre. Plus, I cooked it up for dinner last night, and it was pretty good!",
+                "PurchasedItem_1_QualityHigh": "Hey, @. So I stopped by Pierre's the other day and bought {1} {2}. He said you sold it to him. #$b#I cooked it up for dinner last night... It filled the house with a {3} smell.. It was a hit!$h#$b#Well done! I can’t wait to see what else you sell him!",
+                "PurchasedItem_2_QualityLow": "Hi...you sold {1} {2} to the general store the other day, right? I bought it...#$e#It’s nice to have such fresh options to pick from.",
+                "PurchasedItem_2_QualityHigh": "Hi... did you sell {1} {2} to the general store the other day? I bought it...#$e#It was pretty high-quality stuff. I'm impressed.",
+                "PurchasedItem_3_QualityLow_Rude": "I went shopping last night and picked up {1} {2} on sale for only {3}g.#$e# Can't miss out on a sale.",
+                "PurchasedItem_3_QualityHigh_Rude": "I went shopping last night and picked up {1} {2} on sale for only {3}g.#$e# It was actually pretty {4}. Good job, farmer.",
+                "PurchasedItem_3_NonRude": "I went shopping last night and picked up {1} {2} on sale for only {3}g.#$e# I couldn't pass up that great price. Seems like Pierre really wants to support you and farm! I’ll keep an eye out for more from you!",
+                "PurchasedItem_4": "So I was at the store the other day and Pierre showed me {1} {2} you brought in.#$e#I bought it.$h",
+                "PurchasedItem_5_VegetableOrFruit": "I bought the tastiest {2} from Pierre's shop the other day. #$b#He said that you grew the thing on your own farm. I didn't know you were such a talented farmer!$h#$b#It must be exciting to have your produce in stores, huh? Great job, @!",
+                "PurchasedItem_5_Cooking": "I bought the tastiest {2} from Pierre's shop the other day. #$b#He said you cooked the thing yourself using local ingredients. I didn't know you were such {3} {4} chef!",
+                "PurchasedItem_5_Foraged": "I bought the tastiest {2} from Pierre's shop the other day. He said you found it yourself. I didn't know you were such a talented forager!",
+                "PurchasedItem_Teen": "I picked up {2} at the store last night. My mom wanted something good for dinner.",
+                "PurchasedItem_Abigail_QualityLow": "Hey. We had one of those {2} you sold at the shop for dinner last night... I guess it was starting to go bad and my Dad couldn't bear to throw it out.$h#$b#It was still alright.",
+                "PurchasedItem_Abigail_QualityHigh": "Hey. We had one of those {2} you sold at the shop for dinner last night... I guess it was starting to go bad and my Dad couldn't bear to throw it out.$h#$b#It was still pretty good, though.",
+                "PurchasedItem_Caroline_QualityLow": "Oh, @... This is embarrassing. I threw one of the {2}s you sold us into my compost bin.$s#$b#But on the bright side, the worms are loving it! You can’t beat local for quality!",
+                "PurchasedItem_Caroline_QualityHigh": "Oh, @... This is so embarrassing. I threw one of the {2}s you sold us into my compost bin.$s#$b#But on the bright side, the worms are really loving it! They've never looked happier!",
+                "PurchasedItem_Pierre_QualityLow": "Hey, remember that {2} you sold me the other day? I ended up serving it to the family for a special dinner.#$b#It’s so convenient to have a local source for those kinds of things.$h#$b#Well... back to business, huh?",
+                "PurchasedItem_Pierre_QualityHigh": "Hey, remember that {2} you sold me the other day? I ended up serving it to the family for a special dinner.#$b#My wife loved it! ...And Abby even started going to town on it after I smothered the thing in hoisin sauce. $h#$b#Well... back to business, huh?",
+                "PurchasedItem_2_QualityHigh_Jodi": "Hi... did you sell {1} {2} to the general store the other day? I bought it...#$e#It was pretty high-quality stuff. As soon as I smelled it I was back in Granny's old cottage...",
+                "PurchasedItem_Haley": "Emily tried to serve me {1} {2} for dinner last night... It was alright, I guess.",
+				"PurchasedItem_Elliott": "I saw that Pierre had fresh {2} in the shop the other day! Marvelous. It smelled just perfect... And it was quite firm, too!",
+				"PurchasedItem_Alex": "Hey, so I picked up {1} {2} at the store last night. Grandma made a delicious casserole.$h",
+				"PurchasedItem_Leah": "The other day I bought {1} {2} at Pierre's. It was perfect on a bed of greens with a dash of my homemade vinaigrette.",
+
+            //Willy's
+                "PurchasedItem_1_QualityLow_Willy": "So I stopped by Willy's the other day and bought {1} {2}. He said you caught it yourself! #$b#I cooked it up for dinner last night... it’s nice that we can get local, fresh fish.#$e#Anyways...",
+                "PurchasedItem_1_QualityHigh_Willy": "So I stopped by Willy's the other day and bought {1} {2}. I've never seen one so fresh! #$b#So I cooked it up for dinner last night, and it filled the house with a {3} smell.. It was a hit!$h#$b#He told me you caught it yourself... I'm impressed!#$e# Anyways...",
+                "PurchasedItem_2_QualityLow_Willy": "Hi... did you sell {1} {2} to the fish shop the other day? I bought it...#$e#I usually don’t like that kind of thing, but it was alright.",
+                "PurchasedItem_2_QualityHigh_Willy": "Hi... did you sell {1} {2} to the fish shop the other day? I bought it...#$e#It was pretty high-quality stuff. I'm impressed.",
+                "PurchasedItem_2_QualityHigh_Jodi_Willy": "Hi... did you sell {1} {2} to the fish shop the other day? I bought it...#$e#It was pretty high-quality stuff. Very firm meat.",
+                "PurchasedItem_3_QualityLow_Rude_Willy": "I went shopping last night and picked up {1} {2} on sale for only {3}g.#$e#Oh, it was yours? It was decent.",
+                "PurchasedItem_3_QualityHigh_Rude_Willy": "I went shopping last night and picked up {1} {2} on sale for only {3}g.#$e# It was actually pretty {4}. Keep it up.",
+                "PurchasedItem_3_NonRude_Willy": "I went shopping last night and picked up {1} {2} on sale for only {3}g.#$e# I couldn't pass up that great price. And I knew I was supporting you, too, so it was extra good!",
+                "PurchasedItem_4_Willy": "So I was at Willy's other day and he showed me {1} {2} you brought in.#$e#I cooked it up for dinner with some lemon and a side of rice pilaf. Pretty good!$h",
+                "PurchasedItem_Pierre_QualityLow_Willy": "Ahoy... you know that {2} you sold me the other day? Well, I sizzled it up in me cabin last night...#$b#Kinda nice not to have to catch every fish I want to eat meself…$s",
+                "PurchasedItem_Pierre_QualityHigh_Willy": "Ahoy! Remember that {2} you brought in the other day? Well, I sizzled it up in me cabin last night...#$b#T'was the finest fish I've had since I was a wee lad!$h"
+            },
+            "Enabled": "true",
+            "When": {
+                "SoldItemDialogue": "New"
+            }
+        }
+    ]
+}

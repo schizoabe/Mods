@@ -1,0 +1,211 @@
+{
+	"Changes": [
+		{
+			"LogName": "Hail Texture",
+			"Action": "EditImage",
+			"Target": "Tilesheets/Rain",
+			"FromFile": "assets/Textures/Weather/rain.png",
+			"Update": "OnLocationChange",
+			"When": {
+			"Weather": "kath.weathering_Hail",
+			"LocationContext |contains=Island": false,
+			},
+		},
+		{
+      		"LogName": "The Weather Data Hail",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Hail": {
+					"Id": "kath.weathering_Hail",
+					"DisplayName": "{{i18n: Weather.Hail}}",
+
+					"Forecast": "{{i18n: Weather.Hail.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Hail.ForecastIsland}}", "Desert": "{{i18n: Weather.Hail.ForecastDesert}}",},
+					
+					"UseNightTiles": true,
+					"IsSnowing": true,
+					"IsRaining": false,
+					"IsLightning": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+										
+					/*"MusicOverride": "rain",*/
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 0},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 39},
+					"TVFrames": 4,				
+
+					"TotemMessage": "{{i18n: Weather.HailTotem}}",
+					"TotemScreenTint": "slateblue",
+					"TotemSound": "wind",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDHail 3",
+							],
+						},
+						{
+							"Id": "DrainStamina",
+							"Type": "ModifyStamina",
+							"Amount": -20,
+							"MinValue": 5,
+							"Chance": 0.75,
+							"Rate": "600",
+							"Condition": "!LOCATION_CONTEXT Here Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target Custom_Highlands, !PLAYER_HAS_BUFF Current PDWKittyMuffs",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "DrainHealth",
+							"Type": "ModifyHealth",
+							"Amount": -25,
+							"MinValue": 35,
+							"Chance": 0.95,
+							"Rate": "600",
+							"Condition": "!LOCATION_CONTEXT Here Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target Custom_Highlands, !PLAYER_HAS_BUFF Current PDWShader, !PLAYER_HAS_BUFF Current PDWKittyMuffs",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "GainStamina",
+							"Type": "ModifyStamina",
+							"Amount": 10,
+							"MaxValue": 200,
+							"Chance": 0.95,
+							"Rate": "100",
+							"Condition": "!LOCATION_CONTEXT Here Island, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+						},
+						{
+							"Id": "GainHealth",
+							"Type": "ModifyHealth",
+							"Amount": 15,
+							"MaxValue": 100,
+							"Chance": 0.85,
+							"Rate": "100",
+							"Condition": "!LOCATION_CONTEXT Here Island, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+						},
+						{
+							"Id": "SludgeWalk",
+							"Type": "Buff",
+							"BuffId": "SomeWeather1",
+							"Condition": "SYNCED_RANDOM tick sludge_walk 0.65, !LOCATION_CONTEXT Here Island, !LOCATION_NAME Target Beach, !IS_PASSIVE_FESTIVAL_TODAY SquidFest, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target Custom_Highlands, !PLAYER_HAS_BUFF Current PDWKittyMuffs",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "AngryWeather",
+							"Type": "Buff",
+							"BuffId": "AngryWeather1",
+							"Condition": "SYNCED_RANDOM tick angry_walk 0.183, !LOCATION_CONTEXT Here Island, !LOCATION_NAME Target Beach, !IS_PASSIVE_FESTIVAL_TODAY SquidFest, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target Custom_Highlands, !PLAYER_HAS_BUFF Current PDWKittyMuffs",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "ColdWeatherBuff",
+							"Type": "Buff",
+							"BuffId": "Dolly.ColdWeather_ColdDebuff",
+							"Condition": "!LOCATION_CONTEXT Here Island, !PLAYER_HAS_BUFF Current Dolly.ColdWeather_WarmBuff, {{HasMod|contains=Dolly.ColdWeather}}",
+							"TargetMapType": "Outdoors",
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "MakeHailLight",
+							"Condition": "LOCATION_NAME Target Desert",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": null,
+							"Opacity": 0.75,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 40,
+							"Speed": "-8, 32",
+						},
+						{
+							"Id": "MakeHailValley",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": null,
+							"Opacity": 0.85,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 60,
+							"Speed": "-8, 32",
+						},
+						{
+							"Id": "LightSnow1",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 0, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "-0.01, 0.02",
+							"ViewSpeed": "-1, -1",
+							"Scale": 4,
+							"Color": null,
+							"Opacity": 0.7,
+						},
+						{
+							"Id": "LightSnow2",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !PLAYER_HAS_BUFF Current PDWUVGoggles",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 0, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "0.01, 0.01",
+							"ViewSpeed": "-1, -1",
+							"Scale": 6,
+							"Color": "200, 200, 200",
+							"Opacity": 0.65,
+						},
+						{
+							"Id": "LightingDarken",
+							"Condition": "ANY \"!LOCATION_CONTEXT Here Island\" \"LOCATION_NAME Target Custom_Highlands\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "27, 44, 126",
+							"Opacity": 0.2
+						},
+						{
+							"Id": "SnowyTintLight",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "230, 230, 230",
+							"Opacity": 0.49
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "!LOCATION_CONTEXT Here Island, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.47
+						},	
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

@@ -1,0 +1,39 @@
+{
+"Changes": [
+
+//Load images
+{
+    "Action": "Load",
+    "Target": "Tilesheets/{{ModId}}-shooting-star",
+    "FromFile": "assets/img/shooting-star.png"
+},
+
+//Load map
+{
+     "Action": "Load",
+     "Priority": "Low",
+     "Target": "Maps/MM-OceanNight",
+     "FromFile": "assets/maps/OceanNight.tmx",
+},
+
+//MARU -- proposes by the community center (night)
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Town",
+    "Entries": {
+        "{{ModId}}_Proposal_Maru/Dating Maru/f Maru 2500/t 2000 2300/w sunny/c 1/LocalMail {{ModId}}_StartMaru": "nightTime/-1000 -1000/farmer 70 25 0 Maru 72 11 2/--skippable/mailReceived {{ModId}}_StopBlack_Maru/faceDirection Maru 2/showFrame Maru 31/positionOffset Maru 0 24/addLantern 735 73 11 1/positionOffset farmer 0 -4/viewport 71 12 clamp true/pause 2000/advancedMove farmer false 0 -8 1 0 0 -3 4 500/pause 2500/playSound leafrustle/pause 600/playSound leafrustle/pause 400/emote Maru 16/pause 3000/emote Maru 32/pause 1000/waitForAllStationary/speak Maru \"{{i18n:White_Maru.0}}\"/pause 400/emote farmer 32/pause 1400/speak Maru \"{{i18n:White_Maru.1}}\"/pause 400/emote farmer 56/pause 400/advancedMove farmer false 0 -2 1 1500 2 500/pause 800/playSound dwop/jump Maru/showFrame Maru 0/positionOffset Maru 0 36/pause 2000/speak Maru \"{{i18n:White_Maru.2}}\"/pause 4000/playSound yoba/pause 800/emote Maru 16/speak Maru \"{{i18n:White_Maru.3}}\"/pause 200/emote farmer 56/globalFade/viewport -1000 -1000/warp farmer -100 -100/warp Maru -100 -100/changeToTemporaryMap MM-OceanNight/viewport 15 6 clamp true/pause 4000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-shooting-star 0 0 64 64 50 15 1 15 3 false false 1 0 1 0 0 0/pause 4000/speak Maru \"{{i18n:White_Maru.4}}\"/pause 2500/message \"{{i18n:White_Maru.5 |Your={{Your}}}}\"/pause 2000/playMusic echos/pause 4000/viewport move 0 1 4000/pause 2000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-shooting-star 0 0 64 64 50 15 1 18 11 false false 1 0 1 0 0 0/pause 2000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-shooting-star 0 0 64 64 50 15 1 14 15 false false 1 0 1 0 0 0/pause 3000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-shooting-star 0 0 64 64 50 15 1 12 7 false false 1 0 1 0 0 0/pause 1200/speak Maru \"{{i18n:White_Maru.6}}\"/pause 1000/speak Maru \"{{i18n:White_Maru.7}}\"/pause 800/temporaryAnimatedSprite Tilesheets\\{{ModId}}-shooting-star 0 0 64 64 50 15 1 16 10 false false 1 0 1 0 0 0/pause 1800/speak Maru \"{{i18n:White_Maru.8}}\"/pause 1000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-shooting-star 0 0 64 64 50 15 1 18 11 false false 1 0 1 0 0 0/pause 2000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-shooting-star 0 0 64 64 50 15 1 14 15 false false 1 0 1 0 0 0/pause 1200/speak Maru \"{{i18n:White_Maru.9}}\"/pause 200/globalFade/viewport -1000 -1000/warp farmer 71 12/warp Maru 72 12/faceDirection farmer 2/faceDirection Maru 2/positionOffset farmer 0 20/changeLocation Town/addLantern 735 73 11 1/viewport 71 12 clamp true/pause 2000/emote Maru 60/pause 2400/faceDirection Maru 3/pause 400/faceDirection farmer 1/pause 400/speak Maru \"{{i18n:White_Maru.10}}\"/pause 400/emote farmer 8/pause 1200/--playMusic musicboxsong/playSound dwop/animate Maru true true 100 16/pause 800/jump farmer/pause 2000/speak Maru \"{{i18n:White_Maru.11}}\"/pause 1000/message \"{{i18n:White_Maru.12 |You={{You}}}}\"/pause 400/emote farmer 16/pause 800/speak Maru \"{{i18n:White_Maru.13}}\"/pause 1400/speak Maru \"{{i18n:White_Maru.14}}\"/pause 600/question fork1 \"{{i18n:proposalResponse}}\"/fork {{ModId}}_Maru_No/switchEvent {{ModId}}_Maru_Yes",
+      
+      "{{ModId}}_Maru_Yes": "stopAnimation Maru 12/pause 200/emote Maru 20/pause 1200/message \"{{i18n:White_Maru.YES.0 |Your={{Your}}}}\"/pause 200/speak Maru \"{{i18n:White_Maru.YES.1}}\"/pause 200/positionOffset farmer 0 4/{{Farmer_Kiss}}/{{Maru_Kiss}}/emote Maru 20/pause 200/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Maru 12/pause 1000/speak Maru \"{{i18n:White_Maru.YES.2}}\"/pause 800/emote farmer 32/pause 800/speak Maru \"{{i18n:White_Maru.YES.3}}\"/pause 200/faceDirection Maru 2/pause 500/faceDirection farmer 2/pause 1500/viewport move 1 -1 4000/globalFade/viewport -1000 -1000/pause 1000/playSound yoba/pause 2000/speak Maru \"{{i18n:White_Maru.YES.4}}\"/pause 3000/action Kantrip.HeartActions_DoEngagement Maru/action AddItem 460/pause 4000/stopMusic/end/",
+        
+        "{{ModId}}_Maru_No": "stopAnimation Maru 12/speed Maru 2/jump Maru/emote Maru 16/pause 800/emote Maru 28/pause 2000/speak Maru \"{{i18n:White_Maru.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_Maru_notReady(break)switchEvent {{ModId}}_Maru_noMarriage(break)switchEvent {{ModId}}_Maru_breakup/",
+        
+        "{{ModId}}_Maru_notReady": "pause 400/emote Maru 60/pause 800/speak Maru \"{{i18n:White_Maru.NO1.0}}\"/pause 500/message \"{{i18n:White_Maru.NO1.1 |Your={{Your}}}}\"/pause 200/emote farmer 32/pause 400/emote Maru 32/pause 200/speak Maru \"{{i18n:White_Maru.NO1.2}}\"/pause 200/{{Farmer_Kiss}}/{{Maru_Kiss}}/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end",
+        
+        "{{ModId}}_Maru_noMarriage": "pause 200/speak Maru \"{{i18n:White_Maru.NO2.0}}\"/pause 200/faceDirection Maru 1/emote Maru 40/pause 2000/faceDirection Maru 3/pause 100/speak Maru \"{{i18n:White_Maru.NO2.1}}\"/pause 200/speak Maru \"{{i18n:White_Maru.NO2.2}}\"/pause 400/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_Maru_breakup": "pause 400/playSound dwop/positionOffset Maru 2 0/pause 100/positionOffset Maru 2 0/pause 100/positionOffset Maru 2 0/pause 100/playSound dwop/positionOffset Maru 2 0/pause 100/positionOffset Maru 2 0/pause 100/positionOffset Maru 2 0/pause 1500/faceDirection Maru 2/shake Maru 500/pause 1000/emote Maru 28/pause 2500/faceDirection Maru 3/speak Maru \"{{i18n:White_Maru.NO3.0}}\"/advancedMove Maru false 2 0 1 3500/pause 100/faceDirection farmer 1/pause 3500/speak Maru \"{{i18n:White_Maru.NO3.1}}\"/pause 1000/shake Maru 500/pause 1500/advancedMove Maru false 5 0 0 -15/pause 1000/faceDirection farmer 2/pause 1500/action Kantrip.HeartActions_DoBreakup Maru/friendship Maru -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+
+]
+}

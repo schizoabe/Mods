@@ -1,0 +1,64 @@
+{
+  "Format": "1.25.0",
+  "Changes": [
+    {
+      "LogName": "NPC Manifestation",
+      "Action": "EditData",
+      "Target": "data/NPCDispositions",
+      "Entries": {
+        "[65]Muthu": "child/rude/outgoing/negative/male/non-datable/null/Other/summer 16//Custom_Claire_WarpRoom 3 3/Muthu"
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "NPC Gift Tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "[65]Muthu": "Steady lah!/74/Yeah yeah bery good./233/Apakah ini?/260/Don't come, go away./444/Not ok.../426/"
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/[65]Muthu",
+      "FromFile": "assets/spritesheet.png",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "NPC Portrait",
+      "Action": "Load",
+      "Target": "Portraits/[65]Muthu",
+      "FromFile": "assets/portrait.png",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/[65]Muthu",
+      "FromFile": "assets/schedule.json",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/[65]Muthu",
+      "FromFile": "assets/Dialogue.json",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "Muthu_sit_right": "19/19/19"	
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+{	 "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.11":  "This is Muthu's seat. Its unexpectedly clean and tidy."},
+	"When": {"HasSeenEvent": "9695002"}
+}
+  ]
+}

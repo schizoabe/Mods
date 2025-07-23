@@ -1,0 +1,48 @@
+{
+	"Changes": [
+		//Mail Adding
+		{
+			"Action": "EditData",
+			"Target": "Data/mail",
+			"Entries":{ 
+				"MirinStory1": null,
+				"KathMuseum.MirinMet": null,
+				"KathMuseum.StopGunther": null,
+                "KathMuseum.MirinOneDay": "{{i18n: Mirin.Expanded.LetterText}}[letterbg Mods/kath.museum/Letters 0][textcolor black][#]{{i18n: Mirin.Expanded.LetterTitle}}",
+                "KathMuseum.CosmosRoom": "{{i18n: Mirin.CosmosExpanded.LetterText}}[letterbg Mods/kath.museum/Letters 0][textcolor black][#]{{i18n: Mirin.CosmosExpanded.LetterTitle}}",
+                "KathMuseum.WTHRoom": "{{i18n: Mirin.WTHExpanded.LetterText}}[letterbg Mods/kath.museum/Letters 0][textcolor black][#]{{i18n: Mirin.WTHExpanded.LetterTitle}}",
+				"MirinCompleteCurio1": "{{i18n: Mirin.CurioComplete1.LetterText}}[letterbg Mods/kath.museum/Letters 0][textcolor black][#]{{i18n: Mirin.CurioComplete1.LetterTitle}}"
+			}
+		},
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "Mirin.OneDayMore": {
+                    "Id": "Mirin.OneDayMore",
+                    "Trigger": "DayEnding",
+                    "Condition": "{{HasMod|contains=kath.cosmos,kath.wth.holidays}}, PLAYER_HAS_SEEN_EVENT Any KathMuseum.CompleteMirin",
+                    "Actions": [
+                        "AddMail All KathMuseum.MirinOneDay tomorrow"
+                        ]
+                },
+                "Mirin.CosmosRoom": {
+                    "Id": "Mirin.CosmosRoom",
+                    "Trigger": "DayEnding",
+                    "Condition": "{{HasMod|contains=kath.cosmos}}, PLAYER_HAS_SEEN_EVENT Any KathMuseum.Expansion",
+                    "Actions": [
+                        "AddMail All KathMuseum.CosmosRoom tomorrow"
+                        ]
+                },
+                "Mirin.WTHRoom": {
+                    "Id": "Mirin.WTHRoom",
+                    "Trigger": "DayEnding",
+                    "Condition": "{{HasMod|contains=kath.wth.holidays}}, PLAYER_HAS_SEEN_EVENT Any KathMuseum.Expansion",
+                    "Actions": [
+                        "AddMail All KathMuseum.WTHRoom tomorrow"
+                        ]
+                }
+            }
+        }
+	]
+}

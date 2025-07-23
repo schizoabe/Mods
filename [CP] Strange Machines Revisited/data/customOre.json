@@ -1,0 +1,457 @@
+{
+    "Changes": [
+        {
+            "LogName": "SM Ore Nodes",
+            "Action": "EditData",
+            "Target": "Mods/mistyspring.ItemExtensions/Resources",
+            "Entries": {
+                "Blackstone": {
+                    "SpriteIndex": 0, 
+                    "ItemDropped": "(O){{ModId}}_Blackstone", 
+
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 7,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 1, 
+                    "MaxDrops": 3, 
+
+                    "ExtraItems":
+                    [
+                        {
+                            "ItemId": "(O)390", //Stone
+                            "Chance": 1,
+                            "MinStack": 1,
+                            "MaxStack": 5,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        },
+                    ],
+                    "MineSpawns": [
+                        {
+                            "Floors": "90/120",
+                            "SpawnFrequency": 0.0003675, 
+                            "AdditionalChancePerLevel": 0.0000036765,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+                "StuffedBlackstone": {
+                    "SpriteIndex": 1, 
+                    "ItemDropped": "(O){{ModId}}_Blackstone", 
+
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 7,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 2, 
+                    "MaxDrops": 7, 
+
+                    "MineSpawns": [
+                        {
+                            "Floors": "30/40",
+                            "SpawnFrequency": 0.000088, 
+                            "AdditionalChancePerLevel": 0.0000088,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+                "NickelNugget": {
+                    "SpriteIndex": 2, 
+                    "ItemDropped": "(O){{ModId}}_NickelNugget", 
+
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 5,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 1, 
+                    "MaxDrops": 3, 
+                    "ExtraItems":
+                    [
+                        {
+                            "ItemId": "(O)390", //Stone
+                            "Chance": 1,
+                            "MinStack": 1,
+                            "MaxStack": 5,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        },
+                    ],
+                    "MineSpawns": [
+                        {
+                            "Floors": "40/80",
+                            "SpawnFrequency": 0.0003675, 
+                            "AdditionalChancePerLevel": 0.0000036765,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+                "Stalagmite": {
+                    "SpriteIndex": 3, 
+                    "ItemDropped": "(O)390",
+
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 7,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 3, 
+                    "MaxDrops": 7, 
+
+                    "ExtraItems": [ 
+                        {
+                            "ItemId": "(O)330", 
+                            "Chance": 1,
+                            "MinStack": 1,
+                            "MaxStack": 5,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        }
+                    ],
+
+                    "MineSpawns": [
+                        {
+                            "Floors": "1/30",
+                            "SpawnFrequency": 0.000088, 
+                            "AdditionalChancePerLevel": 0.0000088,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+                "ColdStalagmite": {
+                    "SpriteIndex": 4, 
+                    "ItemDropped": "(O)390", 
+
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 15,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 3, 
+                    "MaxDrops": 12, 
+                    "ExtraItems": [ 
+                        {
+                            "ItemId": "(O)84", 
+                            "Chance": 1,
+                            "MinStack": 1,
+                            "MaxStack": 1,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        },
+                        {
+                            "ItemId": "(O)536", 
+                            "Chance": 1,
+                            "MinStack": 1,
+                            "MaxStack": 5,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        }
+                    ],
+                    "MineSpawns": [
+                        {
+                            "Floors": "40/80",
+                            "SpawnFrequency": 0.000088, 
+                            "AdditionalChancePerLevel": 0.0000088,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+                "HotStalagmite": {
+                    "SpriteIndex": 5, 
+                    "ItemDropped": "(O)390",
+
+                    "Texture": "Mods\\{{ModId}}\\Objects", 
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 15,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 3, 
+                    "MaxDrops": 12, 
+                    "ExtraItems": [ 
+                        {
+                            "ItemId": "(O){{ModId}}_Blackstone", 
+                            "Chance": 1,
+                            "MinStack": 1,
+                            "MaxStack": 3,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        },
+                        {
+                            "ItemId": "(O)537", 
+                            "Chance": 1,
+                            "MinStack": 1,
+                            "MaxStack": 3,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        }
+                    ],
+                    "MineSpawns": [
+                        {
+                            "Floors": "40/80",
+                            "SpawnFrequency": 0.000088, 
+                            "AdditionalChancePerLevel": 0.0000088,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+                "RainbowFragment": {
+                    "SpriteIndex": 6, 
+                    "ItemDropped": "(O){{ModId}}_RainbowFragment",
+
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 7,
+                    "Exp": 24,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 1, 
+                    "MaxDrops": 1, 
+                    "MineSpawns": [
+                        {
+                            "Floors": "170/77376",
+                            "SpawnFrequency": 0.000088, 
+                            "AdditionalChancePerLevel": 0.0000088,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+                //Skull
+                "SkullBlackstone": {
+                    "SpriteIndex": 0, 
+                    "ItemDropped": "(O){{ModId}}_Blackstone", 
+
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 7,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 1, 
+                    "MaxDrops": 5, 
+                    "ExtraItems":
+                    [
+                        {
+                            "ItemId": "(O)390", //Stone
+                            "Chance": 1,
+                            "MinStack": 2,
+                            "MaxStack": 5,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        },
+                    ],
+
+                    "MineSpawns": [
+                        {
+                            "Floors": "130/77376",
+                            "SpawnFrequency": 0.000335, 
+                            "AdditionalChancePerLevel": 0.0000335,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+                "SkullStuffedBlackstone": {
+                    "SpriteIndex": 1, 
+                    "ItemDropped": "(O){{ModId}}_Blackstone", 
+
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 7,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 2, 
+                    "MaxDrops": 10, 
+
+                    "MineSpawns": [
+                        {
+                            "Floors": "220/77376",
+                            "SpawnFrequency": 0.000176, 
+                            "AdditionalChancePerLevel": 0.0000176,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+
+                "SkullNickelNugget": {
+                    "SpriteIndex": 2, 
+                    "ItemDropped": "(O){{ModId}}_NickelNugget", 
+                    
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 5,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 1, 
+                    "MaxDrops": 5, 
+                    "ExtraItems":
+                    [
+                        {
+                            "ItemId": "(O)390", //Stone
+                            "Chance": 1,
+                            "MinStack": 2,
+                            "MaxStack": 5,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        },
+                    ],
+
+                    "MineSpawns": [
+                        {
+                            "Floors": "130/77376",
+                            "SpawnFrequency": 0.000535, 
+                            "AdditionalChancePerLevel": 0.0001353,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+
+                "SkullStalagmite": {
+                    "SpriteIndex": 3, 
+                    "ItemDropped": "(O)390",
+
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 7,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 3, 
+                    "MaxDrops": 7, 
+                    "ExtraItems": [ 
+                        {
+                            "ItemId": "(O)330", 
+                            "Chance": 1,
+                            "MinStack": 1,
+                            "MaxStack": 5,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        }
+                    ],
+                    "MineSpawns": [
+                        {
+                            "Floors": "220/77376",
+                            "SpawnFrequency": 0.000176, 
+                            "AdditionalChancePerLevel": 0.0000176,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+                "SkullColdStalagmite": {
+                    "SpriteIndex": 4, 
+                    "ItemDropped": "(O)390",
+
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 15,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 3, 
+                    "MaxDrops": 12, 
+                    "ExtraItems": [ 
+                        {
+                            "ItemId": "(O)84", 
+                            "Chance": 1,
+                            "MinStack": 1,
+                            "MaxStack": 1,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        },
+                        {
+                            "ItemId": "(O)536", 
+                            "Chance": 1,
+                            "MinStack": 3,
+                            "MaxStack": 5,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        }
+                    ],
+
+                    "MineSpawns": [
+                        {
+                            "Floors": "270/77376",
+                            "SpawnFrequency": 0.000176, 
+                            "AdditionalChancePerLevel": 0.0000176,
+                            "Type": "All" 
+                        }
+                    ]
+                },
+                "SkullHotStalagmite": {
+                    "SpriteIndex": 5, 
+                    "ItemDropped": "(O)390",
+
+                    "Texture": "Mods\\{{ModId}}\\Objects", 
+                    "Debris": "stone",
+
+                    "Tool": "Pickaxe", 
+                    "Health": 15,
+                    "Exp": 4,
+
+                    "MinToolLevel": 0, 
+                    "MinDrops": 3, 
+                    "MaxDrops": 12, 
+                    "ExtraItems": [ 
+                        {
+                            "ItemId": "(O){{ModId}}_Blackstone", 
+                            "Chance": 1,
+                            "MinStack": 2,
+                            "MaxStack": 5,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        },
+                        {
+                            "ItemId": "(O)537", 
+                            "Chance": 1,
+                            "MinStack": 3,
+                            "MaxStack": 5,
+                            "Quality": 0,
+                            "IsRecipe": false
+                        }
+                    ],
+                    "MineSpawns": [
+                        {
+                            "Floors": "280/77376",
+                            "SpawnFrequency": 0.000176, 
+                            "AdditionalChancePerLevel": 0.00000176,
+                            "Type": "All" 
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

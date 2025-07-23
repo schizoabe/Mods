@@ -1,0 +1,110 @@
+{
+  "Changes": [
+    {
+      "LogName": "Add some base tags to spoilable context tags",
+      "Action": "EditData",
+      "Target": "selph.FreshFarmProduce/CompetitionData",
+      "TargetField": ["SpoilableContextTags"],
+      "Entries": {
+        "spoilable_item": "spoilable_item",
+        "spice_item": "spice_item",
+        "raw_spice_item": "raw_spice_item",
+        "bean_item": "bean_item",
+      },
+    },
+    {
+      "LogName": "Add some base tags to non-spoilable context tags",
+      "Action": "EditData",
+      "Target": "selph.FreshFarmProduce/CompetitionData",
+      "TargetField": ["NonSpoilableContextTags"],
+      "Entries": {
+        "non_spoilable_item": "non_spoilable_item",
+      },
+    },
+    {
+      "LogName": "Make coffee beans eligible for freshness",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": ["433", "ContextTags"],
+      "Entries": {
+        "spoilable_item": "spoilable_item",
+      },
+    },
+    {
+      "LogName": "Make sap ineligible for freshness",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": ["92", "ContextTags"],
+      "Entries": {
+        "non_spoilable_item": "non_spoilable_item",
+      },
+    },
+    {
+      "LogName": "Add items",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}.SwagBag": {
+          "Name": "{{ModId}}.SwagBag",
+          "SpriteIndex": 0,
+          "DisplayName": "{{i18n:SwagBag.name}}",
+          "Description": "{{i18n:SwagBag.description}}",
+          "Type": "Basic",
+          "Texture": "{{ModId}}/Objects",
+          "Price": 0,
+          "ExcludeFromFishingCollection": true,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "color_purple",
+          ],
+        },
+        "{{ModId}}.JojaDashVoucher": {
+          "Name": "{{ModId}}.JojaDashVoucher",
+          "SpriteIndex": 1,
+          "DisplayName": "{{i18n:JojaDashVoucher.name}}",
+          "Description": "{{i18n:JojaDashVoucher.description}}",
+          "Type": "Basic",
+          "Texture": "{{ModId}}/Objects",
+          "Price": 0,
+          "ExcludeFromFishingCollection": true,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "color_blue",
+          ],
+        },
+        "{{ModId}}.FreshBook": {
+          "Name": "{{ModId}}.FreshBook",
+          "SpriteIndex": 2,
+          "DisplayName": "{{i18n:FreshBook.name}}",
+          "Description": "{{i18n:FreshBook.description}}",
+          "Type": "asdf",
+          "Texture": "{{ModId}}/Objects",
+          "Category": -102,
+          "Price": 0,
+          "ExcludeFromFishingCollection": true,
+          "ExcludeFromShippingCollection": true,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "book_item",
+            "color_cyan",
+          ],
+        },
+      }
+    },
+    //{
+    //  "LogName": "Add items - SpaceCore VAE",
+    //  "Action": "EditData",
+    //  "Target": "Data/Objects",
+    //  "Entries": {
+    //    "{{ModId}}.JojaDashVoucher": {
+    //      "UseForTriggerAction": true,
+    //    },
+    //    "{{ModId}}.SwagBag": {
+    //      "UseForTriggerAction": true,
+    //    },
+    //  }
+    //},
+  ]
+}

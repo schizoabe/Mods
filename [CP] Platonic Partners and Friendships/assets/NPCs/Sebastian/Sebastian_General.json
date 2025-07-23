@@ -1,0 +1,117 @@
+{
+    "Changes": [
+        // CONTENT INCLUDES
+        {
+            "LogName": "Enable Sebastian's aromantic content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Sebastian/Sebastian_AroContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, SexWithoutRomance"
+            }
+        },
+        // ACE CONTENT
+        {
+            "LogName": "Sebastian ace dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries":
+            {
+                "SpouseStardrop": "{{i18n:PPAF.Sebastian.DialogueEdits.Romance.SpouseStardrop |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:SebastianRelationshipType": "RomanceWithoutSex"
+            }
+        },
+        {
+            "LogName": "Sebastian ace marriage dialogue edit",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueSebastian",
+            "Entries":
+            {
+                "Rainy_Day_4": "{{i18n:PPAF.Sebastian.DialogueEdits.Ace.Rainy_Day_4}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        // TERMS OF ENDEARMENT
+        {
+            "LogName": "Sebastian terms of endearment, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Sebastian",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Sebastian terms of endearment",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Sebastian",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // NO BLUSH EDITS
+        {
+            "LogName": "Sebastian no blush edit",
+            "Action": "EditImage",
+            "Target": "Portraits/Sebastian, Portraits/Sebastian_Winter, Portraits/Sebastian_Beach",
+            "FromFile": "assets/Portraits/{{TargetWithoutPath}}_NoBlush.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Sebastian": true,
+                "HasMod |contains=DSVTeam.DiverseStardewValley, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        {
+            "LogName": "Sebastian no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Sebastian_Spring, Portraits/Sebastian_Summer, Portraits/Sebastian_Fall, Portraits/Sebastian_Winter_Outdoor, Portraits/Sebastian_Winter_Indoor, Portraits/Sebastian_FlowerDance, Portraits/Sebastian_SpiritsEve, Portraits/Sebastian_EggF, Portraits/Sebastian_Fair, Portraits/Sebastian_Jellies, Portraits/Sebastian_Luau, Portraits/Sebastian_Winter_IceF, Portraits/Sebastian_Winter_WinterStar, Portraits/Sebastian_Beach",
+            "FromFile": "assets/Portraits/Sebastian_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Sebastian": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        },
+        // COMPATIBILITY
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueSebastian",
+            "Entries": {
+                "funReturn_Sebastian": "{{i18n:PPAF.Sebastian.DialogueEdits.Ace.ISS.funReturn_Sebastian}}"
+            },
+            "When": {
+                "DayOfWeek": "Friday",
+                "PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, RomanceWithoutSex",
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Sebastian",
+            "Entries": {
+                "marriage_doc2": "{{i18n:PPAF.Sebastian.DialogueEdits.Ace.ISS.marriage_doc2}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:SebastianRelationshipType": "FullyPlatonic, RomanceWithoutSex",
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        }
+    ]
+}

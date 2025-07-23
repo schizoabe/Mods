@@ -1,0 +1,543 @@
+{
+	"Changes": [
+////////////////////////////////////////
+///////////               //////////////
+/////////// V I S U A L S //////////////
+///////////               //////////////
+////////////////////////////////////////
+		{
+      	    "LogName": "Add Visuals",
+			"Action": "Include",
+			"FromFile": "Data/Visuals/visuals.json"
+		},
+//////////////////////////////////////////
+///////////                 //////////////
+/////////// C U R R E N C Y //////////////
+///////////                 //////////////
+//////////////////////////////////////////
+		{
+      	    "LogName": "Add Currency",
+			"Action": "Include",
+			"FromFile": "Data/Adds/currency.json"
+		},		
+////////////////////////////////////////
+///////////               //////////////
+/////////// W E A T H E R //////////////
+///////////               //////////////
+////////////////////////////////////////
+
+//Adding Weather Behaviour
+		{
+      	    "LogName": "Add Weather",
+			"Action": "Include",
+			"FromFile": "Data/Weather/AddWeather.json"
+		},
+		{
+			"LogName": "Add Monsoon",
+			"Action": "Include",
+			"FromFile": "Data/Weather/MonsoonLoader.json",
+			"When": {"Monsoon": "true"}
+		},		
+//Adding Weather Forecast
+
+		{
+      	    "LogName": "Add Weather Conditions to Location Contexts 1 to 4",
+			"Action": "Include",
+			"FromFile": "Data/Forecast/1to4cast.json",
+			"When": {
+				"Year": "{{Range: 1,4}}",
+				"HasMod |contains=Kana.WeatherWonders": false
+			}
+		},
+		{
+      	    "LogName": "Add Weather Conditions to Location Contexts 1 to 4 Compat WW",
+			"Action": "Include",
+			"FromFile": "Data/Forecast/1to4castWW.json",
+			"When": {
+				"Year": "{{Range: 1,4}}",
+				"HasMod |contains=Kana.WeatherWonders": true
+			}
+		},
+		{
+      	    "LogName": "Add Weather Conditions to Location Contexts Probs Post 4",
+			"Action": "Include",
+			"FromFile": "Data/Forecast/post4cast.json",
+			"When": {
+				"Year": "{{Range: 5,100}}",
+				"PriorityOverWW": "false"
+			}
+		},		
+		{
+      	    "LogName": "Add Weather Conditions to Location Contexts Probs Post 4 Over WW",
+			"Action": "Include",
+			"FromFile": "Data/Forecast/post4castWW.json",
+			"When": {
+				"Year": "{{Range: 5,100}}",
+				"HasMod |contains=Kana.WeatherWonders": true,
+				"PriorityOverWW": "true"
+			}
+		},		
+//Changes to Vanilla Weather
+		{
+      	    "LogName": "Add Changes to Vanilla Weather Sunny Rainy Snowy Fog and Sleet",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/vanillaweather.json",
+			"Priority": "Early",
+			"When": {
+			"ChangeVanilla": "true"
+			}
+		},
+		{
+			"LogName": "Add Mirrors Vanilla Weather",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/mirrorvanilla.json",
+			"Priority": "Early",
+			"When": {
+			"ChangeVanilla": "false"
+			}
+		},		
+		{
+      	    "LogName": "Add Changes to Special Weather",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/special.json",
+			"Priority": "Early",
+			"When": {
+			"SpecialWeather": "true"
+			}
+		},		
+//////////////////////////////////////////////
+///////////                     //////////////
+/////////// A D D I T I O N A L //////////////
+///////////                     //////////////
+//////////////////////////////////////////////
+
+        {
+      	    "LogName": "Add Noise Data",
+			"Action": "Include",
+			"FromFile": "Data/Adds/music.json"
+		},
+        {
+      	    "LogName": "Add Buffs Data",
+			"Action": "Include",
+			"FromFile": "Data/Adds/buffs.json"
+		},
+        {
+      	    "LogName": "Add Mail Data",
+			"Action": "Include",
+			"FromFile": "Data/Adds/mail.json"
+		},
+        {
+      	    "LogName": "Add Special Trigger Data",
+			"Action": "Include",
+			"FromFile": "Data/Adds/mudrainspecial.json",
+			"When":{
+			"NoDanger": "true"
+			}
+		},
+//1.3 ones
+        {
+      	    "LogName": "Changes NPC Island Visit",
+			"Action": "Include",
+			"FromFile": "Data/NPC/islandvisit.json"
+		},
+        {
+      	    "LogName": "Man the Scope Creep is Real",
+			"Action": "Include",
+			"FromFile": "Data/Adds/scopecreeploads.json"
+		},		
+        {
+      	    "LogName": "Add CT",
+			"Action": "Include",
+			"FromFile": "Data/NPC/ctaddcode.json",
+			"When":{
+			"NPCChanges": "CT"
+			}
+		},
+        {
+      	    "LogName": "Changes NPC Schedules",
+			"Action": "Include",
+			"FromFile": "Data/NPC/scheduleaddcode.json",
+			"When":{
+			"NPCChanges": "schedule"
+			}
+		},
+		//
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {"NPCChanges": "schedule"},
+            "Entries": {		
+			"AREYOUSUREABOUTTHIS": {
+				"Id": "AREYOUSUREABOUTTHIS",
+                "Trigger": "Esca.EMP_SaveLoaded",
+                "Condition": "Esca.EMP_IS_PLAYER_FREE",
+                "Actions": [
+					"Esca.EMP_LogMessage Error Project Danger Weather: {{i18n: ScheduleWarn}}"
+                    ]
+				},
+			"AREYOUSUREABOUTTHIS2": {
+				"Id": "AREYOUSUREABOUTTHIS2",
+                "Trigger": "Esca.EMP_GameLaunched Esca.EMP_ReturnedToTitle",
+                "Condition": "PLAYER_HAS_RUN_TRIGGER_ACTION Any AREYOUSUREABOUTTHIS",
+				"MarkActionApplied": false,
+                "Actions": [
+					"MarkActionApplied All AREYOUSUREABOUTTHIS false"
+                    ]
+				}				
+			}
+		},
+		//
+        {
+      	    "LogName": "Add Items",
+			"Action": "Include",
+			"FromFile": "Data/Adds/objects.json",
+			"When":{
+			"Aids": "objects"
+			}
+		},
+        {
+      	    "LogName": "Add Clothes",
+			"Action": "Include",
+			"FromFile": "Data/Adds/clothes.json",
+			"When":{
+			"Aids": "clothes"
+			}
+		},
+        {
+      	    "LogName": "Add Buildings",
+			"Action": "Include",
+			"FromFile": "Data/Adds/buildings.json",
+			"When":{
+			"Aids": "buildings"
+			}
+		},
+        {
+      	    "LogName": "Add Totem Data",
+			"Action": "Include",
+			"FromFile": "Data/Adds/totems.json",
+			"When":{
+			"Totem": "true"
+			}
+		},		
+        {
+			"LogName": "Add Totem Data",
+			"Action": "Include",
+			"FromFile": "Data/Adds/vanillatotems.json",
+			"When":{
+			"VanillaTotem": "true"
+			}
+	    },			
+        {
+      	    "LogName": "Add Totem Location Dig Data",
+			"Action": "Include",
+			"FromFile": "Data/Adds/totemslocations.json",
+			"When":{
+			"Totem": "true"
+			}
+		},	
+        {
+      	    "LogName": "Add Animal Data Changes",
+			"Action": "Include",
+			"FromFile": "Data/Adds/animals.json",
+			"When":{
+			"AnimalEffects": "true"
+			}
+		},
+
+		//Compat Patch Over
+		{
+      	    "LogName": "Add Compat Patch Cold Weather",
+			"Action": "Include",
+			"FromFile": "Data/Adds/coldweather.json",
+			"When":{
+			"HasMod": "Dolly.ColdWeather"
+			}
+		},
+
+		//
+        /*{
+      	    "LogName": "Add Mobs to Eclipse Data",
+			"Action": "Include",
+			"FromFile": "Data/Adds/summonmobs.json",
+			"When":{
+			"AddWeather": "dark",
+			"MonsterSpawn": "true",
+			},
+		},*/
+//////////////////////////////////////////
+///////////                 //////////////
+/////////// T R I G G E R S //////////////
+///////////                 //////////////
+//////////////////////////////////////////
+		
+//Yes Station
+        {
+      	    "LogName": "Add Trigger Data",
+			"Action": "Include",
+			"FromFile": "Data/Triggers/{{ConsequencesLITE}}/triggerschanged.json",
+			"When":{
+			"DangerWeather": "true",
+			"NoDanger": "false",
+			"HasFlag |contains=BuiltStation": true,
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+			"HasMod |contains=flashshifter.GrampletonFields": false
+			}
+		},
+        {
+      	    "LogName": "Add Trigger Data",
+			"Action": "Include",
+			"FromFile": "Data/Triggers/{{ConsequencesLITE}}/SVEtriggerschanged.json",
+			"When":{
+			"DangerWeather": "true",
+			"NoDanger": "false",
+			"HasFlag |contains=BuiltStation": true,
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+			"HasMod |contains=flashshifter.GrampletonFields": false
+			}
+		},
+        {
+      	    "LogName": "Add Trigger Data",
+			"Action": "Include",
+			"FromFile": "Data/Triggers/{{ConsequencesLITE}}/SVEGrampletontriggerschanged.json",
+			"When":{
+			"DangerWeather": "true",
+			"NoDanger": "false",
+			"HasFlag |contains=BuiltStation": true,
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+			"HasMod |contains=flashshifter.GrampletonFields": true
+			}
+		},		
+//No Station
+        {
+      	    "LogName": "Add Trigger Data",
+			"Action": "Include",
+			"FromFile": "Data/Triggers/{{ConsequencesLITE}}/triggers.json",
+			"When":{
+			"DangerWeather": "true",
+			"NoDanger": "false",
+			"HasFlag |contains=BuiltStation": false,
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+			"HasMod |contains=flashshifter.GrampletonFields": false
+			}
+		},
+        {
+      	    "LogName": "Add Trigger Data",
+			"Action": "Include",
+			"FromFile": "Data/Triggers/{{ConsequencesLITE}}/SVEtriggers.json",
+			"When":{
+			"DangerWeather": "true",
+			"NoDanger": "false",
+			"HasFlag |contains=BuiltStation": false,
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+			"HasMod |contains=flashshifter.GrampletonFields": false
+			}
+		},
+        {
+      	    "LogName": "Add Trigger Data",
+			"Action": "Include",
+			"FromFile": "Data/Triggers/{{ConsequencesLITE}}/SVEGrampletontriggers.json",
+			"When":{
+			"DangerWeather": "true",
+			"NoDanger": "false",
+			"HasFlag |contains=BuiltStation": false,
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+			"HasMod |contains=flashshifter.GrampletonFields": true
+			}
+		},
+
+/////////////////////////////////////////////
+///////////                    //////////////
+/////////// M N E  E V E N T S //////////////
+///////////                    //////////////
+/////////////////////////////////////////////
+		{
+      	    "LogName": "Add More Nightly Events - Events",
+			"Action": "Include",
+			"FromFile": "Data/Adds/nightevents.json",
+			"When": {
+			"HasMod": "leclair.morenightlyevents",
+			"NightEvents": "true"
+			}
+		},
+		{
+      	    "LogName": "Add More Nightly Events - Events",
+			"Action": "Include",
+			"FromFile": "Data/Adds/nighteventssummoned.json",
+			"When": {
+			"HasMod": "leclair.morenightlyevents",
+			"NightEvents": "true"
+			}
+		},
+////////////////////////////////////////////////
+///////////                       //////////////
+/////////// M A P   C H A N G E S //////////////
+///////////                       //////////////
+////////////////////////////////////////////////
+		{
+      		"LogName": "Load MapStrings",
+			"Action": "Include",
+			"FromFile": "Data/Adds/StringyMaps.json"
+		},
+		{
+      		"LogName": "Add Sprinkler Drought",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/sprinklers.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"SprinklerDrought": "maps, damage",
+			"Weather": "kath.weathering_HeatWave"
+			}			
+		},
+		{
+      	    "LogName": "Add Flooding",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/flooding.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"PretendFlooding": "true,",
+			"Weather": "kath.weathering_HeavyRain",
+			"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3, FlashShifter.StardewValleyExpandedCP, Liliet.ImprovedCindersapForest": false
+			}
+		},
+		{
+      	    "LogName": "Add Dryness",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/dry.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"PretendHeatWave": "true,",
+			"Weather": "kath.weathering_HeatWave",
+			"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3, FlashShifter.StardewValleyExpandedCP, Lnh.IslandOverhaul, Liliet.ImprovedCindersapForest": false
+			}
+		},
+		{
+      	    "LogName": "Add Flooding Island",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/hurryeffects.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"PretendHurricane": "true,",
+			"Weather": "kath.weathering_Hurry",
+			"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3, Lnh.IslandOverhaul, FlashShifter.StardewValleyExpandedCP": false
+			}
+		},	
+		{
+      	    "LogName": "Add Lava to Island",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/eruption.json",
+			"Update": "OnLocationChange",
+			"Priority": "Late",
+			"When": {
+			"PretendLava": "true,",
+			"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3": false,
+			"Query: '{{Weather |contains=kath.weathering_AshSummon}}' = 'true' OR '{{HasFlag |contains=VolcanoEruption}}' = 'true'": true
+			}
+		},
+		{
+      	    "LogName": "Add Fire to Forest",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/ffire.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"PretendFire": "true,",
+			"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3, Liliet.ImprovedCindersapForest": false,
+			"Weather": "kath.weathering_Wildfire"
+			}
+		},
+		{
+      	    "LogName": "Add Post Maps",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/postmaps.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3": false,
+			"PostWeather": "true",
+			"HasMod": "Esca.EMP"
+			}
+		},
+//IMPROVED CINDERSAP FOREST COMPAT ADD
+		{
+      	    "LogName": "Add Compat to Improved Forest",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/Compats/ICF.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3, FlashShifter.StardewValleyExpandedCP": false,
+			"HasMod |contains=Liliet.ImprovedCindersapForest": true
+			}
+		},	
+//SVE COMPAT ADD
+		{
+      	    "LogName": "Add Flooding",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/Compats/SVEflooding.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"PretendFlooding": "true,",
+			"Weather": "kath.weathering_HeavyRain",
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+		{
+      	    "LogName": "Add Dryness",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/Compats/SVEdry.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"PretendHeatWave": "true,",
+			"Weather": "kath.weathering_HeatWave",
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+		{
+      	    "LogName": "Add Flooding Island",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/Compats/SVEhurryeffects.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"PretendHurricane": "true,",
+			"Weather": "kath.weathering_Hurry",
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+			"HasMod |contains=Lnh.IslandOverhaul": false
+			}
+		},	
+//LNH COMPAT ADD
+		{
+      	    "LogName": "Add Flooding Island",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/Compats/LNHhurryeffects.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"PretendHurricane": "true,",
+			"Weather": "kath.weathering_Hurry",
+			"HasMod |contains=Lnh.IslandOverhaul": true
+			}
+		},	
+		{
+      	    "LogName": "Add Dryness",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/Compats/LNHSVEdry.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"PretendHeatWave": "true,",
+			"Weather": "kath.weathering_HeatWave",
+			"HasMod |contains=Lnh.IslandOverhaul": true,
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+		{
+      	    "LogName": "Add Dryness",
+			"Action": "Include",
+			"FromFile": "Data/MapChanges/Compats/LNHdry.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"PretendHeatWave": "true,",
+			"Weather": "kath.weathering_HeatWave",
+			"HasMod |contains=Lnh.IslandOverhaul": true,
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			}
+		}		
+		
+//End
+]
+}

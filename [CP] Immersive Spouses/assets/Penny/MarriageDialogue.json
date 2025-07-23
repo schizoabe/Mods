@@ -1,0 +1,59 @@
+{
+	"Changes": [
+	//STANDARD LEAVE/RETURN DIALOGUE
+
+
+	//SPECIFIC DAYS
+
+		//DOCTOR CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialoguePenny",
+			"Entries": {
+				"winter_4": "I have an appointment at the clinic today.#$e#I'll be back home in the afternoon."
+			}
+		},
+
+		//NIGHT MARKET
+
+		//RAINY SCHEDULE
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogue",
+			"Entries": {
+				"jobLeave_Penny": "#$c .5#Look like it's raining today.#Looks like it's another day off. The kids don't have classes when it rains.#$e#$c .5#I think I'm gonna go to the library still. Not to sound mean, but it's a lot more peaceful without the kids.$h#I hope Vincent and Jas don't forget the material we studied when we return.$s",
+				"jobReturn_Penny": "#$c .5#Good evening. My day was fine, thanks! How was yours?$h#The library is really peaceful when it's raining. You should come with me sometime."
+			},
+			"When": {
+				"Weather": "Rain, Storm"
+			}
+		},
+
+		//SCHEDULE 9 OR 23
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogue",
+			"Entries": {
+				"jobLeave_Penny": "I'll be out in town today, dear. I hope you take the time to enjoy yourself too.$h",
+				"jobReturn_Penny": "#$c .5#Good evening. My day was fine, thanks! How was yours?$h#Hi, dear! I've missed you.$h"
+			},
+			"When": {
+				"Day": "9, 23"
+			}
+		},
+
+		//SCHEDULE 9 OR 23 RAINY
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogue",
+			"Entries": {
+				"jobLeave_Penny": "Aww... It's raining on my day off.$s#$e#Oh, well. Just gives me an excuse to go back to the library!",
+				"jobReturn_Penny": "#$c .5#Good evening. My day was fine, thanks! How was yours?$h#The library is really peaceful when it's raining. You should come with me sometime."
+			},
+			"When": {
+				"Day": "9, 23",
+				"Weather": "Rain, Storm"
+			}
+		},
+	]
+}

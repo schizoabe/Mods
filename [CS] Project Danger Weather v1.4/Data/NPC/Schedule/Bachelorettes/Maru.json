@@ -1,0 +1,24 @@
+{
+	"Changes": [
+    {
+		"Action": "EditData",
+		"Target": "Characters/schedules/Maru",
+		"Priority": "Late",
+		"When": {"Weather": "kath.weathering_Darkness, kath.weathering_HeavyRain, kath.weathering_Locust, kath.weathering_Blizzard, kath.weathering_Hail"},
+      "Entries": {
+  "rain": "800 ScienceHouse 6 4 0/1000 ScienceHouse 9 6 1/1230 ScienceHouse 2 21 1/1430 ScienceHouse 19 18 0/1630 ScienceHouse 5 6 1 maru_tinker/1800 ScienceHouse 2 6 3/2000 ScienceHouse 9 6 1/2300 ScienceHouse 2 4 3 maru_sleep",
+  "marriage_Mon": "GOTO rain",
+  "Tue": "GOTO rain",
+  "Thu": "GOTO Tue",
+  "Mon": "GOTO rain",
+  "Sun": "GOTO Mon",
+  "summer_Mon": "GOTO rain",
+  "summer_Sun": "GOTO rain",
+  "winter": "GOTO rain",
+  "summer": "GOTO rain",
+  "spring": "800 ScienceHouse 5 6 1 maru_tinker/1000 ScienceHouse 19 18 0/1800 ScienceHouse 5 6 1 maru_tinker/2200 ScienceHouse 2 4 3 maru_sleep"
+      },
+    },
+
+]
+}

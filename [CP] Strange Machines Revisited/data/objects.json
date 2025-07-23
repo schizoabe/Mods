@@ -1,0 +1,363 @@
+{
+	"Changes": [
+		{
+			"Action": "Load",
+			"Target": "Mods/{{ModId}}/Objects",
+			"FromFile": "assets/Resources/Objects.png"
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_BigCheese": {
+					"Name": "Big Cheese",
+					"Displayname": "{{i18n: smBigCheese_Name}}",
+					"Description": "{{i18n: smBigCheese_Description}}",
+					"Type": "ArtisanGoods",
+					"Category": -26,
+					"Price": 345,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 7,
+					"Edibility": 55, 
+					"Buffs": [
+						{
+						  "Id": "Food",
+						  "Duration": 100,
+						  "BuffId": null,
+						  "IconTexture": null,
+						  "IsDebuff": false,
+						  "GlowColor": null,
+						  "CustomAttributes": {
+							"FarmingLevel": 0.0,
+							"FishingLevel": 0.0,
+							"MiningLevel": 0.0,
+							"LuckLevel": 0.0,
+							"ForagingLevel": 0.0,
+							"MaxStamina": 0.0,
+							"MagneticRadius": 0.0,
+							"Speed": 0.0,
+							"Defense": 1.0,
+							"Attack": 0.0
+						  },
+						}
+					],
+					"ContextTags": [
+						"color_yellow"
+					],
+				},
+				"{{ModId}}_BigGoatCheese": {
+					"Name": "Big Goat Cheese",
+					"Displayname": "{{i18n: smBigGoatCheese_Name}}",
+					"Description": "{{i18n: smBigGoatCheese_Description}}",
+					"Type": "ArtisanGoods",
+					"Category": -26,
+					"Price": 545,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 8,
+					"Edibility": 57, 
+					"Buffs": [
+						{
+						  "Id": "Food",
+						  "Duration": 100,
+						  "BuffId": null,
+						  "IconTexture": null,
+						  "IsDebuff": false,
+						  "GlowColor": null,
+						  "CustomAttributes": {
+							"FarmingLevel": 0.0,
+							"FishingLevel": 0.0,
+							"MiningLevel": 0.0,
+							"LuckLevel": 0.0,
+							"ForagingLevel": 0.0,
+							"MaxStamina": 0.0,
+							"MagneticRadius": 0.0,
+							"Speed": 0.0,
+							"Defense": 1.0,
+							"Attack": 1.0
+						  },
+						}
+					],
+					"ContextTags": [
+						"color_yellow"
+					],
+				},
+				"{{ModId}}_BlackBrick": {
+					"Name": "Black Brick",
+					"Displayname": "{{i18n: smBlackBrick_Name}}",
+					"Description": "{{i18n: smBlackBrick_Description}}",
+					"Type": "Basic",
+					"Category": -15,
+					"Price": 300,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 9,
+					"ContextTags": [
+						"color_black"
+					],
+				},
+				"{{ModId}}_Blackstone": {
+					"Name": "Blackstone",
+					"Displayname": "{{i18n: smBlackstone_Name}}",
+					"Description": "{{i18n: smBlackstone_Description}}",
+					"Type": "Basic",
+					"Category": -15,
+					"Price": 30,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 10,
+					"ContextTags": [
+						"color_black"
+					],
+				},
+				"{{ModId}}_DelightMayonnaise": {
+					"Name": "Delight Mayonnaise",
+					"Displayname": "{{i18n: smDelightMayonnaise_Name}}",
+					"Description": "{{i18n: smDelightMayonnaise_Description}}",
+					"Type": "ArtisanGoods",
+					"Category": -26,
+					"Price": 2100,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 11,
+					"ContextTags": [
+						"color_gold"
+					],
+				},
+				"{{ModId}}_Glue": {
+					"Name": "Glue",
+					"Displayname": "{{i18n: smGlue_Name}}",
+					"Description": "{{i18n: smGlue_Description}}",
+					"Type": "ArtisanGoods",
+					"Category": -26,
+					"Price": 470,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 12,
+					"ContextTags": [
+						"color_orange"
+					],
+				},
+				"{{ModId}}_LargeDuckEgg": {
+					"Name": "Large Duck Egg",
+					"Displayname": "{{i18n: smLargeDuckEgg_Name}}",
+					"Description": "{{i18n: smLargeDuckEgg_Description}}",
+					"Type": "Egg",
+					"Category": -5,
+					"Price": 145,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 13,
+					"Edibility": 12, 
+					"ContextTags": [
+						"color_white",
+						"egg_item",
+						"large_egg_item",
+					],
+				},
+				"{{ModId}}_LargeDuckMayonnaise": {
+					"Name": "Large Duck Mayonnaise",
+					"Displayname": "{{i18n: smLargeDuckMayonnaise_Name}}",
+					"Description": "{{i18n: smLargeDuckMayonnaise_Description}}",
+					"Type": "ArtisanGoods",
+					"Category": -26,
+					"Price": 610,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 14,
+					"ContextTags": [
+						"color_white",
+						"mayo_item"
+					],
+				},
+				"{{ModId}}_LargeGoldenEgg": {
+					"Name": "Large Golden Egg",
+					"Displayname": "{{i18n: smLargeGoldenEgg_Name}}",
+					"Description": "{{i18n: smLargeGoldenEgg_Description}}",
+					"Type": "Egg",
+					"Category": -5,
+					"Price": 750,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 15,
+					"Edibility": 18,
+					"ContextTags": [
+						"color_yellow",
+						"egg_item",
+						"large_egg_item",
+					],
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_LargeMayonnaise": {
+					"Name": "Large Mayonnaise",
+					"Displayname": "{{i18n: smLargeMayonnaise_Name}}",
+					"Description": "{{i18n: smLargeMayonnaise_Description}}",
+					"Type": "ArtisanGoods",
+					"Category": -26,
+					"Price": 380,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 16,
+					"ContextTags": [
+						"color_white",
+						"mayo_item"
+					],
+				},
+				"{{ModId}}_LargeVoidEgg": {
+					"Name": "Large Void Egg",
+					"Displayname": "{{i18n: smLargeVoidEgg_Name}}",
+					"Description": "{{i18n: smLargeVoidEgg_Description}}",
+					"Type": "Egg",
+					"Category": -5,
+					"Price": 110,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 17,
+					"Edibility": 12,
+					"ContextTags": [
+						"color_black",
+						"egg_item",
+						"large_egg_item",
+					],
+				},
+				"{{ModId}}_LargeVoidMayonnaise": {
+					"Name": "Large Void Mayonnaise",
+					"Displayname": "{{i18n: smLargeVoidMayonnaise_Name}}",
+					"Description": "{{i18n: smLargeVoidMayonnaise_Description}}",
+					"Type": "ArtisanGoods",
+					"Category": -26,
+					"Price": 405,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 18,
+					"ContextTags": [
+						"color_red",
+						"mayo_item",
+					],
+				},
+				"{{ModId}}_LiquidLuck": {
+					"Name": "Liquid Luck",
+					"Displayname": "{{i18n: smLiquidLuck_Name}}",
+					"Description": "{{i18n: smLiquidLuck_Description}}",
+					"Type": "ArtisanGoods",
+					"Category": -26,
+					"Price": 1000,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 19,
+					"Edibility": -50,
+					"IsDrink": true,
+					"Buffs": [
+						{
+						  "Id": "Food",
+						  "Duration": 100,
+						  "BuffId": null,
+						  "IconTexture": null,
+						  "IsDebuff": false,
+						  "GlowColor": null,
+						  "CustomAttributes": {
+							"FarmingLevel": 0.0,
+							"FishingLevel": 0.0,
+							"MiningLevel": 0.0,
+							"LuckLevel": 10.0,
+							"ForagingLevel": 0.0,
+							"MaxStamina": 0.0,
+							"MagneticRadius": 0.0,
+							"Speed": 0.0,
+							"Defense": 0.0,
+							"Attack": 0.0
+						  },
+						}
+					],
+					"ContextTags": [
+						"color_red"
+					],
+				},
+				"{{ModId}}_NickelBar": {
+					"Name": "Nickel Bar",
+					"Displayname": "{{i18n: smNickelBar_Name}}",
+					"Description": "{{i18n: smNickelBar_Description}}",
+					"Type": "Basic",
+					"Category": -15,
+					"Price": 150,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 20,
+					"ContextTags": [
+						"color_iron",
+						"furnace_item",
+						"use_reverse_name_for_sorting"
+					],
+				},
+				"{{ModId}}_NickelNugget": {
+					"Name": "Nickel Nugget",
+					"Displayname": "{{i18n: smNickelNugget_Name}}",
+					"Description": "{{i18n: smNickelNugget_Description}}",
+					"Type": "Basic",
+					"Category": -15,
+					"Price": 15,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 21,
+					"ContextTags": [
+						"color_iron",
+						"ore_item",
+						"use_reverse_name_for_sorting"
+					  ],
+				},
+				"{{ModId}}_RainbowFragment": {
+					"Name": "Rainbow Fragment",
+					"Displayname": "{{i18n: smRainbowFragment_Name}}",
+					"Description": "{{i18n: smRainbowFragment_Description}}",
+					"Type": "Gem",
+					"Category": -2,
+					"Price": 200,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 22,
+					"ContextTags": [
+						"color_prismatic",
+					],
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_RustyPan": {
+					"Name": "Rusty Pan",
+					"Displayname": "{{i18n: smRustyPan_Name}}",
+					"Description": "{{i18n: smRustyPan_Description}}",
+					"Type": "Crafting",
+					"Category": -8,
+					"Price": 0,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 23,
+				},
+				"{{ModId}}_ShinyMayonnaise": {
+					"Name": "Shiny Mayonnaise",
+					"Displayname": "{{i18n: smShinyMayonnaise_Name}}",
+					"Description": "{{i18n: smShinyMayonnaise_Description}}",
+					"Type": "ArtisanGoods",
+					"Category": -26,
+					"Price": 1900,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 24,
+					"ContextTags": [
+						"color_gold",
+						"mayo_item"
+					],
+					"ExcludeFromShippingCollection": true
+				},
+				"{{ModId}}_WoodenPiece": {
+					"Name": "WoodenPiece",
+					"Displayname": "{{i18n: smWoodenPiece_Name}}",
+					"Description": "{{i18n: smWoodenPiece_Description}}",
+					"Type": "Crafting",
+					"Category": -8,
+					"Price": 0,
+					"Texture": "Mods/{{ModId}}/Objects",
+					"SpriteIndex": 25,
+				},
+				"{{ModId}}_NF": {
+					"Name": "Nickel Flag",
+					"DisplayName": "{{i18n: smNF_Name}}",
+					"Description": "{{i18n: smNF_Description}}",
+					"Type": "Crafting",
+					"Category": 0,
+					"Price": 1,
+					"Texture": "Mods/{{ModId}}/Machines",
+					"SpriteIndex": 73,
+					"ContextTags": [
+						"color_iron",
+						"light_source",
+						"torch_item"
+					  ],
+					"CustomFields": {}
+				},
+			},
+		},
+	]
+}
+

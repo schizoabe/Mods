@@ -1,0 +1,513 @@
+{
+  "Format": "2.0.0",
+
+  "ConfigSchema": {
+    "Book Type": {
+      "AllowValues": "XP, All",
+      "Description": "Choose whether to receive only XP books, or all types of books.",
+      "Default": "XP"
+    },
+    "Museum Donations Required": {
+      "AllowValues": "True, False",
+      "Description": "Choose whether books arrive only after 15 museum donations (green x), or immediately (empty box).",
+      "Default": "True"
+    },
+    "Book Frequency": {
+      "AllowValues": "Weekly, 2 Weeks, Monthly",
+      "Description": "How often books should arrive.",
+      "Default": "Weekly"
+    }
+  },
+
+  "Changes": [
+
+    //WEEKLY BOOKS
+
+    //XP Books, Immediate Start, Weekly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_ZuzuIntro": "{{i18n:booksub.zuzuweeklyletter}} [#]Book Subscription",
+        "BookSub_WeeklyBook": "{{i18n:booksub.weeklyletter}} %item id (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "False",
+        "Book Frequency": "Weekly"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "BookSub_ZuzuIntro_Letter": {
+          "Id": "BookSub_ZuzuIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 1 2",
+          "Action": "AddMail Current BookSub_ZuzuIntro"
+        },
+        "BookSub_WeeklyBookXP_Letter": {
+          "Id": "BookSub_WeeklyBookXP_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_WEEK Thursday",
+          "Action": "AddMail Current BookSub_WeeklyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "False",
+        "Book Frequency": "Weekly"
+      }
+    },
+
+    //All Books, Immediate Start, Weekly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_ZuzuIntro": "{{i18n:booksub.zuzuweeklyletter}} [#]Book Subscription",
+        "BookSub_WeeklyBook": "{{i18n:booksub.weeklyletter}} %item id (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 (O)Book_Trash 1 (O)Book_Crabbing 1 (O)Book_Bombs 1 (O)Book_Roe 1 (O)Book_WildSeeds 1 (O)Book_Woodcutting 1 (O)Book_Defense 1 (O)Book_Friendship 1 (O)Book_Void 1 (O)Book_Speed 1 (O)Book_Marlon 1 (O)Book_PriceCatalogue 1 (O)Book_QueenOfSauce 1 (O)Book_Diamonds 1 (O)Book_Mystery 1 (O)Book_AnimalCatalogue 1 (O)Book_Speed2 1 (O)Book_Artifact 1 (O)Book_Horse 1 (O)Book_Grass 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "False",
+        "Book Frequency": "Weekly"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+
+        "BookSub_ZuzuIntro_Letter": {
+          "Id": "BookSub_ZuzuIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 1 2",
+          "Action": "AddMail Current BookSub_ZuzuIntro"
+        },
+        "BookSub_WeeklyBookAll_Letter": {
+          "Id": "BookSub_WeeklyBookAll_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_WEEK Thursday",
+          "Action": "AddMail Current BookSub_WeeklyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "False",
+        "Book Frequency": "Weekly"
+      }
+    },
+
+    //XP Books, Donations Required, Weekly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_GuntherIntro": "{{i18n:booksub.guntherweeklyletter}} [#]Book Subscription Gift",
+        "BookSub_WeeklyBook": "{{i18n:booksub.weeklyletter}} %item id (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "True",
+        "Book Frequency": "Weekly"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "BookSub_GuntherIntro_Letter": {
+          "Id": "BookSub_GuntherIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "MUSEUM_DONATIONS 15",
+          "Action": "AddMail Current BookSub_GuntherIntro"
+        },
+        "BookSub_WeeklyBookXP_Letter": {
+          "Id": "BookSub_WeeklyBookXP_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_WEEK Thursday, PLAYER_HAS_MAIL any BookSub_GuntherIntro Received",
+          "Action": "AddMail Current BookSub_WeeklyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "True",
+        "Book Frequency": "Weekly"
+      }
+    },
+
+    //All Books, Donations Required, Weekly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_GuntherIntro": "{{i18n:booksub.guntherweeklyletter}} [#]Book Subscription Gift",
+        "BookSub_WeeklyBook": "{{i18n:booksub.weeklyletter}} %item id (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 (O)Book_Trash 1 (O)Book_Crabbing 1 (O)Book_Bombs 1 (O)Book_Roe 1 (O)Book_WildSeeds 1 (O)Book_Woodcutting 1 (O)Book_Defense 1 (O)Book_Friendship 1 (O)Book_Void 1 (O)Book_Speed 1 (O)Book_Marlon 1 (O)Book_PriceCatalogue 1 (O)Book_QueenOfSauce 1 (O)Book_Diamonds 1 (O)Book_Mystery 1 (O)Book_AnimalCatalogue 1 (O)Book_Speed2 1 (O)Book_Artifact 1 (O)Book_Horse 1 (O)Book_Grass 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "True",
+        "Book Frequency": "Weekly"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "BookSub_GuntherIntro_Letter": {
+          "Id": "BookSub_GuntherIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "MUSEUM_DONATIONS 15",
+          "Action": "AddMail Current BookSub_GuntherIntro"
+        },
+        "BookSub_WeeklyBookAll_Letter": {
+          "Id": "BookSub_WeeklyBookAll_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_WEEK Thursday, PLAYER_HAS_MAIL any BookSub_GuntherIntro Received",
+          "Action": "AddMail Current BookSub_WeeklyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "True",
+        "Book Frequency": "Weekly"
+      }
+    },
+
+    //BIWEEKLY BOOKS
+
+    //XP Books, Immediate Start, Bieekly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_ZuzuIntro": "{{i18n:booksub.zuzubiweeklyletter}} [#]Book Subscription",
+        "BookSub_BiweeklyBook": "{{i18n:booksub.generalletter}} %item id (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "False",
+        "Book Frequency": "2 Weeks"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "BookSub_ZuzuIntro_Letter": {
+          "Id": "BookSub_ZuzuIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 1 2",
+          "Action": "AddMail Current BookSub_ZuzuIntro"
+        },
+        "BookSub_BiweeklyBookXP_Letter": {
+          "Id": "BookSub_BiweeklyBookXP_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 11 25",
+          "Action": "AddMail Current BookSub_BiweeklyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "False",
+        "Book Frequency": "2 Weeks"
+      }
+    },
+
+    //All Books, Immediate Start, Biweekly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_ZuzuIntro": "{{i18n:booksub.zuzubiweeklyletter}} [#]Book Subscription",
+        "BookSub_BiweeklyBook": "{{i18n:booksub.generalletter}} %item id  (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 (O)Book_Trash 1 (O)Book_Crabbing 1 (O)Book_Bombs 1 (O)Book_Roe 1 (O)Book_WildSeeds 1 (O)Book_Woodcutting 1 (O)Book_Defense 1 (O)Book_Friendship 1 (O)Book_Void 1 (O)Book_Speed 1 (O)Book_Marlon 1 (O)Book_PriceCatalogue 1 (O)Book_QueenOfSauce 1 (O)Book_Diamonds 1 (O)Book_Mystery 1 (O)Book_AnimalCatalogue 1 (O)Book_Speed2 1 (O)Book_Artifact 1 (O)Book_Horse 1 (O)Book_Grass 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "False",
+        "Book Frequency": "2 Weeks"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "BookSub_ZuzuIntro_Letter": {
+          "Id": "BookSub_ZuzuIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 1 2",
+          "Action": "AddMail Current BookSub_ZuzuIntro"
+        },
+        "BookSub_BiweeklyBookAll_Letter": {
+          "Id": "BookSub_BiweeklyBookAll_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 11 25",
+          "Action": "AddMail Current BookSub_BiweeklyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "False",
+        "Book Frequency": "2 Weeks"
+      }
+    },
+
+    //XP Books, Donations Required, Biweekly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_GuntherIntro": "{{i18n:booksub.guntherbiweeklyletter}} [#]Book Subscription Gift",
+        "BookSub_BiweeklyBook": "{{i18n:booksub.generalletter}} %item id (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "True",
+        "Book Frequency": "2 Weeks"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "BookSub_GuntherIntro_Letter": {
+          "Id": "BookSub_GuntherIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "MUSEUM_DONATIONS 15",
+          "Action": "AddMail Current BookSub_GuntherIntro"
+        },
+        "BookSub_BiweeklyBookXP_Letter": {
+          "Id": "BookSub_BiweeklyBookXP_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 11 25, PLAYER_HAS_MAIL any BookSub_GuntherIntro Received",
+          "Action": "AddMail Current BookSub_BiweeklyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "True",
+        "Book Frequency": "2 Weeks"
+      }
+    },
+
+    //All Books, Donations Required, Biweekly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_GuntherIntro": "{{i18n:booksub.guntherbiweeklyletter}} [#]Book Subscription Gift",
+        "BookSub_BiweeklyBook": "{{i18n:booksub.generalletter}} %item id (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 (O)Book_Trash 1 (O)Book_Crabbing 1 (O)Book_Bombs 1 (O)Book_Roe 1 (O)Book_WildSeeds 1 (O)Book_Woodcutting 1 (O)Book_Defense 1 (O)Book_Friendship 1 (O)Book_Void 1 (O)Book_Speed 1 (O)Book_Marlon 1 (O)Book_PriceCatalogue 1 (O)Book_QueenOfSauce 1 (O)Book_Diamonds 1 (O)Book_Mystery 1 (O)Book_AnimalCatalogue 1 (O)Book_Speed2 1 (O)Book_Artifact 1 (O)Book_Horse 1 (O)Book_Grass 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "True",
+        "Book Frequency": "2 Weeks"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "BookSub_GuntherIntro_Letter": {
+          "Id": "BookSub_GuntherIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "MUSEUM_DONATIONS 15",
+          "Action": "AddMail Current BookSub_GuntherIntro"
+        },
+        "BookSub_BiweeklyBookAll_Letter": {
+          "Id": "BookSub_BiweeklyBookAll_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 11 25, PLAYER_HAS_MAIL any BookSub_GuntherIntro Received",
+          "Action": "AddMail Current BookSub_BiweeklyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "True",
+        "Book Frequency": "2 Weeks"
+      }
+    },
+
+    //MONTHLY BOOKS
+
+    //XP Books, Immediate Start, Monthly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_ZuzuIntro": "{{i18n:booksub.zuzumonthlyletter}} [#]Book Subscription",
+        "BookSub_MonthlyBook": "{{i18n:booksub.monthlyletter}} %item id (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "False",
+        "Book Frequency": "Monthly"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "BookSub_ZuzuIntro_Letter": {
+          "Id": "BookSub_ZuzuIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 1 2",
+          "Action": "AddMail Current BookSub_ZuzuIntro"
+        },
+        "BookSub_MonthlyBookXP_Letter": {
+          "Id": "BookSub_MonthlyBookXP_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 27",
+          "Action": "AddMail Current BookSub_MonthlyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "False",
+        "Book Frequency": "Monthly"
+      }
+    },
+
+    //All Books, Immediate Start, Monthly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_ZuzuIntro": "{{i18n:booksub.zuzumonthlyletter}} [#]Book Subscription",
+        "BookSub_MonthlyBook": "{{i18n:booksub.monthlyletter}} %item id (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 (O)Book_Trash 1 (O)Book_Crabbing 1 (O)Book_Bombs 1 (O)Book_Roe 1 (O)Book_WildSeeds 1 (O)Book_Woodcutting 1 (O)Book_Defense 1 (O)Book_Friendship 1 (O)Book_Void 1 (O)Book_Speed 1 (O)Book_Marlon 1 (O)Book_PriceCatalogue 1 (O)Book_QueenOfSauce 1 (O)Book_Diamonds 1 (O)Book_Mystery 1 (O)Book_AnimalCatalogue 1 (O)Book_Speed2 1 (O)Book_Artifact 1 (O)Book_Horse 1 (O)Book_Grass 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "False",
+        "Book Frequency": "Monthly"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "BookSub_ZuzuIntro_Letter": {
+          "Id": "BookSub_ZuzuIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 1 2",
+          "Action": "AddMail Current BookSub_ZuzuIntro"
+        },
+        "BookSub_MonthlylyBookAll_Letter": {
+          "Id": "BookSub_MonthlyBookAll_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 27",
+          "Action": "AddMail Current BookSub_MonthlyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "False",
+        "Book Frequency": "Monthly"
+      }
+    },
+
+    //XP Books, Donations Required, Monthly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_GuntherIntro": "{{i18n:booksub.gunthermonthlyletter}} [#]Book Subscription Gift",
+        "BookSub_MonthlyBook": "{{i18n:booksub.monthlyletter}} %item id (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "True",
+        "Book Frequency": "Monthly"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "BookSub_GuntherIntro_Letter": {
+          "Id": "BookSub_GuntherIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "MUSEUM_DONATIONS 15",
+          "Action": "AddMail Current BookSub_GuntherIntro"
+        },
+        "BookSub_MonthlyBookXP_Letter": {
+          "Id": "BookSub_MonthlyBookXP_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 27, PLAYER_HAS_MAIL any BookSub_GuntherIntro Received",
+          "Action": "AddMail Current BookSub_MonthlyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "XP",
+        "Museum Donations Required": "True",
+        "Book Frequency": "Monthly"
+      }
+    },
+
+    //All Books, Donations Required, Monthly
+
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "BookSub_GuntherIntro": "{{i18n:booksub.gunthermonthlyletter}} [#]Book Subscription Gift",
+        "BookSub_MonthlyBook": "{{i18n:booksub.monthlyletter}} %item id (O)PurpleBook 1 (O)SkillBook_0 1 (O)SkillBook_1 1 (O)SkillBook_2 1 (O)SkillBook_3 1 (O)SkillBook_4 1 (O)Book_Trash 1 (O)Book_Crabbing 1 (O)Book_Bombs 1 (O)Book_Roe 1 (O)Book_WildSeeds 1 (O)Book_Woodcutting 1 (O)Book_Defense 1 (O)Book_Friendship 1 (O)Book_Void 1 (O)Book_Speed 1 (O)Book_Marlon 1 (O)Book_PriceCatalogue 1 (O)Book_QueenOfSauce 1 (O)Book_Diamonds 1 (O)Book_Mystery 1 (O)Book_AnimalCatalogue 1 (O)Book_Speed2 1 (O)Book_Artifact 1 (O)Book_Horse 1 (O)Book_Grass 1 %%[#]Book Delivery"
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "True",
+        "Book Frequency": "Monthly"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "BookSub_GuntherIntro_Letter": {
+          "Id": "BookSub_GuntherIntro_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "MUSEUM_DONATIONS 15",
+          "Action": "AddMail Current BookSub_GuntherIntro"
+        },
+        "BookSub_MonthlyBookAll_Letter": {
+          "Id": "BookSub_MonthlyBookAll_Letter",
+          "Trigger": "DayEnding",
+          "Condition": "DAY_OF_MONTH 27, PLAYER_HAS_MAIL any BookSub_GuntherIntro Received",
+          "Action": "AddMail Current BookSub_MonthlyBook",
+          "MarkActionApplied": false
+        }
+      },
+      "When": {
+        "Book Type": "All",
+        "Museum Donations Required": "True",
+        "Book Frequency": "Monthly"
+      }
+    }
+
+
+  ]
+  }

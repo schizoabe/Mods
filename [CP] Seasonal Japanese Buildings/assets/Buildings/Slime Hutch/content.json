@@ -1,0 +1,41 @@
+{
+	"Changes": [
+		{
+			"Action": "EditImage",
+			"Target": "Buildings/Slime Hutch",
+			"FromFile": "assets/Buildings/Slime Hutch/Slime Hutch_{{season}}.png",
+			"When": {"Slime Hutch": "normal"}
+		},
+
+		{
+			"Action": "Load",
+			"Target": "Buildings/Slime Hutch",
+			"FromFile": "assets/Buildings/Slime Hutch/Big Slime Hutch_{{season}}.png",
+			"When": {"Slime Hutch": "big"}
+		},
+		{
+			"LogName": "Big Slime Hutch data edit",
+			"Action": "EditData",
+			"Target": "Data/Buildings",
+			"Fields": {
+				"Slime Hutch": {
+					"Size": {
+						"x": 11,
+						"y": 6
+					},
+					"SourceRect": {
+						"X": 0,
+						"Y": 0,
+						"Width": 176,
+						"Height": 144
+					},
+					"HumanDoor": {
+						"X": 5,
+						"Y": 5
+					}
+				}
+			},
+			"When": {"Slime Hutch": "big"}
+		}
+	]
+}

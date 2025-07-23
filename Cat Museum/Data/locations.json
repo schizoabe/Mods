@@ -1,0 +1,41 @@
+{
+	"Changes": [
+		{
+			"LogName": "Add Location Info",
+			"Action": "EditData",
+			"Target": "Data/Locations",
+			"Entries": {
+				"KathMuseum_Mirin": {
+					"DisplayName": "{{i18n: museum.name}}",
+					"DefaultArrivalTile": {
+						"X": 9,
+						"Y": 5
+					},
+					"CreateOnLoad": {
+						"MapPath": "Maps\\Kath_Museum"
+					}
+				}
+			}
+		},
+        {
+			"LogName": "Add Viewport Clamp",
+            "Action": "EditMap",
+            "Priority": "Late",
+          	"Target": "Maps/KathMuseum_Mirin",
+            "When": {"HasSeenEvent|contains=KathMuseum.CompleteMirin":false, "HasMod|contains=kath.cosmos, kath.wth.holidays": false},
+			"MapProperties": {
+                "ViewportClamp": "-5 -5 13 11"
+            }
+		}
+        /*{
+			"LogName": "Add Viewport Clamp",
+            "Action": "EditMap",
+            "Priority": "Late",
+          	"Target": "Maps/KathMuseum_Mirin",
+            "When": {"HasMod|contains=MirinExpanded": true},
+			"MapProperties": {
+                "ViewportClamp": "1 1 38 38"
+            }
+		},*/
+	]
+}

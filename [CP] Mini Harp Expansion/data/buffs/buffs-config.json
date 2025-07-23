@@ -1,0 +1,423 @@
+{
+    "Changes": [
+        {
+            "LogName": "Buff - Farming",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_Buff_Farming": {
+                    "DisplayName": "{{i18n:object.music-farming.buff}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 420000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicSheet",
+                    "IconSpriteIndex": 0,
+                    "Effects": {
+                        "FarmingLevel": 3.0
+                    },
+                    "ActionsOnApply": null,
+                    "CustomFields": null
+                }
+            }
+        },
+        {
+            "LogName": "Buff - Fishing",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_Buff_Fishing": {
+                    "DisplayName": "{{i18n:object.music-fishing.buff}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 420000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicSheet",
+                    "IconSpriteIndex": 1,
+                    "Effects": {
+                        "FishingLevel": 3.0
+                    },
+                    "ActionsOnApply": null,
+                    "CustomFields": null
+                }
+            }
+        },
+        {
+            "LogName": "Buff - Mining",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_Buff_Mining": {
+                    "DisplayName": "{{i18n:object.music-mining.buff}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 420000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicSheet",
+                    "IconSpriteIndex": 2,
+                    "Effects": {
+                        "MiningLevel": 3.0
+                    },
+                    "ActionsOnApply": null,
+                    "CustomFields": null
+                }
+            }
+        },
+        {
+            "LogName": "Buff - Luck",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_Buff_Luck": {
+                    "DisplayName": "{{i18n:object.music-luck.buff}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 840000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicSheet",
+                    "IconSpriteIndex": 3,
+                    "Effects": {
+                        "LuckLevel": 3.0
+                    },
+                    "ActionsOnApply": null,
+                    "CustomFields": null
+                }
+            }
+        },
+        {
+            "LogName": "Buff - Foraging",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_Buff_Foraging": {
+                    "DisplayName": "{{i18n:object.music-foraging.buff}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 420000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicSheet",
+                    "IconSpriteIndex": 4,
+                    "Effects": {
+                        "ForagingLevel": 3.0
+                    },
+                    "ActionsOnApply": null,
+                    "CustomFields": null
+                }
+            }
+        },        
+        {
+            "LogName": "Super Buff - Crops - Silver",
+            "Action": "EditData",
+            "When": {
+                "HasFlag |contains= {{ModId}}_Flag_SuperBuff_Farming_Silver": false
+            },
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_SuperBuff_Crops": {
+                    "DisplayName": "{{i18n:object.music-farming2.buff}}",
+                    "Description": "{{i18n:object.music-farming2.buff.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicSheet",
+                    "IconSpriteIndex": 5,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddMail Current {{ModId}}_Flag_SuperBuff_Farming_Silver"
+                    ],
+                    "CustomFields": null
+                }
+            }
+        },
+        {
+            "LogName": "Super Buff - Crops - Gold",
+            "Action": "EditData",
+            "When": {
+                "HasFlag: currentPlayer": "{{ModId}}_Flag_SuperBuff_Farming_Silver",
+                "HasFlag |contains= {{ModId}}_Flag_SuperBuff_Farming_Gold": false
+            },
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_SuperBuff_Crops": {
+                    "DisplayName": "{{i18n:object.music-farming2.buff}}",
+                    "Description": "{{i18n:object.music-farming2.buff.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicSheet",
+                    "IconSpriteIndex": 5,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddMail Current {{ModId}}_Flag_SuperBuff_Farming_Gold"
+                    ],
+                    "CustomFields": null
+                }
+            }
+        },
+        {
+            "LogName": "Super Buff - Fishing",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_SuperBuff_Fishing": {
+                    "DisplayName": "{{i18n:object.music-fishing2.buff}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 1200000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicSheet",
+                    "IconSpriteIndex": 6,
+                    "Effects": {
+                        "FishingLevel": 40.0
+                    },
+                    "ActionsOnApply": null,
+                    "CustomFields": null
+                }
+            }
+        },
+        {
+            "LogName": "Super Buff - Friendship",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_SuperBuff_Friendship": {
+                    "DisplayName": "{{i18n:object.music-luck2.buff}}",
+                    "Description": "{{i18n:object.music-luck2.buff.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicSheet",
+                    "IconSpriteIndex": 8,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Abigail 2000 ## AddFriendshipPoints Abigail 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Alex 2000 ## AddFriendshipPoints Alex 250",
+                        "AddFriendshipPoints Caroline 250",
+                        "AddFriendshipPoints Clint 250",
+                        "AddFriendshipPoints Demetrius 250",
+                        "If PLAYER_HAS_MET Current Willy ## AddFriendshipPoints Dwarf 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Elliott 2000 ## AddFriendshipPoints Elliott 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Emily 2000 ## AddFriendshipPoints Emily 250",
+                        "AddFriendshipPoints Evelyn 250",
+                        "AddFriendshipPoints George 250",
+                        "AddFriendshipPoints Gus 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Haley 2000 ## AddFriendshipPoints Haley 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Harvey 2000 ## AddFriendshipPoints Harvey 250",
+                        "AddFriendshipPoints Jas 250",
+                        "AddFriendshipPoints Jodi 250",
+                        "If PLAYER_HAS_MET Current Kent ## AddFriendshipPoints Kent 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Krobus 2000 ## AddFriendshipPoints Krobus 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Leah 2000 ## AddFriendshipPoints Leah 250",
+                        "If PLAYER_HAS_MET Current Leo ## AddFriendshipPoints Leo 250",
+                        "AddFriendshipPoints Lewis 250",
+                        "AddFriendshipPoints Linus 250",
+                        "AddFriendshipPoints Marnie 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Maru 2000 ## AddFriendshipPoints Maru 250",
+                        "AddFriendshipPoints Pam 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Penny 2000 ## AddFriendshipPoints Penny 250",
+                        "AddFriendshipPoints Pierre 250",
+                        "AddFriendshipPoints Robin 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Sam 2000 ## AddFriendshipPoints Sam 250",
+                        "If PLAYER_HAS_MET Current Willy ## AddFriendshipPoints Sandy 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Sebastian 2000 ## AddFriendshipPoints Sebastian 250",
+                        "If !PLAYER_FRIENDSHIP_POINTS Current Shane 2000 ## AddFriendshipPoints Shane 250",
+                        "AddFriendshipPoints Vincent 250",
+                        "If PLAYER_HAS_MET Current Willy ## AddFriendshipPoints Willy 250",
+                        "If PLAYER_HAS_MET Current Wizard ## AddFriendshipPoints Wizard 250"
+                    ],
+                    "CustomFields": null
+                }
+            }
+        },
+        {
+            "LogName": "Buffs - Friendship",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_Buff_Abigail": {
+                    "DisplayName": "{{i18n:object.scroll-abigail.name}}",
+                    "Description": "{{i18n:object.scroll-abigail.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 0,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Abigail 100"
+                    ],
+                    "CustomFields": null
+                },
+                "{{ModId}}_Buff_Penny": {
+                    "DisplayName": "{{i18n:object.scroll-penny.name}}",
+                    "Description": "{{i18n:object.scroll-penny.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 1,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Penny 100"
+                    ],
+                    "CustomFields": null
+                },
+                "{{ModId}}_Buff_Maru": {
+                    "DisplayName": "{{i18n:object.scroll-maru.name}}",
+                    "Description": "{{i18n:object.scroll-maru.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 2,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Maru 100"
+                    ],
+                    "CustomFields": null
+                },
+                "{{ModId}}_Buff_Leah": {
+                    "DisplayName": "{{i18n:object.scroll-leah.name}}",
+                    "Description": "{{i18n:object.scroll-leah.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 3,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Leah 100"
+                    ],
+                    "CustomFields": null
+                },
+                "{{ModId}}_Buff_Haley": {
+                    "DisplayName": "{{i18n:object.scroll-haley.name}}",
+                    "Description": "{{i18n:object.scroll-haley.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 4,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Haley 100"
+                    ],
+                    "CustomFields": null
+                },
+                "{{ModId}}_Buff_Emily": {
+                    "DisplayName": "{{i18n:object.scroll-emily.name}}",
+                    "Description": "{{i18n:object.scroll-emily.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 5,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Emily 100"
+                    ],
+                    "CustomFields": null
+                },
+                "{{ModId}}_Buff_Alex": {
+                    "DisplayName": "{{i18n:object.scroll-alex.name}}",
+                    "Description": "{{i18n:object.scroll-alex.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 6,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Alex 100"
+                    ],
+                    "CustomFields": null
+                },
+                "{{ModId}}_Buff_Shane": {
+                    "DisplayName": "{{i18n:object.scroll-shane.name}}",
+                    "Description": "{{i18n:object.scroll-shane.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 7,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Shane 100"
+                    ],
+                    "CustomFields": null
+                },
+                "{{ModId}}_Buff_Sebastian": {
+                    "DisplayName": "{{i18n:object.scroll-sebastian.name}}",
+                    "Description": "{{i18n:object.scroll-sebastian.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 8,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Sebastian 100"
+                    ],
+                    "CustomFields": null
+                },
+                "{{ModId}}_Buff_Sam": {
+                    "DisplayName": "{{i18n:object.scroll-sam.name}}",
+                    "Description": "{{i18n:object.scroll-sam.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 9,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Sam 100"
+                    ],
+                    "CustomFields": null
+                },
+                "{{ModId}}_Buff_Harvey": {
+                    "DisplayName": "{{i18n:object.scroll-harvey.name}}",
+                    "Description": "{{i18n:object.scroll-harvey.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 10,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Harvey 100"
+                    ],
+                    "CustomFields": null
+                },
+                "{{ModId}}_Buff_Elliott": {
+                    "DisplayName": "{{i18n:object.scroll-elliott.name}}",
+                    "Description": "{{i18n:object.scroll-elliott.description}}",
+                    "IsDebuff": false,
+                    "GlowColor": null,
+                    "Duration": 6000,
+                    "MaxDuration": -1,
+                    "IconTexture": "{{ModId}}\\MusicScroll",
+                    "IconSpriteIndex": 11,
+                    "Effects": null,
+                    "ActionsOnApply": [
+                        "AddFriendshipPoints Elliott 100"
+                    ],
+                    "CustomFields": null
+                }
+            }
+        }
+    ]
+}

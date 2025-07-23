@@ -1,0 +1,148 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data Sandy",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Sandstorm": {
+					"Id": "kath.weathering_Sandstorm",
+					"DisplayName": "{{i18n: Weather.Sandstorm}}",
+
+					"Forecast": "{{i18n: Weather.Sandstorm.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Sandstorm.ForecastIsland}}", "Desert": "{{i18n: Weather.Sandstorm.ForecastDesert}}",},
+					
+					"UseNightTiles": false,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+										
+					//"MusicOverride": "KathSandstorm",
+					"MusicFrequencyOutside": 75,
+					"MusicFrequencyInside": 10,
+					"SoftMusicOverrides": [
+					    {
+							"Id": "DesertStormy",
+							"Condition": "LOCATION_CONTEXT Target Desert",
+							"Track": "KathSandstorm"
+						}
+					],
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 8},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 13},
+					"TVFrames": 4,
+
+
+					"TotemMessage": "{{i18n: Weather.SandStormTotem}}",
+					"TotemScreenTint": "yellow",
+					"TotemSound": "wind",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDSandstorm 3",
+							],
+						},	
+						{
+							"Id": "DrainStamina",
+							"Type": "ModifyStamina",
+							"Amount": -20,
+							"MinValue": 20,
+							"Chance": 0.65,
+							"Rate": "600",
+							"Condition": "LOCATION_NAME Target Desert",
+							"TargetMapType": "Outdoors",
+						},						
+						{
+							"Id": "DrainHealth",
+							"Type": "ModifyHealth",
+							"Amount": -10,
+							"MinValue": 25,
+							"Chance": 0.95,
+							"Rate": "600",
+							"Condition": "LOCATION_NAME Target Desert, !PLAYER_HAS_BUFF Current PDWUVGoggles",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "GainHealth",
+							"Type": "ModifyHealth",
+							"Amount": 5,
+							"MaxValue": 100,
+							"Chance": 0.85,
+							"Rate": "100",
+							"Condition": "LOCATION_NAME Target SandyHouse",
+							"TargetMapType": "Indoors",
+						},
+
+						{
+							"Id": "SludgeWalk",
+							"Type": "Buff",
+							"BuffId": "SomeWeather1",
+							"Condition": "LOCATION_NAME Target Desert, SYNCED_RANDOM tick sludge_walk 0.85, !PLAYER_HAS_BUFF Current PDWUVGoggles",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "SludgeWalkWorse",
+							"Type": "Buff",
+							"BuffId": "SomeWeather2",
+							"Condition": "LOCATION_NAME Target Desert, SYNCED_RANDOM tick sludge_walk 0.35, !PLAYER_HAS_BUFF Current PDWUVGoggles",
+							"TargetMapType": "Outdoors",
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "SandParticles",
+							"Condition": "LOCATION_NAME Target Desert, !PLAYER_HAS_BUFF Current PDWUVGoggles",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 32, "Width": 16, "Height": 16 },
+							"Frames": "2",
+							"TimePerFrame": "100",
+							"Speed": "1, 1",
+							"ViewSpeed": "1, 1",
+							"Scale": 4,
+						},
+						{
+							"Id": "LightingSand",
+							"Condition": "LOCATION_NAME Target Desert",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "205, 151, 27",
+							"Opacity": 0.62
+						},
+						{
+							"Id": "FoggySand",
+							"Condition": "LOCATION_NAME Target Desert",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 0, "Y": 32, "Width": 32, "Height": 32 },
+							"Color": "205, 151, 27",
+							"Opacity": 0.38,
+							"Speed": "3, 3",
+							"ViewSpeed": "-1, -1",
+							"Scale": 100,
+						},
+
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

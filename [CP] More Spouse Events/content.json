@@ -1,0 +1,445 @@
+{
+"Format": "2.0.0",
+"Changes": [
+    
+    // 1.0.0 ------------------------------------------------------------------
+    
+    //Alex FarmHouse
+{
+"Action": "EditData",
+"Target": "Data/Events/FarmHouse",
+"Entries": {
+            "49021921/O Alex/L/w sunny/z spring/z summer/z fall/u 25/t 2200 2600": "tinymusicbox/26 25/farmer 27 28 0 Alex 27 29 0/skippable/move farmer 0 -2 0/pause 300/move Alex 0 -2 0/pause 650/emote farmer 8/pause 500/speak Alex \"I told you I would show you just how grateful I am once we got home didn't I?$4\"/question fork0 \"...#Get off me you creep!#...\"/fork alexcreep/pause 700/speak Alex \"...$0\"/pause 500/speak Alex \"Here you go. It's nothing fancy, but I do hope you like it.$0\"/pause 700/faceDirection farmer 2/pause 700/speak Alex \"Clint, helped me make the chain and  I made the pendant with the winding key of my mom's music box.$0\"/pause 800/speak Alex \"Why are you looking at me like that? I'm fine!$1\"/pause 700/speak Alex \"The box is important to me but so are you.$1\"/pause 700/speak Alex \"Besides my mom was old-fashioned, if she had any jewelry I am sure she would have wanted me to give it to you.$1\"/pause 700/speak Alex \"With this pendant it feels as if she gave us her blessing which makes me incredibly happy.$1\"/pause 700/speak Alex \"Besides, we can still play the music box together, so it really is no big deal.$1\"/pause 600/speak Alex \"@.$0#$b#I....$2\"/pause 950/emote Alex 40/pause 700/speak Alex \"Growing up I had to learn how to hide my feelings. I felt like I needed to be strong, both for myself and for my mom.$2\"/pause 700/speak Alex \"And after she passed away, it felt even harder to let anyone in, even my granparents. I guess I was scared to start relying on someone else and eventually have to go back to how alone I felt before.$2\"/pause 700/speak Alex \"But things started to change after I met you.$4\"/pause 700/speak Alex \"Now I am not as afraid of failing or showing my weaknesses, cause I know that even if the whole world is against us we will always be a team.$4\"/pause 700/speak Alex \"I am grateful that you came to the valley, I am grateful we became close even if sometimes I didn't really deserve your friendship, and I am grateful to be your husband and be able to share the rest of my life with you.$4\"/pause 500/speak Alex \"I love you!$4\"/pause 650/emote farmer 60/pause 500/speak Alex \"...$1\"/pause 500/speak Alex \"I don’t think I’ve ever seen you so flustered before…$0\"/pause 500/speak Alex \"Was I too sappy or... were you perhaps expecting something else?$0\"/pause 500/speak Alex \"Hahaha! I will take that expression as a yes.$1\"/pause 500/speak Alex \"Wow @, I didn't know you were so dirty-minded.$0\"/pause 500/speak Alex \"But... I guess I should take responsability.$0\"/pause 500/speak Alex \"Come here.$1\"/pause 300/warp Alex 28 26/pause 50/animate Alex true true 5000 42/animate farmer false true 5000 101/playsound dwop/pause 2500/stopAnimation farmer/stopAnimation Alex 12/faceDirection farmer 1/faceDirection Alex 3/pause 500/speak Alex \"I really love you.$4\"/pause 700/emote Alex 20/pause 500/emote farmer 20/pause 900/speak Alex \"Now... should we take this somewhere else?$4\"/pause 700/emote farmer 32/pause 700/end"
+            },
+      },
+
+    //Maru Farmhouse | 12 hearts
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "49021922/L/O Maru/F/f Maru 3000/e 6/t 1800 2000": "spaceMusic/50 26/Maru 54 26 1 farmer 49 26 1/skippable/animate Maru false true 200 16 17 18 19 20 21 22 23/move farmer 4 0 1/pause 700/stopAnimation Maru/pause 500/faceDirection Maru 3/pause 700/speak Maru \"Hey @. My parents called asking us to go over there for dinner. Do you think you can take the night off?$0\"/question fork0 \"...#Tell them I'm busy!#Sure, it's just that...\"/fork marubusy/emote Maru 8/pause 500/question fork0 \"...#It's nothing...#I don't think your dad likes me very much...\"/fork maruhide/pause 500/speak Maru \"Why do you say that? My parents love you!$0\"/emote farmer 40/pause 500/speak Maru \"He said what?!$9\"/pause 500/speak Maru \"Oh my god! I can't believe he threatened you like that when we barely even knew each other!$5\"/pause 500/speak Maru \"Is that why you seemed a bit distant after that day?$2\"/emote farmer 40/pause 500/speak Maru \"I can't believe this...$2\"/pause 500/speak Maru \"I'm sorry he made you feel that way in the past, but I am sure he likes you.$0\"/pause 500/speak Maru \"He can be a bit overprotective of me, but he knows how happy you make me.$0\"/emote farmer 32/pause 800/speak Maru \"Also just so you know, I've never seen you as a distraction. If anything, you inspire me to try new things and take on new challenges.$4\"/pause 500/speak Maru \"I really love you.$4\"/emote farmer 20/pause 500/speak Maru \"You know what? I will tell them we will visit another day.$4\"/pause 500/emote farmer 28/pause 500/speak Maru \"No, don't get me wrong! It's not because I don't think you would be welcome.$9\"/pause 500/speak Maru \"It's just that... we both have been so busy lately. I'd rather spend some time alone with you.$4\"/emote Maru 20/end dialogue Maru \"So... is there anything you'd like to do?$4\""
+            },
+      },
+
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "marubusy": "pause 400/speak Maru \"Ok, then... I will tell them know we can't make it today.$2\"/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "maruhide": "pause 400/speak Maru \"Okay, I won't pry. But do know you can always talk to me about anything bothering you okay?$0\"/emote farmer 32/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "alexcreep": "friendship Alex -250/speak Alex \"Ah! sorry... I just...$7\"/pause 400/faceDirection farmer 2/pause 400/speak Alex \"I wanted to give you a surprise... but, never mind. I'm sorry... I'll go change my clothes. See you in our room.$2\"/emote farmer 28/move Alex 2 0 1/end"
+   },
+      },
+
+    //Harvey Farmhouse | 12 hearts
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": { "Weather": "Snow"},
+"Entries": {
+            "49021923/L/O Harvey/F/e 58/f Harvey 3000/z spring/z summer/z fall/t 1800 2000": "Cyclops/23 24/Harvey 22 24 0 farmer 27 24 3/skippable/move farmer -4 0 3/pause 300/faceDirection Harvey 1/pause 300/speak Harvey \"Welcome back home dear. It's really cold outside today, isn't it?$0\"/pause 300/emote farmer 28/speak Harvey \"You don't look so good. Are you feeling sick?$8\"/faceDirection farmer 2/animate farmer false false 700 95/pause 700/animate farmer false true 700 5/emote Harvey 16/pause 200/globalFade 0.014/viewport -30 4/changeLocation HarveyRoom/viewport -30 4/warp farmer 12 4/warp Harvey 11 4/faceDirection Harvey 1/faceDirection farmer 2/animate farmer false false 2500 95 96/globalFadeToClear 0.014 true/viewport 12 4/pause 500/speak Harvey \"Easy now, your fever is still quite high.$0\"/pause 500/emote farmer 8/pause 500/speak Harvey \"Oh! I brought you to my room at the clinic.$8\"/pause 500/speak Harvey \"We had medicine at home, but I panicked when you passed out.$2\"/pause 500/speak Harvey \"Carrying you all the way here wasn't easy but thanks to the aerobic classes I somehow managed.$0\"/pause 500/speak Harvey \"Enough about that though. How are you feeling?$0\"/question fork0 \"...#Worse after being dragged all the way here in the cold!#Better, thanks to you!\"/fork Harveydrag/pause 500/speak Harvey \"I am so relieved to hear that.$4\"/pause 500/emote Harvey 40/pause 500/speak Harvey \"I got so scared when you passed out.$2\"/pause 500/speak Harvey \"Deep down I knew it was probably just a cold, but what if it was something worse?$2\"/pause 500/speak Harvey \"It got me thinking... since I am the only doctor in town, if something ever happened to you... I would be the only one who could help you... and that's so scary.$2\"/pause 500/speak Harvey \"Please promise me you will take care of yourself okay? You can take a break from working so hard sometimes.$2\"/pause 500/speak Harvey \"Promise me we will grow old together and that nothing will ever happen to you.$2\"/question fork0 \"...#Not if I divorce you first! Haha.#I promise.\"/fork Harveypromise/pause 500/friendship Harvey 50/speak Harvey \"I'm glad.$0\"/pause 500/speak Harvey \"I know something like this is beyond our control, but hearing you say that does give me some peace of mind.$1\"/pause 500/speak Harvey \"I love you!$4\"/emote farmer 20/pause 500/speak Harvey \"Now, drink this medicine and rest some more. I will be right here if you need anything.$4\"/animate farmer false false 300 90/pause 300/animate farmer false false 300 91/pause 300/animate farmer false false 1500 92/playSound gulp/playSound gulp/playSound gulp/playSound gulp/playSound gulp/pause 2500/animate farmer false true 1500 95/pause 1500/end newDay"
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/HarveyRoom",
+"Entries": {
+            "Harveydrag": "friendship Harvey -50/speak Harvey \"I'm sorry... Looking back it really wasn't a good idea.$2\"/speak Harvey \"I will go get some water for you, try to rest.$2\"/emote farmer 12/move Harvey 0 2 2/end newDay"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/HarveyRoom",
+"Entries": {
+            "Harveypromise": "friendship Harvey -50/speak Harvey \"That's... not a very funny joke. You... wouldn't right?$2\"/pause 500/speak Harvey \"If there is anything on your mind, please talk to me... we can work it out.$2\"/end newDay"
+   },
+      },
+
+    //Leah Farmhouse | 2 kids
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": { "ChildGenders |valueAt=0": "Male"},
+"Entries": {
+            "49021924/L/O Leah/F/e 3091462/k 49021925/f {{ChildNames |valueAt=0}} 1000/t 2000 2200": "breezy/50 23/Leah 53 24 0 farmer 49 24 1/skippable/move farmer 3 0 1/pause 300/faceDirection Leah 3/speak Leah \"There you are @! I was wondering when you would get home.$1\"/pause 500/speak Leah \"I have something to show you actually!$1\"/pause 500/speak Leah \"%kid1 made this painting all by himself while watching me work on my canvas.$0\"/pause 500/speak Leah \"He made a total mess of my paints, but he looked so proud when he showed it to me. I couldn't even get mad.$1\"/pause 500/speak Leah \"I wish you were here to see the look on his face.$0\"/pause 500/speak Leah \"Don't you think it looks great?$0\"/question fork0 \"...#I really don't get art. It looks pretty bad to me.#It looks amazing! He clearly takes after you.\"/fork Leahbadkidartm/pause 500/friendship Leah 25/speak Leah \"I'm glad you think so too.$4\"/pause 500/speak Leah \"Although he definitely takes after you when it comes to art style.$1\"/pause 500/emote farmer 32/pause 300/speak Leah \"I'm so happy that he seems interested in art.$1\"/pause 500/speak Leah \"Maybe I should start teaching him a bit. It would be a good way for him to express his creativity.$0\"/pause 500/speak Leah \"Anyway, I will start working on a frame so that we can hang it. I should be done by tomorrow morning.$0\"/pause 500/emote Leah 8/quickQuestion Why are you looking at me like that?#Nothing... You just look cute all excited.#Do we really need to hang it?(break)pause 500\\emote Leah 20\\speak Leah \"You are the cute one for saying all this mushy stuff out of nowhere.$4\"\\friendship Leah 25(break)speak Leah \"I will pretend I didn't hear that.$3\"/end"
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "Leahbadkidartm": "friendship Leah -100/speak Leah \"What?! How could you say that?$5\"/pause 300/speak Leah \"I am glad %kid1 is asleep right now. He would have been heartbroken to hear this from one of his parents.$5\"/pause 300/speak Leah \"If I had received this type of comment when I was just starting, I might have never tried to get better at art.$2\"/pause 300/speak Leah \"You better keep your opinion to yourself if he shows it to you.$5\"/pause 300/speak Leah \"I am done with this conversation. If you'll excuse me I have to go back to working on this piece.$5\"/faceDirection Leah 0/emote Leah 12/emote farmer 28/move farmer -2 0 3/addMailReceived baddrawingkidleah true/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": { "ChildGenders |valueAt=0": "Female"},
+"Entries": {
+            "49021925/L/O Leah/F/e 3091462/k 49021924/f {{ChildNames |valueAt=0}} 1000/t 2000 2200": "breezy/50 23/Leah 53 24 0 farmer 49 24 1/skippable/move farmer 3 0 1/pause 300/faceDirection Leah 3/speak Leah \"There you are @! I was wondering when you would get home.$1\"/pause 500/speak Leah \"I have something to show you actually!$1\"/pause 500/speak Leah \"%kid1 made this painting all by herself while watching me work on my canvas.$0\"/pause 500/speak Leah \"She made a total mess of my paints, but she looked so proud when she showed it to me. I couldn't even get mad.$1\"/pause 500/speak Leah \"I wish you were here to see the look on her face.$0\"/pause 500/speak Leah \"Don't you think it looks great?$0\"/question fork0 \"...#I really don't get art. It looks pretty bad to me.#It looks amazing! She clearly takes after you.\"/fork Leahbadkidartf/pause 500/friendship Leah 25/speak Leah \"I'm glad you think so too.$4\"/pause 500/speak Leah \"Although she definitely takes after you when it comes to art style.$1\"/pause 500/emote farmer 32/pause 300/speak Leah \"I'm so happy that she seems interested in art.$1\"/pause 500/speak Leah \"Maybe I should start teaching her a bit. It would be a good way for her to express her creativity.$0\"/pause 500/speak Leah \"Anyway, I will start working on a frame so that we can hang it. I should be done by tomorrow morning.$0\"/pause 500/emote Leah 8/quickQuestion Why are you looking at me like that?#Nothing... You just look cute all excited.#Do we really need to hang it?(break)pause 500\\emote Leah 20\\speak Leah \"You are the cute one for saying all this mushy stuff out of nowhere.$4\"\\friendship Leah 25(break)speak Leah \"I will pretend I didn't hear that.$3\"/end"
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "Leahbadkidartf": "friendship Leah -100/speak Leah \"What?! How could you say that?$5\"/pause 300/speak Leah \"I am glad %kid1 is asleep right now. She would have been heartbroken to hear this from one of her parents.$5\"/pause 300/speak Leah \"If I had received this type of comment when I was just starting, I might have never tried to get better at art.$2\"/pause 300/speak Leah \"You better keep your opinion to yourself if she shows it to you.$5\"/pause 300/speak Leah \"I am done with this conversation. If you'll excuse me I have to go back to working on this piece.$5\"/faceDirection Leah 0/emote Leah 12/emote farmer 28/move farmer -2 0 3/addMailReceived baddrawingkidleah true/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "49021926/O Leah/c 1/e 49021924 49021925/l baddrawingkidleah/t 600 700": "breezy/23 24/Leah 22 24 0 farmer 27 24 3/move farmer -4 0 3/pause 300/faceDirection Leah 1/pause 300/quickQuestion Hey honey, how did you sleep?#Terribly. I missed you in bed.#Great! So... is it done?(break)pause 500\\emote Leah 20\\speak Leah \"Sorry, I did wake up quite early today. But it was for a good reason.$4\"(break)pause 500\\speak Leah \"Yes! I just finished framing it.$1\"/pause 300/speak Leah \"Here it is!$1\"/pause 300/speak Leah \"What do you think? I made the frame with some of the techniques I learned from Robin.$0\"/pause 300/speak Leah \"I can't wait to see %kid1's reaction after seeing it on the wall.$1\"/pause 300/speak Leah \"I will leave it to you to find a good spot for it.$0\"/emote Leah 20/awardFestivalPrize marniePainting/emote farmer 32/end dialogue Leah \"Have you put the painting up yet?$0\""
+            },
+      },
+
+    //Sam Farmhouse | 2 kids
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "49021927/L/O Sam/F/f {{ChildNames |valueAt=0}} 1000/f {{ChildNames |valueAt=1}} 1000/f Kent 1500/f Jodi 1500/f Vincent 1500/t 600 700": "50s/23 24/Sam 22 24 0 farmer 27 24 3/skippable/move farmer -4 0 3/pause 300/faceDirection Sam 1/pause 300/faceDirection Sam 1/speak Sam \"Good morning babe.$1\"/pause 300/animate Sam false true 5000 38/animate farmer true true 5000 101/playsound dwop/emote Sam 20/pause 300/stopAnimation farmer/stopAnimation Sam 6/pause 300/speak Sam \"By the way, my mom just called and asked me to take the kids there for a quick visit.$0\"/pause 300/speak Sam \"I'm planning on going there around 4 P.M. If you are not busy, why don't you join us? I'm sure my parents would love to see you too.$1\"/emote farmer 32/end dialogue Sam \"Are you coming to my parent's? No pressure if you are busy, but I'd love to have you there.$0\""
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/SamHouse",
+"Entries": {
+            "49021928/O Sam/F/e 49021927/t 1600 1800": "50s/8 12/Sam 6 16 0 farmer 3 16 0 Kent 7 7 0 Jodi 7 5 2 Vincent 11 21 1 Toddler 4 16 0 Toddler_Girl 5 16 0/skippable/pause 300/speak Sam \"Mom, Dad! We are here!$0\"/pause 300/move Vincent 0 -2 0/doAction 11 18/move Vincent 0 -3 0/move Kent 0 6 2 true/move Jodi 0 7 2 true/move Vincent -4 0 3 true/move Kent -1 0 2/pause 300/speak Vincent \"Sam! @!$0\"/pause 300/speak Jodi \"Hello everyone. Make yourselves at home.$0\"/pause 300/speak Jodi \"I just gotta finish some snacks I'm preparing. I will join you all in a few minutes.$0\"/pause 300/speak Sam \"I can lend you a hand mom.$0\"/pause 300/speak Jodi \"Oh! Thank you sweetie. Kent, please entertain our guests in the meantime.$0\"/pause 300/speak Kent \"Leave it to me!$1\"/move Sam 0 -2 0/move Sam 1 0 0/move Jodi 0 -7 0 true/move Sam 0 -1 0/move Kent -1 0 2/move Kent 0 1 2/speak Kent \"So... How are you doing @?$0\"/pause 100/emote farmer 32/pause 200/speak Kent \"I'm glad! If you and Sam ever need help in the farm or taking care of the children you can always call me and Jodi. We'd be happy to help.$1\"/pause 200/speak Kent \"And talking about the children... How are you young ones? Are you not gonna greet grandpa?$1\"/emote Toddler 56/emote Toddler_Girl 56/pause 200/speak Kent \"Now, why don't you two go play with uncle Vincent in his room?$1\"/emote Vincent 28/speak Vincent \"Uncle?! I'm not old enough to be an uncle!$2\"/pause 200/speak Kent \"Uh well, they are your brother's children so technically you...$2\"/speak Vincent \"...$2\"/speak Kent \"Well it doesn't matter, just go play okay?$0\"/speak Vincent \"Okay!$1\"/move Vincent 4 0 2/move Vincent 0 7 0/move Toddler_Girl 6 0 2/move Toddler_Girl 0 6 2 true/move Toddler 1 0 2/move Toddler 0 5 1/speak Kent \"Now that we are alone we can finally talk.$0\"/pause 200/speak Kent \"Oh don't be nervous. It's nothing serious.$1\"/pause 200/speak Kent \"I just wanted to say that I'm really happy you and Sam are doing so well.$1\"/pause 200/speak Kent \"I won't lie, at first I wasn't very supportive of the wedding.$0\"/pause 200/speak Kent \"Sam was still quite imature to say the least, and I worried that you two were rushing things. Specially cause I know how hard it can be to start a family at a young age.$0\"/pause 200/speak Kent \"But I can see how much he grew after meeting you and I'm proud of the man he became.$1\"/pause 200/speak Kent \"I'm glad to have you as part of the family kiddo.$1\"/move Sam 0 7 2/faceDirection Sam 3/speak Sam \"Hey, what are you two talking about?$0\"/faceDirection Kent 1/faceDirection farmer 1/pause 200/speak Kent \"Oh! Just about the farm and stuff. Nothing to worry about.$1\"/speak Sam \"Okay then. Mom is calling you two to the kitchen. The snacks are ready.$0\"/faceDirection Kent 2/pause 200/speak Kent \"Great! You can go with Sam, @. I'll call the kids.$1\"/pause 200/globalFade 0.014/viewport -30 4/warp Kent 3 14/warp Sam 4 14/warp Jodi 7 13/warp farmer 6 13/warp Vincent 4 16/warp Toddler 3 16/warp Toddler_Girl 5 16/faceDirection Jodi 3/faceDirection Kent 1/animate Vincent false true 22 22/animate Toddler false true 22 22/animate Toddler_Girl true true 22 22/globalFadeToClear 0.014 true/viewport 8 12/pause 200/speak Jodi \"Kids sure do grow fast!$0\"/pause 200/speak Jodi \"I remember when Sam was just a baby! This one time he...$1\"/emote Sam 16/faceDirection Sam 1/pause 200/speak Sam \"Wow! Look at the time, we should get going!$8\"/pause 200/speak Jodi \"What? But already?! I was just telling @, that story of when you...$2\"/pause 200/speak Sam \"Yep! The kids gotta go to bed, it's already past their bed time.$8\"/pause 200/speak Jodi \"Oh! I understand.$0\"/pause 200/speak Jodi \"Well it was a pleasure having you all. The house hadn't felt so lively ever since you moved out Sam.$0\"/pause 200/speak Jodi \"Make sure to visit us again soon okay, honey?$0\"/pause 200/speak Sam \"Of course mom.$0\"/pause 200/speak Jodi \"And you too @! You are always welcome in our home.$1\"/emote farmer 32/end dialogue Sam \"It was fun, wasn't it? We should visit them again sometime.$0\""
+            },
+      },
+{
+"Action": "EditImage",
+"Target": "Characters/Toddler_girl",
+"FromFile": "assets/Toddler_girl_n.png",
+"PatchMode": "Replace",
+"When": {"DayEvent": "spirit's eve", "Spouse": "Emily"}
+      },
+{
+"Action": "EditImage",
+"Target": "Characters/Toddler",
+"FromFile": "assets/Toddler_n.png",
+"PatchMode": "Replace",
+"When": {"DayEvent": "spirit's eve", "Spouse": "Emily"}
+      },
+{
+"Action": "EditImage",
+"Target": "Characters/Toddler_girl_dark",
+"FromFile": "assets/Toddler_girl_dark_n.png",
+"PatchMode": "Replace",
+"When": {"DayEvent": "spirit's eve", "Spouse": "Emily"}
+      },
+{
+"Action": "EditImage",
+"Target": "Characters/Toddler_dark",
+"FromFile": "assets/Toddler_dark_n.png",
+"PatchMode": "Replace",
+"When": {"DayEvent": "spirit's eve", "Spouse": "Emily"}
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": {"DayEvent": "spirit's eve", "Spouse": "Emily"},
+"Entries": {
+            "49021929/L/f {{ChildNames |valueAt=0}} 1000/f {{ChildNames |valueAt=1}} 1000/t 600 2200": "EmilyTheme/50 26/Emily 54 25 2 farmer 49 24 1 Toddler 53 25 2 Toddler_girl 55 25 2/skippable/move farmer 2 0 1/pause 300/faceDirection Emily 3/emote Emily 16/pause 300/move Emily 0 -1 0/move Emily -2 0 3/speak Emily \"Hi, honey.$1\"/pause 300/speak Emily \"I'm finally done with that little project I'd been working on for the past days.$0\"/pause 300/speak Emily \"And right on time for the spirit's eve festival.$0\"/pause 300/speak Emily \"So... What do you think?$0\"/question fork0 \"...#Take these off. They look like clowns.#They look amazing! You've outdone yourself Emily.\"/fork emilymad/emote Emily 20/pause 300/speak Emily \"Thank you! I'm glad you and the kids seem to like it.$1\"/friendship Emily 50/pause 300/speak Emily \"It was actually really hard to come up with ideas for the costumes.$0\"/pause 300/speak Emily \"I almost asked you for suggestions, but I wanted it to be a surprise.$1\"/faceDirection Emily 1/pause 300/speak Emily \"Kids, come closer so that your dad can take a better look at how adorable you two look.^Kids, come closer so that your mom can take a better look at how adorable you two look.$0\"/move Toddler -2 0 0 true/move Toddler_girl -1 0 0/faceDirection farmer 2/faceDirection Emily 2/pause 200/emote Toddler 32/emote Toddler_girl 32/pause 300/emote farmer 20/pause 300/faceDirection Emily 3/faceDirection farmer 1/speak Emily \"I'll call Haley to see if she can drop by and take some pictures of them before the festival. Why don't the 3 of you play castle for a little bit while I do that?$0\"/emote Emily 20/end dialogue Emily \"They look so adorable. I can't stop looking at them.$1\""
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "emilymad": "friendship Emily -500/emote Toddler 28/emote Toddler_girl 28/pause 300/speak Emily \"How could you say that!$5\"/pause 300/speak Emily \"It's fine if you don't like the costumes, but to say that in front of the kids is unnaceptable!$5\"/move Emily 2 0 2/faceDirection Toddler 0/faceDirection Toddler_girl 0/speak Emily \"Don't worry kids. You two look adorable as always. Daddy's just in a bad mood.^Don't worry kids. You two look adorable as always. Mommy's just in a bad mood.$2\"/pause 300/speak Emily \"Now, how about we wipe those tears and play castle for a little bit while daddy thinks about what he's done?^Now, how about we wipe those tears and play castle for a little bit while mommy thinks about what she's done?$0\"/emote farmer 28/end dialogue Emily \"Not now.$5\""
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": {"Spouse": "Elliott"},
+"Entries": {
+            "49021930/L/F/f {{ChildNames |valueAt=0}} 1000/f {{ChildNames |valueAt=1}} 1000/t 1800 2200": "elliottPiano/50 26/Elliott 53 24 2 farmer 49 26 1 Toddler 53 25 0 Toddler_girl 54 25 0/skippable/animate Elliott false true 2000 32 33 34/speak Elliott \"The little junimo had finally returned to its home.$0\"/pause 300/speak Elliott \"With the help of the farmer, he was no longer alone.$0\"/pause 300/speak Elliott \"He hugged his parents, the room filled with laughter.$0\"/pause 300/speak Elliott \"For they all lived happily ever after. The end.$0\"/pause 300/stopAnimation Elliott/move farmer 3 0 0/move farmer 0 -2 0/faceDirection farmer 1/faceDirection Elliott 3/speak Elliott \"Oh honey! Great timing. I was about to put the kids to bed. Could you help me by carrying %kid1? I will take %kid2.\"/pause 300/globalFade 0.014/viewport -30 4/pause 300/speak Elliott \"Sleep tight, my little angels.$1\"/warp farmer 26 20/warp Elliott 27 20/faceDirection Elliott 2/faceDirection farmer 2/globalFadeToClear 0.014 true/viewport 27 26/move farmer 0 2 1 true/move Elliott 0 2 3 true/pause 300/speak Elliott \"Say @. Did you perhaps catch the end of today's story?$0\"/question fork0 \"...#I didn't really pay attention. I'm too busy for silly stories.#Just a little bit, but it seemed nice.\"/fork elliottsad/friendship Elliott +50/pause 300/speak Elliott \"I'm glad you think so!$1\"/pause 300/speak Elliott \"I've been wanting to write a book for our kids for a while now, and a few days ago I finally did it!$1\"/pause 300/speak Elliott \"I was actually inspired by that story you told me of how you first met the junimos.$0\"/pause 300/speak Elliott \"The narrative itself was created by me, of course. However, I tried to use you as a model for my protagonist. I hope you don't mind.$0\"/pause 300/speak Elliott \"I kept asking myself: What would @ do in this situation?$0\"/question fork0 \"...#Do I get a percentage of the royalties then?#I'm honored.\"/fork elliottlaugh/friendship Elliott +50/emote Elliott 20/pause 300/speak Elliott \"You know... I spent so much time thinking about you these days that I am afraid I've fallen even deeper in love with you.$4\"/animate Elliott false true 5000 35/animate farmer false true 5000 101/playsound dwop/pause 500/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Elliott 12/faceDirection farmer 1/faceDirection Elliott 3/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/emote Elliott 16/speak Elliott \"Oh! We'd better move this somewhere else. We don't want to wake up the kids now, do we?$4\"/end"
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "elliottsad": "friendship Elliott -150/pause 300/speak Elliott \"I see...$2\"/pause 300/speak Elliott \"Well, shall we go to bed then?$2\"/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "elliottlaugh": "pause 300/speak Elliott \"Hahaha! I don't think I will publish this one, since it was meant to be a gift to our kids.$1\"/pause 300/speak Elliott \"But if I do, we can discuss your percentage. Even if in the end we share the same account.$1\"/playSound leafrustle/pause 250/playSound leafrustle/pause 250/playSound leafrustle/emote Elliott 16/speak Elliott \"Oh! We'd better move this conversation somewhere else. We don't want to wake up the kids now, do we?$0\"/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": {"Spouse": "Shane", "Query: {{Hearts:Shane}} <= 8": true},
+"Entries": {
+            "49021931/L/F/t 1300 2200": "shaneTheme/50 26/Shane 53 24 2 farmer 49 26 1/skippable/animate Shane false true 1000 20 21 22 23 24 25/move farmer 4 0 1/pause 300/faceDirection farmer 2/pause 300/faceDirection farmer 3/pause 300/faceDirection farmer 0/emote farmer 12/pause 300/speak Shane \"What's the problem?$5\"/pause 300/question fork0 \"...#Just because you are a pig, doesn't mean you have to live like one. Clean up this mess.#Can you please tidy your room a bit?\"/fork shaneangry/pause 300/emote Shane 12/stopAnimation Shane/pause 300/speak Shane \"Ugh, why do you care if it's messy? You hardly ever come in here anyway. Besides it's how I like it.$5\"/pause 300/emote farmer 40/pause 300/speak Shane \"Fine... You are right. I will clean my room tomorrow.$2\"/end dialogue Shane \"Don't worry. I will start cleaning my room first thing tomorrow.$2\""
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "shaneangry": "friendship Shane -250/pause 300/emote Shane 12/stopAnimation Shane/pause 300/speak Shane \"Are you serious?! I was already having a bad enough day without you yelling at me.$5\"/pause 300/speak Shane \"Besides you hardly ever come in here anyway! Why do you care?!$5\"/pause 300/speak Shane \"But fine! It's your house after all. I will do as you want!$5\"/end dialogue Shane \"Gosh! Stop nagging me! I already said I'd clean it.$5\""
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": {"Spouse": "Shane", "HasSeenEvent": "49021931"},
+"Entries": {
+            "49021932/L/A shaneangry/t 600 1200": "shaneTheme/50 26/Shane 53 24 0 farmer 49 26 1/skippable/move farmer 4 0 1/pause 300/faceDirection farmer 2/pause 300/faceDirection farmer 3/pause 300/faceDirection farmer 0/emote farmer 32/pause 300/faceDirection Shane 2/pause 200/speak Shane \"Hey... I am almost done cleaning.$2\"/pause 300/emote farmer 16/pause 300/speak Shane \"What? You wanna help?$0\"/pause 300/speak Shane \"Thanks. Uhh... there's a garbage bag next to that box over there. Could you take it outside while I finish cleaning the fridge?$0\"/pause 200/move farmer -3 0 3/move farmer 0 2 1/friendship Shane +50/faceDirection Shane 0/pause 300/globalFade 0.014/viewport -30 4/pause 300/warp farmer 53 26/warp Shane 53 24/faceDirection Shane 2/faceDirection farmer 0/globalFadeToClear 0.014 true/viewport 50 26/pause 300/speak Shane \"We're finally done, I guess.$0\"/pause 300/speak Shane \"I have to admit. It does look and smell a lot better now.$1\"/pause 300/speak Shane \"I will try to keep my room clean from now on. Thanks for the help.$0\"/pause 300/emote Shane 40/pause 100/speak Shane \"Also, I'm sorry I got so defensive when you approached me about this.$2\"/pause 300/emote farmer 20/pause 200/emote Shane 20/pause 200/speak Shane \"I'm glad we're good.$0\"/end dialogue Shane \"Now that the room is clean we could play some video games together.$0\""
+            },
+      },
+{
+"Action": "EditMap",
+"Target": "Maps/spouseRooms",
+"When": {"Spouse": "Shane", "HasSeenEvent": "49021931"},
+"FromFile": "assets/spouseRooms_n.tmx",
+"PatchMode": "Replace"
+       },
+{
+"Action": "EditMap",
+"Target": "Maps/FarmHouse2_marriage",
+"When": {"Spouse": "Shane", "HasSeenEvent": "49021931"},
+"FromFile": "assets/FarmHouse2_marriage_c.tmx",
+"PatchMode": "Replace"
+       },
+{
+"Action": "EditData",
+"Target": "Data/Events/Town",
+"When": {"Spouse": "Haley", "query: {{FarmhouseUpgrade}} >= 2": true},
+"Entries": {
+            "49021933/F/z spring/z winter/z fall/w sunny/f Alex 2000/f Haley 2500/t 1200 1700": "ragtime/91 91/Alex 88 91 2 Haley 88 93 0 farmer 76 94 1/skippable/move farmer 6 0 1/pause 500/emote farmer 28/pause 300/move farmer -12 0 3 true/pause 300/faceDirection Haley 3/pause 200/emote Haley 8/pause 600/faceDirection Haley 0/pause 300/end"
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": {"Spouse": "Haley"},
+"Entries": {
+            "49021934/L/F/e 49021933/t 1200 2600": "ragtime/23 24/Haley 22 24 0 farmer 27 24 3/skippable/move farmer -4 0 3/pause 300/faceDirection Haley 1/pause 300/speak Haley \"Hello dear.$0\"/pause 300/speak Haley \"I saw you at town earlier today. I thought you were coming to say hi but you just turned around.$0\"/pause 300/speak Haley \"Is everything okay?$0\"/pause 300/quickQuestion ...#Everything is fine. Don't worry.#I don't know... I guess I got a bit jealous seeing you with Alex.(break)pause 300\\speak Haley \"If you say so... but if there is anything on your mind, remember that you can always talk to me.$0\"\\end(break)pause 300\\speak Haley \"Hahaha! Sorry, I'm not laughing at you. I swear.$1\"\\pause 300\\speak Haley \"It's just... you really don't have anything to worry about.$1\"\\pause 300\\speak Haley \"Alex is a great guy, don't get me wrong, but I've never seen him that way at all.$0\"\\pause 300\\speak Haley \"We mostly just gossip about the townspeople whenever we meet. I don't even think we ever had a serious conversation.$0\"\\pause 300\\speak Haley \"You on the other hand... I feel like I could talk to you about anything. That's one of the things I love most about you.$4\"\\pause 300\\speak Haley \"Also, I feel like I became a better person ever since I met you. I wouldn't want to change what we have for anyone else in the world.$4\"\\pause 300\\speak Haley \"Besides! Alex is one of your closest friends! If anyone should be jealous I think it should be me. Hahaha!$1\"\\pause 300\\speak Haley \"But seriously, I love you okay? So don't worry too much about it.$4\"\\emote farmer 20\\pause 300\\animate Haley false true 5000 28\\animate farmer true true 5000 101\\playsound dwop\\pause 500\\emote Haley 20\\pause 500\\stopAnimation farmer\\stopAnimation Haley 4\\faceDirection farmer 3\\faceDirection Haley 1\\pause 300\\speak Haley \"Although, I have to admit. I kinda liked seeing you jealous. Maybe I should meet Alex more often.$1\"\\pause 300\\emote farmer 60\\pause 300\\speak Haley \"Hahaha! I'm just joking.$1\"\\pause 300\\animate Haley false true 5000 28\\animate farmer true true 5000 101\\playsound dwop\\pause 300\\emote farmer 20\\pause 300\\friendship Haley +50\\end"
+            },
+      },
+
+    //Sebastian 12 hearts
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": {"Day": "1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27"},
+"Entries": {
+            "49021935/L/O Sebastian/F/f Sebastian 3000/e 384883/t 1400 2000": "echos/23 24/Sebastian 22 24 0 farmer 27 24 3/skippable/move farmer -4 0 3/pause 300/faceDirection Sebastian 1/pause 300/speak Sebastian \"Hey there.$1\"/pause 300/animate Sebastian true true 5000 40/animate farmer true true 5000 101/playsound dwop/emote Sebastian 20/pause 300/stopAnimation farmer/stopAnimation Sebastian 6/pause 300/speak Sebastian \"So I was thinking... even though we've talked about it, I never actually got the chance to teach you how to ride my motorcycle.$0\"/pause 300/speak Sebastian \"So how about I show you tomorrow night?$0\"/pause 300/speak Sebastian \"I haven't gone for a ride in a while either. I think it'd be fun to do it together if you are up for it.$1\"/pause 300/quickQuestion ...#I think I will pass...#Sure, sounds fun!(break)pause 300\\speak Sebastian \"Oh... ok then.$2\"\\friendship Sebastian -50\\faceDirection Sebastian 0\\emote Sebastian 28\\addConversationTopic sebnoride\\end(break)pause 300\\speak Sebastian \"Great! I will make sure to get the bike ready for our little date tomorrow.$1\"\\pause 300\\speak Sebastian \"Meet me in the mountains when you are ready to go.$1\"\\pause 300\\friendship Sebastian +50\\end"
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Mountain",
+"When": {"Day": "2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28"},
+"Entries": {
+            "49021936/e 49021935/O Sebastian/A sebnoride/t 1800 2400": "echos/-1000 -1000/farmer 18 35 0 Sebastian -100 -100 0/skippable/specificTemporarySprite sebastianOnBike/viewport 17 28 clamp true/pause 1000/move farmer 0 -5 0/speak Sebastian \"@! Nice timing. I just checked everything and we should be all set to go. Are you ready?$1\"/pause 300/emote farmer 28/pause 300/speak Sebastian \"Don't worry it's not that hard. Besides I will be with you the whole time. If anything happens I wil take over.$0\"/speak Sebastian \"Come closer, I will show you the basics.$1\"/pause 300/move farmer 0 -1 0/globalFade 0.014/viewport -1500 -1500/pause 300/speak Sebastian \"I think that's enough for an explanation. Hop on and I will explain the rest as we go.$1\"/changeToTemporaryMap SebastianRide/ambientLight 0 0 0/specificTemporarySprite sebastianRide/viewport 15 8 true/pause 300/speak Sebastian \"You are doing really well, but you are wavering a bit. You really have no reason to be nervous, I'm right behind you.$1\"/pause 300/quickQuestion ...#I wouldn't be nervous if you weren't breathing down my neck. Can you give me some space?#Maybe I'd feel safer if you held me a bit tighter.(break)pause 300\\speak Sebastian \"Oh... sure... sorry. I will hold onto the back of the bike.$2\"\\friendship Sebastian -50\\pause 800\\changeLocation Farmhouse\\viewport 11 15\\warp farmer 12 19\\warp Sebastian 12 18\\faceDirection Sebastian 0\\faceDirection farmer 0\\move Sebastian 0 -2 0\\pause 300\\faceDirection Sebastian 2\\speak Sebastian \"I hope you had fun.$2\"\\pause 300\\faceDirection Sebastian 0\\emote farmer 28\\speak Sebastian \"I... Think I will just go to bed... see you later.$2\"\\pause 300\\end warpOut(break)pause 300\\speak Sebastian \"Don't mind if I do then.$1\"\\pause 300\\speak Sebastian \"You know... I never knew I had a thing for bikers, but I won't lie. You look really hot right now.$4\"\\pause 300\\friendship Sebastian +50\\playSound roadnoise\\pause 300\\playSound busDriveOff\\message \"...!\"\\pause 300\\speak Sebastian \"Ok! No more flirting until we get back to the farm. I don't want to cause an accident.$1\"\\pause 300\\changeLocation Farmhouse\\viewport 11 15\\warp farmer 12 18\\warp Sebastian 12 19\\faceDirection Sebastian 0\\faceDirection farmer 0\\move farmer 0 -1 2\\move Sebastian 0 -1 0\\speak Sebastian \"That was fun! Wasn't it?$1\"\\pause 300\\emote farmer 32\\pause 300\\speak Sebastian \"We should do this again sometime. There are some places around the valley that I'd like to show you.$1\"\\pause 300\\speak Sebastian \"But I'm also glad to be back... Now we can finally continue from where we left of.$4\"\\pause 300\\animate Sebastian true true 5000 40\\animate farmer true true 5000 101\\playsound dwop\\emote farmer 20\\pause 300\\end warpOut"
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": {"Spouse": "Penny", "Query: {{Hearts:Penny}} <= 8": true},
+"Entries": {
+            "49021937/L/F/z winter/s 346 25/s 348 25/t 1300 2200": "desolate/23 24/Penny 22 24 0 farmer 27 24 3/skippable/move farmer -4 0 3/pause 300/faceDirection Penny 1/pause 300/speak Penny \"@, I saw our shipment receipts and I can't believe you've been selling alcohol.$5\"/pause 300/speak Penny \"Don't you think it's unethical to profit off of others' addictions?$5\"/pause 300/speak Penny \"You know how much my mom struggles with alcohol and what I had to go through because of it. I can't believe you would do this!$2\"/pause 300/speak Penny \"You have to stop selling alcoholic beverages. Now!$5\"/pause 300/question fork0 \"...#I'll sell whatever I want. Stay out of it.#I understand the situation, but don't you think you are being a little unreasonable right now?\"/fork PennyPissedFec/pause 300/friendship Penny 50/speak Penny \"No! You don't understand!$5\"/pause 300/faceDirection Penny 2/animate Penny true true 5000 23/pause 300/speak Penny \"Harvey called earlier. My mom passed out in the bar last night and had to spend the night at the clinic cause she was severely intoxicated.$2\"/pause 300/speak Penny \"This isn't even the first time something like this happens!$2\"/pause 300/speak Penny \"I'm just so tired of all of this.$2\"/pause 300/speak Penny \"She always says she will quit drinking, but she never does. I don't know what to do anymore!$2\"/pause 300/speak Penny \"I love my mom, but I don't know how much longer I can take this.$2\"/pause 300/emote farmer 28/pause 300/globalFade 0.014/viewport -30 4/pause 1600/stopAnimation Penny 4/globalFadeToClear 0.014 true/viewport 23 24/speak Penny \"Thanks for helping me calm down, honey.$2\"/pause 300/speak Penny \"To be honest I resent my mom a little. I know how much she struggled after my dad left, but it was hard for me too.$2\"/pause 300/speak Penny \"I just wish she could have seen that I needed her and chosen me over drinking.$2\"/pause 300/speak Penny \"I'm sorry I tried to blame you.$2\"/pause 300/speak Penny \"But could you stop selling alcohol please? Even if it's not your fault, I still can't help but feel uncomfortable that we are profiting off something I despise.$2\"/pause 300/speak Penny \"Just please think about it. Okay?$2\"/pause 300/end dialogue Penny \"Thanks for checking on me, honey. I'm feeling a bit better now.$2\""
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "PennyPissedFec": "friendship Penny -250/speak Penny \"Wha... How can you be so selfish?!$5\"/pause 300/speak Penny \"My mom is killing herself because of people like you!$5\"/pause 300/speak Penny \"Get out! I don't want to talk to you right now!$5\"/end dialogue Penny \"...$2\""
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Woods",
+"When": {"Spouse": "Abigail"},
+"Entries": {
+            "49021938/w sunny/F/f Abigail 3000/t 1000 1700": "woodsTheme/50 12/Abigail 46 10 1 farmer 0 -100 0/skippable/pause 300/animate Abigail false false 200 50 51/specificTemporarySprite swordswipe 46 10/playSound swordswipe/pause 1000/warp farmer 58 16/move farmer -8 0 0/move farmer 0 -6 3 true/animate Abigail false false 200 50 51/specificTemporarySprite swordswipe 46 10/playSound swordswipe/pause 300/emote Abigail 40/pause 1000/jump Abigail/animate Abigail false true 100 32/speak Abigail \"...!$7\"/stopAnimation Abigail/pause 300/speak Abigail \"You scared me honey. I didn't expect to see anyone here.$1\"/pause 300/speak Abigail \"Though I should have known that you were the one behind the disappearance of that huge log.$0\"/pause 300/speak Abigail \"It's crazy that after all this time coming to Cindersap Forest, I never thought of exploring this deep into the woods.$0\"/pause 100/faceDirection Abigail 3/pause 300/faceDirection Abigail 1/pause 100/speak Abigail \"Not that I could have with that log blocking the way, but you get what I mean.$1\"/pause 300/speak Abigail \"Anyway. I just thought this would be a nice spot to practice my swordsmanship.$0\"/pause 300/emote Abigail 40/pause 300/speak Abigail \"Say... If you are not busy right now, do you think you could help me practice?$0\"/pause 300/question fork0 \"...#You should drop this. You will end up getting hurt.#Sure! Show me what you are working on.\"/fork AbigailAnnoyedFec/pause 300/speak Abigail \"Really?! Cool!$1\"/pause 100/move farmer 0 1 3/pause 200/move farmer -4 0 0 true/speak Abigail \"Okay, so, I'm trying to work on my swing. I feel like my grip is okay, but I keep losing momentum.$0\"/pause 300/speak Abigail \"I don't really know how to explain it, it just feels a bit awkward.$0\"/pause 300/speak Abigail \"Here! Let me show you!$0\"/pause 300/animate Abigail false false 200 50 51/specificTemporarySprite swordswipe 46 10/playSound swordswipe/pause 300/speak Abigail \"You see? I know I'm doing something wrong I just can't figure out what. Got any pointers?$0\"/question fork0 \"...#Not really. It seems alright to me.#You gotta fix your posture. Here let me help you.\"/fork AbigailNoTipsFec/pause 300/move farmer -1 0 0/move farmer 0 -1 1/positionOffset farmer 20 0/pause 300/speak Abigail \"Like this?$0\"/pause 300/animate Abigail false false 200 50 51/specificTemporarySprite swordswipe 46 10/playSound swordswipe/pause 500/emote Abigail 16/pause 300/speak Abigail \"Wow! That felt much better. I have much more balance now.$1\"/friendship Abigail 50/pause 300/speak Abigail \"Thanks, honey! I knew I could count on you.$0\"/pause 500/emote Abigail 40/pause 500/speak Abigail \"Are you not gonna let go off me?$1\"/animate farmer false true 200 6/pause 100/positionOffset farmer -5 0/playSound dwop/animate farmer false true 100 7/pause 100/positionOffset farmer -5 0/playSound dwop/animate farmer false true 200 6/pause 100/positionOffset farmer -5 0/playSound dwop/pause 300/emote farmer 60/pause 300/faceDirection Abigail 3/speak Abigail \"I was just teasing you. I don't mind this kind of lesson at all.$1\"/pause 300/speak Abigail \"In fact... I think I still need some help with my posture. So you might need to hold me a little longer...$4\"/pause 300/showFrame Abigail 33/showFrame 101/pause 300/speak Abigail \"Shall we continue with our training?$4\"/globalFade/viewport -1000 -1000/end dialogue Abigail \"I can't wait for our next training session.$4\""
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Woods",
+"Entries": {
+            "AbigailAnnoyedFec": "friendship Abigail -50/speak Abigail \"Gosh, you sound just like my parents.$3\"/pause 300/speak Abigail \"Well, I'm not giving up on my dream to explore the valley. It's fine if you don't wanna help, but don't try to get in my way.$9\"/pause 300/speak Abigail \"I will practice a little more. See you at home later.$3\"/end dialogue Abigail \"See? I'm still in one piece.$3\""
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Woods",
+"Entries": {
+            "AbigailNoTipsFec": "speak Abigail \"Oh... maybe I'm just overthinking it.$0\"/pause 300/speak Abigail \"Anyway, thanks, @. I will practice a little longer. I'll see you at home later.$0\"/pause 300/end"
+   },
+      },
+
+    //Harvey Farmhouse | Kids
+
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": { "ChildGenders |valueAt=0": "Female", "DayOfWeek": "Monday, Wednesday"},
+"Entries": {
+            "49021939/L/O Harvey/F/d /f Harvey 2500/f {{ChildNames |valueAt=0}} 1000/k 49021940/t 1700 2000": "Cyclops/23 24/Harvey 22 24 0 farmer 27 24 3 Toddler_Girl 20 24 1/skippable/animate Toddler_Girl false true 22 22/move farmer -4 0 3/pause 300/faceDirection Harvey 1/pause 300/speak Harvey \"Honey, you're home already?$0\"/pause 300/emote farmer 8/speak Harvey \"Oh, it's nothing serious. Don't worry.$0\"/pause 300/speak Harvey \"I just wanted to let you know that I might return home late tomorrow. I'll have the check ups as usual, but I also need to organize some records, and order more medicine.$0\"/pause 200/emote Toddler_Girl 16/pause 300/move Toddler_Girl 1 0 1/pause 300/emote Toddler_Girl 28/pause 300/faceDirection Harvey 3/pause 300/speak Harvey \"Oh what's wrong %kid1? No, don't cry. Daddy will come back home as soon as he can and play with you. Okay?$2\"/pause 300/emote Toddler_Girl 28/pause 300/speak Harvey \"Oh dear, what do I do?$2\"/pause 300/speak Harvey \"What if daddy took you to work tomorrow? Would you like that?$1\"/pause 300/emote Toddler_Girl 32/faceDirection Harvey 1/question fork0 \"...#You are too soft, Harvey. Honey, dad will be very busy. He can play with you another day.#You two have fun, but behave while your dad is working. Okay, honey?\"/fork HarveysoftF/pause 300/emote Toddler_Girl 32/pause 300/speak Harvey \"Honey, if you have time tomorrow you should pass by the clinic. I'm worried %kid1 may get bored. So if you end your chores early, you two could go back home together.$0\"/pause 300/end"
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": { "ChildGenders |valueAt=0": "Male", "DayOfWeek": "Monday, Wednesday"},
+"Entries": {
+            "49021940/L/O Harvey/F/f Harvey 2500/f {{ChildNames |valueAt=0}} 1000/k 49021939/t 1700 2000": "Cyclops/23 24/Harvey 22 24 0 farmer 27 24 3 Toddler 20 24 1/skippable/animate Toddler false true 22 22/move farmer -4 0 3/pause 300/faceDirection Harvey 1/pause 300/speak Harvey \"Honey, you're home already?$0\"/pause 300/emote farmer 8/speak Harvey \"Oh, it's nothing serious. Don't worry.$0\"/pause 300/speak Harvey \"I just wanted to let you know that I might return home late tomorrow. I'll have the check ups as usual, but I also need to organize some records, and order more medicine.$0\"/pause 200/emote Toddler 16/pause 300/move Toddler 1 0 1/pause 300/emote Toddler 28/pause 300/faceDirection Harvey 3/pause 300/speak Harvey \"Oh what's wrong %kid1? No, don't cry. Daddy will come back home as soon as he can and play with you. Okay?$2\"/pause 300/emote Toddler 28/pause 300/speak Harvey \"Oh dear, what do I do?$2\"/pause 300/speak Harvey \"What if daddy took you to work tomorrow? Would you like that?$1\"/pause 300/emote Toddler 32/faceDirection Harvey 1/question fork0 \"...#You are too soft, Harvey. Honey, dad will be very busy. He can play with you another day.#You two have fun, but behave while your dad is working. Okay, honey?\"/fork HarveysoftM/pause 300/emote Toddler 32/pause 300/speak Harvey \"Honey, if you have time tomorrow you should pass by the clinic. I'm worried %kid1 may get bored. So if you end your chores early, you two could go back home together.$0\"/pause 300/end"
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "HarveysoftF": "friendship Harvey -50/addMailReceived Harveysoft true/pause 300/FaceDirection Harvey 3/speak Harvey \"Oh, uh, sorry %kid1. Dad will make it up to you okay?$2\"/pause 300/emote Toddler_Girl 28/pause 300/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "HarveysoftM": "friendship Harvey -50/addMailReceived Harveysoft true/pause 300/FaceDirection Harvey 3/speak Harvey \"Oh, uh, sorry %kid1. Dad will make it up to you okay?$2\"/pause 300/emote Toddler 28/pause 300/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Hospital",
+"When": { "DayOfWeek": "Tuesday, Thursday"},
+"Entries": {
+            "49021941/O Harvey/F/e 49021940/l Harveysoft/t 1000 1500": "kindadumbautumn/12 7/Harvey 4 5 3 farmer 5 10 0 Toddler 3 5 1/skippable/pause 300/speak Harvey \"So Dr. %kid1... is it serious?$0\"/pause 300/speak Harvey \"I see. So I only need a kiss to get better. That's a relief.$1\"/pause 300/speak Harvey \"Thank you, doctor.$1\"/playsound doorOpen/doAction 5 9/animate Harvey false true 1000 30/jump Harvey/pause 500/speak Harvey \"Gahhhh!$8\"/pause 400/stopAnimation Harvey 0/pause 100/move farmer 0 -5 3/faceDirection Harvey 1/pause 300/speak Harvey \"H-honey! You scared me.$8\"/pause 300/speak Harvey \"I was worried one of my patients had arrived early and seen me goofing off at work. That would have been embarassing.$0\"/question fork0 \"...#Yeah, maybe you should have left him at home.#Not at all, it's actually really sweet. You don't have to be so serious all the time, dear. You are a doctor but you are father too. They would understand.\"/fork HarveyKidHome/pause 300/speak Harvey \"You are right honey. It's not like I'm busy right now.$0\"/pause 300/speak Harvey \"Besides, %kid1 and I were having so much fun. I think it's fine to play just for a little bit.$1\"/pause 300/emote farmer 20/pause 300/emote Harvey 16/ quickQuestion Oh! But why did you come? Are you not feeling well?#I came to pick up our son. Thought you might be busy.#I heard you were sick, so I came to deliver that kiss.(break)pause 300\\speak Harvey \"Oh!... uhh... actually I promised %kid1 that we could play with my planes after work.$8\"\\pause 300\\emote farmer 8\\pause 300\\speak Harvey \"Don't worry, I can work on the other stuff tomorrow.$0\"\\pause 300\\move farmer 0 5 2 true\\textAboveHead Harvey \"See you later honey!\"\\pause 800(break)speak Harvey \"Oh-uh... right...$8\"\\pause 300\\speak Harvey \"Sorry. You took me by surprise, I might need a second.$4\"\\faceDirection Harvey 3\\pause 300\\emote Harvey 60\\pause 300\\faceDirection Harvey 1\\speak Harvey \"Thanks, honey. I'll take that kiss now.$4\"\\positionOffset farmer -10 0\\positionOffset Harvey 10 0\\animate Harvey true true 5000 31\\animate farmer true true 5000 101\\playsound dwop\\pause 500\\emote Harvey 20\\pause 500\\positionOffset farmer 10 0\\positionOffset Harvey -10 0\\stopAnimation farmer\\stopAnimation Harvey 4\\pause 500\\textAboveHead Harvey \"I-I'm still feeling a little sick. I might need another one.\"\\pause 1500\\positionOffset farmer -10 0\\positionOffset Harvey 10 0\\animate Harvey true true 5000 31\\animate farmer true true 5000 101\\playsound dwop\\pause 500\\pause 500/globalFade 0.014/viewport -30 4/end"
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Hospital",
+"When": { "DayOfWeek": "Tuesday, Thursday"},
+"Entries": {
+            "49021942/O Harvey/F/e 49021939/l Harveysoft/t 1000 1500": "kindadumbautumn/12 7/Harvey 4 5 3 farmer 5 10 0 Toddler_Girl 3 5 1/skippable/pause 300/speak Harvey \"So Dr. %kid1... is it serious?$0\"/pause 300/speak Harvey \"I see. So I only need a kiss to get better. That's a relief.$1\"/pause 300/speak Harvey \"Thank you, doctor.$1\"/playsound doorOpen/doAction 5 9/animate Harvey false true 1000 30/jump Harvey/pause 500/speak Harvey \"Gahhhh!$8\"/pause 400/stopAnimation Harvey 0/pause 100/move farmer 0 -5 3/faceDirection Harvey 1/pause 300/speak Harvey \"H-honey! You scared me.$8\"/pause 300/speak Harvey \"I was worried one of my patients had arrived early and seen me goofing off at work. That would have been embarassing.$0\"/question fork0 \"...#Yeah, maybe you should have left her at home.#Not at all, it's actually really sweet. You don't have to be so serious all the time, dear. You are a doctor but you are father too. They would understand.\"/fork HarveyKidHome/pause 300/speak Harvey \"You are right honey. It's not like I'm busy right now.$0\"/pause 300/speak Harvey \"Besides, %kid1 and I were having so much fun. I think it's fine to play just for a little bit.$1\"/pause 300/emote farmer 20/pause 300/emote Harvey 16/ quickQuestion Oh! But why did you come? Are you not feeling well?#I came to pick up our daughter. Thought you might be busy.#I heard you were sick, so I came to deliver that kiss.(break)pause 300\\speak Harvey \"Oh!... uhh... actually I promised %kid1 that we could play with my planes after work.$8\"\\pause 300\\emote farmer 8\\pause 300\\speak Harvey \"Don't worry, I can work on the other stuff tomorrow.$0\"\\pause 300\\move farmer 0 5 2 true\\textAboveHead Harvey \"See you later honey!\"\\pause 800(break)speak Harvey \"Oh-uh... right...$8\"\\pause 300\\speak Harvey \"Sorry. You took me by surprise, I might need a second.$4\"\\faceDirection Harvey 3\\pause 300\\emote Harvey 60\\pause 300\\faceDirection Harvey 1\\speak Harvey \"Thanks, honey. I'll take that kiss now.$4\"\\positionOffset farmer -10 0\\positionOffset Harvey 10 0\\animate Harvey true true 5000 31\\animate farmer true true 5000 101\\playsound dwop\\pause 500\\emote Harvey 20\\pause 500\\positionOffset farmer 10 0\\positionOffset Harvey -10 0\\stopAnimation farmer\\stopAnimation Harvey 4\\pause 500\\textAboveHead Harvey \"I-I'm still feeling a little sick. I might need another one.\"\\pause 1500\\positionOffset farmer -10 0\\positionOffset Harvey 10 0\\animate Harvey true true 5000 31\\animate farmer true true 5000 101\\playsound dwop\\pause 500\\pause 500/globalFade 0.014/viewport -30 4/end"
+            },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Hospital",
+"Entries": {
+            "HarveyKidHome": "pause 300/speak Harvey \"You are right love, I should focus on work now.$2\"/pause 300/faceDirection Harvey 3/speak Harvey \"Okay, %kid1. Daddy has to go back to work. ${Papa^Mommy}$ will take you home, okay? I will see you two later.$0\"/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"When": {"Spouse": "Elliott"},
+"Entries": {
+            "49021943/L/F/U 2/N 82/f Elliott 3000/t 1800 2200": "elliottPiano/50 26/Elliott 53 24 2 farmer 49 26 1/skippable/animate Elliott false true 2000 33 34/move farmer 4 0 0/pause 300/emote Elliott 12/pause 300/emote farmer 8/pause 300/emote Elliott 16/stopAnimation Elliott/pause 300/speak Elliott \"Oh! Sorry, darling. I was so focused on my work that I didn't even hear you calling me.$2\"/speak Elliott \"Is everything alright?$2\"/question fork0 \"...#I'm hungry. Is dinner ready?#Yeah, just wanted to check on you. Is everything okay? You seem a bit down.\"/fork ElliottHungryFec/speak Elliott \"It's nothing... I've just been a little uninspired lately.$2\"/pause 300/speak Elliott \"I started writing a new book a few days ago. A story about pirates who get stranded on a cursed island.$0\"/pause 300/speak Elliott \"However, no matter how hard I try, I just can't really picture it in my head. Let alone put my thoughts into words.$2\"/pause 300/speak Elliott \"You'd expect that after living by the beach for so long, this sort of story would come naturally to me. But maybe because I'm so used to it, I find myself overlooking the details.$2\"/pause 300/speak Elliott \"Maybe I should just scrap this idea, and move on to something else.$2\"/question fork0 \"...#Don't be so hard on yourself. I already make enough money, so there isn't any pressure for you to write something actually good.#Maybe you just need a change of scenery. How about we spend the day on Ginger Island tomorrow?\"/fork ElliottMoneyAngryFec/emote Elliott 16/pause 300/speak Elliott \"Are you sure?$8\"/pause 300/speak Elliott \"I mean, I'd love to go there with you, but you are always so busy. Can you really take this time off?$1\"/pause 300/emote farmer 16/pause 300/speak Elliott \"Then it's settled. I'll pack our stuff and wait for you at Willy's tomorrow morning. Just meet me there once you are ready to go.$1\"/pause 300/emote Elliott 20/friendship Elliott 100/pause 300/end dialogue Elliott \"I can't wait for our trip tomorrow!$1\""
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "ElliottHungryFec": "speak Elliott \"Yeah... I left a plate for you in the fridge. You can just reheat it.$2\"/friendship Elliott -50/pause 200/move farmer -3 0 3 true/emote Elliott 28/pause 200/addMailReceived ElliottNoVacayFec true/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/Farmhouse",
+"Entries": {
+            "ElliottMoneyAngryFec": "speak Elliott \"What? Writing was never about the money for me.$5\"/pause 300/speak Elliott \"Writing is my passion. I want to write something that makes me proud. Not some mediocre work because 'There isn't any pressure'.$5\"/pause 300/speak Elliott \"Ah... You know what?$2\"/pause 300/friendship Elliott -250/speak Elliott \"Forget I said anything. I'll just go back to writing if you'll excuse me.$2\"/animate Elliott false true 2000 33 34/pause 300/emote farmer 28/pause 300/addMailReceived ElliottNoVacayFec true/end dialogue Elliott \"...$2\""
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/BoatTunnel",
+"When": {"Spouse": "Elliott"},
+"Entries": {
+            "49021944/e 49021943/l ElliottNoVacayFec/t 800 1400": "ocean/6 8/farmer -1000 -1000 0 Elliott 6 7 2/pause 300/warp farmer 6 12/playSound doorClose/move farmer 0 -2 0/speak Elliott \"You're finally here honey!$1\"/pause 300/speak Elliott \"I've already put all our belongings in the boat, so we can leave whenever you are ready.$1\"/addConversationTopic ElliottYesVacayFec 0/pause 300/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/IslandSouth",
+"When": {"Spouse": "Elliott"},
+"Entries": {
+            "49021945/ActiveDialogueEvent ElliottYesVacayFec": "Tropical Jam/18 45/farmer -1000 -1000 0 Elliott -1000 -1000 0 Willy -1000 -1000 1/skippable/pause 300/warp farmer 19 43/playSound doorClose/move farmer 2 0 3/warp Elliott 19 43/playSound doorClose/move farmer 0 -1 3/move Elliott 2 0 3/warp Willy 19 43/playSound doorClose/speak Willy \"You two lovebirds have fun. I'll be in the boat fishing 'til you wanna go back.$1\"/pause 300/faceDirection farmer 2/faceDirection Elliott 0/pause 300/speak Elliott \"So... Where should we head to first?$1\"/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/IslandNorth",
+"When": {"Spouse": "Elliott"},
+"Entries": {
+            "49021946/ActiveDialogueEvent ElliottYesVacayFec": "Tropical Jam/40 27/farmer 40 26 0 Elliott 41 26 0/skippable/pause 300/speak Elliott \"This cave looks quite mysterious. It's precisely the kind of thing that I could use for my book!$1\"/pause 300/move farmer 0 -2 2/pause 300/speak Elliott \"Go... inside? You jest, surely?$8\"/pause 300/emote farmer 8/pause 300/speak Elliott \"I don't know darling. It must be quite hot inside. You know my hair doesn't do that well with hot temperatures.$2\"/pause 300/emote farmer 40/pause 300/speak Elliott \"You're right! If a bad hair day is the price I must pay for references for my next book, then so be it.$1\"/pause 300/move Elliott 0 -2 0 true/emote farmer 32/faceDirection farmer 0/pause 300/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/IslandWest",
+"When": {"Spouse": "Elliott"},
+"Entries": {
+            "49021947/ActiveDialogueEvent ElliottYesVacayFec": "Tropical Jam/56 93/farmer 56 90 2 Elliott 57 90 2/skippable/pause 300/emote Elliott 16/speak Elliott \"A real sunken pirate ship?!$8\"/pause 300/jump Elliott/pause 300/speak Elliott \"This is amazing! How old do you reckon it is?$1\"/pause 300/move farmer 0 2 0/emote farmer 16/pause 300/speak Elliott \"A closer look you say? Sure, I'm right behind you.$1\"/move Elliott -1 0 3/move Elliott 0 1 2/pause 300/move farmer 1 0 1/speed Elliott 3/move Elliott 0 1 1 true/jump farmer/emote farmer 16/pause 300/speak Elliott \"Careful not to slip darling. If I hadn't caught you, you would have been completely drenched.$1\"/pause 300/faceDirection farmer 3/emote farmer 20/end"
+   },
+      },
+{
+"Action": "Load",
+"Target": "Data/Events/IslandEast",
+"FromFile": "assets/IslandEast.json",
+"Priority": "Low"
+      },
+{
+"Action": "Load",
+"Target": "Data/Events/IslandSouthEastCave",
+"FromFile": "assets/IslandSouthEastCave.json",
+"Priority": "Low"
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/IslandEast",
+"When": {"Spouse": "Elliott"},
+"Entries": {
+            "49021948/ActiveDialogueEvent ElliottYesVacayFec": "Tropical Jam/22 39/farmer 22 37 3 Elliott 21 37 1/skippable/pause 300/speak Elliott \"The forest here is so luscious and dense. I've never seen anything quite like this place.$1\"/pause 200/faceDirection Elliott 0/pause 200/faceDirection Elliott 3/pause 200/faceDirection Elliott 2/pause 200/faceDirection Elliott 1/speak Elliott \"You know a lot about plants... Do you think you could tell me a little about the vegetation here?$1\"/pause 300/emote farmer 40/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/IslandSouthEastCave",
+"When": {"Spouse": "Elliott"},
+"Entries": {
+            "49021949/ActiveDialogueEvent ElliottYesVacayFec": "Tropical Jam/27 9/farmer 27 6 2 Elliott 28 6 2/skippable/pause 300/speak Elliott \"A pirate hideout?!$8\"/pause 300/faceDirection Elliott 3/faceDirection farmer 1/pause 300/speak Elliott \"How'd you even stumble across this?$1\"/pause 300/speak Elliott \"You really never cease to impress me, dear.$1\"/pause 300/speak Elliott \"Excuse me for a second. I need to take some notes before we continue exploring.$1\"/pause 300/animate Elliott false true 2000 33 34/pause 800/end"
+   },
+      },
+{
+"Action": "EditData",
+"Target": "Data/Events/IslandSouth",
+"When": {"Spouse": "Elliott"},
+"Entries": {
+            "49021950/e 49021945/e 49021946/e 49021947/e 49021948/e 49021949/t 1800 2400/ActiveDialogueEvent ElliottYesVacayFec": "moonlightJellies/17 35/farmer 17 33 2 Elliott 18 33 2/skippable/pause 300/speak Elliott \"I guess it's time to go back, huh?$2\"/pause 300/speak Elliott \"I must say, I'm a little sad our little adventure is over.$1\"/pause 300/speak Elliott \"It's been quite a while since we last spent the whole day together like this. I had a lot of fun.$1\"/pause 500/faceDirection Elliott 3/faceDirection farmer 1/pause 300/speak Elliott \"I'm a bit tired though. What do you say we head home and just relax together? Maybe even watch a movie.$0\"/pause 300/emote farmer 8/pause 300/speak Elliott \"Don't worry. As much as I'm excited to go back to writing after gathering all this material, it can wait.$1\"/pause 300/speak Elliott \"Today I just want to take this chance to spend as much time as possible with you.$4\"/pause 300/emote farmer 20/pause 300/positionOffset farmer 10 0/positionOffset Elliott -10 0/animate Elliott false true 5000 35/animate farmer false true 5000 101/playsound dwop/pause 500/emote Elliott 20/end"
+   },
+      }
+ ]
+}

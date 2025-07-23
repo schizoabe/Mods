@@ -1,0 +1,109 @@
+{
+	"Changes":[
+
+	{
+	"Action": "EditData",
+	"Target": "Characters/schedules/Sandy",
+	"Entries": {
+		"Sun": "630 SandyHouse 2 5 2/930 HaleyHouse 2 16 0 \"Strings\\schedules\\Sandy:Sun.hhouse001\"/1530 SandyHouse 2 5 2",
+		"spring_27": "630 SandyHouse 2 5 2/930 HaleyHouse 2 16 0 \"Strings\\schedules\\Sandy:spring_27.embday\"/1500 SandyHouse 2 5 2",
+		"summer_Sun": "630 SandyHouse 2 5 2/930 HaleyHouse 2 16 0 \"Strings\\schedules\\Sandy:Sun.hhouse001\"/1530 Beach 47 21 2/2000 SandyHouse 2 5 2"			
+		},
+			"When": { "HasSeenEvent": "13609000" }
+	},
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/schedules/Sandy",
+		"Entries": {
+			"Fri": "630 SandyHouse 2 5 2/1500 Saloon 17 20 0/2230 SandyHouse 2 5 2",
+			"winter_15": "630 SandyHouse 2 5 2/a1430 Beach 24 36 2 \"Strings\\schedules\\Sandy:winter_15.market\"/2300 SandyHouse 2 5 2"				
+			},
+				"When": { "HasSeenEvent": "13609001" }
+		},
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/schedules/Sandy",
+		"Entries": {
+			"winter_Tue": "630 SandyHouse 2 5 2/1200 ArchaeologyHouse 11 9 0/1800 SandyHouse 2 5 2"			
+			},
+				"When": { "HasSeenEvent": "13609003" }
+			},	
+	
+//Community Center Complete
+	{
+	"Action": "EditData",
+	"Target": "Characters/schedules/Sandy",
+	"Entries": {
+		"Fri": "630 SandyHouse 2 5 2/1200 CommunityCenter 10 24 2 \"Strings\\schedules\\Sandy:Fri.cc\"/1530 Saloon 17 20 0/2230 SandyHouse 2 5 2"
+		},
+	"When": {
+		"IsCommunityCenterComplete": "true",
+		"HasSeenEvent": "13609001"
+			}
+	},	
+
+//Please Remember My Birthday Tweaks
+{
+	"Action": "EditData",
+	"Target": "Characters/schedules/Sandy",
+	"Entries": {
+		"spring_27": "630 SandyHouse 2 5 2/930 HaleyHouse 20 17 2 \"Strings\\schedules\\Sandy:spring_27.embday\"/1500 SandyHouse 2 5 2",
+		"winter_26": "630 SandyHouse 2 5 2/1500 Saloon 17 20 0/2230 SandyHouse 2 5 2"
+		},
+	"When": {
+		"HasSeenEvent": "13609000",
+		"HasMod |contains=nraittanna.RememberMyBirthday": "true"}		
+		
+	},	
+
+//Rival Hearts Dating Tweak
+
+{
+	"Action": "EditData",
+	"Target": "Characters/schedules/Sandy",
+	"Entries": {
+		"Sun": "630 SandyHouse 2 5 2/930 HaleyHouse 2 16 0 \"Strings\\schedules\\Sandy:Sun.hhouse001\"/1530 Town 36 76 2/1730 Town 25 100 2/2000 HaleyHouse 8 16 0 \"Strings\\schedules\\Sandy:Sun.hhouse002\"/2300 HaleyHouse 20 4 1",
+		"Fri": "630 SandyHouse 2 5 2/1500 Saloon 17 20 0/2200 SandyHouse 2 5 2",
+		"spring_27": "630 SandyHouse 2 5 2/930 HaleyHouse 2 16 0 \"Strings\\schedules\\Sandy:spring_27.embday\"/1500 Saloon 2 18 2 \"Strings\\schedules\\Sandy:embday.saloon001\"/2300 HaleyHouse 20 4 1",
+		"summer_Sun": "630 SandyHouse 2 5 2/930 HaleyHouse 2 16 0 \"Strings\\schedules\\Sandy:Sun.hhouse001\"/1530 Beach 47 21 2/2000 HaleyHouse 20 4 1",	
+		"winter_15": "630 SandyHouse 2 5 2/a1430 Beach 24 36 2 \"Strings\\schedules\\Sandy:winter_15.market\"/2300 HaleyHouse 20 4 1",				
+		"winter_Tue": "630 SandyHouse 2 5 2/1200 ArchaeologyHouse 11 9 0/1800 HaleyHouse 8 16 0 \"Strings\\schedules\\Sandy:Sun.hhouse002\"/2000 HaleyHouse 20 4 1"			
+		},
+			"When": { "HasSeenEvent": "13609016" }
+},
+{
+	"Action": "EditData",
+	"Target": "Characters/schedules/Sandy",
+	"Entries": {
+		"Fri": "630 SandyHouse 2 5 2/1200 CommunityCenter 10 24 2 \"Strings\\schedules\\Sandy:Fri.cc\"/1530 Saloon 17 20 0/2300 HaleyHouse 20 4 1"
+		},
+			"When": { 
+				"IsCommunityCenterComplete": "true",
+				"HasSeenEvent": "13609016"
+			 }
+},		
+
+//Sandy Dialogue Strings
+
+{
+	"Action": "EditData",
+	"Target": "Strings/schedules/Sandy",
+
+	"Entries":  {
+            "Fri.cc": "I always try to stop in here before heading to the Saloon. Such a wonderful space you have here.$h",
+			"winter_15.market": "I want to see the mermaid show. Do you want to join me @?",
+			"Sun.hhouse001": "Just dropped by for brunch with Emily this morning. There are still some leftovers if you want.$h",
+			"Sun.hhouse002": "I wish Emily didn't have to work so late.$s",
+			"Sun.beach": "The ocean is so calming. I miss this when I'm in the desert.",
+			"spring_27.embday": "Hi, sweetie! It's Emily's birthday today! Have you wished her a happy birthday yet?#$b#*whispers* She really likes gems.", 
+			"winter_tue.library": "Hi, sweetie! I'm just picking up some books to read. Got any good recommendations?$h",
+			"embday.saloon001": "Hi, sweetie! I'm trying to pick a song that I think Em would enjoy for her birthday.$h"
+ 			
+            }
+}
+
+
+	]
+}

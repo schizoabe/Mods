@@ -1,0 +1,199 @@
+{
+	"Changes":[
+//Could have been token crimes but my brain cannot this time around
+//Load Texture for View
+		{
+      		"LogName": "Load Galaxy",
+			"Action": "Load",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/background_base.png"
+		},	
+		{
+			"LogName": "Load Galaxy Storm",
+			"Action": "Load",
+			"Target": "Mods/kath.cosmos/GalaxyStorm",
+			"FromFile": "assets/View/mid_flashing.png"
+	    },
+		{
+			"LogName": "Load Galaxy Storm Fixed",
+			"Action": "Load",
+			"Target": "Mods/kath.cosmos/GalaxyStormFixed",
+			"FromFile": "assets/View/mid_lightning.png"
+	    },
+//Replacers/Edits
+//STACK THE LAYERS
+		//Background
+		{
+      		"LogName": "Galaxy BG Random",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/background_{{Random: 1,2,3,4,base}}.png",
+			"Priority": "Default",
+			"PatchMode": "Overlay"
+		},
+		//Moon Phases Midground
+		{
+			"LogName": "Galaxy Moon Phases",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/{{MoonPhaseToday}}.png",
+			"PatchMode": "Overlay",
+			"Priority": "Late",
+			"Update": "OnTimeChange",
+			"When": {"Time": "{{Range: 2200,2600}}", "Weather |contains={{AllDayWeather}}":false}
+	    },		
+		{
+			"LogName": "Galaxy Mid Sun",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/mid_sun.png",
+			"Priority": "Late + 1",
+			"PatchMode": "Overlay",
+			"Update": "OnTimeChange",
+			"When": {"Time": "{{Range: 1430,1700}}", "Weather |contains={{AllDayWeather}}":false}
+	    },	  	
+		{
+			"LogName": "Galaxy Mid Random Night",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/mid_{{Random: blackhole,milkyway,planet_1,planet_2,planet_3,planet_4,planet_5,null,null,null,null,null}}.png",
+			"Priority": "Late + 1",
+			"PatchMode": "Overlay",
+			"Update": "OnTimeChange",
+			"When": {"Time": "{{Range: 1700,2200}}", "Weather |contains={{AllDayWeather}},kath.weathering_StarFalling,kath.weathering_NorthernLights":false}
+	    },
+
+		//Midground Top
+		{
+      		"LogName": "Galaxy Weather Specific - Cloudy",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/mid_cloudy.png",
+			"PatchMode": "Overlay",
+			"Priority": "Late + 2",
+			"When": {"Weather": "{{CloudyWeather}}"}
+		},		
+		{
+      		"LogName": "Galaxy Eclipse",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/mid_eclipse.png",
+			"Priority": "Late + 2",
+			"PatchMode": "Overlay",
+			"When": {"Weather":"kath.weathering_Darkness,Kana.WeatherWonders_Eclipse"}
+		},		
+		{
+      		"LogName": "Galaxy Mid Meteor Shower - PDW",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/mid_meteor.png",
+			"Priority": "Late + 2",
+			"PatchMode": "Overlay",
+			"Update": "OnTimeChange",
+			"When": {"Time": "{{Range: 1700,2600}}", "Weather":"kath.weathering_StarFalling"}
+		},	
+		{
+      		"LogName": "Galaxy Mid Northern Lights - PDW",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/mid_northernlights.png",
+			"Priority": "Late + 2",
+			"PatchMode": "Overlay",
+			"Update": "OnTimeChange",
+			"When": {"Time": "{{Range: 1700,2600}}", "Weather":"kath.weathering_NorthernLights"}
+		},		
+		//Other Astronomical Stuff
+		{
+      		"LogName": "Galaxy Mid Blood Moon - WW",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/mid_bloodmoon.png",
+			"Priority": "Late + 3",
+			"PatchMode": "Overlay",
+			"Update": "OnTimeChange",
+			"When": {"Time": "{{Range: 1700,2600}}", "Weather":"Kana.WeatherWonders_BloodMoon"}
+		},	
+		{
+      		"LogName": "Galaxy Mid Blue Moon - WW",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/mid_bluemoon.png",
+			"Priority": "Late + 3",
+			"PatchMode": "Overlay",
+			"Update": "OnTimeChange",
+			"When": {"Time": "{{Range: 1700,2600}}", "Weather":"Kana.WeatherWonders_BlueMoon"}
+		},	
+		{
+      		"LogName": "Galaxy Mid Harvest Moon - WW",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/mid_harvestmoon.png",
+			"Priority": "Late + 3",
+			"PatchMode": "Overlay",
+			"Update": "OnTimeChange",
+			"When": {"Time": "{{Range: 1700,2600}}", "Weather":"Kana.WeatherWonders_HarvestMoon"}
+		},					
+		//Foreground
+		{
+      		"LogName": "Galaxy Weather Specific - Rainy",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/frame_drops.png",
+			"PatchMode": "Overlay",
+			"Priority": "Late + 4",
+			"When": {"Weather": "{{RainWeather}}"}
+		},
+		{
+			"LogName": "Galaxy Weather Specific - Rainy",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/GalaxyStorm",
+			"FromFile": "assets/View/frame_drops.png",
+			"PatchMode": "Overlay",
+			"Priority": "Late + 4",
+			"When": {"Weather": "{{RainWeather}}"}
+	    },	
+		{
+			"LogName": "Galaxy Weather Specific - Rainy",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/GalaxyStormFixed",
+			"FromFile": "assets/View/frame_drops.png",
+			"PatchMode": "Overlay",
+			"Priority": "Late + 4",
+			"When": {"Weather": "{{RainWeather}}"}
+	    },		
+		{
+      		"LogName": "Galaxy Frame",
+			"Action": "EditImage",
+			"Target": "Mods/kath.cosmos/Galaxy",
+			"FromFile": "assets/View/frame_top.png",
+			"Priority": "Late + 5",
+			"PatchMode": "Overlay"
+		},				
+//Animations
+	{
+		"LogName": "Animation for Lightning - I tried",
+		"Action": "EditData",
+		"When": {"HasMod": "spacechase0.SpaceCore"},
+		"Update": "OnLocationChange, OnTimeChange",
+		"Target":"spacechase0.SpaceCore/TextureOverrides",
+		"Entries": {	
+			"KathCosmos.FlashLightning": {
+				"TargetTexture": "Mods/kath.cosmos/GalaxyStorm",
+				"TargetRect": { "X": 0, "Y": 0, "Width": 320, "Height": 208 },
+				"SourceTexture": "Mods/kath.cosmos/GalaxyStorm:0@500,Mods/kath.cosmos/GalaxyStorm:1@5,Mods/kath.cosmos/GalaxyStorm:2@5,Mods/kath.cosmos/GalaxyStorm:3@5,Mods/kath.cosmos/GalaxyStorm:4@50,Mods/kath.cosmos/GalaxyStorm:5@5"
+			}				
+		}
+	}
+	
+	
+]
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,164 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data Blizzard",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Blizzard": {
+					"Id": "kath.weathering_Blizzard",
+					"DisplayName": "{{i18n: Weather.Blizzard}}",
+
+					"Forecast": "{{i18n: Weather.Blizzard.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Blizzard.ForecastIsland}}", "Desert": "{{i18n: Weather.Blizzard.ForecastDesert}}",},
+					
+					"UseNightTiles": true,
+					"IsSnowing": true,
+					"IsRaining": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+
+					"MusicOverride": "KathBlizzard",					
+					"MusicFrequencyOutside": 75,
+					"MusicFrequencyInside": 10,
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 0},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 0},
+					"TVFrames": 4,
+
+
+					"TotemMessage": "{{i18n: Weather.BlizzardTotem}}",
+					"TotemScreenTint": "slateblue",
+					"TotemSound": "wind",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDBlizzard 3",
+							],
+						},
+						{
+							"Id": "ColdWeatherBuff",
+							"Type": "Buff",
+							"BuffId": "Dolly.ColdWeather_ColdDebuff",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !PLAYER_HAS_BUFF Current Dolly.ColdWeather_WarmBuff, {{HasMod|contains=Dolly.ColdWeather}}",
+							"TargetMapType": "Outdoors",
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "LightSnow",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 0, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "0.5, 0.25",
+							"ViewSpeed": "-1, -1",
+							"Scale": 4,
+						},
+						{
+							"Id": "BlizzardSnow1",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 0, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "-1, 1",
+							"ViewSpeed": "-1, -1",
+							"Scale": 4,
+							"Color": null,
+							"Opacity": 1,
+						},
+						{
+							"Id": "BlizzardSnow2",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !PLAYER_HAS_BUFF Current PDWUVGoggles",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 0, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "1, 1",
+							"ViewSpeed": "-1, -1",
+							"Scale": 6,
+							"Color": "200, 200, 200",
+							"Opacity": 0.95,
+						},
+						{
+							"Id": "BlizzardSnow3",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !PLAYER_HAS_BUFF Current PDWUVGoggles",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 0, "Width": 16, "Height": 16 },
+							"Frames": "1",
+							"TimePerFrame": "100",
+							"Speed": "0.25, 1.5",
+							"ViewSpeed": "-1, -1",
+							"Scale": 8,
+							"Color": null,
+							"Opacity": 0.85,
+						},
+						{
+							"Id": "SnowyTintLight",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "230, 230, 230",
+							"Opacity": 0.67
+						},
+						{
+							"Id": "SnowyWhite",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "230, 230, 230",
+							"Opacity": 0.78
+						},
+						{
+							"Id": "FoggySnow",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 64, "Y": 0, "Width": 64, "Height": 64 },
+							"Color": "50, 50, 50",
+							"Opacity": 0.28,
+							"Speed": "1, 1",
+							"ViewSpeed": "-1, -1",
+							"Scale": 25
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "!LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.47
+						},	
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

@@ -1,0 +1,265 @@
+{
+	"Changes": [
+			//Add Texture
+		{
+      		"LogName": "Load Mail BG",
+			"Action": "Load",
+			"Target": "Mods/kath.billing/Certificate",
+			"FromFile": "assets/AddOn/Certificate.png"
+		},	
+			//Add Item
+		{
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+					"DEWBills.CharityAddOn": {
+                    "Name": "DEWBills.CharityAddOn",
+                    "Displayname": "{{i18n: DEWBills.CharityAddOn.Name}}",
+                    "Description": "{{i18n: DEWBills.CharityAddOn.Description}}",
+                    "Type": "Quest",
+                    "Category": 0,
+					"Price": 0,
+					"Edibility": -300,
+                    "Texture": "Mods/kath.billing/Certificate",
+                    "SpriteIndex": 0,
+					"ExcludeFromRandomSale": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": true,
+					"ContextTags": [ 
+						"prevent_loss_on_death"
+						]
+					}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore"},
+			"Entries": {
+				"DEWBills.CharityAddOn": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 5
+				}
+			}
+		},	
+			//Gift Taste
+		{
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Like"],
+                    "Value": "DEWBills.CharityAddOn",
+                    "Delimiter": " " 
+                }
+			]
+		},
+			//Shop
+			//Aimon111.CharityDSA_DonationStand
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Aimon111.CharityDSA_DonationStand", "Items" ],
+            "Entries": {
+                "DEWBills.CharityAddOn": {
+                    "Id": "DEWBills.CharityAddOn",
+                    "ItemId": "(O)DEWBills.CharityAddOn",
+                    "Price": 20000,
+					"Condition": "!DAY_OF_WEEK Thursday",
+					"AvailableStock": 1,
+					"AvailableStockLimit": "Player",
+					"IgnoreShopPriceModifiers": true,
+					"ActionsOnPurchase": [
+						"If !PLAYER_HAS_MAIL Current DEWThanksLetter ## AddMail Current DEWThanksLetter tomorrow",
+											"If PLAYER_HAS_MET Current Abigail ## AddFriendshipPoints Abigail 75",
+											"If PLAYER_HAS_MET Current Alex ## AddFriendshipPoints Alex 75",										
+											"If PLAYER_HAS_MET Current Caroline ## AddFriendshipPoints Caroline 75",
+											"If PLAYER_HAS_MET Current Clint ## AddFriendshipPoints Clint 75",
+											"If PLAYER_HAS_MET Current Demetrius ## AddFriendshipPoints Demetrius 75",
+											//"If PLAYER_HAS_MET Current Dwarf ## AddFriendshipPoints Dwarf 75",
+											//"If PLAYER_HAS_MET Current Krobus ## AddFriendshipPoints Krobus 75",
+											"If PLAYER_HAS_MET Current Elliott ## AddFriendshipPoints Elliott 75",
+											"If PLAYER_HAS_MET Current Emily ## AddFriendshipPoints Emily 75",
+											"If PLAYER_HAS_MET Current Evelyn ## AddFriendshipPoints Evelyn 75",
+											"If PLAYER_HAS_MET Current George ## AddFriendshipPoints George 75",
+											"If PLAYER_HAS_MET Current Gus ## AddFriendshipPoints Gus 75",
+											"If PLAYER_HAS_MET Current Haley ## AddFriendshipPoints Haley 75",
+											"If PLAYER_HAS_MET Current Harvey ## AddFriendshipPoints Harvey 75",
+											"If PLAYER_HAS_MET Current Jas ## AddFriendshipPoints Jas 75",
+											"If PLAYER_HAS_MET Current Maru ## AddFriendshipPoints Maru 75",
+											"If PLAYER_HAS_MET Current Pam ## AddFriendshipPoints Pam 75",											
+											"If PLAYER_HAS_MET Current Penny ## AddFriendshipPoints Penny 75",
+											"If PLAYER_HAS_MET Current Pierre ## AddFriendshipPoints Pierre 75",
+											"If PLAYER_HAS_MET Current Robin ## AddFriendshipPoints Robin 75",
+											"If PLAYER_HAS_MET Current Sam ## AddFriendshipPoints Sam 75",
+											"If PLAYER_HAS_MET Current Sandy ## AddFriendshipPoints Sandy 75",										
+											"If PLAYER_HAS_MET Current Sebastian ## AddFriendshipPoints Sebastian 75",
+											"If PLAYER_HAS_MET Current Shane ## AddFriendshipPoints Shane 75",
+											"If PLAYER_HAS_MET Current Vincent ## AddFriendshipPoints Vincent 75",
+											"If PLAYER_HAS_MET Current Willy ## AddFriendshipPoints Willy 75",
+											"If PLAYER_HAS_MET Current Wizard ## AddFriendshipPoints Wizard 75",
+											"If PLAYER_HAS_MET Current Kent ## AddFriendshipPoints Kent 75",
+											"If PLAYER_HAS_MET Current Jodi ## AddFriendshipPoints Jodi 75",
+											"If PLAYER_HAS_MET Current Leah ## AddFriendshipPoints Leah 75",
+											"If PLAYER_HAS_SEEN_EVENT Current 6497428 ## AddFriendshipPoints Leo 75",
+											"If PLAYER_HAS_MET Current Lewis ## AddFriendshipPoints Lewis 75",
+											"If PLAYER_HAS_MET Current Linus ## AddFriendshipPoints Linus 75",
+											"If PLAYER_HAS_MET Current Marnie ## AddFriendshipPoints Marnie 75",
+											
+											//SVE
+											//"If PLAYER_HAS_MET Current Alesia ## AddFriendshipPoints Alesia 75",
+											"If PLAYER_HAS_MET Current Andy ## AddFriendshipPoints Andy 75",
+											//"If PLAYER_HAS_MET Current Apples ## AddFriendshipPoints Apples 75",
+											//"If PLAYER_HAS_MET Current Camilla ## AddFriendshipPoints Camilla 75",
+											"If PLAYER_HAS_MET Current Claire ## AddFriendshipPoints Claire 75",
+											
+											"If PLAYER_HAS_MET Current GuntherSilvian ## AddFriendshipPoints GuntherSilvian 75",
+											//"If PLAYER_HAS_MET Current Isaac ## AddFriendshipPoints Isaac 75",
+											//"If PLAYER_HAS_MET Current Jadu ## AddFriendshipPoints Jadu 75",
+											//"If PLAYER_HAS_MET Current Lance ## AddFriendshipPoints Lance 75",
+											"If PLAYER_HAS_MET Current Magnus ## AddFriendshipPoints Magnus 75",
+											"If PLAYER_HAS_MET Current Martin ## AddFriendshipPoints Martin 75",
+											//"If PLAYER_HAS_MET Current Morgan ## AddFriendshipPoints Morgan 75",
+											//"If PLAYER_HAS_MET Current MorrisTod ## AddFriendshipPoints MorrisTod 75",
+											"If PLAYER_HAS_MET Current Olivia ## AddFriendshipPoints Olivia 75",
+											//"If PLAYER_HAS_MET Current Peaches ## AddFriendshipPoints  Peaches 75",
+											"If PLAYER_HAS_MET Current Scarlett ## AddFriendshipPoints Scarlett 75",
+											"If PLAYER_HAS_MET Current Sophia ## AddFriendshipPoints Sophia 75",
+											"If PLAYER_HAS_MET Current Susan ## AddFriendshipPoints Susan 75",
+											"If PLAYER_HAS_MET Current Victor ## AddFriendshipPoints Victor 75",
+											
+											"If PLAYER_HAS_MET Current MarlonFay ## AddFriendshipPoints MarlonFay 75",
+
+											//RSV
+											"If PLAYER_HAS_MET Current Aguar ## AddFriendshipPoints Aguar 75",
+											"If PLAYER_HAS_MET Current Alissa ## AddFriendshipPoints Alissa 75",											
+											"If PLAYER_HAS_MET Current Anton ## AddFriendshipPoints Anton 75",
+											"If PLAYER_HAS_MET Current Ariah ## AddFriendshipPoints Ariah 75",
+											"If PLAYER_HAS_MET Current Bert ## AddFriendshipPoints Bert 75",
+											"If PLAYER_HAS_MET Current Blair ## AddFriendshipPoints Blair 75",
+											"If PLAYER_HAS_MET Current Bryle ## AddFriendshipPoints Bryle 75",										
+											"If PLAYER_HAS_MET Current Carmen ## AddFriendshipPoints Carmen 75",
+											"If PLAYER_HAS_MET Current Corine ## AddFriendshipPoints Corine 75",
+											"If PLAYER_HAS_MET Current Daia ## AddFriendshipPoints Daia 75",
+											"If PLAYER_HAS_MET Current Ezekiel ## AddFriendshipPoints Ezekiel 75",
+											"If PLAYER_HAS_MET Current Faye ## AddFriendshipPoints Faye 75",
+											"If PLAYER_HAS_MET Current Flor ## AddFriendshipPoints Flor 75",											
+											"If PLAYER_HAS_MET Current Freddie ## AddFriendshipPoints Freddie 75",
+											"If PLAYER_HAS_MET Current Ian ## AddFriendshipPoints Ian 75",
+											"If PLAYER_HAS_MET Current Irene ## AddFriendshipPoints Irene 75",
+											"If PLAYER_HAS_MET Current Jeric ## AddFriendshipPoints Jeric 75",
+											"If PLAYER_HAS_MET Current Jio ## AddFriendshipPoints Jio 75",										
+											"If PLAYER_HAS_MET Current June ## AddFriendshipPoints June 75",
+											"If PLAYER_HAS_MET Current Keahi ## AddFriendshipPoints Keahi 75",
+											"If PLAYER_HAS_MET Current Kenneth ## AddFriendshipPoints Kenneth 75",
+											"If PLAYER_HAS_MET Current Kiarra ## AddFriendshipPoints Kiarra 75",
+											"If PLAYER_HAS_MET Current Kimpoi ## AddFriendshipPoints Kimpoi 75",
+											"If PLAYER_HAS_MET Current Kiwi ## AddFriendshipPoints Kiwi 75",
+											"If PLAYER_HAS_MET Current Lenny ## AddFriendshipPoints Lenny 75",										
+											"If PLAYER_HAS_MET Current Lola ## AddFriendshipPoints Lola 75",
+											"If PLAYER_HAS_MET Current Lorenzo ## AddFriendshipPoints Lorenzo 75",
+											"If PLAYER_HAS_MET Current Louie ## AddFriendshipPoints Louie 75",
+											"If PLAYER_HAS_MET Current Maive ## AddFriendshipPoints Maive 75",
+											"If PLAYER_HAS_MET Current Maddie ## AddFriendshipPoints Maddie 75",
+											"If PLAYER_HAS_MET Current Malaya ## AddFriendshipPoints Malaya 75",
+											"If PLAYER_HAS_MET Current Naomi ## AddFriendshipPoints Naomi 75",
+											"If PLAYER_HAS_MET Current Olga ## AddFriendshipPoints Olga 75",
+											"If PLAYER_HAS_MET Current Paula ## AddFriendshipPoints Paula 75",
+											"If PLAYER_HAS_MET Current Philip ## AddFriendshipPoints Philip 75",
+											"If PLAYER_HAS_MET Current Pika ## AddFriendshipPoints Pika 75",
+											"If PLAYER_HAS_MET Current Richard ## AddFriendshipPoints Richard 75",
+											"If PLAYER_HAS_MET Current Sean ## AddFriendshipPoints Sean 75",
+											"If PLAYER_HAS_MET Current Shanice ## AddFriendshipPoints Shanice 75",											
+											"If PLAYER_HAS_MET Current Shiro ## AddFriendshipPoints Shiro 75",
+											"If PLAYER_HAS_MET Current Sonny ## AddFriendshipPoints Sonny 75",
+											"If PLAYER_HAS_MET Current Trinnie ## AddFriendshipPoints Trinnie 75",
+											"If PLAYER_HAS_MET Current Ysabelle ## AddFriendshipPoints Ysabelle 75",										
+											"If PLAYER_HAS_MET Current Yuuma ## AddFriendshipPoints Yuuma 75",
+											"If PLAYER_HAS_MET Current Zayne ## AddFriendshipPoints Zayne 75",
+											
+											//ES
+											"If PLAYER_HAS_MET Current Aideen ## AddFriendshipPoints Aideen 75",
+											"If PLAYER_HAS_MET Current Beatrice ## AddFriendshipPoints Beatrice 75",
+											"If PLAYER_HAS_MET Current Eloise ## AddFriendshipPoints Eloise 75",
+											//"If PLAYER_HAS_MET Current Eyvinder ## AddFriendshipPoints Eyvinder 75",
+											"If PLAYER_HAS_MET Current Jacob ## AddFriendshipPoints Jacob 75",
+											"If PLAYER_HAS_MET Current JosephineK ## AddFriendshipPoints JosephineK 75",
+											"If PLAYER_HAS_MET Current KatarynaLK ## AddFriendshipPoints KatarynaLK 75",
+											//"If PLAYER_HAS_MET Current Leximonster ## AddFriendshipPoints Leximonster 75",
+											"If PLAYER_HAS_MET Current OliverK ## AddFriendshipPoints OliverK 75",
+											"If PLAYER_HAS_MET Current Rosa ## AddFriendshipPoints Rosa 75",
+											"If PLAYER_HAS_MET Current ToriLK ## AddFriendshipPoints ToriLK 75",
+											"If PLAYER_HAS_MET Current VivienneLK ## AddFriendshipPoints VivienneLK 75",
+											//"If PLAYER_HAS_MET Current LumaJunimo ## AddFriendshipPoints LumaJunimo 75",
+											
+											
+											"If PLAYER_HAS_SEEN_EVENT Current 50706121 ## AddFriendshipPoints MisterGinger 75",
+											
+											"If PLAYER_HAS_MET Current Cirrus ## AddFriendshipPoints Cirrus 75",
+											"If PLAYER_HAS_MET Current Dandelion ## AddFriendshipPoints Dandelion 75",
+											"If PLAYER_HAS_MET Current Hector ## AddFriendshipPoints Hector 75",
+											"If PLAYER_HAS_MET Current Mateo ## AddFriendshipPoints Mateo 75",
+											"If PLAYER_HAS_MET Current Roslin ## AddFriendshipPoints Roslin 75",
+											
+											"If PLAYER_HAS_MET Current Nora ## AddFriendshipPoints Nora 75",
+											
+											"If PLAYER_HAS_MET Current SenS ## AddFriendshipPoints SenS 75",
+											
+											"If PLAYER_HAS_MET Current RodneyOBrien ## AddFriendshipPoints RodneyOBrien 75",
+											"If PLAYER_HAS_MET Current MeredithOBrien ## AddFriendshipPoints MeredithOBrien 75",
+											
+											"If PLAYER_HAS_MET Current Sterling ## AddFriendshipPoints Sterling 75",
+											//"If PLAYER_HAS_MET Current Mia ## AddFriendshipPoints Mia 75",
+											//"If PLAYER_HAS_MET Current Henry ## AddFriendshipPoints Henry 75",
+											
+											"If PLAYER_HAS_MET Current Nova.Eli ## AddFriendshipPoints Nova.Eli 75",
+											"If PLAYER_HAS_MET Current Nova.Dylan ## AddFriendshipPoints Nova.Dylan 75",
+											
+											//VMV
+											"If PLAYER_HAS_MET Current AdelaideRosierVMV ## AddFriendshipPoints AdelaideRosierVMV 75",
+                                            "If PLAYER_HAS_MET Current AsterPellegrinVMV ## AddFriendshipPoints AsterPellegrinVMV 75",
+                                            "If PLAYER_HAS_MET Current CelestineDuboisVMV ## AddFriendshipPoints CelestineDuboisVMV 75",
+                                            "If PLAYER_HAS_MET Current HeliaDiamantiVMV ## AddFriendshipPoints HeliaDiamantiVMV 75",
+                                            "If PLAYER_HAS_MET Current MaddyPellegrinVMV ## AddFriendshipPoints MaddyPellegrinVMV 75",
+                                            "If PLAYER_HAS_MET Current MariamFortinVMV ## AddFriendshipPoints MariamFortinVMV 75",
+                                            "If PLAYER_HAS_MET Current MoiraDuboisVMV ## AddFriendshipPoints MoiraDuboisVMV 75",
+                                            "If PLAYER_HAS_MET Current NaveenFaycombeSereneVMV ## AddFriendshipPoints NaveenFaycombeSereneVMV 75",
+                                            "If PLAYER_HAS_MET Current OdalisDuboisVelezVMV ## AddFriendshipPoints OdalisDuboisVelezVMV 75",
+											
+											//Passerby
+											"If PLAYER_HAS_MET Current FC.Alan ## AddFriendshipPoints FC.Alan 75",		
+											"If PLAYER_HAS_MET Current FC.Amanda ## AddFriendshipPoints FC.Amanda 75",
+											"If PLAYER_HAS_MET Current FC.Barron ## AddFriendshipPoints FC.Barron 75",
+											//"If PLAYER_HAS_MET Current FC.Boxy ## AddFriendshipPoints FC.Boxy 75",
+											//"If PLAYER_HAS_MET Current FC.Cotton ## AddFriendshipPoints FC.Cotton 75",
+											"If PLAYER_HAS_MET Current FC.Dezerie ## AddFriendshipPoints FC.Dezerie 75",
+											"If PLAYER_HAS_MET Current FC.Grady ## AddFriendshipPoints FC.Grady 75",
+											//"If PLAYER_HAS_MET Current FC.Jinx ## AddFriendshipPoints FC.Jinx 75",
+											"If PLAYER_HAS_MET Current FC.John ## AddFriendshipPoints FC.John 75",
+											"If PLAYER_HAS_MET Current FC.Kaia ## AddFriendshipPoints FC.Kaia 75",
+											"If PLAYER_HAS_MET Current FC.Lyell ## AddFriendshipPoints FC.Lyell 75",
+											"If PLAYER_HAS_MET Current FC.Maverick ## AddFriendshipPoints FC.Maverick 75",
+											"If PLAYER_HAS_MET Current FC.Nikolai ## AddFriendshipPoints FC.Nikolai 75",
+											"If PLAYER_HAS_MET Current FC.Phoebe ## AddFriendshipPoints FC.Phoebe 75",
+											//"If PLAYER_HAS_MET Current FC.Pop ## AddFriendshipPoints FC.Pop 75",
+											//"If PLAYER_HAS_MET Current FC.Roswell ## AddFriendshipPoints FC.Roswell 75",
+											"If PLAYER_HAS_MET Current FC.Shaavar ## AddFriendshipPoints FC.Shaavar 75",
+											"If PLAYER_HAS_MET Current FC.Thalia ## AddFriendshipPoints FC.Thalia 75",
+											"If PLAYER_HAS_MET Current FC.Valerie ## AddFriendshipPoints FC.Valerie 75",
+											//"If PLAYER_HAS_MET Current FC.Zuuie ## AddFriendshipPoints FC.Zuuie 75",
+											
+											//Other
+											"If PLAYER_HAS_MET Current Mike ## AddFriendshipPoints Mike 75"											
+											
+					]					
+                }
+			},
+	  "MoveEntries": [
+			{ "Id": "DEWBills.CharityAddOn", "BeforeId": "Aimon111.CharityDSA_DonationStand4" }	
+			]			
+		}
+]
+}
+
+//"If PLAYER_HAS_MET Current NPC ## AddFriendshipPoints NPC 5",

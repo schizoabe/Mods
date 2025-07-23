@@ -1,0 +1,343 @@
+{
+    "Changes": [
+///ADDING MEALS
+		{
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "MAAM_Garlic_Mushrooms": {
+                    "Name": "Garlic Mushrooms",
+					"DisplayName": "{{i18n:Garlic-Mushrooms.name}}",
+					"Description": "{{i18n:Garlic-Mushrooms.description}}",
+                    "Price": 375,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Garlic Mushrooms",
+                    "SpriteIndex": 0,
+                    "Edibility": 34,
+					"Buffs": [
+					    {
+							"Id": "Food",
+							"BuffId": null,
+							"IconTexture": null,
+							"IconSpriteIndex": 0,
+							"Duration": 600,
+							"IsDebuff": false,
+							"GlowColor": null,
+							"CustomAttributes": {
+								"FarmingLevel": 0.0,
+								"FishingLevel": 0.0,
+								"MiningLevel": 0.0,
+								"LuckLevel": 0.0,
+								"ForagingLevel": 0.0,
+								"MaxStamina": 0.0,
+								"MagneticRadius": 0.0,
+								"Speed": 0.0,
+								"Defense": 2.0,
+								"Attack": 0.0
+								},
+							"CustomFields": null
+						},
+					]
+                },
+                "MAAM_Mushroom_Omelet": {
+                    "Name": "Mushroom Omelet",
+					"DisplayName": "{{i18n:Mushroom-Omelet.name}}",
+					"Description": "{{i18n:Mushroom-Omelet.description}}",
+                    "Price": 350,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Omelet",
+                    "SpriteIndex": 0,
+                    "Edibility": 80,
+                },
+                "MAAM_Mushroom_Vol_Au_Vents": {
+                    "Name": "Mushroom Vol-Au-Vents",
+					"DisplayName": "{{i18n:Mushroom-Vol-Au-Vents.name}}",
+					"Description": "{{i18n:Mushroom-Vol-Au-Vents.description}}",
+                    "Price": 450,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Vol Au Vents",
+                    "SpriteIndex": 0,
+                    "Edibility": 50,
+                },
+                "MAAM_Wild_Mushroom_Soup": {
+                    "Name": "Wild Mushroom Soup",
+					"DisplayName": "{{i18n:Wild-Mushroom-Soup.name}}",
+					"Description": "{{i18n:Wild-Mushroom-Soup.description}}",
+                    "Price": 345,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Wild Mushroom Soup",
+                    "SpriteIndex": 0,
+                    "Edibility": 70,
+					"Buffs": [
+					    {
+							"Id": "Food",
+							"BuffId": null,
+							"IconTexture": null,
+							"IconSpriteIndex": 0,
+							"Duration": 420,
+							"IsDebuff": false,
+							"GlowColor": null,
+							"CustomAttributes": {
+								"FarmingLevel": 0.0,
+								"FishingLevel": 0.0,
+								"MiningLevel": 0.0,
+								"LuckLevel": 0.0,
+								"ForagingLevel": 1.0,
+								"MaxStamina": 0.0,
+								"MagneticRadius": 25.0,
+								"Speed": 0.0,
+								"Defense": 0.0,
+								"Attack": 0.0
+								},
+							"CustomFields": null
+						},
+					]
+                },
+                "MAAM_Stuffed_Mushrooms": {
+                    "Name": "Stuffed Mushrooms",
+					"DisplayName": "{{i18n:Stuffed-Mushroom.name}}",
+					"Description": "{{i18n:Stuffed-Mushroom.description}}",
+                    "Price": 640,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Stuffed Mushroom",
+                    "SpriteIndex": 0,
+                    "Edibility": 84,
+				},
+                "MAAM_Mushroom_Tagliatelle": {
+                    "Name": "Mushroom Tagliatelle",
+					"DisplayName": "{{i18n:Mushroom-Tagliatelle.name}}",
+					"Description": "{{i18n:Mushroom-Tagliatelle.description}}",
+                    "Price": 1270,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Tagliatelle",
+                    "SpriteIndex": 0,
+                    "Edibility": 50,
+				},
+                "MAAM_Mushroom_Pate": {
+                    "Name": "Mushroom Pâté",
+					"DisplayName": "{{i18n:Mushroom-Pate.name}}",
+					"Description": "{{i18n:Mushroom-Pate.description}}",
+                    "Price": 645,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Pate",
+                    "SpriteIndex": 0,
+                    "Edibility": 80,
+				},
+                "MAAM_Fire_Spiced_Mushrooms": {
+                    "Name": "Fire Spiced Mushrooms",
+					"DisplayName": "{{i18n:Fire-Spiced-Mushrooms.name}}",
+					"Description": "{{i18n:Fire-Spiced-Mushrooms.description}}",
+                    "Price": 435,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Fire Spiced Mushrooms",
+                    "SpriteIndex": 0,
+                    "Edibility": 45,
+				},
+                "MAAM_Sticky_Mushroom_Rice": {
+                    "Name": "Sticky Mushroom Rice",
+					"DisplayName": "{{i18n:Sticky-Mushroom-Rice.name}}",
+					"Description": "{{i18n:Sticky-Mushroom-Rice.description}}",
+                    "Price": 640,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Sticky Mushroom Rice",
+                    "SpriteIndex": 0,
+                    "Edibility": 45,
+				},
+                "MAAM_Mushroom_Tart": {
+                    "Name": "Mushroom Tart",
+					"DisplayName": "{{i18n:Mushroom-Tart.name}}",
+					"Description": "{{i18n:Mushroom-Tart.description}}",
+                    "Price": 625,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Tart",
+                    "SpriteIndex": 0,
+                    "Edibility": 80,
+				},
+                "MAAM_Mushroom_Ale_Pie": {
+                    "Name": "Mushroom and Ale Pie",
+					"DisplayName": "{{i18n:Mushroom-Ale-Pie.name}}",
+					"Description": "{{i18n:Mushroom-Ale-Pie.description}}",
+                    "Price": 745,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom Ale Pie",
+                    "SpriteIndex": 0,
+                    "Edibility": 50,
+				},
+                "MAAM_Mushroom_and_Leek_Risotto": {
+                    "Name": "Mushroom and Leek Risotto",
+					"DisplayName": "{{i18n:Mushroom-Leek-Risotto.name}}",
+					"Description": "{{i18n:Mushroom-Leek-Risotto.description}}",
+                    "Price": 875,
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Mushroom and Leek Risotto",
+                    "SpriteIndex": 0,
+                    "Edibility": 66,
+                },
+			}
+        },
+///ADDING MUSHROOM GOODS
+		{
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {				
+                "MAAM_Witches_Elixir": {
+                    "Name": "Witches Elixir",
+					"DisplayName": "{{i18n:Witches-Elixir.name}}",
+					"Description": "{{i18n:Witches-Elixir.description}}",
+                    "Price": 500,
+                    "Type": "ArtisanGoods",
+                    "Category": -7,
+                    "Texture": "StunkyMcDoo.MuchAdoAboutMushrooms.cp/06 -- GOODS -- Witches Elixir",
+                    "SpriteIndex": 0,
+                    "Edibility": -80,
+					"IsDrink": true,
+					"Buffs": [
+					    {
+							"Id": "Food",
+							"BuffId": null,
+							"IconTexture": null,
+							"IconSpriteIndex": 0,
+							"Duration": 300,
+							"IsDebuff": false,
+							"GlowColor": "Firebrick",
+							"CustomAttributes": {
+								"FarmingLevel": 0.0,
+								"FishingLevel": 0.0,
+								"MiningLevel": 0.0,
+								"LuckLevel": 0.0,
+								"ForagingLevel": 0.0,
+								"MaxStamina": -75.0,
+								"MagneticRadius": 25.0,
+								"Speed": 4.0,
+								"Defense": 4.0,
+								"Attack": 4.0
+								},
+							"CustomFields": null
+						},
+					]
+                }
+			}
+        },
+///ADDING COOKING RECIPES
+        {
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "When": {"HasMod |contains=Cornucopia.MoreCrops": "false", "HasMod |contains=wildflour.ateliercrops": "false"},
+            "Entries": {
+                "Garlic Mushrooms": "MAAM_White_Mushroom 1 247 1 248 1 246 1/9999 9999/MAAM_Garlic_Mushrooms/none/{{i18n:Garlic-Mushrooms.name}}",
+                "Mushroom Omelet": "MAAM_Muffin_Button_Mushroom 1 195 1 250 1/9999 9999/MAAM_Mushroom_Omelet/none/{{i18n:Mushroom-Omelet.name}}",
+                "Mushroom Vol-Au-Vents": "MAAM_Dew_Cup_Mushroom 1 246 1 -5 1 426 1/9999 9999/MAAM_Mushroom_Vol_Au_Vents/none/{{i18n:Mushroom-Vol-Au-Vents.name}}",
+				"Wild Mushroom Soup": "404 1 MAAM_White_Mushroom 1 MAAM_Muffin_Button_Mushroom 1 MAAM_Dew_Cup_Mushroom 1/9999 9999/MAAM_Wild_Mushroom_Soup/none/{{i18n:Wild-Mushroom-Soup.name}}",
+                "Stuffed Mushrooms": "MAAM_Woodland_Stool_Mushroom 1 248 1 424 1/9999 9999/MAAM_Stuffed_Mushrooms/none/{{i18n:Stuffed-Mushroom.name}}",
+				"Mushroom Tagliatelle": "MAAM_Plump_Belly_Mushroom 1 246 1 430 1/9999 9999/MAAM_Mushroom_Tagliatelle/none/{{i18n:Mushroom-Tagliatelle.name}}",
+                "Mushroom Pâté": "MAAM_St_Mayalls_Mushroom 1 MAAM_Lord_Edmondsons_Mushroom 1 216 1 247 1/9999 9999/MAAM_Mushroom_Pate/none/{{i18n:Mushroom-Pate.name}}",
+                "Fire Spiced Mushrooms": "MAAM_Stalk_Cluster_Mushroom 1 260 1 396 1/9999 9999/MAAM_Fire_Spiced_Mushrooms/none/{{i18n:Fire-Spiced-Mushrooms.name}}",				
+                "Sticky Mushroom Rice": "MAAM_Ridge_Puff_Mushroom 1 423 1 340 1 278 1/9999 9999/MAAM_Sticky_Mushroom_Rice/none/{{i18n:Sticky-Mushroom-Rice.name}}",					
+				"Mushroom Tart": "MAAM_Tooting_Funnel_Mushroom 1 424 1 246 1/9999 9999/MAAM_Mushroom_Tart/none/{{i18n:Mushroom-Tart.name}}",
+				"Mushroom and Ale Pie": "MAAM_Spring_Cap_Mushroom 1 303 1 246 1/9999 9999/MAAM_Mushroom_Ale_Pie/none/{{i18n:Mushroom-Ale-Pie.name}}",
+                "Mushroom and Leek Risotto": "281 1 424 1 20 1 -6 1/9999 9999/MAAM_Mushroom_and_Leek_Risotto/none/{{i18n:Mushroom-Leek-Risotto.name}}",
+				}
+		},
+///ADDING CORNUCOPIA COOKING RECIPES
+        {
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "When": {"HasMod |contains=Cornucopia.MoreCrops": "true", "HasMod |contains=wildflour.ateliercrops": "false"},
+            "Entries": {
+                "Garlic Mushrooms": "MAAM_White_Mushroom 1 247 1 248 1 246 1/9999 9999/MAAM_Garlic_Mushrooms/none/{{i18n:Garlic-Mushrooms.name}}",
+                "Mushroom Omelet": "MAAM_Muffin_Button_Mushroom 1 195 1 Cornucopia_Spinach 1 Cornucopia_Peppercorn 1/9999 9999/MAAM_Mushroom_Omelet/none/{{i18n:Mushroom-Omelet.name}}",
+                "Mushroom Vol-Au-Vents": "MAAM_Dew_Cup_Mushroom 1 246 1 -5 1 426 1/9999 9999/MAAM_Mushroom_Vol_Au_Vents/none/{{i18n:Mushroom-Vol-Au-Vents.name}}",
+				"Wild Mushroom Soup": "MAAM_Waifs_Bonnet_Mushroom 1 MAAM_Muffin_Button_Mushroom 1 MAAM_Dew_Cup_Mushroom 1 404 1/9999 9999/MAAM_Wild_Mushroom_Soup/none/{{i18n:Wild-Mushroom-Soup.name}}",
+                "Stuffed Mushrooms": "MAAM_Woodland_Stool_Mushroom 1 248 1 424 1 Cornucopia_Basil 1/9999 9999/MAAM_Stuffed_Mushrooms/none/{{i18n:Stuffed-Mushroom.name}}",
+				"Mushroom Tagliatelle": "MAAM_Plump_Belly_Mushroom 1 246 1 430 1 Cornucopia_Onion 1/9999 9999/MAAM_Mushroom_Tagliatelle/none/{{i18n:Mushroom-Tagliatelle.name}}",
+                "Mushroom Pâté": "MAAM_St_Mayalls_Mushroom 1 MAAM_Lord_Edmondsons_Mushroom 1 216 1 Cornucopia_OliveOil 1/9999 9999/MAAM_Mushroom_Pate/none/{{i18n:Mushroom-Pate.name}}",
+                "Fire Spiced Mushrooms": "MAAM_Stalk_Cluster_Mushroom 1 260 1 396 1 Cornucopia_BellPepper 1/9999 9999/MAAM_Fire_Spiced_Mushrooms/none/{{i18n:Fire-Spiced-Mushrooms.name}}",				
+                "Sticky Mushroom Rice": "MAAM_Ridge_Puff_Mushroom 1 423 1 340 1 278 1/9999 9999/MAAM_Sticky_Mushroom_Rice/none/{{i18n:Sticky-Mushroom-Rice.name}}",					
+				"Mushroom Tart": "MAAM_Tooting_Funnel_Mushroom 1 424 1 246 1 Cornucopia_Basil 1/9999 9999/MAAM_Mushroom_Tart/none/{{i18n:Mushroom-Tart.name}}",
+				"Mushroom and Ale Pie": "MAAM_Spring_Cap_Mushroom 1 303 1 246 1 Cornucopia_Onion 1/9999 9999/MAAM_Mushroom_Ale_Pie/none/{{i18n:Mushroom-Ale-Pie.name}}",
+                "Mushroom and Leek Risotto": "281 1 424 1 20 1 -6 1/9999 9999/MAAM_Mushroom_and_Leek_Risotto/none/{{i18n:Mushroom-Leek-Risotto.name}}",
+				}
+		},
+///ADDING WILDFLOUR COOKING RECIPES
+        {
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "When": {"HasMod |contains=Cornucopia.MoreCrops": "false", "HasMod |contains=wildflour.ateliercrops": "true"},
+            "Entries": {
+                "Garlic Mushrooms": "MAAM_White_Mushroom 1 247 1 248 1 246 1/9999 9999/MAAM_Garlic_Mushrooms/none/{{i18n:Garlic-Mushrooms.name}}",
+                "Mushroom Omelet": "MAAM_Muffin_Button_Mushroom 1 195 1 wildflour.ateliercrops_cilantro 1/9999 9999/MAAM_Mushroom_Omelet/none/{{i18n:Mushroom-Omelet.name}}",
+                "Mushroom Vol-Au-Vents": "MAAM_Dew_Cup_Mushroom 1 246 1 -5 1 426 1/9999 9999/MAAM_Mushroom_Vol_Au_Vents/none/{{i18n:Mushroom-Vol-Au-Vents.name}}",
+				"Wild Mushroom Soup": "MAAM_Waifs_Bonnet_Mushroom 1 MAAM_Muffin_Button_Mushroom 1 MAAM_Dew_Cup_Mushroom 1 404 1/9999 9999/MAAM_Wild_Mushroom_Soup/none/{{i18n:Wild-Mushroom-Soup.name}}",
+                "Stuffed Mushrooms": "MAAM_Woodland_Stool_Mushroom 1 248 1 424 1 wildflour.ateliercrops_sage 1/9999 9999/MAAM_Stuffed_Mushrooms/none/{{i18n:Stuffed-Mushroom.name}}",
+				"Mushroom Tagliatelle": "MAAM_Plump_Belly_Mushroom 1 246 1 430 1 wildflour.ateliercrops_redonion 1/9999 9999/MAAM_Mushroom_Tagliatelle/none/{{i18n:Mushroom-Tagliatelle.name}}",
+                "Mushroom Pâté": "MAAM_St_Mayalls_Mushroom 1 MAAM_Lord_Edmondsons_Mushroom 1 216 1 247 1/9999 9999/MAAM_Mushroom_Pate/none/{{i18n:Mushroom-Pate.name}}",
+                "Fire Spiced Mushrooms": "MAAM_Stalk_Cluster_Mushroom 1 260 1 396 1 wildflour.ateliercrops_honeyfungus 1/9999 9999/MAAM_Fire_Spiced_Mushrooms/none/{{i18n:Fire-Spiced-Mushrooms.name}}",				
+                "Sticky Mushroom Rice": "MAAM_Ridge_Puff_Mushroom 1 423 1 340 1 278 1/9999 9999/MAAM_Sticky_Mushroom_Rice/none/{{i18n:Sticky-Mushroom-Rice.name}}",					
+				"Mushroom Tart": "MAAM_Tooting_Funnel_Mushroom 1 424 1 246 1 wildflour.ateliercrops_sage 1/9999 9999/MAAM_Mushroom_Tart/none/{{i18n:Mushroom-Tart.name}}",
+				"Mushroom and Ale Pie": "MAAM_Spring_Cap_Mushroom 1 303 1 246 1 wildflour.ateliercrops_redonion 1/9999 9999/MAAM_Mushroom_Ale_Pie/none/{{i18n:Mushroom-Ale-Pie.name}}",
+                "Mushroom and Leek Risotto": "281 1 424 1 20 1 -6 1/9999 9999/MAAM_Mushroom_and_Leek_Risotto/none/{{i18n:Mushroom-Leek-Risotto.name}}",
+				}
+		},
+///ADDING WILDFLOUR + CORNUCOPIA COOKING RECIPES
+        {
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "When": {"HasMod |contains=Cornucopia.MoreCrops": "true", "HasMod |contains=wildflour.ateliercrops": "true"},
+            "Entries": {
+                "Garlic Mushrooms": "MAAM_White_Mushroom 1 247 1 248 1 246 1/9999 9999/MAAM_Garlic_Mushrooms/none/{{i18n:Garlic-Mushrooms.name}}",
+                "Mushroom Omelet": "MAAM_Muffin_Button_Mushroom 1 195 1 wildflour.ateliercrops_cilantro 1 Cornucopia_Peppercorn 1/9999 9999/MAAM_Mushroom_Omelet/none/{{i18n:Mushroom-Omelet.name}}",
+                "Mushroom Vol-Au-Vents": "MAAM_Dew_Cup_Mushroom 1 246 1 -5 1 426 1/9999 9999/MAAM_Mushroom_Vol_Au_Vents/none/{{i18n:Mushroom-Vol-Au-Vents.name}}",
+				"Wild Mushroom Soup": "MAAM_Waifs_Bonnet_Mushroom 1 MAAM_Muffin_Button_Mushroom 1 MAAM_Dew_Cup_Mushroom 1 404 1/9999 9999/MAAM_Wild_Mushroom_Soup/none/{{i18n:Wild-Mushroom-Soup.name}}",
+                "Stuffed Mushrooms": "MAAM_Woodland_Stool_Mushroom 1 248 1 424 1 Cornucopia_Basil 1/9999 9999/MAAM_Stuffed_Mushrooms/none/{{i18n:Stuffed-Mushroom.name}}",
+				"Mushroom Tagliatelle": "MAAM_Plump_Belly_Mushroom 1 246 1 430 1 Cornucopia_Onion 1/9999 9999/MAAM_Mushroom_Tagliatelle/none/{{i18n:Mushroom-Tagliatelle.name}}",
+                "Mushroom Pâté": "MAAM_St_Mayalls_Mushroom 1 MAAM_Lord_Edmondsons_Mushroom 1 216 1 Cornucopia_OliveOil 1/9999 9999/MAAM_Mushroom_Pate/none/{{i18n:Mushroom-Pate.name}}",
+                "Fire Spiced Mushrooms": "MAAM_Stalk_Cluster_Mushroom 1 260 1 396 1 Cornucopia_BellPepper 1/9999 9999/MAAM_Fire_Spiced_Mushrooms/none/{{i18n:Fire-Spiced-Mushrooms.name}}",				
+                "Sticky Mushroom Rice": "MAAM_Ridge_Puff_Mushroom 1 423 1 340 1 278 1/9999 9999/MAAM_Sticky_Mushroom_Rice/none/{{i18n:Sticky-Mushroom-Rice.name}}",					
+				"Mushroom Tart": "MAAM_Tooting_Funnel_Mushroom 1 424 1 246 1 wildflour.ateliercrops_sage 1/9999 9999/MAAM_Mushroom_Tart/none/{{i18n:Mushroom-Tart.name}}",
+				"Mushroom and Ale Pie": "MAAM_Spring_Cap_Mushroom 1 303 1 246 1 wildflour.ateliercrops_redonion 1/9999 9999/MAAM_Mushroom_Ale_Pie/none/{{i18n:Mushroom-Ale-Pie.name}}",
+                "Mushroom and Leek Risotto": "281 1 424 1 20 1 -6 1/9999 9999/MAAM_Mushroom_and_Leek_Risotto/none/{{i18n:Mushroom-Leek-Risotto.name}}",
+				}
+		},
+///ADDING CRAFTING RECIPES
+        {
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"},
+            "Entries": {
+                "MAAM_Witches_Elixir": "MAAM_Glow_Cap_Mushroom 1 MAAM_Slimy_Mushroom 1 MAAM_Black_Mushroom 1 MAAM_Yellow_Mushroom 1/Home/MAAM_Witches_Elixir/false/Combat 6/{{i18n:Witches-Elixir.name}}",
+				"(BC)128": "388 50 369 10 371 10/Home/128 1/true/none/",
+				}
+		},
+///ADDING SVE CRAFTING RERCIPES
+		{
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "true"},
+            "Entries": {
+                "MAAM_Witches_Elixir": "FlashShifter.StardewValleyExpandedCP_Poison_Mushroom 1 MAAM_Slimy_Mushroom 1 MAAM_Black_Mushroom 1 MAAM_Yellow_Mushroom 1/Home/MAAM_Witches_Elixir/false/Combat 6/{{i18n:Witches-Elixir.name}}",
+				}
+		},
+///ALTER VANILLA COOKING RECIPES
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Fields": {
+				"Stir Fry": {
+					"0": "78 1 MAAM_White_Mushroom 1 250 1 247 1"
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,107 @@
+{
+    "Changes": [
+	//Vanilla crops to bushes
+		{
+        "LogName": "Add to Custom Obama Framework",
+			"Action": "EditData",
+			"Target": "furyx639.CustomBush/Data",
+			"When": 
+				{
+					"HasMod": "furyx639.CustomBush",
+					"Strawberry Bush": true
+				},
+			"Entries": {
+				"(O)745": {
+					"AgeToProduce": 12,
+					"DayToBeginProducing": 0,
+					"Seasons": ["spring"],
+					"ItemsProduced": [
+						{
+							"Condition": "DAY_OF_MONTH 3 7 11 15 19 23 27",
+							"ItemId": "(O)400",
+							"Chance": 0.02,
+							"MinStack": 2,
+							"QualityModifiers": [{"Modification": "Add", "RandomAmount": [0, 0, 0, 0, 1, 1, 1, 2, 2, 4],}],
+						},
+						{
+							"Condition": "DAY_OF_MONTH 3 7 11 15 19 23 27",
+							"ItemId": "(O)400",
+							"Chance": 1.0,
+							"MinStack": 1,
+							"QualityModifiers": [{"Modification": "Add", "RandomAmount": [0, 0, 0, 0, 1, 1, 1, 2, 2, 4],}],
+						}
+					],
+					"Texture": "PrincessOfEvil.GrowableVines/teabushes",
+					"IndoorTexture": "PrincessOfEvil.GrowableVines/teabushes_indoors",
+					"TextureSpriteRow": 2,
+				},
+			}
+	    },
+		{
+        "LogName": "Add to Custom Obama Framework",
+			"Action": "EditData",
+			"Target": "furyx639.CustomBush/Data",
+			"When": 
+				{
+					"HasMod": "furyx639.CustomBush",
+					"Cranberry Bush": true
+				},
+			"Entries": {
+				"(O)493": {
+					"AgeToProduce": 12,
+					"DayToBeginProducing": 0,
+					"Seasons": ["fall"],
+					"ItemsProduced": [
+						{
+							"Condition": "DAY_OF_MONTH 5 10 15 20 25",
+							"ItemId": "(O)282",
+							"Chance": 0.02,
+							"MinStack": 3,
+							"QualityModifiers": [{"Modification": "Add", "RandomAmount": [0, 0, 0, 0, 1, 1, 1, 2, 2, 4],}],
+						},
+						{
+							"Condition": "DAY_OF_MONTH 5 10 15 20 25",
+							"ItemId": "(O)282",
+							"Chance": 1.0,
+							"MinStack": 2,
+							"QualityModifiers": [{"Modification": "Add", "RandomAmount": [0, 0, 0, 0, 1, 1, 1, 2, 2, 4],}],
+						}
+					],
+					"Texture": "PrincessOfEvil.GrowableVines/teabushes",
+					"IndoorTexture": "PrincessOfEvil.GrowableVines/teabushes_indoors",
+					"TextureSpriteRow": 4,
+				},
+			}
+	    },
+	    
+		{
+        "LogName": "Add to Custom Obama Framework",
+			"Action": "EditData",
+			"Target": "furyx639.CustomBush/Data",
+			"When": 
+				{
+					"HasMod": "furyx639.CustomBush",
+					"Starfruit Bush": true
+				},
+			"Entries": {
+				"(O)486": {
+					"AgeToProduce": 20,
+					"DayToBeginProducing": 0,
+					"Seasons": ["summer"],
+					"ItemsProduced": [
+						{
+							"Condition": "DAY_OF_MONTH 14 28",
+							"ItemId": "(O)268",
+							"Chance": 1.0,
+							"MinStack": 1,
+							"QualityModifiers": [{"Modification": "Add", "RandomAmount": [0, 0, 0, 0, 1, 1, 1, 2, 2, 4],}],
+						}
+					],
+					"Texture": "PrincessOfEvil.GrowableVines/teabushes",
+					"IndoorTexture": "PrincessOfEvil.GrowableVines/teabushes_indoors",
+					"TextureSpriteRow": 6,
+				},
+			}
+	    },
+	]
+}

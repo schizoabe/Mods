@@ -1,0 +1,589 @@
+{
+	"Changes": [
+	
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_DWEF_DW": {
+					"Name": "{{ModId}}_DWEF_DW",
+					"Type": "Basic",
+					"Category": -26,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_DW_name}}",
+					"Description": "{{i18n:DWEF_DW_description}}",
+					"Texture": "boringvlln.kettlemicrowave/glass_water_new",
+					"Price": 0,
+					"Edibility": 5,
+					"IsDrink": true,
+					"CanBeTrashed": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_DW",
+						"drink_item",
+						"color_gray"
+					]
+				},		
+			},
+			"When": { "Drinkable Water Sprite": "new" }
+		},	
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_DWEF_DW": {
+					"Name": "{{ModId}}_DWEF_DW",
+					"Type": "Basic",
+					"Category": -26,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_DW_name}}",
+					"Description": "{{i18n:DWEF_DW_description}}",
+					"Texture": "boringvlln.kettlemicrowave/glass_water_old",
+					"Price": 0,
+					"Edibility": 5,
+					"IsDrink": true,
+					"CanBeTrashed": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_DW",
+						"drink_item",
+						"color_gray"
+					]
+				},		
+			},
+			"When": { "Drinkable Water Sprite": "old" }
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				
+				"{{ModId}}_DWEF_S4CP": {
+					"Name": "{{ModId}}_DWEF_S4CP",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_S4CP_name}}",
+					"Description": "{{i18n:DWEF_S4CP_description}}",
+					"Texture": "boringvlln.kettlemicrowave/packaging_c",
+					"Price": 50,
+					"Edibility": -300,
+					"IsDrink": false,
+					"CanBeTrashed": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_S4CP",
+						"trash_item",
+						"color_brown"
+					]
+				},
+				"{{ModId}}_DWEF_WC": {
+					"Name": "{{ModId}}_DWEF_WC",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_WC_name}}",
+					"Description": "{{i18n:DWEF_WC_description}}",
+					"Texture": "boringvlln.kettlemicrowave/weak_coffee",
+					"Price": 15,
+					"Edibility": 10,
+					"IsDrink": true,
+					"CanBeTrashed": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_WC",
+						"color_brown",
+						"coffee_item"
+					],
+					"Buffs": [
+					{
+						"BuffId": null,
+						"IconTexture": null,
+						"IconSpriteIndex": 0,
+						"Duration": 120,
+						"IsDebuff": false,
+						"GlowColor": null,
+						"CustomAttributes": {
+						"FarmingLevel": 0,
+						"FishingLevel": 0,
+						"MiningLevel": 0,
+						"LuckLevel": 0,
+						"ForagingLevel": 0,
+						"MaxStamina": 0,
+						"MagneticRadius": 0,
+						"Speed": 0.65,
+						"Defense": 0,
+						"Attack": 0
+						}
+					}
+					]
+				},
+				"{{ModId}}_DWEF_S4TP": {
+					"Name": "{{ModId}}_DWEF_S4TP",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_S4TP_name}}",
+					"Description": "{{i18n:DWEF_S4TP_description}}",
+					"Texture": "boringvlln.kettlemicrowave/packaging_t",
+					"Price": 40,
+					"Edibility": -300,
+					"IsDrink": false,
+					"CanBeTrashed": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_S4TP",
+						"trash_item",
+						"color_brown"
+					]
+				},
+				"{{ModId}}_DWEF_WT": {
+					"Name": "{{ModId}}_DWEF_WT",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_WT_name}}",
+					"Description": "{{i18n:DWEF_WT_description}}",
+					"Texture": "boringvlln.kettlemicrowave/weak_tea",
+					"Price": 10,
+					"Edibility": 15,
+					"IsDrink": true,
+					"CanBeTrashed": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_WT",
+						"drink_item",
+						"color_green"
+					],
+					"Buffs": [
+					{
+						"BuffId": null,
+						"IconTexture": null,
+						"IconSpriteIndex": 0,
+						"Duration": 180,
+						"IsDebuff": false,
+						"GlowColor": null,
+						"CustomAttributes": {
+						"FarmingLevel": 0,
+						"FishingLevel": 0,
+						"MiningLevel": 0,
+						"LuckLevel": 0,
+						"ForagingLevel": 0,
+						"MaxStamina": 0,
+						"MagneticRadius": 0,
+						"Speed": 0.5,
+						"Defense": 0,
+						"Attack": 0
+						}
+					}
+					]
+				},
+				"{{ModId}}_DWEF_CWM": {
+					"Name": "{{ModId}}_DWEF_CWM",
+					"Category": -26,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_CWM_name}}",
+					"Description": "{{i18n:DWEF_CWM_description}}",
+					"Texture": "boringvlln.kettlemicrowave/milk_coffee",
+					"Price": 200,
+					"Edibility": 25,
+					"IsDrink": true,
+					"CanBeTrashed": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_CWM",
+						"coffee_item",
+						"color_brown"
+					],
+					"Buffs": [
+					{
+						"BuffId": null,
+						"IconTexture": null,
+						"IconSpriteIndex": 0,
+						"Duration": 90,
+						"IsDebuff": false,
+						"GlowColor": null,
+						"CustomAttributes": {
+						"FarmingLevel": 0,
+						"FishingLevel": 0,
+						"MiningLevel": 0,
+						"LuckLevel": 0,
+						"ForagingLevel": 0,
+						"MaxStamina": 0,
+						"MagneticRadius": 0,
+						"Speed": 1,
+						"Defense": 0,
+						"Attack": 0
+						}
+					}
+					]
+				},
+				"{{ModId}}_DWEF_GTWG": {
+					"Name": "{{ModId}}_DWEF_GTWG",
+					"Category": -26,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_GTWG_name}}",
+					"Description": "{{i18n:DWEF_GTWG_description}}",
+					"Texture": "boringvlln.kettlemicrowave/tea_ginger",
+					"Price": 180,
+					"Edibility": 40,
+					"IsDrink": true,
+					"CanBeTrashed": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_GTWG",
+						"drink_item",
+						"color_green"
+					],
+					"Buffs": [
+					{
+						"BuffId": null,
+						"IconTexture": null,
+						"IconSpriteIndex": 0,
+						"Duration": 90,
+						"IsDebuff": false,
+						"GlowColor": null,
+						"CustomAttributes": {
+						"FarmingLevel": 0,
+						"FishingLevel": 0,
+						"MiningLevel": 0,
+						"LuckLevel": 0,
+						"ForagingLevel": 0,
+						"MaxStamina": 0,
+						"MagneticRadius": 0,
+						"Speed": 0.5,
+						"Defense": 0,
+						"Attack": 0
+						}
+					}
+					]
+				},
+				"{{ModId}}_DWEF_CTSP": {
+					"Name": "{{ModId}}_DWEF_CTSP",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_CTSP_name}}",
+					"Description": "{{i18n:DWEF_CTSP_description}}",
+					"Texture": "boringvlln.kettlemicrowave/packaging_s",
+					"Price": 90,
+					"Edibility": -300,
+					"CanBeTrashed": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_CTSP",
+						"trash_item",
+						"color_brown"
+					]
+				},
+				"{{ModId}}_DWEF_CTS": {
+					"Name": "{{ModId}}_DWEF_CTS",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_CTS_name}}",
+					"Description": "{{i18n:DWEF_CTS_description}}",
+					"Texture": "boringvlln.kettlemicrowave/food_s",
+					"Price": 0,
+					"Edibility": 30,
+					"IsDrink": false,
+					"CanBeTrashed": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_CTS",
+						"trash_item",
+						"color_red"
+					],
+					"Buffs": [
+					{
+						"BuffId": null,
+						"IconTexture": null,
+						"IconSpriteIndex": 0,
+						"Duration": 90,
+						"IsDebuff": true,
+						"GlowColor": null,
+						"CustomAttributes": {
+						"FarmingLevel": 0,
+						"FishingLevel": 0,
+						"MiningLevel": 0,
+						"LuckLevel": -1,
+						"ForagingLevel": 0,
+						"MaxStamina": 0,
+						"MagneticRadius": 0,
+						"Speed": 0,
+						"Defense": 0,
+						"Attack": 0
+						}
+					}
+					]
+				},
+				"{{ModId}}_DWEF_CTGP": {
+					"Name": "{{ModId}}_DWEF_CTGP",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_CTGP_name}}",
+					"Description": "{{i18n:DWEF_CTGP_description}}",
+					"Texture": "boringvlln.kettlemicrowave/packaging_g",
+					"Price": 140,
+					"Edibility": -300,
+					"CanBeTrashed": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_CTGP",
+						"trash_item",
+						"color_brown"
+					]
+				},
+				"{{ModId}}_DWEF_CTG": {
+					"Name": "{{ModId}}_DWEF_CTG",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_CTG_name}}",
+					"Description": "{{i18n:DWEF_CTG_description}}",
+					"Texture": "boringvlln.kettlemicrowave/food_g",
+					"Price": 0,
+					"Edibility": 40,
+					"IsDrink": false,
+					"CanBeTrashed": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_CTG",
+						"trash_item",
+						"color_yellow"
+					],
+					"Buffs": [
+					{
+						"BuffId": null,
+						"IconTexture": null,
+						"IconSpriteIndex": 0,
+						"Duration": 70,
+						"IsDebuff": true,
+						"GlowColor": null,
+						"CustomAttributes": {
+						"FarmingLevel": 0,
+						"FishingLevel": 0,
+						"MiningLevel": 0,
+						"LuckLevel": -1,
+						"ForagingLevel": 0,
+						"MaxStamina": 0,
+						"MagneticRadius": 0,
+						"Speed": 0,
+						"Defense": 0,
+						"Attack": 0
+						}
+					}
+					]
+				},
+				"{{ModId}}_DWEF_CTIP": {
+					"Name": "{{ModId}}_DWEF_CTIP",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_CTIP_name}}",
+					"Description": "{{i18n:DWEF_CTIP_description}}",
+					"Texture": "boringvlln.kettlemicrowave/packaging_i",
+					"Price": 190,
+					"Edibility": -300,
+					"CanBeTrashed": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_CTIP",
+						"trash_item",
+						"color_brown"
+					]
+				},
+				"{{ModId}}_DWEF_CTI": {
+					"Name": "{{ModId}}_DWEF_CTI",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_CTI_name}}",
+					"Description": "{{i18n:DWEF_CTI_description}}",
+					"Texture": "boringvlln.kettlemicrowave/food_i",
+					"Price": 0,
+					"Edibility": 50,
+					"IsDrink": false,
+					"CanBeTrashed": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_CTI",
+						"trash_item",
+						"color_brown"
+					],
+					"Buffs": [
+					{
+						"BuffId": null,
+						"IconTexture": null,
+						"IconSpriteIndex": 0,
+						"Duration": 50,
+						"IsDebuff": true,
+						"GlowColor": null,
+						"CustomAttributes": {
+						"FarmingLevel": 0,
+						"FishingLevel": 0,
+						"MiningLevel": 0,
+						"LuckLevel": -1,
+						"ForagingLevel": 0,
+						"MaxStamina": 0,
+						"MagneticRadius": 0,
+						"Speed": 0,
+						"Defense": 0,
+						"Attack": 0
+						}
+					}
+					]
+				},
+				"{{ModId}}_DWEF_JFBP": {
+					"Name": "{{ModId}}_DWEF_JFBP",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_JFBP_name}}",
+					"Description": "{{i18n:DWEF_JFBP_description}}",
+					"Texture": "boringvlln.kettlemicrowave/packaging_j",
+					"Price": 210,
+					"Edibility": -300,
+					"CanBeTrashed": true,
+					"ExcludeFromFishingCollection": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_JFBP",
+						"trash_item",
+						"color_blue"
+					]
+				},
+				"{{ModId}}_DWEF_JFB": {
+					"Name": "{{ModId}}_DWEF_JFB",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_JFB_name}}",
+					"Description": "{{i18n:DWEF_JFB_description}}",
+					"Texture": "boringvlln.kettlemicrowave/food_j",
+					"Price": 0,
+					"Edibility": 66,
+					"IsDrink": false,
+					"CanBeTrashed": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_JFB",
+						"trash_item",
+						"color_blue"
+					],
+					"Buffs": [
+					{
+						"BuffId": null,
+						"IconTexture": null,
+						"IconSpriteIndex": 0,
+						"Duration": 40,
+						"IsDebuff": true,
+						"GlowColor": null,
+						"CustomAttributes": {
+						"FarmingLevel": 0,
+						"FishingLevel": 0,
+						"MiningLevel": 0,
+						"LuckLevel": -5,
+						"ForagingLevel": 0,
+						"MaxStamina": 0,
+						"MagneticRadius": 0,
+						"Speed": 0,
+						"Defense": 0,
+						"Attack": 0
+						}
+					}
+					]
+				},
+				"{{ModId}}_DWEF_SSD": {
+					"Name": "{{ModId}}_DWEF_SSD",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_SSD_name}}",
+					"Description": "{{i18n:DWEF_SSD_description}}",
+					"Texture": "boringvlln.kettlemicrowave/food_d",
+					"Price": 50,
+					"Edibility": 10,
+					"IsDrink": false,
+					"CanBeTrashed": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_SSD",
+						"trash_item",
+						"color_pink"
+					],
+					"Buffs": [
+					{
+						"BuffId": null,
+						"IconTexture": null,
+						"IconSpriteIndex": 0,
+						"Duration": 20,
+						"IsDebuff": true,
+						"GlowColor": null,
+						"CustomAttributes": {
+						"FarmingLevel": 0,
+						"FishingLevel": 0,
+						"MiningLevel": 0,
+						"LuckLevel": -1,
+						"ForagingLevel": 0,
+						"MaxStamina": 0,
+						"MagneticRadius": 0,
+						"Speed": 0,
+						"Defense": 0,
+						"Attack": 0
+						}
+					}
+					]
+				},
+				"{{ModId}}_DWEF_SSB": {
+					"Name": "{{ModId}}_DWEF_SSB",
+					"Type": "Fish",
+					"Category": -20,
+					"SpriteIndex": 0,
+					"DisplayName": "{{i18n:DWEF_SSB_name}}",
+					"Description": "{{i18n:DWEF_SSB_description}}",
+					"Texture": "boringvlln.kettlemicrowave/food_b",
+					"Price": 40,
+					"Edibility": 10,
+					"IsDrink": false,
+					"CanBeTrashed": true,
+					"ExcludeFromShippingCollection": false,
+					"ContextTags": [
+						"DWEF_SSB",
+						"trash_item",
+						"color_brown"
+					],
+					"Buffs": [
+					{
+						"BuffId": null,
+						"IconTexture": null,
+						"IconSpriteIndex": 0,
+						"Duration": 20,
+						"IsDebuff": true,
+						"GlowColor": null,
+						"CustomAttributes": {
+						"FarmingLevel": 0,
+						"FishingLevel": 0,
+						"MiningLevel": 0,
+						"LuckLevel": -1,
+						"ForagingLevel": 0,
+						"MaxStamina": 0,
+						"MagneticRadius": 0,
+						"Speed": 0,
+						"Defense": 0,
+						"Attack": 0
+						}
+					}
+					]
+				}
+			}
+		},
+	]
+}

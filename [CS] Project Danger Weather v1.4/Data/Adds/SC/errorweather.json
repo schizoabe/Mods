@@ -1,0 +1,320 @@
+{
+	"Changes": [	
+	//Buff
+        {
+      	    "LogName": "Add Buffs and Debuffs",
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+			"Update": "OnLocationChange, OnTimeChange",
+            "Entries": {
+				"ErrorBuff": {
+    			"DisplayName": "{{i18n: ErrorBuff.Buff.Name}}",
+    			"Description": "{{i18n: ErrorBuff.Buff.Desc}}",
+    			"IsDebuff": false,
+    			"GlowColor": null,
+    			"Duration": -2,
+    			"MaxDuration": -1,
+    			"IconTexture": "Mods/kath.weathering/Buffs_2",
+    			"IconSpriteIndex": 7,
+    			"Effects":  {
+      				"FarmingLevel": "{{Random: {{Range: -2,4}} |key=FarmingLevel{{Time}} }}",
+      				"FishingLevel": "{{Random: {{Range: -2,4}} |key=FishingLevel{{Time}} }}",
+      				"MiningLevel": "{{Random: {{Range: -2,4}} |key=MiningLevel{{Time}} }}",
+      				"LuckLevel": "{{Random: {{Range: -2,2}} |key=LuckLevel{{Time}} }}",
+      				"ForagingLevel": "{{Random: {{Range: -2,4}} |key=ForagingLevel{{Time}} }}",
+      				"MaxStamina": "{{Random: -80,80,-40,40,-20,20,0 |key=StaminaLevel{{Time}} }}",
+      				"MagneticRadius": "{{Random: -40,40,-20,20,-10,10,0 |key=MagnetismLevel{{Time}} }}",
+      				"Speed": "{{Random: {{Range: -4,4}} |key=SpeedLevel{{Time}} }}",
+      				"Defense": "{{Random: {{Range: -15,15}} |key=DefenseLevel{{Time}} }}",
+      				"Attack": "{{Random: {{Range: -5,5}} |key=AttackLevel{{Time}} }}",
+					"Immunity": "{{Random: {{Range: 0,5}} |key=ImmunityLevel{{Time}} }}",
+					"KnockbackMultiplier": "{{Random: {{Range: 0,3}} |key=KnockBackXLevel{{Time}} }}",
+					"WeaponSpeedMultiplier": "{{Random: {{Range: 0,2}} |key=WeaponSpeedXLevel{{Time}} }}",
+					"AttackMultiplier": "{{Random: {{Range: 0,2}} |key=AttackXLevel{{Time}} }}",
+					"CriticalChanceMultiplier": "{{Random: {{Range: 0,5}} |key=CritChanceXLevel{{Time}} }}",
+					"CriticalPowerMultiplier": "{{Random: {{Range: 0,2}} |key=CritPowerXLevel{{Time}} }}",
+					"WeaponPrecisionMultiplier": "{{Random: {{Range: 0,2}} |key=WeaponPrecisionXLevel{{Time}} }}"					
+				},
+    			"CustomFields": null
+                	},
+			}
+		},	
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+			"kath.weathering_ErrorBuff": {
+				"Id": "kath.weathering_ErrorBuff",
+                "Trigger": "Esca.EMP_TimeChanged",
+                "Condition": "WEATHER Here kath.weathering_Error",
+				"MarkActionApplied": false,
+                "Actions": [
+                    "AddBuff ErrorBuff",
+                    ],
+				},
+			}
+		},			
+	//Retexturing
+		{
+			"LogName": "Error Texture Rain",
+			"Action": "EditImage",
+			"Target": "Tilesheets/rain",
+			"FromFile": "assets/SC/Error/Error_Rain.png",
+			"Priority": "Late + 2",
+			"Update": "OnLocationChange",
+			"When": {"Weather": "kath.weathering_Error"},
+		},	
+		
+		{
+			"LogName": "Error Texture Craftables",
+			"Action": "EditImage",
+			"Target": "Tilesheets/Craftables",
+			"FromFile": "assets/SC/Error/Error_Craftables.png",
+			"PatchMode": "Overlay",
+			"Priority": "Late + 2",
+			"Update": "OnLocationChange",
+			"When": {"Weather": "kath.weathering_Error"},
+		},
+		{
+			"LogName": "Error Texture springobjects",
+			"Action": "EditImage",
+			"Target": "Maps/springobjects",
+			"FromFile": "assets/SC/Error/Error_springobjects.png",
+			"PatchMode": "Overlay",
+			"Priority": "Late + 2",
+			"Update": "OnLocationChange",
+			"When": {"Weather": "kath.weathering_Error"},
+		},	
+		{
+			"LogName": "Error Texture Critters",
+			"Action": "EditImage",
+			"Target": "Tilesheets/critters",
+			"FromFile": "assets/SC/Error/Error_Critters.png",
+			"PatchMode": "Overlay",
+			"Priority": "Late + 2",
+			"Update": "OnLocationChange",
+			"When": {"Weather": "kath.weathering_Error"},
+		},		
+		{
+			"LogName": "Error Texture Objects2",
+			"Action": "EditImage",
+			"Target": "Tilesheets/Objects_2",
+			"FromFile": "assets/SC/Error/Error_Objects_2.png",
+			"PatchMode": "Overlay",
+			"Priority": "Late + 2",
+			"Update": "OnLocationChange",
+			"When": {"Weather": "kath.weathering_Error"},
+		},
+		{
+			"LogName": "Error Texture Chickens",
+			"Action": "EditImage",
+			"Target": "Animals/Blue Chicken, Animals/White Chicken, Animals/Brown Chicken, Animals/Golden Chicken",
+			"FromFile": "assets/SC/Error/Error_Chickens.png",
+			"PatchMode": "Overlay",
+			"Priority": "Late + 2",
+			"Update": "OnLocationChange",
+			"When": {"Weather": "kath.weathering_Error"},
+		},
+		{
+			"LogName": "Error Texture Cows Pig and Sheep",
+			"Action": "EditImage",
+			"Target": "Animals/White Cow, Animals/Brown Cow, Animals/Pig, Animals/Sheep",
+			"FromFile": "assets/SC/Error/Error_Cows.png",
+			"PatchMode": "Overlay",
+			"Priority": "Late + 2",
+			"Update": "OnLocationChange",
+			"When": {"Weather": "kath.weathering_Error"},
+		},
+		
+	//Add Weather
+		{
+      		"LogName": "The Weather Happening",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts",
+			"Priority": "Late",
+			"TargetField": [ "Desert", "WeatherConditions" ],
+			"Entries": {
+				"ErrorWeather": {
+        			"Id": "ErrorWeather",
+        			"Condition": "SEASON fall, DAY_OF_MONTH 23, YEAR 2 3",
+        			"Weather": "kath.weathering_Error"
+      				},	
+				"ErrorWeather2": {
+        			"Id": "ErrorWeather2",
+        			"Condition": "SYNCED_RANDOM year lucky_weather 0.2, RANDOM 0.05, !YEAR 1 4",
+        			"Weather": "kath.weathering_Error"
+      				},						
+			},
+			"MoveEntries": [
+			{ "Id": "ErrorWeather", "ToPosition": "Top" },
+			{ "Id": "ErrorWeather2", "AfterID": "ErrorWeather" },
+			],
+		},	
+			//
+		{
+      		"LogName": "The Weather Happening",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts",
+			"Priority": "Late",
+			"TargetField": [ "Default", "WeatherConditions" ],
+			"Entries": {
+				"ErrorWeather": {
+        			"Id": "ErrorWeather",
+        			"Condition": "SEASON fall, DAY_OF_MONTH 23, YEAR 2 3",
+        			"Weather": "kath.weathering_Error"
+      				},	
+				"ErrorWeather2": {
+        			"Id": "ErrorWeather2",
+        			"Condition": "SYNCED_RANDOM year lucky_weather 0.2, RANDOM 0.05, !YEAR 1 4",
+        			"Weather": "kath.weathering_Error"
+      				},						
+			},
+			"MoveEntries": [
+			{ "Id": "ErrorWeather", "ToPosition": "Top" },
+			{ "Id": "ErrorWeather2", "AfterID": "ErrorWeather" },
+			],
+		},
+			//
+		{
+      		"LogName": "The Weather Happening",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts",
+			"Priority": "Late",
+			"TargetField": [ "Island", "WeatherConditions" ],
+			"Entries": {
+				"ErrorWeather": {
+        			"Id": "ErrorWeather",
+        			"Condition": "SEASON fall, DAY_OF_MONTH 23, YEAR 2 3",
+        			"Weather": "kath.weathering_Error"
+      				},	
+				"ErrorWeather2": {
+        			"Id": "ErrorWeather2",
+        			"Condition": "SYNCED_RANDOM year lucky_weather 0.2, RANDOM 0.05, !YEAR 1 4",
+        			"Weather": "kath.weathering_Error"
+      				},						
+			},
+			"MoveEntries": [
+			{ "Id": "ErrorWeather", "ToPosition": "Top" },
+			{ "Id": "ErrorWeather2", "AfterID": "ErrorWeather" },
+			],
+		},		
+		
+	//Weather Data
+		{
+      		"LogName": "The Weather Data Error Rain",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Error": {
+					"Id": "kath.weathering_Error",
+					"DisplayName": "{{i18n: Weather.Error}}",
+
+					"Forecast": "{{i18n: Weather.Error.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Error.ForecastIsland}}", "Desert": "{{i18n: Weather.Error.ForecastDesert}}",},
+					
+					"UseNightTiles": true,
+					"IsSnowing": false,
+					"IsRaining": true,
+					"IsLightning": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": true,
+					"SpawnFrogs": true,
+					"SpawnClouds": false,
+										
+					"MusicOverride": "rain",
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 12, "Y": 72},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 52, "Y": 130},
+
+					"AmbientColor": "255, 200, 80",
+					"LightingTint": "orangered",
+					"LightingTintOpacity": 0.45,
+					"PostLightingTint": "blue",
+					"PostLightingTintOpacity": 0.22,					
+
+					"TotemMessage": "!??!?",
+					"TotemScreenTint": "red",
+					"TotemSound": "cancel",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDSurprise 2",
+							],
+						},	
+						{
+							"Id": "FoodSpawn",
+							"Type": "Trigger",
+							"Actions": [
+								"leclair.cloudyskies_SpawnForage -i ALL_ITEMS -iq \"ITEM_ID Target PDW.ErrorFood\" --max 4 -c 0.1 Player Current 7",
+							],
+							"Rate": "{{RateFood}}",
+							"TargetMapType": "Outdoors",
+						},					
+						{
+							"Id": "ErrorBuff",
+							"Type": "Buff",
+							"BuffId": "ErrorBuff",
+							"Rate": 60,
+							//"Condition": "!IS_PASSIVE_FESTIVAL_TODAY SquidFest, !IS_PASSIVE_FESTIVAL_TODAY DesertFestival, !IS_PASSIVE_FESTIVAL_TODAY TroutDerby, !IS_PASSIVE_FESTIVAL_TODAY NightMarket",
+							"TargetMapType": "Outdoors, Indoors",
+						},					
+					],//close effect
+
+					"Layers": [
+						{
+							"Id": "MakeItRain1",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": null,
+							"Opacity": 1,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 90,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "MakeItRainLess",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target IslandEast\" \"LOCATION_NAME Target IslandShrine\" \"LOCATION_NAME Target CaptainRoom\" \"LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": null,
+							"Opacity": 1,
+							"Vibrancy": 1,
+							"Scale": 4,
+							"Count": 50,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "LightingDarken",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "27, 44, 126",
+							"Opacity": 0.3
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "!LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.47
+						},	
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

@@ -1,0 +1,137 @@
+{
+	"Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When":{
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasMod |contains=flashshifter.GrampletonFields": false,
+			},
+            "Entries": {
+			"kath.weathering_MudRainEffectsSpecial": {
+				"Id": "kath.weathering_MudRainEffectsSpecial",
+                "Trigger": "DayStarted",
+                "Condition": "CS_WEATHER Town -1 kath.weathering_MudRain",
+                "Actions": [
+					"leclair.cloudyskies_GrowTrees --stages 5 -c 0.35 --max 30 Context Default",
+					"leclair.cloudyskies_GrowMoss -c 0.65 -q \"ITEM_ID Input (O)310 (O)311 (O)309 (O)MossySeed\" --max 20 Context Default",
+					"leclair.cloudyskies_FertilizeDirt -c 0.45 --max 50 (O)465 Context Default",
+					"leclair.cloudyskies_FertilizeDirt -c 0.15 --max 10 (O)466 Context Default",
+					"leclair.cloudyskies_GrowCrops -d 1 --max-days 5 -c 0.55 --max 50 Context Default",
+                    ],
+				},
+			"kath.weathering_Effects_PostDayRemoveFlag2": {
+				"Id": "kath.weathering_AcidRainEffects_PostDayRemoveFlag2",
+                "Trigger": "DayStarted",
+                "Condition": "ANY \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_AcidRainEffects\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_AcidRainEffectsIsland\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_MudRainEffects\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_BlizzardEffects\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_HailEffects\"",
+                "Actions": [
+					"MarkActionApplied All kath.weathering_MudRainEffectsSpecial false",
+					"MarkActionApplied All kath.weathering_Effects_RemoveFlag2 false",
+					],
+			},
+			"kath.weathering_Effects_RemoveFlag2": {
+				"Id": "kath.weathering_Effects_RemoveFlag2",
+                "Trigger": "DayEnding",
+                "Condition": "ANY \"WEATHER Town Sun\" \"WEATHER Desert Sun\" \"WEATHER IslandSouth Sun\"",
+                "Actions": [
+                    "MarkActionApplied All kath.weathering_Effects_PostDayRemoveFlag2 false",
+                    ],
+				"MarkActionApplied": false,
+				},
+			},
+		},
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When":{
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasMod |contains=flashshifter.GrampletonFields": false,
+			},
+            "Entries": {
+			"kath.weathering_MudRainEffectsSpecial": {
+				"Id": "kath.weathering_MudRainEffectsSpecial",
+                "Trigger": "DayStarted",
+                "Condition": "CS_WEATHER Town -1 kath.weathering_MudRain",
+                "Actions": [
+					"leclair.cloudyskies_GrowTrees --stages 5 -c 0.35 --max 30 Context Default",
+					"leclair.cloudyskies_GrowMoss -c 0.65 -q \"ITEM_ID Input (O)310 (O)311 (O)309 (O)MossySeed\" --max 20 Context Default",
+					"leclair.cloudyskies_FertilizeDirt -c 0.45 --max 50 (O)465 Context Default",
+					"leclair.cloudyskies_FertilizeDirt -c 0.15 --max 10 (O)466 Context Default",
+					"leclair.cloudyskies_GrowCrops -d 1 --max-days 5 -c 0.55 --max 50 Context Default",
+					"leclair.cloudyskies_FertilizeDirt -c 0.45 --max 50 (O)465 Location Custom_Garden",
+					"leclair.cloudyskies_FertilizeDirt -c 0.15 --max 10 (O)466 Location Custom_Garden",
+					"leclair.cloudyskies_GrowCrops -d 1 --max-days 5 -c 0.55 --max 50 Location Custom_Garden",
+                    ],
+				},
+			"kath.weathering_Effects_PostDayRemoveFlag2": {
+				"Id": "kath.weathering_AcidRainEffects_PostDayRemoveFlag2",
+                "Trigger": "DayStarted",
+                "Condition": "ANY \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_AcidRainEffects\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_AcidRainEffectsIsland\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_MudRainEffects\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_BlizzardEffects\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_HailEffects\"",
+                "Actions": [
+					"MarkActionApplied All kath.weathering_MudRainEffectsSpecial false",
+					"MarkActionApplied All kath.weathering_Effects_RemoveFlag2 false",
+					],
+			},
+			"kath.weathering_Effects_RemoveFlag2": {
+				"Id": "kath.weathering_Effects_RemoveFlag2",
+                "Trigger": "DayEnding",
+                "Condition": "ANY \"WEATHER Town Sun\" \"WEATHER Desert Sun\" \"WEATHER IslandSouth Sun\"",
+                "Actions": [
+                    "MarkActionApplied All kath.weathering_Effects_PostDayRemoveFlag2 false",
+                    ],
+				"MarkActionApplied": false,
+				},
+			},
+		},		
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When":{
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasMod |contains=flashshifter.GrampletonFields": true,
+			},
+            "Entries": {
+			"kath.weathering_MudRainEffectsSpecial": {
+				"Id": "kath.weathering_MudRainEffectsSpecial",
+                "Trigger": "DayStarted",
+                "Condition": "CS_WEATHER Town -1 kath.weathering_MudRain",
+                "Actions": [
+					"leclair.cloudyskies_GrowTrees --stages 5 -c 0.35 --max 30 Context Default",
+					"leclair.cloudyskies_GrowMoss -c 0.65 -q \"ITEM_ID Input (O)310 (O)311 (O)309 (O)MossySeed\" --max 20 Context Default",
+					"leclair.cloudyskies_FertilizeDirt -c 0.45 --max 50 (O)465 Context Default",
+					"leclair.cloudyskies_FertilizeDirt -c 0.15 --max 10 (O)466 Context Default",
+					"leclair.cloudyskies_GrowCrops -d 1 --max-days 5 -c 0.55 --max 50 Context Default",
+					"leclair.cloudyskies_FertilizeDirt -c 0.45 --max 50 (O)465 Location Custom_Garden",
+					"leclair.cloudyskies_FertilizeDirt -c 0.15 --max 10 (O)466 Location Custom_Garden",
+					"leclair.cloudyskies_GrowCrops -d 1 --max-days 5 -c 0.55 --max 50 Location Custom_Garden",
+					"leclair.cloudyskies_FertilizeDirt -c 0.45 --max 60 (O)465 Location Custom_GrampletonFields",
+					"leclair.cloudyskies_FertilizeDirt -c 0.15 --max 10 (O)466 Location Custom_GrampletonFields",
+					"leclair.cloudyskies_GrowCrops -d 1 --max-days 5 -c 0.55 --max 80 Location Custom_GrampletonFields",
+                    ],
+				},
+			"kath.weathering_Effects_PostDayRemoveFlag2": {
+				"Id": "kath.weathering_AcidRainEffects_PostDayRemoveFlag2",
+                "Trigger": "DayStarted",
+                "Condition": "ANY \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_AcidRainEffects\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_AcidRainEffectsIsland\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_MudRainEffects\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_BlizzardEffects\" \"PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_HailEffects\"",
+                "Actions": [
+					"MarkActionApplied All kath.weathering_MudRainEffectsSpecial false",
+					"MarkActionApplied All kath.weathering_Effects_RemoveFlag2 false",
+					],
+			},
+			"kath.weathering_Effects_RemoveFlag2": {
+				"Id": "kath.weathering_Effects_RemoveFlag2",
+                "Trigger": "DayEnding",
+                "Condition": "ANY \"WEATHER Town Sun\" \"WEATHER Desert Sun\" \"WEATHER IslandSouth Sun\"",
+                "Actions": [
+                    "MarkActionApplied All kath.weathering_Effects_PostDayRemoveFlag2 false",
+                    ],
+				"MarkActionApplied": false,
+				},
+			},
+		},		
+				
+		
+		
+		
+]
+}

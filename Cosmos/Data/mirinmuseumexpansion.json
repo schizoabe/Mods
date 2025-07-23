@@ -1,0 +1,398 @@
+{
+	"Changes":[
+        //Item Stuff (Additional)
+        {
+      		"LogName": "Load Lost Book Texture",
+			"Action": "Load",
+			"Target": "Mods/kath.cosmos/LostBooks",
+			"FromFile": "assets/Items/lostbooks.png"
+		},	
+        {
+			"LogName": "Add Lost Book Object Data",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"Cosmos.LostBook": {
+					"Name": "Cosmos.LostBook",
+					"DisplayName": "{{i18n: lostbookset_cosmos.name.1}}", 
+					"Description": "{{i18n: lostbookset_cosmos.desc.1}} {{i18n: museum.name}}",
+					"Edibility": "-300",
+					"Type": "Basic",
+					"Category": 0,
+					"Price": 0,
+					"Texture": "Mods/kath.cosmos/LostBooks",
+					"SpriteIndex": 0,
+					"ContextTags": [
+						"book_item",
+						"cat_museum_book",
+						"cat_museum_books"
+					]
+				}
+            }
+        },
+        {
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+            "Priority": "Late",
+            "When": {"HasFlag|contains=MirinCompleteCosmos1": false},
+			"Entries": {
+                "Cosmos.Meteorite1":{
+                    "CategoryTextOverride": "{{i18n:CurioCategory}}",
+                    "CategoryColorOverride": {
+                        "R": 28,
+						"G": 28,
+						"B": 69,
+						"A": 255
+                    }
+                },
+                "Cosmos.Meteorite2":{
+                    "CategoryTextOverride": "{{i18n:CurioCategory}}",
+                    "CategoryColorOverride": {
+                        "R": 28,
+						"G": 28,
+						"B": 69,
+						"A": 255
+                    }
+                },
+                "Cosmos.Meteorite3":{
+                    "CategoryTextOverride": "{{i18n:CurioCategory}}",
+                    "CategoryColorOverride": {
+                        "R": 28,
+						"G": 28,
+						"B": 69,
+						"A": 255
+                    }
+                },
+                "Cosmos.Meteorite4":{
+                    "CategoryTextOverride": "{{i18n:CurioCategory}}",
+                    "CategoryColorOverride": {
+                        "R": 28,
+						"G": 28,
+						"B": 69,
+						"A": 255
+                    }
+                }
+            }
+        },
+        {
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+            "Priority": "Late",
+            "When": {"HasFlag|contains=MirinCompleteCosmos3": false},
+			"Entries": {
+                "Cosmos.Mineral1":{
+                    "CategoryTextOverride": "{{i18n:CurioCategory}}",
+                    "CategoryColorOverride": {
+                        "R": 28,
+						"G": 28,
+						"B": 69,
+						"A": 255
+                    }
+                },
+                "Cosmos.Mineral2":{
+                    "CategoryTextOverride": "{{i18n:CurioCategory}}",
+                    "CategoryColorOverride": {
+                        "R": 28,
+						"G": 28,
+						"B": 69,
+						"A": 255
+                    }
+                },
+                "Cosmos.Mineral3":{
+                    "CategoryTextOverride": "{{i18n:CurioCategory}}",
+                    "CategoryColorOverride": {
+                        "R": 28,
+						"G": 28,
+						"B": 69,
+						"A": 255
+                    }
+                },
+                "Cosmos.Mineral4":{
+                    "CategoryTextOverride": "{{i18n:CurioCategory}}",
+                    "CategoryColorOverride": {
+                        "R": 28,
+						"G": 28,
+						"B": 69,
+						"A": 255
+                    }
+                },
+                "Cosmos.Mineral5":{
+                    "CategoryTextOverride": "{{i18n:CurioCategory}}",
+                    "CategoryColorOverride": {
+                        "R": 28,
+						"G": 28,
+						"B": 69,
+						"A": 255
+                    }
+                },
+                "Cosmos.Mineral6":{
+                    "CategoryTextOverride": "{{i18n:CurioCategory}}",
+                    "CategoryColorOverride": {
+                        "R": 28,
+						"G": 28,
+						"B": 69,
+						"A": 255
+                    }
+                }
+            }
+        },
+        {
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+            "Priority": "Late",
+            "When": {"HasFlag|contains=MirinCompleteCosmos2": false},
+			"Entries": {
+                "Cosmos.Mushroom":{
+                    "CategoryTextOverride": "{{i18n:CurioCategory}}",
+                    "CategoryColorOverride": {
+                        "R": 28,
+						"G": 28,
+						"B": 69,
+						"A": 255
+                    }
+                }
+            }
+        },
+
+        //Museum Stuff
+        {
+            "LogName": "Mail Flags for Special Powers",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "MirinCompleteCosmos1": null,
+                "MirinCompleteCosmos2": null,
+                "MirinCompleteCosmos3": null,
+                "MirinCompleteCurio2": "{{i18n: Mirin.CurioComplete2.LetterText}}[letterbg Mods/kath.museum/Letters 0][textcolor black][#]{{i18n: Mirin.CurioComplete2.LetterTitle}}"
+
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "Mirin.MirinCompleteCosmos1": {
+                    "Id": "Mirin.MirinCompleteCosmos1",
+                    "Trigger": "DayEnding",
+                    "Condition": "Spiderbuttons.CMF_MUSEUM_DONATIONS KathMuseum_Mirin 4 -1 KathMuseum.Cosmos1",
+                    "Actions": [
+                        "AddMail All MirinCompleteCosmos1 received"
+                        ]
+                },
+                "Mirin.MirinCompleteCosmos2": {
+                    "Id": "Mirin.MirinCompleteCosmos2",
+                    "Trigger": "DayEnding",
+                    "Condition": "Spiderbuttons.CMF_MUSEUM_DONATIONS KathMuseum_Mirin 1 -1 KathMuseum.Cosmos2",
+                    "Actions": [
+                        "AddMail All MirinCompleteCosmos2 received"
+                        ]
+                },
+                "Mirin.MirinCompleteCosmos3": {
+                    "Id": "Mirin.MirinCompleteCosmos3",
+                    "Trigger": "DayEnding",
+                    "Condition": "Spiderbuttons.CMF_MUSEUM_DONATIONS KathMuseum_Mirin 6 -1 KathMuseum.Cosmos3",
+                    "Actions": [
+                        "AddMail All MirinCompleteCosmos3 received"
+                        ]
+                },
+                "Mirin.CosmosCompletion": {
+                    "Id": "Mirin.CosmosCompletion",
+                    "Trigger": "DayEnding",
+                    "Condition": "PLAYER_HAS_MAIL Any MirinCompleteCosmos1, PLAYER_HAS_MAIL Any MirinCompleteCosmos2, PLAYER_HAS_MAIL Any MirinCompleteCosmos3",
+                    "Actions": [
+                        "AddMail All MirinCompleteCurio2 now"
+                        ]
+                }
+            }
+        },
+
+        {
+			"LogName": "Add Museum Data - Donation Requirements",
+			"Action": "EditData",
+			"Target": "Spiderbuttons.CMF/Museums",
+            "TargetField": [ "KathMuseum_Mirin", "DonationRequirements" ],
+            "Entries": {
+                "KathMuseum.Cosmos1":{
+					"Id": "KathMuseum.Cosmos1",
+					    "ItemIds": [
+						"(O)Cosmos.Meteorite1",
+                        "(O)Cosmos.Meteorite2",
+                        "(O)Cosmos.Meteorite3",
+                        "(O)Cosmos.Meteorite4"
+					],
+					"MatchType": "Any"
+				},
+                "KathMuseum.Cosmos2":{
+					"Id": "KathMuseum.Cosmos2",
+					    "ItemIds": [
+                        "(O)Cosmos.Mushroom"
+
+					],
+					"MatchType": "Any"
+				},
+                "KathMuseum.Cosmos3":{
+					"Id": "KathMuseum.Cosmos3",
+					    "ItemIds": [
+                        "(O)Cosmos.Mineral1",
+                        "(O)Cosmos.Mineral2",
+                        "(O)Cosmos.Mineral3",
+                        "(O)Cosmos.Mineral4",
+                        "(O)Cosmos.Mineral5",
+                        "(O)Cosmos.Mineral6"
+
+					],
+					"MatchType": "Any"
+				}
+            }
+        },
+        {
+			"LogName": "Add Museum Data - Rewards",
+			"Action": "EditData",
+			"Target": "Spiderbuttons.CMF/Museums",
+            "TargetField": [ "KathMuseum_Mirin", "Rewards" ],
+            "Entries": {
+                "KathMuseum.CosmosReward1":{
+					"Id": "KathMuseum.CosmosReward1",
+					"Requirements": [
+						{
+							"Id": "KathMuseum.CosmosRewardRequirements",
+							"ItemIds": [
+								"(O)Cosmos.Meteorite1",
+                                "(O)Cosmos.Meteorite2",
+                                "(O)Cosmos.Meteorite3",
+                                "(O)Cosmos.Meteorite4"
+                                
+							],
+							"Count": 4
+						}
+					],
+					"RewardItems": [
+						{
+							"Id": "KathMuseum.Cosmos_PowerBook",
+							"ItemId": "(O)Cosmos.PowerBook",
+                            "Condition": "!PLAYER_HAS_POWER Current Cosmos.PowerBook",
+							"MinStack": 1
+						},
+                        {
+							"Id": "KathMuseum.Cosmos_Fallback1",
+							"ItemId": "(O)72",
+                            "Condition": "PLAYER_HAS_POWER Current Cosmos.PowerBook",
+							"MinStack": 4
+						}
+					],
+					"Actions": []
+				},
+                "KathMuseum.CosmosReward2":{
+					"Id": "KathMuseum.CosmosReward2",
+					"Requirements": [
+						{
+							"Id": "KathMuseum.CosmosRewardRequirements2",
+							"ItemIds": [
+								"(O)Cosmos.Mushroom"
+							],
+							"Count": 1
+						}
+					],
+					"RewardItems": [
+						{
+							"Id": "KathMuseum.Cosmos_Smol",
+							"ItemId": "(O)72", //Diamond
+							"MinStack": 2
+						}
+					],
+					"Actions": []
+				},
+                "KathMuseum.CosmosReward3":{
+					"Id": "KathMuseum.CosmosReward3",
+					"Requirements": [
+						{
+							"Id": "KathMuseum.CosmosRewardRequirements3",
+							"ItemIds": [
+								"(O)Cosmos.Mineral1",
+                                "(O)Cosmos.Mineral2",
+                                "(O)Cosmos.Mineral3",
+                                "(O)Cosmos.Mineral4",
+                                "(O)Cosmos.Mineral5",
+                                "(O)Cosmos.Mineral6"
+							],
+							"Count": 6
+						}
+					],
+					"RewardItems": [
+						{
+							"Id": "KathMuseum.Cosmos_StarfallIcon",
+							"ItemId": "(O)Cosmos.StarfallIcon",
+                            "Condition": "!PLAYER_HAS_POWER Current Cosmos.PowerStars",
+							"MinStack": 1
+						},
+                        {
+							"Id": "KathMuseum.Cosmos_IridiumiteIcon",
+							"ItemId": "(O)Cosmos.IridiumiteIcon",
+                            "Condition": "!PLAYER_HAS_POWER Current Cosmos.PowerCrystal",
+							"MinStack": 1
+						},
+                        {
+							"Id": "KathMuseum.Cosmos_Fallback2",
+							"ItemId": "(O)72",
+                            "Condition": "PLAYER_HAS_POWER Current Cosmos.PowerCrystal, PLAYER_HAS_POWER Current Cosmos.PowerStars",
+							"MinStack": 6
+						}
+					],
+					"Actions": []
+				}
+            }
+        },
+
+        {
+			"LogName": "Add to Define the Lost Books",
+			"Action": "EditData",
+			"Target": "Spiderbuttons.CMF/LostBooks",
+            "TargetField": [ "KathMuseum_Mirin" ],
+			"Entries": {
+                "KathMuseum.LostBookSet.Cosmos":{
+					"Id": "KathMuseum.LostBookSet.Cosmos",
+					"ItemId": "(O)Cosmos.LostBook", // Must be qualified item ID
+					"ReceiveText": "{{i18n: findbook.lostbookset_cosmos}}", 
+					"BroadcastText": "{{i18n: broadcast.lostbookset_cosmos}}",
+					"MissingText": "{{i18n: missing.lostbookset_cosmos}}",
+					"Entries": [
+						{
+							"Id": "KathMuseum.LostBook1",
+							"InteractionType": "Message",
+							"Text": "{{i18n: lostbookset_cosmos.text.1}}"
+						},
+						{
+							"Id": "KathMuseum.LostBook2",
+							"InteractionType": "Message",
+							"Text": "{{i18n: lostbookset_cosmos.text.2}}"
+						},
+                        {
+							"Id": "KathMuseum.LostBook3",
+							"InteractionType": "Message",
+							"Text": "{{i18n: lostbookset_cosmos.text.3}}"
+						}
+					]
+				}
+            }
+        },
+
+        //Mirin Stuff
+        {
+			"LogName": "Events for Mirin Curio Museum",
+			"Action": "EditData",
+			"Target": "Data/Events/KathMuseum_Mirin",
+			"Entries":{
+			"KathMuseum.CosmosCompleted/LocalMail MirinCompleteCurio2": "breezy/7 13/farmer 16 16 0 Mirin 6 15 0/skippable/broadcastEvent true/pause 500/move farmer -6 0 3/pause 250/emote farmer 20/move Mirin 0 1 1/pause 300/playSound cat/jump Mirin 6/pause 500/jump Mirin 6/move Mirin 0 3 1/jump Mirin 6/playSound cat/pause 250/speak Mirin \"{{i18n: mirin_cosmos.event.01}}\"/move Mirin -5 0 2/pause 300/jump Mirin 6/playSound cat/pause 500/move Mirin 2 0 1/playSound cat/pause 300/faceDirection Mirin 0/pause 150/faceDirection Mirin 3/pause 150/faceDirection Mirin 2/pause 150/faceDirection Mirin 1/pause 300/playSound cat/speak Mirin \"{{i18n: mirin_cosmos.event.02}}\"/playSound cat/jump Mirin 6/pause 500/move farmer -3 0 3/emote farmer 20/pause 200/emote Mirin 20/pause 200/faceDirection Mirin 2/faceDirection farmer 2/pause 200/jump Mirin 6/jump farmer 6/playSound cat/globalFade/viewport -1000 -1000/message \"{{i18n: mirin_cosmos.event.03}}\"/action AddBuff MirinBlessing -2/action MarkEventSeen All KathMuseum.CosmosCompleted true/end"
+			}
+		}	
+    ]
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  

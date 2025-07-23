@@ -1,0 +1,106 @@
+{
+
+"Changes": [
+//Standard events for the 12 vanilla bachelors/bachelorettes
+//Load individually to try and keep from loading in a bunch of unnecessary assets
+
+//Preconditions:
+    //Dating
+    //At 10 hearts
+    //Must have seen that suitor's 10 heart event
+
+//Effects:
+    //Will set the black version of this event as seen for that suitor, without setting the "SeenBlackEvent" flag
+    //If YES: engagement occurs, with marriage in 3 days' time
+    //If NO:
+        // I'm not ready: dialogue. No effect
+        // I never want to get married: dialogue. No effect
+        // I don't want to get married... to you: player loses 4 hearts with the suitor and they break up (no longer dating)
+
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Abigail.json",
+    "When": {
+        "Hearts:Abigail": "10, 11, 12, 13, 14"
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Alex.json",
+    "When": {
+        "Hearts:Alex": "10, 11, 12, 13, 14"
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Elliott.json",
+    "When": {
+        "Hearts:Elliott": "10, 11, 12, 13, 14"
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Emily.json",
+    "When": {
+        "Hearts:Emily": "10, 11, 12, 13, 14"
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Haley.json",
+    "When": {
+        "Hearts:Haley": "10, 11, 12, 13, 14"
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Harvey.json",
+    "When": {
+        "Hearts:Harvey": "10, 11, 12, 13, 14"
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Leah.json",
+    "When": {
+        "Hearts:Leah": "10, 11, 12, 13, 14"
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Maru.json",
+    "When": {
+        "Hearts:Maru": "10, 11, 12, 13, 14"
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Penny.json",
+    "When": {
+        "Hearts:Penny": "10, 11, 12, 13, 14"
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Sam.json",
+    "When": {
+        "Hearts:Sam": "10, 11, 12, 13, 14"
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Sebastian.json",
+    "When": {
+        "Hearts:Sebastian": "10, 11, 12, 13, 14"
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/Proposal-Shane.json",
+    "When": {
+        "Hearts:Shane": "10, 11, 12, 13, 14"
+    }
+},
+
+]
+}

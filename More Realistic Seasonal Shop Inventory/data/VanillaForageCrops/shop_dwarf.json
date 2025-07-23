@@ -1,0 +1,148 @@
+{
+	"Changes": [
+		//Dwarf Standard
+		{
+			//---------------------------
+			//   Red Mushroom Planter
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Dwarf", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_RedMushroomSeeds": {
+					"AvailableStock": 1,
+        		"Condition": "SEASON summer fall, PLAYER_BASE_FORAGING_LEVEL Any 4, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_RedMushroomSeeds 0.6"
+				}
+			},
+			"When": {
+				"Dwarf": "Standard",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, RedMushroomPlanter": true
+			}
+		},
+		{
+			//---------------------------
+			// Purple Mushroom Planter
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Dwarf", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_PurpleMushroomSeeds": {
+					"AvailableStock": 1,
+        		"Condition": "PLAYER_SHIPPED_BASIC_ITEM Any (O)422, SEASON fall, PLAYER_BASE_FORAGING_LEVEL Any 4, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_PurpleMushroomSeeds 0.6"
+				}
+			},
+			"When": {
+				"Dwarf": "Standard",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, PurpleMushroomPlanter": true
+			}
+		},
+		{
+			//---------------------------
+			//     Winter Root Seeds
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Dwarf", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_WinterRootSeeds": {
+					"AvailableStock": 10,
+        "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+                1.4,
+                1.3,
+                1.2,
+                1.1,
+                1.0,
+                0.9,
+                0.8,
+                0.7,
+                0.6,
+                0.5,                
+              ]
+            }
+          ],
+					"Condition": "SEASON winter, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_WinterRootSeeds 0.6"
+				}
+			},
+			"When": {
+				"Pierre": "Standard",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, WinterRootCrop": true
+			}
+		},
+		//Dwarf Hardmode
+		{
+			//---------------------------
+			//   Red Mushroom Planter
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Dwarf", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_RedMushroomSeeds": {
+					"AvailableStock": 1,
+        		"Condition": "SEASON summer fall, PLAYER_BASE_FORAGING_LEVEL Any 6, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_RedMushroomSeeds 0.3"
+				}
+			},
+			"When": {
+				"Dwarf": "Hardmode",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, RedMushroomPlanter": true
+			}
+		},
+		{
+			//---------------------------
+			// Purple Mushroom Planter
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Dwarf", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_PurpleMushroomSeeds": {
+					"AvailableStock": 1,
+        		"Condition": "PLAYER_SHIPPED_BASIC_ITEM Any (O)422, SEASON fall, PLAYER_BASE_FORAGING_LEVEL Any 6, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_PurpleMushroomSeeds 0.3"
+				}
+			},
+			"When": {
+				"Dwarf": "Hardmode",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, PurpleMushroomPlanter": true
+			}
+		},
+		{
+			//---------------------------
+			//     Winter Root Seeds
+			//---------------------------
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "Dwarf", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_WinterRootSeeds": {
+					"AvailableStock": 10,
+        "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,                
+              ]
+            }
+          ],
+					"Condition": "SEASON winter, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_WinterRootSeeds 0.3"
+				}
+			},
+			"When": {
+				"Pierre": "Hardmode",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, WinterRootCrop": true
+			}
+		},
+	]
+}

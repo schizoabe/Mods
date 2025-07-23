@@ -1,0 +1,70 @@
+{
+	"Changes": [
+	//Adding Weather and Forecast
+		{
+			"LogName": "Add Heavy Rain and Monsoon",
+			"Action": "Include",
+			"FromFile": "Data/Weather/Monsoon/forecast.json"
+		},	
+		{
+      	    "LogName": "Add Heavy Rain and Monsoon",
+			"Action": "Include",
+			"FromFile": "Data/Weather/Monsoon/{{DangerDegree}}_monsoon.json"
+		},
+	//Adding Map Changes
+		{
+			"LogName": "Add Map Changes",
+			"Action": "Include",
+			"FromFile": "Data/Weather/Monsoon/maps.json"
+		},	
+	//Adding NPC Changes
+		{
+			"LogName": "Add NPC Changes",
+			"Action": "Include",
+			"FromFile": "Data/Weather/Monsoon/NPC.json",
+            "When": {"NPCChanges": "disappearing"}
+		},
+		//Claire cannot go out :D
+		{
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"When": {"HasMod": "FlashShifter.StardewValleyExpandedCP"},
+			"Fields": {
+				"Claire": {
+					"Home": [
+						{
+						"Id": "MonsoonRainHome",
+						"Location": "Custom_Claire_WarpRoom",
+						"Tile": {
+							"X": -100,
+							"Y": -100
+						},
+						"Direction": "right",
+						"Condition": "ANY \"DATE_RANGE Summer 15 2 Summer 20 2\" \"DATE_RANGE Fall 2 4 Fall 1 4\" \"DATE_RANGE Fall 2 6 Fall 1 6\" \"DATE_RANGE Fall 2 7 Fall 1 7\" \"DATE_RANGE Fall 2 9 Fall 1 9\" \"DATE_RANGE Fall 2 10 Fall 1 10\" \"DATE_RANGE Fall 2 12 Fall 1 12\" \"DATE_RANGE Fall 2 14 Fall 1 14\" \"DATE_RANGE Fall 2 16 Fall 1 16\" \"DATE_RANGE Fall 2 17 Fall 1 17\" \"DATE_RANGE Fall 2 19 Fall 1 19\" \"DATE_RANGE Fall 2 20 Fall 1 20\" \"DATE_RANGE Fall 2 22 Fall 1 22\""
+						}
+					]
+				}
+			}
+		},
+
+
+		//
+		{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "SeedShop", "PriceModifiers" ],
+            "Entries": {
+				"MonsoonPierre":{
+					"Id": "MonsoonPierre",
+					"Condition": "PLAYER_HAS_MAIL Any PierreExtraMoneyMonsoon",
+					"Modification": "Multiply",
+					"Amount": 3.0,
+					"RandomAmount": null
+				}
+			}
+		}
+		
+
+//End
+]
+}

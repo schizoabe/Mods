@@ -1,0 +1,135 @@
+{
+"Changes": [
+
+//Trigger Actions -- set 10 heart event flags
+//These should trigger whether or not the player is engaged because they are just timers
+//I had these on a two week timer but that was a little unstable and people might not want that anyway. Leaving the flags in case I decide to mess with them any more in the future
+{
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+    "{{ModId}}_AbigailFlag": {
+        "Id": "{{ModId}}_AbigailFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Abigail_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartAbigail Received",
+        ]
+    },
+    
+    "{{ModId}}_AlexFlag": {
+        "Id": "{{ModId}}_AlexFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Alex_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartAlex Received",
+        ]
+    },
+    
+    "{{ModId}}_ElliottFlag": {
+        "Id": "{{ModId}}_ElliottFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Elliott_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartElliott Received",
+        ]
+    },
+    
+    "{{ModId}}_EmilyFlag": {
+        "Id": "{{ModId}}_EmilyFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Emily_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartEmily Received",
+        ]
+    },
+    
+    "{{ModId}}_HaleyFlag": {
+        "Id": "{{ModId}}_HaleyFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Haley_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartHaley Received",
+        ]
+    },
+    
+    "{{ModId}}_HarveyFlag": {
+        "Id": "{{ModId}}_HarveyFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Harvey_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartHarvey Received",
+        ]
+    },
+    
+    "{{ModId}}_LeahFlag": {
+        "Id": "{{ModId}}_LeahFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Leah_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartLeah Received",
+        ]
+    },
+    
+    "{{ModId}}_MaruFlag": {
+        "Id": "{{ModId}}_MaruFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Maru_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartMaru Received",
+        ]
+    },
+    
+    "{{ModId}}_PennyFlag": {
+        "Id": "{{ModId}}_PennyFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Penny_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartPenny Received",
+        ]
+    },
+    
+    "{{ModId}}_SamFlag": {
+        "Id": "{{ModId}}_SamFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Sam_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartSam Received",
+        ]
+    },
+    
+    "{{ModId}}_SebastianFlag": {
+        "Id": "{{ModId}}_SebastianFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Sebastian_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartSebastian Received",
+        ]
+    },
+    
+    "{{ModId}}_ShaneFlag": {
+        "Id": "{{ModId}}_ShaneFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Shane_10h}}",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartShane Received",
+        ]
+    },
+    
+    //Mod support
+    "{{ModId}}_OlderSebFlag": {
+        "Id": "{{ModId}}_OlderSebFlag",
+        "Trigger": "DayStarted",
+        "Condition": "PLAYER_HAS_SEEN_EVENT Current Kantrip.OlderSebastian_Event_10heart",
+        "Actions": [
+            "AddMail Current {{ModId}}_StartSebastian Received",
+        ]
+    },
+    
+    //TODO Immersive Shane 10heart?
+    
+}
+},
+
+]
+}

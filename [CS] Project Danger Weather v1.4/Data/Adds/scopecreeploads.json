@@ -1,0 +1,47 @@
+{
+	"Changes": [
+//Load Muddy Rain Effects Algae Bloom
+        {
+      	    "LogName": "Add Algae Bloom Vanilla",
+			"Action": "Include",
+			"FromFile": "Data/Adds/SC/algaebloomvanilla.json",
+			"When": {"AddWeather |contains=muddy":false},
+		},	
+        {
+      	    "LogName": "Add Algae Bloom",
+			"Action": "Include",
+			"FromFile": "Data/Adds/SC/algaebloom.json",
+			"When": {"AddWeather": "muddy"},
+		},	
+        {
+      	    "LogName": "Change Sebastian's Events Images",
+			"Action": "Include",
+			"FromFile": "Data/Adds/SC/SebbyEvents.json",
+		},	
+        {
+      	    "LogName": "Add Flag for Sprinkler Malfunction",
+			"Action": "Include",
+			"FromFile": "Data/Adds/SC/sprinklerflag.json",
+			"When": {"AddWeather": "heat"},
+		},			
+        {
+      	    "LogName": "Add Charity AddOn :3",
+			"Action": "Include",
+			"FromFile": "Data/Adds/SC/charityaddon.json",
+			"When": {"HasMod": "Aimon111.CharityDSA"},
+		},	
+        {
+      	    "LogName": "Add Error Weather",
+			"Action": "Include",
+			"FromFile": "Data/Adds/SC/errorweather.json",
+			"When": {"AddWeather": "surprise"},
+		},
+        {
+      	    "LogName": "Add Clone Weather",
+			"Action": "Include",
+			"FromFile": "Data/Adds/SC/attackofclones.json",
+			"When": {"AddWeather": "clone", "HasMod": "kath.weatheringFTM"},
+		},		
+]
+}
+

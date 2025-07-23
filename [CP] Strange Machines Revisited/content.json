@@ -1,0 +1,110 @@
+{
+   "Format": "2.2.0",
+    "ConfigSchema": {
+        "NickelLamp-post": {"AllowValues": "Modest, Street",
+        "Default": "Modest" },
+        "Fertilizer Maker": {"AllowValues": "Crop, Flowers",
+        "Default": "Crop" },
+        "Seasonal Fertilizer Maker": {"AllowValues": "true, false",
+        "Default": "true" },
+        "Immersive Fertilizer Maker": {"AllowValues": "true, false",
+        "Default": "true" },
+        "Seasonal Pan of Meals": {"AllowValues": "true, false",
+        "Default": "true" },
+        "Clint Sell Machines": {"AllowValues": "true, false",
+        "Default": "false" }
+    },
+    "DynamicTokens": [
+        {
+            "Name": "Location",
+            "Value": "_Indoor",
+            "When":
+            {
+                "IsOutdoors": "false"
+            }
+        },
+        {
+            "Name": "Location",
+            "Value": "_Outdoor",
+            "When":
+            {
+                "IsOutdoors": "true"
+            }
+        },
+        {
+            "Name": "FM_Variant",
+            "Value": "Crop_",
+            "When":
+            {
+                "Fertilizer Maker": "Crop"
+            }
+        },
+        {
+            "Name": "FM_Variant",
+            "Value": "Flowers_",
+            "When":
+            {
+                "Fertilizer Maker": "Flowers"
+            }
+        },
+        {
+            "Name": "NP_Variant",
+            "Value": "Modest",
+            "When":
+            {
+                "NickelLamp-post": "Modest"
+            }
+        },
+        {
+            "Name": "NP_Variant",
+            "Value": "Street",
+            "When":
+            {
+                "NickelLamp-post": "Street"
+            }
+        },
+    ],
+   "Changes": [
+        {
+            "Action": "Include",
+            "FromFile": "data/objects.json",  //yes (balance possible)
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/customOre.json" //yes (balance possible)
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/giftTaste.json", //likes & dislikes
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/machines.json", //yes
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/craftingRecipes.json",
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/dynamicPatch.json",
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/mail.json",
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/events.json",
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/farmAnimals.json",
+        },
+        {
+            "Action": "Include",
+            "FromFile": "data/shops.json",
+        },
+    ]
+}
+

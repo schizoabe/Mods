@@ -1,0 +1,42 @@
+{
+	"Changes":[
+	
+	//Adds item to buy 
+		{
+            "LogName": "Add Portrait Ticket Data",
+			"Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "AgentLyoko.PortraitShop_PortraitTicket": {
+                    "Name": "Portrait Ticket",
+                    "DisplayName": "{{i18n:PortraitShop.Ticket.Name}}",
+                    "Description": "{{i18n:PortraitShop.Ticket.Description}}",
+					"Type": "Basic",
+					"Category": 0,
+					"Price": 100,
+					"Texture": "TileSheets\\Objects_2",
+					"SpriteIndex": 69, //Essentially, this means it'll look like a prize ticket.
+					"GeodeDropsDefaultItems": false,
+					"GeodeDrops": null,
+					"ArtifactSpotChances": null,
+					"ExcludeFromShippingCollection": true, //This should never be required to ship, as it's possible it will never be acquired if someone uses the portrait shop.
+					"CustomFields": {}
+				}
+			},
+		},
+		
+		{
+            "LogName": "Ticket as Universal Neutral (to prevent being used for Friendship)",
+			"Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Neutral"],
+                    "Value": "AgentLyoko.PortraitShop_PortraitTicket",
+                    "Delimiter": " "
+                }
+            ]
+        },
+    ]
+}

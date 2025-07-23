@@ -1,0 +1,94 @@
+{
+    "Changes": [
+        {
+            "LogName": "MailChanges",
+            "Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+                "{{ModId}}_Mail_Harp": "{{i18n:mail.harp}} %item id (O){{ModId}}_Harp_Broken 1 %%[#]Harp Retrieval",
+                "{{ModId}}_Mail_Mom": "{{i18n:mail.mom}}",
+                "{{ModId}}_Mail_Dad": "{{i18n:mail.dad}}",
+                "{{ModId}}_Mail_Wizard": "{{i18n:mail.wizard}}",
+                "{{ModId}}_Mail_Trinket": "{{i18n:mail.trinket}}"
+            }
+        },
+        {
+            "LogName": "MailChanges - Harp Retrieval",
+            "Action": "EditData",
+            "When": {
+                "Query: {{DailyLuck}} > 0.07": true,
+                "Query: {{DaysPlayed}} >= {{DaysToStartDeliveryProcess}}": true
+             },
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModId}}_Mail_Trigger_Harp": {
+                    "Id": "{{ModId}}_Mail_Trigger_Harp",
+                    "Trigger": "DayStarted",
+                    "Action": "AddMail Current {{ModId}}_Mail_Harp tomorrow",
+                    "MarkActionApplied": true
+                }
+            }
+        },
+        {
+            "LogName": "MailChanges - Mail Proficiency 2",
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "When": {
+                "HasFlag: currentPlayer": "{{ModId}}_Harp_PROFICIENCY_2"
+            },
+            "Entries": {
+                "{{ModId}}_Mail_Trigger_Dad": {
+                    "Id": "{{ModId}}_Mail_Trigger_Dad",
+                    "Trigger": "DayStarted",
+                    "Action": "AddMail Current {{ModId}}_Mail_Dad",
+                    "MarkActionApplied": true
+                }
+            }
+        },
+        {
+            "LogName": "MailChanges - Mail Proficiency 4",
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "When": {
+                "HasFlag: currentPlayer": "{{ModId}}_Harp_PROFICIENCY_4"
+            },
+            "Entries": {
+                "{{ModId}}_Mail_Trigger_Mom": {
+                    "Id": "{{ModId}}_Mail_Trigger_Mom",
+                    "Trigger": "DayStarted",
+                    "Action": "AddMail Current {{ModId}}_Mail_Mom",
+                    "MarkActionApplied": true
+                }
+            }
+        },
+        {
+            "LogName": "MailChanges - Wizard",
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModId}}_Mail_Trigger_Wizard": {
+                    "Id": "{{ModId}}_Mail_Trigger_Wizard",
+                    "Trigger": "DayEnding",
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Current 112, PLAYER_HAS_MAIL Current {{ModId}}_Harp_ACTIVE Received, !PLAYER_HAS_MAIL Current {{ModId}}_Harp_LevelUp Received, WEATHER Here Rain",
+                    "Action": "AddMail Current {{ModId}}_Mail_Wizard",
+                    "MarkActionApplied": true
+                }
+            }
+        },
+        {
+            "LogName": "MailChanges - Wizard Trinket",
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModId}}_Mail_Trigger_Trinket": {
+                    "Id": "{{ModId}}_Mail_Trigger_Trinket",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Current 112, PLAYER_HAS_MAIL Current {{ModId}}_Harp_MASTERY Received, PLAYER_STAT Current mastery_4 1",
+                    "Action": "AddMail Current {{ModId}}_Mail_Trinket",
+                    "MarkActionApplied": true
+                }
+            }
+        }
+    ]
+}
+

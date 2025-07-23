@@ -1,0 +1,63 @@
+{
+	"Changes":[
+        {
+            "LogName": "Meteor Night Event",
+            "Action": "EditData",
+            "Target": "Mods/leclair.morenightlyevents/Events",
+            "Entries": {	
+                "kath.cosmos_meteorite": {
+                    "Id": "kath.cosmos_meteorite",
+                    "Type": "Placement",
+                    "Priority": 0,
+                    "Conditions": [ 
+                        { 
+                            "Condition": "YEAR 2", 
+                            "Chance": "{{MNEChance}}"
+                        } 
+                    ],
+
+                    "TargetMap": "Farm",
+                    "SoundName": "Meteorite",
+                    "Message": "{{i18n: MeteorHasFallen}}",
+                    "MessageDelay": 1500,
+                    "Output": [
+                        {
+                            "Type": "Item",
+                            "Condition": "TRUE",
+                            "RandomItemId": [
+                                "Cosmos.Meteorite1",
+                                "Cosmos.Meteorite2",
+                                "Cosmos.Meteorite3",
+                                "Cosmos.Meteorite4",
+                                "390"
+                            ],
+                            "MinStack": 1,
+                            "MaxStack": 3,
+                            "SpawnAreas":[
+                                {"X": 40, "Y": 23, "Width": 19, "Height": 13},
+                                {"X": 7, "Y": 38, "Width": 18, "Height": 18},
+                                {"X": 6, "Y": 11, "Width": 17, "Height": 10}
+                            ]
+                        }
+                    ],
+                    "SideEffects": [
+                        {
+                            "Actions":[
+                                "spacechase0.SpaceCore_TriggerSpawnGroup {{LargeMeteoriteFall}} Farm"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+	]
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,72 @@
+{
+  "Changes": [
+  	//Standard Pierre
+    {
+    "Action": "EditData",
+    "Target": "Data/Shops",
+    "TargetField": [ "SeedShop", "Items" ],
+    "When": {"Pierre": "Standard"},
+    "Entries": {
+
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON spring, PLAYER_HAS_MAIL Any ccVault Received, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring 0.6",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_spring",
+      "AvailableStock": 1
+        },
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON summer, PLAYER_HAS_MAIL Any ccVault Received, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer 0.6",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_summer",
+      "AvailableStock": 1
+        },
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON fall, PLAYER_HAS_MAIL Any ccVault Received, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall 0.6",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_fall",
+      "AvailableStock": 1
+        }
+      }
+    },
+    //Hardmode Pierre
+    {
+    "Action": "EditData",
+    "Target": "Data/Shops",
+    "TargetField": [ "SeedShop", "Items" ],
+    "When": {"Pierre": "Hardmode"},
+    "Entries": {
+
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON spring, PLAYER_HAS_MAIL Any ccVault Received, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSpring 0.3",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_spring",
+      "AvailableStock": 1
+        },
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON summer, PLAYER_HAS_MAIL Any ccVault Received, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomSummer 0.3",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_summer",
+      "AvailableStock": 1
+        },
+    "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall": {
+      "Id": "MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall",
+      "ItemId": "RANDOM_ITEMS (O)",
+      "MaxItems": 1,
+      "Condition": "SEASON fall, PLAYER_HAS_MAIL Any ccVault Received, SYNCED_RANDOM day MRSSI_NoraCharles.NeosSucculentFarmRedux_RandomFall 0.3",
+      "PerItemCondition": "ITEM_CONTEXT_TAG Target NeosSucculentFarmRedux_season_fall",
+      "AvailableStock": 1
+        }
+      }
+    },
+  ]
+}

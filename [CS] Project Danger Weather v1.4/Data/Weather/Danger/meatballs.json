@@ -1,0 +1,121 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data Meatball Rain",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Meatball": {
+					"Id": "kath.weathering_Meatball",
+					"DisplayName": "{{i18n: Weather.MeatBall}}",
+
+					"Forecast": "{{i18n: Weather.MeatBall.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.MeatBall.ForecastIsland}}", "Desert": "{{i18n: Weather.MeatBall.ForecastDesert}}",},
+					
+					"UseNightTiles": true,
+					"IsSnowing": false,
+					"IsRaining": true,
+					"IsLightning": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": true,
+					"SpawnFrogs": true,
+					"SpawnClouds": false,
+										
+					"MusicOverride": "rain",
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 12, "Y": 8},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 52, "Y": 26},
+
+					"AmbientColor": "255, 200, 80",
+					"LightingTint": "orangered",
+					"LightingTintOpacity": 0.45,
+					"PostLightingTint": "blue",
+					"PostLightingTintOpacity": 0.22,					
+
+					"TotemMessage": "{{i18n: Weather.MeatBallTotem}}",
+					"TotemScreenTint": "slateblue",
+					"TotemSound": "rainsound",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDMeatball 3",
+							],
+						},
+						{
+							"Id": "FoodSpawn",
+							"Type": "Trigger",
+							"Actions": [
+								"leclair.cloudyskies_SpawnForage -i ALL_ITEMS -iq \"ITEM_CATEGORY Target -7, !ITEM_ID Target 265 279 772 773 MossSoup, ITEM_PRICE Target 0 500\" --max 4 -c 0.15 Player Current 7",
+							],
+							"Rate": "{{RateFood}}",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "YummyWeather",
+							"Type": "Buff",
+							"Condition": "!LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"BuffId": "YummyWeather",
+							"TargetMapType": "Outdoors, Indoors",
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "MakeItRain1",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": null,
+							"Opacity": 1,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 90,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "MakeItRainLess",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target IslandEast\" \"LOCATION_NAME Target IslandShrine\" \"LOCATION_NAME Target CaptainRoom\" \"LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": null,
+							"Opacity": 1,
+							"Vibrancy": 1,
+							"Scale": 4,
+							"Count": 50,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "LightingDarken",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "27, 44, 126",
+							"Opacity": 0.3
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "!LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.47
+						},	
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

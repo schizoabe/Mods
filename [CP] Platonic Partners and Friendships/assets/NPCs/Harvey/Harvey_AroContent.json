@@ -1,0 +1,357 @@
+{
+    "Changes": [
+        // FRIENDSHIP BRACELET
+        {
+            "LogName": "Enable friendship bracelet for Harvey",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "TargetField": [
+                "{{ModID}}_FriendshipBracelet",
+                "ContextTags"
+            ],
+            "Entries": {
+                "#-6": "propose_roommate_harvey"
+            }
+        },
+        // DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Entries": {
+                "Mon10": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.Mon10}}",
+                "Thu8": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.Thu8}}",
+                "Fri10": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.Fri10}}",
+                "Tue8": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.Tue8 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Sat10": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.Sat10 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "SpouseGiftJealous": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.SpouseGiftJealous}}",
+                "SpouseStardrop": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.SpouseStardrop |LovePortraitsNeutral={{LovePortraitsNeutralToken}} |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "dating_Harvey": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.dating_Harvey |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "dating_Harvey_memory_oneday": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.dating_Harvey_memory_oneday}}",
+                "married_Harvey": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.married_Harvey |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "AcceptBouquet": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.AcceptBouquet.{{Random:1,2}}{{LoveLettersToken}} |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "FlowerDance_Accept_Spouse": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.FlowerDance_Accept_SpouseRoommate}}",
+                "FlowerDance_Accept_Roommate": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.FlowerDance_Accept_SpouseRoommate}}"
+            }
+        },
+        // PLATONIC PARTNER DIALOGUE
+        {
+            "LogName": "Harvey pendant and bracelet engagement dialogue",
+            "Action": "EditData",
+            "Target": "Data/EngagementDialogue",
+            "Entries": {
+                "Harvey0": "{{i18n:PPAF.Harvey.EngagementDialogue.Aro.Harvey0 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "HarveyRoommate0": "{{i18n:PPAF.Harvey.EngagementDialogue.Aro.Harvey0 |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}",
+                "Harvey1": "{{i18n:PPAF.Harvey.EngagementDialogue.Aro.Harvey1 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "HarveyRoommate1": "{{i18n:PPAF.Harvey.EngagementDialogue.Aro.Harvey1 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueHarvey",
+            "Entries": {
+                "Indoor_Day_0": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Indoor_Day_0 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Good_1": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Good_1 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Good_2": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Good_2 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Good_3": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Good_3 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "Outdoor_2": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Outdoor_2 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "TwoKids_3": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.TwoKids_3 |LovePortraitsNeutral={{LovePortraitsNeutralToken}} |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Good_0": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Good_0 |LovePortraitsHappy={{LovePortraitsHappyToken}} |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "funReturn_Harvey": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.funReturn_Harvey}}",
+                "Outdoor_3": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Outdoor_3 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Rainy_Day_2": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Rainy_Day_2}}",
+                "spring_23": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.spring_23}}",                
+                "Rainy_Night_0": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Rainy_Night_0 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Rainy_Night_2": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Rainy_Night_2 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "summer_1": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.summer_1 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "fall_1": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.fall_1 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Rainy_Night_4": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Rainy_Night_4 |LowercaseEndearment={{LowercaseEndearmentToken}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries": {
+                "Rainy_Day_Harvey": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.Rainy_Day_Harvey |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "jobReturn_Harvey": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.jobReturn_Harvey |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "summer_Harvey": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.summer_Harvey}}",
+                "spouseRoom_Harvey": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.spouseRoom_Harvey}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/ExtraDialogue",
+            "Entries": {
+                "SummitEvent_Dialogue3_Harvey": "{{i18n:PPAF.Harvey.SummitDialogue.Aro.SummitEvent_Dialogue3_Harvey.1 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"/jump Harvey/shake Harvey 1000/pause 1000/speak Harvey \"{{i18n:PPAF.Harvey.SummitDialogue.Aro.SummitEvent_Dialogue3_Harvey.2 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "Entries":
+            {
+                "Harvey_spouse": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.FlowerDance.Harvey_spouse}}",
+                "Harvey_spouse_y2": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.FlowerDance.Harvey_spouse_y2}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "Entries": {
+                "Harvey_spouse_y2": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.MoonlightJellies.Harvey_spouse_y2}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall16",
+            "Entries":
+            {
+                "Harvey_spouse_y2": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.SVFair.Harvey_spouse_y2}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "Entries":
+            {
+                "Harvey_spouse": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.SpiritsEve.Harvey_spouse}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter8",
+            "Entries":
+            {
+                "Harvey_spouse": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.IceFest.Harvey_spouse |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Harvey_spouse_y2": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.IceFest.Harvey_spouse_y2}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "Entries":
+            {
+                "Harvey_spouse": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.WinterStar.Harvey_spouse}}",
+                "Harvey_spouse_y2": "{{i18n:PPAF.Harvey.PartnerDialogue.Aro.WinterStar.Harvey_spouse_y2 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}"
+            }
+        },
+        // OTHER CHARACTERS' DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Maru",
+            "Entries": {
+                "married_Harvey": "{{i18n:PPAF.Harvey.OtherDialogue.Aro.Maru.married_Harvey}}"
+            }
+        },
+        // STRINGS
+        {
+            "LogName": "Harvey pendant and bracelet proposal acceptance",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "Harvey_Engaged": "{{i18n:PPAF.Harvey.Strings.Aro.Harvey_Engaged |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Harvey_EngagedRoommate": "{{i18n:PPAF.Harvey.Strings.Aro.Harvey_EngagedRoommate |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            }
+        },
+        {
+            "LogName": "Harvey terms of endearment and other misc lines, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Harvey.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Harvey.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Harvey.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Harvey.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Harvey.Strings.Aro.Nickname.1}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Harvey.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Harvey",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Harvey terms of endearment and other misc lines, poly with CFD",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Harvey.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Harvey.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Harvey.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Harvey.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Harvey.Strings.Aro.Nickname.1}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Harvey.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Harvey",
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Harvey",
+            "Entries": {
+                "marriageJob.000": "{{i18n:PPAF.Harvey.Strings.Aro.marriageJob.000 |LowercaseEndearment={{LowercaseEndearmentToken}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/Characters",
+            "Entries": {
+                "MovieInvite_Spouse_Harvey": "{{i18n:PPAF.Harvey.Strings.Aro.MovieInvite_Spouse_Harvey |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            }
+        },
+        // PENDANT REJECTION
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Harvey",
+            "Entries": {
+                "RejectMermaidPendant_AlreadyAccepted_Engaged": "{{i18n:PPAF.Harvey.PendantRejections.Engaged.{{Random:1,2}} |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "RejectMermaidPendant_AlreadyAccepted_Married": "{{i18n:PPAF.Harvey.PendantRejections.Married.{{Random:1,2}} |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            }
+        },
+        // EVENTS
+        {
+            "Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+                "harveyBalloon": "{{i18n:PPAF.Harvey.Mail.Aro.harveyBalloon.text}}[#]{{i18n:PPAF.Harvey.Mail.Aro.harveyBalloon.title}}"
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Railroad",
+            "Entries": {
+                "528052/f Harvey 2500/t 900 1700/n harveyBalloon": "playful/26 38/Harvey 24 41 0 farmer 24 50 0/skippable/move farmer 0 -8 0/faceDirection Harvey 2/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.0}}\"/faceDirection Harvey 0/jump Harvey/pause 800/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.1}}\"/emote farmer 8/move Harvey -1 0 1/move farmer -2 0 0/move farmer 0 -1 1/addTemporaryActor Marcello 16 32 25 19 2 true/positionOffset Marcello 36 558/animate Marcello false true 400 16 17/specificTemporarySprite marcelloLand/null/pause 1000/stopAnimation Marcello/pause 500/message \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.2}}\"/pause 1000/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/jump Marcello 12/move Marcello 0 3 3/move Marcello -2 0 0/faceDirection Harvey 2/faceDirection farmer 2/message \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.3}}\"/faceDirection Marcello 3/faceDirection Marcello 2/message \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.4}}\"/move Marcello 0 9 1/warp Marcello -100 -100/faceDirection farmer 1/faceDirection Harvey 3/pause 500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.5 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"/pause 800/emote farmer 32/pause 500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.6}}\"/pause 400/move farmer 0 1 1/faceDirection Harvey 1/move farmer 3 0 0/move farmer 0 -1 0/jump farmer 14/move farmer 0 -1 2/move Harvey 0 1 1/move Harvey 3 0 0/move Harvey 0 -1 0/jump Harvey 14/move Harvey 0 -1 2/pause 1000/showFrame Harvey 29/pause 300/playSound openBox/pause 300/showFrame Harvey 0/pause 400/playSound furnace/playMusic none/cutscene balloonDepart/viewport move 0 -1 6000/pause 2000/showFrame Harvey 30/jump Harvey 5/shake Harvey 7000/pause 7000/globalFade/viewport -2000 -2000/playMusic 50s/pause 2000/cutscene clearTempSprites/changeToTemporaryMap HarveyBalloon/cutscene balloonChangeMap/viewport -2000 -2000/warp farmer 22 36/warp Harvey 22 36/positionOffset farmer 24 570/positionOffset Harvey 96 554/positionOffset farmer -8 -8/positionOffset Harvey -24 -8/showFrame Harvey 32/pause 1000/shake Harvey 19000/viewport 23 39 clamp true/viewport move 0 -1 17000/pause 18000/faceDirection farmer 1/showFrame Harvey 33/pause 1000/jump Harvey/showFrame Harvey 30/pause 800/showFrame Harvey 12/animate Harvey false true 100 12 13 14 15/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/stopAnimation Harvey/showFrame Harvey 31/positionOffset Harvey -4 0/playSound fishSlap/eyes 1 -2000/pause 2000/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.7}}\"/shake Harvey 2000/pause 800/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.8}}\"/emote Harvey 28/pause 500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.9}}\"/pause 1000/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.10}}\"/pause 800/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 0/pause 30/positionOffset Harvey 4 0/pause 30/faceDirection farmer 2/showFrame Harvey 0/pause 500/showFrame Harvey 33/pause 500/shake Harvey 4000/pause 500/showFrame Harvey 30/pause 2000/showFrame Harvey 33/pause 3500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.11}}\"/specificTemporarySprite balloonBirds/faceDirection farmer 2/pause 3000/faceDirection Harvey 1/faceDirection farmer 1/emote farmer 16 true/emote Harvey 16/pause 4000/faceDirection farmer 0/faceDirection Harvey 2/pause 10000/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.12}}\"/faceDirection farmer 2/pause 3000/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.13}}\"/pause 600/faceDirection farmer 1/playMusic none/pause 1500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.14}}\"/playMusic musicboxsong/pause 400/faceDirection Harvey 2/pause 500/faceDirection Harvey 3/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.15 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"/specificTemporarySprite balloonBirds 2/pause 1000/showFrame Harvey 31/pause 500/showFrame 101/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/pause 4000/globalFade/viewport -1000 -1000/pause 3500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.16}}\"/pause 2000/end dialogue Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.17 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}\"",
+                "afraid": null
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/FarmHouse",
+            "Entries": {
+                "3917626/f Harvey 3500/O Harvey/t 2000 2400/p Harvey/L": "harveys_theme_jazz/-1000 -1000/farmer -100 -100 0 Harvey 22 24 0/skippable/ambientLight 0 0 0/makeInvisible 19 24 6 1/specificTemporarySprite harveyKitchenSetup/viewport 22 24 true/pause 3000/showFrame Harvey 19/playSound clank/shake Harvey 200/pause 450/playSound clank/shake Harvey 200/pause 450/playSound clank/shake Harvey 200/pause 750/showFrame Harvey 53/pause 100/playSound sipTea/pause 1000/textAboveHead Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.0}}\"/stopAnimation Harvey/pause 800/move Harvey -1 0 0/pause 2000/showFrame Harvey 19/playSound bubbles/pause 1000/playSound bubbles/pause 2000/stopAnimation Harvey/move Harvey 1 0 0/pause 2000/playSound furnace/specificTemporarySprite harveyKitchenFlame/pause 500/jump Harvey/pause 500/textAboveHead Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.1}}\"/pause 500/speed Harvey 8/move Harvey -2 0 0/pause 100/speed Harvey 8/move Harvey 2 0 0/pause 100/speed Harvey 8/move Harvey -2 0 0/pause 100/speed Harvey 8/move Harvey 2 0 0/pause 3000/move Harvey 2 0 0/pause 500/showFrame Harvey 19/playSound openChest/pause 1000/textAboveHead Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.2}}\"/pause 3000/stopAnimation Harvey/move Harvey -2 0 0/pause 500/showFrame Harvey 19/textAboveHead Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.3}}\"/playSound dropItemInWater/pause 2000/stopAnimation Harvey/move Harvey -3 0 0/pause 1000/showFrame Harvey 19/playSound coin/pause 500/stopAnimation Harvey/move Harvey 3 0 0/pause 250/showFrame Harvey 19/pause 500/textAboveHead Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.4}}\"/pause 600/playSound slosh/pause 2000/showFrame Harvey 53/pause 200/playSound sipTea/pause 2000/showFrame Harvey 4/jump Harvey/textAboveHead Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.5}}\"/pause 2000/warp farmer 27 30/playSound doorClose/move farmer 0 -1 0/pause 500/stopAnimation Harvey/faceDirection Harvey 2/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.6}}\"/pause 300/fade/viewport -1000 -1000/pause 2000/playMusic none/pause 3000/makeInvisible 20 24 4 2/ambientLight 180 180 0/playMusic kindadumbautumn/showFrame Harvey 51/positionOffset Harvey -8 0/faceDirection farmer 1/showFrame 117/specificTemporarySprite harveyDinnerSet/pause 4000/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.7}}\"/emote farmer 32/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.8}}\"/animate Harvey false true 300 51 52/pause 300/playSound eat/pause 600/playSound eat/pause 600/playSound eat/pause 500/animate Harvey false true 100 51/quickQuestion #It tastes heavenly#It tastes healthy#It tastes watery#It tastes burnt#It tastes like actual hair#It tastes like fungus(break)speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.9  |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"(break)speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.10  |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"(break)speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.11}}\"(break)emote Harvey 28\\speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.12 |LowercaseEndearment={{LowercaseEndearmentToken}}}}\"(break)jump Harvey\\pause 500\\speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.13 |LowercaseEndearment={{LowercaseEndearmentToken}}}}\"(break)jump Harvey\\pause 400\\speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.14 |LowercaseEndearment={{LowercaseEndearmentToken}}}}\"/pause 2000/animate Harvey false true 300 51 52/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.15}}\"/quickQuestion #I tended the farm#I dug around in the caves#I spent the day fishing#I socialized in town#I did a little of everything#I can't remember#I didn't do anything(break)speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.16 |LowercaseEndearment={{LowercaseEndearmentToken}}}}\"(break)speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.17 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"(break)speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.18}}\"(break)speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.19 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"(break)speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.20}}\"(break)speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.21}}\"(break)speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.22}}\"/pause 1000/stopAnimation Harvey/showFrame Harvey 51/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.23}}\"/emote farmer 20/pause 1000/playMusic nightTime/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.24}}\"/pause 400/emote farmer 60/pause 250/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.25}}\"/pause 1000/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.26 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}} |LovePortraitsHappy={{LovePortraitsHappyToken}}}}\"/emote farmer 32/pause 1000/fade/viewport -100 -100/end dialogue Harvey \"{{i18n:PPAF.Harvey.Events.Aro.14Heart.27}}\""
+            }
+        },
+        //COMPATIBILITY: STARDEW VALLEY EXPANDED
+        //This section uses (with FlashShifter's permission--thank you!) portions of the event string for SVE's version of Harvey's 10-heart event, which takes place in a different location. This prevents SVE's map changes from conflicting with the platonic event. 
+        {
+            "Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+                "harveyBalloon": "{{i18n:PPAF.Harvey.Mail.Aro.harveyBalloon.SVE.text}}[#]{{i18n:PPAF.Harvey.Mail.Aro.harveyBalloon.title}}"
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Railroad",
+            "Entries": {
+                "528052/f Harvey 2500/t 900 1700/n harveyBalloon": null,
+                "afraid": null
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Town",
+            "Entries": {
+                "528013/f Harvey 2500/t 600 1700/n harveyBalloon": "continue/-300 -300/Harvey -100 -100 0 farmer 90 72 1/skippable/viewport 90 72 true/viewport move 2 0 6000 true/move farmer 12 0 1 true/pause 3500/globalFade/viewport -1000 -1000/changeLocation Custom_ShearwaterBridge/warp farmer 20 21/viewport 20 21 true/viewport move 2 0 6000 true/move farmer 12 0 1 true/pause 3500/globalFade/viewport -1000 -1000/halt/changeLocation Custom_GrampletonFields_Small/playMusic playful/warp farmer 16 42/faceDirection farmer 1/warp Harvey 24 41/faceDirection Harvey 0/viewport 24 40 true/move farmer 8 0 0/pause 500/faceDirection Harvey 3 true/pause 200/faceDirection Harvey 2/pause 250/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.0}}\"/faceDirection Harvey 0/jump Harvey/pause 800/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.1}}\"/emote farmer 8/move Harvey -1 0 1/move farmer -2 0 0/move farmer 0 -1 1/addTemporaryActor Marcello 16 32 25 19 2 true/positionOffset Marcello 36 558/animate Marcello false true 400 16 17/specificTemporarySprite marcelloLand/null/pause 1000/stopAnimation Marcello/pause 500/message \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.2}}\"/pause 1000/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/positionOffset Marcello -4 0/pause 20/jump Marcello 12/move Marcello 0 3 3/move Marcello -2 0 0/faceDirection Harvey 2/faceDirection farmer 2/message \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.3}}\"/faceDirection Marcello 3/faceDirection Marcello 3/message \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.4}}\"/pause 600/globalFade/viewport -1000 -1000 true/warp Marcello -100 -100/viewport 24 40 true/faceDirection farmer 1/faceDirection Harvey 3/pause 500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.5 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"/pause 800/emote farmer 32/pause 500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.6}}\"/pause 400/move farmer 0 1 1/faceDirection Harvey 1/move farmer 3 0 0/move farmer 0 -1 0/jump farmer 14/move farmer 0 -1 2/move Harvey 0 1 1/move Harvey 3 0 0/move Harvey 0 -1 0/jump Harvey 14/move Harvey 0 -1 2/pause 1000/showFrame Harvey 29/pause 300/playSound openBox/pause 300/showFrame Harvey 0/pause 400/playSound furnace/playMusic none/cutscene balloonDepart/viewport move 0 -1 6000/pause 2000/showFrame Harvey 30/jump Harvey 5/shake Harvey 7000/pause 7000/globalFade/viewport -2000 -2000/playMusic 50s/pause 2000/cutscene clearTempSprites/changeToTemporaryMap HarveyBalloon/cutscene balloonChangeMap/viewport -2000 -2000/warp farmer 22 36/warp Harvey 22 36/positionOffset farmer 24 570/positionOffset Harvey 96 554/positionOffset farmer -8 -8/positionOffset Harvey -24 -8/showFrame Harvey 32/pause 1000/shake Harvey 19000/viewport 23 39 clamp true/viewport move 0 -1 17000/pause 18000/faceDirection farmer 1/showFrame Harvey 33/pause 1000/jump Harvey/showFrame Harvey 30/pause 800/showFrame Harvey 12/animate Harvey false true 100 12 13 14 15/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/positionOffset Harvey -4 2/pause 30/stopAnimation Harvey/showFrame Harvey 31/positionOffset Harvey -4 0/playSound fishSlap/eyes 1 -2000/pause 2000/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.7}}\"/shake Harvey 2000/pause 800/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.8}}\"/emote Harvey 28/pause 500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.9}}\"/pause 1000/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.10}}\"/pause 800/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 -2/pause 30/positionOffset Harvey 4 0/pause 30/positionOffset Harvey 4 0/pause 30/faceDirection farmer 2/showFrame Harvey 0/pause 500/showFrame Harvey 33/pause 500/shake Harvey 4000/pause 500/showFrame Harvey 30/pause 2000/showFrame Harvey 33/pause 3500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.11}}\"/specificTemporarySprite balloonBirds/faceDirection farmer 2/pause 3000/faceDirection Harvey 1/faceDirection farmer 1/emote farmer 16 true/emote Harvey 16/pause 4000/faceDirection farmer 0/faceDirection Harvey 2/pause 10000/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.12}}\"/faceDirection farmer 2/pause 3000/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.13}}\"/pause 600/faceDirection farmer 1/playMusic none/pause 1500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.14}}\"/playMusic musicboxsong/pause 400/faceDirection Harvey 2/pause 500/faceDirection Harvey 3/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.15 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"/specificTemporarySprite balloonBirds 2/pause 1000/showFrame Harvey 31/pause 500/showFrame 101/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 -2/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/positionOffset Harvey -1 0/pause 30/pause 4000/globalFade/viewport -1000 -1000/pause 3500/speak Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.16}}\"/pause 2000/end dialogue Harvey \"{{i18n:PPAF.Harvey.Events.Aro.10Heart.17 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}\"",
+                "afraid": null
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+        //COMPATIBILITY: PLATONIC RELATIONSHIPS
+        //This section prevents the dating-flag-required version of the vanilla 10 heart event added by Platonic Relationships from triggering. Thanks to Cherry for providing the event codes!
+        {
+            "LogName": "Revert Platonic Relationships event flag edits for Harvey",
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "TargetField": [ "Mail_Harvey_10heart" ],
+            "Entries": {
+                "Condition": "PLAYER_FRIENDSHIP_POINTS Current Harvey 2502"
+            },
+            "When": {
+                "HasMod |contains=Cherry.PlatonicRelationships": true
+            }
+        },
+        //COMPATIBILITY: SPOUSES REACT TO PLAYER 'DEATH' v1.1.0
+        //Lines in this section are based on the original lines written by CasualInvidia, used and edited with permission. (Thank you, CasualInvidia!)
+        {
+            "LogName": "Enable Harvey's Spouses React to Player 'Death' content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Harvey/Harvey_SpousesReact.json",
+            "When": {
+                "HasMod |contains=CasualInvidia.SpousesReactToDeath": true
+            }
+        },
+        //
+        //COMPATIBILITY IMMERSIVE SPOUSES - IMPROVED SPOUSE SCHEDULES v0.5-beta
+        //Lines in this section are based on the original lines written by yeet (Someguy363), used and edited with permission. (Thank you, yeet!)
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueHarvey",
+            "Entries": {
+                "winter_15": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.winter_15}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Harvey",
+            "Entries": {
+                "marriage_saloon3": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_saloon3 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "marriage_saloon6": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_saloon6}}",
+                "marriage_clinic4": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_clinic4 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "marriage_saloon": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_saloon}}",
+                "marriage_radio2": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_radio2}}",
+                "marriage_clinic": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_clinic}}",
+                "marriage_read4": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_read4 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "marriage_nm": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_nm |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "marriage_16": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_16}}",
+                "marriage_25": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_25 |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "marriage_read3": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_read3 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_saloon5": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_saloon5 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_13": "{{i18n:PPAF.Harvey.DialogueEdits.Aro.ISS.marriage_13 |LowercaseEndearment={{LowercaseEndearmentToken}}}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        //COMPATIBILITY: PLEASE REMEMBER MY MARRIAGE v1.0.1
+        //Lines in this section are based on the original lines written by nraittanna, used and edited with permission. (Thank you, nraittanna!)
+        {
+            "LogName": "Enable Harvey's Please Remember My Marriage content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Harvey/Harvey_RememberMyMarriage.json",
+            "When": {
+                "HasMod |contains=nraittanna.RememberMyMarriage": true
+            }
+        }
+    ]
+}

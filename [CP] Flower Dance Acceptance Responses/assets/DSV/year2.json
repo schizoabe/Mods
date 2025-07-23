@@ -1,0 +1,221 @@
+{
+	"Changes":[
+		{
+			"LogName": "Abigail - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Abigail",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Abigail.Accept}}",
+			},
+			"When":{
+				"HasMod": "DSV.Core",
+                "DSV.Core/FlowerQueen |contains= Abigail": true,
+				"Abigail": "enabled",
+            },
+		},
+		{
+			"LogName": "Sebastian - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sebastian",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Sebastian.Accept}}",
+			},
+			"When":{
+				"HasMod": "DSV.Core",
+                "DSV.Core/FlowerQueen |contains= Sebastian": true,
+				"Sebastian": "enabled",
+            },
+		},
+		{
+			"LogName": "Alex - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Alex",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Alex.Accept}}",
+			},
+			"When":{
+				"HasMod": "DSV.Core",
+                "DSV.Core/FlowerQueen |contains= Alex": true,
+				"Alex": "enabled",
+            },
+		},
+		{
+			"LogName": "Haley - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Haley.Accept}}",
+			},
+			"When":{
+				"HasMod": "DSV.Core",
+                "DSV.Core/FlowerQueen |contains= Haley": false,
+				"Haley": "enabled",
+            },
+		},
+		{
+			"LogName": "Haley - Flower Dance, Years 2+, Flower Queen, High Hearts",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Haley.Accept.High}}",
+			},
+			"When": {
+				"HasMod": "DSV.Core",
+				"Hearts:Haley": "6, 7, 8",
+				"DSV.Core/FlowerQueen |contains= Haley": false,
+				"Haley": "enabled",
+			},
+		},
+		{
+			"LogName": "Shane - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Shane.Accept}}",
+			},
+			"When": {
+				"HasMod": "DSV.Core",
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": false,
+				"DSV.Core/FlowerQueen |contains= Shane": true,
+				"Shane": "enabled",
+			},
+		},
+		{
+			"LogName": "Shane - Flower Dance, Years 2+, Flower Queen, IC Shane Override",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Shane.Accept}}",
+			},
+			"When": {
+				"HasMod": "DSV.Core",
+				"Immersive Shane Override": "true",
+				"IC-Shane Conditional Overrides": "normal, all",
+				"DSV.Core/FlowerQueen |contains= Shane": true,
+				"Shane": "enabled",
+			},
+		},
+		{
+			"LogName": "Shane - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Shane.Accept.High}}",
+			},
+			"When": {
+				"HasMod": "DSV.Core",
+				"Hearts:Shane": "6, 7, 8",
+				"HasMod |contains=tenthousandcats.ImmersiveCShane": false,
+				"DSV.Core/FlowerQueen |contains= Shane": true,
+				"Shane": "enabled",
+			},
+		},
+		{
+			"LogName": "Shane - Flower Dance, Years 2+, Flower Queen, IC Shane Override",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Shane.Accept.High}}",
+			},
+			"When": {
+				"HasMod": "DSV.Core",
+				"Hearts:Shane": "6, 7, 8",
+				"Immersive Shane Override": "true",
+				"IC-Shane Conditional Overrides": "normal, all",
+				"DSV.Core/FlowerQueen |contains= Shane": true,
+				"Shane": "enabled",
+			},
+		},
+		{
+			"LogName": "Emily - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Emily",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Emily.Accept}}",
+			},
+			"When":{
+                "HasMod": "DSV.Core",
+				"DSV.Core/FlowerQueen |contains= Emily": true,
+				"Emily": "enabled",
+            },
+		},
+		{
+			"LogName": "Leah - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Leah",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Leah.Accept}}",
+			},
+			"When":{
+				"HasMod": "DSV.Core",
+                "DSV.Core/FlowerQueen |contains= Leah": true,
+				"Leah": "enabled",
+            },
+		},
+		{
+			"LogName": "Elliott - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Elliott",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Elliott.Accept}}",
+			},
+			"When":{
+				"HasMod": "DSV.Core",
+                "DSV.Core/FlowerQueen |contains= Elliott": true,
+				"Elliott": "enabled",
+            },
+		},
+		{
+			"LogName": "Penny - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Penny",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Penny.Accept}}",
+			},
+			"When":{
+				"HasMod": "DSV.Core",
+                "DSV.Core/FlowerQueen |contains= Penny": true,
+				"Penny": "enabled",
+            },
+		},
+		{
+			"LogName": "Sam - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Sam",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Sam.Accept}}",
+			},
+			"When":{
+				"HasMod": "DSV.Core",
+                "DSV.Core/FlowerQueen |contains= Sam": true,
+				"Sam": "enabled",
+            },
+		},
+		{
+			"LogName": "Harvey - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Harvey",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Harvey.Accept}}",
+			},
+			"When":{
+				"HasMod": "DSV.Core",
+                "DSV.Core/FlowerQueen |contains= Harvey": true,
+				"Harvey": "enabled",
+            },
+		},
+		{
+			"LogName": "Maru - Flower Dance, Years 2+, Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Maru",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Maru.Accept}}",
+			},
+			"When":{
+				"HasMod": "DSV.Core",
+                "DSV.Core/FlowerQueen |contains= Maru": true,
+				"Maru": "enabled",
+            },
+		},
+	],
+}

@@ -1,0 +1,77 @@
+{
+	"Changes": [
+		{
+      			"LogName": "The Weather Data Dry Lightning",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_DryLightning": {
+					"Id": "kath.weathering_DryLightning",
+					"DisplayName": "{{i18n: Weather.DryStorm}}",
+
+					"Forecast": "{{i18n: Weather.DryStorm.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.DryStorm.ForecastIsland}}", "Desert": "{{i18n: Weather.DryStorm.ForecastDesert}}",},
+					
+					"UseNightTiles": false,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"IsDebrisWeather": false,
+					"IsLightning": true,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 16},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 26},
+					"TVFrames": 4,
+
+
+					"TotemMessage": "{{i18n: Weather.DryStormTotem}}",
+					"TotemScreenTint": "gray",
+					"TotemSound": "thunder",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDDryLightning 3",
+							],
+						},
+					],//close effect
+
+					"Layers": [
+						{
+							"Id": "cloudymaybe",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 0, "Y": 64, "Width": 64, "Height": 64 },
+							"Color": "40, 42, 54",
+							"Opacity": 0.31,
+							"Speed": "0.05, 0.05",
+							"ViewSpeed": "-1, -1",
+							"Scale": 25,
+						},
+						{
+							"Id": "LightingCloudy",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "40, 42, 54",
+							"Opacity": 0.21
+						},
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

@@ -1,0 +1,228 @@
+{
+  "Name": "Ears (Side 2)",
+
+	// FRONT
+  "FrontAccessory": {
+	"DrawOrderOverride": {
+		"Preposition": "Before",
+		"AppearanceType": "Sleeves"
+	},
+    "DrawAfterPlayer": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 0
+    },
+    "HeadPosition": {
+      "X": 8,
+      "Y": 3
+    },
+    "AccessorySize": {
+      "Width": 32,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 5000
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 100
+      },
+      {
+        "Frame": 3,
+        "Duration": 100
+      },
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 100
+      },
+      {
+        "Frame": 3,
+        "Duration": 100
+      }
+    ]
+  },
+
+	// RIGHT
+  "RightAccessory": {
+    "StartingPosition": {
+      "X": 0,
+      "Y": 16
+    },
+    "HeadPosition": {
+      "X": 10,
+      "Y": 3
+    },
+    "AccessorySize": {
+      "Width": 32,
+      "Length": 16
+    },
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100,
+        "OverrideStartingIndex": true,
+      },
+      {
+        "Frame": 2,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 3,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 2,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      }
+    ]
+  },
+
+	// LEFT
+  "LeftAccessory": {
+    "Flipped": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 16
+    },
+    "HeadPosition": {
+      "X": 6,
+      "Y": 3
+    },
+    "AccessorySize": {
+      "Width": 32,
+      "Length": 16
+    },
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100,
+        "OverrideStartingIndex": true,
+      },
+      {
+        "Frame": 2,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 3,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 2,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      }
+    ]
+  },
+
+
+	// BACK
+  "BackAccessory": {
+    "StartingPosition": {
+      "X": 0,
+      "Y": 32
+    },
+    "HeadPosition": {
+      "X": 9,
+      "Y": 1
+    },
+    "AccessorySize": {
+      "Width": 32,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 5000
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 100
+      },
+      {
+        "Frame": 3,
+        "Duration": 100
+      },
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 100
+      },
+      {
+        "Frame": 3,
+        "Duration": 100
+      }
+    ]
+  }
+}

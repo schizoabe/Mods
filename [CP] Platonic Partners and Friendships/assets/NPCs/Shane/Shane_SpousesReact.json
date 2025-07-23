@@ -1,0 +1,82 @@
+{
+    "Changes": [
+        { //Mine death with Shane
+            "LogName": "KO Mines- Shane",
+            "Action": "EditData",
+            "Target": "Data/Events/Mine",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 20 10 2 Shane 19 10 1 Marlon 18 10 3/skippable/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.1 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}}}}\"/viewport 19 10 true/pause 1500/speak Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Mines.2}}\"/pause 500/emote farmer 40/pause 500/faceDirection farmer 1/faceDirection farmer 3/pause 500/emote farmer 8/pause 1000/speak Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Mines.3}}\"/pause 1000/speak Marlon \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.4.{{CompassionateCourageousToken}}{{SpouseRoommateGenderToken}}}}\"/emote Shane 16/pause 500/speak Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Mines.5}}\"/pause 1000/speak Marlon \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.6}}\"/pause 500/move Marlon 0 0 1/pause 500/faceDirection Marlon 3/speak Marlon \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.7}}\"/pause 500/textAboveHead Marlon \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.8}}\"/move Marlon 0 4 0/warp Marlon -100 -100/pause 1500/speak Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Mines.9}}\"/pause 500/emote farmer 20/faceDirection farmer 2/showFrame 0/pause 500/minedeath/end dialogue Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Mines.10}}\""
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Shane"
+            }
+        },
+        { //Hospital Death- Shane
+            "LogName": "Player 'Killed'- Shane",
+            "Action": "EditData",
+            "Target": "Data/Events/Hospital",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 12 3 Shane 22 8 2/skippable/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.1}}\"/viewport 20 12 true/pause 1000/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.2}}\"/speed Shane 5/move Shane 0 3 2/textAboveHead Shane \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.3}}\"/emote farmer 16/move Shane -1 0 2/faceDirection farmer 1/move Harvey 1 0 3/move Shane 0 1 3/speak Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Hospital.4}}\"/emote farmer 60/pause 500/speak Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Hospital.5}}\"/emote Shane 40/pause 1500/emote farmer 28/pause 500/pause 500/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.6}}\"/pause 500/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.7}}\"/pause 500/move Harvey 0 -4 0/move Harvey -8 0 0 true/move Harvey 0 -1 0/move Harvey -4 0 0/move Harvey 0 -1 0/playSound doorClose/warp Harvey -100 -100/pause 500/faceDirection Shane 3/speak Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Hospital.8}}\"/faceDirection farmer 2/pause 1000/emote farmer 28/hospitaldeath/end dialogue Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Hospital.9}}\""
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Shane",
+                "Relationship:Harvey |contains=Engaged, Married": false,
+                "Relationship:Maru |contains=Engaged, Married": false
+            }
+        },
+        {
+            "LogName": "Hospital death - Shane Ex-Partner",
+            "Action": "EditData",
+            "Target": "Data/Events/Hospital",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 12 3 Shane 22 8 2/skippable/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.0}}\"/pause 1000/message \"{{i18n:SpousesReact.Events.Shared.Hospital.1}}\"/viewport 20 12 true/pause 1000/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.2}}\"/faceDirection farmer 1/emote farmer 16/pause 500/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.6}}\"/pause 500/emote Harvey 40/pause 500/faceDirection Harvey 0/faceDirection Harvey 3/pause 500/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.HospitalEx.4}}\"/move Harvey 1 0 1/move Harvey 0 -3 0/pause 1000/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.HospitalEx.5}}\"/pause 500/speak Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.HospitalEx.6}}\"/pause 500/textAboveHead Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.HospitalEx.7}}\"/move Harvey -7 0 0 true/move Harvey 0 -4 0/warp Harvey -100 -100/move Shane 0 4 3/emote farmer 16/faceDirection Shane 3/pause 1000/speak Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.HospitalEx.8}}\"/emote farmer 16/pause 1000/speak Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.HospitalEx.9}}\"/pause 500/move Shane 0 -4 0/move Shane -8 0 0/move Shane 0 -3 0/warp Shane -100 -100/emote farmer 28/hospitaldeath/end dialogue Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.HospitalEx.10}}\""
+
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:SpousesReact_ExInvolvement": "True",
+                "HasValue:{{Spouse}},{{Roommate}}": false,
+                "Relationship:Shane": "Divorced",
+                "Relationship:Harvey |contains=Divorced": false,
+                "Relationship:Maru |contains=Divorced": false
+            }
+        },
+        {
+            "LogName": "Island Death before Leo - Shane",
+            "Action": "EditData",
+            "Target": "Data/Events/IslandSouth",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 13 33 2 {0} 15 33 3/pause 1500/showFrame 5/message \"{{i18n:PPAF.Shane.SpousesReact.Events.Shared.Island.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.1}}\"/viewport 13 33 clamp true/pause 1000/speak {0} {1}/showFrame 0/pause 1000/emote farmer 28/minedeath/end dialogue Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Island.2}}\""
+            },
+            "When": {
+                "HasFlag |contains= addedParrotBoy, leoMoved": false,
+                "SpouseOrRoommateToken": "Shane"
+            }
+        },
+        {
+            "LogName": "Island death with Leo - Shane",
+            "Action": "EditData",
+            "Target": "Data/Events/IslandSouth",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 13 33 2 Leo 15 33 3/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.1}}\"/playSound parrot_squawk/pause 500/viewport 13 33 clamp true/pause 1000/speak Leo \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.2}}\"/emote farmer 16/faceDirection farmer 1/pause 500/speak Leo \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.3}}\"/pause 500/message \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.4}}\"/pause 500/emote farmer 40/message \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.5}}\"/pause 500/speak Leo \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.6}}\"/faceDirection farmer 2/showFrame 0/pause 1000/emote farmer 12/minedeath/end dialogue Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Island.2}}\""
+            },
+            "When": {
+                "HasFlag": "addedParrotBoy",
+                "SpouseOrRoommateToken": "Shane",
+                "Relationship:Willy |contains=Engaged, Married": false
+            }
+        },
+        {
+            "LogName": "Island death after Leo - Shane",
+            "Action": "EditData",
+            "Target": "Data/Events/IslandSouth",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 13 33 2 Willy 15 33 3/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.1}}\"/viewport 13 33 clamp true/pause 1000/speak Willy \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandWilly.2}}\"/emote farmer 16/faceDirection farmer 1/pause 500/speak Willy \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandWilly.3 |PlatonicHousemate={{PlatonicHousemateToken}}}}\"/faceDirection farmer 2/showFrame 0/pause 1000/emote farmer 28/minedeath/end dialogue Shane \"{{i18n:PPAF.SpousesReact.Events.Shane.Island.2}}\""
+            },
+            "When": {
+                "HasFlag": "leoMoved",
+                "SpouseOrRoommateToken": "Shane",
+                "Relationship:Willy |contains=Engaged, Married": false
+            }
+        }
+    ]
+}

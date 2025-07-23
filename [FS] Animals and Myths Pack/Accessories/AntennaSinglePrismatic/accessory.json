@@ -1,0 +1,495 @@
+{
+  "Name": "Antenna (Single, Prismatic)",
+
+	// FRONT
+  "FrontAccessory": {
+	"DrawOrderOverride": {
+		"Preposition": "Before",
+		"AppearanceType": "Sleeves"
+	},
+    "DrawAfterPlayer": true,
+    "IsPrismatic": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 0
+    },
+    "HeadPosition": {
+      "X": 0,
+      "Y": 3
+    },
+    "AccessorySize": {
+      "Width": 16,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 150
+      },
+      {
+        "Frame": 1,
+        "Duration": 150
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 3,
+        "Duration": 150
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 1,
+        "Duration": 150
+      },
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 3,
+        "Duration": 150
+      },
+      {
+        "Frame": 4,
+        "Duration": 150
+      },
+      {
+        "Frame": 5,
+        "Duration": 150
+      },
+      {
+        "Frame": 6,
+        "Duration": 150
+      },
+      {
+        "Frame": 7,
+        "Duration": 150
+      },
+      {
+        "Frame": 6,
+        "Duration": 150
+      },
+      {
+        "Frame": 5,
+        "Duration": 150
+      },
+      {
+        "Frame": 4,
+        "Duration": 150
+      },
+      {
+        "Frame": 3,
+        "Duration": 150
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 1,
+        "Duration": 150
+      },
+    ]
+  },
+
+	// RIGHT
+  "RightAccessory": {
+    "IsPrismatic": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 16
+    },
+    "HeadPosition": {
+      "X": -1,
+      "Y": 2
+    },
+    "AccessorySize": {
+      "Width": 16,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 150
+      },
+      {
+        "Frame": 1,
+        "Duration": 150
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 3,
+        "Duration": 150
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 1,
+        "Duration": 150
+      },
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 3,
+        "Duration": 150
+      },
+      {
+        "Frame": 4,
+        "Duration": 150,
+        "OverrideStartingIndex": true,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 5,
+        "Duration": 150,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 6,
+        "Duration": 150,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 7,
+        "Duration": 150,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 6,
+        "Duration": 150,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 5,
+        "Duration": 150,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+    ]
+  },
+
+	// LEFT
+  "LeftAccessory": {
+    "Flipped": true,
+    "IsPrismatic": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 16
+    },
+    "HeadPosition": {
+      "X": 1,
+      "Y": 2
+    },
+    "AccessorySize": {
+      "Width": 16,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 150
+      },
+      {
+        "Frame": 1,
+        "Duration": 150
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 3,
+        "Duration": 150
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 1,
+        "Duration": 150
+      },
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 3,
+        "Duration": 150
+      },
+      {
+        "Frame": 4,
+        "Duration": 150,
+        "OverrideStartingIndex": true,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 5,
+        "Duration": 150,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 6,
+        "Duration": 150,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 7,
+        "Duration": 150,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 6,
+        "Duration": 150,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 5,
+        "Duration": 150,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+    ]
+  },
+
+	// BACK
+  "BackAccessory": {
+    "IsPrismatic": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 32
+    },
+    "HeadPosition": {
+      "X": 0,
+      "Y": 2
+    },
+    "AccessorySize": {
+      "Width": 16,
+      "Length": 16
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 150
+      },
+      {
+        "Frame": 1,
+        "Duration": 150
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 3,
+        "Duration": 150
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 1,
+        "Duration": 150
+      },
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 3,
+        "Duration": 150
+      },
+      {
+        "Frame": 4,
+        "Duration": 150
+      },
+      {
+        "Frame": 5,
+        "Duration": 150
+      },
+      {
+        "Frame": 6,
+        "Duration": 150
+      },
+      {
+        "Frame": 7,
+        "Duration": 150
+      },
+      {
+        "Frame": 6,
+        "Duration": 150
+      },
+      {
+        "Frame": 5,
+        "Duration": 150
+      },
+      {
+        "Frame": 4,
+        "Duration": 150
+      },
+      {
+        "Frame": 3,
+        "Duration": 150
+      },
+      {
+        "Frame": 2,
+        "Duration": 150
+      },
+      {
+        "Frame": 1,
+        "Duration": 150
+      },
+    ]
+  }
+}

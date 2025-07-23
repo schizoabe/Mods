@@ -1,0 +1,31 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)12",
+				"OutputRules"
+			],
+			"Entries": {
+				"FSTS_Aquamint_Tea": {
+					"Id": "FSTS_Aquamint_Tea",
+					"Triggers": [
+						{
+							"RequiredItemId": "FSTS_Aquamint"
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)FSTS_Aquamint_Tea"
+						}
+					],
+					"MinutesUntilReady": 180
+				}
+			},
+				"MoveEntries": [
+					{ "Id": "FSTS_Aquamint_Tea", "BeforeId": "Default_Wheat" },
+			]
+		}	
+	]
+}

@@ -1,0 +1,443 @@
+{
+	
+	//CONFIG TRANSLATIONS
+	
+	"config.section.Main Mod Changes.name": "主要MOD更改",
+	"config.section.Main Mod Changes.description": "此处包含沉浸式谢恩覆盖。",
+	
+	"config.section.Individual Toggles.name": "单个切换",
+	"config.section.Individual Toggles.description": "启用或禁用特定的对话，以便与其他mod兼容。",
+	
+	"config.Immersive Shane Override.name": "沉浸式谢恩覆盖",
+    "config.Immersive Shane Override.description": "允许这个mod的花舞对话覆盖沉浸式谢恩的花舞对话。如果在下一个选项中没有相应的选择，则不执行任何操作。",
+	
+	"config.IC-Shane Conditional Overrides.name": "IC-沉浸式谢恩单个覆盖",
+    "config.IC-Shane Conditional Overrides.description": "选择要覆盖沉浸式谢恩对话中的哪一个（如果只需要条件覆盖）。默认为无以防止重写。",
+	"config.IC-Shane Conditional Overrides.values.none": "无",
+	"config.IC-Shane Conditional Overrides.values.normal": "正常对话",
+	"config.IC-Shane Conditional Overrides.values.all": "正常对话和约会对话",
+	
+	"config.Free Love Immersive Shane Override.name": "自由恋爱IC-沉浸式谢恩覆盖",
+    "config.Free Love Immersive Shane Override.description": "如果启用，当谢恩用自由恋爱与之结婚时，谢恩的原版婚姻花舞接受对话将被覆盖，这样当被问及时，他仍然有独特的对话。",
+	"config.Free Love Immersive Shane Override.values.enabled": "开启",
+	"config.Free Love Immersive Shane Override.values.disabled": "关闭",
+	
+	"config.Vanilla Request Override.name": "覆盖香草键",
+    "config.Vanilla Request Override.description": "启用此选项可从该模块返回未注明日期的单身汉/女性的1.6版本之前的原始回复。保持禁用状态以使用1.6的新花舞验收线。设置为第一年的对话将允许第一年和约会对话。",
+	"config.Vanilla Request Override.values.enabled": "启用所有对话响应",
+	"config.Vanilla Request Override.values.firstyear": "第一年和约会对话",
+	"config.Vanilla Request Override.values.disabled": "只使用约会对话",
+
+	"config.Dance Request Override.name": "舞蹈请求覆盖",
+    "config.Dance Request Override.description": "启用此功能将允许对每个角色的提问对话进行小的更改，如果不是柏拉图式的（柏拉图式的提问由PPAF处理）。",
+	"config.Dance Request Override.values.enabled": "开启",
+	"config.Dance Request Override.values.unmarried": "只有未结婚时",
+	"config.Dance Request Override.values.disabled": "关闭",
+	
+	"config.Free Love Fix.name": "自由恋爱修复",
+    "config.Free Love Fix.description": "如果启用，这个mod将把最初的婚姻对话添加到角色的默认反应中（以产生正确的反应）。如果你认为原始游戏的接受对话会与你的特定对话模式发生冲突，请禁用。默认为自动，仅根据您是否安装了自由恋爱来应用。",
+	"config.Free Love Fix.values.auto": "自动",
+	"config.Free Love Fix.values.enabled": "开启",
+	"config.Free Love Fix.values.disabled": "关闭",
+	
+	"config.Abigail.name": "阿比盖尔",
+    "config.Abigail.description": "确定阿比盖尔的花舞对话更改是否处于活动状态。",
+	"config.Abigail.values.disabled": "关闭",
+	"config.Abigail.values.enabled": "开启",
+	
+	"config.Sebastian.name": "塞巴斯蒂安",
+    "config.Sebastian.description": "确定塞巴斯蒂安的花舞对话更改是否处于活动状态。",
+	"config.Sebastian.values.disabled": "关闭",
+	"config.Sebastian.values.enabled": "开启",
+	
+	"config.Alex.name": "亚历克斯",
+    "config.Alex.description": "确定亚历克斯的花舞对话更改是否处于活动状态。",
+	"config.Alex.values.disabled": "关闭",
+	"config.Alex.values.enabled": "开启",
+	
+	"config.Haley.name": "海莉",
+    "config.Haley.description": "确定海莉的花舞对话更改是否处于活动状态。",
+	"config.Haley.values.disabled": "关闭",
+	"config.Haley.values.enabled": "开启",
+	
+	"config.Leah.name": "莉亚",
+    "config.Leah.description": "确定莉亚的花舞对话更改是否处于活动状态。",
+	"config.Leah.values.disabled": "关闭",
+	"config.Leah.values.enabled": "开启",
+	
+	"config.Elliott.name": "艾利欧特",
+    "config.Elliott.description": "确定艾利欧特的花舞对话更改是否处于活动状态。",
+	"config.Elliott.values.disabled": "关闭",
+	"config.Elliott.values.enabled": "开启",
+	
+	"config.Harvey.name": "哈维",
+    "config.Harvey.description": "确定哈维的花舞对话更改是否处于活动状态。",
+	"config.Harvey.values.disabled": "关闭",
+	"config.Harvey.values.enabled": "开启",
+	
+	"config.Maru.name": "玛鲁",
+    "config.Maru.description": "确定玛鲁的花舞对话更改是否处于活动状态。",
+	"config.Maru.values.disabled": "关闭",
+	"config.Maru.values.enabled": "开启",
+	
+	"config.Sam.name": "山姆",
+    "config.Sam.description": "确定山姆的花舞对话更改是否处于活动状态。",
+	"config.Sam.values.disabled": "关闭",
+	"config.Sam.values.enabled": "开启",
+	
+	"config.Penny.name": "潘妮",
+    "config.Penny.description": "确定潘妮的花舞对话更改是否处于活动状态。",
+	"config.Penny.values.disabled": "关闭",
+	"config.Penny.values.enabled": "开启",
+	
+	"config.Shane.name": "谢恩",
+    "config.Shane.description": "确定谢恩的花舞对话更改是否处于活动状态。",
+	"config.Shane.values.disabled": "关闭",
+	"config.Shane.values.enabled": "开启",
+	
+	"config.Emily.name": "艾米丽",
+    "config.Emily.description": "确定艾米丽的花舞对话更改是否处于活动状态。",
+	"config.Emily.values.disabled": "关闭",
+	"config.Emily.values.enabled": "开启",
+	
+	//REGULAR LINES
+	
+	//Abigail
+	"FDAR.Abigail.Accept.Year1": "你只刚认识我一个季节，我刚刚才告诉你我不喜欢在大家面前跳舞...可你还说想和我跳舞？$u#$b#你还真是奇怪，@。但没关系，我会和你一起跳舞的。$h",
+	"FDAR.DSV.Abigail.Accept.Year1": "这是因为我是花舞皇后吗？你知道这意味着我们必须在前面领舞，对吧？$u#$b#别误会我的意思，@。我会和你一起跳舞的，但要是你可是和花舞皇后一起跳舞，要是不知道舞步的话，肯定会非常奇怪！$h", //Abigail is Flower Queen, Year 1
+	"FDAR.Abigail.Accept": "好吧，如果我无论如何都要跳舞，我更希望是和你一起跳，@。#$b#舞会开始时我会去找你的，好吗？$h",
+	"FDAR.DSV.Abigail.Accept": "等等，请不要告诉我你只是因为我拿到了王冠才问我的，@！$7#$b#我的意思是，我会和你一起跳舞，但你要准备好比平时受到更多的关注。虽然花舞皇后不必发表演讲，但他们必须站在最前面领舞。$9", //Abigail is Flower Queen
+	
+	//Sebastian
+	"FDAR.Sebastian.Accept.Year1": "我知道你刚来这里没多久，@，但我其实并不喜欢舞蹈。$s#$b#今年我会和你一起跳舞，只是...以后不要让我这么频繁地跳舞了，好吗？",
+	"FDAR.DSV.Sebastian.Accept.Year1": "啊。我想，如果我必须以花舞皇后的身份主持舞会的话...$a#$b#...我没有什么拒绝你的理由，我只是单纯的讨厌跳舞。虽然我仍然会和你跳舞，但我很有可能一跳完就马上离开。", //Duplicate of below for ease of coding
+	"FDAR.Sebastian.Accept": "我以为你现在已经足够了解我了，我早就说过我不喜欢跳舞...$a#$b#...好吧，仅此一次。只是别指望我会在那里呆很长时间。",
+	"FDAR.DSV.Sebastian.Accept": "啊。我想，如果我必须以花舞皇后的身份主持舞会的话...$a#$b#...我没有什么拒绝你的理由，我只是单纯的讨厌跳舞。虽然我仍然会和你跳舞，但我很有可能一跳完就马上离开。", //Sebastian is Flower Queen, probably doesn't need a Year 1 variant.
+	
+	//Alex
+	"FDAR.Alex.Accept.Year1": "请某人在你的第一次花舞中跳舞？这需要勇气，@。#$b#你来镇上后一直很酷，所以我当然愿意和你跳舞，为什么不呢。$h",
+	"FDAR.DSV.Alex.Accept.Year1": "你的第一次花舞节就邀请花舞皇后和你共舞？这需要勇气。#$b#我很敬佩这一点。如果我有勇气主动去问，我也会选择和你跳舞的。", //Alex is Flower Queen, Year 1
+	"FDAR.Alex.Accept": "所以今年你想和我跳舞，是吗？让我想想...#$b#嘿，我只是在和你开玩笑。不用担心，我当然会和你跳舞的。$h",
+	"FDAR.DSV.Alex.Accept": "你问是因为你想和我跳舞，还是因为我今年获得了冠军？$9#$b#别这副表情，我只是在逗你玩呢。当然，我会和你一起跳舞的。$h", //Alex is Flower Queen
+	
+	//Haley
+	
+	//Year 1
+	"FDAR.Haley.Accept.Year1": "嗯...我想现任花舞皇后确实需要一个合适的搭档。$7#$b#另外，最好确保你熟知你在镇里第一次跳舞的步骤。跟着我的舞步走，好吗？",
+	"FDAR.DSV.Haley.Accept.Year1": "嗯...我想你肯定不会是今天最糟糕的人选。$7#$b#另外，最好确保你熟知你在镇里第一次跳舞的步骤。跟着我的舞步走，好吗？", //Not Flower Queen
+	"FDAR.Haley.Accept.Year1.High": "哦！我还在想该怎么开口呢，你省掉了我去问你的麻烦！$h#$b#这是你来这里的第一年，对吧？跳舞的时候跟着我走。这是我能为我的朋友做的最起码的事。",
+	"FDAR.DSV.Haley.Accept.Year1.High": "哦！我还在想该怎么开口呢，你省掉了我去问你的麻烦！$h#$b#这是你来这里的第一年，对吧？跳舞的时候跟着我走就行了。这是我能为我的朋友做的最起码的事。", //Duplicated for simplicity
+	
+	//Year 2+
+	"FDAR.Haley.Accept": "嗯...我想现任花舞皇后确实需要一个合适的搭档。$7#$b#我会同意的，只是答应我不要把美好的舞会搞砸，好吗？",
+	"FDAR.Haley.Accept.High": "嗯...难道你在犹豫自己值不值得请花舞皇后跳舞吗，@？#$b#我只是在开玩笑，@。我很高兴今年能和你一起跳舞。$h",
+	"FDAR.DSV.Haley.Accept": "嗯...我想我确实需要一个合适的搭档...$7#$b#我会同意的，只是答应我不要把美好的舞会搞砸，好吗？", //Not Flower Queen
+	"FDAR.DSV.Haley.Accept.High": "嗯难道你在犹豫自己值不值得请花舞皇后跳舞吗，@？#$b#我只是在开玩笑，@。我很高兴今年能和你一起跳舞。$h", //Not Flower Queen
+	
+	//Shane
+	//Year 1
+	"FDAR.Shane.Accept.Year1": "...这是你来这里的第一年，对吧？$a#$b#我想，如果我的舞伴也不知道该如何跳舞，那也许不会显得我那么糟糕。我答应你，@。$u",
+	"FDAR.Shane.Accept.Year1.High": "从没想过我会考虑一个刚来到这里的人的舞蹈请求...$u#$b#放轻松，@。我会和你跳舞的。$h",
+	"FDAR.DSV.Shane.Accept.Year1": "...这最好不是因为王冠。$a#$b#我想，如果我的舞伴也不知道具体的舞步，那或许没有那么糟糕。因为你是新来的，对吧？当然，我会和你一起跳舞的，@。$u", //Shane is Flower Queen, 6 heart not seen, Year 1
+	"FDAR.DSV.Shane.Accept.Year1.High": "我不知道，@。我让你拿的馅饼你还没有给我呢。”...$u#$b#放松点，@，我会和你跳舞的。作为花舞皇后，我大概无论如何都应该帮你熟悉舞会的流程。$h", //Rare - Shane Flower Queen, 6 Heart Seen, Year 1
+
+	//Years 2+
+	"FDAR.Shane.Accept": "我？你确定你没问错人？#$b#嗯，当然可以。为什么不呢？",
+	"FDAR.DSV.Shane.Accept": "...这是因为王冠吗？事实上，我不是最好的舞伴。$u#$b#...我想，其实你去找某人跳舞要比选我夺冠的几率大得多。但既然你已经选择了我，当然，我会和你跳舞的。", //Shane is Flower Queen, 6 heart not seen
+	"FDAR.Shane.Accept.High": "嘿，你知道吗，我当然愿意，@。#$b#你可能是我唯一愿意一起跳舞的人了。$6",
+	"FDAR.DSV.Shane.Accept.High": "我不知道，@。我让你拿的馅饼你还没有给我呢。”...$u#$b#但我是个慷慨的君主--啊，对不起，说这话的时候不能板着脸。我会和你跳舞的，@。$h", //Shane is Flower Queen, 6 Heart seen.
+	
+	//Emily
+	"FDAR.Emily.Accept.Year1": "我更倾向于用快节奏的音乐跳舞...不过这是你来这里的第一年，对吧？$u#$b#今年我会和你一起跳舞，这样你就可以学会舞步了。别担心，它很简单的。",
+	"FDAR.DSV.Emily.Accept.Year1": "当然，@。我很荣幸能和你一起参加今天的舞会。#$b#今天我们要领舞，所以我要现在就开始教会你舞步的要领。它很容易掌握的，首先...$u", //Emily is Flower Queen, Year 1
+	"FDAR.Emily.Accept": "当然，@。我很荣幸能和你一起参加今天的舞会。#$b#过一会儿我会和你跳舞。但现在我只想先吃完这里的几道菜。",
+	"FDAR.DSV.Emily.Accept": "当然，@。我很荣幸能和你一起参加今天的舞会。#$b#我会让刘易斯知道我们今天将一起领舞的。", //Emily is Flower Queen
+	
+	//Leah
+	"FDAR.Leah.Accept.Year1": "你想和我跳舞吗？你在这里的第一年就能鼓起勇气邀请其他人真是太勇敢了...$7#$b#哦，放松点，@。我不想让你难过，所以我会和你跳舞的，我将是你今年的花舞搭档。$h",
+	"FDAR.DSV.Leah.Accept.Year1": "你想和我跳舞吗？你在这里的第一年就很勇敢，你精准选出了所有人中最富有技巧的花舞皇后...$7#$b#哦，放松点，@。我不想让你难过，所以我会和你跳舞的，我将是你今年的花舞搭档。$h", //Leah is Flower Queen, Year 1
+	"FDAR.Leah.Accept": "我很高兴你能来问我，@。我今年很想和你一起跳舞。$h#$b#舞会开始的时候我会和你见面的，好吗？",
+	"FDAR.DSV.Leah.Accept": "其实我一直都在找你！要是花舞皇后在没有舞伴的情况下领舞，那多少会有点尴尬。$h#$b#所以，是的@。我很希望你能和我一起跳舞。", //Leah is Flower Queen
+	
+	//Elliott
+	"FDAR.Elliott.Accept.Year1": "你是如此自信夺目！如果是其他人问我是否愿意作为他们在山谷里第一支舞的搭档，我大概会拒绝的。$h#$b#但事实证明你是一个很好的朋友，@，我很荣幸今天能和你一起跳舞。",
+	"FDAR.DSV.Elliott.Accept.Year1": "这样的自信，在你来这的第一年就直接邀请花舞皇后！$h#$b#如果是其他人问我是否愿意作为他们在山谷里第一支舞的搭档，我大概会拒绝的。$h#$b#但事实证明你是一个很好的朋友，@，我很荣幸今天能和你一起跳舞。", //Elliott is Flower Queen, Year 1
+	"FDAR.Elliott.Accept": "当然，@！我愿意为你这样亲爱的朋友做任何事。$h#$b#我很荣幸能成为你今天的舞伴。",
+	"FDAR.DSV.Elliott.Accept": "当然，@！你会是今天舞会最好的搭档。$h#$b#很荣幸你愿意成为花舞女王的搭档。", //Elliott is Flower Queen
+	
+	//Penny
+	"FDAR.Penny.Accept.Year1": "哦，你想和我跳舞吗...$u#$b#我想你可能比我更紧张，因为这是你在这里的第一支舞，@。这让我感觉好多了。$h#$b#当然，我愿意和你跳舞。",
+	"FDAR.DSV.Penny.Accept.Year1": "哦，你想和我跳舞...$u#$b#你确定吗？我必须以花舞皇后的身份领舞，但这还是你来这的第一支舞...$s#$b#好吧，如果你确定...我可以和你跳舞，@。$l", //Penny is Flower Queen, Year 1
+	"FDAR.Penny.Accept": "我想，要是和朋友一起跳舞大概不会让我那么发愁...#$b#我会接受的。舞会开始后来见我，好吗？$h",
+	"FDAR.DSV.Penny.Accept": "我想要是和朋友一起领舞大概不会让我那么发愁...#$b#如果你不介意花舞皇后和她的搭档会被过多的关注，我很乐意和你跳舞。", //Penny is Flower Queen
+	
+	//Sam
+	"FDAR.Sam.Accept.Year1": "你想和我跳舞--哦，对了，这是你来这里的第一年！$8#$b#你可能还不知道舞步是什么样的，所以可以肯定，我会和你一起跳舞。#$b#如果你觉得自己搞砸了，就挥舞一下你的手臂。我会用一些绝对不是常规舞蹈的舞步来分散大家的注意力。$h",
+	"FDAR.DSV.Sam.Accept.Year1": "想在你的第一年和花舞皇后跳舞，嗯？$h#$b#但我可要先提醒你，这意味着每个人都会紧紧盯着我们看的。#$b#如果你感觉自己不小心跳错了了，就挥舞一下自己手臂我会用一些绝对不是常规舞蹈的舞步来分散大家的注意力。$h#$b#别担心，当他们选举花舞皇后时，每个人都知道投票给我意味着什么。$10", //Sam is Flower Queen, Year 1.Bit lengthy, but unlikely to be gotten much？
+	"FDAR.Sam.Accept": "你真的想和我跳舞吗，嗯？#$b#当然，我很乐意。不过，我不能保证我在舞会途中不会突然开始自由发挥，可别被我的舞步牵着走。$h",
+	"FDAR.DSV.Sam.Accept": "你真的想和我跳舞吗，嗯？#$b#当然，但我可要先提醒你，我不能保证我在舞会途中不会突然开始自由发挥。$h#$b#既然必须有人来改变舞蹈--为什么不能是花舞女王来践行呢？$h", //Sam is Flower Queen
+	
+	//Harvey
+	"FDAR.Harvey.Accept.Year1": "哦，真是一种解脱。我本来打算问你的！$h#$b#我不确定你是否会接受--你在镇子里待的时间不长，所以...#$b#呃，好吧，等舞会开始的时候见！$h",
+	"FDAR.DSV.Harvey.Accept.Year1": "哦，真是一种解脱。我本来一直在纠结犹豫要不要问你的！$h#$b#我不确定你是否会接受--毕竟在你的第一年就和花舞皇后跳舞可能会有不小的压力，所以...#$b#呃，好吧，等舞会开始的时候见！$h", //Harvey is Flower Queen, Year 1
+	"FDAR.DSV.Harvey.Accept": "哦，真是一种解脱。我本来一直在纠结犹豫要不要问你的！$h#$b#我不确定你是否会接受我的邀请--毕竟和花舞皇后跳舞可能会有些压力，所以我不敢肯定你是否会...#$b#呃，好吧，等舞会开始的时候见！$h", // Harvey is Flower Queen
+	"FDAR.Harvey.Accept": "哦，真是一种解脱。我本来一直在纠结犹豫要不要问你的！$h#$b#呃，好吧，等舞会开始的时候见！$h",
+	
+	//Maru
+	"FDAR.Maru.Accept.Year1": "我想我可以和你分享我的花舞数据，因为这是你来到这里的第一年...#$b#答案是肯定的，@。今年我会和你一起跳舞。$h$h",
+	"FDAR.DSV.Maru.Accept.Year1": "我想我可以和你分享我的花舞数据，因为这是你来到这里的第一年...#$b#另外，由花舞皇后教你舞步可能对你的舞蹈水平有极大的帮助，这样一切就都会顺利进行了，对吧？$h", //Maru is Flower Queen, Year 1
+	"FDAR.Maru.Accept": "当然！我很高兴能为舞蹈获得另一个新的观测数据。$u#$b#当然，今年可能不会有太大的不同，但即使是重复的数据也可以用于验证。$h",
+	"FDAR.DSV.Maru.Accept": "当然！我很高兴能为舞蹈获得另一个新的观测数据。$u#$b#此外，作为花皇后的附加变量可能会改变结果。能有新的事情发生真是太好了。$h", //Maru is Flower Queen
+	
+	
+	
+	//Dating (No PPAF)
+	
+		//Abigail
+		"FDAR.Abigail.Dating.Accept": "等等，你是在问我吗？我以为我们在一起跳舞是理所当然的！我们在约会，不是吗？$h#$b#是的，@，我当然会和你一起跳舞。$l",
+	
+		//Sebastian
+		"FDAR.Sebastian.Dating.Accept": "我一开始就有预感这件事会发生了...我真的不希望这样。$s#$b#不过，如果是你的话，@...我愿意和你跳舞。一个合格的男朋友在花舞节上就应该这么做，对吧？$l",
+		
+		//Alex
+		"FDAR.Alex.Dating.Accept": "什么，难道你打算和其他人跳舞吗？$h#$b#是的，我会和你一起跳舞的，@。我爱你，请记住这点。$l",
+		
+		//Haley
+		"FDAR.Haley.Dating.Accept": "当然，你总不会让一个花舞皇后在没有舞伴的情况下孤身一人跳舞吧？$h#$b#没有我更愿意一起跳舞的人了，@。你是我的唯一人选。$l",
+		"FDAR.DSV.Haley.Dating.Accept": "当然！难道你会离开你的女朋友去和别人跳舞，忍心看着她没有舞伴孤身一人吗？$h#$b#没有我更愿意一起跳舞的人了，@。你是我的唯一人选。$l",
+		
+		//Shane
+		"FDAR.Shane.Dating.Accept": "我想我会的，毕竟我是你的男朋友。$6#$b#一会见，@。$l",
+		
+		//Emily
+		"FDAR.Emily.Dating.Accept": "当然！我希望今天能和你跳舞，@。#$b#有你在我身边，我觉得这次的花舞会很特别。$l",
+		
+		//Leah
+		"FDAR.Leah.Dating.Accept": "我当然希望我们能一起跳舞，@！你可没那么容易就躲掉这个节日！$h#$b#此外，我觉得能和你在一起的任何时间对我来说都是特别的。$l",
+		
+		//Elliott
+		"FDAR.Elliott.Dating.Accept": "你的要求让我心碎。但事实上，你没必要来问我。#$b#我一开始打算和你跳舞了，@。$h#$b#除了你，我做梦也不会去和其他人跳舞，亲爱的。$l",
+		
+		//Penny
+		"FDAR.Penny.Dating.Accept": "即使在我们约会的时候，你还是如此遵守礼节吗？谢谢你，@。$h#$b#答案是肯定的。顺便告诉你，我会一直和你跳舞。$l",
+		
+		//Sam
+		"FDAR.Sam.Dating.Accept": "我的意思是，我以为我们肯定会一起跳舞的，我没想过别的可能。我把那套愚蠢的衣服拿出来，一切都是为了你。$10#$b#你一定已经准备好和你的男朋友一起跳舞了，对吧？$l",
+		
+		//Harvey
+		"FDAR.Harvey.Dating.Accept": "哦，当然！说实话，今年问你的时候我还是很紧张。$h#$b#我可能是你的男朋友，但这并不意味着你不想和别人跳舞。谢谢你来问我，@。$l",
+		
+		//Maru
+		"FDAR.Maru.Dating.Accept": "我希望我们能一起跳舞...我真的很想看看作为你的女朋友，我会如何对待花舞。$l#$b#是的，这意味着我会和你一起跳舞，@！$h",
+	
+		
+		//Dating (PPAF)
+		
+		//Abigail
+		"FDAR.Abigail.Friends.Accept": "等等，你还问我？我以为我们在一起跳舞是理所当然的！我们是最好的朋友，不是吗？$h#$b#是的，@，我会和你跳舞。",
+		
+		//Sebastian
+		"FDAR.Sebastian.Friends.Accept": "我有预感这会发生...我真的希望不是这样。$s#$b#不过是为了你，@...我会和你跳舞。最好的朋友在花舞会上就应该这么做的，对吧$h",
+		
+		//Alex
+		"FDAR.Alex.Friends.Accept": "什么，你打算和其他人跳舞吗？#$b#是的，我会和你跳舞，@。我们是最好的朋友，对吧$h",
+		
+		//Haley
+		"FDAR.Haley.Friends.Accept": "当然！你总不会让一个花舞皇后在没有舞伴的情况下孤身一人跳舞吧？$h#$b#没有我更愿意一起跳舞的人了，@。你是我的唯一人选。$l",
+		"FDAR.DSV.Haley.Friends.Accept": "当然！难道你会离开你最好的朋友去和别人跳舞，忍心看着她没有舞伴孤身一人吗？$h#$b#没有我更愿意一起跳舞的人了，@。你是我的唯一人选。$l",
+		
+		//Shane
+		"FDAR.Shane.Friends.Accept": "我想想我会的，因为你是我最好的朋友。$6#$b#舞会开始后见，@.",
+		
+		//Emily
+		"FDAR.Emily.Friends.Accept": "当然！我希望今天能和你跳舞，@.$h#$b#我想和我最好的朋友一起跳舞会很特别。",
+		
+		//Leah
+		"FDAR.Leah.Friends.Accept": "我当然希望我们能一起跳舞，@！你可没那么容易就离开这个节日！$h#$b#此外，我能和我最好的朋友在一起的任何时间都是值得的，即使只是跳舞。",
+		
+		//Elliott
+		"FDAR.Elliott.Friends.Accept": "你的请求让我在心歌唱，@。我很荣幸能和你一起跳舞。#$b#毕竟，在这样的节日里，谁比我最好的朋友更适合一起跳舞呢$h",
+		
+		//Penny
+		"FDAR.Penny.Friends.Accept": "即使是和你最好的朋友也依旧遵守礼仪，@？谢谢你。$h#$b#答案是肯定的。顺便一提，我会一直和一个对我来说意义重大的人跳舞。",
+		
+		//Sam
+		"FDAR.Sam.Friends.Accept": "天哪，这套西装今年又要出场了，是吗！$h#$b#我在开玩笑，@。你是我最好的朋友，我当然会和你跳舞。",
+		
+		//Harvey
+		"FDAR.Harvey.Friends.Accept": "哦，当然！说实话，今年问你时，我还是很紧张。$h#$b#你可能是我最好的朋友，但这并不意味着你不会想和别人一起跳舞。谢谢能来你问我，@.",
+		
+		//Maru
+		"FDAR.Maru.Friends.Accept": "我希望我们能一起跳舞...我真的很想看看，作为你最好的朋友，我将如何对待花舞。$u#$b#是的，这意味着我会和你一起跳舞，@！$h",
+
+
+	//Modified Ask Dialogues (No PPAF or PPAF RomanceAndSex/RomanceWithoutSex ONLY)
+	
+	//Abigail
+	"FDAR.Abigail.Ask.Fail": "$q -1 null#嘿，@。#$r -1 0 danceAsk#你愿意和我跳舞吗，阿比盖尔？#$r -1 0 null#(重新考虑你的请求)",
+	"FDAR.Abigail.Ask": "$q -1 null#@！你还需要别的东西吗#$r -1 0 danceAsk#你愿意和我跳舞吗，阿比盖尔？#$r -1 0 null#我只是想打个招呼。",
+	
+	//Sebastian
+	"FDAR.Sebastian.Ask.Fail": "$q -1 null#*叹气*嗯？#$r -1 0 danceAsk#想跳舞吗，塞巴斯蒂安？#$r -1 0 null#没什么，抱歉...",
+	"FDAR.Sebastian.Ask": "$q -1 null#嗯？#$r -1 0 danceAsk#想跳舞吗，塞巴斯蒂安？#$r -1 0 null#待会儿见，塞巴斯蒂安。",
+	
+	//Alex
+	"FDAR.Alex.Ask.Fail": "$q -1 null#...你挡住了我看风景，@。#$r -1 0 danceAsk#你愿意和我跳舞吗，亚历克斯？#$r -1 0 null#很抱歉。",
+	"FDAR.Alex.Ask": "$q -1 null#嗯？#$r -1 0 danceAsk#想跳舞吗，亚历克斯？#$r -1 0 null#没什么，{0}。",
+	
+	//Haley
+	"FDAR.Haley.Ask.Fail": "$q -1 null#...你想要什么？#$r -1 0 danceAsk#尝试邀请{0}与你一起跳舞#$r -1 0 null#(问问其他人)",
+	"FDAR.Haley.Ask": "$q -1 null#...什么？#$r -1 0 danceAsk#我可以请你跳支舞吗，殿下？#$r -1 0 null#(问问其他人)",
+	"FDAR.Haley.Ask.High": "$q -1 null#哦，嗨@！#$r -1 0 danceAsk#我可以请你跳支舞吗，殿下？#$r -1 0 null#(问问其他人)",
+	"FDAR.DSV.Haley.Ask": "$q -1 null#...什么》#$r -1 0 danceAsk#我可以和你跳舞吗，海莉？#$r -1 0 null#(问问其他人)",
+	"FDAR.DSV.Haley.Ask.High": "$q -1 null#哦，嘿@！#$r -1 0 danceAsk#我可以和你跳舞吗，海莉？#$r -1 0 null#(问问其他人)",
+	
+	//Shane
+	"FDAR.Shane.Ask.Fail": "$q -1 null#...你想要干什么，@。#$r -1 0 danceAsk#愿意与我共舞吗，谢恩？#$r -1 0 null#没事，很抱歉打扰你。",
+	"FDAR.Shane.Ask": "$q -1 null#...什么？#$r -1 0 danceAsk#愿意与我共舞吗，谢恩？#$r -1 0 null#没什么...",
+	"FDAR.Shane.Ask.High": "$q -1 null#...嗯？#$r -1 0 danceAsk#愿意与我共舞吗，谢恩？#$r -1 0 null#没什么。待会儿见，谢恩。",
+	
+	//Emily
+	"FDAR.Emily.Ask.Fail": "$q -1 null#你需要什么吗？#$r -1 0 danceAsk#你愿意和我跳舞吗，艾米丽？#$r -1 0 null#不，什么都没有！",
+	"FDAR.Emily.Ask": "$q -1 null#你需要什么，@？#$r -1 0 danceAsk#艾米莉，你愿意做我的舞伴吗？#$r -1 0 null#没什么，只是和你打个招呼。",
+	
+	//Leah
+	"FDAR.Leah.Ask.Fail": "$q -1 null#你想要什么吗？#$r -1 0 danceAsk#你愿意和我一起跳舞吗，莉亚？#$r -1 0 null#没什么...",
+	"FDAR.Leah.Ask": "$q -1 null#怎么了，@？#$r -1 0 danceAsk#你愿意和我一起跳舞吗，莉亚？#$r -1 0 null#(重新考虑你的请求)",
+	
+	//Elliott
+	"FDAR.Elliott.Ask.Fail": "$q -1 null#你来这里是为了什么吗，@？#$r -1 0 danceAsk#你能和我跳舞吗，艾利欧特？#$r -1 0 null#只是打个招呼。",
+	"FDAR.Elliott.Ask": "$q -1 null#怎么了，我的朋友？#$r -1 0 danceAsk#我可以请你跳支舞吗，艾利欧特？#$r -1 0 null#待会儿见，艾利欧特。",
+	
+	//Penny
+	"FDAR.Penny.Ask.Fail": "$q -1 null#额，你需要什么吗？#$r -1 0 danceAsk#我能和你跳舞吗，潘妮？#$r -1 0 null#什么都没有，抱歉。",
+	"FDAR.Penny.Ask": "$q -1 null#嗨，@。#$r -1 0 danceAsk#我可以请你跳支舞吗，潘妮？#$r -1 0 null#很高兴见到你，潘妮。",
+	
+	//Sam
+	"FDAR.Sam.Ask.Fail": "$q -1 null#@？你需要什么吗？#$r -1 0 danceAsk#我能和你跳舞吗，山姆？#$r -1 0 null#不，什么都没有...",
+	"FDAR.Sam.Ask": "$q -1 null#嘿，怎么了，@！#$r -1 0 danceAsk#你愿意和我跳舞吗，山姆？#$r -1 0 null#(询问其他人)",
+	
+	//Harvey
+	"FDAR.Harvey.Ask.Fail": "$q -1 null#哦，@。能等一下吗？#$r -1 0 danceAsk#你愿意和我跳舞吗，哈维？#$r -1 0 null#当然，你需要多久都可以。",
+	"FDAR.Harvey.Ask": "$q -1 null#*吞咽*哦，额，@！很高兴见到你！#$r -1 0 danceAsk#你愿意和我跳舞吗，哈维？#$r -1 0 null#你会找到一个合作的舞伴的。",
+	
+	//Maru
+	"FDAR.Maru.Ask.Fail": "$q -1 null#哦，@，你想要什么吗？#$r -1 0 danceAsk#我可以和你跳舞吗，玛鲁？#$r -1 0 null#没什么...",
+	"FDAR.Maru.Ask": "$q -1 null#哦，@！你想问我什么吗？#$r -1 0 danceAsk#你愿意和我跳舞吗，玛鲁？#$r -1 0 null#我稍后再来问你。",
+	
+	//Modified Ask Dialogues (No PPAF or PPAF RomanceAndSex/RomanceWithoutSex ONLY) - Dating (NEEDS WRITING)
+	
+	//Abigail
+	"FDAR.Abigail.Dating.Ask": "$q -1 null#看这里，@...#$r -1 0 danceAsk#你愿意和我跳舞吗，阿比盖尔？#$r -1 0 null#嘿，等我一会，我很快就会来找你，好吗？",
+	
+	//Sebastian
+	"FDAR.Sebastian.Dating.Ask": "$q -1 null#哦...额...嘿，@...#$r -1 0 danceAsk#塞巴斯蒂安，你愿意和我跳舞吗？#$r -1 0 null#嘿，别担心，我不会强迫你跳舞的。",
+	
+	//Alex
+	"FDAR.Alex.Dating.Ask": "$q -1 null#是的，@？如果你需要什么，请告诉我。#$r -1 0 danceAsk#想和我跳舞吗，亚历克斯？#$r -1 0 null#我唯一需要的就是你...还有你和我在一起。",
+	
+	//Haley
+	"FDAR.Haley.Dating.Ask": "$q -1 null#想和我一起练习舞蹈吗，亲爱的？#$r -1 0 danceAsk#殿下，我可以请求和你跳这支舞吗？#$r -1 0 null#也许过一会吧，海莉。爱你！",
+	"FDAR.DSV.Haley.Dating.Ask": "$q -1 null#想和我一起练习舞蹈吗，美女？#$r -1 0 danceAsk#我今天可以和你跳舞吗，海莉？#$r -1 0 null#也许过一会吧，海莉。爱你！",
+
+	//Shane
+	"FDAR.Shane.Dating.Ask": "$q -1 null#嘿，@。你想要什么吗？#$r -1 0 danceAsk#你愿意和我跳舞吗，谢恩？#$r -1 0 null#目前什么都没有，只是想来见你，谢恩。",
+	
+	//Emily
+	"FDAR.Emily.Dating.Ask": "$q -1 null#我总是很高兴能和你在一起，@。#$r -1 0 danceAsk#艾米莉，你愿意和我跳舞吗？#$r -1 0 null#我也是这么想的。",
+	
+	//Leah
+	"FDAR.Leah.Dating.Ask": "$q -1 null#想我了吗，@？#$r -1 0 danceAsk#我希望你今天能和我一起跳舞...#$r -1 0 null#我一直都在想你，莉亚。",
+	
+	//Elliott
+	"FDAR.Elliott.Dating.Ask": "$q -1 null#怎么了，亲爱的？#$r -1 0 danceAsk#你愿意和我跳舞吗，埃利奥特？#$r -1 0 null#没什么，我只是想见你。",
+	
+	//Penny
+	"FDAR.Penny.Dating.Ask": "$q -1 null#@！你有什么要问我的吗？#$r -1 0 danceAsk#我能有请你和我一起跳舞吗，潘妮？#$r -1 0 null#我只是很高兴能见到你，潘妮。",
+	
+	//Sam
+	"FDAR.Sam.Dating.Ask": "$q -1 null#这是我最喜欢的人！你需要任何东西吗，@？#$r -1 0 danceAsk#和我跳舞吗，山姆？#$r -1 0 null#我只需要你，山姆。",
+	
+	//Harvey
+	"FDAR.Harvey.Dating.Ask": "$q -1 null#...为什么我还是这么紧张....哦！@！你还需要什么吗？#$r -1 0 danceAsk#哈维，你愿意和我跳舞吗？#$r -1 0 null#没什么，只是想和你在一起。",
+	
+	//Maru
+	"FDAR.Maru.Dating.Ask": "$q -1 null#我希望能和你在一起，@...#$r -1 0 danceAsk#你愿意和我跳舞吗，玛鲁？#$r -1 0 null#再等一会好么，玛鲁。",
+	
+	//Modified Ask Dialogues (No PPAF or PPAF RomanceAndSex/RomanceWithoutSex ONLY) - Spouse (NEEDS WRITING)
+	
+	//Abigail
+	"FDAR.Abigail.Married.Ask": "$q -1 null#怎么了，亲爱的？#$r -1 0 danceAsk#今天我能和我可爱的妻子跳舞吗？#$r -1 0 null#没什么，阿比盖尔。待会儿在家见？",
+	
+	//Sebastian
+	"FDAR.Sebastian.Married.Ask": "$q -1 null#我们能回家了吗，@？#$r -1 0 danceAsk#让我们先跳舞吧，塞巴斯蒂安。#$r -1 0 null#当然，我们马上就可以回去了。",
+	
+	//Alex
+	"FDAR.Alex.Married.Ask": "$q -1 null#哦，这个节日总是让人回想起过去。#$r -1 0 danceAsk#我亲爱的丈夫愿意和我跳舞吗？#$r -1 0 null#并且我们还能制造更多回忆。",
+	
+	//Haley
+	"FDAR.Haley.Married.Ask": "$q -1 null#很高兴看到新的花舞皇后开始发挥作用，你不觉得吗？#$r -1 0 danceAsk#愿意像往常一样和我一起跳舞吗？#$r -1 0 null#他们都没有你做得好，海莉。",
+	
+	//Shane
+	"FDAR.Shane.Married.Ask": "$q -1 null#这些食物太棒了。@，你想尝尝吗？#$r -1 0 danceAsk#你愿意先和我跳舞吗，谢恩？#$r -1 0 null#当然，我想再吃点东西。",
+	
+	//Emily
+	"FDAR.Emily.Married.Ask": "$q -1 null#你想问我什么吗，@？#$r -1 0 danceAsk#艾米莉，你今天能和我跳舞吗？#$r -1 0 null#只是希望你能享受这个节日，亲爱的。",
+	
+	//Leah
+	"FDAR.Leah.Married.Ask": "$q -1 null#你有什么要问我的吗，@？#$r -1 0 danceAsk#莉亚，你今天能和我跳舞吗？#$r -1 0 null#如果你今天在节日里玩得开心就好了。",
+	
+	//Elliott
+	"FDAR.Elliott.Married.Ask": "$q -1 null#怎么了，亲爱的？#$r -1 0 danceAsk#我们今天能一起跳舞吗，艾利欧特？#$r -1 0 null#没什么，只是想着我有多爱你。",
+	
+	//Penny
+	"FDAR.Penny.Married.Ask": "$q -1 null#亲爱的，你有什么想问我的吗？#$r -1 0 danceAsk#潘妮，我能有这个荣幸请你和我一起跳舞吗？#$r -1 0 null#现在没有，但我很快就会再来见你，好吗？",
+	
+	//Sam
+	"FDAR.Sam.Married.Ask": "$q -1 null#嘿，@！特意来看你亲爱的丈夫？#$r -1 0 danceAsk#想和我跳舞吗，山姆？#$r -1 0 null#你太直接了，山姆。但我就是爱你的这一点。",
+	
+	//Harvey
+	"FDAR.Harvey.Married.Ask": "$q -1 null#@！你是来问我什么事的吗？#$r -1 0 danceAsk#哈维，你愿意和你亲爱的另一半一起跳舞吗？#$r -1 0 null#没什么，只要你愿意和我在一起就好。",
+	
+	//Maru
+	"FDAR.Maru.Married.Ask": "$q -1 null#亲爱的，你喜欢这个节日吗？#$r -1 0 danceAsk#你愿意和我跳舞吗，玛鲁？#$r -1 0 null#我喜欢，因为有你和我在一起。",
+	
+	//Free Love Fix
+	
+	//Abigail
+	"FDAR.FLF.Abigail": "但...但是...我想一起跳舞的人是...$s#$b#开玩笑的！我当然会和你跳舞。我爱你。$h",
+	  
+	//Penny
+	"FDAR.FLF.Penny": "我愿意！$h#$b#*耳语*亲爱的，感谢你依旧愿意询问我的意见。",
+	  
+	//Maru
+	"FDAR.FLF.Maru": "当然...*耳语*那我们之后可以回家紧紧依偎在一起吗？$l",
+	  
+	//Leah
+	"FDAR.FLF.Leah": "呼，还好，我都忍不住开始担心你想和别人跳舞了！$h",
+	  
+	//Haley
+	"FDAR.FLF.Haley": "...我当花舞女巫的日子结束了...所以这对我来说是苦乐参半的舞蹈。$s#$b#但是，我仍旧会答应你...",
+	  
+	//Sebastian
+	"FDAR.FLF.Sebastian": "额...我们必须这样做吗？好吧。",
+	  
+	//Sam
+	"FDAR.FLF.Sam": "噢，我得再穿上那套愚蠢的西装了吗？我想现在我们结婚了，所以...好吧。$s",
+	  
+	//Harvey
+	"FDAR.FLF.Harvey": "我整个下午都在期待它！亲爱的，你在春天清新的空气中容光焕发。$l",
+	  
+	//Elliott
+	"FDAR.FLF.Elliott": "好...我难道还能拒绝你那张温柔善良的脸吗？你的笑容如同春天甜蜜的拥抱。",
+	  
+	//Alex
+	"FDAR.FLF.Alex": "好吧，这应该很有趣...我希望我能记住今年的动作！已经过去有一段时间了...$h",
+	  
+	//Shane
+	"FDAR.FLF.Shane": "跳舞？哦好吧...先让我再喝几杯...",
+	  
+	//Emily
+	"FDAR.FLF.Emily": "当然，我的爱人。我一直都很期待！$h",
+
+}

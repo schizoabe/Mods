@@ -1,0 +1,562 @@
+{
+	"Changes": [
+//Regular Gift Tastes
+		{
+			"LogName": "Gift Tastes 0-1",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Shane": "{{i18n:ICS.GiftTastes.0-1.Love}}/206 215 260 346 873/{{i18n:ICS.GiftTastes.0-1.Like}}/203 -5 -79 303 113/{{i18n:ICS.GiftTastes.0-1.Dislike}}/-81 152 330/{{i18n:ICS.GiftTastes.0-1.Hate.{{NoProfanity}}}}/80 342/{{i18n:ICS.GiftTastes.0-1.Neutral}}// " 
+			},
+			"When": {
+				"Hearts:Shane": "0, 1",
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+		{
+			"LogName": "Gift Tastes 2-3",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Shane": "{{i18n:ICS.GiftTastes.2-3.Love}}/206 215 260 346 873/{{i18n:ICS.GiftTastes.2-3.Like}}/203 -5 -79 303 113/{{i18n:ICS.GiftTastes.2-3.Dislike}}/-81 152 330/{{i18n:ICS.GiftTastes.2-3.Hate}}/80 342/{{i18n:ICS.GiftTastes.2-3.Neutral}}// " 
+			},
+			"When": {
+				"Hearts:Shane": "2, 3",
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+		{
+			"LogName": "Gift Tastes 4-5",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Shane": "{{i18n:ICS.GiftTastes.4-5.Love}}/206 215 260 346 873/{{i18n:ICS.GiftTastes.4-5.Like}}/203 -5 -79 303 113/{{i18n:ICS.GiftTastes.4-5.Dislike}}/-81 152 330/{{i18n:ICS.GiftTastes.4-5.Hate}}/80 342/{{i18n:ICS.GiftTastes.4-5.Neutral}}// " 
+			},
+			"When": {
+				"Hearts:Shane": "4, 5",
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+		{
+			"LogName": "Gift Tastes 7-8",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Shane": "{{i18n:ICS.GiftTastes.7-8.Love}}/206 215 260/{{i18n:ICS.GiftTastes.7-8.Like}}/203 -5 -79 113 167/{{i18n:ICS.GiftTastes.7-8.Dislike}}/80 342 0 -20 -21 92 110 111 112 142 152 153 157 178 105 168 170 171 172 374 376 378 380 397 420 684 721 766 767 772 203 308 -81 152 330/{{i18n:ICS.GiftTastes.7-8.Hate.{{NoProfanity}}}}/346 873 459 303 348 alcohol_item/{{i18n:ICS.GiftTastes.7-8.Neutral}}// " 
+			},
+			"When": {
+				"Hearts:Shane": "7, 8",
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+		{
+			"LogName": "Gift Tastes 9-10 Platonic",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Shane": "{{i18n:ICS.GiftTastes.9-10.Love.Platonic}}/206 215 260/{{i18n:ICS.GiftTastes.9-10.Like.Platonic}}/203 -5 -79 113 167/{{i18n:ICS.GiftTastes.9-10.Dislike}}/80 342 0 -20 -21 92 110 111 112 142 152 153 157 178 105 168 170 171 172 374 376 378 380 397 420 684 721 766 767 772 203 308 -81 152 330/{{i18n:ICS.GiftTastes.9-10.Hate}}/346 873 459 303 348 alcohol_item/{{i18n:ICS.GiftTastes.9-10.Neutral}}// " 
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 9, 14}}",
+				"Relationship:Shane |contains= Dating, Engaged, Married, Divorced": false
+			}
+		},
+		{
+			"LogName": "Gift Tastes 9-10 Romantic",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Shane": "{{i18n:ICS.GiftTastes.9-10.Love.Romantic}}/206 215 260/{{i18n:ICS.GiftTastes.9-10.Like.Romantic}}/203 -5 -79 113 167/{{i18n:ICS.GiftTastes.9-10.Dislike}}/80 342 0 -20 -21 92 110 111 112 142 152 153 157 178 105 168 170 171 172 374 376 378 380 397 420 684 721 766 767 772 203 308 -81 152 330/{{i18n:ICS.GiftTastes.9-10.Hate}}/346 873 459 303 348 alcohol_item/{{i18n:ICS.GiftTastes.9-10.Neutral}}// " 
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 9, 14}}",
+				"Relationship:Shane |contains= Dating, Engaged": true
+			}
+		},
+//6-Heart Gift Tastes
+		{
+			"LogName": "Gift Tastes 6 Pre-recovery",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Shane": "{{i18n:ICS.GiftTastes.6.Love}}/206 215 260 346 873/{{i18n:ICS.GiftTastes.6.Like}}/203 -5 -79 303 113/{{i18n:ICS.GiftTastes.6.Dislike}}/-81 152 330/{{i18n:ICS.GiftTastes.6.Hate.PreRecovery}}/80 342/{{i18n:ICS.GiftTastes.6.Neutral}}// "  
+			},
+			"When": {
+				"Hearts:Shane": "6",
+				"HasSeenEvent |contains=2118991": false,
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+		{
+			"LogName": "Gift Tastes 6 Recovery",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Shane": "{{i18n:ICS.GiftTastes.6.Love}}/206 215 260/{{i18n:ICS.GiftTastes.6.Like}}/203 -5 -79 113 167/{{i18n:ICS.GiftTastes.6.Dislike}}/80 342 0 -20 -21 92 110 111 112 142 152 153 157 178 105 168 170 171 172 374 376 378 380 397 420 684 721 766 767 772 203 308 -81 152 330/{{i18n:ICS.GiftTastes.6.Hate.PostRecovery.{{NoProfanity}}}}/346 873 459 303 348 alcohol_item/{{i18n:ICS.GiftTastes.6.Neutral}}// "
+			},
+			"When": {
+				"Hearts:Shane": "6",
+				"HasSeenEvent |contains=2118991": true,
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+//Marriage Gift Tastes
+		{
+			"LogName": "Gift Tastes Spouse",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Shane": "{{i18n:ICS.GiftTastes.Married.Love.{{Random: 1,2,3,4,5,6.{{NoProfanity}}}}}}/206 215 260/{{i18n:ICS.GiftTastes.Married.Like.{{Random: 1,2,3,4,5,6,7}}}}/203 -5 -79 113 167/{{i18n:ICS.GiftTastes.Married.Dislike.{{Random: 1,2.{{NoProfanity}},3,4.{{NoProfanity}},5,6,7}}}}/80 342 0 -20 -21 92 110 111 112 142 152 153 157 178 105 168 170 171 172 374 376 378 380 397 420 684 721 766 767 772 203 308 -81 152 330/{{i18n:ICS.GiftTastes.Married.Hate.{{Random: 1.{{NoProfanity}},2,3,4,5,6,7.{{NoProfanity}}}}}}/346 873 459 303 348 alcohol_item/{{i18n:ICS.GiftTastes.Married.Neutral.{{Random: 1,2,3,4,5,6}}}}// " 
+			},
+			"When": {
+				"Relationship:Shane": "Married"
+			}
+		},
+
+// GIFT DIALOGUE
+	//0-1 Hearts
+		{
+			"LogName": "CGD Gift Dialogue 0-1",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//Love
+				//Booze
+				"AcceptGift_(O)346": "{{i18n:ICS.GiftDialogue.0-1.Beer.{{Random: 1,2}}}}",
+				//Food
+				"AcceptGift_(O)260": "{{i18n:ICS.GiftDialogue.0-1.LikedFood}}",
+				"AcceptGift_(O)206": "{{i18n:ICS.GiftDialogue.0-1.LikedFood}}",
+				"AcceptGift_(O)215": "{{i18n:ICS.GiftDialogue.0-1.LikedFood}}",
+				//Universal Loves
+				"AcceptGift_(O)74": "{{i18n:ICS.GiftDialogue.0-1.Valuable}}",
+				"AcceptGift_(O)797": "{{i18n:ICS.GiftDialogue.0-1.Valuable}}",
+				"AcceptGift_(O)373": "{{i18n:ICS.GiftDialogue.0-1.Valuable}}",
+				"AcceptGift_(O)279": "{{i18n:ICS.GiftDialogue.0-1.Valuable}}",
+				"AcceptGift_(O)446": "{{i18n:ICS.GiftDialogue.0-1.RabbitsFoot}}",
+			//Like
+				//Eggs
+				"AcceptGift_category_egg": "{{i18n:ICS.GiftDialogue.0-1.Eggs}}",
+				// Booze
+				"AcceptGift_(O)303": "{{i18n:ICS.GiftDialogue.0-1.FancyBooze}}",
+				"AcceptGift_(O)459": "{{i18n:ICS.GiftDialogue.0-1.FancyBooze}}",
+				"AcceptGift_(O)348": "{{i18n:ICS.GiftDialogue.0-1.FancyBooze}}",
+				"AcceptGift_(O)873": "{{i18n:ICS.GiftDialogue.0-1.PinaColada}}",
+				"AcceptGift_alcohol_item": "{{i18n:ICS.GiftDialogue.0-1.OtherBooze}}",
+			//Dislike
+				"AcceptGift_(O)305": "{{i18n:ICS.GiftDialogue.VoidEgg.{{NoProfanity}}}}",
+			//Hate
+				"AcceptGift_(O)342": "{{i18n:ICS.GiftDialogue.Negative.Pickles}}",
+				"AcceptGift_(O)308": "{{i18n:ICS.GiftDialogue.VoidMayonnaise}}",
+				"AcceptGift_(O)376": "{{i18n:ICS.GiftDialogue.Poppy}}"
+			},
+			"When": {
+				"Hearts:Shane": "0, 1",
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+	//2-3 Hearts
+		{
+			"LogName": "CGD Gift Dialogue 2-3",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//Love
+				//Booze
+				"AcceptGift_(O)346": "{{i18n:ICS.GiftDialogue.2-3.Beer.{{Random: 1,2}}}}",
+				//Food
+				"AcceptGift_(O)260": "{{i18n:ICS.GiftDialogue.2-3.HotPepper}}",
+				"AcceptGift_(O)206": "{{i18n:ICS.GiftDialogue.2-3.Pizza}}",
+				"AcceptGift_(O)215": "{{i18n:ICS.GiftDialogue.2-3.PepperPoppers}}",
+				//Universal Loves
+				"AcceptGift_(O)74": "{{i18n:ICS.GiftDialogue.2-3.Valuable}}",
+				"AcceptGift_(O)797": "{{i18n:ICS.GiftDialogue.2-3.Valuable}}",
+				"AcceptGift_(O)373": "{{i18n:ICS.GiftDialogue.2-3.Valuable}}",
+				"AcceptGift_(O)279": "{{i18n:ICS.GiftDialogue.2-3.Valuable}}",
+				"AcceptGift_(O)446": "{{i18n:ICS.GiftDialogue.2-3.RabbitsFoot}}",
+			//Like
+				//Eggs
+				"AcceptGift_category_egg": "{{i18n:ICS.GiftDialogue.2-3.Eggs}}",
+				// Booze
+				"AcceptGift_(O)303": "{{i18n:ICS.GiftDialogue.2-3.FancyBooze}}",
+				"AcceptGift_(O)459": "{{i18n:ICS.GiftDialogue.2-3.FancyBooze}}",
+				"AcceptGift_(O)348": "{{i18n:ICS.GiftDialogue.2-3.FancyBooze}}",
+				"AcceptGift_(O)873": "{{i18n:ICS.GiftDialogue.2-3.PinaColada}}",
+				"AcceptGift_alcohol_item": "{{i18n:ICS.GiftDialogue.2-3.OtherBooze}}",
+			//Dislike
+				"AcceptGift_(O)305": "{{i18n:ICS.GiftDialogue.VoidEgg.{{NoProfanity}}}}",
+			//Hate
+				"AcceptGift_(O)342": "{{i18n:ICS.GiftDialogue.Negative.Pickles}}",
+				"AcceptGift_(O)308": "{{i18n:ICS.GiftDialogue.VoidMayonnaise}}",
+				"AcceptGift_(O)376": "{{i18n:ICS.GiftDialogue.Poppy}}"
+			},
+			"When": {
+				"Hearts:Shane": "2, 3",
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+	//4-5 Hearts
+		{
+			"LogName": "CGD Gift Dialogue 4-5",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//Love
+				//Booze
+				"AcceptGift_(O)346": "{{i18n:ICS.GiftDialogue.4-5.Beer.{{Random: 1.{{NoProfanity}},2}}}}",
+				//Food
+				"AcceptGift_(O)260": "{{i18n:ICS.GiftDialogue.4-5.HotPepper}}",
+				"AcceptGift_(O)206": "{{i18n:ICS.GiftDialogue.4-5.Pizza}}",
+				"AcceptGift_(O)215": "{{i18n:ICS.GiftDialogue.4-5.PepperPoppers}}",
+				//Universal Loves
+				"AcceptGift_(O)74": "{{i18n:ICS.GiftDialogue.Positive.PrismaticShard.{{Random: 1,2}}}}",
+				"AcceptGift_(O)797": "{{i18n:ICS.GiftDialogue.Positive.Pearl}}",
+				"AcceptGift_(O)373": "{{i18n:ICS.GiftDialogue.Positive.GoldenPumpkin}}",
+				"AcceptGift_(O)279": "{{i18n:ICS.GiftDialogue.Positive.MagicRockCandy}}",
+				"AcceptGift_(O)446": "{{i18n:ICS.GiftDialogue.Positive.RabbitsFoot}}",
+			//Like
+				//Eggs
+				"AcceptGift_category_egg": "{{i18n:ICS.GiftDialogue.Positive.Eggs}}",
+				// Booze
+				"AcceptGift_(O)303": "{{i18n:ICS.GiftDialogue.4-5.FancyBooze}}",
+				"AcceptGift_(O)459": "{{i18n:ICS.GiftDialogue.4-5.FancyBooze}}",
+				"AcceptGift_(O)348": "{{i18n:ICS.GiftDialogue.4-5.FancyBooze}}",
+				"AcceptGift_(O)873": "{{i18n:ICS.GiftDialogue.4-5.PinaColada}}",
+				"AcceptGift_alcohol_item": "{{i18n:ICS.GiftDialogue.4-5.OtherBooze}}",
+			//Dislike
+				"AcceptGift_(O)305": "{{i18n:ICS.GiftDialogue.VoidEgg.{{NoProfanity}}}}",
+			//Hate
+				"AcceptGift_(O)342": "{{i18n:ICS.GiftDialogue.Positive.Pickles}}",
+				"AcceptGift_(O)308": "{{i18n:ICS.GiftDialogue.VoidMayonnaise}}",
+				"AcceptGift_(O)376": "{{i18n:ICS.GiftDialogue.Poppy}}"
+			},
+			"When": {
+				"Hearts:Shane": "4, 5",
+				"Relationship:Shane |contains=Married": false
+			},
+		},
+	//6 Hearts
+		{
+			"LogName": "CGD Gift Dialogue 6",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//Love
+				//Food
+				"AcceptGift_(O)260": "{{i18n:ICS.GiftDialogue.6.HotPepper.{{Random: 1,2}}}}",
+				"AcceptGift_(O)206": "{{i18n:ICS.GiftDialogue.6.Pizza}}",
+				"AcceptGift_(O)215": "{{i18n:ICS.GiftDialogue.6.PepperPoppers}}",
+				//Universal Loves
+				"AcceptGift_(O)74": "{{i18n:ICS.GiftDialogue.Positive.PrismaticShard.{{Random: 1,2}}}}",
+				"AcceptGift_(O)797": "{{i18n:ICS.GiftDialogue.Positive.Pearl}}",
+				"AcceptGift_(O)373": "{{i18n:ICS.GiftDialogue.Positive.GoldenPumpkin}}",
+				"AcceptGift_(O)279": "{{i18n:ICS.GiftDialogue.Positive.MagicRockCandy}}",
+				"AcceptGift_(O)446": "{{i18n:ICS.GiftDialogue.6.RabbitsFoot}}",
+			//Like
+				//Eggs
+				"AcceptGift_category_egg": "{{i18n:ICS.GiftDialogue.Positive.Eggs}}",
+			//Dislike
+				"AcceptGift_(O)305": "{{i18n:ICS.GiftDialogue.VoidEgg.{{NoProfanity}}}}",
+			//Hate
+				"AcceptGift_(O)342": "{{i18n:ICS.GiftDialogue.Positive.Pickles}}",
+				"AcceptGift_(O)308": "{{i18n:ICS.GiftDialogue.VoidMayonnaise}}",
+				"AcceptGift_(O)376": "{{i18n:ICS.GiftDialogue.Poppy}}"
+			},
+			"When": {
+				"Hearts:Shane": "6",
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+		{
+			"LogName": "CGD Gift Dialogue 6 Pre-recovery",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//Love
+				//Booze
+				"AcceptGift_(O)346": "{{i18n:ICS.GiftDialogue.6.PreRecovery.Beer.{{Random: 1,2}}}}",
+			//Like
+				// Booze
+				"AcceptGift_(O)303": "{{i18n:ICS.GiftDialogue.6.PreRecovery.FancyBooze}}",
+				"AcceptGift_(O)459": "{{i18n:ICS.GiftDialogue.6.PreRecovery.FancyBooze}}",
+				"AcceptGift_(O)348": "{{i18n:ICS.GiftDialogue.6.PreRecovery.FancyBooze}}",
+				"AcceptGift_(O)873": "{{i18n:ICS.GiftDialogue.6.PreRecovery.PinaColada}}",
+				"AcceptGift_alcohol_item": "{{i18n:ICS.GiftDialogue.6.PreRecovery.OtherBooze}}"
+			},
+			"When": {
+				"Hearts:Shane": "6",
+				"HasSeenEvent |contains=2118991": false,
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+		{
+			"LogName": "CGD Gift Dialogue 6 Recovery",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//Hate
+				// Booze
+				"AcceptGift_(O)346": "{{i18n:ICS.GiftDialogue.6.PostRecovery.Booze.{{Random:1,2}}.{{NoProfanity}}}}",
+				"AcceptGift_(O)303": "{{i18n:ICS.GiftDialogue.6.PostRecovery.Booze.{{Random:1,2}}.{{NoProfanity}}}}",
+				"AcceptGift_(O)459": "{{i18n:ICS.GiftDialogue.6.PostRecovery.Booze.{{Random:1,2}}.{{NoProfanity}}}}",
+				"AcceptGift_(O)348": "{{i18n:ICS.GiftDialogue.6.PostRecovery.Booze.{{Random:1,2}}.{{NoProfanity}}}}",
+				"AcceptGift_(O)873": "{{i18n:ICS.GiftDialogue.6.PostRecovery.Booze.{{Random:1,2}}.{{NoProfanity}}}}",
+				"AcceptGift_alcohol_item": "{{i18n:ICS.GiftDialogue.6.PostRecovery.Booze.{{Random:1,2}}.{{NoProfanity}}}}"
+
+			},
+			"When": {
+				"Hearts:Shane": "6",
+				"HasSeenEvent |contains=2118991": true,
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+	//7-8 Hearts
+		{
+			"LogName": "CGD Gift Dialogue 7-8",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//Love
+				//Food
+				"AcceptGift_(O)260": "{{i18n:ICS.GiftDialogue.7-8.HotPepper.{{Random:1,2}}}}",
+				"AcceptGift_(O)206": "{{i18n:ICS.GiftDialogue.7-8.Pizza.{{Random:1,2}}}}",
+				"AcceptGift_(O)215": "{{i18n:ICS.GiftDialogue.7-8.PepperPoppers.{{Random:1,2}}}}",
+				//Universal Loves
+				"AcceptGift_(O)74": "{{i18n:ICS.GiftDialogue.Positive.PrismaticShard.{{Random: 1,2}}}}",
+				"AcceptGift_(O)797": "{{i18n:ICS.GiftDialogue.Positive.Pearl}}",
+				"AcceptGift_(O)373": "{{i18n:ICS.GiftDialogue.Positive.GoldenPumpkin}}",
+				"AcceptGift_(O)279": "{{i18n:ICS.GiftDialogue.Positive.MagicRockCandy}}",
+				"AcceptGift_(O)446": "{{i18n:ICS.GiftDialogue.Positive.RabbitsFoot}}",
+			//Like
+				//Eggs
+				"AcceptGift_category_egg": "{{i18n:ICS.GiftDialogue.Positive.Eggs}}",
+				//Loved Ones
+				"AcceptGift_(O)221": "{{i18n:ICS.GiftDialogue.PinkCake}}",
+				"AcceptGift_(O)72": "{{i18n:ICS.GiftDialogue.Diamond}}",
+				"AcceptGift_(O)240": "{{i18n:ICS.GiftDialogue.FarmersLunch}}",
+				"AcceptGift_(O)608": "{{i18n:ICS.GiftDialogue.PumpkinPie}}",
+				"AcceptGift_(O)604": "{{i18n:ICS.GiftDialogue.PlumPudding}}",
+				"AcceptGift_(O)595": "{{i18n:ICS.GiftDialogue.FairyRose}}",
+			//Dislike
+				"AcceptGift_(O)305": "{{i18n:ICS.GiftDialogue.VoidEgg.{{NoProfanity}}}}",
+			//Hate
+				"AcceptGift_(O)342": "{{i18n:ICS.GiftDialogue.Positive.Pickles}}",
+				"AcceptGift_(O)308": "{{i18n:ICS.GiftDialogue.VoidMayonnaise}}",
+				"AcceptGift_(O)376": "{{i18n:ICS.GiftDialogue.Poppy}}",
+				//Booze
+				"AcceptGift_(O)346": "{{i18n:ICS.GiftDialogue.7-8.Booze.{{Random:1,2}}.{{NoProfanity}}}}",
+				"AcceptGift_(O)303": "{{i18n:ICS.GiftDialogue.7-8.Booze.{{Random:1,2}}.{{NoProfanity}}}}",
+				"AcceptGift_(O)459": "{{i18n:ICS.GiftDialogue.7-8.Booze.{{Random:1,2}}.{{NoProfanity}}}}",
+				"AcceptGift_(O)348": "{{i18n:ICS.GiftDialogue.7-8.Booze.{{Random:1,2}}.{{NoProfanity}}}}",
+				"AcceptGift_(O)873": "{{i18n:ICS.GiftDialogue.7-8.Booze.{{Random:1,2}}.{{NoProfanity}}}}",
+				"AcceptGift_alcohol_item": "{{i18n:ICS.GiftDialogue.7-8.Booze.{{Random:1,2}}.{{NoProfanity}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "7, 8",
+				"HasSeenEvent |contains=2118991": true,
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+	//9-10 Hearts
+		{
+			"LogName": "CGD Gift Dialogue 9-10",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//Love
+				//Universal Loves
+				"AcceptGift_(O)74": "{{i18n:ICS.GiftDialogue.Positive.PrismaticShard.{{Random: 1,2}}}}",
+				"AcceptGift_(O)797": "{{i18n:ICS.GiftDialogue.Positive.Pearl}}",
+				"AcceptGift_(O)373": "{{i18n:ICS.GiftDialogue.Positive.GoldenPumpkin}}",
+				"AcceptGift_(O)279": "{{i18n:ICS.GiftDialogue.Positive.MagicRockCandy}}",
+				"AcceptGift_(O)446": "{{i18n:ICS.GiftDialogue.Positive.RabbitsFoot}}",
+			//Like
+				//Eggs
+				"AcceptGift_category_egg": "{{i18n:ICS.GiftDialogue.Positive.Eggs}}",
+				//Loved Ones
+				"AcceptGift_(O)221": "{{i18n:ICS.GiftDialogue.PinkCake}}",
+				"AcceptGift_(O)72": "{{i18n:ICS.GiftDialogue.Diamond}}",
+				"AcceptGift_(O)240": "{{i18n:ICS.GiftDialogue.FarmersLunch}}",
+				"AcceptGift_(O)608": "{{i18n:ICS.GiftDialogue.PumpkinPie}}",
+				"AcceptGift_(O)604": "{{i18n:ICS.GiftDialogue.PlumPudding}}",
+				"AcceptGift_(O)595": "{{i18n:ICS.GiftDialogue.FairyRose}}",
+			//Dislike
+				"AcceptGift_(O)305": "{{i18n:ICS.GiftDialogue.VoidEgg.{{NoProfanity}}}}",
+			//Hate
+				"AcceptGift_(O)342": "{{i18n:ICS.GiftDialogue.Positive.Pickles}}",
+				"AcceptGift_(O)308": "{{i18n:ICS.GiftDialogue.VoidMayonnaise}}",
+				"AcceptGift_(O)376": "{{i18n:ICS.GiftDialogue.Poppy}}",
+				//Booze
+				"AcceptGift_(O)346": "{{i18n:ICS.GiftDialogue.9-10.Booze.{{Random:1.{{NoProfanity}},2}}}}",
+				"AcceptGift_(O)303": "{{i18n:ICS.GiftDialogue.9-10.Booze.{{Random:1.{{NoProfanity}},2}}}}",
+				"AcceptGift_(O)459": "{{i18n:ICS.GiftDialogue.9-10.Booze.{{Random:1.{{NoProfanity}},2}}}}",
+				"AcceptGift_(O)348": "{{i18n:ICS.GiftDialogue.9-10.Booze.{{Random:1.{{NoProfanity}},2}}}}",
+				"AcceptGift_(O)873": "{{i18n:ICS.GiftDialogue.9-10.Booze.{{Random:1.{{NoProfanity}},2}}}}",
+				"AcceptGift_alcohol_item": "{{i18n:ICS.GiftDialogue.9-10.Booze.{{Random:1.{{NoProfanity}},2}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 9, 14}}",
+				"HasSeenEvent |contains=2118991": true,
+				"Relationship:Shane |contains= Married": false
+			}
+		},
+		{
+			"LogName": "CGD Gift Dialogue 9-10 Platonic",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//Love
+				//Food
+				"AcceptGift_(O)260": "{{i18n:ICS.GiftDialogue.9-10.HotPepper.{{Random:1,2,3.Platonic}}}}",
+				"AcceptGift_(O)206": "{{i18n:ICS.GiftDialogue.9-10.Pizza.{{Random:1,2.{{NoProfanity}},3,4.Platonic}}}}",
+				"AcceptGift_(O)215": "{{i18n:ICS.GiftDialogue.9-10.PepperPoppers.{{Random:1,2,3.Platonic}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 9, 14}}",
+				"HasSeenEvent |contains=2118991": true,
+				"Relationship:Shane |contains= Dating, Engaged, Married, Divorced": false
+			}
+		},
+		{
+			"LogName": "CGD Gift Dialogue 9-10 Romantic",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//Love
+				//Food
+				"AcceptGift_(O)260": "{{i18n:ICS.GiftDialogue.9-10.HotPepper.{{Random:1,2,3.Romantic}}}}",
+				"AcceptGift_(O)206": "{{i18n:ICS.GiftDialogue.9-10.Pizza.{{Random:1,2.{{NoProfanity}},3,4.Romantic}}}}",
+				"AcceptGift_(O)215": "{{i18n:ICS.GiftDialogue.9-10.PepperPoppers.{{Random:1,2,3.Romantic}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 9, 14}}",
+				"HasSeenEvent |contains=2118991": true,
+				"Relationship:Shane |contains= Dating, Engaged": true
+			}
+		},
+	//Marriage Gift Tastes
+		{
+			"LogName": "CGD Gift Dialogue Married",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+			//Love
+				//Food
+				"AcceptGift_(O)260": "{{i18n:ICS.GiftDialogue.Married.HotPepper.{{Random:1.{{NoProfanity}},2,3,4}}}}",
+				"AcceptGift_(O)206": "{{i18n:ICS.GiftDialogue.Married.Pizza.{{Random:1.{{NoProfanity}},2,3,4.{{NoProfanity}}}}}}",
+				"AcceptGift_(O)215": "{{i18n:ICS.GiftDialogue.Married.PepperPoppers.{{Random:1,2,3,4}}}}",
+				//Universal Loves
+				"AcceptGift_(O)74": "{{i18n:ICS.GiftDialogue.Married.Valuable}}",
+				"AcceptGift_(O)797": "{{i18n:ICS.GiftDialogue.Married.Valuable}}",
+				"AcceptGift_(O)373": "{{i18n:ICS.GiftDialogue.Positive.GoldenPumpkin}}",
+				"AcceptGift_(O)279": "{{i18n:ICS.GiftDialogue.Positive.MagicRockCandy}}",
+				"AcceptGift_(O)446": "{{i18n:ICS.GiftDialogue.Positive.RabbitsFoot}}",
+			//Like
+				//Eggs
+				"AcceptGift_category_egg": "{{i18n:ICS.GiftDialogue.Married.Eggs}}",
+				//Loved Ones
+				"AcceptGift_(O)221": "{{i18n:ICS.GiftDialogue.PinkCake}}",
+				"AcceptGift_(O)72": "{{i18n:ICS.GiftDialogue.Diamond}}",
+				"AcceptGift_(O)240": "{{i18n:ICS.GiftDialogue.FarmersLunch}}",
+				"AcceptGift_(O)608": "{{i18n:ICS.GiftDialogue.PumpkinPie}}",
+				"AcceptGift_(O)604": "{{i18n:ICS.GiftDialogue.PlumPudding}}",
+				"AcceptGift_(O)595": "{{i18n:ICS.GiftDialogue.FairyRose}}",
+			//Dislike
+				"AcceptGift_(O)305": "{{i18n:ICS.GiftDialogue.VoidEgg.{{NoProfanity}}}}",
+			//Hate
+				"AcceptGift_(O)342": "{{i18n:ICS.GiftDialogue.Married.Pickles}}",
+				"AcceptGift_(O)308": "{{i18n:ICS.GiftDialogue.VoidMayonnaise}}",
+				"AcceptGift_(O)376": "{{i18n:ICS.GiftDialogue.Poppy}}",
+				//Booze
+				"AcceptGift_(O)346": "{{i18n:ICS.GiftDialogue.Married.Booze.{{Random:1.{{NoProfanity}},2,3,4}}}}",
+				"AcceptGift_(O)303": "{{i18n:ICS.GiftDialogue.Married.Booze.{{Random:1.{{NoProfanity}},2,3}}}}",
+				"AcceptGift_(O)459": "{{i18n:ICS.GiftDialogue.Married.Booze.{{Random:1.{{NoProfanity}},2,3}}}}",
+				"AcceptGift_(O)348": "{{i18n:ICS.GiftDialogue.Married.Booze.{{Random:1.{{NoProfanity}},2,3}}}}",
+				"AcceptGift_(O)873": "{{i18n:ICS.GiftDialogue.Married.Booze.{{Random:1.{{NoProfanity}},2,3}}}}",
+				"AcceptGift_alcohol_item": "{{i18n:ICS.GiftDialogue.Married.Booze.{{Random:1.{{NoProfanity}},2,3}}}}"
+			},
+			"When": {
+				"Relationship:Shane": "Married"
+			}
+		},
+
+// BIRTHDAY GIFT DIALOGUE
+		{
+			"LogName": "Birthday Gift Dialogue 0-3",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"AcceptBirthdayGift_Loved": "{{i18n:ICS.BirthdayDialogue.0-3.Loved}}",
+				"AcceptBirthdayGift_Liked": "{{i18n:ICS.BirthdayDialogue.0-3.Liked}}",
+				"AcceptBirthdayGift_Disliked": "{{i18n:ICS.BirthdayDialogue.0-3.Disliked.{{NoProfanity}}}}",
+				"AcceptBirthdayGift_Neutral": "{{i18n:ICS.BirthdayDialogue.0-3.Neutral}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 0, 3}}",
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+		{
+			"LogName": "Birthday Gift Dialogue 4-6",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"AcceptBirthdayGift_Loved": "{{i18n:ICS.BirthdayDialogue.4-6.Loved}}",
+				"AcceptBirthdayGift_Liked": "{{i18n:ICS.BirthdayDialogue.4-6.Liked}}",
+				"AcceptBirthdayGift_Disliked": "{{i18n:ICS.BirthdayDialogue.4-6.Disliked}}",
+				"AcceptBirthdayGift_Neutral": "{{i18n:ICS.BirthdayDialogue.4-6.Neutral}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 4, 6}}",
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+		{
+			"LogName": "Birthday Gift Dialogue 7-8",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"AcceptBirthdayGift_Loved": "{{i18n:ICS.BirthdayDialogue.7-8.Loved}}",
+				"AcceptBirthdayGift_Liked": "{{i18n:ICS.BirthdayDialogue.7-8.Liked}}",
+				"AcceptBirthdayGift_Disliked": "{{i18n:ICS.BirthdayDialogue.7-8.Disliked}}",
+				"AcceptBirthdayGift_Neutral": "{{i18n:ICS.BirthdayDialogue.7-8.Neutral}}"
+
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 7, 8}}",
+				"HasSeenEvent |contains=2118991": true,
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+		{
+			"LogName": "Birthday Gift Dialogue 9-10",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"AcceptBirthdayGift_Loved": "{{i18n:ICS.BirthdayDialogue.9-10.Loved}}",
+				"AcceptBirthdayGift_Liked": "{{i18n:ICS.BirthdayDialogue.9-10.Liked}}",
+				"AcceptBirthdayGift_Disliked": "{{i18n:ICS.BirthdayDialogue.9-10.Disliked}}",
+				"AcceptBirthdayGift_Neutral": "{{i18n:ICS.BirthdayDialogue.9-10.Neutral}}"
+
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 9, 14}}",
+				"HasSeenEvent |contains=2118991": true,
+				"Relationship:Shane |contains=Married": false
+			}
+		},
+		{
+			"LogName": "Birthday Gift Dialogue Spouse",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"AcceptBirthdayGift_Loved": "{{i18n:ICS.BirthdayDialogue.Married.Loved}}",
+				"AcceptBirthdayGift_Liked": "{{i18n:ICS.BirthdayDialogue.Married.Liked}}",
+				"AcceptBirthdayGift_Disliked": "{{i18n:ICS.BirthdayDialogue.Married.Disliked}}",
+				"AcceptBirthdayGift_Neutral": "{{i18n:ICS.BirthdayDialogue.Married.Neutral}}"
+			},
+			"When": {
+				"Relationship:Shane": "Married"
+			}
+		}
+	]
+}

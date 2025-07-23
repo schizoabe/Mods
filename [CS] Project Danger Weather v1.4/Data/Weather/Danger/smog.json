@@ -1,0 +1,143 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data Smog",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Smog": {
+					"Id": "kath.weathering_Smog",
+					"DisplayName": "{{i18n: Weather.Smog}}",
+
+					"Forecast": "{{i18n: Weather.Smog.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Smog.ForecastIsland}}", "Desert": "{{i18n: Weather.Smog.ForecastDesert}}",},
+					
+					"UseNightTiles": false,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"IsLightning": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": true,
+					"SpawnFrogs": true,
+					"SpawnClouds": false,
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 12, "Y": 32},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 52, "Y": 52},			
+					"TVFrames": 4,		
+
+					"TotemMessage": "{{i18n: Weather.SmogTotem}}",
+					"TotemScreenTint": "gray",
+					"TotemSound": "wind",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDSmogCC 3",
+							],
+						},	
+						{
+							"Id": "DrainStamina",
+							"Type": "ModifyStamina",
+							"Amount": -20,
+							"MinValue": 5,
+							"Chance": 0.85,
+							"Rate": "200",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom, !PLAYER_HAS_BUFF Current PDWMask",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "DrainHealth",
+							"Type": "ModifyHealth",
+							"Amount": -10,
+							"MinValue": 25,
+							"Chance": 0.65,
+							"Rate": "200",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom, !PLAYER_HAS_BUFF Current PDWMask",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "GainStamina",
+							"Type": "ModifyStamina",
+							"Amount": 10,
+							"MaxValue": 200,
+							"Chance": 0.95,
+							"Rate": "100",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+						},
+						{
+							"Id": "GainHealth",
+							"Type": "ModifyHealth",
+							"Amount": 10,
+							"MaxValue": 100,
+							"Chance": 0.85,
+							"Rate": "100",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+						},
+						{
+							"Id": "SmoggySinging1",
+							"Type": "Buff",
+							"BuffId": "SmoggySinging1",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom, !PLAYER_HAS_BUFF Current PDWMask",
+							"TargetMapType": "Outdoors",
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "cloudymaybe1",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Fog",
+							"Source": {"X": 0, "Y": 0, "Width": 1200, "Height": 1200 },
+							"Color": "white",
+							"Opacity": 0.41,
+							"Speed": "0.05, 0.15",
+							"ViewSpeed": "-1, -1",
+							"Scale": 2,
+						},
+						{
+							"Id": "LightingDarken",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "27, 44, 126",
+							"Opacity": 0.2
+						},
+						{
+							"Id": "LightingOrange",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "255, 163, 16",
+							"Opacity": 0.28
+						},
+						{
+							"Id": "LightingGreen",
+							"Condition": "!LOCATION_CONTEXT Here Desert, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "0, 101, 1",
+							"Opacity": 0.23
+						},
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

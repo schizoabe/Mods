@@ -1,0 +1,30 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "rokugin.EMA/CustomDoors",
+            "Entries": {
+                "MirinMuseum_DoorLeft": {
+                    "Texture": "Maps/Mirin_Doors",
+                    "SourceRect": {"X": 32, "Y": 0, "Width": 16, "Height": 48},
+                    "AnimationFrames": 5
+                },
+                "MirinMuseum_DoorRight": {
+                    "Texture": "Maps/Mirin_Doors",
+                    "SourceRect": {"X": 32, "Y": 48, "Width": 16, "Height": 48},
+                    "AnimationFrames": 5
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "rokugin.EMA/FireplaceConditions",
+            "Entries": {
+                "MirinMuseum_Fireplace": {
+                    "Condition": "ANY \"IS_EVENT KathMuseum.WTHCompleted\" \"SEASON winter\" \"SEASON fall, !WEATHER Here Sun Wind\"",
+                    "UsePlayerState": true
+                }
+            }
+        }
+	]
+}

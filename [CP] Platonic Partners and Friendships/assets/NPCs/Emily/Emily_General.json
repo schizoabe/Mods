@@ -1,0 +1,88 @@
+{
+    "Changes": [
+        // CONTENT INCLUDES
+        {
+            "LogName": "Enable Emily's aromantic content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Emily/Emily_AroContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:EmilyRelationshipType": "FullyPlatonic, SexWithoutRomance"
+            }
+        },
+        {
+            "LogName": "Enable Emily's asexual content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Emily/Emily_AceContent.json",
+            "When": {
+                "PPAF.Core/ConfigValue:EmilyRelationshipType": "FullyPlatonic, RomanceWithoutSex"
+            }
+        },
+        // TERMS OF ENDEARMENT
+        {
+            "LogName": "Emily terms of endearment, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Emily",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Emily terms of endearment, poly with CFD",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Emily",
+            "Entries": {
+                "NPC.cs.4512": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4513": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4514": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4515": "{{PPAF.Core/ConfigValue:TermOfEndearment}}",
+                "NPC.cs.4516": "{{PPAF.Core/ConfigValue:TermOfEndearment}}"
+            },
+            "When": {
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove": true,
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        // NO BLUSH EDITS
+        {
+            "LogName": "Emily no blush edit",
+            "Action": "EditImage",
+            "Target": "Portraits/Emily, Portraits/Emily_Winter, Portraits/Emily_Beach",
+            "FromFile": "assets/Portraits/Emily_NoBlush.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Emily": true,
+                "HasMod |contains=DSVTeam.DiverseStardewValley, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        {
+            "LogName": "Emily no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Emily_Spring, Portraits/Emily_Summer, Portraits/Emily_Fall, Portraits/Emily_Winter_Outdoor, Portraits/Emily_Winter_Indoor, Emily_Aerobics, Portraits/Emily_EggF, Portraits/Emily_Fair, Portraits/Emily_Jellies, Portraits/Emily_Luau, Portraits/Emily_Winter_IceF, Portraits/Emily_Winter_WinterStar, Portraits/Emily_Beach",
+            "FromFile": "assets/Portraits/Emily_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Emily": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        },
+        {
+            "LogName": "Emily no blush edit, SCC",
+            "Action": "EditImage",
+            "Target": "Portraits/Emily_FlowerDance, Portraits/Emily_SpiritsEve",
+            "FromFile": "assets/Portraits/{{TargetWithoutPath}}_NoBlush_SeasonalCuteCharacters.png",
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ShouldEditPortraits:Emily": true,
+                "HasMod |contains=Poltergeister.SeasonalCuteCharacters": true
+            }
+        }
+    ]
+}

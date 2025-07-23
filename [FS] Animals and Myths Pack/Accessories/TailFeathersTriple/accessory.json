@@ -1,0 +1,411 @@
+{
+  "Name": "Tail (Feathers, Triple)",
+
+	// FRONT
+  "FrontAccessory": {
+    "ColorMaskLayers": [
+      {
+        "Name": "Tail Color",
+        "Values": [
+          [ 254, 254, 254 ],
+          [ 240, 240, 240 ],
+          [ 217, 217, 217 ],
+          [ 202, 202, 202 ],
+          [ 188, 188, 188 ],
+          [ 165, 165, 165 ],
+          [ 119, 119, 119 ],
+          [ 81, 81, 81 ],
+          [ 57, 57, 57 ]
+        ]
+      },
+      {
+        "Name": "Accent Color",
+        "Values": [
+          [ 254, 252, 255 ],
+          [ 232, 232, 232 ],
+          [ 172, 172, 172 ],
+          [ 78, 78, 78 ],
+        ]
+      }
+    ],
+    "DrawBeforeHair": true,
+    "HideWhileSwimming": true,
+    "DrawBeforePlayer": false,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 0
+    },
+    "HeadPosition": {
+      "X": 0,
+      "Y": 4
+    },
+    "AccessorySize": {
+      "Width": 16,
+      "Length": 32
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 5000
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 100
+      },
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 3,
+        "Duration": 100
+      },
+      {
+        "Frame": 4,
+        "Duration": 100,
+        "OverrideStartingIndex": true,
+      },
+      {
+        "Frame": 5,
+        "Duration": 100
+      },
+      {
+        "Frame": 6,
+        "Duration": 100
+      },
+      {
+        "Frame": 3,
+        "Duration": 100
+      },
+      {
+        "Frame": 7,
+        "Duration": 100
+      },
+      {
+        "Frame": 8,
+        "Duration": 100
+      },
+      {
+        "Frame": 9,
+        "Duration": 100
+      }
+    ]
+  },
+
+	// BACK
+  "BackAccessory": {
+    "ColorMaskLayers": [
+      {
+        "Name": "Tail Color",
+        "Values": [
+          [ 254, 254, 254 ],
+          [ 240, 240, 240 ],
+          [ 217, 217, 217 ],
+          [ 202, 202, 202 ],
+          [ 188, 188, 188 ],
+          [ 165, 165, 165 ],
+          [ 119, 119, 119 ],
+          [ 81, 81, 81 ],
+          [ 57, 57, 57 ]
+        ]
+      },
+      {
+        "Name": "Accent Color",
+        "Values": [
+          [ 254, 252, 255 ],
+          [ 232, 232, 232 ],
+          [ 172, 172, 172 ],
+          [ 78, 78, 78 ],
+        ]
+      }
+    ],
+    "DrawAfterPlayer": true,
+    "HideWhileSwimming": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 32
+    },
+    "HeadPosition": {
+      "X": 0,
+      "Y": 0
+    },
+    "AccessorySize": {
+      "Width": 16,
+      "Length": 32
+    },
+    "IdleAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 5000
+      },
+      {
+        "Frame": 1,
+        "Duration": 100
+      },
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 2,
+        "Duration": 100
+      },
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 3,
+        "Duration": 100
+      },
+      {
+        "Frame": 4,
+        "Duration": 100,
+        "OverrideStartingIndex": true,
+      },
+      {
+        "Frame": 5,
+        "Duration": 100
+      },
+      {
+        "Frame": 6,
+        "Duration": 100
+      },
+      {
+        "Frame": 3,
+        "Duration": 100
+      },
+      {
+        "Frame": 7,
+        "Duration": 100
+      },
+      {
+        "Frame": 8,
+        "Duration": 100
+      },
+      {
+        "Frame": 9,
+        "Duration": 100
+      }
+    ]
+  },
+
+	// RIGHT
+  "RightAccessory": {
+    "ColorMaskLayers": [
+      {
+        "Name": "Tail Color",
+        "Values": [
+          [ 254, 254, 254 ],
+          [ 240, 240, 240 ],
+          [ 217, 217, 217 ],
+          [ 202, 202, 202 ],
+          [ 188, 188, 188 ],
+          [ 165, 165, 165 ],
+          [ 119, 119, 119 ],
+          [ 81, 81, 81 ],
+          [ 57, 57, 57 ]
+        ]
+      },
+      {
+        "Name": "Accent Color",
+        "Values": [
+          [ 254, 252, 255 ],
+          [ 232, 232, 232 ],
+          [ 172, 172, 172 ],
+          [ 78, 78, 78 ],
+        ]
+      }
+    ],
+    "DrawBeforeHair": true,
+    "HideWhileSwimming": true,
+    "DrawBeforePlayer": false,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 64
+    },
+    "HeadPosition": {
+      "X": 16,
+      "Y": 0
+    },
+    "AccessorySize": {
+      "Width": 32,
+      "Length": 32
+    },
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 250
+      },
+      {
+        "Frame": 2,
+        "Duration": 100,
+        "OverrideStartingIndex": true,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 3,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 4,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 3,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      }
+    ]
+  },
+
+	// LEFT
+  "LeftAccessory": {
+    "ColorMaskLayers": [
+      {
+        "Name": "Tail Color",
+        "Values": [
+          [ 254, 254, 254 ],
+          [ 240, 240, 240 ],
+          [ 217, 217, 217 ],
+          [ 202, 202, 202 ],
+          [ 188, 188, 188 ],
+          [ 165, 165, 165 ],
+          [ 119, 119, 119 ],
+          [ 81, 81, 81 ],
+          [ 57, 57, 57 ]
+        ]
+      },
+      {
+        "Name": "Accent Color",
+        "Values": [
+          [ 254, 252, 255 ],
+          [ 232, 232, 232 ],
+          [ 172, 172, 172 ],
+          [ 78, 78, 78 ],
+        ]
+      }
+    ],
+    "DrawBeforeHair": true,
+    "HideWhileSwimming": true,
+    "DrawBeforePlayer": false,
+    "Flipped": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 64
+    },
+    "HeadPosition": {
+      "X": 0,
+      "Y": 0
+    },
+    "AccessorySize": {
+      "Width": 32,
+      "Length": 32
+    },
+    "MovementAnimation": [
+      {
+        "Frame": 0,
+        "Duration": 100
+      },
+      {
+        "Frame": 1,
+        "Duration": 250
+      },
+      {
+        "Frame": 2,
+        "Duration": 100,
+        "OverrideStartingIndex": true,
+        "Conditions": [
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 3,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 4,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      },
+      {
+        "Frame": 3,
+        "Duration": 100,
+        "Conditions": [
+			{
+			"Name": "MovementDuration",
+			"Value": 500
+			},
+			{
+			"Name": "MovementSpeed",
+			"Value": 4
+			}
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data Hurricane",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Hurry": {
+					"Id": "kath.weathering_Hurry",
+					"DisplayName": "{{i18n: Weather.Hurricane}}",
+
+					"Forecast": "{{i18n: Weather.Hurricane.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Hurricane.ForecastIsland}}", "Desert": "{{i18n: Weather.Hurricane.ForecastDesert}}",},
+					
+					"UseNightTiles": true,
+					"IsSnowing": false,
+					"IsRaining": true,
+					"IsDebrisWeather": false,
+					"IsLightning": true,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+
+					"IconTexture": "Mods/kath.weathering/IconsVanilla",
+					"IconSource": {"X": 48, "Y": 0},
+
+					"TVTexture": "LooseSprites/Cursors",
+					"TVSource": {"X": 465, "Y": 333},
+					"TVFrames": 4,
+
+					"MusicOverride": "KathHurricane",
+					"MusicFrequencyOutside": 75,
+					"MusicFrequencyInside": 10,
+
+					"AmbientColor": "255, 200, 80",
+					"LightingTint": "orangered",
+					"LightingTintOpacity": 0.45,
+					"PostLightingTint": "blue",
+					"PostLightingTintOpacity": 0.22,	
+
+					"TotemMessage": "{{i18n: Weather.HurricaneTotem}}",
+					"TotemScreenTint": "gray",
+					"TotemSound": "thunder",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDHurricane 3",
+								"AddMail Current HurryMapFlag received",
+							],
+						},
+						{
+							"Id": "SludgeWalk",
+							"Type": "Buff",
+							"BuffId": "SomeWeather1",
+							"Condition": "SYNCED_RANDOM tick sludge_walk 0.45, LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+						},
+						{
+							"Id": "SludgeWalkWorse",
+							"Type": "Buff",
+							"BuffId": "SomeWeather2",
+							"Condition": "SYNCED_RANDOM tick sludge_walk 0.35, LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom, !PLAYER_HAS_ITEM Current (O)ParaguasUmbrella 1, !PLAYER_HAS_BUFF Current PDWShader",
+							"TargetMapType": "Outdoors",
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "MakeItRain1",
+							"Condition": "LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": null,
+							"Opacity": 1,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 100,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "MakeItRainSmol",
+							"Condition": "LOCATION_CONTEXT Here Island",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": null,
+							"Opacity": 1,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 40,
+							"Speed": "-8, 24",
+						},
+						{
+							"Id": "MakeItRain2",
+							"Condition": "LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": null,
+							"Opacity": 1,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 100,
+							"Speed": "-8, 32",
+						},
+						{
+							"Id": "MakeItRain3",
+							"Condition": "LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": null,
+							"Opacity": 1,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 100,
+							"Speed": "-32, 32",
+						},
+						{
+							"Id": "MakeItRain4",
+							"Condition": "ANY \"LOCATION_NAME Target IslandEast\" \"LOCATION_NAME Target IslandShrine\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": null,
+							"Opacity": 1,
+							"Vibrancy": 2,
+							"Scale": 4,
+							"Count": 20,
+							"Speed": "-8, 24",
+						},
+						{
+							"Id": "Foggy",
+							"Condition": "LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 0, "Y": 32, "Width": 32, "Height": 32 },
+							"Color": "40, 42, 54",
+							"Opacity": 0.48,
+							"Speed": "-0.5, 0.5",
+							"ViewSpeed": "-1, -1",
+							"Scale": 100,
+						},
+						{
+							"Id": "LightingCloudy",
+							"TargetMapType": "Outdoors",
+							"Condition": "LOCATION_CONTEXT Here Island, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "40, 42, 54",
+							"Opacity": 0.31
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "LOCATION_CONTEXT Here Island, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.47
+						},	
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

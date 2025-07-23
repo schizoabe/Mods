@@ -1,0 +1,112 @@
+{
+	"Changes": [	
+		{
+      	    "LogName": "Add Fog and Sleet - Snow is Scroll",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Weather/{{Random:changed, changed, vanilla, vanilla, vanilla |key=vanillaweather}}.json",
+			"When": {
+				"AddWeather": "fog",
+				"AddWeather": "sleet",
+				"FallingSnow": "false",
+			},
+		},
+		{
+      	    "LogName": "Add Fog Only - Snow is Scroll",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Weather/{{Random:fog, fog, vanilla, vanilla, vanilla |key=vanillaweather}}.json",
+			"When": {
+				"AddWeather": "fog",
+				"AddWeather |contains=sleet": false,
+				"FallingSnow": "false",
+			},
+		},		
+		{
+      	    "LogName": "Add Sleet Only - Snow is Scroll",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Weather/{{Random:sleet, sleet, vanilla, vanilla, vanilla |key=vanillaweather}}.json",
+			"When": {
+				"AddWeather |contains=fog": false,
+				"AddWeather": "sleet",
+				"FallingSnow": "false",
+			},
+		},
+		
+		{
+      	    "LogName": "Snow is Scroll Only",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Weather/vanilla.json",
+			"When": {
+				"AddWeather |contains=fog, sleet": false,
+				"FallingSnow": "false",
+			},
+		},
+		
+		{
+      	    "LogName": "Add Fog and Sleet - Snow is Fluff",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Weather/{{Random:changedfluff, changedfluff, fluff, fluff, fluff |key=vanillaweather}}.json",
+			"When": {
+				"AddWeather": "fog",
+				"AddWeather": "sleet",
+				"FallingSnow": "true",
+			},
+		},
+		{
+      	    "LogName": "Add Fog Only - Snow is Fluff",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Weather/{{Random:fogfluff, fogfluff, fluff, fluff, fluff |key=vanillaweather}}.json",
+			"When": {
+				"AddWeather": "fog",
+				"AddWeather |contains=sleet": false,
+				"FallingSnow": "true",
+			},
+		},
+		{
+      	    "LogName": "Add Sleet Only - Snow is Fluff",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Weather/{{Random:sleetfluff, sleetfluff, fluff, fluff, fluff |key=vanillaweather}}.json",
+			"When": {
+				"AddWeather |contains=fog": false,
+				"AddWeather": "sleet",				
+				"FallingSnow": "true",
+			},
+		},
+		{
+      	    "LogName": "Snow is Fluff Only",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Weather/fluff.json",
+			"When": {
+				"AddWeather |contains=fog, sleet": false,
+				"FallingSnow": "true",
+			},
+		},
+//FOR TOTEM
+		{
+      	    "LogName": "Sleet is NOT Fluff",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Totem/sleetV.json",
+			"When": {
+				"AddWeather": "sleet",
+				"FallingSnow": "false",
+			},
+		},
+		{
+      	    "LogName": "Sleet is Fluff",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Totem/sleetF.json",
+			"When": {
+				"AddWeather": "sleet",
+				"FallingSnow": "true",
+			},
+		},
+		{
+      	    "LogName": "Fog for all",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Totem/foggy.json",
+			"When": {
+				"AddWeather": "fog",
+			},
+		},
+//End
+]
+}

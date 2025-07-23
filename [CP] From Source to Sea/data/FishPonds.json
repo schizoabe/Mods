@@ -1,0 +1,98 @@
+{
+	"Changes": [
+      {
+         "Action": "EditData",
+         "Target": "Data/FishPondData",
+         "Entries": {
+            "FSTS_Ferngill_Scallop": {
+               "ID": "FSTS_Ferngill_Scallop",
+               "RequiredTags": [
+                  "FSTS_Ferngill_Scallop"
+               ],
+               "SpawnTime": -1,
+               "ProducedItems": [
+					{
+                     "RequiredPopulation": 10,
+                     "Chance": 0.10,
+                     "ItemID": 797,
+                     "MinQuantity": 1,
+                     "MaxQuantity": 2
+					},
+					{
+                     "RequiredPopulation": 7,
+                     "Chance": 0.33,
+                     "ItemID": "SeaJelly",
+                     "MinQuantity": 1,
+                     "MaxQuantity": 4
+					},
+					{
+                     "RequiredPopulation": 4,
+                     "Chance": 0.25,
+                     "ItemID": 157,
+                     "MinQuantity": 1,
+                     "MaxQuantity": 5
+					},
+					{
+                     "RequiredPopulation": 2,
+                     "Chance": 0.25,
+                     "ItemID": 153,
+                     "MinQuantity": 1,
+                     "MaxQuantity": 5
+					},
+					{
+                     "RequiredPopulation": 0,
+                     "Chance": 1.0,
+                     "ItemID": 812,
+                     "MinQuantity": 1,
+                     "MaxQuantity": 1
+					}
+               ],
+               "PopulationGates": {
+                  "3": [
+                     "SeaJelly 5"
+					],
+                  "5": [
+                     "FSTS_Anisea_Weed 1"
+					],
+                  "7": [
+                     "560 1"
+						]
+					},
+				},
+			}
+		},
+		{
+         "Action": "EditData",
+         "Target": "Data/FishPondData",
+         "Entries": {
+            "FSTS_Ferngill_Scallop": {
+               "ID": "FSTS_Blackstar_Urchin",
+               "RequiredTags": [
+                  "FSTS_Blackstar_Urchin"
+               ],
+               "SpawnTime": -1,
+               "ProducedItems": [
+                  {
+                     "RequiredPopulation": 0,
+                     "Chance": 1.0,
+                     "ItemID": 812,
+                     "MinQuantity": 1,
+                     "MaxQuantity": 1
+                  }
+               ],
+               "PopulationGates": {
+                  "3": [
+                     "393 5"
+                  ],
+                  "6": [
+                     "FSTS_Spysea_Weed 1"
+                  ],
+                  "9": [
+                     "337 1"
+						]
+					},
+				},
+			},
+		},
+	]
+}

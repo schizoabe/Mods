@@ -1,0 +1,131 @@
+{
+	"Changes": [
+		{
+			"Action": "Load",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/earth_base_winter.png",
+			"When": {"season": "winter"},
+			"Priority": "Low"
+		},
+		{
+			"Action": "Load",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/earth_base.png",
+			"When": {"season": "spring, summer, fall"},
+			"Priority": "Low"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 144, "Y": 0, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 0, "Y": 0, "Width": 24, "Height": 48 },
+			"When": {"Earth Corner": "top-left"},
+			"Priority": "Late+1"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 168, "Y": 0, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 24, "Y": 0, "Width": 24, "Height": 48 },
+			"When": {"Earth Corner": "top-right"},
+			"Priority": "Late+1"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 144, "Y": 48, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 0, "Y": 48, "Width": 24, "Height": 48 },
+			"When": {"Earth Corner": "bottom-left"},
+			"Priority": "Late+1"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 168, "Y": 48, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 24, "Y": 48, "Width": 24, "Height": 48 },
+			"When": {"Earth Corner": "bottom-right"},
+			"Priority": "Late+1"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 0, "Y": 0, "Width": 48, "Height": 48 },
+				"ToArea": { "X": 0, "Y": 0, "Width": 48, "Height": 48 },
+			"When": {"Earth Border": "top"},
+			"Priority": "Late+2"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 96, "Y": 0, "Width": 24, "Height": 96 },
+				"ToArea": { "X": 0, "Y": 0, "Width": 24, "Height": 96 },
+			"When": {"Earth Border": "left"},
+			"Priority": "Late+3"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 120, "Y": 0, "Width": 24, "Height": 96 },
+				"ToArea": { "X": 24, "Y": 0, "Width": 24, "Height": 96 },
+			"When": {"Earth Border": "right"},
+			"Priority": "Late+3"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 48, "Y": 48, "Width": 48, "Height": 48 },
+				"ToArea": { "X": 0, "Y": 48, "Width": 48, "Height": 48 },
+			"When": {"Earth Border": "bottom"},
+			"Priority": "Late+4"
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 0, "Y": 48, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 0, "Y": 48, "Width": 24, "Height": 48 },
+			"Priority": "Late+5",
+			"When": {
+				"Earth Border |contains=bottom": "true",
+				"Earth Border |contains=left": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/borders.png",
+				"FromArea": { "X": 24, "Y": 48, "Width": 24, "Height": 48 },
+				"ToArea": { "X": 24, "Y": 48, "Width": 24, "Height": 48 },
+			"Priority": "Late+5",
+			"When": {
+				"Earth Border |contains=bottom": "true",
+				"Earth Border |contains=right": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Buildings/Earth Obelisk",
+			"FromFile": "assets/Buildings/Obelisks/earth_feature_{{season}}.png",
+			"Priority": "Late+6"
+		}
+	]
+}

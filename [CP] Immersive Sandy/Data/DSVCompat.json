@@ -1,0 +1,79 @@
+{
+	"Changes":
+	[
+		{
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Sandy",
+			"Entries":
+			{
+				"SandyComesToTown": "I'll see you next Sunday, sweetie!$h",
+				"SandyEmilyDating": "Oh @! I'm so happy. Emily and I talked and they feel the same way about me.$h"
+			},
+			"When":
+			{
+				"HasMod |contains= DSV.Core": true,
+				"DSV.Core/ConfigValue:NonbinaryEmily": "True"
+			}
+		},
+		{
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Sandy",
+			"Entries":
+			{
+				"BusStop": "{{Random:Hi, @! How's %farm Farm doing?#$b#I'll be sure to take a peek on my way back home.$h&&Do y'all have a farmer's market here? I'd love to buy some of your produce directly.$h&&Are you growing any flowers on your farm right now, @? I'd love to take a look.&&You have a {{PreferredPet}} right, @?#$b#I'd love to stop by the farm and say hello to %pet.$h&&Ugh, the fumes from the bus are terrible. Emily's always saying we should switch to electric. I get what they mean now.$s|inputSeparator=&&}}",	
+				"Saloon": "{{Random:Pierre keeps trying to tell me how to do business, but why would I listen to a man who doesn't even plan ahead and sell out-of-season seeds?&&I think Pierre's had a bit too much to drink.$h&&Isn't it funny how Emily always says they work part-time when they work here seven days a week?$h&&The food here is amazing. No wonder everyone comes here on Fridays. I'm going to have to coax Gus into giving me some of his secret recipes.$h&&Do you know why Clint keeps glancing over here?$s#$b#He could just say hello, I don't bite.$h&&What are you having, @? My treat!$h|inputSeparator=&&}}",
+				"winter_Tue2":  "You know, Emily is a really talented designer. They sew all of my clothing for me.$h",
+			},
+			"When":
+			{
+				"HasMod |contains= DSV.Core": true,
+				"DSV.Core/ConfigValue:NonbinaryEmily": "True"
+			}
+		},
+		{
+			"Action":"EditData",
+			"Target":"Characters/Dialogue/Sandy",
+			"Entries":
+			{
+				"summer_Wed10": "I dropped by Emily's the other day and made Tom Kha soup for them. They really loved it.$h",
+				"fall_Thu10": "Emily and I don't have any longterm plans yet. We're just taking it day by day, though every day looks brighter than the last.",
+				"winter_Mon10": "I've already started planning Emily's Winter Star gift. I know they're going to love it.",
+				"spring_26": "{{Random:Tomorrow is Emily's birthday! I bought them a beautiful aquamarine necklace.&&Tomorrow is Emily's birthday! Don't tell them, but I bought them a beautiful ruby bracelet.$h|inputSeparator=&&}}",
+				"winter_24": "I can't wait to show Emily what I got them for the Feast of the Winter Star!$h"
+			},
+			"When": 
+			{
+				"HasMod |contains= DSV.Core": true,
+				"DSV.Core/ConfigValue:NonbinaryEmily": "True",
+				"HasSeenEvent": "13609016"
+			} 
+		},
+		{ 
+			"Action": "EditData",
+			"Target": "Data/Events/SandyHouse",
+			"Entries": 
+			{  
+				"13609014/f Sandy 1750/f Emily 1500/e 13609013/z winter/t 900 2400": "distantBanjo/8 5/farmer -30 -30 0 Sandy 2 5 2/skippable/pause 1000/warp farmer 4 8/playSound doorClose/pause 200/textAboveHead Sandy \"Em--? Oh, it's you...\"/pause 800/move farmer 0 -3 3/faceDirection Sandy 1/pause 200/emote farmer 8/pause 200/speak Sandy \"For a second, I thought you were Emily, that's all.$s\"/pause 1000/emote Sandy 28/pause 200/question null \"#Is everything okay, Sandy?#What am I, chopped liver?\"/emote Sandy 60/pause 1000/splitSpeak Sandy \"Sure, everything's peachy...$s~No, of course not, @...$s\"/pause 500/emote Sandy 28/pause 200/playMusic musicboxsong/pause 200/textAboveHead Sandy \"*sigh*\"/pause 500/speak Sandy \"Can I confide in you, @?$s\"/pause 200/emote farmer 8/pause 500/speak Sandy \"It's been really nice... being back in the Valley... hanging out with new people... reconnecting with Emily...#$b#I'd almost forgotten how much they mean to me...\"/pause 200/emote Sandy 60/pause 200/speak Sandy \"And I think if you were to ask them, they'd say I'm like family to them... $s\"/pause 500/emote farmer 8/pause 200/faceDirection Sandy 3/speak Sandy \"...except, well, I don't really think of *them* as family...$s\"/pause 100/emote Sandy 28/faceDirection Sandy 1/pause 200/speak Sandy \"I think of them as more than a friend...$s#$b#Do you understand what I'm saying, @?$s\"/pause 300/jump farmer 4/emote farmer 16/pause 500/emote farmer 40/pause 300/speak Sandy \"But I haven't told them because we've been friends for so long!$s#$b#If they don't feel the same way, it would ruin everything.$s#$b#I don't think I'd be able to show my face in Pelican Town again. It would be too awkward and painful.$s\"/pause 200/emote farmer 60/pause 300/question null \"What would you do in my shoes?#I would tell them.#You have to do what's best for you...\"/pause 200/emote Sandy 28/speak Sandy \"Really?...$s#$b#I guess I'll have to think about this some more.$s#$b#Promise me you won't say anything to Emily regardless of what I decide...?$s\"/pause 200/emote farmer 60/pause 300/emote farmer 40/speak Sandy \"Thanks, sweetie.\"/pause 500/globalFade/viewport -1000 -1000/end"
+			},
+			"When": 
+			{
+				"HasMod |contains= DSV.Core": true,
+				"DSV.Core/ConfigValue:NonbinaryEmily": "True",
+				"EnableRivalHearts": true
+			} 
+		},
+		{
+			"Action": "EditData",
+			"Target": "Strings/schedules/Sandy",
+			"Entries":  
+			{
+				"spring_27.embday": "Hi, sweetie! It's Emily's birthday today! Have you wished them a happy birthday yet?#$b#*whispers* They really like gems."	
+			},
+			"When": 
+			{
+				"HasMod |contains= DSV.Core": true,
+				"DSV.Core/ConfigValue:NonbinaryEmily": "True"
+			} 
+		}
+	]
+}

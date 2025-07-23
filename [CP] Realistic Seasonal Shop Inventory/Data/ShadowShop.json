@@ -1,0 +1,96 @@
+{
+ "Changes": [
+ 
+ //standard
+ 
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "ShadowShop",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)305": null,
+	  "(BC)34": null,
+	  "(F)1800": null,
+	  "(O)ButterflyPowder": null,
+	  
+	  
+	  "boringvlln.rshops_KVEgg": {
+      "Id": "boringvlln.rshops_KVEgg",
+      "ItemId": "(O)305",
+	  "Price": 5000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_KFurn1": {
+      "Id": "boringvlln.rshops_KFurn1",
+      "ItemId": "(BC)34",
+	  "Price": 500,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_KFurn2": {
+      "Id": "boringvlln.rshops_KFurn2",
+      "ItemId": "(F)1800",
+	  "Price": 20000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_KBPowder": {
+		  "Condition": "SYNCED_RANDOM day boringvlln.rshops_KBPowder 0.6", 
+      "Id": "boringvlln.rshops_KBPowder",
+      "ItemId": "(O)ButterflyPowder",
+	  "Price": 50000,
+	  "AvailableStock": 1,
+	  },
+ },
+  "When": { "ShadowShop": "standard" }
+},
+
+//hardmode
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "ShadowShop",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)305": null,
+	  "(BC)34": null,
+	  "(F)1800": null,
+	  "(O)ButterflyPowder": null,
+	  
+	  
+	  "boringvlln.rshops_KVEgg": {
+      "Id": "boringvlln.rshops_KVEgg",
+      "ItemId": "(O)305",
+	  "Price": 6666,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_KFurn1": {
+      "Id": "boringvlln.rshops_KFurn1",
+      "ItemId": "(BC)34",
+	  "Price": 1000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_KFurn2": {
+      "Id": "boringvlln.rshops_KFurn2",
+      "ItemId": "(F)1800",
+	  "Price": 20000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_KBPowder": {
+		  "Condition": "SYNCED_RANDOM day boringvlln.rshops_KBPowder 0.3",
+      "Id": "boringvlln.rshops_KBPowder",
+      "ItemId": "(O)ButterflyPowder",
+	  "Price": 50000,
+	  "AvailableStock": 1,
+	  },
+ },
+  "When": { "ShadowShop": "hardmode" }
+},
+]
+}

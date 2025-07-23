@@ -1,0 +1,696 @@
+{
+  "Name": "Tunic Skirt 02",
+  "FrontAccessory": {
+    "ColorMaskLayers": [
+      {
+        "Name": "Main Color",
+        "Values": [
+		  [ 105, 105, 105 ],
+		  [ 155, 155, 155 ],
+		  [ 205, 205, 205 ],
+		  [ 255, 255, 255 ]
+        ]
+      }
+    ],
+    "StartingPosition": {
+      "X": 0,
+      "Y": 0
+    },
+    "BodyPosition": {
+      "X": 0,
+      "Y": -30
+    },
+    "AccessorySize": {
+      "Width": 16,
+      "Length": 30
+    },
+    "IdleAnimation": [
+     {
+         "Frame": 0,
+         "Duration": 100
+     },
+     {
+         "Frame": 5,
+         "OverrideStartingIndex": true,
+         "Conditions": [
+             {
+                 "Name": "RidingHorse",
+                 "Independent": true,
+                 "Value": true
+             },
+             {
+                 "Name": "IsSitting",
+                 "Independent": true,
+                 "Value": true
+          }
+        ]
+      }
+    ],
+    "MovementAnimation": [
+      {
+        "Frame": 5,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "RidingHorse",
+            "Independent": true,
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 1,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 3,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 1,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 4,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 5,
+        "EndWhenFarmerFrameUpdates": true,
+         "OverrideStartingIndex": true,
+         "Conditions": [
+           {
+             "Name": "RidingHorse",
+             "Independent": true,
+             "Value": true
+          }
+        ]
+      },
+    ]
+  },
+  "BackAccessory": {
+    "DrawOrderOverride": {
+      "Preposition": "After",
+      "AppearanceType": "Hat"
+    },
+    "ColorMaskLayers": [
+      {
+        "Name": "Main Color",
+        "Values": [
+		  [ 105, 105, 105 ],
+		  [ 155, 155, 155 ],
+		  [ 205, 205, 205 ],
+		  [ 255, 255, 255 ]
+        ]
+      }
+    ],
+    "StartingPosition": {
+      "X": 0,
+      "Y": 60
+    },
+    "BodyPosition": {
+      "X": 0,
+      "Y": -30
+    },
+    "AccessorySize": {
+      "Width": 16,
+      "Length": 30
+    },
+    "IdleAnimation": [
+     {
+         "Frame": 0,
+         "Duration": 100
+     },
+     {
+         "Frame": 5,
+         "OverrideStartingIndex": true,
+         "Conditions": [
+             {
+                 "Name": "RidingHorse",
+                 "Independent": true,
+                 "Value": true
+             },
+             {
+                 "Name": "IsSitting",
+                 "Independent": true,
+                 "Value": true
+          }
+        ]
+      }
+    ],
+    "MovementAnimation": [
+           {
+        "Frame": 5,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "RidingHorse",
+            "Independent": true,
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 1,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 3,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 1,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 4,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 5,
+        "EndWhenFarmerFrameUpdates": true,
+         "OverrideStartingIndex": true,
+         "Conditions": [
+           {
+             "Name": "RidingHorse",
+             "Independent": true,
+             "Value": true
+          }
+        ]
+      },
+    ]
+  },
+  "LeftAccessory": {
+    "ColorMaskLayers": [
+      {
+        "Name": "Main Color",
+        "Values": [
+		  [ 105, 105, 105 ],
+		  [ 155, 155, 155 ],
+		  [ 205, 205, 205 ],
+		  [ 255, 255, 255 ]
+        ]
+      }
+    ],
+    "Flipped": true,
+    "StartingPosition": {
+      "X": 0,
+      "Y": 30
+    },
+    "BodyPosition": {
+      "X": 0,
+      "Y": -30
+    },
+    "AccessorySize": {
+      "Width": 16,
+      "Length": 30
+     },
+    "IdleAnimation": [
+     {
+         "Frame": 0,
+         "Duration": 100
+     },
+     {
+         "Frame": 5,
+         "OverrideStartingIndex": true,
+         "Conditions": [
+             {
+                 "Name": "RidingHorse",
+                 "Independent": true,
+                 "Value": true
+             },
+             {
+                 "Name": "IsSitting",
+                 "Independent": true,
+                 "Value": true
+          }
+        ]
+      }
+    ],
+    "MovementAnimation": [
+           {
+        "Frame": 5,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "RidingHorse",
+            "Independent": true,
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 1,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 3,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 1,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 4,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 5,
+        "EndWhenFarmerFrameUpdates": true,
+         "OverrideStartingIndex": true,
+         "Conditions": [
+           {
+             "Name": "RidingHorse",
+             "Independent": true,
+             "Value": true
+          }
+        ]
+      }
+    ]
+  },
+  "RightAccessory": {
+    "ColorMaskLayers": [
+      {
+        "Name": "Main Color",
+        "Values": [
+		  [ 105, 105, 105 ],
+		  [ 155, 155, 155 ],
+		  [ 205, 205, 205 ],
+		  [ 255, 255, 255 ]
+        ]
+      }
+    ],
+    "StartingPosition": {
+      "X": 0,
+      "Y": 30
+    },
+    "BodyPosition": {
+      "X": 0,
+      "Y": -30
+    },
+    "AccessorySize": {
+      "Width": 16,
+      "Length": 30
+     },
+    "IdleAnimation": [
+     {
+         "Frame": 0,
+         "Duration": 100
+     },
+     {
+         "Frame": 5,
+         "OverrideStartingIndex": true,
+         "Conditions": [
+             {
+                 "Name": "RidingHorse",
+                 "Independent": true,
+                 "Value": true
+             },
+             {
+                 "Name": "IsSitting",
+                 "Independent": true,
+                 "Value": true
+          }
+        ]
+      }
+    ],
+    "MovementAnimation": [
+           {
+        "Frame": 5,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "RidingHorse",
+            "Independent": true,
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsWalking",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 1,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 3,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 1,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 0,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 4,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 2,
+        "EndWhenFarmerFrameUpdates": true,
+        "Conditions": [
+          {
+            "Name": "IsRunning",
+            "Value": true
+          }
+        ]
+      },
+      {
+        "Frame": 5,
+        "EndWhenFarmerFrameUpdates": true,
+         "OverrideStartingIndex": true,
+         "Conditions": [
+           {
+             "Name": "RidingHorse",
+             "Independent": true,
+             "Value": true
+          }
+        ]
+      }
+    ]
+  }
+}

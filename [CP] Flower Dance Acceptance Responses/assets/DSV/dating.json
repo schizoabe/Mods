@@ -1,0 +1,18 @@
+{
+	"Changes":[
+		{
+			"LogName": "Haley - Flower Dance, Dating, Haley not Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Haley.Dating.Accept}}",
+			},
+			"When": {
+				"HasMod": "DSV.Core",
+				"relationship:Haley": "dating",
+				"DSV.Core/FlowerQueen |contains= Haley": false,
+				"Haley": "enabled",
+			},
+		},
+	],
+}

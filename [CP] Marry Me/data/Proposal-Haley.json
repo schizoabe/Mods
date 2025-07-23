@@ -1,0 +1,24 @@
+{
+"Changes": [
+
+//HALEY -- proposes on a sunny evening, by the tree near her house
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Town",
+    "Entries": {
+        "{{ModId}}_Proposal_Haley/Dating Haley/f Haley 2500/t 1200 1800/w sunny/c 1/LocalMail {{ModId}}_StartHaley": "{{DayAmbient}}/-1000 -1000/farmer 33 100 3 Haley 29 82 0/--skippable/mailReceived {{ModId}}_StopBlack_Haley/advancedMove farmer false -4 0 0 -3 -2 0 3 1000 1 1000/ambientLight 15 42 50/viewport 24 97 clamp true/pause 2500/waitForAllStationary/speak Haley \"{{i18n:White_Haley.0}}\"/speed Haley 2/advancedMove Haley false 0 10 2 500/pause 200/faceDirection farmer 0/pause 200/emote farmer 8/waitForAllStationary/pause 200/speak Haley \"{{i18n:White_Haley.1}}\"/pause 200/showFrame Haley 30/pause 400/emote farmer 32/pause 800/{{Haley_Camera1}}/pause 1000/playSound cameraNoise/pause 3000/advancedMove Haley false 0 5 3 500/pause 500/faceDirection farmer 1/pause 200/waitForAllStationary/{{Haley_Camera2}}/pause 2200/playSound cameraNoise/pause 2300/playSound cameraNoise/pause 3400/speak Haley \"{{i18n:White_Haley.2}}\"/emote farmer 56/pause 1200/emote Haley 40/pause 1200/speak Haley \"{{i18n:White_Haley.3}}\"/pause 200/emote farmer 8/pause 200/speed Haley 1/faceDirection Haley 1/emote Haley 60/pause 1800/faceDirection Haley 3/pause 400/speak Haley \"{{i18n:White_Haley.4}}\"/pause 400/playMusic musicboxsong/pause 200/showFrame Haley 12/pause 2000/speak Haley \"{{i18n:White_Haley.5}}\"/pause 200/faceDirection Haley 2/pause 500/emote Haley 40/pause 200/speak Haley \"{{i18n:White_Haley.6}}\"/pause 200/emote farmer 40/pause 1200/faceDirection Haley 3/move Haley -1 0 3/pause 1400/speak Haley \"{{i18n:White_Haley.7}}\"/pause 800/message \"{{i18n:White_Haley.8}}\"/pause 800/jump farmer/pause 1400/speak Haley \"{{i18n:White_Haley.9}}\"/pause 400/emote farmer 16/pause 800/question fork1 \"{{i18n:proposalResponse}}\"/fork {{ModId}}_Haley_No/switchEvent {{ModId}}_Haley_Yes",
+        
+        "{{ModId}}_Haley_Yes": "pause 400/emote Haley 20/pause 200/message \"{{i18n:White_Haley.YES.0 |Your={{Your}}}}\"/pause 400/positionOffset farmer 4 0/{{Farmer_Kiss}}/{{Haley_Kiss}}/emote Haley 20/pause 200/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Haley 12/pause 1000/speak Haley \"{{i18n:White_Haley.YES.1}}\"/pause 200/emote farmer 32/pause 200/speak Haley \"{{i18n:White_Haley.YES.2}}\"/pause 800/emote Haley 16/pause 800/speak Haley \"{{i18n:White_Haley.YES.3}}\"/pause 400/emote farmer 32/pause 200/move Haley 1 0 3/pause 400/{{Haley_Camera2}}/pause 2000/globalFade/viewport -1000 -1000/playSound cameraNoise/pause 400/playSound cameraNoise/pause 200/playSound cameraNoise/pause 1500/speak Haley \"{{i18n:White_Haley.YES.4}}\"/pause 1000/action Kantrip.HeartActions_DoEngagement Haley/action AddItem 460/pause 4000/stopMusic/end/",
+        
+        "{{ModId}}_Haley_No": "stopAnimation Haley 12/speed Haley 2/jump Haley/emote Haley 16/pause 800/emote Haley 28/pause 2000/speak Haley \"{{i18n:White_Haley.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_Haley_notReady(break)switchEvent {{ModId}}_Haley_noMarriage(break)switchEvent {{ModId}}_Haley_breakup/",
+        
+        "{{ModId}}_Haley_notReady": "pause 400/emote Haley 60/pause 800/speak Haley \"{{i18n:White_Haley.NO1.0}}\"/pause 500/speak Haley \"{{i18n:White_Haley.NO1.1}}\"/pause 200/emote farmer 32/pause 400/emote Haley 32/pause 200/speak Haley \"{{i18n:White_Haley.NO1.2}}\"/pause 200/positionOffset farmer 4 0/{{Farmer_Kiss}}/{{Haley_Kiss}}/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end",
+        
+        "{{ModId}}_Haley_noMarriage": "pause 200/speak Haley \"{{i18n:White_Haley.NO2.0}}\"/pause 200/faceDirection Haley 1/emote Haley 40/pause 2000/faceDirection Haley 3/pause 100/speak Haley \"{{i18n:White_Haley.NO2.1}}\"/pause 200/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_Haley_breakup": "pause 400/speak Haley \"{{i18n:White_Haley.NO3.0}}\"/playSound dwop/positionOffset Haley 2 0/pause 100/positionOffset Haley 2 0/pause 100/positionOffset Haley 2 0/pause 100/playSound dwop/positionOffset Haley 2 0/pause 100/positionOffset Haley 2 0/pause 100/positionOffset Haley 2 0/pause 1500/faceDirection Haley 2/shake Haley 500/pause 1000/emote Haley 12/pause 2500/faceDirection Haley 3/speak Haley \"{{i18n:White_Haley.NO3.1}}\"/advancedMove Haley false 0 -2 4 3500/pause 100/faceDirection farmer 0/pause 1500/emote Haley 12/pause 2000/speak Haley \"{{i18n:White_Haley.NO3.2}}\"/pause 1000/shake Haley 500/pause 1500/advancedMove Haley false 0 -15/pause 1000/faceDirection farmer 0/pause 1500/action Kantrip.HeartActions_DoBreakup Haley/friendship Haley -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+
+]
+}

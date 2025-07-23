@@ -1,0 +1,26 @@
+{
+	"Changes": [
+        
+        //Gunther
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Gunther_{{Season}}",
+            "FromFile": "assets/{{GuntherPortrait}}/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall, winter"
+            }            
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/Gunther_SpiritsEve",
+            "FromFile": "assets/{{GuntherPortrait}}/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"      
+        }
+
+    ]
+}

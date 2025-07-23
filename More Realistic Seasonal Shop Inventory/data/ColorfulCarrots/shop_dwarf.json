@@ -1,0 +1,194 @@
+{
+  "Changes": [
+  	//Standard
+    {
+			"LogName": "Dwarf",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField":["Dwarf", "Items"],
+			"When": {"Dwarf": "Standard"},
+			"Fields":{
+
+			"AngelOfStars.Carrot1":{
+			"Condition": "SEASON spring, SYNCED_RANDOM Day AngelOfStars.Carrot1 0.6, PLAYER_HAS_MAIL Current angelofstars.colorfulcarrotselling received",
+			"AvailableStock": 10,
+			"AvailableStockModifiers": [
+			{
+ 			 "Modification": "Multiply",
+ 			 "RandomAmount": [
+  			1.5,
+			1.4,
+			1.3,
+			1.2,
+			1.1,
+			1.0,
+			0.9,
+			0.8,
+			0.7,
+			0.6,
+			0.5,
+ 				 ]
+	            }
+	          ],
+			},
+			"AngelOfStars.Carrot2":{
+			"Condition": "SEASON fall, SYNCED_RANDOM Day AngelOfStars.Carrot2 0.6, PLAYER_HAS_MAIL Current angelofstars.colorfulcarrotselling received",
+			"AvailableStock": 10,
+			"AvailableStockModifiers": [
+			{
+ 			 "Modification": "Multiply",
+ 			 "RandomAmount": [
+  			1.5,
+			1.4,
+			1.3,
+			1.2,
+			1.1,
+			1.0,
+			0.9,
+			0.8,
+			0.7,
+			0.6,
+			0.5,
+ 				 ]
+	            }
+	          ],
+			},
+			"AngelOfStars.Carrot3":{
+			"Condition": "SEASON summer, SYNCED_RANDOM Day AngelOfStars.Carrot3 0.6, PLAYER_HAS_MAIL Current angelofstars.colorfulcarrotselling received",
+			"AvailableStock": 10,
+			"AvailableStockModifiers": [
+			{
+ 			 "Modification": "Multiply",
+ 			 "RandomAmount": [
+  			1.5,
+			1.4,
+			1.3,
+			1.2,
+			1.1,
+			1.0,
+			0.9,
+			0.8,
+			0.7,
+			0.6,
+			0.5,
+ 				 ]
+	            }
+	          ],
+			},
+			"AngelOfStars.Carrot4":{
+			"Condition": "SEASON winter, SYNCED_RANDOM Day AngelOfStars.Carrot4 0.6, PLAYER_HAS_MAIL Current angelofstars.colorfulcarrotselling received",
+			"AvailableStock": 10,
+			"AvailableStockModifiers": [
+			{
+ 			 "Modification": "Multiply",
+ 			 "RandomAmount": [
+  			1.5,
+			1.4,
+			1.3,
+			1.2,
+			1.1,
+			1.0,
+			0.9,
+			0.8,
+			0.7,
+			0.6,
+			0.5,
+ 				 ]
+	            }
+	          ],
+			}
+		}
+		},
+    //Hardmode
+    {
+			"LogName": "Dwarf",
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField":["Dwarf", "Items"],
+			"When": {"Dwarf": "Hardmode"},
+			"Fields":{
+
+			"AngelOfStars.Carrot1":{
+			"Condition": "SEASON spring, SYNCED_RANDOM Day AngelOfStars.Carrot1 0.3, PLAYER_HAS_MAIL Current angelofstars.colorfulcarrotselling received",
+			"AvailableStock": 10,
+			"AvailableStockModifiers": [
+			{
+ 			 "Modification": "Multiply",
+ 			 "RandomAmount": [
+  			0.1,
+			0.2,
+			0.3,
+			0.4,
+			0.5,
+			0.6,
+			0.7,
+			0.8,
+			0.9,
+ 				 ]
+	            }
+	          ],
+			},
+			"AngelOfStars.Carrot2":{
+			"Condition": "SEASON fall, SYNCED_RANDOM Day AngelOfStars.Carrot2 0.3, PLAYER_HAS_MAIL Current angelofstars.colorfulcarrotselling received",
+			"AvailableStock": 10,
+			"AvailableStockModifiers": [
+			{
+ 			 "Modification": "Multiply",
+ 			 "RandomAmount": [
+  			0.1,
+			0.2,
+			0.3,
+			0.4,
+			0.5,
+			0.6,
+			0.7,
+			0.8,
+			0.9,
+ 				 ]
+	            }
+	          ],
+			},
+			"AngelOfStars.Carrot3":{
+			"Condition": "SEASON summer, SYNCED_RANDOM Day AngelOfStars.Carrot3 0.3, PLAYER_HAS_MAIL Current angelofstars.colorfulcarrotselling received",
+			"AvailableStock": 10,
+			"AvailableStockModifiers": [
+			{
+ 			 "Modification": "Multiply",
+ 			 "RandomAmount": [
+  			0.1,
+			0.2,
+			0.3,
+			0.4,
+			0.5,
+			0.6,
+			0.7,
+			0.8,
+			0.9,
+ 				 ]
+	            }
+	          ],
+			},
+			"AngelOfStars.Carrot4":{
+			"Condition": "SEASON winter, SYNCED_RANDOM Day AngelOfStars.Carrot4 0.3, PLAYER_HAS_MAIL Current angelofstars.colorfulcarrotselling received",
+			"AvailableStock": 10,
+			"AvailableStockModifiers": [
+			{
+ 			 "Modification": "Multiply",
+ 			 "RandomAmount": [
+  			0.1,
+			0.2,
+			0.3,
+			0.4,
+			0.5,
+			0.6,
+			0.7,
+			0.8,
+			0.9,
+ 				 ]
+	            }
+	          ],
+			}
+			}
+		},
+  ]
+}

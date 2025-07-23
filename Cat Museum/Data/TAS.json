@@ -1,0 +1,74 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "mushymato.MMAP/TAS",
+			"Entries": {
+				"KathMuseum_Plant": {
+					"Id": "KathMuseum_Plant",
+					"Texture": "Maps/townInterior",
+					"SourceRect": {
+						"X": 176,
+						"Y": 160,
+						"Width": 16,
+						"Height": 32
+					},
+					"Condition": "!PLAYER_HAS_SEEN_EVENT Any KathMuseum.OpeningRoom",
+					"ConditionInterval": 1,
+					"Frames": 1,
+					"Loops": 9999,
+					"Scale": 1,
+					"LayerDepth": -1
+        		},
+                "KathMuseum_Plant2": {
+					"Id": "KathMuseum_Plant2",
+					"Texture": "Maps/townInterior",
+					"SourceRect": {
+						"X": 176,
+						"Y": 160,
+						"Width": 16,
+						"Height": 32
+					},
+					"Condition": "PLAYER_HAS_SEEN_EVENT Any KathMuseum.OpeningRoom",
+					"ConditionInterval": 1,
+					"Frames": 1,
+					"Loops": 9999,
+					"Scale": 1,
+					"LayerDepth": -1
+        		},
+				"KathMuseum_PlantSVE": {
+					"Id": "KathMuseum_PlantSVE",
+					"Texture": "Maps/VanillaFurniture",
+					"SourceRect": {
+						"X": 272,
+						"Y": 640,
+						"Width": 16,
+						"Height": 48
+					},
+					"Condition": "!PLAYER_HAS_SEEN_EVENT Any KathMuseum.OpeningRoom",
+					"ConditionInterval": 1,
+					"Frames": 1,
+					"Loops": 9999,
+					"Scale": 1,
+					"LayerDepth": -1
+        		},
+                "KathMuseum_PlantSVE2": {
+					"Id": "KathMuseum_PlantSVE2",
+					"Texture": "Maps/VanillaFurniture",
+					"SourceRect": {
+						"X": 272,
+						"Y": 640,
+						"Width": 16,
+						"Height": 48
+					},
+					"Condition": "PLAYER_HAS_SEEN_EVENT Any KathMuseum.OpeningRoom",
+					"ConditionInterval": 1,
+					"Frames": 1,
+					"Loops": 9999,
+					"Scale": 1,
+					"LayerDepth": -1
+        		}
+			}
+		}
+	]
+}

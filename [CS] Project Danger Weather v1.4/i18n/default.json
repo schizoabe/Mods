@@ -1,0 +1,1852 @@
+{
+////////////////
+//Added in 1.0//
+////////////////
+
+	//Config Stuff
+	//Descriptions
+"config.StarryRain.description": "Toggle if the special stardust fall appears as floating stars (windy effect) or they come crashing into the ground (rain effect)",
+"config.PretendFlooding.description": "Various full map edits to areas in the valley that have been affected by the rains! Pam's been rescheduled to her rainy weather schedule and the ticket machine to the desert is closed! Select 'true' if you want all these changes. Not compatible with mods that change maps - will be automatically disabled if map changing mods are present (mostly). Compatible with recolours.",
+"config.PretendHeatWave.description": "Various full map edits to areas in the valley, island and desert that have been affected by the heat! Select 'true' if you want all these changes. Not compatible with mods that change maps - will be automatically disabled if map changing mods are present (mostly). Compatible with recolours.",
+"config.PretendHurricane.description": "Various full map edits to areas in the island that have been affected by the rains! Select 'true' if you want all these changes. Not compatible with mods that change maps - will be automatically disabled if map changing mods are present (mostly). Compatible with recolours.",
+"config.SprinklerDrought.description": "If you want the sprinklers to malfunction after a drought, just for the day :) Only works if 'Heat Wave Map Edits' is 'true'. Disable if CFL installed. Visual bugs on changed vanilla maps, and disabled in custom maps CP. Damage can be sustained if holding a sprinkler.",
+	
+	//Sections
+"config.section.Stars.name": "Stardust Behaviour",
+"config.section.Stars.description": "For stardust weather behaviour.",
+"config.section.Maps.name": "Map Edits",
+"config.section.Maps.description": "Map edits done for immersion of different weathers.",
+"config.section.Immersion.name": "Immersion",
+"config.section.Immersion.description": "More effects on the world due to weather.",
+
+	//Name and Values
+"config.StarryRain.name": "Stardust Rainy or Floaty",
+"config.StarryRain.values.wind": "Floaty Stardust",
+"config.StarryRain.values.rain": "Rainy Stardust",
+	
+"config.PretendFlooding.name": "Flooding Map Edits",
+"config.PretendHeatWave.name": "Heat Wave Map Edits",
+"config.SprinklerDrought.name": "Sprinkler Malfunction",
+"config.PretendHurricane.name": "Tropical Storm Map Edits",
+
+	//Weather Related - Tooltip, Forecast, Totem Use Message and Map Messages + Letters
+"Weather.Blizzard": "Snowstorm",
+"Weather.Blizzard.Forecast": "Cold winds have picked up and heavy snowing is expected. Please avoid leaving your homes for too long, as the temperatures have decreased drastically and visibility is minimal. The Fern Islands and Calico Desert remain unaffected.",
+"Weather.Blizzard.ForecastIsland": "The continent can be seen covered in dark clouds and chilling temperatures. The Island remains unnaffected by the cold winds.",
+"Weather.Blizzard.ForecastDesert": "Cold winds have picked up and heavy snowing is expected in the Valley. The Desert remains unnaffected by the lowering temperatures.",
+"Weather.BlizzardTotem": "A cold wind picks up...",
+
+"Weather.Sandstorm": "Sandstorm",
+"Weather.Sandstorm.Forecast": "Strong winds have blown in sand from Calico Desert. Visibility may be lowered across the valley.",
+"Weather.Sandstorm.ForecastIsland": "Sandy particles can be seen blowing across the ocean. Thankfully the Fern Islands are far enough to remain unnaffected.",
+"Weather.Sandstorm.ForecastDesert": "Strong winds have started to blow large amount of particles in Calico Desert. Visibility is difficult, it is advised to stay indoors as the strong winds and sand may cause damage.",
+"Weather.SandstormTotem": "A strong wind picks up...",
+
+"Weather.HeavyRain": "Heavy Rains",
+"Weather.HeavyRain.Forecast": "Expected heavy rains, please continue with caution as the high humidity may cause lower temperatures, and disease risk. Flood alerts have been sent out across Ferngill.",
+"Weather.HeavyRain.ForecastIsland": "Heavy rains are expected, risk of flooding is minimal.",
+"Weather.HeavyRain.ForecastDesert": "Light showers expected in Calico Desert.",
+"Weather.HeavyRainTotem": "The clouds seem darker than usual...",
+"Flooding.Message1": "We apologize for the inconveniences.^Due to flash floods, the road between Pelican Town and Calico Desert is temporarily closed.^^-Ferngill's WCD Center",
+"Flooding.Message2": "We apologize for the inconveniences.^Due to the rising water levels, it is too risky to continue beyond this point.^^-Ferngill's WCD Center",
+"Flooding.PamSign": "Sorry kid! Road 's closed, can't drive yourself there this time.       -Pam",
+"PostFlood.Message": "We apologize for the inconveniences.^The water levels are still too high, it is too risky to continue beyond this point.^^-Ferngill's WCD Center",
+
+"Weather.HeatWave": "Heat Wave",
+"Weather.HeatWave.Forecast": "Rising temperatures and low humidity have caused a heat wave to make its way to the Valley. Stay hydrated everyone!",
+"Weather.HeatWave.ForecastIsland": "Rising temperatures and low humidity have caused a heat wave to make its way to the Fern Islands. Stay hydrated everyone!",
+"Weather.HeatWave.ForecastDesert": "Rising temperatures and low humidity have caused a heat wave to make its way to Calico Desert. Stay hydrated everyone!",
+"Weather.HeatWaveTotem": "Its getting hotter... or is it just me?",
+"Rot.1": "What Is That Smell?!",
+"Rot.2": "There is a pungent smell of rot in the air.",
+"Dry.Message1": "The barrels have been filled with fish and trash.^^The note beside reads:#The water levels have gone down, exposing both trash and fish.^Please avoid the area as the exposure to sun has caused them to rot faster.^^-Ferngill's WCD Center",
+"Dry.Message2": "Hmmm... The bird seems to have left, but there is a note here.^^The Island farm streams are protected from drought due to a magic array.#The note is very crumbly due to the dryness, it's best to not keep touching it.",
+"No.Sprinklers": "There is barely any water, you can't be serious about placing more sprinklers now...",
+"No.Sprinklers1.LetterTitle": "From Ferngill's WCD Center: About the sprinklers",
+"No.Sprinklers1.LetterText": "^^Dear farmer,^We hope the drought hasn't caused too many problems in your farm.^Please note that the sprinklers may malfunction the day after the heat wave, don't be alarmed. This is just a little drought!^They will function the day after.^^                            -Ferngill's WCD Center",
+"No.Sprinklers2.LetterTitle": "From Ferngill's WCD Center: Some help",
+"No.Sprinklers2.LetterText": "^^Dear farmer,^We understand this drought was longer than any other.^We are certain that your sprinklers will function again the day after this long heat wave.^We are sending out a small aid relief to farmers affected by the heat wave and subsequent drought.^                            -Ferngill's WCD Center",
+"No.Sprinklers3.LetterTitle": "From Ferngill's WCD Center: About the heat waves",
+"No.Sprinklers3.LetterText": "^^Dear farmer,^We have been able to gather data on your farm from this recent drought.^We have attached a small amount of money as a token of gratitude.^^This mail was sent automatically.^^                            -Ferngill's WCD Center",
+"No.Sprinklers4.LetterTitle": "From Ferngill's WCD Center: Some additional help",
+"No.Sprinklers4.LetterText": "^^Dear farmer,^This has been a record breaker drought!^We are certain that your sprinklers will function again the day after this long heat wave.^We are sending out a small aid relief to farmers affected by the heat wave and subsequent drought.^                            -Ferngill's WCD Center",
+"PostDry.Message": "The barrels have been filled with fish and trash.^^At least the smell isn't as bad now...#Better stay away though.",
+
+"Weather.Starry": "Meteor Shower",
+"Weather.Starry.Forecast": "A wonderful meteor shower will be seen today! Stardust is falling from the sky, anyone feeling lucky today?",
+"Weather.Starry.ForecastIsland": "A wonderful meteor shower will be seen today! Stardust is falling from the sky, anyone feeling lucky today?",
+"Weather.Starry.ForecastDesert": "A wonderful meteor shower will be seen today! Stardust is falling from the sky, anyone feeling lucky today?",
+"Weather.StarryTotem": "The skies seem brighter today.",
+
+"Weather.DryStorm": "Dry Lightning Storm",
+"Weather.DryStorm.Forecast": "Humidity is low this summer in the Valley. Please be careful as a thunder storm is expected with little to no precipitation.",
+"Weather.DryStorm.ForecastIsland": "Humidity is low this time of the year. Please be careful as a thunder storm is expected with little to no precipitation.",
+"Weather.DryStorm.ForecastDesert": "Several thunderstorms are expected around Ferngill, please beware when visiting those areas. Calico Desert remains unnaffected by this drop in humidity",
+"Weather.DryStormTotem": "A loud rumble is heard in the distance...",
+
+"Weather.Hurricane": "Hurricane",
+"Weather.Hurricane.Forecast": "A tropical storm is heading towards the Fern Islands from the Gem Sea. It is unlikely to turn into a hurricane, but please beware of the high winds and heavy rain when visiting the islands.",
+"Weather.Hurricane.ForecastIsland": "A tropical storm is heading towards the islands from the Gem Sea. Please take precautions with the high winds and heavy rain.",
+"Weather.Hurricane.ForecastDesert": "A tropical storm is heading towards the Fern Islands from the Gem Sea. Calico Desert remains unaffected.",
+"Weather.HurricaneTotem": "The wind is howling... is that rain too?",
+"Flooding.Island1": "Due to the rising water levels, it is too risky to continue beyond this point.#The rest of the sign is faded...",
+"Flooding.Island2": "Due to the risky weather all items have been stored behind the bar.^^-Ferngill's WCD Center",
+"Flooding.Island3": "Hmmm... The bird seems to have left, but there is a note here.^^The Island farm is protected from flooding...#The rest of the note is smudged due to the rain.",
+"PostFlooding.Island": "The water levels are still high, it is still too risky to continue beyond this point.^^-Ferngill's WCD Center",
+
+"Weather.Hail": "Hailstorm",
+"Weather.Hail.Forecast": "Hailstorms are predicted for the day. Please be careful when walking outside!",
+"Weather.Hail.ForecastIsland": "A dark cloud looms over Ferngill.",
+"Weather.Hail.ForecastDesert": "Hailstorms are predicted for the day. Please be careful when walking outside!",
+"Weather.HailTotem": "The sky is angry... Rain hurts, wait this is ice!",
+
+	//Buff Related
+//Randomly in various weathers
+"Debuff.Weathering1": "Some Weather Huh?",
+"Debuff.Weathering1.description": "The weather is terrible...",
+"Debuff.Weathering2": "Wait, What?",
+"Debuff.Weathering2.description": "Now it just seems worse...",
+//Hail
+"Debuff.Weathering3": "That Really Hurts!",
+"Debuff.Weathering3.description": "The weather is angry at you, isn't it...",
+//Heatwave
+"Debuff.Weathering4": "It Burns!",
+"Debuff.Weathering4.description": "The weather is too hot, way too hot...",
+//Meteor Shower
+"Buff.Weathering": "Feeling Lucky?",
+"Buff.Weathering.description": "The stars have blessed you from a place faraway!",
+
+////////////////////////
+//Added in 1.1 and 1.2//
+////////////////////////
+
+	//Descriptions Config
+"config.ChangeVanilla.description": "Enables changes to vanilla weather. Chances to have foggy days and sleet (The mod Weather Wonders takes priority).",
+"config.NoDanger.description": "Disables adverse weather effects, makes them cosmetic only. Marking as 'true' makes weather safe.",
+"config.NightEvents.description": "Enables night events from weather effects. Marking as 'true' makes events appear.", 
+"config.ChangeMusic.description": "Changes Eclipse music to be creepier on its peak time. Only available if 'Creepy Eclipse Music All-day' is 'false'.",
+"config.CreepyMusic.description": "Changes Eclipse music to be creepier the entire day.",
+
+	//Modified in 1.1
+"config.DangerWeather.description": "Enables weather consequences. Certain chances that crops may get killed, but also chances that they might speed-up their growth. Does nothing if safe weather is 'true'.",
+
+"config.AddWeather.description": "Toggle which weathers to add or not, careful with these. Recommended NOT to toggle off if the weather is currently occurring.",
+"config.PretendLava.description": "One full map edit to island north that has been affected by the lava! Select 'true' if you want these changes. Not compatible with mods that change maps - will be automatically disabled if map changing mods are present (mostly). Compatible with recolours.",
+"config.PretendFire.description": "Small map edit to the forest to add some flames! Select 'true' if you want these changes. Not compatible with mods that change maps - will be automatically disabled if map changing mods are present (mostly). Compatible with recolours.",
+"config.PostWeather.description": "Enables lingering map edits from weather events.",
+"config.FallingSnow.description": "Attempts to make snow fall like debris. Only available if 'Change Vanilla Weather?' is 'true'.",
+"config.ThickFoggy.description": "Reduces fog blur and thickness.",
+"config.NoDebuffs.description": "Disables adverse weather effects. For use of 'Weather Consequences' without the debuffs.",
+
+	//Sections
+"config.section.Disable.name": "Danger Be Gone",
+"config.section.Disable.description": "For making danger weather... not dangerous.",
+"config.section.Music.name": "Audio Changes",
+"config.section.Music.description": "Audio changes for some weather.",
+
+"config.section.Weather.name": "Weather Selection",
+"config.section.Weather.description": "Select what weather to enable or disable. Fog and Sleet are only available if 'Change Vanilla Weather?' is 'true'.",
+
+	//Name and Values
+"config.DangerWeather.name": "Weather Consequences",
+"config.ChangeVanilla.name": "Change Vanilla Weather?",
+"config.NoDanger.name": "Safe Weather",
+"config.NightEvents.name": "More Night Events Added?",
+"config.ChangeMusic.name": "Creepy Eclipse Music Half-day",
+"config.CreepyMusic.name": "Creepy Eclipse Music All-day",
+
+"config.PretendLava.name": "Volcanic Ash Map Edits",
+"config.PretendFire.name": "Wildfire Map Edits", 	
+"config.PostWeather.name": "Post Weather Map Edits",
+
+"config.AddWeather.name": "Weather", 
+"config.AddWeather.values.rainy": "Heavy Rain",
+"config.AddWeather.values.sandy": "Sandstorm",
+"config.AddWeather.values.blizzy": "Blizzard",
+"config.AddWeather.values.dry": "Dry Lightning",
+"config.AddWeather.values.hail": "Hail",
+"config.AddWeather.values.heat": "Heat Waves - Drought",
+"config.AddWeather.values.starry": "Meteor Showers - Stardust",
+"config.AddWeather.values.hurry": "Tropical Storm",
+"config.AddWeather.values.firerain": "Acid Rain",
+"config.AddWeather.values.dark": "Dark Eclipse",
+"config.AddWeather.values.muddy": "Nutrient-Rich Rain",
+"config.AddWeather.values.ash": "Volcanic Ash",
+"config.AddWeather.values.north": "Northern Lights",
+"config.AddWeather.values.wildfire": "Wildfires",
+"config.AddWeather.values.meatball": "A Small Chance of Meatballs",
+"config.AddWeather.values.locust": "Locust Swarm",
+"config.AddWeather.values.nado": "Tornado Watch",
+"config.AddWeather.values.smog": "Smog",
+"config.AddWeather.values.fog": "Foggy Mornings (Sunny and Rainy)",
+"config.AddWeather.values.sleet": "Sleet (Snowy)",
+
+"config.FallingSnow.name": "Slow Falling Snow",
+"config.ThickFoggy.name": "Reduce Fog Blur?",
+"config.NoDebuffs.name": "Disables Debuffs?",
+
+
+	//Weather Related - Tooltip, Forecast, Totem Use Message and Map Messages + Letters
+"Weather.AcidRain": "Acid Rain",
+"Weather.AcidRain.Forecast": "Increased smog from Zuzu City has caused rain to acidify. Please remain indoors, as staying outside can be damaging to your health.",
+"Weather.AcidRain.ForecastIsland": "Increased smog from Zuzu City has caused rain to acidify. This acid rain has reached the Fern Islands due to the fall season's wind currents. Please remain indoors, as staying outside can be damaging to your health.",
+"Weather.AcidRain.ForecastDesert": "Increased smog from Zuzu City has caused rain to acidify. Please remain indoors, as staying outside can be damaging to your health.",
+"Weather.AcidRainTotem": "Water is burning!",
+"AcidRain.Soil.LetterTitle": "From Ferngill's WCD Center: Soil Nutrients I",
+"AcidRain.Soil.LetterText": "^^Dear farmer,^This acid rain is terrible for crops!^The soil has lost important nutrients for crops to grow properly.^If you experience crops dying, then this could be the main reason. The soil will gradually regain its rich nutrients.^^                            -Ferngill's WCD Center",
+
+"Weather.Darkness": "Dark Eclipse",
+"Weather.Darkness.Forecast": "A full eclipse will be seen from many area in Ferngill Republic. Experts say it is an unnatural eclipse, and it may attract dark creatures from the depths.",
+"Weather.Darkness.ForecastIsland": "A full eclipse will be seen from many area in Ferngill Republic. Experts say it is an unnatural eclipse, and it may attract dark creatures from the depths.",
+"Weather.Darkness.ForecastDesert": "A full eclipse will be seen from many area in Ferngill Republic. Experts say it is an unnatural eclipse, and it may attract dark creatures from the depths.",
+"Weather.DarknessTotem": "Something feels eerie... A chill runs down your spine.",
+
+"Weather.MudRain": "Nutrient-Rich Rain",
+"Weather.MudRain.Forecast": "Rains are expected for tomorrow. These rains have both sand and minerals carried from Calico Desert's winds! This special mixture has created a nutrient rich downpour.",
+"Weather.MudRain.ForecastIsland": "Rains are expected for tomorrow. These rains have both sand and minerals carried from Calico Desert's winds! This special mixture has created a nutrient rich downpour.",
+"Weather.MudRain.ForecastDesert": "Rains are expected for tomorrow. These rains have both sand and minerals carried from Calico Desert's winds! This special mixture has created a nutrient rich downpour.",
+"Weather.MudRainTotem": "Water is tasty for plants.",
+"MudRain.Soil.LetterTitle": "From Ferngill's WCD Center: Soil Nutrients II",
+"MudRain.Soil.LetterText": "^^Dear farmer,^^This muddy rain contains high amounts of nutrients for crops!^The soil has gained important nutrients for crops to grow properly.^^If you experience crop growth speeding up, then this could be the main reason. Sadly, the soil will gradually lose this boost of nutrients.^^                            -Ferngill's WCD Center",
+
+"Weather.Ash": "Volcanic Ash",
+"Weather.Ash.Forecast": "The Fern Islands has had some light quakes recently, and the volcano's activity is noticeble by the spewing of ash into the air. Please be careful when visiting the Islands.",
+"Weather.Ash.ForecastIsland": "There have been some light quakes recently, and the volcano's activity is noticeble by the spewing of ash into the air. Please be careful when visiting the Resort.",
+"Weather.Ash.ForecastDesert": "The Fern Islands has had some light quakes recently, and the volcano's activity is noticeble by the spewing of ash into the air. Please be careful when visiting the Islands.",
+"Weather.AshTotem": "There earth shakes lightly, maybe its nothing...",
+"Lava.Flow1": "The lava flow is making it impossible to continue...",
+"Lava.Flow2": "Due to the recent lava flows, it is too risky to continue beyond this point.#The rest of the sign is burnt to a crisp.",
+"Lava.Flow3": "Hmmm... The bird seems to have left, but there is a note here.^^The Island farm is protected from the volcano...#The rest of the note is...Crispy?",
+"Volcano.Lava.LetterTitle": "From Ferngill's WCD Center: About the Volcano",
+"Volcano.Lava.LetterText": "^^Dear farmer,^Mount Cinder, as we call it affectionately, has been active lately.^Our readings show that its eruption should be dying down soon, but we shall continue monitoring its activity as you never know when it will erupt again.^We hope you take good care whilst being in Ginger Island.^^                            -Ferngill's WCD Center",
+
+"Weather.North": "Northern Lights",
+"Weather.North.Forecast": "Due to recent solar flare activity, the northern lights will be able to be seen from the Ferngill Republic! Enjoy the night spectacle, and perhaps something magical may happen.",
+"Weather.North.ForecastIsland": "Due to recent solar flare activity, the northern lights will be able to be seen from Pelican Town! Enjoy the night spectacle, and perhaps something magical may happen.",
+"Weather.North.ForecastDesert": "Due to recent solar flare activity, the northern lights will be able to be seen from Stardew Valley! Enjoy the night spectacle, and perhaps something magical may happen.",
+"Weather.NorthTotem": "The sun is misbehaving again...",
+
+"Weather.MeatBall": "A Small Chance of Meatballs",
+"Weather.MeatBall.Forecast": "Uhm... It's expected to rain... meatballs? Is this right?",
+"Weather.MeatBall.ForecastIsland": "Uhm... It's expected to rain... meatballs? Is this right?",
+"Weather.MeatBall.ForecastDesert": "Uhm... It's expected to rain... meatballs? Is this right?",
+"Weather.MeatBallTotem": "The air is smelling delicious...",
+
+"Weather.Locust": "Swarm",
+"Weather.Locust.Forecast": "A large swarm of locusts is heading towards the Valley. Precaution is recommended for farmers, as well as residents in the area of Pelican Town.",
+"Weather.Locust.ForecastIsland": "A large swarm of locusts is heading towards the Valley. Precaution is recommended for farmers, as well as residents in the area of Pelican Town.",
+"Weather.Locust.ForecastDesert": "A large swarm of locusts is heading towards the Valley. Precaution is recommended for farmers, as well as residents in the area of Pelican Town.",
+"Weather.LocustTotem": "There is an annoying buzzing...",
+
+"Weather.FFire": "Wildfires",
+"Weather.FFire.Forecast": "Recent low humidity and high temperatures may increase the possibility of wildfires, please follow the recommendations from the Ferngill Weather Climate and Disaster Center.",
+"Weather.FFire.ForecastIsland": "Recent low humidity and high temperatures may increase the possibility of wildfires, please follow the recommendations from the Ferngill Weather Climate and Disaster Center.",
+"Weather.FFire.ForecastDesert": "Recent low humidity and high temperatures may increase the possibility of wildfires, please follow the recommendations from the Ferngill Weather Climate and Disaster Center.",
+"Weather.FFireTotem": "Is that a spark?",
+"Fire.Warn1": "It is impossible to continue beyond this point...",
+"Fire.Warn2": "The fire is raging beyond this point, it is too risky to continue.^^-Ferngill's WCD Center#The fence is fireproof and is holding the fire back.",
+"PostFire.Warn": "The smell of burnt wood still permeates the air.",
+
+"Weather.Smog": "Smog",
+"Weather.Smog.Forecast": "Levels of pollution are on the rise. It is advised to wear masks outside due to this intense air pollution that has drifted in from Zuzu City.",
+"Weather.Smog.ForecastIsland": "Levels of pollution are on the rise. It is advised to wear masks outside due to this intense air pollution that has drifted in from Zuzu City.",
+"Weather.Smog.ForecastDesert": "Levels of pollution are on the rise. It is advised to wear masks outside due to this intense air pollution that has drifted in from Zuzu City.",
+"Weather.SmogTotem": "Thanks Joja, the air is spicy...",
+
+"Weather.Nado": "Tornado Watch",
+"Weather.Nado.Forecast": "We are on tornado watch today and tomorrow. The Ferngill Weather Climate and Disaster Center warns on the observed differences in air drafts.",
+"Weather.Nado.ForecastIsland": "We are on tornado watch today and tomorrow. The Ferngill Weather Climate and Disaster Center warns on the observed differences in air drafts.",
+"Weather.Nado.ForecastDesert": "We are on tornado watch today and tomorrow. The Ferngill Weather Climate and Disaster Center warns on the observed differences in air drafts.",
+"Weather.NadoTotem": "The wind picks up... It really picks up. Hold on to something!",
+
+
+	//Vanilla Weather Tooltip and Forecasts
+"Patch.Rain": "Rain",
+"Patch.Sun": "Sunny",
+"Patch.Snow": "Snow",
+"Patch.Storm": "Thunderstorm",
+"Weather.Rain.Forecast": "It's going to rain all day tomorrow. There may be a small probability of morning fog.",
+"Weather.Storm.Forecast": "Looks like a storm is approaching. Thunder and lightning is expected. There may be a small probability of morning fog.",
+"Weather.Sun.Forecast1": "It's going to be clear and sunny all day, though there may be a small probability of morning fog.",
+"Weather.Sun.Forecast2": "It's going to be a beautiful, sunny day tomorrow! There may be a small probability of morning fog.",
+"Weather.SnowV.Forecast1": "Expect a few inches of snow tomorrow.", //Just Vanilla Snow
+"Weather.SnowV.Forecast2": "Bundle up, folks. It's going to snow tomorrow!", //Just Vanilla Snow
+"Weather.Snow.Forecast1": "Expect a few inches of snow tomorrow. Hopefully there will be no rain.", //Sleet chance
+"Weather.Snow.Forecast2": "Bundle up, folks. It's going to snow tomorrow! Hopefully there will be no rain.", //Sleet chance
+
+
+	//Buffs
+//Acid Rain
+"Debuff.Weathering5": "Water Burns",
+"Debuff.Weathering5.description": "Who knew water could burn so much...",
+//Dark Eclipse
+"Debuff.Weathering6": "Fear of Darkness",
+"Debuff.Weathering6.description": "Where am I?",
+//Ash Weather
+"Debuff.Weathering7": "Ashy Lungs",
+"Debuff.Weathering7.description": "It is difficult to breathe in this air.",
+"Debuff.Weathering8.description": "It is difficult to breathe in this air. It seems worse in here...", //Technically nearer to volcano
+//Wildfire
+"Debuff.Weathering9": "Smoke",
+"Debuff.Weathering9.description": "Smoke is not good for you...",
+//Smog
+"Debuff.Weathering10": "Air Pollution",
+"Debuff.Weathering10.description": "This air is not good for you...",
+//Locust
+"Debuff.Weathering11": "Locust Swarm",
+"Debuff.Weathering11.description": "They are everywhere!",
+//Tornado Watch
+"Debuff.Weathering12": "Dread",
+"Debuff.Weathering12.description": "Will it or will it not?",
+//Northern Lights
+"Buff.Weathering2": "Beautiful Lights",
+"Buff.Weathering2.description": "The beautiful colors illuminate the night sky, what a spectacle!",
+//Small Chance of Meatballs
+"Buff.Weathering3": "Yummy Weather",
+"Buff.Weathering3.description": "All this food is giving you motivation.",
+
+	//MNE pack (Chances to happen)
+//Tropical Storm
+"WeatherFish": "It's raining harder than it said on TV... It's raining... fish?",
+//Mud Rain
+"BigCrops": "It really rained a lot yesterday... Wonder if the crops will like it.",
+//Hail
+"HailFalling": "Those pieces of ice sound sharp...",
+//Sandstorm
+"SandstormGust": "The wind is strong, maybe it unburried something from the sand...",
+//Earthquake Events (Not Weather dependent)
+"EarthquakeIsland1": "The earth is shaking, hope no one gets hurt...",
+"EarthquakeIsland2": "The earth is shaking a lot, maybe the earth is angry...",
+"EarthquakeTown": "The earth is shaking, but it's softer than usual...",
+//Heavy Rain
+"Landslide2": "The heavy rains have caused a landslide...",
+//Wildfire
+"WeatherCoal": "The land should have healed from the fire...",
+//Tornado Watch 
+"TornadoPass": "The siren is eerie and deafening. The wind rattles the windows, it wants to take everything in its path. The tornado is passing through...",
+
+////////////////
+//Added in 1.3//
+////////////////
+
+	//Config Stuff
+	//Section
+"config.section.Immersion2.name": "Immersion for NPCs",
+"config.section.Immersion2.description": "Effects on the NPCs due to weather.",
+
+	//Name + Values and Descriptions
+//"config.NPCChanges.description": "Changes npc schedules to fit the weather patterns some more, also adds dialogue related to the weather via conversation topics.",	
+"config.NoPTSandy.description": "Removes Sandstorm weather from happening in Pelican Town.",	
+"config.Aids.description": "Add buildings, objects, and clothing that can help with the negative consequences with weather in an immersive way (of sorts), best used if 'Safe Weather' is 'false'. Trash or deconstruct any of these before deselecting any. Requires SpaceCore and ItemExtensions for better effects.",	
+"config.RevertVanilla.description": "Changes fertilizer object look. You need the base mod to use other looks!",	
+"config.EasyFerti.description": "Changes percentage chance of fertilizer production to 100, just a little easier! It will still require the Radioactive Bar.",	
+"config.DrinkSPF.description": "Changes whether you eat or drink the SPF50. 'False' makes you eat it, it's delicious, I promise.",
+"config.SpecialWeather.description": "Only affects certain vanilla weather, guess you just have to try and find out...",
+"config.Totem.description": "Weather totems for your every need, or maybe not. Careful, some of them might be cursed... A bit difficult to get rid of maybe, always with consequences.",
+"config.ChangeFestMusic.description": "Works only if 'Special Weather Effects' is 'true', only changes the day music (to the Eclipse theme), not the festival music... I like that one.",
+"config.AnimalEffects.description": "Affects some animal's production when certain weathers occur. Animals added by a mod are protected by their authors.",
+
+"config.NPCChanges.name": "NPC Immersion",	
+"config.NPCChanges.values.CT": "Adding Dialogue",
+"config.NPCChanges.values.schedule": "Schedule Changes BETA",
+
+"config.ChangesFor.name": "Activate Changes For NPC",	
+"config.ChangesFor.description": "Activate the changes for individual NPCs. It will only activate the chosen options in 'NPC Immersion'. Some NPC's don't have active schedules, so this option will do nothing if you only chose 'Schedule Changes BETA' in 'NPC Immersion'.",	
+
+"config.NoPTSandy.name": "No Sandstorm in Pelican Town",	
+"config.EasyFerti.name": "Mana Fertilizer is Easier",
+
+"config.Aids.name": "Weather Protection",
+"config.Aids.values.clothes": "Clothing (Hats)",
+"config.Aids.values.buildings": "Buildings (Robin and Wizard)",
+"config.Aids.values.objects": "Objects (Special Fertilizer)",
+
+"config.RevertVanilla.name": "Fertilizer Appearance",	
+"config.RevertVanilla.values.vanilla": "Vanilla Style",
+"config.RevertVanilla.values.grandpa": "'Grandpa's Tools' by Gwen",
+"config.RevertVanilla.values.vt": "'Vanilla Tweaks' by Taiyo and Airyn",
+"config.RevertVanilla.values.off": "Invisible (or for Recolouring)",
+
+"config.DrinkSPF.name": "Drink the SPF50?",
+"config.SpecialWeather.name": "Special Weather Effects",
+"config.Totem.name": "Weather Totems",
+"config.ChangeFestMusic.name": "Change music for Spirit Eve's Festival",
+"config.AnimalEffects.name": "Affect Animals?",
+
+"config.AddWeather.values.mayo": "Mayo Rain",
+
+"config.section.Ask.name": "Requests",
+"config.section.Ask.description": "Specific requests - are always 'false' by default.",	
+
+"config.MonsterSpawn.name": "Spawn Monsters?",
+"config.MonsterSpawn.description": "Spawns monsters during the dark eclipse weather.",
+
+"config.SprinklerDrought.values.maps": "Map Changes",
+"config.SprinklerDrought.values.damage": "Deterrent Damage",
+
+	//Sprinkler Category Change for Heatwave
+"SprinklerCategory": "Malfunctioning Device",
+
+	//Items
+"ParaguasUmbrella.Name": "Umbrella",
+"ParaguasUmbrella.Desc": "For the rainy weather, but it helps with the sunny weather too.",
+"ParaguasUmbrella.Break": "It seems like it's broken...", //Message shown when Umbrella breaks and removed from inventory
+
+"SPFCategory": "Weather Protection", //For most weather protection Items
+
+"SPF.Name": "Sundrop Sunscreen",
+"SPF.Desc": "With an SPF 50, its good for sunny weather!",
+
+"EatenSPFQ": "Do you want to taste the SPF power?", //Message Enabled with Item Extensions
+"EatenSPFYes": "Bring it on, bet it's tasty!", //Message Enabled with Item Extensions - Option for Yes
+"EatenSPFNo": "Why are we eating sunscreen?", //Message Enabled with Item Extensions - Option for No
+"EatenSPFNot": "Best not to taste some sunpower yet...", //Message Enabled with Item Extensions - Option for Unable
+
+"EatenSPF501": "It's not that bad... It tastes like sunshine!", //Message Enabled after consumption by Spacecore
+"EatenSPF502": "Honestly, it could have been worse...", //Message Enabled after consumption by Spacecore
+"EatenSPF503": "It's not that bad... It tastes like oranges and lemons.", //Message Enabled after consumption by Spacecore
+"EatenSPF504": "Creamy... Yum.", //Message Enabled after consumption by Spacecore
+
+"SprayBug.Name": "Bugs B Gone Edible Spray",
+"SprayBug.Desc": "An organic and pet friendly way to repel off bugs! Now in its edible spray presentation.",
+
+"EatenBBGQ": "Do you want to taste the forest?", //Message Enabled with Item Extensions - Question
+"EatenBBGYes": "Bring it on, bet it's fresh and tangy!", //Message Enabled with Item Extensions - Option for Yes
+"EatenBBGNo": "Why are we eating bug spray?", //Message Enabled with Item Extensions - Option for No
+"EatenBBGNot": "Best not to taste some bug spray yet...", //Message Enabled with Item Extensions - Option for Unable
+
+"EatenBBG1": "It's not that bad... It tastes like an anti-mosquito!",//Message Enabled after consumption by Spacecore
+"EatenBBG2": "Honestly, it could have been worse...",//Message Enabled after consumption by Spacecore
+"EatenBBG3": "It's not that bad... It tastes like lemons and salt water.",//Message Enabled after consumption by Spacecore
+"EatenBBG4": "Tangy... Yum.",//Message Enabled after consumption by Spacecore
+
+"ManaFertilizerCategory": "Magic Fertilizer",
+"ManaFertilizer.Name": "Mana-Infused Fertilizer",
+"ManaFertilizer.Desc": "A fertilizer that M. Rasmodius has developed by infusing it with mana over time.",
+"ManaFertilizer.Desc2": "A fertilizer that M. Rasmodius has developed by infusing it with mana over time. Hm, wonder why you can find these here...", //Description change when at Pierre's
+
+	//Buildings - Robin and Wizard
+	//Name and Description
+"StationBuilding.Name": "Mini Weather Research Station",
+"StationBuilding.Desc": "A weather station developed by Demetrius alongside Ferngill's WCD Center.",
+"ArrayBuilding.Name": "Weather Protection Array",
+"ArrayBuilding.Desc": "A strong magical array that can protect your all crops, but not from dark magic.",
+
+	//Messages
+"BuildStationMessage1": "A handy book on weather effects on crops.",
+"BuildStationMessage2": "The computer is parsing a lot of data right now...#Best not disturb it.",
+"ManaStoneInv1": "Maybe it's not this item...",
+"ManaStoneInv2": "The poor thing can't deal with more items right now...",
+
+	//Letters
+//Fertilizer Letters
+"Wizard.Ferti.LetterTitle1": "Something Special",
+"Wizard.Ferti.LetterText1": "Greetings @,^^I have developed a special mana infused fertilizer.^I believe you might be interested in its properties.^^Just note that it is not strong enough to protect against dark magic.^^      -M. Rasmodius",
+"Wizard.Ferti.LetterTitle2": "Additional Mana",
+"Wizard.Ferti.LetterText2": "Greetings @,^^I have some additional special mana infused fertilizer.^Hope you can find some use for it.^^      -M. Rasmodius",
+
+//Buildings Letters
+"Robin.Station.LetterTitle": "Demetrius and Ferngill's WCD Center",
+"Robin.Station.LetterText": "Hey @,^^Demetrius has been working with Ferngill's Weather Climate and Disaster Center to develop a special building that might help protect your crops.^This one can help to provide a bit of safety to all your farm!^^      -Robin",
+"Wizard.Array.LetterTitle": "Valley Weather",
+"Wizard.Array.LetterText": "Greetings,^^I am aware of the difficulties your farm may have had over the harsh weather conditions the Valley possess.^As I have researched on the elementals that inhabit this land, it has come to my attention how rich in mana your farm is.^I have devised an array of protection for you. Although it is costly due to its power, I believe it to be in your best interests.^^      -M. Rasmodius",
+
+//When first using a custom totem Letter
+"Wizard.Summon.LetterTitle": "Cursed and Ancient",
+"Wizard.Summon.LetterText": "Greetings @,^^Perhaps it is now too late for me to mention the great power the ancient weather totems can possess.^Against such power, not even my array can save your farm.^However, a dose of concentrated Mana Fertilizer should aid you, should you decide to dwell in the dark and arcane again.^^      -M. Rasmodius",
+
+//Clothes Letter
+"Emily.Clothes.LetterTitle": "A Little Hat Mouse",
+"Emily.Clothes.LetterText": "@! You won't believe what a little mouse told me!^I am entirely serious, a hat making mouse told me about some wonderful clothing.^I should add them to my planned collection, particularly since they are so special!^The little hat making mouse said they help against terrible weathers.^Make sure to gear up indoors before going outside though!^^       -Emily",
+"Emily.Joja.LetterTitle": "Joja Outfitters",
+"Emily.Joja.LetterText": "@! Apparently Joja Mart has started a new clothing line, Joja Outfitters.^They said they were specially made to withstand tough weather...^They do seem a bit pricey, and they are just starting with a few head wear.^In any case, make sure to gear up indoors before going outside though!^^       -Emily",
+
+	//Clothes
+"KittyMuffs.Name": "Kitty Muffs",
+"KittyMuffs.Desc": "Warm ear muffs, now with cat ears included",
+"Shader.Name": "Waterproof Shade Hat",
+"Shader.Desc": "Rain or shine, this is the best hat!",
+"Mask.Name": "Face Mask",
+"Mask.Desc": "Now where have I seen these before?",
+"UVG.Name": "UV (Snow) Goggles",
+"UVG.Desc": "A Dr. Harvey approved eye protection gear.",
+"BugNet.Name": "Bug Net Hat",
+"BugNet.Desc": "Keeps the unwanted bugs at bay.",
+
+	//Buffs
+//From Items
+"SPF.Buff.Name": "SPF 50",
+"SPF.Buff.Desc": "For sunny weather.",
+"BugBGone.Buff.Name": "Bugs B Gone",
+"BugBGone.Buff.Desc": "Less bugs to bug you.",
+
+//From Clothes
+"PDWKittyMuffs.Buff.Name": "Kitty Muffs",
+"PDWKittyMuffs.Buff.Desc": "Warm and fluffy.",
+"PDWShader.Buff.Name": "Waterproof + Shade",
+"PDWShader.Buff.Desc": "Safe and sound under the umbrella crown.",
+"PDWMask.Buff.Name": "Face Mask",
+"PDWMask.Buff.Desc": "No more smokey.",
+"PDWUVGoggles.Buff.Name": "Goggles",
+"PDWUVGoggles.Buff.Desc": "Easier vision, a bit.",
+"PDWBugNet.Buff.Name": "Bug Net Hat",
+"PDWBugNet.Buff.Desc": "No bugs can get to you.",
+
+//Festival Weather Buff
+"Buff.FestivalJoy": "Festival Joy",
+"Buff.FestivalJoy.description": "It's a joyous day, and you can't help be infected with glee.",
+
+//This is a misc. item that should never spawn
+"PlantDeath.Name": "A Little Dead Plant",
+"PlantDeath.Desc": "How did you end up with this in your inventory?",
+
+"PlantDeath.Check": "Some plants may have suffered from the weather...", //Message by Spacecore appears when some weather types can kill crops
+
+	//Festival Weather Patches
+//Tooltip
+"Patch.Festival_Spring13": "Egg Festival",
+"Patch.Festival_Spring24": "Flower Dance",
+"Patch.Festival_Summer11": "Luau",
+"Patch.Festival_Summer28": "Dance of the Moonlight Jellies",
+"Patch.Festival_Fall16": "Stardew Valley Fair",
+"Patch.Festival_Fall27": "Spirit's Eve",
+"Patch.Festival_Winter8": "Festival of Ice",
+"Patch.Festival_Winter25": "Feast of the Winter Star",
+"Patch.Festival_General": "Festival",
+"Patch.Wedding": "Love is in the Air",
+//Forecast starter
+"Weather.Festival.Forecast1": "It's going to be clear tomorrow... perfect weather for ",
+"Weather.Festival.Forecast2": "It's going to be the perfect weather for ",
+"Weather.Wedding.Forecast": "Love is in the air, and it will be a wonderful day for a wedding!", //This will most likely not appear ever
+//Festival specific forecast message
+"Festival_Spring13": "the Egg Festival! Where it will take place at Pelican Town's Square, between 9am and 2pm. Ready for some egg hunting?",
+"Festival_Spring24": "the Flower Dance! Where it will take place at the westside of Cindersap Forest, between 9am and 2pm. Bring your best dress, and enjoy the dance.",
+"Festival_Summer11": "the {{FoTSCompat}}! Where it will take place at the Beach, between 9am and 2pm. Make sure to bring your best ingredients for the potluck soup to impress our Governor.",
+"Festival_Summer28": "the Dance of the Moonlight Jellies! Where it will take place at the beach, between 10pm and 12am. Come watch the yearly migration of jellyfish!",
+"Festival_Fall16": "the Stardew Valley Fair! Where it will take place at Pelican Town's Square, between 9am and 3pm. Will you be participating in the Grange Display contest?",
+"Festival_Fall27": "the Spirit's Eve! Where it will take place at Pelican Town's Square, between 10pm and 11:50pm. It's time for some spooky in the Valley.",
+"Festival_Winter8": "the Festival of Ice! Where it will take place at Cindersap Forest, between 9am and 2pm. Be careful with the slippery ice!",
+"Festival_Winter25": "the Feast of the Winter Star! Where it will take place at Pelican Town's Square, between 9am and 2pm. Blessings to all our viewers!",
+"Festival_General": "tomorrow's Festival!", //For custom festivals
+
+	//Mayo Weather
+"MayoWaterCategory": "Mayo Rain Water",
+"MayoWater.Name": "Some Mayonnaise",
+"MayoWater.Desc": "It's so liquid, but with all the taste of mayonnaise!",
+"MayoWater.Desc.Danger": "It's so liquide, but it's edible void mayonnaise! Of sorts...",
+"Weather.Mayo": "Mayopocalypse",
+"Weather.Mayo.Forecast": "Quoting a famous artist: We don't need a repeat of the mayopocalypse or whatever. But it's happening...",
+"Weather.Mayo.ForecastIsland": "Quoting a famous artist: We don't need a repeat of the mayopocalypse or whatever. But it's happening...",
+"Weather.Mayo.ForecastDesert": "Quoting a famous artist: We don't need a repeat of the mayopocalypse or whatever. But it's happening...",
+"Weather.MayoWaterTotem": "Oh no... It's the mayopocalypse all over again.",
+
+	//Sprinkler Malfunction Extra messages - Heatwave
+"DontDare": "Don't you dare use that sprinkler >:|",
+"No.Sprinklers2": "Holding on is damaging! Better leave them inside the house.",
+"No.SprinklersWarn": "You should leave your sprinklers inside the house...",
+
+	//Misc. used in various instances 
+"Misc.1": " and ",
+"Misc.2": " in Pelican Town",
+
+	//EMP console message when enabling schedule changes
+"ScheduleWarn": "Are you sure you want to mess around with the schedules?",
+
+	//Special Orders
+"SpecialOrder_Algae.Name": "Algae Bloom",
+"SpecialOrder_Algae.Text": "Last nutrient rich rains has made 'em algae grow too much. Tis' ain't no good for 'em fish, as they got no space or air left in the waters. Help me fish out some of that algae.     -Willy",
+"SpecialOrder_Algae.Objective1": "Fish out 50 green algae",
+"Willy.SpecialOrder.LetterTitle": "From Ferngill's WCD Center: No More Algae Blooming",
+"Willy.SpecialOrder.LetterText": "^^Dear farmer,^On behalf of the Environmental Department in Ferngill's Weather Climate and Disaster Center, we would like to thank you for your contributions in the recent algae bloom due to the recent weather. Your local fisherman, Willy, has notified us of your great contribution and we would like to give you a reward.^Please accept our small token of appreciation.^^                            -Ferngill's WCD Center",
+
+	//Custom Weather Totems and Tokens - Special Items
+//Custom Currency - Appears after saving Prof Snail
+"WeatherToken.Name": "Weather Token",
+"WeatherToken.Desc": "An old coin used in Ginger Island... Maybe?",
+"WeatherToken.LetterTitle": "A Strange Coin",
+"WeatherToken.LetterText": "Thank you again for saving me in from that cave @. I have seen your keen eye in finding fossils and artifacts, perhaps you can even find a use for this coin I found during my time in the cave.^^Sincerely,^Professor Snail",
+
+//Totems
+"Totembroken": "A chill goes down your spine, it's probably nothing...", //When used
+
+"TotemCategory": "Ancient Carved Weather Totem", //Less cursed weather
+"TotemCategoryDark": "Cursed Ancient Carved Weather Totem", //More cursed weather - can't get rid of totem through trash
+
+"Totem.Purchase": "Once you touch the totem, you feel some ancient power flow from it.", //Message Spacecore upon purchase
+"Totem.PurchaseDark": "Once you touch the totem, you feel some dark ancient power flow from it. It feels cursed...", //Message Spacecore upon purchase
+
+"Totem.Name": "Blank Carved Totem", //Item used for other purposes than item - shouldn't spawn
+"Totem.Desc": "How did you get this?",
+
+"Totem.rainy.Name": "Wet Carved Totem",
+"Totem.rainy.Desc": "Placing it close to your ear, it sounds like a million droplets of rain.",
+"Totem.sandy.Name": "Warm Carved Totem",
+"Totem.sandy.Desc": "It's a bit course, and rough... Maybe irritating to touch. At least its not everywhere...",
+"Totem.blizzy.Name": "Cold Carved Totem",
+"Totem.blizzy.Desc": "It's chilly to hold onto it. Very cold, actually maybe hold it with some warm gloves.",
+"Totem.dry.Name": "Gray Carved Totem",
+"Totem.dry.Desc": "Dry static electricity.",
+"Totem.hail.Name": "Cold Carved Totem",
+"Totem.hail.Desc": "Like a little sharp ice cube.",
+"Totem.heat.Name": "Warm Carved Totem",
+"Totem.heat.Desc": "Looking at it makes you feel thirsty already, imagine if you touched it.",
+"Totem.starry.Name": "Sharp Carved Totem",
+"Totem.starry.Desc": "If you hold it up against the light it looks like it has little stars inside.",
+"Totem.hurry.Name": "Wet Carved Totem",
+"Totem.hurry.Desc": "Why does it even feel wet? Maybe it just hold a little tropical storm inside.",
+"Totem.firerain.Name": "Wet Carved Totem",
+"Totem.firerain.Desc": "Wet, but it burns. What a mystery...",
+"Totem.dark.Name": "Dark Carved Totem",
+"Totem.dark.Desc": "It barely reflects any light.",
+"Totem.muddy.Name": "Wet Carved Totem",
+"Totem.muddy.Desc": "Somehow it is squishy, like mud?",
+"Totem.ash.Name": "Gray Carved Totem",
+"Totem.ash.Desc": "It feels ashy.",
+"Totem.north.Name": "Sharp Carved Totem",
+"Totem.north.Desc": "Under the sun, it seems to reflect a wide variety of colours. So pretty!",
+"Totem.wildfire.Name": "Warm Carved Totem",
+"Totem.wildfire.Desc": "Something smells like smoke...",
+"Totem.meatball.Name": "Wet Carved Totem",
+"Totem.meatball.Desc": "It's a stone, but it smells tasty.",
+"Totem.smog.Name": "Gray Carved Totem",
+"Totem.smog.Desc": "Are you coughing too? Just breathing near it feels terrible.",
+"Totem.locust.Name": "Sharp Carved Totem",
+"Totem.locust.Desc": "The thing buzzes like an annoying little bug.",
+"Totem.nado.Name": "Gray Carved Totem",
+"Totem.nado.Desc": "Somehow you feel full of dread when touching it for too long... Better be on the look out.",
+
+"Totem.mayo.Name": "Wet Carved Totem",
+"Totem.mayo.Desc": "This is just a mayo jar...",
+
+"Totem.earthquake.Name": "Dark Carved Totem",
+"Totem.earthquake.Desc": "It makes you feel shakey, maybe its just the earth moving.",
+"Totem.tornado.Name": "Dark Carved Totem",
+"Totem.tornado.Desc": "You can hear the strong wind, and feel the ground shake. Surely using it might spell disaster.",
+"Totem.eruption.Name": "Dark Carved Totem",
+"Totem.eruption.Desc": "It vibrates violently when held, and it is warm to the touch. Actually it feels too hot, like lava. Highly unpredictable really...",
+
+"Totem.fog.Name": "Gray Carved Totem",
+"Totem.fog.Desc": "It is blurry, a bit foggy inside. Though you can't really be sure what you are going to get...",
+"Totem.sleet.Name": "Cold Carved Totem",
+"Totem.sleet.Desc": "Its cold and wet, what more can be said?",
+
+
+//Special Weather Added Just for using Fog or Sleet Totems
+"Weather.FogFogged": "Sunny Foggy Morning",
+"Weather.FogClear": "Sunny",
+"Weather.Fog.Forecast": "A thick fog is making its way to Ferngill. The morning is expected to be very foggy, with it clearing out by late evening.",
+"Weather.Fog.ForecastIsland": "A thick fog is making its way to the Fern Islands. The morning is expected to be very foggy, with it clearing out by late evening.",
+"Weather.Fog.ForecastDesert": "A thick fog is making its way to Ferngill. The morning is expected to be very foggy, with it clearing out by late evening.",
+"Weather.FogTotem": "It looks a little blurry outside.",
+
+"Weather.FogRainFogged": "Rainy Foggy Morning",
+"Weather.FogRainClear": "Rainy",
+"Weather.FogRain.Forecast": "A thick fog is making its way to Ferngill. The morning is expected to be very foggy, with it clearing out by late evening. It is expected to rain all day.",
+"Weather.FogRain.ForecastIsland": "A thick fog is making its way to the Fern Islands. The morning is expected to be very foggy, with it clearing out by late evening. It is expected to rain all day.",
+"Weather.FogRain.ForecastDesert": "A thick fog is making its way to Ferngill. The morning is expected to be very foggy, with it clearing out by late evening. It is expected to rain all day.",
+"Weather.FogRainTotem": "It looks a little blurry outside. Maybe a bit wet too...",
+
+"Weather.FogStormFogged": "Stormy Foggy Morning",
+"Weather.FogStormClear": "Stormy",
+"Weather.FogStorm.Forecast": "A thick fog is making its way to Ferngill. The morning is expected to be very foggy, with it clearing out by late evening. A storm is approaching, with rain expected all day. Thunder and lightning are also expected.",
+"Weather.FogStorm.ForecastIsland": "A thick fog is making its way to the Fern Islands. The morning is expected to be very foggy, with it clearing out by late evening. A storm is approaching, with rain expected all day. Thunder and lightning are also expected.",
+"Weather.FogStorm.ForecastDesert": "A thick fog is making its way to Ferngill. The morning is expected to be very foggy, with it clearing out by late evening. A storm is approaching, with rain expected all day. Thunder and lightning are also expected.",
+"Weather.FogStormTotem": "It looks a little blurry outside, with a side of thunder.",
+
+"Weather.Sleet": "Wet Snow",
+"Weather.Sleet.Forecast": "Rain and snow are expected for tomorrow, be careful everyone!",
+"Weather.Sleet.ForecastIsland": "Rain and snow are expected for tomorrow, be careful everyone!",
+"Weather.Sleet.ForecastDesert": "Rain and snow are expected for tomorrow, be careful everyone!",
+"Weather.SleetTotem": "Its cold and wet.",
+
+	//CT Dialogue Hell Starts//
+///
+///BACHELORS
+///
+
+//Alex
+"WCDTornadoH.Alex.1": "That tornado passed by so close, bet Rusty was scared.$s",
+"WCDTornadoH.Alex.2": "The tornado was frightening, there is something about such for of nature.$0",
+"WCDEruption.Alex.1": "The volcano in Ginger Island is still quite active.$0#$b#Its cool to see it spewing lava.$0",
+"WCDEruption.Alex.2": "The volcano in Ginger Island is still quite active.$0#$b#Too bad the resort is off limits whilst its erupting.$0",
+"WCDEclipse.Alex.1": "$query WEATHER Town kath.weathering_Darkness#It's so dark for an eclipse.$0#$b#I can barely see, Grandma better stay inside today.$0|It was so dark outside! I couldn't even practice well...$a",
+"WCDEclipse.Alex.2": "$query WEATHER Town kath.weathering_Darkness#It's so dark, I hope Rusty isn't scared.$0#$b#Even I can barely see, Grandpa better stay inside today.$0|It was so dark outside! I couldn't even catch the ball...$a",
+"WCDHeatwave.Alex.1": "It's too hot to be outside...$0",
+"WCDHeatwave.Alex.2": "$query !WEATHER Town kath.weathering_HeatWave#I almost melted in that scorching heat...$a|I really should get rehydrated.$0#$b#Grandma said I should offer anyone a drink today, here. [(O)350 (O)349 (O)614]$h",
+"WCDTornadoW.Alex.1": "Rusty has been nervous, dogs know more than us about the weather.$0",
+"WCDTornadoW.Alex.2": "Grandpa has been telling me about the last time a tornado passed near the valley...$0#$b#What can I tell you, you should ask him.$0",
+"WCDAcidRain.Alex.1": "When it's rainy its not good to be outside practicing, that's why I have my own routine when it rains.",
+"WCDAcidRain.Alex.2": "When it's rainy its not good to be outside practicing, that's why it's better to workout indoors.",
+"WCDLocust.Alex.1": "$query WEATHER Town kath.weathering_Locust#I placed a net so those bugs can't get to Rusty!$a|I placed a net so those bugs couldn't get to Rusty.",
+"WCDLocust.Alex.2": "I hope Grandma's plants are alright...$s#$b#She really likes taking care of them.$h",
+"WCDMeatball.Alex.1": "I hope there was some Salmon Dinner falling from the sky.$h%revealtaste:Alex:(O)212",
+"WCDMeatball.Alex.2": "I hope there was some Complete Breakfast falling from the sky.$h%revealtaste:Alex:(O)201",
+"WCDNorthLight.Alex.1": "Imagine if the night sky was always as illuminated as when the northern lights appear.#$b#I could be outside all night without having Grandma worry.$h#$b#Of course, she'll always worry but that's alright.",
+"WCDNorthLight.Alex.2": "$query PLAYER_HAS_SEEN_EVENT Current 288847#Mom would have enjoyed the northern lights...$s|*sniff*...$s#$b#Huh? I am just blowing my nose.$a",
+"WCDMeteor.Alex.1": "$query PLAYER_HAS_SEEN_EVENT Current 288847#Mom would have enjoyed a meteor shower...$s|*sniff*...$s#$b#Huh? I am just blowing my nose.$a",
+"WCDMeteor.Alex.2": "Who knew stardust was so pretty...",
+"WCDHeavyRain.Alex.1": "I hope Grandma's plants are alright...$s",
+"WCDHeavyRain.Alex.2": "When it's rainy its not good to be outside practicing, that's why I have my own routine when it rains.",
+"WCDBlizzard.Alex.1": "$query WEATHER Town kath.weathering_Blizzard#Being outside in a blizzard is harsh.#$b#My hands would freeze!|Being outside in a blizzard must have been harsh.#$b#My hands would freeze!",
+"WCDBlizzard.Alex.2": "At least Rusty has a warming light inside the doghouse...$s",
+"WCDMudRain.Alex.1": "When it's rainy its not good to be outside practicing, that's why it's better to workout indoors.",
+"WCDMudRain.Alex.2": "When it's rainy its not good to be outside practicing, that's why I have my own routine when it rains",
+"WCDEarthquake.Alex.1": "$query PLAYER_HAS_SEEN_EVENT Current 18#After the earthquake Grandpa started talking about the accident, but then...$s#$b#... Don't mind me.|Grandma wouldn't stop worrying after the earthquake...",
+"WCDEarthquake.Alex.2": "$query !PLAYER_NPC_RELATIONSHIP Current Alex Married#Rusty was barking when the earth shook, I believe Rusty wanted to warn us.#$b#Rusty is such a good dog.$h|Grandma said Rusty was barking when the earth shook, I believe Rusty wanted to warn them.#$b#Rusty is such a good dog.$h",
+"WCDMayo.Alex": "Why mayonnaise?$7",
+
+//Elliott
+"WCDTornadoH.Elliott.1": "The tornado was rather scary, living in a shack makes me feel like it will be carried up into the sky!$2#$b#...Wait that just gave me an idea, I must write it down!$0",
+"WCDTornadoH.Elliott.2": "$query !PLAYER_NPC_RELATIONSHIP Current Elliott Married#Felt like I would become Dorothy and fly away with those winds...$2|My dear @, I am only glad to have been with you as the tornado passed.$0#$b#Perhaps you'd be the Toto to my Dorothy?$l",
+"WCDEruption.Elliott.1": "Do you see the burning pyre far behind the distant waves?$s#$b#Perhaps the Island is mourning...$s",
+"WCDEruption.Elliott.2": "The faint glow across the sea has made me come up with a new idea for %book.",
+"WCDEclipse.Elliott.1": "The contrast between light and darkness...#$b#Yes, that's a good plot...#$b#I should write it down before I forget...",
+"WCDEclipse.Elliott.2": "The darkness of the eclipse makes me think a the second installment for %book.#$b#Maybe you'd like to read it when it's done.$h",
+"WCDHeatwave.Elliott.1": "At least leaving by the ocean has the benefit of a chilly ocean breeze.",
+"WCDHeatwave.Elliott.2": "Needless to say some of my sealing waxes have melted...$s",
+"WCDLocust.Elliott.1": "The buzzing couldn't let me think at all, I barely wrote a single word.$a",
+"WCDLocust.Elliott.2": "At least Willy caught some bugs for bait.",
+"WCDNorthLight.Elliott.1": "@, do you ever marvel at the beauty of this world?$l",
+"WCDNorthLight.Elliott.2": "Perhaps I could capture the northern lights into a scene of %book.",
+"WCDMeteor.Elliott.1": "Stardust is always described as magical in fantasy books.#$b#Perhaps it is the truth they write.",
+"WCDMeteor.Elliott.2": "Stardust is always described as magical in fantasy books.#$b#Perhaps those authors have seen such a beauty in the night sky before.",
+"WCDHeavyRain.Elliott.1": "It is difficult to leave my cabin when there is a torrential rain falling upon it.$s",
+"WCDHeavyRain.Elliott.2": "Perhaps today should be just for writing...",
+"WCDHail.Elliott.1": "The smaller bits of ice are not of much concern...#$b#Now the large chunks have gone through my roof before.",
+"WCDHail.Elliott.2": "Ice is quite sharp don't you think @.#$b#Maybe that is why its used in so many painful metaphors.",
+"WCDBlizzard.Elliott.1": "It is difficult to leave my cabin when there is almost no visibility outside.$s",
+"WCDBlizzard.Elliott.2": "I am surprised at some of the fishermen and participants of the Squid Fest.#$b#They are willing to endure a snow storm...",
+"WCDEarthquake.Elliott.1": "The ink glass may have accidentally tipped over all my manuscript...$s#$b#Thankfully the cabin itself is intact.",
+"WCDEarthquake.Elliott.2": "The cabin doesn't look like much, but the old wooden planks barely creaked when the earth started shaking.#$b#Willy did run to see if I was still in one piece.$h",
+"WCDMayo.Elliott": "One doesn't always see mayonnaise raining from the sky...$1#$b#An odd image, but strangely true in this town...$1",
+
+//Harvey
+"WCDTornadoH.Harvey.1": "Are you alright? The tornado passed by real close to %farm farm, hope you are not injured.#$b#If anything, feel free to pass by the clinic.",
+"WCDTornadoH.Harvey.2": "Is everthing ok @? The tornado passed by real close to %farm farm, hope you are not injured.#$b#If anything, feel free to pass by the clinic.",
+"WCDEruption.Harvey.1": "Stay safe if you are heading to Ginger Island...$s#$b#Hopefully the damage does not reach the southern beach.",
+"WCDEclipse.Harvey.1": "Just make sure not to look at the eclipse directly.#$b#Also protect your eyes with shades, and your head with a hat when working outside in the farm @.",
+"WCDEclipse.Harvey.2": "Its a great phenomenon to witness safely.$h#$b#Maybe I should make an announcement to ensure others watch the eclipse safely.",
+"WCDHeatwave.Harvey.1": "Make sure to stay well hydrated!",
+"WCDHeatwave.Harvey.2": "I have a few free samples from the clinic. [(O)SPF]#$b#This should help a bit if you are working under the sun.$h#$b#Though I highly recommend you stay indoors during the heatwave.",
+"WCDVolcanicAsh.Harvey.1": "Stay safe if you are heading to Ginger Island...#$b#Volcanic ash can get into your lungs, making it difficult to breathe...",
+"WCDVolcanicAsh.Harvey.2": "Try not to inhale volcanic ash and fumes whilst visiting Ginger Island.#$b#I'd recommend wearing a Face Mask at least.",
+"WCDSmogCC.Harvey.1": "Even though smog still blows in from Zuzu City, it has been less detrimental recently.$h",
+"WCDSmogCC.Harvey.2": "Air quality has been in decline over the years, but there has been some improvement in the areas near Pelican Town.$h",
+"WCDSmogJoja.Harvey.1": "Air pollution has become worse in the Valley, perhaps a Face Mask is a must now...$s",
+"WCDSmogJoja.Harvey.2": "Recent studies show that Joja Corportation may be involved in the decrease of air quality in Zuzu City and the surrounding areas...$a#$b#I should get more medicine for respiratory infections...$s",
+"WCDLocust.Harvey.1": "Hey @! Don't forget to wear something to protect you from the swarm.#$b#Here, I have an extra one. [(O)SprayBug]",
+"WCDLocust.Harvey.2": "Don't let those insects get to you, they could carry some illnesses.#$b#Here, I have an extra one. [(O)SprayBug]",
+"WCDMeatball.Harvey.1": "Is it bad if I want it to rain coffee?$h%revealtaste:Harvey:(O)395",
+"WCDMeatball.Harvey.2": "Is it bad if I want it to rain wine?$h%revealtaste:Harvey:(O)348",
+"WCDNorthLight.Harvey.1": "It is incredible we can watch these northern lights.",
+"WCDNorthLight.Harvey.2": "Astronomical phenomena is interesting to watch, just don't stay out too late.",
+"WCDMeteor.Harvey.1": "It is lucky to witness a meteor shower, don't you think @?",
+"WCDMeteor.Harvey.2": "Astronomical phenomena is interesting to watch, just don't stay out too late.",
+"WCDHeavyRain.Harvey.1": "Make sure not to get wet with these heavy rains, it's easier to get soaked cold and sick.",
+"WCDHeavyRain.Harvey.2": "Don't forget to use an umbrella for these rains.",
+"WCDHail.Harvey.1": "Hail can hit quite hard and cause a wound to the head, try to not go outside when the pieces start falling.",
+"WCDHail.Harvey.2": "Hope you stay indoors when it hails, it could do some serious damage if it falls on you.",
+"WCDBlizzard.Harvey.1": "Try to stay warm as the blizzard makes the temperatures outside plummet.",
+"WCDBlizzard.Harvey.2": "Hmmm, maybe an extra scarf would be best...",
+"WCDSandstorm.Harvey.1": "Sand particles and dust can cause problems to your lungs, make sure to wear protective gear if you are thinking about walking into a sandstorm...",
+"WCDSandstorm.Harvey.2": "Sand particles can damage the eyes, make sure to wear protective gear if you are thinking about walking into a sandstorm...",
+"WCDWildfire.Harvey.1": "Wildfires can cause an incredible amount of smoke, make sure to steer clear from the area.#$b#Burns are not the only thing to worry about you know.",
+"WCDWildfire.Harvey.2": "Try not to go near the flames from the wildfire, burns are nothing fun.",
+"WCDEarthquake.Harvey.1": "Are you alright? The earthquake was scary, hope you are not injured.#$b#If anything, feel free to pass by the clinic.",
+"WCDEarthquake.Harvey.2": "Is everthing ok @? The earthquake was scary, hope you are not injured.#$b#If anything, feel free to pass by the clinic.",
+"WCDSleet.Harvey.1": "Be careful, sleet can cause the ground to become slippery.#$b#Don't go falling at the Town Square and getting rushed to the clinic!$h",
+"WCDSleet.Harvey.2": "Be careful, sleet can sometimes cause the ground to become slippery.#$b#Don't go falling and getting rushed to the clinic!$h",
+"WCDMayo.Harvey": "I am not entirely sure if raining mayonnaise is the best for one's health...$2",
+
+//Sam
+"WCDTornadoH.Sam.1": "@! Are you alright? The tornado passed by real close.#$b#Mom made me secure all the windows and we hunkered up in my room.#$b#Vincent was really scared too.",
+"WCDTornadoH.Sam.2": "$query PLAYER_HAS_MET Current Kent#The tornado passed by real close.#$b#Dad made me secured all the windows and we hunkered up in my room.#$b#Mom was really scared too.|The tornado passed by real close.#$b#Mom made me secure all the windows and we hunkered up in my room.#$b#Vincent was really scared too.",
+"WCDEruption.Sam.1": "Saw the lava glow from the docks at the beach. I kind of forget Ginger Island has an active volcano.",
+"WCDEruption.Sam.2": "$query PLAYER_HAS_MAIL Any Island_Resort#It's scary to think we could have been at the island resort just a few days ago. Though Willy said the lava doesn't reach that far...|Saw the lava glow from the docks at the beach. It was hard to convince Vincent to get back to bed, he was curious about it.$h",
+"WCDEclipse.Sam.1": "It gets eeriely quiet during an eclipse, perhaps because all the animals think its night time.#$b#Maybe mom will let me sleep in too.$h",
+"WCDEclipse.Sam.2": "It gets eeriely quiet during an eclipse, perhaps because all the animals think its night time.#$b#Doubt I'll be able to practice guitar much if everything is so quiet...$s",
+"WCDHeatwave.Sam.1": "If Vincent asks me to go to the beach with this weather, I will have to seriously think about it...",
+"WCDHeatwave.Sam.2": "It's really too hot to  be outside, isn't it @...",
+"WCDVolcanicAsh.Sam.1": "It's a bit dangerous to be outside now.#$b#Harvey told mom not to let Vincent out if there is ash falling, but Vincent sometimes doesn't like to be inside for too long.",
+"WCDVolcanicAsh.Sam.2": "Harvey told mom not to let Vincent out if there is ash falling, but Vincent sometimes doesn't like to be inside for too long.#$b#I try my best to keep him entertained then.$h",
+"WCDTornadoW.Sam.1": "Mom was quite nervous when we saw the tornado watch warning, she made me go get everything ready.#$b#At least Vincent is still very much distracted from it all.",
+"WCDTornadoW.Sam.2": "Mom was quite nervous when we saw the tornado watch warning, she made me go get everything ready.#$b#Vincent was wondering why we were securing the windows.",
+"WCDLocust.Sam.1": "It's not good to be out in this weather.#$b#This little bugs, they do bite and sting at you badly.",
+"WCDLocust.Sam.2": "Bugs are out to get me!$h#$b#Seriously though, they do bite and sting.",
+"WCDMeatball.Sam.1": "It smells like pizza rain.$h%revealtaste:Sam:(O)206",
+"WCDMeatball.Sam.2": "It smells like maple rain, with extra crunch.$h%revealtaste:Sam:(O)731",
+"WCDNorthLight.Sam.1": "Mom and Vincent really love to see the lights.#$b#Although Vincent usually has to sleep in early and miss half of it.",
+"WCDNorthLight.Sam.2": "Hey @, do you like to see the northern lights? I sure love to look at them through the night.",
+"WCDMeteor.Sam.1": "Mom and Vincent really love to see the meteors.#$b#Although Vincent usually has to sleep in early and miss half of it.",
+"WCDMeteor.Sam.2": "Hey @, do you like to see the meteor shower? I sure love to look at them through the night.",
+"WCDHeavyRain.Sam.1": "Vincent always want to jump into puddles and search for snails.#$b#Although mom would prefer if it were after the rain and not whilst its still raining.$h",
+"WCDHeavyRain.Sam.2": "Rainy weather is great, I can play the guitar without mom complaining too much about the noise.$h",
+"WCDBlizzard.Sam.1": "It's freezing!",
+"WCDBlizzard.Sam.2": "Who knew snow was so cold it burnt.#$b#I need more gloves and scarfs.",
+"WCDMudRain.Sam.1": "Mom grounded me and Vincent once because we played out in the rain.#$b#We got all muddy and dirty and dragged it back into the house.$h",
+"WCDMudRain.Sam.2": "Maybe I can go catch a snail or two or Vincent. Mom will surely freak out when she sees them in the kitchen.$h",
+"WCDEarthquake.Sam.1": "Hey @, you ok? The earthquake cause some things to drop, but just a few plates were broken. Nothing serious.",
+"WCDEarthquake.Sam.2": "Hope nothing serious happened after the earthquake.",
+"WCDFoggy.Sam.1": "Sebastian would probably say fog is perfect zombie weather, and I would definitely agree.$h",
+"WCDFoggy.Sam.2": "Foggy weather makes me want to sleep in for a little while longer...",
+"WCDSleet.Sam.1": "I once tried skating whilst it was snowing, and raining...#$b#Needless to say, mom gave me an earful as she treated my scrapes.$h",
+"WCDSleet.Sam.2": "I once tried skating whilst it was snowing, and raining...#$b#Needless to say, mom gave me an earful when she saw the bruises.$h",
+"WCDMayo.Sam": "Didn't expect it to rain mayonnaise...$1",
+
+//Sebastian
+"WCDTornadoH.Sebastian.1": "Mom has been working on improving the building structures around town to withstand most weathers and natural disasters.#$b#I think she'll be busier after the tornado.",
+"WCDTornadoH.Sebastian.2": "The tornado did pass by closest to %farm Farm, hope your crops are alright @.",
+"WCDEruption.Sebastian.1": "The lava's glow is just as entrancing as the city's lights at night. So far to reach.",
+"WCDEruption.Sebastian.2": "I wish I could visit the volcano dungeons, I already enjoy adventuring into the local mines.$h",
+"WCDEclipse.Sebastian.1": "The eclipse is really getting Maru and Demetrius excited.#$b#I am just worried about the monsters that might appear around attracted by...#$b#Hmm, I only know because the TV mentioned it, nothing more.$h",
+"WCDEclipse.Sebastian.2": "I guess my adventuring skills are worth something during the eclipse.",
+"WCDHeatwave.Sebastian.1": "Summer is already hot enough, I do not enjoy a heatwave.$a",
+"WCDHeatwave.Sebastian.2": "I am trying to convince mom to help me install an airconditioner in my room.",
+"WCDVolcanicAsh.Sebastian.1": "The falling ash makes the valley feel a bit gloomy.",
+"WCDVolcanicAsh.Sebastian.2": "I wonder how the falling ash looks like in Ginger Island, too bad we can't go whilst its happening.#$b#Wonder if I can seem some soot build up.",
+"WCDTornadoW.Sebastian.1": "Demetrius and Maru are helping mom invade my room.$a#$b#I guess it can't be helped, it's in the basement and it is the safest place to be if a tornado decides to appear.",
+"WCDTornadoW.Sebastian.2": "$query PLAYER_HEARTS Current Sebastian 6#Mom has been working on improving the building structures around town to withstand most weathers and natural disasters.#$b#I am proud of her.|Mom has been working on improving the building structures around town to withstand most weathers and natural disasters.#$b#She has been particularly busy today.",
+"WCDMeatball.Sebastian.1": "Wonder if I can find my favorite dish raining down?$h",
+"WCDMeatball.Sebastian.2": "Mmm, pumpkin soup.$h%revealtaste:Sebastian:(O)236",
+"WCDNorthLight.Sebastian.1": "The lights can be seen better from the mountains than down in town.",
+"WCDNorthLight.Sebastian.2": "$query PLAYER_HEARTS Sebastian 8#I doubt the northern lights could be as pretty if seen from the city.$l|I wonder if you can see the northern lights from the city?",
+"WCDMeteor.Sebastian.1": "Maru will probably stay up late watching the meteor shower.#$b#Me? I am just enjoying the falling stardust.",
+"WCDMeteor.Sebastian.2": "Maru is usually the one fascinated with astronomy and I can never really understand why...#$b#But I can understand the fascination behind meteor showers.$h",
+"WCDHeavyRain.Sebastian.1": "I really love rainy days, but sometimes it just makes me want to tuck in bed again.",
+"WCDHeavyRain.Sebastian.2": "At least the frogs are enjoying all this water.",
+"WCDHail.Sebastian.1": "Mom has already complained that she'll need to repair the roof if the hail keeps falling.",
+"WCDHail.Sebastian.2": "Wonder if Demetrius will ask me to help with his sample collecting again...$a",
+"WCDBlizzard.Sebastian.1": "I like cold weather, but a blizzard?",
+"WCDBlizzard.Sebastian.2": "I should stay indoors today...",
+"WCDEarthquake.Sebastian.1": "You alright @?#$b#I just hope town wasn't hit so bad.",
+"WCDEarthquake.Sebastian.2": " The earthquake had Demetrius up in a flash looking at its readings...$a#$b#I just hope town wasn't hit so bad.",
+"WCDFoggy.Sebastian.1": "Fog is perfect for what they call 'zombie' weather.$h",
+"WCDFoggy.Sebastian.2": "I like how peaceful it seems when there is a heavy blanket of fog over the town.",
+"WCDBuiltStation.Sebastian.1": "I heard mom helped you set up the pre-fabricated Mini Weather Research Station that Demetrius help develop.#$b#How is it? She put a lot of effort into it too.",
+"WCDBuiltStation.Sebastian.2": "I heard mom helped you set up the pre-fabricated Mini Weather Research Station that Demetrius help develop.#$b#I helped program the data analyzer, although neither mom nor Demetrius know.#$b#Don't tell them that the WCD commissioned me on that.",
+"WCDMayo.Sebastian": "$query PLAYER_HAS_ITEM Current MayoWater 1#Did you collect that from the rain?$0|I collected some of the rain water for Demetrius... Please take the rest of it.$5[(O)MayoWater]",
+
+//Shane
+"WCDTornadoH.Shane.1": "$d joja#I am needed first thing in the morning to clean up the mess at Joja Mart.$a|The farm animals must have been spooked last night...",
+"WCDTornadoH.Shane.2": "$d joja#Tornado can't stop company time...$a|I should help Aunt Marnie with the mess...",
+"WCDEclipse.Shane.1": "$d joja#Not even during an eclipse is there time off...$a|Wonder if I can see the eclipse with Jas.$h",
+"WCDEclipse.Shane.2": "$d joja#Monsters? That won't give me time off... *grumble grumble*$a|Monsters? I wonder how true is what the TV said...",
+"WCDHeatwave.Shane.1": "$d joja#I should invest on sunscreen, the commute is already burning my skin under this sun.$a|@, I recommend this if you are going to be outside this scorching sun.[(O)SPF]",
+"WCDHeatwave.Shane.2": "$d joja#The commute to the Mart is already burning my skin under this sun.$a|Here.[(O)SPF]",
+"WCDVolcanicAsh.Shane.1": "$d joja#Not even an imminent volcano eruption can stop the Joja schedule.$a|The ashes pile up, got to clean those up.",
+"WCDVolcanicAsh.Shane.2": "$d joja#A volcano eruption won't threaten the Joja schedule.$a|The ashes pile up, got to clean those up.",
+"WCDTornadoW.Shane.1": "$d joja#I helped Aunt Marnie secure the house in case of a tornado, at least.|At least the house has been prepared in case of a tornado.",
+"WCDTornadoW.Shane.2": "$d joja#I helped Aunt Marnie secure the house in case of a disaster, at least.|At least the house has been prepared in case of a tornado.",
+"WCDAcidRain.Shane.1": "$d joja#Rain or shine Joja has to make the dime... They better not send that again...$a|At least I won'd get soaked going to work...",
+"WCDAcidRain.Shane.2": "$d joja#Rain or shine Joja has to make the dime... They better not send that again...$a|At least I won'd get soaked going to work...",
+"WCDSmogJoja.Shane.1": "Joja's environmental regulations don't exist, so I am not surprised that they've affected the weather in Pelican Town.#$b#What with all the pollution they cause.",
+"WCDSmogJoja.Shane.2": "I wouldn't be surprised if they said in TV that Joja is causing all of this pollution near Pelican Town.$a#$b#They do dump a lot of trash into the river, so toxic fumes are not far off.",
+"WCDLocust.Shane.1": "$d joja#Swatting bugs to get to work...*grumble grumble*$a|Jas should stay indoors today, those bugs are nasty.$a",
+"WCDLocust.Shane.2": "$d joja#An attack by an insect swarm is not covered by the Joja employee insurance... Not surprised.*grumble grumble*$a|Jas should stay indoors today, those bugs are nasty.$a",
+"WCDMeatball.Shane.1": "$d joja#Rain or shine Joja has to make the dime... Its even raining food...$a|Maybe I can catch something good for Jas...",
+"WCDMeatball.Shane.2": "$d joja#Rain or shine Joja has to make the dime... Not even when its raining food...$a|Maybe I can catch something good for Aunt Marnie...",
+"WCDNorthLight.Shane.1": "$d joja#Perhaps I get to see the northern lights with Jas... Nah, work won't let me out early enough.$s|Perhaps I get to see the meteor shower with Jas...$h",
+"WCDNorthLight.Shane.2": "$d joja#Perhaps I get to see the northern lights with my family... Nah, work won't let me out early enough.$s|Perhaps I get to see the meteor shower with Aunt Marnie and Jas...$h",
+"WCDMeteor.Shane.1": "$d joja#Perhaps I get to see the meteor shower with Jas... Nah, work won't let me out early enough.$s|Perhaps I get to see the meteor shower with Jas...$h",
+"WCDMeteor.Shane.2": "$d joja#Perhaps I get to see the meteor shower with Aunt Marnie and Jas... Nah, work won't let me out early enough.$s|Perhaps I get to see the meteor shower with my family...$h",
+"WCDHeavyRain.Shane.1": "$d joja#Rain or shine Joja has to make the dime... They better not send that again...$a|At least I won'd get soaked going to work...",
+"WCDHeavyRain.Shane.2": "$d joja#Rain or shine Joja has to make the dime... They better not send that again...$a|At least I won'd get soaked going to work...",
+"WCDHail.Shane.1": "$d joja#Make a run for it or get pelted by hail.$a|The farm animals should be inside, safe and warm.$h",
+"WCDHail.Shane.2": "$d joja#Hail is not covered by the Joja employee insurance... Not surprised.*grumble grumble*$a|The farm animals should be inside, safe and warm.$h",
+"WCDBlizzard.Shane.1": "$d joja#A tiny blizzard can't stop a Joja employee, they said...$a|At least during a blizzard I can stay home.$h",
+"WCDBlizzard.Shane.2": "$d joja#It's just a bit of snow, they said...$a|The farm animals should be inside, safe and warm.$h",
+"WCDMudRain.Shane.1": "$d joja#Rain or shine Joja has to make the dime... They better not send that again...$a|At least I won'd get soaked going to work...",
+"WCDMudRain.Shane.2": "$d joja#Rain or shine Joja has to make the dime... They better not send that again...$a|At least I won'd get soaked going to work...",
+"WCDSandstorm.Shane.1": "$d joja#Just a bit of course, rough, and irritating sand...$a|At least all the windows are tightly shut...",
+"WCDSandstorm.Shane.2": "$d joja#Just a bit sand getting in everywhere...$a|At least all the windows are tightly shut...",
+"WCDWildfire.Shane.1": "$d joja#Burnt down house? Not a problem. Late for work? Problem... I dislike Joja's HR Department...$a|Please help me keep an eye on Jas whilst we wait out on the wildfire, I don't want her to get hurt...$s",
+"WCDWildfire.Shane.2": "$d joja#Joja's employee insurance policies are a joke...$a|Please help me keep an eye on Jas whilst we wait out on the wildfire, I don't want her to get hurt...$s",
+"WCDEarthquake.Shane.1": "$d joja#Half the shelves are probably a mess...$a|The farm animals were spooked after the earthquake...",
+"WCDEarthquake.Shane.2": "$d joja#Half the shelves are probably a mess...$a|Was %pet spooked after the earthquake?",
+"WCDFoggy.Shane.1": "$d joja#Can barely see, where is the mart...$a|I can enjoy of the foggy mornings now...",
+"WCDFoggy.Shane.2": "$d joja#Last time it was this foggy in the morning I almost crashed against a lamp post going to work...$a|I can enjoy of the foggy mornings now...",
+"WCDSleet.Shane.1": "$d joja#The ground is slippery maybe I can get to Joja Mart faster, wait no I don't actually want to get there faster.$a|Aunt Marnie better be careful with the slippery ground.",
+"WCDSleet.Shane.2": "$d joja#The ground is slippery maybe I could skip on work? Who am I kidding...$s|I better help with the animals some more, the ground is too slippery for it to be safe...",
+"WCDMayo.Shane": "$d joja#Great now its raining mayonnaise...What's next?$a|Jas says she wants mayo water to prank Vincent because of his snail prank, well she'll get mayo water.$h",
+
+///
+///BACHELORETTES
+///
+
+//Abigail
+"WCDTornadoH.Abigail.1": "You doing alright @? Is %pet ok too? Hope they weren't scared with the tornado.",
+"WCDTornadoH.Abigail.2": "Are you alright @? I heard dad say that the tornado might have affected the crops.$s",
+"WCDEruption.Abigail.1": "The volcano in Ginger Island has erupted, I wonder how the lava looks like up close.",
+"WCDEruption.Abigail.2": "Did you see the glow from the volcano? I was in awe.",
+"WCDEclipse.Abigail.1": "A dark sky is truly ominous, but quite fitting for an adventure.$h",
+"WCDEclipse.Abigail.2": "$query !WEATHER Town kath.weathering_Darkness#Seb told me he saw some monsters during the eclipse, I barely saw one...$s|Seb told me he is getting ready to fight monsters.#$b#Do you think there will be many coming out?",
+"WCDHeatwave.Abigail.1": "Dad's complaining about the shipment coming in from %place, maybe the heatwave didn't help much on that end.",
+"WCDHeatwave.Abigail.2": "Today is a hot summer, maybe the fireflies will come out?",
+"WCDDryLightning.Abigail.1": "The unexpected thunder and lightning makes it even more thrilling, I like this weather.$h",
+"WCDDryLightning.Abigail.2": "Mom asked me not to be out too late, I have to help with dinner and housechores.$s",
+"WCDVolcanicAsh.Abigail.1": "A dark sky is truly ominous, but quite fitting for an adventure.$h",
+"WCDVolcanicAsh.Abigail.2": "Mom is making me wear a face mask if any more ash keeps falling.",
+"WCDTornadoW.Abigail.1": "Dad's been busy protecting the shop, whilst mom does the same for the house.#$b#Me, I've just been asked to stay out of trouble for now...$s",
+"WCDTornadoW.Abigail.2": "The gloomy weather is perfect for an adventure, don't you think @?",
+"WCDLocust.Abigail.1": "Mom has had me swatting bugs all day.",
+"WCDLocust.Abigail.2": "Dad is afraid that the produce from %place will be ruined by the bugs...",
+"WCDMeatball.Abigail.1": "$query !WEATHER Town kath.weathering_Meatball#The sure smelled tasty!$h|The rain sure smells tasty today.$h",
+"WCDMeatball.Abigail.2": "Wonder where all the Chocolate Cake went?$h%revealtaste:Abigail:(O)220",
+"WCDNorthLight.Abigail.1": "The northern lights illuminate the night sky, it's perfect for adventuring at night.$h",
+"WCDNorthLight.Abigail.2": "$query !WEATHER Town kath.weathering_NorthernLights#Mom tried to convince dad to stay up late to see the northern lights... But that didn't go well.$s#$b#I did sneak out to see them myself.$h|Mom is trying to convince dad to stay up late to see the northern lights.",
+"WCDMeteor.Abigail.1": "$query !WEATHER Town kath.weathering_StarFalling#Wonder if Sam and Seb managed to see the stardust floating down.|Wonder if Sam and Seb will see the meteor shower?",
+"WCDMeteor.Abigail.2": "There is something fantastical and mysterious about meteor showers...$h",
+"WCDHeavyRain.Abigail.1": "I go out in the rain some times, but went its pouring its best to stay indoors.#$b#I say it mostly because mom would definitely scold me.",
+"WCDHeavyRain.Abigail.2": "I go out in the rain some times, but went its pouring its best to stay indoors.",
+"WCDHail.Abigail.1": "Didn't know weather could hurt you that bad!$a#$b#Here I got this from mom, says it helps the pain go away.[(O)351]",
+"WCDHail.Abigail.2": "Avoiding the pelting hail was thrilling, but I don't want to be doing that again.",
+"WCDBlizzard.Abigail.1": "At least I can wear my thickest coats in this cold weather.$h",
+"WCDBlizzard.Abigail.2": "Hey @, mom made some of this, you can take some for the cold weather.$h[(O)395 (O)253]",
+"WCDEarthquake.Abigail.1": "Did you feel that earthquake, @? It really shook things up.$h",
+"WCDEarthquake.Abigail.2": "Did you feel that earthquake? It woke me and mom up!#$b#No, dad just slept right through it.$h",
+"WCDFoggy.Abigail.1": "Foggy weather? Zombie weather!$h",
+"WCDFoggy.Abigail.2": "Maybe I can sneak up on Sam if the fog ever gets thick enough.",
+"WCDBuiltArray.Abigail.1": "I saw the glowy stone in the farm, can you tell me more about it?#$b#I just find it very interesting and spooky.$h",
+"WCDBuiltArray.Abigail.2": "That glowing stone in the farm wasn't there before, or was it?#$b#Still, I really like it, it gives some spooky vibes.$h",
+"WCDMayo.Abigail": "It rains mayo!$h",
+
+//Emily
+"WCDTornadoH.Emily.1": "%Emily mutters a small prayer to Yoba.",
+"WCDTornadoH.Emily.2": "@, are you alright? That tornado was scary!$s",
+"WCDEruption.Emily.1": "%Emily mutters a small prayer to Yoba.",
+"WCDEruption.Emily.2": "Yoba please protect all those in the Fern Islands...$7",
+"WCDEclipse.Emily.1": "There has been some strong negative energy in the air, may Yoba bless you @.$7",
+"WCDEclipse.Emily.2": "An eclipse is a wonderful sight.$h",
+"WCDTornadoW.Emily.1": "It's a little dreary to think about coming danger.#$h#Maybe I can cheer up Haley with one of her favorites.",
+"WCDTornadoW.Emily.2": "A gloomy weather can sometimes be a peaceful blessing.#$b#Some time to take it easy and to find some calm.",
+"WCDSmogJoja.Emily.1": "It's sad to see how the air pollution from the city has made its way to Pelican Town.$s",
+"WCDSmogJoja.Emily.2": "It seems like after Joja stayed, the air pollution has become worse in the valley.$s",
+"WCDLocust.Emily.1": "Insects are an important part of nature, try not to harm them ok @?",
+"WCDLocust.Emily.2": "I know the swarming insects can be annoying, but they are only passing by.",
+"WCDMeatball.Emily.1": "Rain can smell of a delicious Survival Burger!$h%revealtaste:Emily:(O)241",
+"WCDMeatball.Emily.2": "$query !WEATHER Town kath.weathering_Meatball#Gus will probably be a bit worried with all the food that rained down.|Gus will probably be a bit worried with all this food raining down.",
+"WCDNorthLight.Emily.1": "$query WEATHER Town kath.weathering_NorthernLights#I am sure Haley will take some pictures of the lights tonight.|Haley took some wonderful pictures of the northern lights.#$b#Maybe you can ask her to see them.$h",
+"WCDNorthLight.Emily.2": "The northern lights are a wonderful sight to behold.",
+"WCDMeteor.Emily.1": "Meteor showers are sometimes depicted as seeds of life in old books of Yoba.",
+"WCDMeteor.Emily.2": "Stardust is said to be the blessings from Yoba, left behind since the universe was golden in splendor.$h",
+"WCDBlizzard.Emily.1": "Make sure to stay warm @, here I have some warm tea. [(O)614]",
+"WCDBlizzard.Emily.2": "It's cold recently, make sure to wear extra clothes.#$b#Maybe a scarf and earmuffs too.",
+"WCDSandstorm.Emily.1": "I hope Sandy isn't getting too badly affected by a sandstorm...$s",
+"WCDSandstorm.Emily.2": "$query WEATHER Town kath.weathering_Sandstorm#I wish I could go visit Sandy, see if she is alright in this sandstorm.$s|I am sure Sandy is safe from the sandstorm, I received a letter from her.",
+"WCDEarthquake.Emily.1": "An earthquake is perhaps the earth's way of getting rid of the negative energy.",
+"WCDEarthquake.Emily.2": "Hope the earthquake didn't startle you @.",
+"WCDMayo.Emily": "Mayo rain? Yoba, what a blessing.$h",
+
+//Haley
+"WCDTornadoH.Haley.1": "I am glad Emily was home when the tornado passed.#$b#I'd worry if she was still out there with those winds.",
+"WCDTornadoH.Haley.2": "That tornado was so scary.$s",
+"WCDEclipse.Haley.1": "An eclipse can come out interesting in a photograph.#$b#I just need to setup the special lense.",
+"WCDEclipse.Haley.2": "Emily has been telling me about negative energies, so I will be doing some cleansing therapy later with her.$h",
+"WCDHeatwave.Haley.1": "It's been unbearably hot recently, I could definitely use some refreshment.",
+"WCDHeatwave.Haley.2": "$query PLAYER_HEARTS Current Haley 6#@ is my makeup runny?#$b#I feel I've been sweating buckets.|It's too hot today, I am not in the mood to talk.$3",
+"WCDDryLightning.Haley.1": "The static electricity makes my hair frizz.$3",
+"WCDDryLightning.Haley.2": "I worked on styling my hair today, but the weather is not really helping...$s",
+"WCDAcidRain.Haley.1": "These rains are messing up the clothes Emily made for me.$s",
+"WCDAcidRain.Haley.2": "These rains are ruining my hair.$3",
+"WCDLocust.Haley.1": "All I can say is bug spray those things.$3#$b#Here.[(O)SprayBug]",
+"WCDLocust.Haley.2": "The swarm is the worst, the bugs get tangled in my hair.$3",
+"WCDNorthLight.Haley.1": "$query WEATHER Town kath.weathering_NorthernLights#I'll be taking some photographs of the lights tonight.$h#$b#Hopefully they come out pretty.|With the new stabilizer Emily bought for me I could take many photos of the northern lights.$h",
+"WCDNorthLight.Haley.2": "The northern lights are like paint across the sky.$h",
+"WCDMeteor.Haley.1": "It's difficult to capture something as fleeting as the meteor showers. I prefer to enjoy just watching them with Emily.",
+"WCDMeteor.Haley.2": "Stardust is so mysterious, there are many books that talk about it. All from different cultures and religions.$h#$b#No, no I haven't read them.",
+"WCDHeavyRain.Haley.1": "I am just glad for the waterproof makeup I got on my last trip to Zuzu City.",
+"WCDHeavyRain.Haley.2": "Emily's clothes are the best, have you seen her waterproof vest?#$b#It's warm and comfortable and she can dye it in all kinds of colours.$h",
+"WCDBlizzard.Haley.1": "I love my sister, but sometimes I think she will suffocate me in layers upon layers of warm winter clothes.",
+"WCDBlizzard.Haley.2": "Double jackets for the cold, an Emily must.$h",
+"WCDMudRain.Haley.1": "Mud in rain?!$a",
+"WCDMudRain.Haley.2": "Well needless to say the rain ruined my outfit.$s",
+"WCDWildfire.Haley.1": "I'll steer away from the forest for a while until the fire is controlled.",
+"WCDWildfire.Haley.2": "I don't want to worry Emily by trying to get close to the fire to take pictures...",
+"WCDSleet.Haley.1": "When the ground is slippery, I prefer to wear some grippy boots.$h#$b#Fashionable grippy boots.",
+"WCDSleet.Haley.2": "When it rains and snows, Emily makes sure I wear double jackets.$h#$b#She's always looking out for me.$h",
+"WCDMayo.Haley": "What is wrong with this weather?$3",
+
+//Leah
+"WCDTornadoH.Leah.1": "The tornado passed really close to your farm, are you alright @?",
+"WCDTornadoH.Leah.2": "I could only hear the windows shake and the wood creak as the tornado passed close by.",
+"WCDEclipse.Leah.1": "It's a bit hard to work on minute details for the piece when the sun is out.$h",
+"WCDEclipse.Leah.2": "Perhaps I can watch the eclipse after finishing just a little work.",
+"WCDHeatwave.Leah.1": "It's been so hot recently.#$b#@ make sure to stay hydrated.",
+"WCDHeatwave.Leah.2": "I can't be outside without a bit of this, make sure to use it well.$h[(O)SPF]",
+"WCDAcidRain.Leah.1": "These recent rains have ruined the wood faster...$s",
+"WCDAcidRain.Leah.2": "These recent rains have caused the paints to peel from the works outside...$s#$b#Acid rain can be really corrosive.",
+"WCDLocust.Leah.1": "The swarming bugs are annoying, I hope they don't chew at my fresh wood shipment.",
+"WCDLocust.Leah.2": "@ make sure to stay indoors, or at least you could wear some of this.[(O)SprayBug]",
+"WCDNorthLight.Leah.1": "Wonder if I can capture the northern lights in a piece of art.",
+"WCDNorthLight.Leah.2": "The northern lights are so pretty.",
+"WCDMeteor.Leah.1": "Stardust makes some really special painting when you mix in some refined dust.$h",
+"WCDMeteor.Leah.2": "A meteor shower is a really special event.",
+"WCDHeavyRain.Leah.1": "Such heavy rains rot the wood faster...#$b#It makes it difficult to create pieces out of good wood.",
+"WCDHeavyRain.Leah.2": "Such heavy rains are bad for getting good timber.",
+"WCDHail.Leah.1": "I wonder if I can sculpt little statues from the fallen hail...",
+"WCDHail.Leah.2": "Do you think I could use hail to make an ice piece?",
+"WCDBlizzard.Leah.1": "The cold makes my fingers numb, I can't really paint or sculpt like this...$s",
+"WCDBlizzard.Leah.2": "My heater is not working that well, it's been freezing!",
+"WCDWildfire.Leah.1": "I hope Marnie's animals are alright, they might've gotten spooked with the fire.",
+"WCDWildfire.Leah.2": "My cabin is made to be fireproof, but a fire in Cindersap forest is still worrisome.",
+"WCDEarthquake.Leah.1": "Some of my paint buckets tipped over due to the earthquake, I had to clean up all that mess...$7",
+"WCDEarthquake.Leah.2": "Some of my works almost fell with the earthquake.#$b#Thankfully the larger sculptures are secured.",
+"WCDFoggy.Leah.1": "Foggy mornings make me want to drink something warm before starting to work on my next project.",
+"WCDFoggy.Leah.2": "Foggy mornings inspire me to paint.$h",
+"WCDSleet.Leah.1": "Hey @! Careful the ground has been slippery recently.",
+"WCDSleet.Leah.2": "The slippery ground outside my cabin is difficult to navigate sometimes...",
+"WCDMayo.Leah": "Raining mayonnaise?$2",
+
+//Maru
+"WCDTornadoH.Maru.1": "We deployed a tank of sensors successfully into the tornado!$h#$b#We will hopefully get to see the readings soon with my dad.",
+"WCDTornadoH.Maru.2": "Sebastian helped program some sensor for us to use on tornados so we can study them some more.",
+"WCDEruption.Maru.1": "The volcano in Ginger Island is known as Mount Cinder, although that is not its original name...#$b#It's also referred to in some documents as GI-VEI-2.$h",
+"WCDEruption.Maru.2": "Dad is sending out one of my robots to retrieve some lava samples from the volcano in Ginger Island.",
+"WCDFarmerAid1.Maru.1": "Heard from dad that Ferngill's WCD is sending out aid to farmers due to the drought, hope they helped you too.",
+"WCDFarmerAid1.Maru.2": "Heard that Ferngill's WCD is sending out aid to farmers due to the drought, hope they helped you too.",
+"WCDFarmerAid2.Maru.1": "Heard from dad that Ferngill's WCD is sending out a little bit of aid to farmers due to the drought, hope they helped you too.",
+"WCDFarmerAid2.Maru.2": "Heard from dad that Ferngill's WCD is sending out a little bit of aid to farmers due to the drought, hope they helped you too.",
+"WCDEclipse.Maru.1": "Sebastian keeps worrying about monsters when some astrological events occur...#$b#I am not sure how they are connected but if he believes in it then we should be cautious.",
+"WCDEclipse.Maru.2": "An eclipse is always a good oportunity to use my telescope!$h#$b#Safely, of course, and we can also do some observations on astronomical phenomena.",
+"WCDHeatwave.Maru.1": "Some of my projects are heat resistant, but I am certainly not.$2",
+"WCDHeatwave.Maru.2": "It's too hot for questions, hear wear this.[(O)SPF]",
+"WCDVolcanicAsh.Maru.1": "Maybe we can get some readings on Ginger Island's volcano activity.",
+"WCDVolcanicAsh.Maru.2": "The winds must be carrying a lot of the ash and sulphur from Ginger Island...",
+"WCDTornadoW.Maru.1": "It can feel a bit tense when we don't know if a tornado will hit or not.",
+"WCDTornadoW.Maru.2": "We can only estimate if a tornado will touch ground with some limited data.#$b#I only wish we could study them some more to be more timely and accurate with those predictions.",
+"WCDAcidRain.Maru.1": "Acid rain can be harmful to crops and building structures, but it can also be harmful to your health.#$b#Stay safe @.",
+"WCDAcidRain.Maru.2": "I make sure to cover my telescope with a special alloy so it can resist acidic rain.#$b#It's also an experiment on how long it takes dad to notice it changed colour.$h",
+"WCDSmogJoja.Maru.1": "Our readings have shown increased air pollution due to Joja's commercial activity moving closer to the valley...$s#$b#We filed in a report but I doubt they will read it.$s",
+"WCDSmogJoja.Maru.2": "We have filed a report on Joja's carbon emmissions and its effects on the valley.#$b#We are still waiting on news.",
+"WCDLocust.Maru.1": "I have been swatting the little pests away for an hour at least.$a",
+"WCDLocust.Maru.2": "Insect swarms can happen during certain conditions, but needless to say they are a bit annoying.#$b#Here have some.[(O)SprayBug]",
+"WCDMeatball.Maru.1": "I wouldn't believe rain could smell like Rhubarb Pie!$h%revealtaste:Maru:(O)222",
+"WCDMeatball.Maru.2": "I can't believe it can rain food!$h",
+"WCDNorthLight.Maru.1": "The northern lights are caused by the interaction between our planet's magnetic field and charged particles from the sun, which enter the our atmosphere...#$b#Oh sorry, I might go on a rant there.$h",
+"WCDNorthLight.Maru.2": "$query WEATHER Town kath.weathering_NorthernLights#No science facts today, I'll just enjoy the light show.$h|Did you see the northern lights? They were spectacular.",
+"WCDMeteor.Maru.1": "$query WEATHER Town kath.weathering_StarFalling#I'll stay up to watch the meteors with my telescope.$h|I stayed up watching the meteors with my telescope.",
+"WCDMeteor.Maru.2": "$query WEATHER Town kath.weathering_StarFalling#I wonder if Sebastian will finish up his work to watch the meteors...|Sebastian was squinting at the night sky trying to see the meteors rush by.$h",
+"WCDHail.Maru.1": "Hail can hurt a lot, so make sure to wear protective gear.",
+"WCDHail.Maru.2": "The roof is doubly reinforced since the first time mom caught a whiff of potential hail in the valley.",
+"WCDBlizzard.Maru.1": "Walking under a blizzard...#$b#Not fun.$2",
+"WCDBlizzard.Maru.2": "It's been cold @! Make sure to stay warm by the heater or at least a cozy fireplace.#$b#I am just glad the room is heated for when I tinker around.",
+"WCDMudRain.Maru.1": "The high nutrients in the rain probably come from the minerals in the Calico Desert's sands and rock.",
+"WCDMudRain.Maru.2": "High nutrients in the rain are mostly good for plant life and growth, although sometimes there can be some detrimental effects...",
+"WCDSandstorm.Maru.1": "My glasses help a bit when it comes to the blowing sands, but they can really hurt your eyes if you don't protect them.",
+"WCDSandstorm.Maru.2": "Shifting sands in Calico Desert can sometimes uncover buried artifacts.#$b#I am not too interested in the study of hieroglyphs, but our local museum curator might find an interest in them.",
+"WCDWildfire.Maru.1": "A wildfire can usually occur when the ground is very dry and the sun manages to create a spark.#$b#Of course, I am simplifying a little but that's the main idea.",
+"WCDWildfire.Maru.2": "Dad once worked with Ferngill's WCD to make a fire-resistant barrier...",
+"WCDLandslide.Maru.1": "The landslide happened close to home.#$b#It was a bit scary but I trust in my mom's building safety protocols she implemented last year.",
+"WCDLandslide.Maru.2": "The landslide displace some debris, so be careful when going past the area.",
+"WCDBigCrop.Maru.1": "When a highly nutritious rain falls, it is hypothesized that it can make crops grow big overnight.$h",
+"WCDBigCrop.Maru.2": "Highly nutritious rain is said to be able to grow big crops overnight, though I still haven't been able to witness this.",
+"WCDEarthquake.Maru.1": "The readings were very peculiar, most coming from the South.#$b#Hm? I hope you are alright after the earthquake.",
+"WCDEarthquake.Maru.2": "The tremors measures...#$b#The location and depth... Oh.#$b#Yes, this could be a new active fault line...Or wait...#$b#Sorry @, you said something?",
+"WCDBuiltStation.Maru.1": "Dad worked hard to research the best ways to help mitigate the weather effects on crops.#$b#Hope you've been able to use his invention.$h",
+"WCDBuiltStation.Maru.2": "Mom worked with dad to make the station pre-fabricated so its ready to be used.$h#$b#Hope you've been able to put their hard work to use.",
+"WCDMayo.Maru": "Raining mayo?!$9#$b#I must get a sample!$1",
+
+//Penny
+"WCDTornadoH.Penny.1": "I hope Jas and Vincent weren't scared with the tornado.$s",
+"WCDTornadoH.Penny.2": "Hope you are ok after the tornado.",
+"WCDEruption.Penny.1": "Jas and Vincent asked me a lot about the volcano after seeing the glow of the lava.$h#$b#Maybe I should get more books about them, pictures included of course!$h",
+"WCDEruption.Penny.2": "Maybe I can get more books on volcano activity for class.#$b#I'll make sure they have pictures for Jas and Vincent.$h",
+"WCDEclipse.Penny.1": "The eclipse gets the children excited.$h",
+"WCDEclipse.Penny.2": "Maybe I can get more books on astronomical events for class.#$b#I'll make sure they have pictures for Jas and Vincent.$h",
+"WCDTornadoW.Penny.1": "$query PLAYER_HAS_MAIL Any pamHouseUpgrade#It used to be so much scarier living on the trailer and wondering if we'd be carried away by the tornado.|It's a little scary thinking there might be a tornado ready to carry the trailer away.$s",
+"WCDTornadoW.Penny.2": "Tornado watch warnings always make me feel nervous.$s",
+"WCDLocust.Penny.1": "Bugs can pack a nasty bite, make sure to wear some of this.[(O)SprayBug]",
+"WCDLocust.Penny.2": "I made sure both Vincent and Jas are covered in insect repellant...",
+"WCDMeatball.Penny.1": "I didn't know rain could smell like Tom Kha Soup!$h%revealtaste:Penny:(O)218",
+"WCDMeatball.Penny.2": "!!!$h#$b#The rain can smell like Poppyseed Muffin?$h%revealtaste:Penny:(O)651",
+"WCDNorthLight.Penny.1": "The northern lights look like out of a fairytale book.$h",
+"WCDNorthLight.Penny.2": "We are lucky to be able to see the northern lights here in town.",
+"WCDMeteor.Penny.1": "The meteor shower looks like out of a fairytale book.$h",
+"WCDMeteor.Penny.2": "There is not a lot of information about stardust.",
+"WCDHeavyRain.Penny.1": "It's difficult to walk outside when it rains heavily...$s",
+"WCDHeavyRain.Penny.2": "$query PLAYER_HAS_MAIL Any pamHouseUpgrade#At least we no longer have to deal with leaks.|The trailer can get a bit leaky if it rains heavily...$s",
+"WCDHail.Penny.1": "I should cancel classes if it hails some more...$s",
+"WCDHail.Penny.2": "@ take care of falling ice.#$b#I might have to cancel classes if it goes on...",
+"WCDBlizzard.Penny.1": "I should cancel classes if snows so heavily...$s",
+"WCDBlizzard.Penny.2": "Make sure to stay warm @.#$b#Care for a hot coffee? [(O)395 (O)253]",
+"WCDWildfire.Penny.1": "$query WEATHER Town kath.weathering_Wildfire#I am worried about Jas.$s#$b#It's not only the fire but the smoke too.$s|I am glad Jas and Marnie are alright, the fire did not reach their place.",
+"WCDWildfire.Penny.2": "$query WEATHER Town kath.weathering_Wildfire#I hope Jas is staying away from the fire.$s#$b#I am relieved that Jas and Marnie are safe from the fire.",
+"WCDEarthquake.Penny.1": "Mom didn't feel the earthquake at all...#$b#Sometimes I worry about her if I wasn't around.$s",
+"WCDEarthquake.Penny.2": "@ did you feel the earthquake? It was scary!$s",
+"WCDFoggy.Penny.1": "It's a bit difficult to see on foggy mornings, but I do quite enjoy them.$h",
+"WCDFoggy.Penny.2": "It's nice to have some peace and quiet on an early foggy morning.$",
+"WCDSleet.Penny.1": "Careful, its a little bit slippery.",
+"WCDSleet.Penny.2": "The ground is a little slippery, make sure to step carefully @.",
+"WCDMayo.Penny": "Well, raining mayonnaise sounds straight from a fairytale book.$h",
+
+///
+///VILLAGERS
+///
+
+//Caroline
+
+"WCDEclipse.Caroline.1": "Watching an eclipse from the sunroom is always an interesting experience.",
+"WCDEclipse.Caroline.2": "I am certain Abigail will sneak out again, specially since it gets dark during an eclipse.#$b#I'll let it slide just this time.$h",
+"WCDHeatwave.Caroline.1": "It's a bit hot today right @?",
+"WCDHeatwave.Caroline.2": "The sun has been shining down harshly, maybe I won't stay out too long.",
+"WCDTornadoW.Caroline.1": "We are always stocked and prepared in case of disaster.",
+"WCDTornadoW.Caroline.2": "Make sure to always have non-perishables stocked in case of a disaster.",
+"WCDSmogJoja.Caroline.1": "Ever since Joja decided to stay and expand, business has been slow.#$b#It's even worse that they have cause so much air pollution in town.",
+"WCDSmogJoja.Caroline.2": "I get a terrible cough with the smog...$s",
+"WCDLocust.Caroline.1": "The bug swarm is very annoying...$s#$b#Has Pierre offered you some of the bug spray?",
+"WCDLocust.Caroline.2": "I sometimes help Pierre order shipments to keep everything in stock. So I understand when he complains about delayed shipments.$s",
+"WCDMeatball.Caroline.1": "Pierre managed to catch a Fish Taco for me.$h%revealtaste:Caroline:(O)213",
+"WCDMeatball.Caroline.2": "I got Abigail some Blackberry Cobbler.$h%revealtaste:Abigail:(O)611#$b#I am just glad I could catch one of her favourite whilst it poured food outside.",
+"WCDNorthLight.Caroline.1": "Abigail really likes to see the lights, maybe we can see them next time from the second floor.$h",
+"WCDNorthLight.Caroline.2": "Maybe I can stay late someday watching the northern lights.$h",
+"WCDMeteor.Caroline.1": "Stardust is not that shiny, although some people think it is due to the name.",
+"WCDMeteor.Caroline.2": "Maybe I can stay late someday watching the meteor shower, and seeing the stardust float down.$h",
+"WCDBlizzard.Caroline.1": "Pierre will definitely complain on delays with shipments from %place.",
+"WCDBlizzard.Caroline.2": "It's a bit cold today, here I made some extra tea.$h [(O)614]",
+"WCDMayo.Caroline": "Raining mayo sure is an odd weather to have...$2",
+
+//Clint
+"WCDEruption.Clint.1": "Some blacksmiths that use materials with magical properties like to use lave to temper the substances into the weapon.",
+"WCDEruption.Clint.2": "$query PLAYER_HAS_MAIL Current reachedCaldera#You found the forge?$4|Did you know there are legends of a forge atop the volcano.",
+"WCDEclipse.Clint.1": "An eclipse can be a bit dark.#$b#It'll make the glow of the furnace brighter.$h",
+"WCDEclipse.Clint.2": "I don't usually go out to see the strange weather occuring in the valley.#$b#I just enjoy working on my personal projects when its quiet outside.",
+"WCDHeatwave.Clint.1": "It's hot outside, so working by the furnace is a bit unbearable today.",
+"WCDHeatwave.Clint.2": "It's been quite hot outside... Perhaps I'll work by the furnace when it cools down at night.",
+"WCDMeatball.Clint.1": "I got Emily a Survival Burger from the food rain. I hope she'll like it.",
+"WCDMeatball.Clint.2": "I got some Artichoke Dip from the rain.$h%revealtaste:Clint:(O)605",
+"WCDNorthLight.Clint.1": "Emily mentioned she likes watching the lights with her sister, I am glad she can spend some of her time with family.$h",
+"WCDNorthLight.Clint.2": "The northern lights make the night feel more chilly.#$b#Or maybe that's what I hope when working near fire.",
+"WCDMeteor.Clint.1": "Stardust has been used in smithing before. Some records show it was used in weapons to make them have a better affinity to magic.",
+"WCDMeteor.Clint.2": "Emily mentioned she likes watching the meteors with her sister, I am glad she can enjoy her time with family.$h",
+"WCDMayo.Clint": "Mayonnaise? From the sky? No, thank you.$3",
+
+//Demetrius
+"WCDTornadoH.Demetrius.1": "We got some sensors to work in recording the tornado data.$h",
+"WCDTornadoH.Demetrius.2": "You alright @? What's the damage to %farm?",
+"WCDEruption.Demetrius.1": "Maru made a heat resistant robot that we will use to collect some lava samples.$h",
+"WCDEruption.Demetrius.2": "Clint asked us to share some of the lava samples, I wonder what for...",
+"WCDFarmerAid1.Demetrius.1": "I sent in a report on the effects of the drought in Pelican Town.#$b#I saw that %farm seems to have been affected a bit.",
+"WCDFarmerAid1.Demetrius.2": "Ferngill's WCD sometimes gives out small monetary aid to farmers affected by extreme weather.",
+"WCDEclipse.Demetrius.1": "Any time there is an astronomical phenomena I lose Maru completely to her telescope.$h",
+"WCDEclipse.Demetrius.2": "Sebastian really likes adventuring during an eclipse.",
+"WCDHeatwave.Demetrius.1": "The hot weather can cause you to sweat and get easily dehydrate, so don't forget to keep up with your hydration.",
+"WCDHeatwave.Demetrius.2": "Bless my wife, she insisted on the airconditioning. ",
+"WCDTornadoW.Demetrius.1": "Robin get nervous during a tornado watch, so she'll go into Sebastian's room and prepare it for us to stay there.",
+"WCDTornadoW.Demetrius.2": "Sebastian doesn't like us intruding in his room, but he just sighs and let's Robin fuss around when the weather turns bad.",
+"WCDAcidRain.Demetrius.1": "The data gathered between the rains in Calico Desert and here in Pelican Town just came in, acid rain becomes worse after the wind carries in contamination from Zuzu City.",
+"WCDAcidRain.Demetrius.2": "Make sure to protect your crops @.#$b#Or at least protect yourself if you'll be walking around under these rains.",
+"WCDSmogJoja.Demetrius.1": "Maru and I have been keeping record of the air quality in Pelican Town.#$b#Needless to say it's become worse after Joja's takeover.$s",
+"WCDSmogJoja.Demetrius.2": "Have you seen these measurements? We are basically breathing in car exhaust!$a",
+"WCDLocust.Demetrius.1": "The swarm patterns change every so often, but always keep a bug spray handy. [(O)SprayBug]",
+"WCDLocust.Demetrius.2": "When a swarm passes through %place there's about a {{RangeLocust}}% chance that crops will fail.",
+"WCDMeatball.Demetrius.1": "Food can rain from the sky?$6#$b#I must get some samples!",
+"WCDMeatball.Demetrius.2": "Sebastian got me some Ice Cream from the rain.$h%revealtaste:Demetrius:(O)233",
+"WCDNorthLight.Demetrius.1": "$query WEATHER Town kath.weathering_NorthernLights#Will you see the northern lights @?|Did you get to see the northern lights @?",
+"WCDNorthLight.Demetrius.2": "We used to watch the northern lights together when Maru was younger, now they are both off doing their own thing.$s#$b#Well, my wife still loves to go out and see them sometimes.$h",
+"WCDMeteor.Demetrius.1": "Any time there is an astronomical phenomena I lose Maru completely to her telescope.$h",
+"WCDMeteor.Demetrius.2": "We always collect some stardust during a meteor shower.#$b#It's not only for research, but many believe it can bring good fortune.#$b#Robin finds it romantic so I always get her a little crystal containing them.$h",
+"WCDMudRain.Demetrius.1": "A nutrient-rich rain can contain a varying number of... nutrients.$h",
+"WCDMudRain.Demetrius.2": "What we call a mud rain, is actually very true. Fine sand particles from the desert get mixed in with the rain, giving it that particular muddy colour.",
+"WCDBigCrop.Demetrius.1": "We got reports with Maru on big crops growing over night!$h#$b#We will get a sample or two.",
+"WCDBigCrop.Demetrius.2": "I've been writing a report on the effects of nutrient-rich rain, I've had a break through with last night's big crops just popping out.",
+"WCDEarthquake.Demetrius.1": "We got some reading on the last earthquake, so are gathering even more data as we speak.$h",
+"WCDEarthquake.Demetrius.2": "Robin takes pride on the anti-seismic stuctures she has developed for the building around town.",
+"WCDBuiltStation.Demetrius.1": "I hope the station can be of great use to you.$h#$b#Me and my wife worked really hard to make it accessible to farmers across Ferngill.",
+"WCDBuiltStation.Demetrius.2": "Have you used the little weather station yet?#$b#Maru actually wanted to name it something different but the WCD rejected it.$h",
+"WCDMayo.Demetrius": "$query !PLAYER_HEARTS Current Demetrius 5#Hey @, do you happen to have a sample from the mayonnaise rain?|Sebastian is helping me collected some sample from this special rain.$h",
+
+//Evelyn
+"WCDEclipse.Evelyn.1": "I hope my flowering plants don't get upset with the lack of sun due to the eclipse.$s",
+"WCDEclipse.Evelyn.2": "George refuses to leave the house during an eclipse.",
+"WCDHeatwave.Evelyn.1": "Oh dear, make sure to cover yourself in sunscreen. [(O)SPF]",
+"WCDHeatwave.Evelyn.2": "Here have some, I have spare since my skin is sensitive to the harsh sun. [(O)SPF]",
+"WCDLocust.Evelyn.1": "Those little bugs are not good for you, here you can use this. [(O)SprayBug]",
+"WCDLocust.Evelyn.2": "Make sure not to wear perfume when the little bugs swarm. Use this one dear. [(O)SprayBug]",
+"WCDMeatball.Evelyn.1": "My grandson got us some food... from the rain?#$b#I am not sure if I misunderstood him...",
+"WCDMeatball.Evelyn.2": "Alex brought me some Stuffing.$h%revealtaste:Evelyn:(O)239#$b#I do love some warm and fluffy Stuffing.$h",
+"WCDBlizzard.Evelyn.1": "Make sure to stay warm dear.",
+"WCDBlizzard.Evelyn.2": "The cold makes my joints ache.$s",
+"WCDMayo.Evelyn": "Oh dear, I never thought I'd see such weather.",
+
+//George
+"WCDEclipse.George.1": "My wife is worried the eclipse might affect her flowering plants.",
+"WCDEclipse.George.2": "With an eclipse, it gets dark outside.#$b#Hm, the more reason to stay indoors.",
+"WCDHeatwave.George.1": "It's hot today, Evelyn made some refreshing juice for me.$h",
+"WCDHeatwave.George.2": "It's hot these days, I am just glad the house has a good air flow.",
+"WCDLocust.George.1": "That buzzing...$a",
+"WCDLocust.George.2": "If only I could swat them all...$a",
+"WCDMeatball.George.1": "I never knew it could rain food...",
+"WCDMeatball.George.2": "Did you perhaps managed to get some Fried Mushrooms in the rain?%revealtaste:George:(O)205",
+"WCDBlizzard.George.1": "Evelyn just keeps giving me more blankets, I am about to roast under them all.",
+"WCDBlizzard.George.2": "Cold outside?",
+"WCDLandslide.George.1": "A landslide is so dooming for mine workers...",
+"WCDLandslide.George.2": "The landslide was thankfully far from town.",
+"WCDEarthquake.George.1": "The earthquake reminded me of the mines...",
+"WCDEarthquake.George.2": "Evelyn was worried about the porcelain rather than herself.#$b#She has always been like that, worrying about anything and everyone else.",
+"WCDMayo.George": "What is wrong with the weather now?",
+
+//Gus
+"WCDTornadoH.Gus.1": "@ are you alright? Are the crops at %farm well?#$b#You produce some of the best ingredients in town! Of course I am worried.$3",
+"WCDTornadoH.Gus.2": "At least the tornado is now gone. Hope it didn't cause too much problems at %farm.",
+"WCDEruption.Gus.1": "$query PLAYER_HAS_MAIL Any Island_Resort#Won't be able to go to resort whilst the eruption is ongoing...|The eruption looks terrifying even from here.",
+"WCDEruption.Gus.2": "I will brainstorm on a 'lava special' dish.$h",
+"WCDEclipse.Gus.1": "An eclipse might bring in more people, don't you think @?#$b#At least I get hungrier for dinner.$h",
+"WCDEclipse.Gus.2": "How about an eclipse snack? [(O)403]",
+"WCDHeatwave.Gus.1": "Need something refreshing for these hot days?",
+"WCDHeatwave.Gus.2": "How about an icy treat? On the house. [(O)233]",
+"WCDHurricane.Gus.1": "$query PLAYER_HAS_MAIL Any Island_Resort#Won't be able to go to resort if the tropical storm is around...|A tropical storm, a hurricane?#$b#I am thinking about a drink name.$h",
+"WCDHurricane.Gus.2": "$query PLAYER_HAS_MAIL Any Island_Resort#Hope the resort isn't badly damaged by the hurricane...|How about a drink?",
+"WCDAcidRain.Gus.1": "All the good quality ingredients from %place have rotted due to the rains.$s",
+"WCDAcidRain.Gus.2": "These rains are terrible for business...$s",
+"WCDLocust.Gus.1": "The bugs swarming might affect the good quality ingredients I get from %place to cook the dishes at the saloon.$s",
+"WCDLocust.Gus.2": "All the good quality ingredients from %place have been delayed.$s",
+"WCDMeatball.Gus.1": "Didn't know food could rain down from the sky.#$b#Maybe I should commission Robin for a custom roof.#$b#I must look to the positive side of things @.",
+"WCDMeatball.Gus.2": "I managed to catch a Fish Taco.$h%revealtaste:Gus:(O)213",
+"WCDNorthLight.Gus.1": "Maybe I can make a special dish inspired by the northern lights.",
+"WCDNorthLight.Gus.2": "I only get to see the lights after closing the saloon.",
+"WCDBlizzard.Gus.1": "Stay warm @!",
+"WCDBlizzard.Gus.2": "Maybe a hot drink to keep warm?",
+"WCDMayo.Gus": "I wonder if I can use the raining mayonnaise for some dish?$1",
+
+//Jas
+"WCDEclipse.Jas.1": "$d joja#Uncle Shane promises to watch the eclipse with me next time.|Uncle Shane always accompanies me to watch the eclipse.",
+"WCDEclipse.Jas.2": "It gets really dark during an eclipse, I asked Ms. Penny why.$3",
+"WCDLocust.Jas.1": "Aunt Marnie says that when there is a swarm I should stay indoors.$3",
+"WCDLocust.Jas.2": "Aunt Marnie doesn't like it when the bugs swarm, and I don't like it either...#$b#It affects the animals badly.$s",
+"WCDMeatball.Jas.1": "Does it rain Pink Cake?$3%revealtaste:Jas:(O)221",
+"WCDMeatball.Jas.2": "Does it rain Plum Pudding?$3%revealtaste:Jas:(O)604",
+"WCDNorthLight.Jas.1": "Ms. Penny says we can learn more about the northern lights after she gets more books.$h",
+"WCDNorthLight.Jas.2": "$query WEATHER Town kath.weathering_StarFalling#Maybe Uncle Shane can stay up late with me to see the lights!$h|Uncle Shane was a bit sleepy when we were watching the lights, but he stayed up with me to see them.$h",
+"WCDMeteor.Jas.1": "$query WEATHER Town kath.weathering_StarFalling#I can stay up late to see the meteors!$h|I stayed up late to see the meteors.#$b#I am still a bit sleepy.",
+"WCDMeteor.Jas.2": "Ms. Penny says we can learn more about meteors after she gets more books.$h",
+"WCDHeavyRain.Jas.1": "Aunt Marnie always worries when it rains a lot.",
+"WCDHeavyRain.Jas.2": "Ms. Penny said we might have to cancel class.$s",
+"WCDBlizzard.Jas.1": "Aunt Marnie makes sure I wear double sweater when its this cold outside.",
+"WCDBlizzard.Jas.2": "Maybe I can go make a snowman after all this snowfall.$h",
+"WCDWildfire.Jas.1": "Aunt Marnie worried about the fire, she told me to stay indoors.",
+"WCDWildfire.Jas.2": "$query WEATHER Forest kath.weathering_Wildfire#I can't go out to to use my jump rope...$s|Maybe Aunt Marnie will let me go outside again.$h",
+"WCDMayo.Jas": "$d joja#Raining mayonnaise sounds fun!$h|Uncle Shane is helping me get some of the mayo!$h",
+
+//Jodi
+"WCDEclipse.Jodi.1": "During an eclipse it gets really dark out, but Sam and Vincent get excited to go out.$h",
+"WCDEclipse.Jodi.2": "I usually just stay indoors during the eclipse.#$b#I get a little nervous when it's so dark outside.",
+"WCDHeatwave.Jodi.1": "It's been hot recently, I better make something fresh for dinner.",
+"WCDHeatwave.Jodi.2": "Don't forget to use sunscreen, the sun is rather harsh recently.",
+"WCDSmogJoja.Jodi.1": "Ever since Joja decided to stay the air pollution has been worse.$a",
+"WCDSmogJoja.Jodi.2": "Joja did make a lot of community improvements...$0#$b#But if only they could stop polluting so much.$a",
+"WCDLocust.Jodi.1": "@ are the bugs still swarming? Here have some. [(O)SprayBug]",
+"WCDLocust.Jodi.2": "Better stay protected from the bugs, here. [(O)SprayBug]",
+"WCDMeatball.Jodi.1": "Sam managed to bring some tasty Crispy Bass that rained down.$h%revealtaste:Jodi:(O)214",
+"WCDMeatball.Jodi.2": "Some Eggplant Parmesan just fell right on our doorstep.$h%revealtaste:Jodi:(O)231",
+"WCDNorthLight.Jodi.1": "$query WEATHER Town kath.weathering_NorthernLights#I wonder if Vincent will manage to stay awake until late.$h|Vincent fell asleep halfway through the night, but at least he got to see the lights.$h",
+"WCDNorthLight.Jodi.2": "$d kent#The northern lights are very beautiful, I wish my husband could enjoy them without feeling sad.$s|The northern lights are so beautiful @, I wish my husband was here to enjoy them.$s",
+"WCDHeavyRain.Jodi.1": "Rain can fall rather loudly in our roof, so Sam uses this as an opportunity to play his guitar.#$b#He thinks it drowns out the sound.",
+"WCDHeavyRain.Jodi.2": "Hope you haven't gotten soaked with these rains.",
+"WCDHail.Jodi.1": "I am trying to tell Vincent and Sam not to play outside if it hails, but they've made it into a challenge.#$b#Who can bat the most chunks...$h",
+"WCDHail.Jodi.2": "Hail can fall rather loudly in our roof, so Sam uses this as an opportunity to play his guitar.#$b#He thinks it drowns out the sound.",
+"WCDBlizzard.Jodi.1": "Make sure to wear lots of warm clothes!",
+"WCDBlizzard.Jodi.2": "Sam refuses to wear more than a jacket and his beenie.$4#$b#Well at least Vincent still listens to me.$h",
+"WCDWildfire.Jodi.1": "I hope Marnie and Jas are alright, although the fire started far from their home.",
+"WCDWildfire.Jodi.2": "Vincent was worried about Jas due to the fire in Cindersap forest.",
+"WCDEarthquake.Jodi.1": "That earthquake sure shook everything up. I though the shelves would topple over!$s",
+"WCDEarthquake.Jodi.2": "Everything was shaking and clattering, but I am glad it didn't last long.",
+"WCDMayo.Jodi": "I just hope the mayonnaise won't clog the rain gutter...$4",
+
+//Kent
+"WCDTornadoH.Kent.1": "Jodi was prepared for the tornado, we were all safe at home.",
+"WCDTornadoH.Kent.2": "@ you alright? Were you hurt?#$b#It seems you are quite alright, the tornado really stressed me out.",
+"WCDEruption.Kent.1": "At least the volcano is far into the ocean...",
+"WCDEruption.Kent.2": "The rumbling of the eruption...#$b#I don't quite like it.",
+"WCDEclipse.Kent.1": "It gets pretty dark during an eclipse, stay safe @.",
+"WCDEclipse.Kent.2": "$query WEATHER Town kath.weathering_Darkness#Vincent and Sam seem excited about the eclipse.#$b#I'd rather not think about it.|Vincent and Sam were excited about the eclipse.#$b#I chose to stay close to home instead.",
+"WCDVolcanicAsh.Kent.1": "I...#$b#...$3#$b#...$s",
+"WCDVolcanicAsh.Kent.2": "Sorry, I'd rather not talk right now.$s#$b#The ash brings back terrible memories...$s",
+"WCDLocust.Kent.1": "A bug swarm?#$b#Could be worse...$s",
+"WCDLocust.Kent.2": "Here, Jodi is basically giving them out to everyone.[(O)SprayBug]",
+"WCDMeatball.Kent.1": "If only some Fiddlehead Risotto could have rained down after being drafted...$s%revealtaste:Kent:(O)649",
+"WCDMeatball.Kent.2": "Caught some raining Roasted Hazelnuts.$h%revealtaste:Kent:(O)607",
+"WCDNorthLight.Kent.1": "After I was drafted I rarely got to enjoy something as simple as the northern lights.$s",
+"WCDNorthLight.Kent.2": "I did sometimes get to see the northern lights after being drafted.$s",
+"WCDWildfire.Kent.1": "Hope Marnie and Jas are alright...",
+"WCDWildfire.Kent.2": "Jodi says the fire has already been contained.",
+"WCDEarthquake.Kent.1": "Jodi was quite nervous after the earthquake.#$b#I don't blame her.",
+"WCDEarthquake.Kent.2": "Sam always takes good care of Vincent.",
+"WCDFoggy.Kent.1": "Morning fog makes everything so quiet, it puts me on edge.$5",
+"WCDFoggy.Kent.2": "I don't quite enjoy the morning fog...$5",
+"WCDMayo.Kent": "I never expected the weather to be like this.",
+
+//Lewis
+"WCDTornadoH.Lewis.1": "@! Hope %farm is ok.",
+"WCDTornadoH.Lewis.2": "You alright @? Tornado didn't damage your crops too badly?",
+"WCDFarmerAid1.Lewis.1": "Ferngill's WCD has helped in giving aid to farmers affected by the drought.#$b#Let me know if you got yours, otherwise I'll have some words with them.",
+"WCDFarmerAid1.Lewis.2": "I hope these droughts haven't affected the produce imports from %place for Pierre.$s",
+"WCDFarmerAid2.Lewis.1": "The drought has been a bit harsh, are your crops doing ok @?",
+"WCDFarmerAid2.Lewis.2": "Ferngill's WCD has helped in giving aid to farmers affected by the drought.#$b#Let me know if you got yours, otherwise I'll have some words with them.",
+"WCDEclipse.Lewis.1": "An eclipse is an interesting event for all townsfolk.$h",
+"WCDEclipse.Lewis.2": "The Wizard warned me to tell the townsfolk to be careful when venturing outside during an eclipse.#$b#I wonder why though...",
+"WCDHeatwave.Lewis.1": "Its been very hot recently, make sure to stay hydrated.",
+"WCDHeatwave.Lewis.2": "It's hot outside recently, hope this doesn't affect your crops too badly.",
+"WCDHurricane.Lewis.1": "Ginger Island is sometimes hit by a hurricane or tropical storm, so do be careful when going there.",
+"WCDHurricane.Lewis.2": "$query PLAYER_HAS_MAIL Any Island_Resort#The resort in Ginger Island closes when there is a hurricane. Pretty understandable really.|Ginger Island is sometimes hit by a hurricane or tropical storm, so do be careful when going there.",
+"WCDSmogCC.Lewis.1": "The air quality in Pelican Town is much better than in the city.#$b#Although the winds sometimes blow in some of the smog.",
+"WCDSmogCC.Lewis.2": "Perhaps I can put aside some funding to start an environmental program...#$b#Hm, I'd better talk to Demetrius about the possibilities.",
+"WCDSmogJoja.Lewis.1": "The air quality in Pelican Town has worsen since Joja decided to stay...$s",
+"WCDSmogJoja.Lewis.2": "Do you think we'd ever improve on our air quality?#$b#I tried taxing and fining Joja to get them to reduce their pollution, but they simply pay up everything and never change.$s",
+"WCDLocust.Lewis.1": "Be careful when the bugs swarm, they can be devastating to crops.#$b#Also highly detrimental to your health, so stay safe @.",
+"WCDLocust.Lewis.2": "Most of the produce from %place got damaged by the migrating swarm...$s.",
+"WCDMeatball.Lewis.1": "After the food rained down, I can only imagine the cleaning costs.$5",
+"WCDMeatball.Lewis.2": "At least I found some Vegetable Medley in the rain.$h%revealtaste:Lewis:(O)200",
+"WCDNorthLight.Lewis.1": "The northern lights can be seen so clearly from town...#$b#Perhaps we could be open for more tourists then.",
+"WCDNorthLight.Lewis.2": "The northern lights are quite a spectacle.",
+"WCDMeteor.Lewis.1": "The meteor shower can be seen so clearly from town...#$b#Perhaps we could be open for more tourists then.",
+"WCDMeteor.Lewis.2": "$query WEATHER Town kath.weathering_StarFalling#Will you see the meteor shower @?|Did you see the meteor shower @?",
+"WCDBlizzard.Lewis.1": "Electricity will probably go up due to heating...$s#$b#Maybe I can accomodate some funds to subsidize the electricity bills...#$b#Oh, @, didn't see you there. Hope the cold is treating you well.$h",
+"WCDBlizzard.Lewis.2": "It's been very cold recently, make sure to stay warm.",
+"WCDWildfire.Lewis.1": "I called Ferngill's WCD as soon as I saw the blaze!$s#$b#I'd like to hope the town is safe.",
+"WCDWildfire.Lewis.2": "I hope the townsfolk living by the forest are alright.$s",
+"WCDEarthquake.Lewis.1": "I am glad I could subsidize Robin's renovations to make the homes in town sturdier.$h",
+"WCDEarthquake.Lewis.2": "You ok after that earthquake @?#$b#Your grandpa's old house is one of the sturdiest in town.",
+"WCDMayo.Lewis": "Raining mayonnaise?#$b#I should get the cleaning services called...$5",
+
+//Linus
+"WCDTornadoH.Linus.1": "Are you alright @? A tornado can be very destructive.",
+"WCDTornadoH.Linus.2": "A tornado is a great force of nature, hope you are alright after it passed by so close to %farm.",
+"WCDEruption.Linus.1": "A volcano eruption can be very destructive, but overtime the cooled down lava nourishes the land.",
+"WCDEruption.Linus.2": "Careful when treading near a volcano eruption, the gases can be a little deadly.",
+"WCDEclipse.Linus.1": "Take care during an eclipse, it gets difficult to see what is out there.",
+"WCDEclipse.Linus.2": "An eclipse can cause everything to get really dark and difficult to see, so be careful alright?",
+"WCDLandslide.Linus.1": "I am glad the landslide was far from my tent, so I am alright @.$h",
+"WCDLandslide.Linus.2": "$query PLAYER_HEARTS Current Linus 6#Robin was worried for my safety after the landslide.#$b#I didn't expect such kindness.|I am glad the landslide was far from my tent.",
+"WCDFish.Linus.1": "Nature can sometimes give you a great bounty.$h",
+"WCDFish.Linus.2": "Perhaps some fish have been scared onto shore by the hurricane at Ginger Island.",
+"WCDBigCrop.Linus.1": "Nature is very giving.$h",
+"WCDBigCrop.Linus.2": "Sometimes the rain can make things grow overnight.",
+"WCDMayo.Linus": "Nature can give such strange bounties sometimes.$1",
+
+//Marnie
+"WCDTornadoH.Marnie.1": "$query PLAYER_HAS_PET Current#Is %pet alright? They must have been scared by the tornado.|Are you alright?",
+"WCDTornadoH.Marnie.2": "Hope %farm wasn't that badly affected by the tornado.",
+"WCDEclipse.Marnie.1": "During an eclipse sometimes the animals think its nighttime and they get all sleepy.#$b#Much like Shane.$h",
+"WCDEclipse.Marnie.2": "$d joja#Too bad Shane is always tired from work.|Shane really wants to spend some more time with Jas.$h",
+"WCDHeatwave.Marnie.1": "The heat is making the animals stress out.$s",
+"WCDHeatwave.Marnie.2": "It's hot outside @, best shelter yourself from the sun.",
+"WCDAcidRain.Marnie.1": "These rains are bad for both animals and crops.$s",
+"WCDAcidRain.Marnie.2": "These rains are terrible for getting good hay.$s",
+"WCDLocust.Marnie.1": "The bugs are terribly bad for the animals.#$b#They could carry diseases!",
+"WCDLocust.Marnie.2": "Make sure to wear some bug spray during a swarm, it can help a little bit against those bugs.",
+"WCDMeatball.Marnie.1": "Shane nabbed some Pumpkin Pie for me.$h%revealtaste:Marnie:(O)608",
+"WCDMeatball.Marnie.2": "The animals were eating up all the Farmer's Lunch that rained down.%revealtaste:Marnie:(O)240",
+"WCDNorthLight.Marnie.1": "Jas says Penny wants to teach them more about the northern lights.$h",
+"WCDNorthLight.Marnie.2": "$query WEATHER Town kath.weathering_NorthernLights#Jas wants to go see the northern lights.$h|Jas and Vincent stayed up a little late watching the northern lights.",
+"WCDMeteor.Marnie.1": "Stardust can sometimes make the animals sneeze.$h",
+"WCDMeteor.Marnie.2": "$query WEATHER Town kath.weathering_StarFalling#Jas wants to go see the meteor shower.$h|Jas and Vincent stayed up a little late watching the meteor shower.",
+"WCDHeavyRain.Marnie.1": "The rains are making the barn a bit cold, maybe I should set up the heater.",
+"WCDHeavyRain.Marnie.2": "The heavy rains might make the hay damp, I'll ask Shane to check up on the silo.#$b#We have to be sure there are no leaks making the hay rot.",
+"WCDBlizzard.Marnie.1": "It's very cold recently. Don't forget to provide some heating at home.",
+"WCDBlizzard.Marnie.2": "The animals can be susceptible to cold, so I make sure they can be cozy with a heater keeping them warm.",
+"WCDWildfire.Marnie.1": "$query WEATHER Forest kath.weathering_Wildfire#We are staying away from the fire.|I am just glad the fire could be contained.",
+"WCDWildfire.Marnie.2": "I am glad the Ferngill's WCD works fast, they contained the fire so quickly.",
+"WCDEarthquake.Marnie.1": "are you alright after that earthquake?",
+"WCDEarthquake.Marnie.2": "The animals were spooked by the earthquake, it took some time to calm them down.",
+"WCDMayo.Marnie": "!!!$4#$b#Sorry, I am startled by the weather.$3",
+
+//Pam
+"WCDTornadoH.Pam.1": "$query PLAYER_HAS_MAIL Any pamHouseUpgrade#Thank Yoba for this sturdy house.|Thought the trailer would be flying in the tornado soon.",
+"WCDTornadoH.Pam.2": "$query PLAYER_HAS_MAIL Any pamHouseUpgrade#I prayed to Yoba, giving thanks for this good home we have now.|I prayed to Yoba hoping that the tornado wouldn't take me and Penny along with the trailer.",
+"WCDEclipse.Pam.1": "$d bus#The bus has some good headlights so any eclipse is no problem.$h|It gets a bit dark during an eclipse...",
+"WCDEclipse.Pam.2": "Penny wants to get more books on space stuff... Got any recommendationson where to get them?",
+"WCDLocust.Pam.1": "$d bus#Bugs against the windshield, great.$4|I can only recommend a bug spray for dealing with the swarms that come to Pelican Town.",
+"WCDLocust.Pam.2": "$d bus#The bugs on the windshiled will need to be washed out soon.$4|Got this bug spray for dealing with those nasty buzzing creatures. [(O)SprayBug]",
+"WCDMeatball.Pam.1": "Glazed Yams falling from the sky is heavenly, bless Yoba.$h%revealtaste:Pam:(O)208",
+"WCDMeatball.Pam.2": "Parsnip Soup falling from the sky is heavenly, bless Yoba.$h%revealtaste:Pam:(O)199",
+"WCDNorthLight.Pam.1": "$query WEATHER Town kath.weathering_NorthernLights#Penny will enjoy seeing the lights, but I'll just stay indoors.|Penny enjoyed seeing the lights, I just stayed indoors.",
+"WCDNorthLight.Pam.2": "The lights are a pretty sight.",
+"WCDHeavyRain.Pam.1": "$d bus#Sorry, but flashfloods are no joke.$s|Heavy rains are a real drag.$s",
+"WCDHeavyRain.Pam.2": "I'd rather stay indoors with these rains.",
+"WCDBlizzard.Pam.1": "It's cold out, better grab a warm drink from Gus.",
+"WCDBlizzard.Pam.2": "$d bus#A blizzard is just what I needed...$4|Gus better have some warm drinks...",
+"WCDSandstorm.Pam.1": "$d bus#A sandstorm won't stop the bus running, but it's a little tricky to drive through.|A sandstorm is a little tricky to navigate through.",
+"WCDSandstorm.Pam.2": "$d bus#Going to the desert?|Sandstorms in the desert were always terrible to deal with when the bus still ran.",
+"WCDFoggy.Pam.1": "$d bus#It's a bit difficult to drive in the fog y'know.|It's difficult to see in the fog y'know.",
+"WCDFoggy.Pam.2": "$d bus#Foggy mornings make want to stay in bed, but the bus won't drive itself...|Foggy mornings make want to stay in bed.",
+"WCDSleet.Pam.1": "$d bus#A slippery road is a dangerous one, gotta drive slowly.|A slippery ground can cause you to get hurt, gotta walk around carefully.",
+"WCDSleet.Pam.2": "$d bus#The bus has got special tires for a good grip.|I need better shoes for this slippery weather.",
+"WCDMayo.Pam": "Can't wait to try Gus's new invention after some raining mayonnaise.",
+
+//Pierre
+"WCDTornadoH.Pierre.1": "Those were some strong winds!#$b#Is %farm doing ok?",
+"WCDTornadoH.Pierre.2": "Hope the crops at %farm were spared by that tornado.",
+"WCDEclipse.Pierre.1": "An eclipse used to be an omen of sorts for farmers back in the day, wonder if its an omen for profit margins now...",
+"WCDEclipse.Pierre.2": "$query WEATHER Town kath.weathering_Darkness#Caroline and Abigail are enjoying the eclipse.$h|Caroline and Abigail really enjoyed the eclipse.$h#$b#Though I think Abigail sneaked out to adventure in the darkness...$a",
+"WCDHeatwave.Pierre.1": "Hey @, the sun's really burning down right? I got some sunscreen in stock.$h",
+"WCDHeatwave.Pierre.2": "A free sample on the house just for today.[(O)SPF]",
+"WCDAcidRain.Pierre.1": "These rains have ruined most of the product from %place...$s",
+"WCDAcidRain.Pierre.2": "These rains won't be good for the prices...",
+"WCDLocust.Pierre.1": "Those bugs won't be good for the prices...$2",
+"WCDLocust.Pierre.2": "Hey @, those bugs have been very annoying right? I've got some bug spray in stock.$h",
+"WCDMeatball.Pierre.1": "Raining food!$h#$b#I found myself some Fried Calamari.$h%revealtaste:Pierre:(O)202",
+"WCDMeatball.Pierre.2": "Wonder how much I can get from all the rain food collected...",
+"WCDNorthLight.Pierre.1": "$query WEATHER Town kath.weathering_NorthernLights#Abigail wants to stay out to watch the northern lights, so I am helping her sneak outside without Caroline knowing.$h|Abigail wanted to stay out to watch the northern lights, so I am helped her sneak outside without Caroline knowing.$h",
+"WCDNorthLight.Pierre.2": "$query WEATHER Town kath.weathering_NorthernLights#Hope you enjoy watching the northern lights.|Hope you enjoyed watching the northern lights.",
+"WCDBlizzard.Pierre.1": "It's been a bit cold lately, you can stay by the altar for a while it's warm in there.",
+"WCDBlizzard.Pierre.2": "A warm coffee whilst you browse through the stock?$h[(O)395]",
+"WCDMudRain.Pierre.1": "$query WEATHER Town kath.weathering_MudRain#This rain is bothersome for the transport of goods from %place.|Well that rain surely made the crops even healthier.$4",
+"WCDMudRain.Pierre.2": "They said the rain was a highly nutritious one for crops, well I it doesn't make the produce from %place increase its prices.",
+"WCDBigCrop.Pierre.1": "That rain suddenly made some big crops sprout!$4#$b#I hurried over and got to harvest some for selling later.$h",
+"WCDBigCrop.Pierre.2": "Big crops, big profits.$h",
+"WCDEarthquake.Pierre.1": "That earthquake just made a mess of all the shelves, I have been restocking them since early morning.#$b#Apart from that we are all safe.$h",
+"WCDEarthquake.Pierre.2": "We are all safe, Caroline was a bit scared but she is alright.",
+"WCDMayo.Pierre": "This odd weather will probably cause problems with the stock orders...$2",
+
+//Robin
+"WCDTornadoH.Robin.1": "Once we heard the siren we stayed in Sebastian's room.#$b#His room is the basement and it's also doubly reinforced.",
+"WCDTornadoH.Robin.2": "Hey @. Hope the tornado didn't damage your crops.",
+"WCDEclipse.Robin.1": "$query WEATHER Town kath.weathering_Darkness#Maru will definitely enjoy watching the eclipse.$h|Maru definitely enjoyed watching the eclipse.$h",
+"WCDEclipse.Robin.2": "$query WEATHER Town kath.weathering_Darkness#Its a bit dark outside, maybe I'll refrain from working outdoors today.|It was really dark outside during the eclipse. I though I'd hit myself with the hammer.",
+"WCDHeatwave.Robin.1": "It's so hot today @. Make sure to wear some sunscreen.",
+"WCDHeatwave.Robin.2": "I should decrease the airconditioner's temperature settings, it's been really hot lately.",
+"WCDMeatball.Robin.1": "$query WEATHER Town kath.weathering_Meatball#It's raining food!|I managed to snatch up some Spaghetti that rained down close by.$h%revealtaste:Robin:(O)224",
+"WCDMeatball.Robin.2": "Maybe I can make the rain gutters into food collecting ones.$h",
+"WCDNorthLight.Robin.1": "$query WEATHER Town kath.weathering_NorthernLights#Maru and Sebastian will stay up late to watch the lights.$h|Maru and Sebastian stayed up late to watch the lights.$h",
+"WCDNorthLight.Robin.2": "The northern lights can be very beautiful.$h",
+"WCDMeteor.Robin.1": "Stardust is one of those things Demetrius and Maru get excited over collecting and studying.$h",
+"WCDMeteor.Robin.2": "The meteor showers can really be appreciated up here in the mountains.",
+"WCDHeavyRain.Robin.1": "All this rain... It's lucky we aren't flooding all the way up here.",
+"WCDHeavyRain.Robin.2": "Sebastian is already complaining its humid in his room, I'll be installing a better dehumidifier soon...",
+"WCDHail.Robin.1": "All this hail might cause another leak in the roof.#$b#And I just repaired...$6",
+"WCDHail.Robin.2": "I am expecting George to call soon complaining of a leaky roof.",
+"WCDBlizzard.Robin.1": "Make sure to stay warm in this weather @.",
+"WCDBlizzard.Robin.2": "Fancy a fireplace for this weather?$h",
+"WCDWildfire.Robin.1": "If you see some fences by the forest, don't worry about them catching fire.#$b#Ferngill's WCD commissioned them to be fireproof.",
+"WCDWildfire.Robin.2": "I hope Marnie and Jas are alright, even if contained, the wildfire can be very dangerous with all the smoke.",
+"WCDLandslide.Robin.1": "The landslide was near to home, I was worried we'd have to dig ourselves out of the debris.#$b#I am certain the house would withstand it though.",
+"WCDLandslide.Robin.2": "The landslide was close by, I was worried Linus might have been affected.#$b#He looks to be alright, so that is a relief.",
+"WCDEarthquake.Robin.1": "I've tried to improve various buildings around town so they can withstand most natural disasters.$h",
+"WCDEarthquake.Robin.2": "The earthquake sure shook up everything up.",
+"WCDBuiltStation.Robin.1": "The station was developed by Demetrius, and I worked on the plans to make it accessible and easy to install.#$b#It's a team effort.$h",
+"WCDBuiltStation.Robin.2": "I know Sebastian did the programming in the station's data analysis, but he is keeping it quiet from us.#$b#I know nothing ok @?",
+"WCDMayo.Robin": "Would the raining mayonnaise cause more leaky roofs?$6",
+
+//Vincent
+"WCDTornadoH.Vincent.1": "I went to sleep on Sam's bed after the tornado.$s",
+"WCDTornadoH.Vincent.2": "Everything was rattling! It was very scary.$s",
+"WCDEclipse.Vincent.1": "It gets very dark during an eclipse, it makes me a bit scared but I know my brother will be there.$h",
+"WCDEclipse.Vincent.2": "Ms. Penny said we can learn more about the eclipse when she gets some more books.$h",
+"WCDLocust.Vincent.1": "$query WEATHER Town kath.weathering_Locust#I will catch some bugs.$h|I managed to catch some bugs, though mom wasn't happy I brought them home.",
+"WCDLocust.Vincent.2": "Sam said we could go bug hunting.$h",
+"WCDMeatball.Vincent.1": "Sam got me some Cranberry Candy from the rain!$h%revealtaste:Vincent:(O)612",
+"WCDMeatball.Vincent.2": "Sam got me some Pink Cake from the rain!$h%revealtaste:Vincent:(O)221",
+"WCDNorthLight.Vincent.1": "$query WEATHER Town kath.weathering_NorthernLights#Mom said I could stay up late to watch the lights.$h|Mom let me stay up late to watch the lights.$h",
+"WCDNorthLight.Vincent.2": "Ms. Penny said we can learn more about the northern lights when she gets some more books.$h",
+"WCDMeteor.Vincent.1": "$query WEATHER Town kath.weathering_NorthernLights#Mom said I could stay up late to see the meteors.$h|Mom let me stay up late to see the meteors.$h",
+"WCDMeteor.Vincent.2": "Sam has a small collection of stardust, I wonder why though?",
+"WCDHeavyRain.Vincent.1": "Ms. Penny said that if the heavy rains continue we might have to cancel classes.$s",
+"WCDHeavyRain.Vincent.2": "Maybe I can find more snails after some rain.$h",
+"WCDBlizzard.Vincent.1": "Mom said I have to use extra clothes and a double sweater...",
+"WCDBlizzard.Vincent.2": "Sam sometimes makes hot chocolate when mom isn't home.$h",
+"WCDWildfire.Vincent.1": "I hope Jas is ok.$s#$b#Mom said a wildfire can be very scary.$s",
+"WCDWildfire.Vincent.2": "Jas is very brave, so I think the wildfire won't scare her.",
+"WCDEarthquake.Vincent.1": "I woke up because of the earthquake.#$b#Everything was shaking!",
+"WCDEarthquake.Vincent.2": "The earthquake make everything shake.",
+"WCDMayo.Vincent": "Mayo rain!$h",
+
+//Willy
+"WCDEruption.Willy.1": "The volcano is spewing lava, ye better be careful @.",
+"WCDEruption.Willy.2": "Visiting the island is a lil' dangerous for now...",
+"WCDEclipse.Willy.1": "Under the eclipse, it be a lil' like night fishin'.$h",
+"WCDEclipse.Willy.2": "Wonder if the fish would bite under the eclipse...",
+"WCDHurricane.Willy.1": "Hurricanes can some sometimes hurl 'em fish outta the water.",
+"WCDHurricane.Willy.2": "Sailing during a hurricane can be dangerous.",
+"WCDDryLightning.Willy.1": "A rainless storm can frighten all 'em fish to deeper waters.",
+"WCDDryLightning.Willy.2": "Dry storms are no good for fishin'.",
+"WCDAcidRain.Willy.1": "These rains are no good for fishin'.",
+"WCDAcidRain.Willy.2": "These rains can be poisonous for 'em fishes.",
+"WCDLocust.Willy.1": "Those bugs will be good bait.$h",
+"WCDLocust.Willy.2": "Caught some of 'em bugs for bait. Here I got ye some.%action AddItem (O)685 10",
+"WCDMeatball.Willy.1": "It be smellin' like some good ol' Mead.$h%revealtaste:Willy:(O)459",
+"WCDMeatball.Willy.2": "Mmmm, Baked Fish...$h%revealtaste:Willy:(O)198",
+"WCDNorthLight.Willy.1": "Its beautiful to watch 'em lights in the sky.$h",
+"WCDNorthLight.Willy.2": "The northern lights can make night fishin' so calming.$h",
+"WCDMeteor.Willy.1": "Meteor showers are a good omen o' luck.$h",
+"WCDMeteor.Willy.2": "Stardust can sometimes attract 'em fish to the surface.",
+"WCDHeavyRain.Willy.1": "Heavy rains can move 'em fish closer to shore.$h",
+"WCDHeavyRain.Willy.2": "Heavy rains can make some fishes attracted to the surface.",
+"WCDHail.Willy.1": "$query !WEATHER Town kath.weathering_Hail#Me shack's got a leak after the hail...$2|Me shack's gonna end wit'a leak after the hail...$2|",
+"WCDHail.Willy.2": "'Em big chunks o'ice be scaring 'em fish.$2",
+"WCDBlizzard.Willy.1": "Hope I won't get 'em sniffles for fishin' it the cold.",
+"WCDBlizzard.Willy.2": "$query IS_PASSIVE_FESTIVAL_TODAY SquidFest#Lil' ol' blizzard can't stop the squid fishin'.$h|May be a lil' cold, but some good fish can be caught when it snows.",
+"WCDMudRain.Willy.1": "Such nutrient rich rain can sometimes make 'em algae grow too much.$2#$b#Not good for 'em fish, they suffocate.",
+"WCDMudRain.Willy.2": "Algae might take over 'em waters in town with such rains...",
+"WCDFish.Willy.1": "A big haul o'fish was found by the coast, here I'll share with ye.$h[(O)142 (O)141 (O)147 (O)154 (O)131]",
+"WCDFish.Willy.2": "Found some fish by the coast, I'll give ye a piece.$h[(O)142 (O)141 (O)147 (O)154 (O)131]",
+"WCDEarthquake.Willy.1": "When the earth shakes, the fish can feel it.",
+"WCDEarthquake.Willy.2": "After an earthquake, the river bed gets all murky from the soil.",
+"WCDMayo.Willy": "This weather ought to confuse 'em fish.$2",
+
+//Wizard
+"WCDTornadoH.Wizard.1": "Sometimes the air elementals and wind spirits have disagreements that can turn rather turbulent. I hope you weren't that badly affected by them...",
+"WCDTornadoH.Wizard.2": "$query PLAYER_HEARTS Current Wizard 8#Tornados are a turbulent conclusion to a disagreement, perhaps this can help protect your crops from such power. [(O)ManaFertilizer]|#Tornados are a turbulent conclusion to a disagreement, I hope you weren't that badly affected by it...",
+"WCDEruption.Wizard.1": "The volcano has an old and ancient name that has long been forgotten...",
+"WCDEruption.Wizard.2": "Nature is a powerful force, scary as it may seem, it all has its purpose. So don't be afraid.",
+"WCDEclipse.Wizard.1": "$query WEATHER Town kath.weathering_Darkness#Great dark magic is upon us, be careful...|An eclipse like that one sometimes attracts dark forces of nature.",
+"WCDEclipse.Wizard.2": "$query WEATHER Town kath.weathering_Darkness#Be careful @, dark magic is strong today.|An eclipse like that one sometimes attracts dark forces of nature.",
+"WCDSmogCC.Wizard.1": "Pollution has already become part of nature, that so many living beings must strike a balance in order to deal with its devastating effects.",
+"WCDSmogCC.Wizard.2": "The wind spirits always try their best to dissipate the air pollution...#$b#They can only do so much though.",
+"WCDSmogJoja.Wizard.1": "The excess of human greed and hubris is sometimes outstanding...",
+"WCDSmogJoja.Wizard.2": "I wish I could do more for the choking wind spirits, but I vowed not to get too involved in the affairs of men outside of magic.",
+"WCDLocust.Wizard.1": "Insects are part of the natural order and balance, their swarming can be annoying though.",
+"WCDLocust.Wizard.2": "Make sure to protect your crops. Insects can be easily destructive when swarming.",
+"WCDMeatball.Wizard.1": "This food weather wasn't born of magic, but science.#$b#Although those two things go rather hand in hand...#$b#At times.",
+"WCDMeatball.Wizard.2": "$c 0.5#There seems to be a strong magic in this weather...Void Essence?%revealtaste:Wizard:(O)769#There seems to be a strong magic in this weather...Solar Essence?%revealtaste:Wizard:(O)768",
+"WCDNorthLight.Wizard.1": "There is strong magic in the northern lights. The tundra dwellers are also well aware of this fact.",
+"WCDNorthLight.Wizard.2": "The magic from the northern lights can sometimes bless the people basked in their light.",
+"WCDMeteor.Wizard.1": "Magic from the universe is a mysterious thing...",
+"WCDMeteor.Wizard.2": "Stardust is a very potent reagent in alchemy.",
+"WCDMudRain.Wizard.1": "Apart from the 'Green Rain' as the townsfolk call it, there is another odd occurrence of rain that is greatly awaited by all living beings in the forest.",
+"WCDMudRain.Wizard.2": "Rain is a blessing to nature as it nurtures the ground and gives strength to plants.#$b#The forest spirits celebrate such an occasion.",
+"WCDSandstorm.Wizard.1": "There is something powerful in the sands of Calico Desert.",
+"WCDSandstorm.Wizard.2": "The sands of Calico Desert come from ancient rock and earth elementals.",
+"WCDWildfire.Wizard.1": "A fire elemental has thrown a tantrum, now the forest spirits won't be too happy about it...",
+"WCDWildfire.Wizard.2": "Don't worry, the fire cannot reach this place.",
+"WCDBuiltArray.Wizard.1": "The array?#$b#It it is a very powerful protection array using the mana in the land.",
+"WCDBuiltArray.Wizard.2": "I made the array using the mana in the land. It should hold against almost any threat.#$b#Except dark magic.",
+"WCDMayo.Wizard": "Certainly mayonnaise rain is not a common occurence.#$b#It has happened before nonetheless.",
+
+
+//Dwarf (Translation Power need first)
+"WCDEruption.Dwarf.1": "The Dwarvish Forge was made to stand the heat of the lava, an eruption would make no difference.",
+"WCDEruption.Dwarf.2": "Its been a long time since the volcano was this active...#$b#The volcano's name? I don't know its original name, but my people started to call it 'Nennnu Hetu'.",
+"WCDEclipse.Dwarf.1": "Eclipse?#$b#No, this could be the Shadow People's doing.",
+"WCDEclipse.Dwarf.2": "What are the Shadow People doing outside? Why is it dark?",
+"WCDVolcanicAsh.Dwarf.1": "Its been a long time since the volcano was active...",
+"WCDVolcanicAsh.Dwarf.2": "Ash was used by my people in their crafts.",
+"WCDMeteor.Dwarf.1": "A meteor shower is said to have brought my people here.#$b#It is an old belief, but we no longer know if its true.",
+"WCDMeteor.Dwarf.2": "Stardust has a special meaning for my people.",
+"WCDLandslide.Dwarf.1": "The landslide might have caused the mines to shift, but you are quite adept at mining.",
+"WCDLandslide.Dwarf.2": "The human that lives close to the mines, I thought he'd be affected by the landslide...",
+"WCDEarthquake.Dwarf.1": "The earth shook up some nodes and look, you can have it. [(O)80 (O)82 (O)84 (O)86]",
+"WCDEarthquake.Dwarf.2": "The earth gave me a bounty of cave carrots. I shall share with you.[(O)78]",
+"WCDMayo.Dwarf": "Why does it smell like... *sniff*...Mayonnaise?",
+
+//Krobus
+"WCDEclipse.Krobus.1": "The dark eclipse is said to be when the void is closest to this plane.#$b#I am not sure if such things are true.",
+"WCDEclipse.Krobus.2": "$query !WEATHER Town kath.weathering_Darkness#Were you out there during the dark eclipse?|Perhaps I can venture out during the eclipse...",
+"WCDHeatwave.Krobus.1": "Its too hot, I am just glad its humid down here.",
+"WCDHeatwave.Krobus.2": "Its hot even the water down here wants to dry up.",
+"WCDAcidRain.Krobus.1": "The water smells almost corrosive.",
+"WCDAcidRain.Krobus.2": "The water looks poisonous now...",
+"WCDMeatball.Krobus.1": "The water flowing smells a little odd, almost like a Strange Bun.%revealtaste:Krobus:(O)203",
+"WCDMeatball.Krobus.2": "The water flowing smells a little odd, almost like some Void Mayonnaise...Almost.%revealtaste:Krobus:(O)308",
+"WCDHeavyRain.Krobus.1": "The water flow is really strong.",
+"WCDHeavyRain.Krobus.2": "The water flow is really strong, its even making some fish swim in here.[(O)142]",
+"WCDHail.Krobus.1": "$query !WEATHER kath.weathering_Hail#It sounded like breaking glass out there.|It sounds like breaking glass out there.",
+"WCDHail.Krobus.2": "Many pieces of ice have managed to get down here.",
+"WCDBlizzard.Krobus.1": "Its been colder than usual down here. Maybe I should get more of those things humans wear during this season.",
+"WCDBlizzard.Krobus.2": "Do you have a 'scarf'? Its one of those warm and soft things humans wear when its cold, right?",
+"WCDMudRain.Krobus.1": "That muddy water has caused a lot of moss to sprout at the bottom...[(O)Moss]",
+"WCDMudRain.Krobus.2": "Not sure whats making so much algae grow, perhaps its the recent water flowing in.[(O)153]",
+"WCDMayo.Krobus": "The water flowing smells a little odd, almost like a food you humans like to drink.#$b#Not drink you say?",
+
+//Leo
+"WCDEruption.Leo.1": "The volcano is angry.$s",
+"WCDEruption.Leo.2": "The volcano is very angry.$s",
+"WCDEclipse.Leo.1": "$query !WEATHER Here kath.weathering_Darkness#Where was Sun? How Sun become gone?$s|Where is Sun?$s",
+"WCDEclipse.Leo.2": "Why does the sun get dark?",
+"WCDHeatwave.Leo.1": "Sun is very angry today, I want stay in the jungle...Under leaves, there is no angry Sun.",
+"WCDHeatwave.Leo.2": "I found something fresh, it helps with angry Sun. You want? [(O)832 (O)834 (O)829]",
+"WCDHurricane.Leo.1": "Rain is more this time.$s",
+"WCDHurricane.Leo.2": "Rain and wind, both angry.$s",
+"WCDVolcanicAsh.Leo.1": "Volcano coughing, maybe feeling sick.$s",
+"WCDVolcanicAsh.Leo.2": "Sick volcano?$s",
+"WCDFish.Leo.1": "Rain and wind, scare fish to fly. I catch some, want?[(O)142 (O)131]",
+"WCDFish.Leo.2": "Rain and wind, bring fish to sand.",
+"WCDEarthquake.Leo.1": "Earth angry!$s",
+"WCDEarthquake.Leo.2": "Everything moved, parrot family scared.$s",
+"WCDMayo.Leo": "What is this rain?#$b#Taste bad.$s",
+	//Mainland
+"WCDEruption.LeoMainland.1": "The volcano is erupting...$s#$b#Hope my parrot family is alright.$s",
+"WCDEruption.LeoMainland.2": "The volcano is erupting...$s#$b#I am worried about my parrot family.$s",
+"WCDEclipse.LeoMainland.1": "$query !WEATHER Here kath.weathering_Darkness#It was so dark outside, I could barely see.#$b#Linus said it is called an 'Eclipse'.|It's so dark outside!",
+"WCDEclipse.LeoMainland.2": "Linus said its called an 'Eclipse'.#$b#@, do you know why the sun gets dark during an eclipse?",
+"WCDHeatwave.LeoMainland.1": "Its very hot here today, even hotter than back in the jungle.#$b#Make sure to eat something fresh, here.[(O)834 (O)184 (O)350]",
+"WCDHeatwave.LeoMainland.2": "It's best to stay under the shade when its this hot...",
+"WCDHurricane.LeoMainland.1": "$query LOCATION_CONTEXT Here Island#It's been more rainy...$s|It's been more rainy back home...$s",
+"WCDHurricane.LeoMainland.2": "$query LOCATION_CONTEXT Here Island#I wonder if the recent rains will scare the fish again...$s|I wonder if the recent rains back home will scare the fish...$s",
+"WCDVolcanicAsh.LeoMainland.1": "$query LOCATION_CONTEXT Here Island#The ash is piling up...$s|There is less ash here than back home.",
+"WCDVolcanicAsh.LeoMainland.2": "$query LOCATION_CONTEXT Here Island#The ash makes me cough...$s|The ash makes me sneeze a lot.$s",
+"WCDFish.LeoMainland.1": "$query LOCATION_CONTEXT Here Island#A lot of fish got swept out by the hurricane...|I wonder if the fish got swept out again by the strong winds?",
+"WCDFish.LeoMainland.2": "$query LOCATION_CONTEXT Here Island#I found a lot of fish after the hurricane, here have some.[(O)142 (O)131]|I wonder if the fish got swept out again by the strong winds?",
+"WCDEarthquake.LeoMainland.1": "There used to be quite a few earthquakes back home, my parrot family would huddle together with me after one.$s",
+"WCDEarthquake.LeoMainland.2": "Earthquakes can be quite scary, specially at night.$s",
+"WCDMayo.LeoMainland": "What is this type of rain?$3#$b#Why does it taste like mayonnaise?$3",	
+"WCDTornadoH.LeoMainland.1": "I thought hurricane winds were bad, but the tornado sure was scary.$s",
+"WCDTornadoH.LeoMainland.2": "The passing tornado caused everything to rattle and shake.#$b#Linus invited me to his home, so we could be safe.",
+"WCDDryLightning.LeoMainland.1": "Back home, thunder and lightning were not as common during a storm...",
+"WCDDryLightning.LeoMainland.2": "I didn't know there could be thunder and lightning without any rain.",
+"WCDAcidRain.LeoMainland.1": "I didn't know rain could be itchy.",
+"WCDAcidRain.LeoMainland.2": "I didn't know rain could burn plants.$s",
+"WCDSmogJoja.LeoMainland.1": "The air has been making me cough a lot recently, is it because it comes from the city?$s",
+"WCDSmogJoja.LeoMainland.2": "The air has been making me cough a lot recently.$s",
+"WCDLocust.LeoMainland.1": "$query WEATHER Town kath.weathering_Locust#There are insects everywhere in town!$3|There were insects everywhere in town. I caught some to make bait with Linus, here. [(O)774]",
+"WCDLocust.LeoMainland.2": "I caught some insects to make bait with Linus, here. [(O)774]",
+"WCDMeatball.LeoMainland.1": "Hmm, it somehow smells like Mango.%revealtaste:Leo:(O)834",
+"WCDMeatball.LeoMainland.2": "It smells very tasty... sweet like Poi.%revealtaste:Leo:(O)906",
+"WCDNorthLight.LeoMainland.1": "I could sometimes see the colourful lights from home...",
+"WCDNorthLight.LeoMainland.2": "Jas said they are called 'Northern Lights'.#$b#I think they are pretty...#$b#I mean the lights.",
+"WCDMeteor.LeoMainland.1": "I didn't know rocks could go across the night sky.$3",
+"WCDMeteor.LeoMainland.2": "$query WEATHER Town kath.weathering_StarFalling#We will collect some stardust with Jas and Vincent!$1|Maru showed me more about 'Meteors'.$1",
+"WCDHeavyRain.LeoMainland.1": "Sometimes it rains so heavy, it's almost like the hurricanes back home.",
+"WCDHeavyRain.LeoMainland.2": "With so much rain, I wonder if anything will flood.",
+"WCDHail.LeoMainland.1": "Linus tent is not very safe from the ice, so he will stay with me in the house on the tree.",
+"WCDHail.LeoMainland.2": "Ice can hit very hard.$s",
+"WCDBlizzard.LeoMainland.1": "$query LOCATION_CONTEXT Here Default#It can get really cold here.|I am glad it doesn't snow at home.",
+"WCDBlizzard.LeoMainland.2": "$query LOCATION_CONTEXT Here Default#I thought snow was cold, but its worse when it gets windy!|I am glad it doesn't snow at home.",
+"WCDMudRain.LeoMainland.1": "Rain can sometimes be very nutritious for plants.$1",
+"WCDMudRain.LeoMainland.2": "Rain can look muddy?",
+"WCDSandstorm.LeoMainland.1": "$query LOCATION_CONTEXT Here Default#I only go to Calico Desert for the festival, I didn't know the sands could reach here.|Sandstorms can be very itchy to my eyes.$s",
+"WCDSandstorm.LeoMainland.2": "When it's very windy, sand can really hurt.$s",
+"WCDWildfire.LeoMainland.1": "Fire is something dangerous, I just hope everyone in the forest is safe.$s",
+"WCDWildfire.LeoMainland.2": "$query PLAYER_HAS_MAIL Current raccoonMovedIn#I am worried the fire may have hurt Mr. Raccoon.$s|I just hope everyone in the forest is safe.$s",
+"WCDLandslide.LeoMainland.1": "Last night I heard a loud noise, there seems to have been a landslide near my house on the tree.",
+"WCDLandslide.LeoMainland.2": "Linus was worried about me due to the landslide, but my house on the tree is safe.#$b#My parrot family made sure of it.",
+"WCDFoggy.LeoMainland.1": "Foggy mornings make me sleepy.",
+"WCDFoggy.LeoMainland.2": "Fog back home might be less than here.",
+"WCDSleet.LeoMainland.1": "I didn't know it could rain and snow at the same time.$3",
+"WCDSleet.LeoMainland.2": "I thought snow was cold enough, but it can also rain whilst it snows?$3#$b#It's cold!",
+
+//Sandy
+"WCDEclipse.Sandy.1": "$query !WEATHER Desert kath.weathering_Darkness#I missed out on most of the eclipse, but it can get a little scary out in the desert when it gets dark.|You've been out in the desert in this darkness?",
+"WCDEclipse.Sandy.2": "The desert is only cool at night, so an eclipse is more than welcome when its as hot as here...",
+"WCDHeatwave.Sandy.1": "Want to stay off the heat?#$b#You can stay in here as long as you like, we have a very good airconditioning system.",
+"WCDHeatwave.Sandy.2": "I bet a heatwave in Pelican Town is better than here in the desert.#$b#Here have a drink of cold, fresh milk.[(O)184]",
+"WCDLocust.Sandy.1": "Swarms always affects businesses here in the desert.",
+"WCDLocust.Sandy.2": "I am glad to be inside here, and not out there when those pesky bugs are swarming.",
+"WCDNorthLight.Sandy.1": "Emily has told me about how the northern lights shine in Pelican Town, maybe she could come see them here?",
+"WCDNorthLight.Sandy.2": "I think the northern lights are best appreciated in the desert.#$b#Among the dark sand dunes and no other light in sight.",
+"WCDHeavyRain.Sandy.1": "It rarely rains in the desert, but when it does it can lead to flashfloods.",
+"WCDHeavyRain.Sandy.2": "It rarely rains in the desert, but when it does, it can be devastating.",
+"WCDHail.Sandy.1": "Out in the desert its easy to get hit by the hail.",
+"WCDHail.Sandy.2": "The only type of ice in the desert is the one that falls during a hailstorm...",
+"WCDSandstorm.Sandy.1": "Sometimes things get unburied during a sandstorm due to the heavy winds. Other times things end up buried deep in the sand, so better be careful alright?",
+"WCDSandstorm.Sandy.2": "$query !WEATHER Desert kath.weathering_Sandstorm#Hope you weren't out there during the sandstorm.|Stay in here as long as you'd like, the sandstorms in Calico desert can be harsh.",
+"WCDMayo.Sandy": "I didn't expect raining mayonnaise, much less in the desert.",
+//End of CT Dialogue Hell
+
+/////////////////////////////////
+//Added between 1.3.0 and 1.4.0//
+/////////////////////////////////
+//Sorry for the mess
+
+	//Extra surprise - Charity Addon Needs Aimon's Charity Mod
+"PDWThanksLetter.LetterTitle": "Thank You, from Ferngill's Weather Climate and Disaster Center",
+"PDWThanksLetter.LetterText": "Dear farmer,^Thank you very much for this first donation towards our program that focuses on bringing aid to those affected by extreme weathers in Ferngill.^Any further donations will always be appreciated.",
+"PDW.CharityAddOn1.Name": "Relief Assistance for Dangerous Weather",
+"PDW.CharityAddOn1.Description": "Proof that you have donated to the 'Relief Assistance for Dangerous Weather' charity program from Ferngill's Weather Climate and Disaster Center.",
+"PDW.CharityAddOn2.Name": "Relief Assistance for Displaced People by Mayonnaise Rains",
+"PDW.CharityAddOn2.Description": "Proof that you have donated to the 'Relief Assistance for Displaced People by Mayonnaise Rains' charity program from Ferngill's Weather Climate and Disaster Center.",
+
+	//Extra surprise - Weather Added
+//Weather Tooltip and Forecast
+"Weather.Error": "Error",
+"Weather.Error.Forecast": "Um... that's odd. My information sheet just says 'error'. This is embarrassing...",
+"Weather.Error.ForecastIsland": "Um... that's odd. My information sheet just says 'error'. This is embarrassing...",
+"Weather.Error.ForecastDesert": "Um... that's odd. My information sheet just says 'error'. This is embarrassing...",
+//Error Weather Buff
+"ErrorBuff.Buff.Name": "Error Buff?",
+"ErrorBuff.Buff.Desc": "I don't know what this does...",
+//Error Weather add Value to config
+"config.AddWeather.values.surprise": "Surprise Weather",
+//CT for surprise :D - Error Weather Dialogue
+"WCDSurprise.Abigail": "$query WEATHER Here kath.weathering_Error#Error! Error rror rror rrrrrrrrr...|Well that was weird.$h",
+"WCDSurprise.Emily": "$query WEATHER Here kath.weathering_Error#Erroror!$h|Wasn't that fun @?$h",
+"WCDSurprise.Haley": "$query WEATHER Here kath.weathering_Error#...$a|...Don't even mention it.",
+"WCDSurprise.Leah": "$query WEATHER Here kath.weathering_Error#Err-#$b#...Error?$h|It was a bit hard to focus, all I wanted to do was laugh!$h",
+"WCDSurprise.Maru": "$query WEATHER Here kath.weathering_Error#Erroror, error error error errororor.|A fascinating phenomenon.",
+"WCDSurprise.Penny": "$query WEATHER Here kath.weathering_Error#...$s|A bit difficult to teach that way...$s",
+
+"WCDSurprise.Alex": "$query WEATHER Here kath.weathering_Error#Eh-#$b#Hm-#$b#Rror...|Dusty was just as confused as I was.",
+"WCDSurprise.Elliott": "$query WEATHER Here kath.weathering_Error#Error! Error error error error error error, error error error.#$b#Errorororor error error, error error rrorerror.|That was utterly annoying, how could one express themselves fully? Even the pages had that darn word all over them!$a",
+"WCDSurprise.Harvey": "$query WEATHER Here kath.weathering_Error#Ah error. Error error?|Ah @. Are you alright?",
+"WCDSurprise.Sam": "$query WEATHER Here kath.weathering_Error#Erroooooooooooooooor!$h|Mum was annoyed at my screaming but it was fun!$h",
+"WCDSurprise.Sebastian": "$query WEATHER Here kath.weathering_Error#Error...$s|Well that was tiring...$s",
+"WCDSurprise.Shane": "$query WEATHER Here kath.weathering_Error#Erroror error error.|Aunt Marnie was worried about the chickens.",
+
+"WCDSurprise.Caroline": "$query WEATHER Here kath.weathering_Error#Erroror error error, errororor...|That didn't stop Abigail from exploring outside...",
+"WCDSurprise.Clint": "$query WEATHER Here kath.weathering_Error#Error, rrororor.|At least it didn't impede my work.",
+"WCDSurprise.Demetrius": "$query WEATHER Here kath.weathering_Error#Eh!Rror!$h|I must study that phenomenon!$h",
+"WCDSurprise.Evelyn": "$query WEATHER Here kath.weathering_Error#Erroror?|Oh dear, that has never happened before.",
+"WCDSurprise.George": "$query WEATHER Here kath.weathering_Error#Rror rror.$a|This never happened back in the day...$a",
+"WCDSurprise.Gus": "$query WEATHER Here kath.weathering_Error#Rror, errororor.|Even the ingredients looked weird!",
+"WCDSurprise.Jas": "$query WEATHER Here kath.weathering_Error#Rror!$s|That was scary @!$s",
+"WCDSurprise.Jodi": "$query WEATHER Here kath.weathering_Error#Error error.|Sam sure enjoyed it...",
+"WCDSurprise.Kent": "$query WEATHER Here kath.weathering_Error#...|That was... confusing.",
+"WCDSurprise.Lewis": "$query WEATHER Here kath.weathering_Error#Eh-#$b#Rror...$s#$b#Error!$a|Utter nonsense that was!$a",
+"WCDSurprise.Linus": "$query WEATHER Here kath.weathering_Error#...$h|Wasn't that fun @?$h",
+"WCDSurprise.Marnie": "$query WEATHER Here kath.weathering_Error#ERROR! ERROR! ERROROROROROROROR!!!$4|My sweet chickens!$4#$b#I was so worried about them.$s",
+"WCDSurprise.Pam": "$query WEATHER Here kath.weathering_Error#Eherrorror.$h|Wonderfully hilarious that was.$h",
+"WCDSurprise.Pierre": "$query WEATHER Here kath.weathering_Error#Error erroror error error.$h|At least the seeds seemed to be intacts, so there wasn't much problem.$h.",
+"WCDSurprise.Robin": "$query WEATHER Here kath.weathering_Error#Eheheheherrorororor!$h|Sebastian was so annoyed at me, I couldn't stop laughing!$h.",
+"WCDSurprise.Vincent": "$query WEATHER Here kath.weathering_Error#Eh-Rror...?$4|It was fun hearing Sam screaming 'error'.$h",
+"WCDSurprise.Willy": "$query WEATHER Here kath.weathering_Error#Erroror, error.|The poor fish.#$s#At least they are alright now.",
+"WCDSurprise.Wizard": "...#$b#...#$b#......#$b#Are you expecting something?",
+
+"WCDSurprise.Dwarf": "$query WEATHER Here kath.weathering_Error#...|Oddities like what you saw often occured during the wars.#$b#Or so it is said...",
+"WCDSurprise.Krobus": "$query WEATHER Here kath.weathering_Error#...|It must have been an anomaly...",
+"WCDSurprise.Leo": "$query WEATHER Here kath.weathering_Error#Error?!$4|Could not... talk... bird friends...$s",
+"WCDSurprise.LeoMainland": "$query WEATHER Here kath.weathering_Error#Error?$4|What was that @?$4",
+"WCDSurprise.Sandy": "$query WEATHER Here kath.weathering_Error#Error?Error error error...*|@? I though I was saying weird things yesterday...",
+
+	//Compat name with Feast of the Sun
+"FeastOfTheSun.Compat": "Feast of the Sun",
+
+	//Added another weather Clone Attack - Tooltip and Forecast
+"config.AddWeather.values.clone": "The Attack of the Clones",
+"Weather.Clone": "The Attack of the Clones",
+"Weather.Clone.Forecast": "Um... that's odd. My information sheet just says 'clones'. I am not sure what this means?",
+"Weather.Clone.ForecastIsland": "Um... that's odd. My information sheet just says 'clones'. I am not sure what this means?",
+"Weather.Clone.ForecastDesert": "Um... that's odd. My information sheet just says 'clones'. I am not sure what this means?",
+
+	//Additions to Config
+//This is in case WW is installed and want to prioritize PDW weather over it as default is WW weather is chosen first (post 4+ years)
+"config.PriorityOverWW.name": "Prioritize Weather",
+"config.PriorityOverWW.description": "Prioritizes PDW weather probabilities over WW weather probabilities post 4 year scripted forecast. Default 'false'.",
+//Request for only Ash to be in the island + text change to building Robin
+"config.OnlyIslandAsh.name": "Ash Weather Only in Ginger Island",
+"config.OnlyIslandAsh.description": "If set to true, it removes ashes from the volcanic ash weather from happening in Pelican Town and the Desert.",
+//Changes to Consequences table - made less punishing
+"config.ConsequencesLITE.name": "Weather Consequences REDUX",	
+"config.ConsequencesLITE.description": "If weather consequences are enabled, this changes how punishing they are. 'Default' is the same consequences that have been in the mod thus far. 'LITE' is reduced consequences, and less likely to lose mass amounts of crops.",	
+//Meme about the Northern lights being indoors in the farmhouse
+"config.JustNorthernLights.name": "Just the Northern Lights",	
+"config.JustNorthernLights.description": "Those? Those are just the northern lights. No, it does not smell like smoke.",
+
+	//Modifications to previous messages
+//DummyAccount03 thank you for the text	
+"BuildStationMessage1.Modified": "A handy book on weather effects and farming.^The notes inside are the result of parsed data from the station's computer.#In short, with this station crops are more resistant to harsh weather, reducing losses by about half.^Beneficial weather effects are slightly enhanced.^^Such benefits extend to areas where crops have been planted.",
+"Wizard.Array.LetterText.Modified": "Greetings,^^I am aware of the difficulties your farm may have had over the harsh weather conditions the Valley possess.^As I have researched on the elementals that inhabit this land, it has come to my attention how rich in mana your farm is.^I have devised an array of protection for you. Although it is costly due to its power, I believe it to be in your best interests.^^      -M. Rasmodius^^^^An additional note:^The array can only be built once, and its power only protects the valley. I may try to develop another array in the future.",
+"MudRain.Soil.LetterText.Modified": "^^Dear farmer,^^This muddy rain contains high amounts of nutrients for crops! Making the soil gain such important nutrients. If you experience sudden crop growth, then this could be the reason. Sadly, the soil will gradually lose this boost of nutrients...^Don't forget to keep your crops happy and flourishing.^                 -Ferngill's WCD Center",
+
+	//Message Spacecore when the Northern Lights are enable indoors
+"JustNorthernLights.message": "Oh, this is unexpected. It's just the aurora borealis.",
+
+//////////////////
+//Added in 1.4.0//
+//////////////////
+	//Config Stuff
+"config.Monsoon.name": "Activate Monsoon?",
+"config.Monsoon.description": "I wonder what this does? (Includes: drastic map changes, obeys consequences toggle, some NPCs might be affected, is priority weather)",
+"config.VanillaTotem.name": "Vanilla Weather Totems",
+"config.VanillaTotem.description": "Weather totems for your every need, or maybe not. These are less dangerous.",
+"config.ChangeRainTotem.name": "Rain Totem Match",
+"config.ChangeRainTotem.description": "Match the rain totem sprite to the rest of the vanilla weather totems.",
+"config.RainEve.name": "Rainy Spirit's Eve",
+"config.RainEve.description": "Toggle whether it rains during the Spirit's Eve or not. Requires 'Special Weather Effects' to be 'true'.",
+
+	//Totems (For Vanilla Weather) Name and Description
+"Totem.storm.Name": "Storm",
+"Totem.storm.Desc": "Activate to greatly increase the chance for a storm tomorrow. Consumed on use.",
+"Totem.green.Name": "Green Rain",
+"Totem.green.Desc": "Activate to greatly increase the chance for a rainy weather phenomenon tomorrow. Consumed on use.",
+"Totem.windy.Name": "Wind",
+"Totem.windy.Desc": "Activate to greatly increase the chance for a windy day tomorrow. Consumed on use.",
+"Totem.snow.Name": "Snow",
+"Totem.snow.Desc": "Activate to greatly increase the chance for a snow tomorrow. Consumed on use.",
+"Totem.sun.Name": "Sun",
+"Totem.sun.Desc": "Activate to greatly increase the chance for a sunny day tomorrow. Consumed on use.",
+
+"TotemCategoryVanilla": "Weather", //Category Change
+
+"Patch.Totem": "Totem", //Added after Totem Name key and Totem Category key
+"Patch.Tome": "Summon Tome", //Same as above but for compat to Aimon's Totem to Tome Mod
+
+	//Tool Tip Names
+"Patch.GreenRain": "???", //First Year Green Rain
+"Patch.GreenRain.Known": "Green Rain", //General Green Rain
+"Patch.GreenRain.Known2": "Mana-rich Rain", //Enough friendship with wizard green rain
+"Patch.Wind": "Windy",
+
+	//Season specific forecast for Wind weather
+"WindForecast.Spring": "Partially cloudy with a light breeze. Expect lots of pollen!",
+"WindForecast.Summer": "A light breeze might help with this summer heat!",
+"WindForecast.Fall": "It's going to be cloudy, with gusts of wind throughout the day.",
+"WindForecast.Winter": "It's going to be a cold windy day all day. Make sure you bundle up, folks!",
+"WindForecast.Wimdy": "It will be wimdy, so f-cken wimdy.", //This is a meme wimdy spelling is intentional
+
+	//Copy for Green Rain Forecast
+"GreenRain.Forecast": "Um... There appears to be some kind of... anomalous reading... I... don't know what this means...",
+
+	//When using vanilla weather totem messages
+"SunnyTotem": "The clouds are rolling away...",
+"SnowTotem": "Frost is forming...",
+"WindTotem": "A soft breeze blows through the valley...",
+"GreenTotem": "They seem oddly green...",
+
+	//Monsoon Weather - tooltip, forecast and map messages (messages may appear and change with map changes)
+"Weather.Monsoon": "Monsoon Season",
+"Weather.Monsoon.Forecast": "Heavy rains are expected to continue, as floods are reported across Ferngill. Oh dear... stay safe everyone!",
+"Monsoon.Notice": "Notice:^^Please refrain from being outdoors, as many areas may flood.^^-Ferngill's WCD Center",
+"Monsoon.Notice2": "Notice:^^Please remain indoors, many areas have flooded.^^-Ferngill's WCD Center",
+"Monsoon.Bus": "Notice:^^The bus is currently unable to operate due to flooded areas.^Apologies for the inconvenience.^^-Ferngill's WCD Center",
+"Monsoon.Boat": "Notice:^^It is dangerous to go back via boat to the mainland due to the torrential rains and rough seas.^Apologies for the inconvenience.^^-Ferngill's WCD Center",
+"Monsoon.Sewer": "Notice:^^For safety precautions, the sewer is off-limits until the waters recede.^^-Ferngill's WCD Center",
+"Monsoon.Flood": "Your are unable to proceed, the waters are high enough to make it impossible to pass...",
+
+	//Disabling some warp totems during peak monsoon season (not when just rain - heavy rain or monsoon season tooltip message)
+"UnableTravel": "It doesn't seem like it is working, better try later...",
+
+	//This happens to whatever NPC is randomly chosen to temporarily disappear during monsoon season
+	//Dialogue during festival
+"ReturnFromSea.Alex": "Hey @!#$b#You wouldn't believe where I've been!#$e#The flood currents carried me out to sea.$s#$b#It could have been worse but some people rescued me, and I was on a boat from a faraway place.#$e#No, I forgot the name...",
+"ReturnFromSea.Elliott": "Dear @, you wouldn't fathom the dread I have been through.$s#$b#Alas, it is what I get for living out by the beach.#$b#Luckily, our dear friend Willy was out at sea and rescued me from my peril.#$e#Please don't ask more, I shiver just remembering it.$s",
+"ReturnFromSea.Abigail": "Hey @!#$b#You wouldn't believe where I've been!#$e#I was out lost at sea!#$b#It was an amazing adventure, I am just glad I wasn't starving and thirsty.#$e#Heh, the pirates were so friendly.$h",
+"ReturnFromSea.Lewis": "I must really invest in safety measures for those floods.$a#$b#Hello @, I am not quite myself right now. Is your display ready? I've left an empty stand for you to use if you'd like to participate.$h",
+"ReturnFromSea.Pierre": "I must say, a recent journey out in the sea has made me think about life a lot...#$b#Whether I win or lose today, here.#$action AddMoney 1000#$action AddItem (O)893#$b#It's the least I can do for the beautiful produce you sell to me.#$e#...",
+"ReturnFromSea.Pam": "I think I am tired of fish right now...$s#$b#You're in luck kid, my tired old bones have been through quite the struggle with the sea recently.#$b#Fish up all the fish in the tent for me.",
+	//CT Dialogue
+"MonsoonNPCYeetTalk.Lewis": "Hey @, here have some of these.#$action AddItem (O){{FlowerItemGiven}}#$b#They are from my small garden outside.#$e#Nothing in particular, I am just in a good mood.#$b#Life is precious you know.",
+"MonsoonNPCYeetTalk.Pierre": "My recent journey on the waves has made me think that life is very precious.#$b#I should provide for my family in case something happens to me...#$action AddMail All PierreExtraMoneyMonsoon received#$e#Sorry, if my prices seem a bit high, but I must provide for my daughter and wife.$h#$e#%Pierre's prices might be slightly elevated for a while.",
+"MonsoonNPCYeetTalk.Pam": "Hey kid, would you like to take this from me? [346]#$e#Just not feeling it recently.",
+
+//////////////////
+//Added in 1.4.1//
+//////////////////
+	//Config Stuff
+"config.AddWeather.values.rainbow": "Rainbow",
+"config.AddWeather.values.novisibility": "Heavy Fog",
+
+	//Rainbow Weather - tooltip, forecast and buff
+"Weather.Rainbow": "Rainbow Snake Phenomenon",
+"Weather.Rainbow.Forecast": "A strange weather phenomenon is expect to be seen tomorrow across Pelican Town, a moving rainbow! It will be seen through out the entire day and into the early evening.",
+"Weather.Rainbow.ForecastIsland": "A strange weather phenomenon is expect to be seen tomorrow across Calico Desert, a moving rainbow! It will be seen through out the entire day and into the early evening.",
+"Weather.Rainbow.Totem": "A colourful light can be seen in the distance, it moves?",
+"Buff.Rainbow": "Wandering Rainbow",
+"Buff.Rainbow.description": "An array of colours are painted on the sky, is it moving?",
+
+	//Fog Weather - tooltip, forecast and buff?
+"Weather.NoVis": "Heavy Fog",
+"Weather.NoVis.Forecast": "Fog will be descending into the valley for tomorrow. Visibility will be minimal, so please be careful when being outdoors.",
+"Weather.NoVis.ForecastDesert": "Fog will be descending into the Calico Desert for tomorrow. Visibility will be minimal, so please be careful when being outdoors.",
+"Weather.NoVis.ForecastIsland": "Fog will be descending into the Ginger Island and the rest of the Fern Islands for tomorrow. Visibility will be minimal, so please be careful when being outdoors.",
+"Weather.NoVis.Totem": "A fog is falling down upon us all...",
+
+	//Totems for new weather
+"Totem.novisibility.Name": "Gray Carved Totem",
+"Totem.novisibility.Desc": "There seems to be something in it, but there is a dense fog swirling within.",	
+"Totem.rainbow.Name": "Sharp Carved Totem",
+"Totem.rainbow.Desc": "It's like a little glass bottle holding a rainbow inside.",
+
+///////////////////
+//Added in 1.4.13//
+///////////////////
+"config.NPCChanges.description": "Changes npc schedules to fit the weather patterns some more, also adds dialogue related to the weather via conversation topics. NOTE: Do NOT toggle 'Monsoon NPC Disappearance' mid-monsoon season.",	//Updated the old one to this new one!
+"config.NPCChanges.values.disappearing": "Monsoon NPC Disappearance",
+
+"config.NPCYeetMonsoon.name": "NPC Monsoon Disappearance Choice",
+"config.NPCYeetMonsoon.description": "Choose which NPC will go on a journey during the monsoon. Default is 'Random'. NOTE: Do NOT change this mid monsoon season.",
+
+///////////////////
+//Added in 1.4.14//
+///////////////////
+"Festival_Spring2": "the Starlight Celebration! Where it will take place at the summit, so make sure to head to the railroad between 8pm and midnight. What will be your wish for this year?",
+"Patch.Festival_Spring2": "Starlight Celebration"
+}

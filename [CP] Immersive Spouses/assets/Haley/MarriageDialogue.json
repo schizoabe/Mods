@@ -1,0 +1,81 @@
+{
+	"Changes": [
+	//STANDARD LEAVE/RETURN DIALOGUE
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries": {
+				"funLeave_Haley": "#$c .5#Hi, honey. Did you sleep well? I almost didn't want to leave bed this morning, you were snuggling really hard.$h#Good morning! Another day of farmwork, huh?#$e#$c .5#Make sure you wipe your boots when you come back home. I cleaned the floors just yesterday.#You look like you already have things handled well so I'm heading into town. But let me know if you need help with anything!",
+				"funReturn_Haley": "#$c .5#You know how I always remind you to wipe your boots when coming in? You'll never guess what I just did...$s#I made you some dinner! I know you've been working extra hard. [727 231 207 199]$h#$e#It's pretty dark out there, so be careful if you're heading back outside."
+			},
+			"When": {
+				"DayOfWeek": "Monday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries": {
+				"funLeave_Haley": "#$c .5#I tried to help out around the farm this morning but I had no idea where to start. How can you multitask so well?#Hey, I'm going to be-Oooh! You look cute this morning.$8#$e#$c .5#I don't think I'd enjoy this country life as much without you by my side.#Anyways, I'll be in town today. I need to take some photos for a local newspaper.",
+				"funReturn_Haley": "#$c .6#Welcome back! I'm free tomorrow, are you up to anything?#I came home early so I baked you something. Careful, it's still piping hot.[222 234 732 608 731]#$e#$c .5#Hope you had a good day.#I'm going to bed soon but I'll stay up just a while longer with you."
+			},
+			"When": {
+				"DayOfWeek": "Tuesday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries": {
+				"funLeave_Haley": "#$c .5#Hey, dear. Heading out? Want me to pack you some lunch?#Up to anything special today, dear? You seem to always have an interesting day.#$e#$c .5#The Mayor is asking for some more photos. Supposedly they're a huge hit in the Fern Islands when it's {{season}}.#I'll be in town today. Mayor Lewis is asking for some more pictures of the valley.#$e#$c .7#I'm gonna head out later but have a good day, dear!$h#I swear he runs out so quickly. If you ask me, he's probably planning to give them to Marnie again...$3",
+				"funReturn_Haley": "#$c .5#Don't touch the red envelope in the shipping bin! It's for Mayor Lewis.#Hey! So, how did your day go? Mine went well.$h#$e#$c .3#I hope Mayor Lewis doesn't lose my photos... again.$s#You got any more interesting stories to tell me about, tonight?"
+			},
+			"When": {
+				"Season": "Fall, Winter",
+				"DayOfWeek": "Thursday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries": {
+				"funLeave_Haley": "#$c .4#Good morning. Last night was fun! *giggle*$l#Mornin'! Look at the sun shine today, dear. It's perfect photography and farming weather!$h#$e#$c .5#Think I'll practice my photography for a while in the forest!#I'm heading out today. Don't take this the wrong way, but the fresh air in the forest is unrivaled.#$e#Stay safe, you hear?",
+				"funReturn_Haley": "#$c .5#Welcome back, did you have a productive day?#You've got some dirt on your face. Lemme just.. brush that off... So how was your day?#$e#$c .5#If you don't mind, I'm heading straight to bed. The sun makes me so drowsy.$s#I already had dinner back at my old house. Sorry, I left the leftovers for Emily.#$e#Hmm? You love me? Well, I already know that, dear.$11#$b#But I love you too.$l"
+			},
+			"When": {
+				"Season": "Spring, Summer",
+				"DayOfWeek": "Thursday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries": {
+				"funLeave_Haley": "#$c .5#Are you busy this morning? I was thinking we could walk down to the beach.#I'm heading out so I did my makeup this morning. How do I look? Oh, and good morning!#$e#$c .5#I'll admit, I'm a little obsessed with the ocean. I need some more pictures!$h#Right, my advice for today {{Random:is to not spend the last day of the weekend just working$11, ...Wow. My mind just went blank. Sorry$h, is to make sure the farm looks extra cute today! And also you too$h, is to work hard. But don't break a finger, ...Hmm. How about take a break? You already do that don't you...? Well just a reminder}}, honey!",
+				"funReturn_Haley": "#$c .5#How'd your day go? It was nice seeing everyone in town.#Hey, dear, I'm glad you're back. I've missed you.#$e#$c .5#I took some pretty pictures! I'll show you them in bed.#Hmm. I feel like cleaning the floors tonight. Try not to get them any dirtier, please."
+			},
+			"When": {
+				"DayOfWeek": "Sunday"
+			}
+		},
+
+	//SPECIFIC DAYS
+
+		//DOCTOR CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries": {
+				"winter_9": "Ugh. I have to visit Harvey today.$s#$e#Wait, I didn't mean it like that! Don't tell him I said that!$h"
+			}
+		},
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueHaley",
+			"Entries": {
+				"winter_16": "It looks chilly tonight...$s#$e#I-I think I'm heading down to the Night Market tonight, dear. If I procrastinate any longer it's only gonna get colder."
+			}
+		},
+	]
+}

@@ -1,0 +1,224 @@
+{
+	"Changes": [
+	{
+	      	"LogName": "Change message",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+			"Entries": {
+			"NoSprinklers": "{{i18n: No.Sprinklers}}"
+				}
+	},
+	
+	{
+      	    "LogName": "Stop Sprinklers Vanilla Maps",
+            "Action": "EditMap",
+			"PatchMode": "Overlay",
+            "Target": "Maps/Farm, Maps/Farm_Combat, Maps/Farm_Fishing, Maps/Farm_Foraging, Maps/Farm_FourCorners, Maps/Farm_Island, Maps/Farm_Ranching, Maps/Farm_Mining",
+			"FromFile": "assets/Maps/Vanilla/dryfarms/{{TargetWithoutPath}}.tmx",
+			"Priority": "Late",
+			"When": {
+				"HasMod |contains=flashshifter.immersivefarm2remastered, flashshifter.GrandpasFarm": false,
+				"Esca.EMP/GameStateQuery: WEATHER Town kath.weathering_HeatWave": true,
+				"SprinklerDrought": "maps"
+			}
+	},
+    {
+      	    "LogName": "Stop Sprinklers Vanilla Island",
+            "Action": "EditMap",
+			"PatchMode": "Overlay",
+            "Target": "Maps/Island_W",
+			"FromFile": "assets/Maps/Vanilla/dryfarms/{{TargetWithoutPath}}.tmx",
+			"Priority": "Late",
+			"When": {
+				"HasMod |contains=Lnh.IslandOverhaul": false,
+				"Esca.EMP/GameStateQuery: WEATHER IslandNorth kath.weathering_HeatWave": true,
+				"SprinklerDrought": "maps"
+			}
+	},
+	{
+      	    "LogName": "Stop Sprinklers LNH Island Overhaul",
+            "Action": "EditMap",
+			"PatchMode": "Overlay",
+            "Target": "Maps/Island_W",
+			"FromFile": "assets/Maps/Compats/LNH/dry/{{TargetWithoutPath}}.tmx",
+			"Priority": "Default",
+			"When": {
+				"HasMod |contains=Lnh.IslandOverhaul": true,
+				"Esca.EMP/GameStateQuery: WEATHER IslandNorth kath.weathering_HeatWave": true,
+				"SprinklerDrought": "maps"
+			}
+	},	
+	//No longer support IFR2 and GrandpasFarm
+	{
+      	    "LogName": "Stop Sprinklers IFR2",
+            "Action": "EditMap",
+			"PatchMode": "Overlay",
+            "Target": "Maps/Farm",
+			"FromFile": "assets/Maps/Compats/SVE/dry/farms/OnlyBack/IF2R.tmx",
+			"Priority": "Default - 1",
+			"When": {
+				"HasMod |contains=flashshifter.immersivefarm2remastered": true,
+				"Esca.EMP/GameStateQuery: WEATHER Town kath.weathering_HeatWave": true,
+				"SprinklerDrought": "maps"
+			}
+	},
+	{
+      	    "LogName": "Stop Sprinklers Grandpas Farm",
+            "Action": "EditMap",
+			"PatchMode": "Overlay",
+            "Target": "Maps/Farm",
+			"FromFile": "assets/Maps/Compats/SVE/dry/farms/OnlyBack/GrandpasFarm.tmx",
+			"Priority": "Default - 1",
+			"When": {
+				"HasMod |contains=flashshifter.GrandpasFarm": true,
+				"HasFlag |contains=communityUpgradeShortcuts": false,
+				"Esca.EMP/GameStateQuery: WEATHER Town kath.weathering_HeatWave": true,
+				"SprinklerDrought": "maps"
+			}
+	},
+	
+	//
+	{
+      	    "LogName": "Stop Sprinklers SVE Garden",
+            "Action": "EditMap",
+			"PatchMode": "Overlay",
+            "Target": "Maps/Custom_Garden",
+			"FromFile": "assets/Maps/Compats/SVE/dry/farms/Garden.tmx",
+			"Priority": "Default",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasSeenEvent|contains=1011124": false,
+				"SprinklerDrought": "maps",
+				"Esca.EMP/GameStateQuery: WEATHER Town kath.weathering_HeatWave": true
+			}
+	},
+	{
+      	    "LogName": "Stop Sprinklers SVE Garden2",
+            "Action": "EditMap",
+			"PatchMode": "Overlay",
+            "Target": "Maps/Custom_Garden",
+			"FromFile": "assets/Maps/Compats/SVE/dry/farms/Garden2.tmx",
+			"Priority": "Default",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"HasSeenEvent|contains=1011124": true,
+				"SprinklerDrought": "maps",
+				"Esca.EMP/GameStateQuery: WEATHER Town kath.weathering_HeatWave": true
+			}
+	},	
+	{
+      	    "LogName": "Stop Sprinklers SVE GrampletonFields",
+            "Action": "EditMap",
+			"PatchMode": "Overlay",
+            "Target": "Maps/Custom_GrampletonFields",
+			"FromFile": "assets/Maps/Compats/SVE/dry/farms/GrampletonFields.tmx",
+			"Priority": "Default",
+			"When": {
+				"HasMod |contains=flashshifter.GrampletonFields": true,
+				"Esca.EMP/GameStateQuery: WEATHER Town kath.weathering_HeatWave": true,
+				"SprinklerDrought": "maps"
+			}
+	},	
+	///	
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore"},
+			"Entries": {
+				"599": {
+					"CategoryTextOverride": "{{i18n: SprinklerCategory}}",
+					"UseForTriggerAction": true,
+					"ConsumeForTriggerAction": false,
+					"CategoryColorOverride": {
+						"R": 66,
+						"G": 66,
+						"B": 66,
+						"A": 255
+					}
+				},
+				"621": {
+					"CategoryTextOverride": "{{i18n: SprinklerCategory}}",
+					"UseForTriggerAction": true,
+					"ConsumeForTriggerAction": false,
+					"CategoryColorOverride": {
+						"R": 66,
+						"G": 66,
+						"B": 66,
+						"A": 255
+					}
+				},
+				"645": {
+					"CategoryTextOverride": "{{i18n: SprinklerCategory}}",
+					"UseForTriggerAction": true,
+					"ConsumeForTriggerAction": false,
+					"CategoryColorOverride": {
+						"R": 66,
+						"G": 66,
+						"B": 66,
+						"A": 255
+					}
+				}				
+			}
+		},
+	{
+	  "Action": "EditData",
+	  "Target": "Data/TriggerActions",
+	  "When": {"HasMod": "spacechase0.SpaceCore, Esca.EMP", "SprinklerDrought": "damage"},
+	  "Entries": {
+				"kath.weathering_AccessDenied": {
+					"Id": "kath.weathering_AccessDenied",
+					"Trigger": "DayStarted",
+					"Condition": "ANY \"WEATHER Here kath.weathering_HeatWave, LOCATION_IS_INDOORS Here, PLAYER_HAS_ITEM Current (O)599 1\" \"WEATHER Here kath.weathering_HeatWave, LOCATION_IS_INDOORS Here, PLAYER_HAS_ITEM Current (O)621 1\" \"WEATHER Here kath.weathering_HeatWave, LOCATION_IS_INDOORS Here, PLAYER_HAS_ITEM Current (O)645 1\"",
+					"Actions": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: No.SprinklersWarn}}\" (O)599",
+						"Esca.EMP_LogMessage Error Project Danger Weather: {{i18n: DontDare}}"
+						]
+					},	
+					
+				"kath.weathering_AccessDenied2": {
+					"Id": "kath.weathering_AccessDenied2",
+					"Trigger": "spacechase0.SpaceCore_OnItemUsed",
+					"Condition": "ITEM_ID Input (O)599 (O)621 (O)645",
+					"MarkActionApplied": false,
+					"Actions": [
+						"spacechase0.SpaceCore_DamageCurrentFarmer 15",
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: No.Sprinklers}}\" (O)599"
+						]
+					},	
+					//Sprinkler Pain
+				"kath.weathering_AccessDenied3": {
+					"Id": "kath.weathering_AccessDenied3",
+					"Trigger": "LocationChanged",
+					"Condition": "ANY \"WEATHER Here kath.weathering_HeatWave, LOCATION_IS_INDOORS Here, PLAYER_HAS_ITEM Current (O)599 1\" \"WEATHER Here kath.weathering_HeatWave, LOCATION_IS_INDOORS Here, PLAYER_HAS_ITEM Current (O)621 1\" \"WEATHER Here kath.weathering_HeatWave, LOCATION_IS_INDOORS Here, PLAYER_HAS_ITEM Current (O)645 1\"",
+					"Actions": [
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: No.SprinklersWarn}}\" (O)599",
+						"MarkActionApplied Current kath.weathering_AccessDenied4 false"
+						]
+					},		
+				"kath.weathering_AccessDenied4": {
+					"Id": "kath.weathering_AccessDenied4",
+					"Trigger": "LocationChanged",
+					"Condition": "ANY \"WEATHER Here kath.weathering_HeatWave, LOCATION_IS_OUTDOORS Here, PLAYER_HAS_ITEM Current (O)599 1\" \"WEATHER Here kath.weathering_HeatWave, LOCATION_IS_OUTDOORS Here, PLAYER_HAS_ITEM Current (O)621 1\" \"WEATHER Here kath.weathering_HeatWave, LOCATION_IS_OUTDOORS Here, PLAYER_HAS_ITEM Current (O)645 1\"",
+					"Actions": [
+						"spacechase0.SpaceCore_DamageCurrentFarmer 15",
+						"spacechase0.SpaceCore_ShowHudMessage \"{{i18n: No.Sprinklers2}}\" (O)599",
+						"MarkActionApplied Current kath.weathering_AccessDenied3 false",
+						"MarkActionApplied Current kath.weathering_AccessDenied false"
+						]
+					},						
+				"kath.weathering_AccessDenied5": {
+					"Id": "kath.weathering_AccessDenied5",
+					"Trigger": "Esca.EMP_OneSecondUpdateTicked",
+					"Condition": "ANY \"Esca.EMP_IS_PLAYER_FREE, WEATHER Here kath.weathering_HeatWave, PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_AccessDenied4, LOCATION_IS_OUTDOORS Here, PLAYER_HAS_ITEM Current (O)599 1\" \"Esca.EMP_IS_PLAYER_FREE, WEATHER Here kath.weathering_HeatWave, PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_AccessDenied4, LOCATION_IS_OUTDOORS Here, PLAYER_HAS_ITEM Current (O)621 1\" \"Esca.EMP_IS_PLAYER_FREE, WEATHER Here kath.weathering_HeatWave, PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_AccessDenied4, LOCATION_IS_OUTDOORS Here, PLAYER_HAS_ITEM Current (O)645 1\"",
+					"MarkActionApplied": false,
+					"Actions": [
+						"spacechase0.SpaceCore_DamageCurrentFarmer 15"
+						]
+					}						
+			}
+	}
+
+
+//End
+]
+}

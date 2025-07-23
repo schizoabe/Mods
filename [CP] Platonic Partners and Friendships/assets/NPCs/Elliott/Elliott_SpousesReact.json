@@ -1,0 +1,170 @@
+{
+    "Changes": [
+        { //Mine death with Elliott
+            "LogName": "KO Mines- Elliott",
+            "Action": "EditData",
+            "Target": "Data/Events/Mine",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 20 10 2 Elliott 19 10 1 Marlon 18 10 3/skippable/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.1 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}}}}\"/viewport 19 10 true/pause 1500/speak Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Mines.2}}\"/pause 500/emote farmer 40/pause 500/faceDirection farmer 1/faceDirection farmer 3/pause 500/emote farmer 8/pause 1000/speak Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Mines.3}}\"/pause 1000/speak Marlon \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.4.{{CompassionateCourageousToken}}{{SpouseRoommateGenderToken}}}}\"/emote Elliott 16/pause 500/speak Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Mines.5 |PlatonicHousemate={{PPAF.Core/ConfigValue:TermOfEndearment}} |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"/pause 1000/speak Marlon \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.6}}\"/pause 500/move Marlon 0 0 1/pause 500/faceDirection Marlon 3/speak Marlon \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.7}}\"/pause 500/textAboveHead Marlon \"{{i18n:PPAF.SpousesReact.Events.Shared.Mines.8}}\"/move Marlon 0 4 0/warp Marlon -100 -100/pause 1500/speak Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Mines.9 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} |LovePortraitsExpression7={{LovePortraitsExpression7Token}}}}\"/pause 500/emote farmer 20/faceDirection farmer 2/showFrame 0/pause 500/minedeath/end dialogue Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Mines.10 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}}}}\""
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Elliott",
+                "HasConversationtopic |contains=elliottGone": false
+            }
+        },
+        {
+	        "LogName": "KO Mines- ElliottGone",
+            "Action": "EditData",
+            "Target": "Data/Events/Mine",
+            "Fields": {
+                "PlayerKilled": {
+                    26: "speak Marlon \"{{i18n:PPAF.SpousesReact.Events.Marlon.ElliottTour |PlatonicHousemate={{PlatonicHousemateToken}}}}\""
+                }
+            },
+            "When":
+            {
+                "SpouseOrRoommateToken": "Elliott",
+                "HasConversationtopic": "elliottGone"
+            }
+        },
+        { //Hospital Death- Elliott
+            "LogName": "Player 'Killed'- Elliott",
+            "Action": "EditData",
+            "Target": "Data/Events/Hospital",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 12 3 Elliott 22 8 2/skippable/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.1}}\"/viewport 20 12 true/pause 1000/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.2}}\"/speed Elliott 5/move Elliott 0 3 2/textAboveHead Elliott \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.3}}\"/emote farmer 16/move Elliott -1 0 2/faceDirection farmer 1/move Harvey 1 0 3/move Elliott 0 1 3/speak Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Hospital.4}}\"/emote farmer 60/pause 500/speak Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Hospital.5}}\"/emote Elliott 40/pause 1500/emote farmer 28/pause 500/pause 500/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.6}}\"/pause 500/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.7}}\"/pause 500/move Harvey 0 -4 0/move Harvey -8 0 0 true/move Harvey 0 -1 0/move Harvey -4 0 0/move Harvey 0 -1 0/playSound doorClose/warp Harvey -100 -100/pause 500/faceDirection Elliott 3/speak Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Hospital.8 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}}}}\"/faceDirection farmer 2/pause 1000/emote farmer 28/hospitaldeath/end dialogue Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Hospital.9}}\""
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Elliott",
+                "HasConversationtopic |contains=elliottGone": false,
+                "Relationship:Harvey |contains=Engaged, Married": false,
+                "Relationship:Maru |contains=Engaged, Married": false
+            }
+        },
+        {
+	        "LogName": "Player 'Killed'-ElliottGone",
+            "Action": "EditData",
+            "Target": "Data/Events/Hospital",
+            "Fields": {
+                "PlayerKilled": {
+                    15: "speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Harvey.ElliottTour |PlatonicHousemate={{PlatonicHousemateToken}}}}\""
+                }
+            },
+            "When":
+            {
+                "SpouseOrRoommateToken": "Elliott",
+                "HasConversationtopic": "elliottGone",
+                "Relationship:Harvey |contains=Engaged, Married": false,
+                "Relationship:Maru |contains=Engaged, Married": false
+            }
+        },
+        { //Elliott Letter
+            "LogName": "ElliottGone Letters",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "ElliottReactionHospital": "{{i18n:PPAF.SpousesReact.Mail.ElliottReactionHospital.text |PlatonicHousemate={{PlatonicHousemateToken}} |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}}}}[#]{{i18n:PPAF.SpousesReact.Mail.ElliottReactionHospital.title |PlatonicHousemate={{PlatonicHousemateToken}}}}",
+                "ElliottReactionMine": "{{i18n:PPAF.SpousesReact.Mail.ElliottReactionMine.text}}[#]{{i18n:PPAF.SpousesReact.Mail.ElliottReactionMine.title |PlatonicHousemate={{PlatonicHousemateToken}}}}"
+            }
+        },
+        {
+            "LogName": "Hospital death - Elliott Ex-Partner",
+            "Action": "EditData",
+            "Target": "Data/Events/Hospital",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 12 3 Elliott 22 8 2/skippable/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.0}}\"/pause 1000/message \"{{i18n:SpousesReact.Events.Shared.Hospital.1}}\"/viewport 20 12 true/pause 1000/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.2}}\"/faceDirection farmer 1/emote farmer 16/pause 500/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.Hospital.6}}\"/pause 500/emote Harvey 40/pause 500/faceDirection Harvey 0/faceDirection Harvey 3/pause 500/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.HospitalEx.4}}\"/move Harvey 1 0 1/move Harvey 0 -3 0/pause 1000/speak Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.HospitalEx.5}}\"/pause 500/speak Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.HospitalEx.6}}\"/pause 500/textAboveHead Harvey \"{{i18n:PPAF.SpousesReact.Events.Shared.HospitalEx.7}}\"/move Harvey -7 0 0 true/move Harvey 0 -4 0/warp Harvey -100 -100/move Elliott 0 4 3/emote farmer 16/faceDirection Elliott 3/pause 1000/speak Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.HospitalEx.8}}\"/emote farmer 16/pause 1000/speak Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.HospitalEx.9}}\"/pause 500/move Elliott 0 -4 0/move Elliott -8 0 0/move Elliott 0 -3 0/warp Elliott -100 -100/emote farmer 28/hospitaldeath/end dialogue Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.HospitalEx.10}}\""
+
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:SpousesReact_ExInvolvement": "True",
+                "HasValue:{{Spouse}},{{Roommate}}": false,
+                "Relationship:Elliott": "Divorced",
+                "Relationship:Harvey |contains=Divorced": false,
+                "Relationship:Maru |contains=Divorced": false
+            }
+        },
+        { //Island Death- Elliott
+            "LogName": "Island Death before Leo - Elliott",
+            "Action": "EditData",
+            "Target": "Data/Events/IslandSouth",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 13 33 2 {0} 15 33 3/pause 1500/showFrame 5/message \"{{i18n:PPAF.Elliott.SpousesReact.Events.Shared.Island.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.1}}\"/viewport 13 33 clamp true/pause 1000/speak {0} {1}/showFrame 0/pause 1000/emote farmer 28/minedeath/end dialogue Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Island.2 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}}}}\""
+            },
+            "When": {
+                "HasFlag |contains= addedParrotBoy, leoMoved": false,
+                "HasConversationtopic |contains=elliottGone": false,
+                "SpouseOrRoommateToken": "Elliott"
+            }
+        },
+        {
+            "LogName": "Island Death before Leo - Elliott gone",
+            "Action": "EditData",
+            "Target": "Data/Events/IslandSouth",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 13 33 2 {0} 15 33 3/pause 1500/showFrame 5/message \"{{i18n:PPAF.Elliott.SpousesReact.Events.Shared.Island.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.1}}\"/viewport 13 33 clamp true/pause 1000/speak {0} {1}/showFrame 0/pause 1000/emote farmer 28/message \"{{i18n:PPAF.SpousesReact.Events.Elliott.Island.ElliottTour}}\"/minedeath/end"
+            },
+            "When": {
+                "HasFlag |contains=addedParrotBoy, leoMoved": false,
+                "SpouseOrRoommateToken": "Elliott",
+                "HasConversationtopic": "elliottGone",
+                "Relationship:Willy |contains=Engaged, Married": false
+            }
+        },
+        {
+            "LogName": "Island death with Leo - Elliott",
+            "Action": "EditData",
+            "Target": "Data/Events/IslandSouth",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 13 33 2 Leo 15 33 3/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.1}}\"/playSound parrot_squawk/pause 500/viewport 13 33 clamp true/pause 1000/speak Leo \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.2}}\"/emote farmer 16/faceDirection farmer 1/pause 500/speak Leo \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.3}}\"/pause 500/message \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.4}}\"/pause 500/emote farmer 40/message \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.5}}\"/pause 500/speak Leo \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.6}}\"/faceDirection farmer 2/showFrame 0/pause 1000/emote farmer 12/minedeath/end dialogue Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Island.2 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}}}}\""
+            },
+            "When": {
+                "HasFlag": "addedParrotBoy",
+                "HasConversationtopic |contains=elliottGone": false,
+                "SpouseOrRoommateToken": "Elliott",
+                "Relationship:Willy |contains=Engaged, Married": false
+            }
+        },
+        {
+            "LogName": "Island death with Leo - Elliott gone",
+            "Action": "EditData",
+            "Target": "Data/Events/IslandSouth",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 13 33 2 Leo 15 33 3/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.1}}\"/playSound parrot_squawk/pause 500/viewport 13 33 clamp true/pause 1000/speak Leo \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.2}}\"/emote farmer 16/faceDirection farmer 1/pause 500/speak Leo \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.3}}\"/pause 500/message \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.4}}\"/pause 500/emote farmer 40/message \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.5}}\"/pause 500/speak Leo \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandLeo.6}}\"/faceDirection farmer 2/showFrame 0/pause 1000/emote farmer 12/minedeath/end"
+            },
+            "When": {
+                "HasFlag": "addedParrotBoy",
+                "HasConversationtopic": "elliottGone",
+                "SpouseOrRoommateToken": "Elliott",
+                "Relationship:Willy |contains=Engaged, Married": false
+            }
+        },
+        {
+            "LogName": "Island death after Leo - Elliott",
+            "Action": "EditData",
+            "Target": "Data/Events/IslandSouth",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 13 33 2 Willy 15 33 3/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.1}}\"/viewport 13 33 clamp true/pause 1000/speak Willy \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandWilly.2}}\"/emote farmer 16/faceDirection farmer 1/pause 500/speak Willy \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandWilly.3 |PlatonicHousemate={{PlatonicHousemateToken}}}}\"/faceDirection farmer 2/showFrame 0/pause 1000/emote farmer 28/minedeath/end dialogue Elliott \"{{i18n:PPAF.SpousesReact.Events.Elliott.Island.2 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}}}}\""
+            },
+            "When": {
+                "HasFlag": "leoMoved",
+                "HasConversationtopic |contains=elliottGone": false,
+                "SpouseOrRoommateToken": "Elliott",
+                "Relationship:Willy |contains=Engaged, Married": "false"
+            }
+        },
+        {
+            "LogName": "Island death after Leo - Elliott",
+            "Action": "EditData",
+            "Target": "Data/Events/IslandSouth",
+            "Entries": {
+                "PlayerKilled": "none/-100 -100/farmer 13 33 2 Willy 15 33 3/pause 1500/showFrame 5/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.0}}\"/pause 1000/message \"{{i18n:PPAF.SpousesReact.Events.Shared.Island.1}}\"/viewport 13 33 clamp true/pause 1000/speak Willy \"{{i18n:PPAF.SpousesReact.Events.Shared.IslandWilly.2}}\"/emote farmer 16/faceDirection farmer 1/pause 500/speak Willy \"{{i18n:PPAF.SpousesReact.Events.Elliott.IslandWilly.ElliottTour |PlatonicHousemate={{PlatonicHousemateToken}}}}\"/faceDirection farmer 2/showFrame 0/pause 1000/emote farmer 28/minedeath/end"
+            },
+            "When": {
+                "HasFlag": "leoMoved",
+                "HasConversationtopic": "elliottGone",
+                "SpouseOrRoommateToken": "Elliott",
+                "Relationship:Willy |contains=Engaged, Married": "false"
+            }
+        }
+    ]
+}

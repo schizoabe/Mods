@@ -1,0 +1,128 @@
+{
+ "Changes": [
+ 
+ //standard
+ 
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Hospital",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)349": null,
+	  "(O)351": null,
+	  
+	  "boringvlln.rshops_ETonic": {
+      "Id": "boringvlln.rshops_ETonic",
+      "ItemId": "(O)349",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MRemedy": {
+      "Id": "boringvlln.rshops_MRemedy",
+      "ItemId": "(O)351",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+	  }
+ },
+  "When": { "Hospital": "standard" }
+},
+
+//hardmode
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Hospital",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)349": null,
+	  "(O)351": null,
+	  
+	  "boringvlln.rshops_ETonic": {
+      "Id": "boringvlln.rshops_ETonic",
+      "ItemId": "(O)349",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  },
+	  "boringvlln.rshops_MRemedy": {
+      "Id": "boringvlln.rshops_MRemedy",
+      "ItemId": "(O)351",
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+	  }
+ },
+  "When": { "Hospital": "hardmode" }
+},
+]
+}

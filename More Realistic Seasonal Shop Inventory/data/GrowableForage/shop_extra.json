@@ -1,0 +1,673 @@
+{
+	"Changes":[
+	//Entries Dwarf
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+              "HasValue: Cornucopia_CommonMushroomSeeds": true,
+              "HasMod |contains=boringvlln.rshops": false
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_CommonMushroomSeeds", "AfterID": "(O)243" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+              "HasValue: Cornucopia_ChanterelleSeeds": true,
+              "HasMod |contains=boringvlln.rshops": false
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_ChanterelleSeeds", "AfterID": "(O)243" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+              "HasValue: Cornucopia_MorelSeeds": true,
+              "HasMod |contains=boringvlln.rshops": false
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_MorelSeeds", "AfterID": "(O)243" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+              "HasValue: Cornucopia_CommonMushroomSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_CommonMushroomSeeds", "AfterID": "boringvlln.rshops_DwarfFood" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+              "HasValue: Cornucopia_ChanterelleSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_ChanterelleSeeds", "AfterID": "boringvlln.rshops_DwarfFood" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Dwarf","Items"],
+      "When": {
+              "HasValue: Cornucopia_MorelSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_MorelSeeds", "AfterID": "boringvlln.rshops_DwarfFood" }
+      ]
+    },
+    //Entries Joja
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: Cornucopia_SpringOnionSeeds": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_SpringOnionSeeds", "BeforeId": "(O)297" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: Cornucopia_SweetPeaSeeds": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_SweetPeaSeeds", "BeforeId": "(O)297" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: Cornucopia_CrocusSeeds": true,
+              "HasMod |contains=boringvlln.rshops": false,
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_CrocusSeeds", "BeforeId": "(O)297" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Late",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: Cornucopia_SpringOnionSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_SpringOnionSeeds", "BeforeId": "boringvlln.rshops_JFarmingRelatedBasic" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Late",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: Cornucopia_SweetPeaSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_SweetPeaSeeds", "BeforeId": "boringvlln.rshops_JFarmingRelatedBasic" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Priority": "Late",
+      "TargetField": ["Joja","Items"],
+      "When": {
+              "HasValue: Cornucopia_CrocusSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_CrocusSeeds", "BeforeId": "boringvlln.rshops_JFarmingRelatedBasic" }
+      ]
+    },
+	//Entries Pierre
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: Cornucopia_SpringOnionSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_SpringOnionSeeds", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: Cornucopia_SpringOnionSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_SpringOnionSeeds", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: Cornucopia_SweetPeaSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_SweetPeaSeeds", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: Cornucopia_SweetPeaSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_SweetPeaSeeds", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: Cornucopia_CrocusSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_CrocusSeeds", "BeforeId": "boringvlln.rshops_FarmingRelated" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: Cornucopia_CrocusSeeds": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_CrocusSeeds", "BeforeId": "boringvlln.rshops_FarmingRelatedBasicComm" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {
+              "HasValue: MRSSI_GFCB_Cornucopia_Bush_Pierre": true,
+              "HasMod |contains=boringvlln.rshops": false
+              },
+      "MoveEntries": [
+        {
+          "Id": "MRSSI_GFCB_Cornucopia_Bush_Pierre",
+          "BeforeId": "(O)628"
+        }
+      ],
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_GFCB_Cornucopia_Bush_Pierre": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_GFCB_Cornucopia_Bush_Pierre", "AfterId": "boringvlln.rshops_Saplings" }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["SeedShop","Items"],
+      "When": {
+              "HasValue: MRSSI_GFCB_Cornucopia_Bush_Pierre": true,
+              "HasMod |contains=boringvlln.rshops": true,
+              "HasSeenEvent: AnyPlayer": "191393"
+              },
+      "MoveEntries": [
+          { "ID": "MRSSI_GFCB_Cornucopia_Bush_Pierre", "AfterId": "boringvlln.rshops_SaplingsComm" }
+      ]
+    },
+    //Entries Sandy
+    {
+        "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+              "HasValue: Cornucopia_CoconutSapling": true,
+              "HasMod |contains=boringvlln.rshops": false
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_CoconutSapling", "AfterID": "(O)494" }
+      ]
+    },
+    {
+        "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Sandy","Items"],
+      "When": {
+              "HasValue: Cornucopia_CoconutSapling": true,
+              "HasMod |contains=boringvlln.rshops": true
+              },
+      "MoveEntries": [
+          { "ID": "Cornucopia_CoconutSapling", "BeforeId": "boringvlln.rshops_Sandysnack" }
+      ]
+    },
+    //Shop data
+    {
+        "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {"Pierre": "Standard, Hardmode", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Salmonberry Bush": true},
+      "Entries":{
+        "Cornucopia_SalmonberrySeeds": null
+      }
+    },
+    {
+        "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {"Pierre": "Standard, Hardmode", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Blackberry Bush": true},
+      "Entries":{
+        "Cornucopia_BlackberrySeeds": null
+      }
+    },
+    {
+        "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {"Pierre": "Standard, Hardmode", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Holly Bush": true},
+      "Entries":{
+        "Cornucopia_HollySeeds": null,
+      }
+    },
+    {
+        "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {"Pierre": "Standard, Hardmode", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Hazelnut Tree": true},
+      "Entries":{
+        "Cornucopia_HazelnutSapling": null,
+      }
+    },
+    {
+        "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {
+      			"Pierre": "Standard, Hardmode",
+      			"Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Blueberry Bush": true,
+      		},
+      "Entries":{
+        "(O)481": null,
+      }
+    },
+    {
+        "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {
+      			"Pierre": "Standard, Hardmode",
+      			"Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Hops Bush": true,
+      		},
+      "Entries":{
+        "(O)302": null,
+      }
+    },
+    {
+        "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {
+      			"Pierre": "Standard, Hardmode",
+      			"Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Grapes Bush": true,
+      		},
+      "Entries":{
+        "(O)301": null,
+      }
+    },
+    //RSSI Compat
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {
+        "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Blueberry Bush": true,
+        "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Hops Bush": false,
+        "HasMod |contains=boringvlln.rshops": true,
+      },
+      "Fields": {
+        "boringvlln.rshops_SummerSeeds": {
+        	"RandomItemId": [ "(O)479", "(O)483", "(O)480", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431" ]
+        },
+        "boringvlln.rshops_SummerSeedsExtra": {
+        	"RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431", "(O)SummerSquashSeeds" ]
+        },
+        "boringvlln.rshops_SummerSeedsComm1": {
+        	"RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431", "(O)SummerSquashSeeds" ]
+        },
+        "boringvlln.rshops_SummerSeedsComm2": {
+        	"RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)482", "(O)484", "(O)453", "(O)455", "(O)302", "(O)487", "(O)431", "(O)SummerSquashSeeds" ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {
+        "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Blueberry Bush": false,
+        "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Hops Bush": true,
+        "HasMod |contains=boringvlln.rshops": true,
+      },
+      "Fields": {
+        "boringvlln.rshops_SummerSeeds": {
+        	"RandomItemId": [ "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)487", "(O)431" ]
+        },
+        "boringvlln.rshops_SummerSeedsExtra": {
+        	"RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)487", "(O)431", "(O)SummerSquashSeeds" ]
+        },
+        "boringvlln.rshops_SummerSeedsComm1": {
+        	"RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)487", "(O)431", "(O)SummerSquashSeeds" ]
+        },
+        "boringvlln.rshops_SummerSeedsComm2": {
+        	"RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)481", "(O)482", "(O)484", "(O)453", "(O)455", "(O)487", "(O)431", "(O)SummerSquashSeeds" ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {
+        "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Blueberry Bush": true,
+        "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Hops Bush": true,
+        "HasMod |contains=boringvlln.rshops": true,
+      },
+      "Fields": {
+        "boringvlln.rshops_SummerSeeds": {
+        	"RandomItemId": [ "(O)479", "(O)483", "(O)480", "(O)482", "(O)484", "(O)453", "(O)455", "(O)487", "(O)431" ]
+        },
+        "boringvlln.rshops_SummerSeedsExtra": {
+        	"RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)482", "(O)484", "(O)453", "(O)455", "(O)487", "(O)431", "(O)SummerSquashSeeds" ]
+        },
+        "boringvlln.rshops_SummerSeedsComm1": {
+        	"RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)482", "(O)484", "(O)453", "(O)455", "(O)487", "(O)431", "(O)SummerSquashSeeds" ]
+        },
+        "boringvlln.rshops_SummerSeedsComm2": {
+        	"RandomItemId": [ "(O)485", "(O)479", "(O)483", "(O)480", "(O)482", "(O)484", "(O)453", "(O)455", "(O)487", "(O)431", "(O)SummerSquashSeeds" ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "When": {
+        "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Grapes Bush": true,
+        "HasMod |contains=boringvlln.rshops": true,
+      },
+      "Fields": {
+        "boringvlln.rshops_FallSeeds": {
+        	"RandomItemId": [ "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299" ]
+        },
+        "boringvlln.rshops_FallSeedsExtra": {
+        	"RandomItemId": [ "(O)489", "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299", "(O)BroccoliSeeds" ]
+        },
+        "boringvlln.rshops_FallSeedsComm1": {
+        	"RandomItemId": [ "(O)489", "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299", "(O)BroccoliSeeds" ]
+        },
+        "boringvlln.rshops_FallSeedsComm2": {
+        	"RandomItemId": [ "(O)489", "(O)490", "(O)487", "(O)488", "(O)491", "(O)492", "(O)493", "(O)483", "(O)431", "(O)425", "(O)299", "(O)BroccoliSeeds" ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "Sandy", "Items" ],
+      "When": {
+        "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Cactus Bush": true,
+        "HasMod |contains=boringvlln.rshops": true,
+        "Spiderbuttons.CMCT/Config: boringvlln.rshops, Pierre": "standard"
+      },
+      "Fields": {
+        "boringvlln.rshops_DeSpringSeeds": {
+        	"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            },
+            {
+            	"Modification": "Set",
+            	"Amount": 1,
+            	"Condition": "ITEM_ID Target (O)802"
+            }
+          ]
+        },
+        "boringvlln.rshops_DeSummerSeeds": {
+        	"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            },
+            {
+            	"Modification": "Set",
+            	"Amount": 1,
+            	"Condition": "ITEM_ID Target (O)802"
+            }
+          ]
+        },
+        "boringvlln.rshops_DeFallSeeds": {
+        	"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            },
+            {
+            	"Modification": "Set",
+            	"Amount": 1,
+            	"Condition": "ITEM_ID Target (O)802"
+            }
+          ]
+        },
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "Sandy", "Items" ],
+      "When": {
+        "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Cactus Bush": true,
+        "HasMod |contains=boringvlln.rshops": true,
+        "Spiderbuttons.CMCT/Config: boringvlln.rshops, Pierre": "hardmode"
+      },
+      "Fields": {
+        "boringvlln.rshops_DeSpringSeeds": {
+        	"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            },
+            {
+            	"Modification": "Set",
+            	"Amount": 1,
+            	"Condition": "ITEM_ID Target (O)802"
+            }
+          ]
+        },
+        "boringvlln.rshops_DeSummerSeeds": {
+        	"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            },
+            {
+            	"Modification": "Set",
+            	"Amount": 1,
+            	"Condition": "ITEM_ID Target (O)802"
+            }
+          ]
+        },
+        "boringvlln.rshops_DeFallSeeds": {
+        	"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            },
+            {
+            	"Modification": "Set",
+            	"Amount": 1,
+            	"Condition": "ITEM_ID Target (O)802"
+            }
+          ]
+        },
+      }
+    },
+    //Object data
+    {
+        "Action": "EditData",
+        "Target": "Data/Objects",
+        "Fields":{
+            "Cornucopia_SalmonberrySeeds":{
+                "ContextTags": [
+                "GFCB_Cornucopia_Bush_Pierre"
+                ]
+            },
+            "Cornucopia_BlackberrySeeds":{
+                "ContextTags": [
+                "GFCB_Cornucopia_Bush_Pierre"
+                ]
+            },
+            "Cornucopia_HollySeeds":{
+                "ContextTags": [
+                "GFCB_Cornucopia_Bush_Pierre"
+                ]
+            },
+            "Cornucopia_HazelnutSapling":{
+                "ContextTags": [
+                "GFCB_Cornucopia_Bush_Pierre"
+                ]
+            },
+            "481":{
+                "ContextTags": [
+                "GFCB_Cornucopia_Bush_Pierre"
+                ]
+            },
+            "302":{
+                "ContextTags": [
+                "GFCB_Cornucopia_Bush_Pierre"
+                ]
+            },
+            "301":{
+                "ContextTags": [
+                "GFCB_Cornucopia_Bush_Pierre"
+                ]
+            }
+        }
+    },
+	]
+}

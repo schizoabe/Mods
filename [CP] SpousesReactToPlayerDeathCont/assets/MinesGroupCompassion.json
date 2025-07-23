@@ -1,0 +1,17 @@
+{ // Mine Death - Compassionate Group
+  "Changes": [
+    {
+      "LogName": "KO Mines - Compassionate Spouse",
+      "Action": "EditData",
+      "Target": "Data/Events/Mine",
+      "When": {
+        "HasValue: {{Spouse}}": true,
+        "Query: '{{Spouse}}' IN ('Haley', 'Leah', 'Penny', 'Elliott', 'Harvey', 'Pam', 'Willy', 'Claire', 'Olivia', 'Sophia', 'Aideen', 'Juliet')": true,
+        //, Alissa, Blair, Corine, Flor, Kiarra, Ysabelle, Ian, Jeric, June, Sean,
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 20 10 2 {{Spouse}} 19 10 1 Marlon 18 10 3/skippable/pause 1500/showFrame 5/message \" ...{2}?\"/pause 1000/message \"{{i18n:Mines.Wake}}\"/viewport 19 10 true/pause 1500/speak {{Spouse}} \"{{i18n:MineKilled.{{Spouse}}.01}}\"/pause 500/emote farmer 40/pause 500/faceDirection farmer 1/faceDirection farmer 3/pause 500/emote farmer 8/pause 1000/speak {{Spouse}} \"{{i18n:MineKilled.{{Spouse}}.02}}\"/pause 1000/speak Marlon \"{{i18n:MineKilled.Marlon.07}}\"/emote {{Spouse}} 16/pause 500/speak {{Spouse}} \"{{i18n:MineKilled.{{Spouse}}.04}}\"/pause 1000/speak Marlon \"{{i18n:MineKilled.Marlon.08}}\"/pause 500/move Marlon 0 0 1/pause 500/faceDirection Marlon 3/speak Marlon \"{{i18n:MineKilled.Marlon.06}}\"/pause 500/textAboveHead Marlon \"{{i18n:MineKilled.Marlon.11}}\"/move Marlon 0 4 0/warp Marlon -100 -100/pause 1500/speak {{Spouse}} \"{{i18n:MineKilled.{{Spouse}}.07}}\"/pause 500/emote farmer 20/faceDirection farmer 2/showFrame 0/pause 500/minedeath/end dialogue {{Spouse}} \"{{i18n:MineEnd.{{Spouse}}.01}}#$c 0.7#{{i18n:MineEnd.{{Spouse}}.02}}\""
+      }
+    }
+  ]
+}

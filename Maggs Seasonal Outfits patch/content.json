@@ -1,0 +1,152 @@
+{
+    "Format": "2.4.0",
+	"ConfigSchema": {
+		"SebPatch": {
+			"AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Check the box to enable the Seasonal Outfits patch for Sebastian.",
+			"Section": "Sebastian",
+            },
+        "SebNose": {
+			"AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Check the box to add Sebastian's nose.",
+			"Section": "Sebastian",
+            },
+        "SamPatch": {
+			"AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Check the box to enable the Seasonal Outfits patch for Sam.",
+			"Section": "Sam",
+            },
+		"SamNose": {
+			"AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Check the box to add Sam's nose.",
+			"Section": "Sam",
+            },
+        "AlexPatch": {
+			"AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Check the box to enable the Seasonal Outfits patch for Alex.",
+			"Section": "Alex",
+            },
+		"AlexSummer": {
+			"AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Choose yes to switch Alex's summer shirt from white to black.",
+			"Section": "Alex",
+            },
+		"AlexNose": {
+			"AllowValues": "True, False",
+			"Default": "True",
+			"Description": "Check the box to add Alex's nose.",
+			"Section": "Alex",
+            },
+		},
+"Changes": [
+//Sebastian
+	//Standard
+{
+	"Action": "EditImage",
+	"Target": "Characters/Sebastian_Spring, Characters/Sebastian_Summer, Characters/Sebastian_Fall, Characters/Sebastian_Winter_Indoor, Characters/Sebastian_Winter_Outdoor",
+	"FromFile": "Sebastian_sprites/{{TargetWithoutPath}}_patch.png",
+	"ToArea": { "X": 0, "Y": 480, "Width": 64, "Height": 512 },
+	"PatchMode": "Replace",
+	"When": {
+				"HasMod |contains=Poltergeister.SeasonalCuteCharacters": true,
+				"SebPatch": true,
+			},
+      },
+	//Standard nose overlay
+{
+	"Action": "EditImage",
+	"Target": "Characters/Sebastian_Spring, Characters/Sebastian_Summer, Characters/Sebastian_Fall, Characters/Sebastian_Winter_Indoor, Characters/Sebastian_Winter_Outdoor",
+	"FromFile": "Sebastian_sprites/Seb_patch_nose.png",
+	"ToArea": { "X": 0, "Y": 480, "Width": 64, "Height": 512 },
+	"PatchMode": "Overlay",
+	"When": {
+				"HasMod |contains=Poltergeister.SeasonalCuteCharacters": true,
+				"SebPatch": true,
+				"SebNose": true,
+			},
+      },
+//Sam
+	//Standard
+{
+	"Action": "EditImage",
+	"Target": "Characters/Sam_Spring, Characters/Sam_Summer, Characters/Sam_Fall, Characters/Sam_Winter_Indoor, Characters/Sam_Winter_Outdoor",
+	"FromFile": "Sam_sprites/{{TargetWithoutPath}}_patch.png",
+	"ToArea": { "X": 0, "Y": 448, "Width": 64, "Height": 480 },
+	"PatchMode": "Replace",
+	"When": {
+				"HasMod |contains=Poltergeister.SeasonalCuteCharacters": true,
+				"SamPatch": true,
+			},
+      },
+	//Standard nose
+{
+	"Action": "EditImage",
+	"Target": "Characters/Sam_Spring, Characters/Sam_Summer, Characters/Sam_Fall, Characters/Sam_Winter_Indoor, Characters/Sam_Winter_Outdoor",
+	"FromFile": "Sam_sprites/Sam_patch_nose.png",
+	"ToArea": { "X": 0, "Y": 448, "Width": 64, "Height": 480 },
+	"PatchMode": "Overlay",
+	"When": {
+				"HasMod |contains=Poltergeister.SeasonalCuteCharacters": true,
+				"SamPatch": true,
+				"SamNose": true,
+			},
+      },
+//Alex
+	//Standard
+{
+	"Action": "EditImage",
+	"Target": "Characters/Alex_Spring, Characters/Alex_Summer, Characters/Alex_Fall, Characters/Alex_Winter_Indoor, Characters/Alex_Winter_Outdoor",
+	"FromFile": "Alex_sprites/{{TargetWithoutPath}}_patch.png",
+	"ToArea": { "X": 0, "Y": 416, "Width": 64, "Height": 160 },
+	"PatchMode": "Replace",
+	"When": {
+				"HasMod |contains=Poltergeister.SeasonalCuteCharacters": true,
+				"AlexPatch": true,
+				"AlexSummer": false,
+			},
+      },
+	//Standard nose
+{
+	"Action": "EditImage",
+	"Target": "Characters/Alex_Spring, Characters/Alex_Summer, Characters/Alex_Fall, Characters/Alex_Winter_Indoor, Characters/Alex_Winter_Outdoor",
+	"FromFile": "Alex_sprites/Alex_patch_nose.png",
+	"ToArea": { "X": 0, "Y": 416, "Width": 64, "Height": 160 },
+	"PatchMode": "Overlay",
+	"When": {
+				"HasMod |contains=Poltergeister.SeasonalCuteCharacters": true,
+				"AlexPatch": true,
+				"AlexSummer": false,
+				"AlexNose": true,
+			},
+      },
+	//Summer variant
+{
+	"Action": "EditImage",
+	"Target": "Characters/Alex_Summer",
+	"FromFile": "Alex_sprites/Alex_Summer_full.png",
+	"PatchMode": "Replace",
+	"When": {
+				"HasMod |contains=Poltergeister.SeasonalCuteCharacters": true,
+				"AlexSummer": true,
+			},
+      },
+	//Summer variant nose
+{
+	"Action": "EditImage",
+	"Target": "Characters/Alex_Summer",
+	"FromFile": "Alex_sprites/Alex_full_nose.png",
+	"PatchMode": "Overlay",
+	"When": {
+				"HasMod |contains=Poltergeister.SeasonalCuteCharacters": true,
+				"AlexSummer": true,
+				"AlexNose": true,
+			},
+      },
+]
+}

@@ -1,0 +1,36 @@
+{
+	"Changes": [
+
+        //Suki
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Suki",
+            "FromFile": "assets/BunBunz/Suki.png",
+            "Priority": "Late + 1"
+        },
+        //Festival of Ice
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Suki_IceFestival",
+            "FromFile": "assets/BunBunz/Suki_IceFestival.png",
+            "Priority": "Late + 1",
+            "When":{
+                "DayEvent": "festival of ice" 
+            }            
+        },
+        //Dessert Festival
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Suki_DesertFestival",
+            "FromFile": "assets/BunBunz/Suki_DesertFestival.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "Spring",
+                "Day": "15, 16, 17"
+            }
+        }
+    ]
+}

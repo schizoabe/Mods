@@ -1,0 +1,233 @@
+{
+	"Format": "2.4.0",
+	"DynamicTokens":[		
+		//Spawns Power
+		{
+			"Name": "LargeMeteoriteFall",
+			"Value": "Cosmos.Mineable"		
+		},	
+		{
+			"Name": "LargeMeteoriteFall",
+			"Value": "Cosmos.Mineable.Power",	
+			"When": {"HasFlag": "CosmosStarfallIcon"}
+        },
+        //
+        {
+            "Name": "MNEChance",
+            "Value": "0.01"	
+        },
+        {
+            "Name": "MNEChance",
+            "Value": "0.05",
+            "When": {
+                "HasFlag |contains=CosmosStarfallIcon": true,
+                "HasMod |contains=kath.weathering": false,
+                "Weather |contains=kath.weathering_StarFalling":false
+            }	
+        },
+        {
+            "Name": "MNEChance",
+            "Value": "0.025",
+            "When": {
+                "HasFlag |contains=CosmosStarfallIcon": false,
+                "HasMod |contains=kath.weathering": true,
+                "Weather |contains=kath.weathering_StarFalling":true
+            }	
+        },
+        {
+            "Name": "MNEChance",
+            "Value": "0.1",
+            "When": {
+                "HasFlag |contains=CosmosStarfallIcon": true,
+                "HasMod |contains=kath.weathering": true,
+                "Weather |contains=kath.weathering_StarFalling":true
+            }	
+        },
+        //
+		{
+			"Name": "ChanceChanceDefault",
+			"Value": "0.2"		
+		},	
+		{
+			"Name": "ChanceChanceDefault",
+			"Value": "0.5",	
+			"When": {"HasFlag": "CosmosStarfallIcon"}
+		},
+        {
+			"Name": "ChanceChanceDefaultMinerals",
+			"Value": "0.1"		
+		},	
+		{
+			"Name": "ChanceChanceDefaultMinerals",
+			"Value": "0.2",	
+			"When": {"HasFlag": "CosmosStarfallIcon"}
+		},
+		{
+			"Name": "ChanceChance",
+			"Value": "0.1"		
+		},	
+		{
+			"Name": "ChanceChance",
+			"Value": "0.25",	
+			"When": {"HasFlag": "CosmosStarfallIcon"}
+		},	
+        {
+			"Name": "ChanceChanceMinerals",
+			"Value": "0.05"		
+		},	
+		{
+			"Name": "ChanceChanceMinerals",
+			"Value": "0.1",	
+			"When": {"HasFlag": "CosmosStarfallIcon"}
+		},	
+		//Moons
+		{
+			"Name": "MoonPhaseToday",
+			"Value": "mid_moon_full",	
+			"When": {"Day |contains= 1, 14, 15, 28": true}
+		},
+		{
+			"Name": "MoonPhaseToday",
+			"Value": "mid_moon_threequater_rev",	
+			"When": {"Day |contains= 2, 3, 16, 17": true}
+		},
+		{
+			"Name": "MoonPhaseToday",
+			"Value": "mid_moon_half_rev",	
+			"When": {"Day |contains= 4, 18": true}
+		},
+		{
+			"Name": "MoonPhaseToday",
+			"Value": "mid_moon_quarter_rev",	
+			"When": {"Day |contains= 5, 6, 19, 20": true}
+		},
+		{
+			"Name": "MoonPhaseToday",
+			"Value": "mid_moon_new",	
+			"When": {"Day |contains= 7, 8, 21, 22": true}
+		},
+		{
+			"Name": "MoonPhaseToday",
+			"Value": "mid_moon_quarter",	
+			"When": {"Day |contains= 9, 10, 23, 24": true}
+		},
+		{
+			"Name": "MoonPhaseToday",
+			"Value": "mid_moon_half",	
+			"When": {"Day |contains= 11, 25": true}
+		},
+		{
+			"Name": "MoonPhaseToday",
+			"Value": "mid_moon_threequater",	
+			"When": {"Day |contains= 12, 13, 26, 27": true}
+		},
+		//Weather - IDK why I did this, but there is this
+		//TBF I could have used CS Tokens for CP... but here we are
+		{
+			"Name": "RainWeather",
+			"Value": "Rain,Storm,GreenRain,kath.weathering_Mayo,kath.weathering_Meatball,kath.weathering_HeavyRain,kath.weathering_AcidRain,kath.weathering_MudRain,kath.weathering_Hurry,kath.weathering_Error,kath.weathering_Clones,Kana.WeatherWonders_Deluge,Kana.WeatherWonders_Drizzle,Kana.WeatherWonders_MuddyRain,Kana.WeatherWonders_RainSnowMix,Kana.WeatherWonders_AcidRain"
+		},		
+		{
+			"Name": "LightningWeather",
+			"Value": "Storm,kath.weathering_DryLightning,Kana.WeatherWonders_DryLightning"
+		},		
+		{
+			"Name": "CloudyWeather",
+			"Value": "Rain,GreenRain,kath.weathering_Mayo,kath.weathering_Meatball,kath.weathering_HeavyRain,kath.weathering_AcidRain,kath.weathering_MudRain,kath.weathering_Hurry,kath.weathering_Error,kath.weathering_Clones,kath.weathering_Wildfire,kath.weathering_Smog,kath.weathering_SmogJoja,kath.weathering_Ash,kath.weathering_AshSummon,kath.weathering_Tornado,Kana.WeatherWonders_Deluge,Kana.WeatherWonders_Drizzle,Kana.WeatherWonders_MuddyRain,Kana.WeatherWonders_RainSnowMix,Kana.WeatherWonders_AcidRain"		
+		},			
+		{
+			"Name": "AllDayWeather",
+			"Value": "Rain,Storm,GreenRain,kath.weathering_DryLightning,kath.weathering_Darkness,kath.weathering_Mayo,kath.weathering_Meatball,kath.weathering_HeavyRain,kath.weathering_AcidRain,kath.weathering_MudRain,kath.weathering_Hurry,kath.weathering_Error,kath.weathering_Clones,kath.weathering_Wildfire,kath.weathering_Smog,kath.weathering_SmogJoja,kath.weathering_Ash,kath.weathering_AshSummon,kath.weathering_Tornado,Kana.WeatherWonders_DryLightning,Kana.WeatherWonders_Deluge,Kana.WeatherWonders_Drizzle,Kana.WeatherWonders_MuddyRain,Kana.WeatherWonders_RainSnowMix,Kana.WeatherWonders_AcidRain,Kana.WeatherWonders_BloodMoon,Kana.WeatherWonders_BlueMoon,Kana.WeatherWonders_HarvestMoon,Kana.WeatherWonders_Eclipse"
+		},	
+		//Unsee
+		{
+			"Name": "CannotSee",
+			"Value": "Snow,kath.weathering_Hail,kath.weathering_Blizzard,kath.weathering_Sandstorm,kath.weathering_Locust,Kana.WeatherWonders_Hailstorm,Kana.WeatherWonders_Blizzard,Kana.WeatherWonders_Mist"
+		}
+	],
+	"ConfigSchema": {			
+		"NoFlash": {
+			"AllowValues": "true, false",
+			"Default": "false",
+        	"AllowBlank": false,
+			"AllowMultiple": false,
+			"Section": "Texture"
+		},
+		"WoodGold":{
+			"AllowValues": "WoodGold, Vanilla",
+			"Default": "Vanilla",
+			"AllowBlank": false,
+			"AllowMultiple": false,
+			"Section": "Texture"
+		}
+	},			
+	"Changes": [
+        {
+      	    "LogName": "Load Visuals",
+			"Action": "Include",
+			"FromFile": "Data/textures.json"
+		},	
+        {
+      	    "LogName": "Load Furniture - Telescope",
+			"Action": "Include",
+			"FromFile": "Data/furniture.json"
+		},		
+        {
+      	    "LogName": "Load Rock and Mineral Objects",
+			"Action": "Include",
+			"FromFile": "Data/objects.json"
+		},
+        {
+      	    "LogName": "Load Powers",
+			"Action": "Include",
+			"FromFile": "Data/powers.json"
+		},
+        {
+      	    "LogName": "Load Spacecore Vanilla Item Changes + IE and GlowBuff",
+			"Action": "Include",
+			"FromFile": "Data/spacecoreplus.json"
+		},	
+		{
+			"LogName": "Load Machine Rules",
+		  	"Action": "Include",
+		  	"FromFile": "Data/machines.json"
+	    },	
+        {
+      	    "LogName": "Load Object Tastes",
+			"Action": "Include",
+			"FromFile": "Data/gifttastes.json"
+		},			
+        {
+      	    "LogName": "Load Spawns - Hello Spacecore",
+			"Action": "Include",
+			"FromFile": "Data/foragespawns.json"
+		},
+        {
+      	    "LogName": "Load Spawns - MNE Style",
+			"Action": "Include",
+			"FromFile": "Data/MNE.json"
+		},
+		{
+			"LogName": "Load Spawns Forage",
+		  	"Action": "Include",
+		  	"FromFile": "Data/foragespawns2.json"
+	  	},
+        {
+      	    "LogName": "Load Shop Data - Backup",
+			"Action": "Include",
+			"FromFile": "Data/shop.json",
+			"When":{"HasMod|contains=kath.museum":false}
+		},
+        {
+			"LogName": "Load Museum Expansion Data",
+		    "Action": "Include",
+		  	"FromFile": "Data/mirinmuseumexpansion.json",
+		  	"When":{"HasMod|contains=kath.museum":true, "HasSeenEvent": "KathMuseum.Expansion"}
+	    },
+        {
+      	    "LogName": "Load Strings and Sound",
+			"Action": "Include",
+			"FromFile": "Data/strings.json"
+		}		
+	]
+}

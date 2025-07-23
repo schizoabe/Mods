@@ -1,0 +1,339 @@
+{
+	"Format": "2.6.1",
+	
+	"ConfigSchema": {
+	"Taxes": {"AllowValues": "true, false","Description": "If true, money will be taken to pay for taxes.","Default": "true"}, 	
+	},
+	
+		"Changes":[
+		
+		{
+		"When": {"HasFlag":"pamHouseUpgrade"}, //1A Working
+		"Action": "Include",
+		"FromFile": "1 Community_Upgrades/1A Pams_House.json"
+		},
+		{
+		"When": {"HasFlag":"communityUpgradeShortcuts"}, //1B Working
+		"Action": "Include",
+		"FromFile": "1 Community_Upgrades/1B Town_Shortcuts.json"
+		},
+		{
+		"When": {"HasFlag":"ccCraftsRoom"}, //2A Working
+		"Action": "Include",
+		"FromFile": "2 Community_Center/2A Bridge_Repair.json"
+		},
+		{
+		"When": {"HasFlag":"ccVault"}, //2B Working
+		"Action": "Include",
+		"FromFile": "2 Community_Center/2B Bus_Working.json"
+		},
+		{
+		"When": {"HasFlag":"ccFishTank"}, //2C Working
+		"Action": "Include",
+		"FromFile": "2 Community_Center/2C Glowing_boulder.json"
+		},
+		{
+		"When": {"HasFlag":"ccPantry"},//2D Working
+		"Action": "Include",
+		"FromFile": "2 Community_Center/2D Greenhouse.json"
+		},
+		{
+		"When": {"HasFlag":"ccBoilerRoom"}, //2E Working
+		"Action": "Include",
+		"FromFile": "2 Community_Center/2E Minecarts.json"
+		},
+		{
+		"When": {"HasFlag":"ccIsComplete"},//2F Working
+		"Action": "Include",
+		"FromFile": "2 Community_Center/2F Community_Center.json"
+		},
+		{
+		"When": {"HasFlag":"ccMovieTheater"}, //3A Working
+		"Action": "Include",
+		"FromFile": "3 Movie_Theater/3A Movie_Theater.json"
+		},
+		{
+		"When": {"HasFlag":"skullCave"}, //4A Working
+		"Action": "Include",
+		"FromFile": "4 Mining/4A Skull_Cavern.json"
+		},
+		{
+		"When": {"HasFlag":"willyBoatFixed"},//5A Working
+		"Action": "Include",
+		"FromFile": "5 Ginger_Island/5A Boat_Fixed.json"
+		},
+		{
+		"When": {"HasFlag":"Island_Resort"},//5B Working
+		"Action": "Include",
+		"FromFile": "5 Ginger_Island/5B Island_Resort.json"
+		},
+		{
+		"When": {"HasFlag":"islandNorthCaveOpened"}, //5C Working
+		"Action": "Include",
+		"FromFile": "5 Ginger_Island/5C Rescued.json"
+		},
+		{
+		"When": {"HasFlag":"beenToWoods"}, //6A Working
+		"Action": "Include",
+		"FromFile": "6 Travel/6A Secret_Woods.json"
+		},
+		{
+		"When": {"HasFlag":"HasTownKey"}, //6B Working
+		"Action": "Include",
+		"FromFile": "6 Travel/6B Has_Town_Key.json"
+		},	
+		{
+		"When": {"HasFlag":"ReturnScepter"}, //6C Working
+		"Action": "Include",
+		"FromFile": "6 Travel/6C Return_Scepter.json"
+		},		
+		{
+		"When": {"Hearts:Dwarf": "10"}, //7A Working
+		"Action": "Include",
+		"FromFile": "7A friendship 10/Dwarf.json"
+		},
+		{
+		"When": {"Hearts:Jas": "10"}, //7A Working
+		"Action": "Include",
+		"FromFile": "7A friendship 10/Jas.json"
+		},
+		{
+		"When": {"Hearts:Krobus": "10"}, //7A Working
+		"Action": "Include",
+		"FromFile": "7A friendship 10/Krobus.json"
+		},
+		{
+		"When": {"Hearts:Leo": "10"}, //7A working
+		"Action": "Include",
+		"FromFile": "7A friendship 10/Leo.json"
+		},
+		{
+		"When": {"Hearts:Vincent": "10"}, //7A Working
+		"Action": "Include",
+		"FromFile": "7A friendship 10/Vincent.json"
+		},
+		{
+		"When": {"Hearts:Willy": "10"}, //7A Working
+		"Action": "Include",
+		"FromFile": "7A friendship 10/Willy.json"
+		},
+		{
+		"When": {"SkillLevel:Combat": "10"}, //8A Working
+		"Action": "Include",
+		"FromFile": "8 Skills/8A Combat.json"
+		},
+		{
+		"When": {"SkillLevel:Farming": "10"}, //8B Working
+		"Action": "Include",
+		"FromFile": "8 Skills/8B Farming.json"
+		},
+		{
+		"When": {"SkillLevel:Fishing": "10"}, //8C Working
+		"Action": "Include",
+		"FromFile": "8 Skills/8C Fishing.json"
+		},
+		//8D Blank
+		{
+		"When": {"SkillLevel:Foraging": "10"}, //8E Working
+		"Action": "Include",
+		"FromFile": "8 Skills/8E Foraging.json"
+		},
+		{
+		"When": {"SkillLevel:Mining": "10"}, //8G Working
+		"Action": "Include",
+		"FromFile": "8 Skills/8G Mining.json"
+		},
+		{
+		"When": {"Query: {{FarmhouseUpgrade}} = 1": true },//9A Working
+		"Action": "Include",
+		"FromFile": "9 FarmHouse/9A Upgrade_House1.json"
+		},
+		//9B blank
+		{
+		"When": {"Query: {{FarmhouseUpgrade}} = 2": true },//9C Working
+		"Action": "Include",
+		"FromFile": "9 FarmHouse/9C Upgrade_House2.json"
+		},
+		{
+		"When": {"HasConversationTopic": "wonEggHunt" },//10A Working
+		"Action": "Include",
+		"FromFile": "10 Festivals/10A Won_Egg_Hunt.json"
+		},
+		{
+		"When": {"HasConversationTopic":"wonIceFishing"},//10B Working
+		"Action": "Include",
+		"FromFile": "10 Festivals/10B Won_Festival_Ice.json"
+		},
+		{
+		"When": {"HasConversationTopic":"wonGrange"},//10C
+		"Action": "Include",
+		"FromFile": "10 Festivals/10C Won_Grange.json"
+		},
+		{
+		"When":  {"HasConversationTopic": "achievement_35"}, //11A working
+		"Action": "Include",
+		"FromFile": "11 Power/11A Read_Books.json"
+		},
+		//12 blank
+		{
+		"When": {"HasConversationTopic": "achievement_0", "Taxes":"true"}, //13A Working
+		"Action": "Include",
+		"FromFile": "13 Gold/13A gold_15K.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_1","Taxes":"true"}, //13B Working
+		"Action": "Include",
+		"FromFile": "13 Gold/13B gold_50K.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_2", "Taxes":"true"}, //13C Working
+		"Action": "Include",
+		"FromFile": "13 Gold/13C gold_250K.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_3", "Taxes":"true"}, //13D Working
+		"Action": "Include",
+		"FromFile": "13 Gold/13D gold_1M.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_4", "Taxes":"true"}, //13E Working
+		"Action": "Include",
+		"FromFile": "13 Gold/13E gold_10M.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_0", "Taxes":"false"}, //13F Working
+		"Action": "Include",
+		"FromFile": "13 Gold/13F gold_15K no taxes.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_1","Taxes":"false"}, //13G Working
+		"Action": "Include",
+		"FromFile": "13 Gold/13G gold_50K no taxes.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_2", "Taxes":"false"}, //13H Working
+		"Action": "Include",
+		"FromFile": "13 Gold/13H gold_250K no taxes.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_3", "Taxes":"false"}, //13I Working
+		"Action": "Include",
+		"FromFile": "13 Gold/13I gold_1M no taxes.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_4", "Taxes":"false"}, //13J Working
+		"Action": "Include",
+		"FromFile": "13 Gold/13J gold_10M no taxes.json"
+		},
+		//14 Blank
+		{
+		"When": {"HasConversationTopic": "achievement_15"},//15A Working
+		"Action": "Include",
+		"FromFile": "15 Cooking/15A Cooking_10.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_07"}, //15B Working
+		"Action": "Include",
+		"FromFile": "15 Cooking/15B Cooking_40.json"
+		},
+		{ 
+		"When": {"HasConversationTopic": "achievement_17"}, //15C Working
+		"Action": "Include",
+		"FromFile": "15 Cooking/15C Cooking_all.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_20"}, //16A Working
+		"Action": "Include",
+		"FromFile": "16 Crafting/16A Crafting_15.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_21"}, //16B Woking
+		"Action": "Include",
+		"FromFile": "16 Crafting/16B Crafting_30.json"
+		},
+		{
+		"When":  {"HasConversationTopic": "achievement_22"}, //16C Working
+		"Action": "Include",
+		"FromFile": "16 Crafting/16C Crafting_all.json"
+		},
+		{
+		"When":  {"HasConversationTopic": "achievement_29"},//17A Working
+		"Action": "Include",
+		"FromFile": "17 Help_Wanted/17A Help_Wanted_10.json"
+		},
+		{
+		"When":  {"HasConversationTopic": "achievement_30"}, //17B Working
+		"Action": "Include",
+		"FromFile": "17 Help_Wanted/17B Help_Wanted_40.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_22"},//18A Working
+		"Action": "Include",
+		"FromFile": "18 Fishing/18A Catch_Fish 10.json"
+		},
+		{
+		"When":  {"HasConversationTopic": "achievement_25"}, //18B Working
+		"Action": "Include",
+		"FromFile": "18 Fishing/18B Catch_Fish 24.json"
+		},
+		{
+		"When":  {"HasConversationTopic": "achievement_26"},//18C Working
+		"Action": "Include",
+		"FromFile": "18 Fishing/18C Catch_Fish all.json"
+		},
+		{
+		"When":  {"HasConversationTopic": "achievement_27"}, //18D Working
+		"Action": "Include",
+		"FromFile": "18 Fishing/18D Catch_Fish 100.json"
+		},
+		{
+		"When":  {"HasConversationTopic": "achievement_31"},//19A Working
+		"Action": "Include",
+		"FromFile": "19 Ship Items/19A Ship_Items 15.json"
+		},
+		{
+		"When":  {"HasConversationTopic": "achievement_32"}, //19B Working
+		"Action": "Include",
+		"FromFile": "19 Ship Items/19B Ship_Items 300.json"
+		},
+		{
+		"When":  {"HasConversationTopic": "achievement_34"},//19C Working
+		"Action": "Include",
+		"FromFile": "19 Ship Items/19C Ship_Items all.json"
+		},
+			//20 Blank	
+		{
+		"When": {"HasConversationTopic": "achievement_6"}, //21A Working
+		"Action": "Include",
+		"FromFile": "21 More Friendship/21A New_friend.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_7"}, //21B Working
+		"Action": "Include",
+		"FromFile": "21 More Friendship/21B Best_friends.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_9"}, //21C Working
+		"Action": "Include",
+		"FromFile": "21 More Friendship/21C Beloved_Farmer.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_11"}, //21D Working
+		"Action": "Include",
+		"FromFile": "21 More Friendship/21D Cliques.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_12"}, //21E Working
+		"Action": "Include",
+		"FromFile": "21 More Friendship/21E Networking.json"
+		},
+		{
+		"When": {"HasConversationTopic": "achievement_13"}, //21F Working
+		"Action": "Include",
+		"FromFile": "21 More Friendship/21F Popular.json"
+		}	
+	
+		]
+
+}
+	

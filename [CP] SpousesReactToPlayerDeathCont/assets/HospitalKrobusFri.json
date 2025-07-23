@@ -1,0 +1,16 @@
+{ // Hospital Death - Krobus Roommate Friday
+  "Changes": [
+    {
+      "LogName": "KO Generic - Krobus Friday",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "When": {
+        "Roommate": "Krobus",
+        "DayOfWeek": "Friday",
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 12 3 Krobus -50 -50 2/skippable/pause 1500/showFrame 5/message \"{{i18n:PlayerKilled.doctor.01}}\"/pause 1000/message \"{{i18n:PlayerKilled.doctor.02}}\"/viewport 20 12 true/pause 1000/speak Harvey \"{{i18n:PlayerKilled.doctor.03}}\"/faceDirection farmer 1/emote farmer 16/pause 500/speak Harvey \"{{i18n:PlayerKilled.doctor.06}}\"/pause 500/move Harvey 1 0 1/textAboveHead Harvey \"{{i18n:PlayerKilled.Harvey.10}}\"/move Harvey 0 -4 0/move Harvey -8 0 0 true/move Harvey 0 -1 0/move Harvey -4 0 0/move Harvey 0 -1 0/playSound doorClose/warp Harvey -100 -100/pause 1500/warp Krobus 21 7 2/playSound dwop/move Krobus -1 0 0/pause 500/speed Krobus 5/move Krobus 0 2 1/speed Krobus 5/move Krobus 2 0 3/speed Krobus 5/move Krobus 0 3 3/jump farmer/emote farmer 16/move farmer 1 0 1/pause 500/speak Krobus \"{{i18n:PlayerKilled.Krobus.04}}\"/pause 500/emote Krobus 16/speak Krobus \"{{i18n:PlayerKilled.Krobus.05}}\"/pause 500/message \"{{i18n:PlayerKilled.Krobus.Fri1}}\"/emote farmer 16/pause 500/speak Krobus \"{{i18n:PlayerKilled.Krobus.06}}\"/message \"{{i18n:PlayerKilled.Krobus.Fri2}}\"/pause 500/hospitaldeath/end dialogue Krobus \"{{i18n:HospitalEnd.Krobus.03}}#$c 0.7#{{i18n:HospitalEnd.Krobus.04}}\""
+      }
+    }
+  ]
+}

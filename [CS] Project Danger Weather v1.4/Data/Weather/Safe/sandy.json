@@ -1,0 +1,101 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data Sandy",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Sandstorm": {
+					"Id": "kath.weathering_Sandstorm",
+					"DisplayName": "{{i18n: Weather.Sandstorm}}",
+
+					"Forecast": "{{i18n: Weather.Sandstorm.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Sandstorm.ForecastIsland}}", "Desert": "{{i18n: Weather.Sandstorm.ForecastDesert}}",},
+					
+					"UseNightTiles": false,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+										
+					//"MusicOverride": "KathSandstorm",
+					"MusicFrequencyOutside": 75,
+					"MusicFrequencyInside": 10,
+					"SoftMusicOverrides": [
+					    {
+							"Id": "DesertStormy",
+							"Condition": "LOCATION_CONTEXT Target Desert",
+							"Track": "KathSandstorm"
+						},
+					],
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 8},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 13},
+					"TVFrames": 4,
+
+
+					"TotemMessage": "{{i18n: Weather.SandStormTotem}}",
+					"TotemScreenTint": "yellow",
+					"TotemSound": "wind",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDSandstorm 3",
+							],
+						},						
+					],//close effect
+
+					"Layers": [
+						{
+							"Id": "SandParticles",
+							"Condition": "LOCATION_NAME Target Desert, !PLAYER_HAS_BUFF Current PDWUVGoggles",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 32, "Y": 32, "Width": 16, "Height": 16 },
+							"Frames": "2",
+							"TimePerFrame": "100",
+							"Speed": "1, 1",
+							"ViewSpeed": "1, 1",
+							"Scale": 4,
+						},
+						{
+							"Id": "LightingSand",
+							"Condition": "LOCATION_NAME Target Desert",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "205, 151, 27",
+							"Opacity": 0.62
+						},
+						{
+							"Id": "FoggySand",
+							"Condition": "LOCATION_NAME Target Desert",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 0, "Y": 32, "Width": 32, "Height": 32 },
+							"Color": "205, 151, 27",
+							"Opacity": 0.38,
+							"Speed": "3, 3",
+							"ViewSpeed": "-1, -1",
+							"Scale": 100,
+						},
+
+					]//close layers
+				}//close in-entry
+			}//close entry
+		},
+//End
+]
+}

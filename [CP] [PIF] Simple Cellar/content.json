@@ -1,0 +1,35 @@
+﻿{
+    "Format": "2.0.0",
+    "Changes": [
+		{
+			"Action": "EditData",
+			"Target": "DLX.PIF/Farms",
+			"Entries": {
+				"DLX.SimpleCellar": {
+					"DisplayName": "Simple Cellar",
+					"DefaultArrivalTile": { "X": 20, "Y": 12 },
+					"CanPlantHere": true,
+					"ExcludeFromNpcPathfinding": true,
+					"MaxDailyWeeds": 0,
+					
+					"ArrivalTile_T0": { "X": 20, "Y": 12 },
+					
+					"MapAsset_T0": "Maps/PIF/DLX.SimpleCellarT0",
+				
+					
+					"Preview": "DLX.SimpleCellar_Preview",
+				}
+			}
+		},
+		{
+			"Action": "Load",
+			"Target": "Maps/PIF/DLX.SimpleCellarT0",
+			"FromFile": "assets/{{TargetWithoutPath}}.tmx"
+		},
+		{
+			"Action": "Load",
+			"Target": "DLX.SimpleCellar_Preview",
+			"FromFile": "assets/Preview.png"
+		}
+    ]
+}

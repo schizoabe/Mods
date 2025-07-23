@@ -1,0 +1,37 @@
+{
+	"Changes": [
+        {
+			"LogName": "Edit Museum Expansion Hall",
+			"Action": "EditMap",
+			"Target": "Maps/KathMuseum_Mirin",
+			"When": {"HasMod": "kath.cosmos,kath.wth.holidays"},
+			"PatchMode": "Overlay",
+			"Update": "OnLocationChange",
+			"FromFile": "assets/maps/patchesmuseum/kath_museum_patches.tmx",
+            "FromArea": { "X": 12, "Y": 5, "Width": 2, "Height": 2 },
+            "ToArea": { "X": 12, "Y": 5, "Width": 2, "Height": 2 }
+		},
+		{
+			"LogName": "Edit Museum Expand Cosmos",
+			"Action": "EditMap",
+			"Target": "Maps/KathMuseum_Mirin",
+			"When": {"HasSeenEvent|contains=KathMuseum.Expansion": false, "HasMod|contains=kath.cosmos": true},
+			"PatchMode": "Overlay",
+			"Update": "OnLocationChange",
+			"FromFile": "assets/maps/patchesmuseum/kath_museum_patches.tmx",
+            "FromArea": { "X": 0, "Y": 10, "Width": 14, "Height": 10 },
+            "ToArea": { "X": 0, "Y": 10, "Width": 14, "Height": 10 }
+		},
+        {
+			"LogName": "Edit Museum Expand Holidays",
+			"Action": "EditMap",
+			"Target": "Maps/KathMuseum_Mirin",
+			"When": {"HasSeenEvent|contains=KathMuseum.Expansion": false, "HasMod|contains=kath.wth.holidays": true},
+			"PatchMode": "Replace",
+			"Update": "OnLocationChange",
+			"FromFile": "assets/maps/patchesmuseum/kath_museum_patches.tmx",
+            "FromArea": { "X": 18, "Y": 0, "Width": 14, "Height": 22 },
+            "ToArea": { "X": 18, "Y": 0, "Width": 14, "Height": 22 }
+		}
+	]
+}

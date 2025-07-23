@@ -1,0 +1,62 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [
+                "Hospital",
+                "Items"
+            ],
+            "Entries": {
+                "{{ModID}}_EmptyFlask": {
+                    "Id": "{{ModID}}_EmptyFlask",
+                    "ItemId": "{{ModID}}_EmptyFlask",
+                    "Price": 50,
+                    "AvailableStockModifiers": [
+                        {
+                            "Modification": "Multiply",
+                            "RandomAmount": [
+                                1.5,
+                                1.4,
+                                1.3,
+                                1.2,
+                                1.1,
+                                1.0,
+                                0.9,
+                                0.8,
+                                0.7,
+                                0.6,
+                                0.5,
+                            ]
+                        }
+                    ],
+                    "AvailableStockLimit": "Player"
+                },
+                "{{ModID}}_Glycerin": {
+                    "Id": "{{ModID}}_Glycerin",
+                    "ItemId": "{{ModID}}_Glycerin",
+                    "Price": 250,
+                    "AvailableStockModifiers": [
+                        {
+                            "Modification": "Multiply",
+                            "RandomAmount": [
+                                1.5,
+                                1.4,
+                                1.3,
+                                1.2,
+                                1.1,
+                                1.0,
+                                0.9,
+                                0.8,
+                                0.7,
+                                0.6,
+                                0.5,
+                            ]
+                        }
+                    ],
+                    "AvailableStockLimit": "Player"
+                }
+            }
+        }
+    ]
+}

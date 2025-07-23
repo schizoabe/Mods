@@ -1,0 +1,18 @@
+{ // Ex-Spouse Death - Harvey 
+  "Changes": [
+    {
+      "LogName": "KO Ex-Spouse - Harvey",
+      "Action": "EditData",
+      "Target": "Data/Events/Hospital",
+      "When": {
+        "Ex-Involvement": "true",
+        "HasValue:{{Spouse}}": "false",
+        "HasValue:{{ExSpouse}}": "true", // Redundant with the below line?
+        "query: '{{ExSpouse}}' IN ('Harvey')": true,
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 20 12 2 Harvey 21 12 3/skippable/pause 1500/showFrame 5/message \"{{i18n:PlayerKilled.doctor.01}}\"/pause 1000/message \"{{i18n:PlayerKilled.doctor.02}}\"/viewport 20 12 true/pause 1000/speak Harvey \"{{i18n:PlayerKilled.doctor.03}}\"/faceDirection farmer 1/emote farmer 16/pause 1000/speak Harvey \"{{i18n:PlayerKilled.doctor.06}}\"/pause 500/emote Harvey 40/pause 500/faceDirection Harvey 0/faceDirection Harvey 3/pause 500/speak Harvey \"{{i18n:PlayerKilled.Harvey.20}}\"/move Harvey 1 0 1/pause 1000/speak Harvey \"{{i18n:PlayerKilled.Harvey.21}}\"/move Harvey 0 -4 0/move Harvey -8 0 0 true/move Harvey 0 -3 0/warp Harvey -100 -100/pause 500/message \"{{i18n:Hospital.Thoughts.01}}\"/emote farmer 28/hospitaldeath/end dialogue Harvey \"{{i18n:DivorcedEnd.Harvey.01}}\""
+      }
+    }
+  ]
+}

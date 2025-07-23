@@ -1,0 +1,40 @@
+{
+"Changes": [
+
+//Load images
+{
+    "Action": "Load",
+    "Target": "Tilesheets/{{ModId}}-shooting-star",
+    "FromFile": "assets/img/shooting-star.png"
+},
+
+//Load map
+{
+     "Action": "Load",
+     "Priority": "Low",
+     "Target": "Maps/MM-OceanNight",
+     "FromFile": "assets/maps/OceanNight.tmx",
+},
+
+//EMILY -- proposes on the beach at night
+//Maybe Emily can be special. Give her a variable start location? Versions in several different places? (Beach, Forest, Mountains?)
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Beach",
+    "Entries": {
+        "{{ModId}}_Proposal_Emily/Dating Emily/f Emily 2500/t 2000 2300/w sunny/c 1/LocalMail {{ModId}}_StartEmily": "ocean/-1000 -1000/farmer 12 23 2 Emily 13 39 2/--skippable/mailReceived {{ModId}}_StopBlack_Emily/addLantern 735 14 39 1/viewport 13 39 clamp true/positionOffset farmer 0 4/pause 2000/advancedMove farmer false 0 13 2 500/pause 2500/playSound woodyStep/pause 600/playSound woodyStep/pause 400/pause 1500/playSound woodyStep/pause 400/playSound woodyStep/faceDirection Emily 0/pause 1800/emote Emily 32/pause 1000/waitForAllStationary/emote farmer 32/pause 800/speak Emily \"{{i18n:White_Emily.0}}\"/pause 200/quickQuestion #{{i18n:White_Emily.1}}#{{i18n:White_Emily.2}}(break)pause 200\\emote Emily 32\\pause 800\\speak Emily \"{{i18n:White_Emily.3}}\"(break)pause 200\\emote Emily 32\\pause 800\\speak Emily \"{{i18n:White_Emily.4}}\"/pause 300/emote farmer 32/pause 1400/advancedMove farmer false 0 3 2 500/pause 400/faceDirection Emily 2/pause 4000/playSound yoba/pause 800/emote Emily 16/speak Emily \"{{i18n:White_Emily.5}}\"/pause 200/emote farmer 56/globalFade/viewport -1000 -1000/warp farmer -100 -100/warp Emily -100 -100/changeToTemporaryMap MM-OceanNight/viewport 15 6 clamp true/pause 4000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-shooting-star 0 0 64 64 50 15 1 15 3 false false 1 0 1 0 0 0/pause 4000/viewport move 0 1 11000/pause 2000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-shooting-star 0 0 64 64 50 15 1 18 11 false false 1 0 1 0 0 0/pause 2000/temporaryAnimatedSprite Tilesheets\\{{ModId}}-shooting-star 0 0 64 64 50 15 1 14 15 false false 1 0 1 0 0 0/pause 3000/message \"{{i18n:White_Emily.6 |Your={{Your}}}}\"/pause 2000/speak Emily \"{{i18n:White_Emily.7}}\"/pause 800/speak Emily \"{{i18n:White_Emily.8}}\"/pause 200/--emote Emily 40/speak Emily \"{{i18n:White_Emily.9}}\"/globalFade/viewport -1000 -1000/warp farmer 12 39/warp Emily 13 39/faceDirection farmer 2/faceDirection Emily 2/positionOffset farmer 0 16/changeLocation Beach/addLantern 735 14 39 1/viewport 13 39 clamp true/pause 2400/faceDirection farmer 1/emote farmer 8/pause 1200/faceDirection Emily 3/pause 1200/playMusic musicboxsong/pause 2400/speak Emily \"{{i18n:White_Emily.10}}\"/pause 1000/message \"{{i18n:White_Emily.11}}\"/pause 800/speak Emily \"{{i18n:White_Emily.12}}\"/pause 400/emote farmer 16/pause 200/question fork1  \"{{i18n:proposalResponse}}\"/fork {{ModId}}_Emily_No/switchEvent {{ModId}}_Emily_Yes",
+      
+      "{{ModId}}_Emily_Yes": "emote Emily 20/pause 200/message \"{{i18n:White_Emily.YES.0 |Your={{Your}}}}\"/pause 200/speak Emily \"{{i18n:White_Emily.YES.1}}\"/pause 200/message \"{{i18n:White_Emily.YES.2 |You={{You}}}}\"/{{Farmer_Kiss}}/{{Emily_Kiss}}/emote Emily 20/pause 200/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Emily 12/pause 1000/speak Emily \"{{i18n:White_Emily.YES.3}}\"/pause 800/speak Emily \"{{i18n:White_Emily.YES.4}}\"/pause 200/faceDirection Emily 2/pause 500/faceDirection farmer 2/emote farmer 32/pause 1500/viewport move 1 -1 4000/globalFade/viewport -1000 -1000/pause 3000/action Kantrip.HeartActions_DoEngagement Emily/action AddItem 460/pause 4000/stopMusic/end/",
+        
+        "{{ModId}}_Emily_No": "speed Emily 2/jump Emily/emote Emily 16/pause 800/emote Emily 28/pause 2000/speak Emily \"{{i18n:White_Emily.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_Emily_notReady(break)switchEvent {{ModId}}_Emily_noMarriage(break)switchEvent {{ModId}}_Emily_breakup/",
+        
+        "{{ModId}}_Emily_notReady": "pause 400/emote Emily 60/pause 800/speak Emily \"{{i18n:White_Emily.NO1.0}}\"/pause 500/speak Emily \"{{i18n:White_Emily.NO1.1 |Your={{Your}}}}\"/pause 200/emote farmer 32/pause 400/emote Emily 32/pause 200/speak Emily \"{{i18n:White_Emily.NO1.2}}\"/pause 200/{{Farmer_Kiss}}/{{Emily_Kiss}}/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end",
+        
+        "{{ModId}}_Emily_noMarriage": "pause 200/speak Emily \"{{i18n:White_Emily.NO2.0}}\"/pause 200/faceDirection Emily 1/emote Emily 40/pause 2000/faceDirection Emily 3/pause 100/speak Emily \"{{i18n:White_Emily.NO2.1}}\"/pause 200/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_Emily_breakup": "pause 400/playSound dwop/positionOffset Emily 2 0/pause 100/positionOffset Emily 2 0/pause 100/positionOffset Emily 2 0/pause 100/playSound dwop/positionOffset Emily 2 0/pause 100/positionOffset Emily 2 0/pause 100/positionOffset Emily 2 0/pause 1500/faceDirection Emily 2/shake Emily 500/pause 1000/emote Emily 28/pause 2500/faceDirection Emily 3/speak Emily \"{{i18n:White_Emily.NO3.0}}\"/advancedMove Emily false 0 -2 4 3500/pause 100/faceDirection farmer 0/pause 3500/speak Emily \"{{i18n:White_Emily.NO3.1}}\"/pause 1000/shake Emily 500/pause 1500/advancedMove Emily false 0 -15/pause 2000/faceDirection farmer 2/pause 1500/action Kantrip.HeartActions_DoBreakup Emily/friendship Emily -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+
+]
+}

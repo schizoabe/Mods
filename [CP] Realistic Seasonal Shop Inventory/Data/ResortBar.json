@@ -1,0 +1,278 @@
+{
+ "Changes": [
+ 
+ //standard
+ 
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "ResortBar",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)873": null,
+	  "(O)346": null,
+	  "(O)303": null,
+	  "(O)459": null,
+	  "(O)612": null,
+	  "MangoWine": null,
+	  
+	  
+	  "boringvlln.rshops_AlcoholUnusual": {
+      "RandomItemId": [ "(O)873", "(O)346", "(O)303", "(O)459", "FLAVORED_ITEM Wine (O)398", "(O)903" ],
+	  "Id": "boringvlln.rshops_AlcoholUnusual",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_GISpringSatua": {
+      "Condition": "SEASON spring",
+	  "RandomItemId": [ "(O)196", "(O)198", "(O)199" ],
+	  "Id": "boringvlln.rshops_GISpringSatua",
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_GISummerSatua": {
+      "Condition": "SEASON summer",
+	  "RandomItemId": [ "(O)198", "(O)213", "(O)907" ],
+	  "Id": "boringvlln.rshops_GISummerSatua",
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_GIFallSatua": {
+      "Condition": "SEASON fall",
+	  "RandomItemId": [ "(O)236", "(O)239", "(O)607" ],
+	  "Id": "boringvlln.rshops_GIFallSatua",
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_GIWinterSoup": {
+      "Condition": "SEASON winter",
+	  "RandomItemId": [ "(O)202", "(O)219", "(O)218" ],
+	  "Id": "boringvlln.rshops_GIWinterSoup",
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    }
+ },
+  "When": { "ResortBar": "standard" }
+},
+
+//hardmode
+
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "ResortBar",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)873": null,
+	  "(O)346": null,
+	  "(O)303": null,
+	  "(O)459": null,
+	  "(O)612": null,
+	  "MangoWine": null,
+	  
+	  
+	  "boringvlln.rshops_AlcoholUnusual": {
+      "RandomItemId": [ "(O)873", "(O)346", "(O)303", "(O)459", "FLAVORED_ITEM Wine (O)398", "(O)903" ],
+	  "Id": "boringvlln.rshops_AlcoholUnusual",
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_GISpringSatua": {
+      "Condition": "SEASON spring",
+	  "RandomItemId": [ "(O)196", "(O)198", "(O)199" ],
+	  "Id": "boringvlln.rshops_GISpringSatua",
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_GISummerSatua": {
+      "Condition": "SEASON summer",
+	  "RandomItemId": [ "(O)198", "(O)213", "(O)907" ],
+	  "Id": "boringvlln.rshops_GISummerSatua",
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_GIFallSatua": {
+      "Condition": "SEASON fall",
+	  "RandomItemId": [ "(O)236", "(O)239", "(O)607" ],
+	  "Id": "boringvlln.rshops_GIFallSatua",
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_GIWinterSoup": {
+      "Condition": "SEASON winter",
+	  "RandomItemId": [ "(O)202", "(O)219", "(O)218" ],
+	  "Id": "boringvlln.rshops_GIWinterSoup",
+	  "AvailableStock": 10,	
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,
+              ]
+            }
+          ],
+    }
+ },
+  "When": { "ResortBar": "hardmode" }
+},
+]
+}

@@ -1,0 +1,52 @@
+{
+"Changes": [
+
+//Load audio
+{
+    "Action": "EditData",
+    "Target": "Data/AudioChanges",
+    "Entries": {
+        "{{ModId}}_Audio_NightMarketJazz": {
+            "ID": "{{ModId}}_NightMarketJazz",
+            "Category": "Music",
+            "FilePaths": [ "{{AbsoluteFilePath: assets/sound/TheConsouls_Night-Market-Jazz.ogg}}" ],
+            "StreamedVorbis": true,
+            "Looped": true
+        },
+    }
+},
+
+//Load map
+{
+     "Action": "Load",
+     "Priority": "Low",
+     "Target": "Maps/MM-ElliottWhite",
+     "FromFile": "assets/maps/Beach-ElliottWhite.tmx",
+},
+
+//ELLIOTT -- proposes on the docks at night
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Beach",
+    "Entries": {
+        "{{ModId}}_Proposal_Elliott/Dating Elliott/f Elliott 2500/t 2000 2300/w sunny/c 1/LocalMail {{ModId}}_Letter_Elliott": "ocean/-1000 -1000/farmer 25 35 2 Elliott 39 33 2/--skippable/mailReceived {{ModId}}_StopBlack_Elliott/changeToTemporaryMap MM-ElliottWhite false/advancedMove farmer false 12 0 4 500/viewport 35 35 clamp true/pause 1200/faceDirection Elliott 3/pause 200/speak Elliott \"{{i18n:White_Elliott.0}}\"/move Elliott -1 0 2/waitForAllStationary/pause 200/emote Elliott 32/pause 1000/faceDirection farmer 1/pause 400/faceDirection farmer 3/pause 400/faceDirection farmer 0/pause 800/emote farmer 8/pause 800/speak Elliott \"{{i18n:White_Elliott.1}}\"/pause 800/quickQuestion #{{i18n:White_Elliott.2}}#{{i18n:White_Elliott.3}}(break)pause 200\\emote Elliott 32\\pause 200\\speak Elliott \"{{i18n:White_Elliott.4}}\"(break)pause 200\\speak Elliott \"{{i18n:White_Elliott.5}}\"/pause 200/emote farmer 8/pause 1000/faceDirection Elliott 1/pause 1500/emote Elliott 60/pause 800/faceDirection Elliott 2/speak Elliott \"{{i18n:White_Elliott.6}}\"/pause 100/speed farmer 1/advancedMove farmer false 1 0 4 500/pause 1000/emote farmer 32/faceDirection Elliott 2/pause 400/showFrame Elliott 39/pause 1200/speak Elliott \"{{i18n:White_Elliott.7}}\"/pause 400/playMusic elliottPiano/pause 800/showFrame Elliott 38/speak Elliott \"{{i18n:White_Elliott.8}}\"/pause 100/showFrame Elliott 39/pause 100/speak Elliott \"{{i18n:White_Elliott.9}}\"/pause 200/speed Elliott 1/advancedMove Elliott false 1 0 0 2 3 500/pause 500/faceDirection farmer 1/waitForAllStationary/pause 200/message \"{{i18n:White_Elliott.10}}\"/pause 200/playSound dwop/positionOffset Elliott -4 0/positionOffset Elliott -4 0/pause 800/jump farmer/pause 1800/speak Elliott \"{{i18n:White_Elliott.11}}\"/pause 400/emote farmer 16/pause 200/question fork1  \"{{i18n:proposalResponse}}\"/fork {{ModId}}_Elliott_No/switchEvent {{ModId}}_Elliott_Yes",
+        }
+},
+{
+       "Action": "EditData",
+       "Target": "Data/Events/Temp",
+       "Entries": {
+           "{{ModId}}_Elliott_Yes": "playMusic ocean/stopAnimation Elliott 12/emote Elliott 20/pause 200/positionOffset farmer 4 0/{{Farmer_Kiss}}/{{Elliott_Kiss}}/emote Elliott 20/pause 200/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Elliott 12/pause 1000/pause 200/speak Elliott \"{{i18n:White_Elliott.YES.0}}\"/pause 200/message \"{{i18n:White_Elliott.YES.1 |Your={{Your}}}}\"/pause 200/emote farmer 20/pause 1200/speak Elliott \"{{i18n:White_Elliott.YES.2}}\"/speed Elliott 1/pause 400/move Elliott 2 0 0/pause 500/playSound button_tap/pause 200/playMusic {{ModId}}_NightMarketJazz/pause 3000/faceDirection Elliott 3/pause 1000/emote Elliott 20/pause 2000/speed Elliott 1/move Elliott -2 0 3/pause 800/emote farmer 8/pause 1500/speak Elliott \"{{i18n:White_Elliott.YES.3}}\"/pause 800/emote farmer 32/pause 1500/globalFade/viewport -1000 -1000/pause 5000/action Kantrip.HeartActions_DoEngagement Elliott/action AddItem 460/pause 4000/stopMusic/end/",
+        
+        "{{ModId}}_Elliott_No": "playMusic ocean/stopAnimation Elliott 12/speed Elliott 2/jump Elliott/emote Elliott 16/pause 800/emote Elliott 28/pause 2000/speak Elliott \"{{i18n:White_Elliott.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_Elliott_notReady(break)switchEvent {{ModId}}_Elliott_noMarriage(break)switchEvent {{ModId}}_Elliott_breakup/",
+        
+        "{{ModId}}_Elliott_notReady": "pause 400/emote Elliott 60/pause 800/speak Elliott \"{{i18n:White_Elliott.NO1.0}}\"/pause 500/speak Elliott \"{{i18n:White_Elliott.NO1.1 |Your={{Your}}}}\"/pause 200/emote farmer 32/pause 400/emote Elliott 32/pause 200/speak Elliott \"{{i18n:White_Elliott.NO1.2}}\"/pause 200/{{Farmer_Kiss}}/{{Elliott_Kiss}}/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end",
+        
+        "{{ModId}}_Elliott_noMarriage": "pause 200/speak Elliott \"{{i18n:White_Elliott.NO2.0}}\"/pause 200/faceDirection Elliott 1/emote Elliott 40/pause 2000/faceDirection Elliott 3/pause 100/speak Elliott \"{{i18n:White_Elliott.NO2.1}}\"/pause 200/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_Elliott_breakup": "pause 400/playSound dwop/positionOffset Elliott 2 0/pause 100/positionOffset Elliott 2 0/pause 100/positionOffset Elliott 2 0/pause 100/playSound dwop/positionOffset Elliott 2 0/pause 100/positionOffset Elliott 2 0/pause 100/positionOffset Elliott 2 0/pause 1500/faceDirection Elliott 2/shake Elliott 500/pause 1000/emote Elliott 28/pause 2500/faceDirection Elliott 3/speak Elliott \"{{i18n:White_Elliott.NO3.0}}\"/advancedMove Elliott false 4 0 1 3500/pause 100/faceDirection Elliott 1/pause 3500/speak Elliott \"{{i18n:White_Elliott.NO3.1}}\"/pause 100/faceDirection Elliott 1/pause 1000/shake Elliott 500/pause 1500/advancedMove farmer false -10 0/pause 2500/action Kantrip.HeartActions_DoBreakup Elliott/friendship Elliott -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+
+]
+}

@@ -1,0 +1,237 @@
+{
+"Format": "2.7.2",
+
+"ConfigSchema": {
+    
+    "EnableBlackEvents": {
+        "AllowValues": "true, false",
+        "Default": true,
+        "Description": "Enables the desperate proposal events",
+    },
+    
+    "SecondPersonNarration": {
+        "AllowValues": "true, false",
+        "Default": true,
+        "Description": "Changes text of message boxes to second person (you) instead of third person (the farmer)",
+    },
+    
+    "AllowProposalsWhenMarried": {
+        "AllowValues": "true, false",
+        "Default": false,
+        "Description": "Experimental. Probably only relevant for people running PolyamorySweet or similar mods",
+    },
+},
+
+"DynamicTokens": [
+    
+    {
+        "Name": "VanillaSuitors",
+        "Value": "Abigail, Alex, Elliott, Emily, Haley, Harvey, Leah, Maru, Penny, Sam, Sebastian, Shane"
+    },
+    {
+        "Name": "PlayerIsFree",
+        "Value": "true",
+    },
+    {
+        "Name": "PlayerIsFree",
+        "Value": "false",
+        "When": {
+            "HasValue: {{Kantrip.ReverseProposals/Partner}}": true,
+        }
+    },
+    {
+        "Name": "IsEngaged",
+        "Value": "false",
+    },
+    {
+        "Name": "IsEngaged",
+        "Value": "true",
+        "When": {
+            "HasValue: {{Kantrip.ReverseProposals/Fiancee}}": true,
+        }
+    },
+    
+    //Better check for a poly mod before allowing this
+    {
+        "Name": "CanDoProposalsWhenMarried",
+        "Value": "false",
+    },
+    {
+        "Name": "CanDoProposalsWhenMarried",
+        "Value": "true",
+        "When": {
+            "AllowProposalsWhenMarried": "true",
+            "HasMod": "ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory, aedenthorn.FreeLove"
+        }
+    },
+    
+    //TODO: If EnderTedi's mod is installed, will need to check HasMonogamousPartner here, and will also have to check whether the proposing NPC is poly before going ahead.
+    
+    //Tokens for the Blackheart event
+    {
+        "Name": "BlackHeartSuitor",
+        "Value": "{{Kantrip.ReverseProposals/BlackHeartSuitor:weather={{Weather: current}}}}",
+        "When": {
+            "Query: {{Count:{{Kantrip.ReverseProposals/MaxHeartSuitors:type=all}}}} > 0": true,
+        }
+    },
+    {
+        "Name": "BlackHeartMusic",
+        "Value": "shaneTheme",
+    },
+    {
+        "Name": "BlackHeartMusic",
+        "Value": "echos",
+        "When": {
+            "Weather: current": "rain, storm, snow"
+        }
+    },
+    
+    //Testing
+    {
+        "Name": "TESTING-MaxHeart-All",
+        "Value": "{{Kantrip.ReverseProposals/MaxHeartSuitors:type=all}}",
+    },
+    {
+        "Name": "TESTING-MaxHeart-Vanilla",
+        "Value": "{{Kantrip.ReverseProposals/MaxHeartSuitors:type=vanilla}}",
+    },
+    {
+        "Name": "TESTING-MaxHeart-Custom",
+        "Value": "{{Kantrip.ReverseProposals/MaxHeartSuitors:type=custom}}",
+    },
+    {
+        "Name": "TESTING-MaxHeart-NoEvent",
+        "Value": "{{Kantrip.ReverseProposals/MaxHeartSuitors:type=noevent}}",
+    },
+    
+    //Seasonal/day tokens for some events so they don't feel weird in winter
+    {
+        "Name": "NightAmbient",
+        "Value": "spring_night_ambient",
+    },
+    {
+        "Name": "NightAmbient",
+        "Value": "none",
+        "When": {
+            "Season": "winter",
+        }
+    },
+    {
+        "Name": "DayAmbient",
+        "Value": "spring_day_ambient",
+    },
+    {
+        "Name": "DayAmbient",
+        "Value": "fall_day_ambient",
+        "When": {
+            "Season": "fall",
+        }
+    },
+    {
+        "Name": "DayAmbient",
+        "Value": "winter_day_ambient",
+        "When": {
+            "Season": "winter",
+        }
+    },
+    
+    //Pronoun trickery
+    {
+        "Name": "You",
+        "Value": "{{i18n:2ndPerson.you}}",
+    },
+    {
+        "Name": "Your",
+        "Value": "{{i18n:2ndPerson.your}}",
+    },
+    {
+        "Name": "You",
+        "Value": "{{i18n:3rdPerson.you}}",
+        "When": {
+            "SecondPersonNarration": false,
+        }
+    },
+    {
+        "Name": "Your",
+        "Value": "{{i18n:3rdPerson.your}}",
+        "When": {
+            "SecondPersonNarration": false,
+        }
+    },
+],
+
+"Changes": [
+
+//Load translations
+{
+  "Action": "Load",
+  "Target": "{{ModId}}/i18n",
+  "FromFile": "i18n/default.json"
+},
+
+//Stuff for setting flags should be on at all times
+{
+    "Action": "Include",
+    "FromFile": "data/TriggerActions-Flags.json",
+    "LocalTokens": {
+        //10 Heart event IDs
+        "Abigail_10h":      "901756",
+        "Alex_10h":         "911526",
+        "Elliott_10h":      "43",
+        "Emily_10h":        "2123343",
+        "Haley_10h":        "15",
+        "Harvey_10h":       "528052",
+        "Leah_10h":         "54",
+        "Maru_10h":         "10",
+        "Penny_10h":        "38",
+        "Sam_10h":          "233104",
+        "Sebastian_10h":    "384882",
+        "Shane_10h":        "2128292",
+    }
+},
+{
+    "Action": "Include",
+    "FromFile": "data/TriggerActions-Letters.json",
+    "When": {
+        "IsEngaged": false,
+        "Query: {{PlayerIsFree}} OR {{CanDoProposalsWhenMarried}}": true,
+        "Query: {{Count:{{Kantrip.ReverseProposals/MaxHeartSuitors:type=all}}}} > 0": true,
+        "Query: {{FarmhouseUpgrade}} > 0": true,
+    },
+},
+
+//Invitation letters for vanilla events
+{
+    "Action": "Include",
+    "FromFile": "data/Letters.json",
+},
+
+//TODO: check if I can use DayEvent to prevent stuff happening on festival days
+
+//Black events possible if config good, event not seen, no current partner and dating at least one person
+{
+    "Action": "Include",
+    "FromFile": "code/black.json",
+    "When": {
+        "EnableBlackEvents": true,
+        "Query: {{PlayerIsFree}} OR {{CanDoProposalsWhenMarried}}": true,
+        "Query: {{Count:{{Kantrip.ReverseProposals/MaxHeartSuitors:type=all}}}} > 0": true,
+        "Query: {{FarmhouseUpgrade}} > 0": true,
+    },
+},
+
+//White events possible if config good, no current partner and dating at least one person
+{
+    "Action": "Include",
+    "FromFile": "code/white.json",
+    "When": {
+        "EnableBlackEvents": false,
+        "Query: {{PlayerIsFree}} OR {{CanDoProposalsWhenMarried}}": true,
+        "Query: {{Count:{{Kantrip.ReverseProposals/MaxHeartSuitors:type=all}}}} > 0": true,
+        "Query: {{FarmhouseUpgrade}} > 0": true,
+    },
+},
+
+]
+}

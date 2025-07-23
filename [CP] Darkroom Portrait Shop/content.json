@@ -1,0 +1,161 @@
+{
+    "Format": "2.0.0",
+    "ConfigSchema": {
+		"ShopType": {
+			"AllowValues": "immediate, onetime, immersion",
+			"Default": "immersion",
+			"Description": "Chooses whether you buy the portraits outright or a token item. The token item can be given to the relevant datable to have their portrait delivered to you within two days.",
+        },
+		"UnlockCondition": {
+			"AllowValues": "always, hearts",
+			"Default": "hearts",
+			"Description": "Determines when the portrait shop is available. By default, this requires Haley at 4 hearts.",
+        },
+    },
+	
+	"DynamicTokens": [		
+		{
+			"Name": "PortraitPrice",
+			"Value": 30000,
+		},
+		
+		{
+			"Name": "PortraitPrice",
+			"Value": 20000,
+			"When": {
+				"Hearts:Haley": "8, 9, 10, 11, 12, 13", //Max out Haley's friendship hearts or date/marry her (or friendship/roommate if PPAF/Platonic Relationships) to get a small discount. This also means Haley's portrait will never be more than 20000.
+			},
+		},
+		
+		{
+			"Name": "PortraitPrice",
+			"Value": 10000,
+			"When": {
+				"Hearts:Haley": "14", //Small extra discount if you keep your wife/roommate happy. I'd make it free for people who married her since, y'know, it's odd for them to charge their SO, but that might make that significantly overpowered to marry Haley given the vanilla price. Plus, Haley deserves compensation for her work.
+			},
+		},
+		
+		{
+			"Name": "HaleyHearts",
+			"Value": 4,
+		},
+		
+		{
+			"Name": "HaleyHearts",
+			"Value": 2,
+			"When": {
+				"UnlockCondition": "always",
+			},
+		},
+		
+		{
+			"Name": "HaleyRelationship",
+			"Value": "Default",
+		},
+		
+		{
+			"Name": "HaleyRelationship",
+			"Value": "Married",
+			"When": {
+				"relationship:Haley": "married",
+			},
+		},
+		
+		{
+			"Name": "HaleyRelationship",
+			"Value": "Housemate",
+			"When": {
+				"relationship:Haley": "married",
+				"HasMod": "PPAF.Core",
+				"PPAF.Core/ConfigValue:HaleyRelationshipType": "FullyPlatonic, SexWithoutRomance",
+			},
+		},
+		
+	],
+	
+	"Changes":[
+	
+	//Regular Changes
+	
+		{
+			"LogName": "Add Portrait Ticket",
+			"Action": "Include",
+			"FromFile": "assets/Vanilla/TicketItem.json",
+		},
+		
+		{
+			"LogName": "Add Portrait Shop",
+			"Action": "Include",
+			"FromFile": "assets/Vanilla/Shops.json",
+		},
+		
+		{
+			"LogName": "Add Trigger Actions",
+			"Action": "Include",
+			"FromFile": "assets/Vanilla/TriggerActions.json",
+		},
+		
+		{
+			"LogName": "Mail Data",
+			"Action": "Include",
+			"FromFile": "assets/Vanilla/Mails.json",
+		},
+		
+		{
+			"LogName": "Reject and Accept Dialogues",
+			"Action": "Include",
+			"FromFile": "assets/Vanilla/Dialogues.json",
+		},
+		
+	//PPAF Edits
+	
+		{
+			"LogName": "Mail Data",
+			"Action": "Include",
+			"FromFile": "assets/PPAF/Mails.json",
+			"When": {
+				"HasMod": "PPAF.Core",
+			},
+		},
+		
+		{
+			"LogName": "Reject and Accept Dialogues",
+			"Action": "Include",
+			"FromFile": "assets/PPAF/Dialogues.json",
+			"When": {
+				"HasMod": "PPAF.Core",
+			},
+		},
+	
+	//SpaceCore Block (use to prevent gifting to people without spouse portraits)
+		{
+			"LogName": "SpaceCore Item Data",
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"Entries": {
+				"AgentLyoko.PortraitShop_PortraitTicket": {
+					"GiftableToNpcAllowList": {
+						"Abigail": true,
+						"Leah": true,
+						"Penny": true,
+						"Maru": true,
+						"Haley": true,
+						"Emily": true,
+						"Sebastian": true,
+						"Elliott": true,
+						"Sam": true,
+						"Harvey": true,
+						"Alex": true,
+						"Shane": true,
+						"Krobus": true,
+					},
+					"GiftedToNotOnAllowListMessage": "{{i18n:PortraitShop.GlobalReject}}"
+					},
+			},
+			"When": {
+				"HasMod": "spacechase0.SpaceCore",
+			},
+		},
+	
+    ]
+}

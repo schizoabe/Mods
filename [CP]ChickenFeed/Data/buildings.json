@@ -1,0 +1,359 @@
+{
+  "Changes": [
+    {
+      "LogName": "Modify silo action",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["Silo"],
+      "Entries": {
+        "DefaultAction": "selph.ExtraAnimalConfig.CustomFeedSilo",
+      },
+    },
+    {
+      "LogName": "Modify silo capacity",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["Silo"],
+      "Entries": {
+        "HayCapacity": "{{HayCapacity}}",
+      },
+      "When": {
+        "SiloResize": "true",
+      },
+    },
+    {
+      "LogName": "Add chicken feed to silo",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["Silo", "CustomFields"],
+      "Entries": {
+        "selph.ExtraAnimalConfig.SiloCapacity.(O){{ModId}}.ChickenFeed": "{{FeedCapacity}}",
+      },
+      "When": {
+        "FeedSilo": "false",
+      },
+    },
+    {
+      "LogName": "Add chicken feed to silo - 10",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["Silo", "CustomFields"],
+      "Entries": {
+        "selph.ExtraAnimalConfig.SiloCapacity.(O){{ModId}}.ChickenFeed": "10",
+      },
+      "When": {
+        "FeedSilo": "true",
+      },
+    },
+    {
+      "LogName": "Add chicken feed silo upgrade",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "{{ModId}}.FeedSilo": {
+          "Name": "{{i18n:FeedSilo.name}}",
+          "Description": "{{i18n:FeedSilo.description}}",
+          "Texture": "Buildings/Silo",
+          "Skins": [],
+          "DrawShadow": true,
+          "UpgradeSignTile": "1, 2",
+          "UpgradeSignHeight": 16.0,
+          "Size": {
+            "X": 3,
+            "Y": 3
+          },
+          "FadeWhenBehind": true,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 0,
+            "Height": 0
+          },
+          "SeasonOffset": {
+            "X": 0,
+            "Y": 0
+          },
+          "DrawOffset": "0, 0",
+          "SortTileOffset": 0.0,
+          "CollisionMap": null,
+          "AdditionalPlacementTiles": null,
+          "BuildingType": null,
+          "Builder": "Robin",
+          "BuildCondition": null,
+          "BuildDays": 0,
+          "BuildCost": 100,
+          "BuildMaterials": null,
+          "BuildingToUpgrade": "Silo",
+          "MagicalConstruction": false,
+          "BuildMenuDrawOffset": {
+            "X": 0,
+            "Y": 0
+          },
+          "HumanDoor": {
+            "X": -1,
+            "Y": -1
+          },
+          "AnimalDoor": {
+            "X": -1,
+            "Y": -1,
+            "Width": 0,
+            "Height": 0
+          },
+          "AnimalDoorOpenDuration": 0.0,
+          "AnimalDoorOpenSound": null,
+          "AnimalDoorCloseDuration": 0.0,
+          "AnimalDoorCloseSound": null,
+          "NonInstancedIndoorLocation": null,
+          "IndoorMap": null,
+          "IndoorMapType": null,
+          "MaxOccupants": 20,
+          "ValidOccupantTypes": [],
+          "AllowAnimalPregnancy": false,
+          "IndoorItemMoves": null,
+          "IndoorItems": null,
+          "AddMailOnBuild": null,
+          "Metadata": {},
+          "ModData": {},
+          "HayCapacity": 10,
+          "Chests": null,
+          "DefaultAction": "selph.ExtraAnimalConfig.CustomFeedSilo",
+          "AdditionalTilePropertyRadius": 0,
+          "AllowsFlooringUnderneath": true,
+          "ActionTiles": [],
+          "TileProperties": [],
+          "ItemConversions": null,
+          "DrawLayers": [
+            {
+              "Id": "{{ModId}}.FeedSign",
+              "Texture": "{{ModId}}/FeedSign",
+              "SourceRect": {
+                "X": 0,
+                "Y": 0,
+                "Width": 16,
+                "Height": 16
+              },
+              "DrawPosition": "16, 96",
+              "DrawInBackground": false,
+              "SortTileOffset": 0,
+              "OnlyDrawIfChestHasContents": null,
+              "FrameDuration": 90,
+              "FrameCount": 1,
+              "FramesPerRow": -1,
+            },
+          ],
+          "CustomFields": {
+            "selph.ExtraAnimalConfig.SiloCapacity.(O){{ModId}}.ChickenFeed": "{{FeedCapacity}}",
+          },
+        },
+      },
+      "When": {
+        "FeedSilo": "true",
+      },
+    },
+    {
+      "LogName": "Override coop default feed",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["Coop", "CustomFields"],
+      "Entries": {
+        "selph.ExtraAnimalConfig.BuildingFeedOverrideId": "(O){{ModId}}.ChickenFeed",
+      },
+    },
+    {
+      "LogName": "Override big coop default feed",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["Big Coop", "CustomFields"],
+      "Entries": {
+        "selph.ExtraAnimalConfig.BuildingFeedOverrideId": "(O){{ModId}}.ChickenFeed",
+      },
+    },
+    {
+      "LogName": "Override deluxe coop default feed",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["Deluxe Coop", "CustomFields"],
+      "Entries": {
+        "selph.ExtraAnimalConfig.BuildingFeedOverrideId": "(O){{ModId}}.ChickenFeed",
+      },
+    },
+    {
+      "LogName": "Override ResourceChickens' giant coop default feed",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["UncleArya.ResourceChickens.GiantCoop", "CustomFields"],
+      "Priority": "Late",
+      "Entries": {
+        "selph.ExtraAnimalConfig.BuildingFeedOverrideId": "(O){{ModId}}.ChickenFeed",
+      },
+      "When": {
+        "HasMod |contains=UncleArya.ResourceChickens": "true",
+      },
+    },
+    {
+      "LogName": "Override Jen's mega coop default feed",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["jenf1.megacoopbarn_MegaCoop", "CustomFields"],
+      "Priority": "Late",
+      "Entries": {
+        "selph.ExtraAnimalConfig.BuildingFeedOverrideId": "(O){{ModId}}.ChickenFeed",
+      },
+      "When": {
+        "HasMod |contains=jenf1.megacoopbarn": "true",
+      },
+    },
+    {
+      "LogName": "Override SVE Premium coop default feed",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["FlashShifter.StardewValleyExpandedCP_PremiumCoop", "CustomFields"],
+      "Priority": "Late",
+      "Entries": {
+        "selph.ExtraAnimalConfig.BuildingFeedOverrideId": "(O){{ModId}}.ChickenFeed",
+      },
+      "When": {
+        "HasMod |contains=FlashShifter.StardewValleyExpandedCP": "true",
+      },
+    },
+    {
+      "LogName": "Override Aviary default feed",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["Aviary", "CustomFields"],
+      "Priority": "Late",
+      "Entries": {
+        "selph.ExtraAnimalConfig.BuildingFeedOverrideId": "(O){{ModId}}.ChickenFeed",
+      },
+      "When": {
+        "HasMod |contains=silvermoonchan.Aviary": "true",
+      },
+    },
+    {
+      "LogName": "Override Cave Coop default feed",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["mytigio.dwarven_expansion_CaveCoop", "CustomFields"],
+      "Priority": "Late",
+      "Entries": {
+        "selph.ExtraAnimalConfig.BuildingFeedOverrideId": "(O){{ModId}}.ChickenFeed",
+      },
+      "When": {
+        "HasMod |contains=mytigio.dwarven_expansion": "true",
+      },
+    },
+    {
+      "LogName": "Override Big Cave Coop default feed",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["mytigio.dwarven_expansion_BigCaveCoop", "CustomFields"],
+      "Priority": "Late",
+      "Entries": {
+        "selph.ExtraAnimalConfig.BuildingFeedOverrideId": "(O){{ModId}}.ChickenFeed",
+      },
+      "When": {
+        "HasMod |contains=mytigio.dwarven_expansion": "true",
+      },
+    },
+    {
+      "LogName": "Override Deluxe Cave Coop default feed",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["mytigio.dwarven_expansion_DeluxeCaveCoop", "CustomFields"],
+      "Priority": "Late",
+      "Entries": {
+        "selph.ExtraAnimalConfig.BuildingFeedOverrideId": "(O){{ModId}}.ChickenFeed",
+      },
+      "When": {
+        "HasMod |contains=mytigio.dwarven_expansion": "true",
+      },
+    },
+    {
+      "LogName": "Add mill recipes",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["Mill", "ItemConversions"],
+      "Entries": {
+        "{{ModId}}.SeedsToFeed": {
+          "Id": "{{ModId}}.SeedsToFeed",
+          "SourceChest": "Input",
+          "DestinationChest": "Output",
+          "RequiredTags": [
+            "id_o_770"
+          ],
+          "ProducedItems": [
+            {
+              "Id": "(O){{ModId}}.ChickenFeed",
+              "ItemId": "(O){{ModId}}.ChickenFeed",
+              "MinStack": 2,
+              "MaxStack": 3,
+            },
+          ],
+          "MaxDailyConversions": -1,
+        },
+        "{{ModId}}.PremiumPoultryFeedMix": {
+          "Id": "{{ModId}}.PremiumPoultryFeedMix",
+          "SourceChest": "Input",
+          "DestinationChest": "Output",
+          "RequiredTags": [
+            "id_o_selph.coopfeed.premiumpoultryfeedmix"
+          ],
+          "ProducedItems": [
+            {
+              "Id": "(O){{ModId}}.ChickenFeed",
+              "ItemId": "(O){{ModId}}.ChickenFeed",
+              "MinStack": 200,
+            },
+          ],
+          "MaxDailyConversions": -1,
+        },
+      },
+    },
+    {
+      "LogName": "Add corn to mill recipe",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": ["Mill", "ItemConversions"],
+      "When": {
+        "HasMod |contains=Cornucopia.ArtisanMachines": "false",
+      },
+      "Entries": {
+        "{{ModId}}.CornToFeed": {
+          "Id": "{{ModId}}.CornToFeed",
+          "SourceChest": "Input",
+          "DestinationChest": "Output",
+          "RequiredTags": [
+            "id_o_270"
+          ],
+          "ProducedItems": [
+            {
+              "Id": "(O){{ModId}}.ChickenFeed",
+              "ItemId": "(O){{ModId}}.ChickenFeed",
+              "MinStack": 4,
+              "MaxStack": 6,
+            },
+          ],
+          "MaxDailyConversions": -1,
+        },
+      },
+    },
+    {
+      "LogName": "Add corn to mill recipe - Cornucopia compat",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Priority": "Late",
+      "TargetField": ["Mill", "ItemConversions", "Cornucopia_CornFlour", "ProducedItems"],
+      "When": {
+        "HasMod |contains=Cornucopia.ArtisanMachines": "true",
+      },
+      "Entries": {
+        "(O){{ModId}}.ChickenFeed": {
+          "Id": "(O){{ModId}}.ChickenFeed",
+          "ItemId": "(O){{ModId}}.ChickenFeed",
+          "MinStack": 4,
+          "MaxStack": 6,
+        },
+      },
+    },
+  ]
+}

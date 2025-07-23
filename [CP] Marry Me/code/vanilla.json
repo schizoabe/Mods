@@ -1,0 +1,38 @@
+{
+
+"Changes": [
+    
+//Stuff for sending out invitation letters
+{
+    "Action": "Include",
+    "FromFile": "data/TriggerActions-Letters.json",
+},
+    
+//Standard events for the 12 vanilla bachelors/bachelorettes
+{
+    "Action": "Include",
+    "FromFile": "code/proposals.json",
+    "LocalTokens": {
+        //Animations for kissing, etc
+        //First boolean is flip (true if base sprite is facing right), second is loop (true)
+        "Farmer_Kiss":      "animate farmer false true 100 101",
+        "Farmer_Kiss_Left": "animate farmer true true 100 101",
+        "Abigail_Kiss":     "animate Abigail false true 100 33",
+        "Alex_Kiss":        "animate Alex true true 100 42",
+        "Elliott_Kiss":     "animate Elliott false true 100 35",
+        "Emily_Kiss":       "animate Emily false true 100 33",
+        "Haley_Kiss":       "animate Haley true true 100 28",
+        "Harvey_Kiss":      "animate Harvey true true 100 31",
+        "Leah_Kiss":        "animate Leah true true 100 25",
+        "Maru_Kiss":        "animate Maru false true 100 28",
+        "Penny_Kiss":       "animate Penny true true 100 20",
+        "Sam_Kiss":         "animate Sam false true 100 38",
+        "Sebastian_Kiss":   "animate Sebastian false true 100 40",
+        "Shane_Kiss":       "animate Shane false true 100 34",
+        "Haley_Camera1":    "animate Haley false false 120 30 30 30 30 30 31 24 24 24 24 24 24 31 30 30 30 30",
+        "Haley_Camera2":    "animate Haley true false 120 33 33 33 33 33 33 33 33 33 33 33 33 33 33 33 32 25 25 25 25 25 25 25 25 25 25 32 33 33 33 33 33 33 33 32 25 25 25 25 25 25 25 25 25 32 33 33 33 33 33 33",
+    }
+},
+
+]
+}

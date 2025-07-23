@@ -1,0 +1,40 @@
+{
+	"Format": "2.0.0",
+	"ConfigSchema": {
+		"Strawberry Bush": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Turns strawberries from a crop into a bush (if you have Custom Bush installed)."
+		},
+		"Cranberry Bush": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Turns cranberries from a dew into a sprite (if you have Custom Joja installed)."
+		},
+		"Starfruit Bush": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Turns starfruits from a crop into a bush (if you have Custom Bush installed)."
+		},
+	},
+	"DynamicTokens": [],
+	"Changes": [
+		{
+		"LogName": "Textures",
+		"Action": "Load",
+		"Target": "PrincessOfEvil.GrowableVines/teabushes_indoors",
+		"FromFile": "assets/{{TargetWithoutPath}}.png"
+		},
+		{
+		"LogName": "Tea Bush",
+		"Action": "Load",
+		"Target": "PrincessOfEvil.GrowableVines/teabushes",
+		"FromFile": "assets/teabushes_{{season}}.png"
+		},
+		{
+		"LogName": "Vanilla Forage Crops",
+		"Action": "Include",
+		"FromFile": "data/objectsreplacement.json, data/teabushes.json,",
+		},
+	]
+}

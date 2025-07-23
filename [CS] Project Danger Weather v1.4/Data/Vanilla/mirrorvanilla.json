@@ -1,0 +1,17 @@
+{
+	"Changes": [	
+		{
+      	    "LogName": "Add Fog and Sleet - Snow is Scroll",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Mirror/NoWW.json",
+			"When": {"HasMod |contains=Kana.WeatherWonders": false}
+		},
+		{
+			"LogName": "Add Fog and Sleet - Snow is Scroll",
+			"Action": "Include",
+			"FromFile": "Data/Vanilla/Mirror/YesWW.json",
+			"When": {"HasMod |contains=Kana.WeatherWonders": true}
+		}
+//End
+]
+}

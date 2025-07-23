@@ -1,0 +1,87 @@
+{
+	"Changes": [
+        
+        //Scarlett
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Scarlett_{{Season}}",
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall"
+            }            
+        },
+        {
+            "LogName": "Winter Variants",
+            "Action": "EditImage",
+            "Target": "Portraits/Scarlett_{{Season}}_Indoor , Portraits/Scarlett_{{Season}}_Outdoor", 
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "winter"
+            }            
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/Scarlett_FlowerDance , Portraits/Scarlett_SpiritsEve",
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"          
+        },
+        {
+            "LogName": "Beach",
+            "Action": "EditImage",
+            "Target": "Portraits/Scarlett_Beach",
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"          
+        },
+        {
+            "LogName": "Extras",
+            "Action": "EditImage",
+            "Target": "Portraits/Scarlett_Cosplay",
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"          
+        },
+
+        //Redunant But Will Fix any issues of portraits not showing up for Temporary Actor Calls within SVE
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Scarlett",
+            "FromFile": "assets/BunBunz/Scarlett_{{Season}}.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall"
+            }            
+        },
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Scarlett",
+            "FromFile": "assets/BunBunz/Scarlett_Winter_Outdoor.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "winter",
+                "IsOutdoors": "true"
+            }            
+        },
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Scarlett",
+            "FromFile": "assets/BunBunz/Scarlett_Winter_Indoor.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "winter",
+                "IsOutdoors": "false"
+            }            
+        }
+
+    ]
+}

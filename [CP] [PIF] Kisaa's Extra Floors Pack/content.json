@@ -1,0 +1,73 @@
+﻿{
+    "Format": "2.0.0",
+    "Changes": [
+      {
+        "Action": "EditData",
+        "Target": "DLX.PIF/Farms",
+        "Entries": {
+          "DLX.CRExtraFloor1": {
+            "DisplayName": "Extra Floor 1",
+            "DefaultArrivalTile": { "X": 15, "Y": 19 },
+            "ExcludeFromNpcPathfinding": true,
+
+            "ArrivalTile_T0": { "X": 15, "Y": 19 },
+            "ArrivalTile_T1": { "X": 15, "Y": 19 },
+            "ArrivalTile_T2": { "X": 15, "Y": 19 },
+
+            "MapAsset_T0": "Maps/PIF/DLX.CRExtraFloor1T0",
+            "MapAsset_T1": "Maps/PIF/DLX.CRExtraFloor1T1",
+            "MapAsset_T2": "Maps/PIF/DLX.CRExtraFloor1T2",
+
+            "Preview": "CR_ExtraFloor1_Preview",
+            "Group": "Extra Floors Pack"
+          }
+        }
+      },
+      {
+        "Action": "EditData",
+        "Target": "DLX.PIF/Farms",
+        "Entries": {
+          "DLX.CRExtraFloor2": {
+            "DisplayName": "Extra Floor 2",
+            "DefaultArrivalTile": { "X": 20, "Y": 21 },
+            "ExcludeFromNpcPathfinding": true,
+
+            "ArrivalTile_T0": { "X": 20, "Y": 21 },
+            "ArrivalTile_T1": { "X": 20, "Y": 21 },
+            "ArrivalTile_T2": { "X": 20, "Y": 21 },
+
+            "MapAsset_T0": "Maps/PIF/DLX.CRExtraFloor2T0",
+            "MapAsset_T1": "Maps/PIF/DLX.CRExtraFloor2T1",
+            "MapAsset_T2": "Maps/PIF/DLX.CRExtraFloor2T2",
+
+            "Preview": "CR_ExtraFloor2_Preview",
+            "Group": "Extra Floors Pack"
+          }
+        }
+      },
+      
+      //extra1 load/prev
+        {
+            "Action": "Load",
+            "Target": "Maps/PIF/DLX.CRExtraFloor1T0, Maps/PIF/DLX.CRExtraFloor1T1, Maps/PIF/DLX.CRExtraFloor1T2",
+            "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+        },
+		{
+			"Action": "Load",
+			"Target": "CR_ExtraFloor1_Preview",
+			"FromFile": "assets/Previews/Preview_ExtraFloor1.png"
+		},
+
+      //extra2 load/prev
+      {
+        "Action": "Load",
+        "Target": "Maps/PIF/DLX.CRExtraFloor2T0, Maps/PIF/DLX.CRExtraFloor2T1, Maps/PIF/DLX.CRExtraFloor2T2",
+        "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+      },
+      {
+        "Action": "Load",
+        "Target": "CR_ExtraFloor2_Preview",
+        "FromFile": "assets/Previews/Preview_ExtraFloor2.png"
+      }
+    ]
+}

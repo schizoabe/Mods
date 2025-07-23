@@ -1,0 +1,840 @@
+{
+    "Changes": [
+    
+  	{
+		"LogName": "QL Flower Bouquet Rules",
+		"Action": "EditData",
+		"When": {"HasMod |contains=PC.CP.QL.FlowerGarden2": true},
+		"Target": "Data/Machines",
+		"TargetField": ["(BC)QL_FloristTable", "OutputRules"],
+		"Entries": {	
+//FLOWER BOUQUETS
+"QL_AmaryllisBouquet": {
+        "Id": "QL_AmaryllisBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Amaryllis",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_AmaryllisBouquet",
+            "ItemId": "(O)QL_AmaryllisBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_CallaLilyBouquet": {
+        "Id": "QL_CallaLilyBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_CallaLily",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_CallaLilyBouquet",
+            "ItemId": "(O)QL_CallaLilyBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      }, 
+"QL_DahliaBouquet": {
+        "Id": "QL_DahliaBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Dahlia",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_DahliaBouquet",
+            "ItemId": "(O)QL_DahliaBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_DelphiniumBouquet": {
+        "Id": "QL_DelphiniumBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Delphinium",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_DelphiniumBouquet",
+            "ItemId": "(O)QL_DelphiniumBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_IrisBouquet": {
+        "Id": "QL_IrisBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Iris",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_IrisBouquet",
+            "ItemId": "(O)QL_IrisBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_FritillariaBouquet": {
+        "Id": "QL_FritillariaBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Fritillaria",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_FritillariaBouquet",
+            "ItemId": "(O)QL_FritillariaBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_LilyBouquet": {
+        "Id": "QL_LilyBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Lily",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_LilyBouquet",
+            "ItemId": "(O)QL_LilyBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_OrchidBouquet": {
+        "Id": "QL_OrchidBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Orchid",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_OrchidBouquet",
+            "ItemId": "(O)QL_OrchidBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },  
+"QL_PansyBouquet": {
+        "Id": "QL_PansyBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Pansy",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_PansyBouquet",
+            "ItemId": "(O)QL_PansyBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },  
+"QL_PeonyBouquet": {
+        "Id": "QL_PeonyBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Peony",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_PeonyBouquet",
+            "ItemId": "(O)QL_PeonyBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_RoseBouquet": {
+        "Id": "QL_RoseBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Rose",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_RoseBouquet",
+            "ItemId": "(O)QL_RoseBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_SnapdragonBouquet": {
+        "Id": "QL_SnapdragonBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Snapdragon",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_SnapdragonBouquet",
+            "ItemId": "(O)QL_SnapdragonBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_StripedSquillBouquet": {
+        "Id": "QL_StripedSquillBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_StripedSquill",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_StripedSquillBouquet",
+            "ItemId": "(O)QL_StripedSquillBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_ZinniaBouquet": {
+        "Id": "QL_ZinniaBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Zinnia",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_ZinniaBouquet",
+            "ItemId": "(O)QL_ZinniaBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_GardeniaBouquet": {
+        "Id": "QL_GardeniaBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Gardenia",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_GardeniaBouquet",
+            "ItemId": "(O)QL_GardeniaBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+"QL_LilacBouquet": {
+        "Id": "QL_LilacdBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Lilac",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_LilacBouquet",
+            "ItemId": "(O)QL_LilacBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+
+    
+	}
+},
+
+//EXTRACTS
+  	{
+		"LogName": "QL Flower Bouquet Rules",
+		"Action": "EditData",
+		"When": {"HasMod |contains=PC.CP.QL.FlowerGarden2": true},
+		"Target": "Data/Machines",
+		"TargetField": ["(BC)QL_Extractor", "OutputRules"],
+		"Entries": {
+"QL_CarnationExtract": 
+      {
+        "Id": "QL_CarnationExtract",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Carnation",
+            "RequiredCount": 10,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+      "OutputItem": [
+        {
+          "ID": "QL_CarnationExtract",
+          "ItemID": "(O)QL_CarnationExtract",
+          "CopyQuality":true,
+          "CopyPrice": true,
+          "PriceModifiers": 
+                   [
+                           {
+                           "Modification": "Multiply",
+                           "Amount": 13.5
+                            },
+                           {
+                           "Modification": "Add",
+                           "Amount": 50
+                            }
+                        ]
+                     }
+                   ],       
+		"DaysUntilReady": 3,
+        "InvalidCountMessage": null
+        },        
+ "QL_GardeniaExtract":       
+      {
+        "Id": "QL_GardeniaExtract",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Gardenia",
+            "RequiredCount": 10,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+      "OutputItem": [
+        {
+          "ID": "QL_GardeniaExtract",
+          "ItemID": "(O)QL_GardeniaExtract",
+          "CopyQuality":true,
+          "CopyPrice": true,
+          "PriceModifiers": 
+                   [
+                           {
+                           "Modification": "Multiply",
+                           "Amount": 13.5
+                            },
+                           {
+                           "Modification": "Add",
+                           "Amount": 50
+                            }
+                        ]
+                     }
+                   ],       
+		"DaysUntilReady": 3,
+        "InvalidCountMessage": null
+        },  
+"QL_HibiscusExtract":
+      {
+        "Id": "QL_HibiscusExtract",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Hibiscus",
+            "RequiredCount": 10,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+      "OutputItem": [
+        {
+          "ID": "QL_HibiscusExtract",
+          "ItemID": "(O)QL_HibiscusExtract",
+          "CopyQuality":true,
+          "CopyPrice": true,
+          "PriceModifiers": 
+                   [
+                           {
+                           "Modification": "Multiply",
+                           "Amount": 13.5
+                            },
+                           {
+                           "Modification": "Add",
+                           "Amount": 50
+                            }
+                        ]
+                     }
+                   ],       
+		"DaysUntilReady": 3,
+        "InvalidCountMessage": null
+        },
+"QL_JasmineExtract":
+      {
+        "Id": "QL_JasmineExtract",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Jasmine",
+            "RequiredCount": 35,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": true,
+      "OutputItem": [
+        {
+          "ID": "QL_JasmineExtract",
+          "ItemID": "(O)QL_JasmineExtract",
+          "CopyQuality":true,
+          "CopyPrice": true,
+          "PriceModifiers": 
+                   [
+                           {
+                           "Modification": "Multiply",
+                           "Amount": 36
+                            },
+                           {
+                           "Modification": "Add",
+                           "Amount": 550
+                            }
+                        ]
+                     }
+                   ],       
+		"DaysUntilReady": 3,
+        "InvalidCountMessage": null
+        },
+"QL_LavenderExtract":
+       {
+        "Id": "QL_LavenderExtract",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Lavender",
+            "RequiredCount": 10,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+      "OutputItem": [
+        {
+          "ID": "QL_LavenderExtract",
+          "ItemID": "(O)QL_LavenderExtract",
+          "CopyQuality":true,
+          "CopyPrice": true,
+          "PriceModifiers": 
+                   [
+                           {
+                           "Modification": "Multiply",
+                           "Amount": 13.5
+                            },
+                           {
+                           "Modification": "Add",
+                           "Amount": 50
+                            }
+                        ]
+                     }
+                   ],       
+		"DaysUntilReady": 3,
+        "InvalidCountMessage": null
+        },
+"QL_LilacExtract":
+      {
+        "Id": "QL_LilacExtract",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Lilac",
+            "RequiredCount": 10,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+      "OutputItem": [
+        {
+          "ID": "QL_LilacExtract",
+          "ItemID": "(O)QL_LilacExtract",
+          "CopyQuality":true,
+          "CopyPrice": true,
+          "PriceModifiers": 
+                   [
+                           {
+                           "Modification": "Multiply",
+                           "Amount": 13.5
+                            },
+                           {
+                           "Modification": "Add",
+                           "Amount": 50
+                            }
+                        ]
+                     }
+                   ],       
+		"DaysUntilReady": 3,
+        "InvalidCountMessage": null
+        },
+"QL_RoseExtract":
+      {
+        "Id": "QL_RoseExtract",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)QL_Rose",
+            "RequiredCount": 10,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+      "OutputItem": [
+        {
+          "ID": "QL_RoseExtract",
+          "ItemID": "(O)QL_RoseExtract",
+          "CopyQuality":true,
+          "CopyPrice": true,
+          "PriceModifiers": 
+                   [
+                           {
+                           "Modification": "Multiply",
+                           "Amount": 13.5
+                            },
+                           {
+                           "Modification": "Add",
+                           "Amount": 50
+                            }
+                        ]
+                     }
+                   ],       
+		"DaysUntilReady": 3,
+        "InvalidCountMessage": null
+        },        
+ 	}
+},
+   
+		
+    ]
+}
+
+
+
+

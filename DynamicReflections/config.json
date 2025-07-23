@@ -1,0 +1,93 @@
+{
+  "$id": "1",
+  "AreWaterReflectionsEnabled": true,
+  "AreMirrorReflectionsEnabled": true,
+  "ArePuddleReflectionsEnabled": true,
+  "AreNPCReflectionsEnabled": true,
+  "AreSkyReflectionsEnabled": true,
+  "WaterReflectionSettings": {
+    "$id": "2",
+    "AreReflectionsEnabled": true,
+    "ReflectionDirection": "South",
+    "ReflectionOverlay": {
+      "$id": "3",
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 255
+    },
+    "PlayerReflectionOffset": "0, 1.5",
+    "NPCReflectionOffset": "0, 1.1",
+    "IsReflectionWavy": false,
+    "WaveSpeed": 1.0,
+    "WaveAmplitude": 0.01,
+    "WaveFrequency": 50.0,
+    "OverrideDefaultSettings": false
+  },
+  "PuddleReflectionSettings": {
+    "$id": "4",
+    "AreReflectionsEnabled": true,
+    "ShouldGeneratePuddles": true,
+    "ShouldPlaySplashSound": true,
+    "ShouldRainSplashPuddles": true,
+    "ReflectionOffset": "0, 0",
+    "NPCReflectionOffset": "0, 0.3",
+    "PuddlePercentageWhileRaining": 20,
+    "PuddlePercentageAfterRaining": 10,
+    "BigPuddleChance": 25,
+    "MillisecondsBetweenRaindropSplashes": 500,
+    "ReflectionOverlay": {
+      "$id": "5",
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 155
+    },
+    "PuddleColor": {
+      "$id": "6",
+      "B": 91,
+      "G": 91,
+      "R": 91,
+      "A": 91
+    },
+    "RippleColor": {
+      "$id": "7",
+      "B": 255,
+      "G": 255,
+      "R": 255,
+      "A": 155
+    },
+    "OverrideDefaultSettings": false
+  },
+  "SkyReflectionSettings": {
+    "$id": "8",
+    "AreReflectionsEnabled": true,
+    "StarDensityPercentage": 55,
+    "AreShootingStarsEnabled": true,
+    "MillisecondsBetweenShootingStarAttempt": 5000,
+    "MaxShootingStarAttemptsPerInterval": 5,
+    "CometChance": 10,
+    "CometSegmentMin": 5,
+    "CometSegmentMax": 20,
+    "ShootingStarMinSpeed": 0.01,
+    "ShootingStarMaxSpeed": 1.0,
+    "CometMinSpeed": 0.04,
+    "CometMaxSpeed": 0.5,
+    "MillisecondsBetweenShootingStarAttemptDuringMeteorShower": 250,
+    "GettingDarkWaterAlpha": 0.35,
+    "HalfwayDarkWaterAlpha": 0.075,
+    "FinishedDarkWaterAlpha": 0.005,
+    "OverrideDefaultSettings": false
+  },
+  "MeteorShowerNightChance": 10,
+  "LocalWaterReflectionSettings": {
+    "$id": "9"
+  },
+  "LocalPuddleReflectionSettings": {
+    "$id": "10"
+  },
+  "LocalSkyReflectionSettings": {
+    "$id": "11"
+  },
+  "QuickMenuKey": "R"
+}

@@ -1,0 +1,21 @@
+{
+	"Changes": [
+    {
+		"Action": "EditData",
+		"Target": "Characters/schedules/Caroline",
+		"Priority": "Late",
+		"When": {"Weather": "kath.weathering_Darkness, kath.weathering_HeavyRain, kath.weathering_Locust, kath.weathering_Blizzard, kath.weathering_Hail"},
+      "Entries": {
+		  "rain": "800 SeedShop 37 6 3/1200 SeedShop 15 23 0/1330 SeedShop 21 5 2 caroline_read/1600 SeedShop 25 18 2 square_9_9/2100 SeedShop 25 4 1 caroline_sleep",
+		  "fall_25": "GOTO rain",
+		  "Tue": "GOTO rain",
+		  "Fri": "GOTO rain",
+		  "Wed": "GOTO rain",
+		  "Sat": "GOTO rain",
+		  "Sun": "GOTO rain",
+		  "spring": "800 SeedShop 37 6 3/1000 Sunroom 5 7 1/1200 SeedShop 15 23 0/1600 SeedShop 25 18 2 square_9_9/2100 SeedShop 25 4 1 caroline_sleep"
+      },
+    },
+
+]
+}

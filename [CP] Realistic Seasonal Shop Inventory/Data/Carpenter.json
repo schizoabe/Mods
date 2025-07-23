@@ -1,0 +1,607 @@
+{
+ "Changes": [
+ 
+ //standard
+ 
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Carpenter",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)388": null,
+	  "(O)390": null,
+	  "(F)1614": null,
+	  "(F)1616": null,
+	  "(F)0": null,
+	  "(F)192": null,
+	  "(F)704": null,
+	  "(F)1120": null,
+	  "(F)1216": null,
+	  "(F)1391": null,
+	  "(F)3": null,
+	  "(F)197": null,
+	  "(F)709": null,
+	  "(F)1122": null,
+	  "(F)1218": null,
+	  "(F)1393": null,
+	  "(F)6": null,
+	  "(F)202": null,
+	  "(F)714": null,
+	  "(F)1124": null,
+	  "(F)1220": null,
+	  "(F)1395": null,
+	  "RandomDecoration_ThursdayA": null,
+	  "RandomDecoration_ThursdayB": null,
+	  "RandomLamp": null,
+	  "RandomArmchair": null,
+	  "RandomPainting": null,
+	  "RandomChair": null,
+	  "RandomDecoration_Sunday": null,
+	  "RandomCouch": null,
+	  "RandomFurniture_A": null,
+	  "RandomFurniture_B": null,
+	  "RandomFurniture_C": null,
+	  "RandomFurniture_D": null,
+	  "RandomFurniture_E": null,
+	  "RandomFurniture_F": null,
+	  "RandomFurniture_G": null,
+	  "(F)BluePinstripeBed": null,
+	  "(F)BluePinstripeDoubleBed": null,
+	  "(F)1402": null,
+	  "(BC)208": null,
+	  "WoodChipper_AfterYearOne": null,
+	  "WoodChipper_BeforeWinterYearOne": null,
+	  "(BC)216": null,
+	  "(BC)214": null,
+	  "(F)1466": null,
+	  "(F)1680": null,
+	  "(F)1468": null,
+	  "(BC)200": null,
+	  "(BC)35": null,
+	  "(BC)46": null,
+	  "(F)1792": null,
+	  "(F)1794": null,
+	  "(F)1798": null,
+	  "(F)2186": null,
+	  "(F)2048": null,
+	  "(F)2052": null,
+	  "(F)2076": null,
+	  
+	"boringvlln.rshops_RobinWood": {
+      "ItemId": "(O)388",
+	  "Id": "boringvlln.rshops_RobinWood",
+	  "Price": 100,
+	  "AvailableStock": 40,
+	   "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RobinStone": {
+      "ItemId": "(O)390",
+	  "Id": "boringvlln.rshops_RobinStone",
+	  "Price": 100,
+	  "AvailableStock": 40,
+	   "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomFarmR": {
+      "RandomItemId": [ "(BC)8", "(BC)10", "(BC)12", "(BC)13", "(BC)15", "(BC)16", "(BC)17", "(BC)19", "(BC)37", "(BC)38", "(BC)62", "(BC)71" ],
+	  "Id": "boringvlln.rshops_RandomFarmR",
+	  "Price": 2000,
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomLamp": {        
+        "Condition": "DAY_OF_WEEK Friday",
+        "Id": "boringvlln.rshops_RandomLamp",
+        "ItemId": "RANDOM_ITEMS (F) 1443 1449 @requirePrice @isRandomSale",
+        "AvailableStock": 4,
+		"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+      },
+	"boringvlln.rshops_RandomPaint":   {        
+       "Condition": "DAY_OF_WEEK Saturday",
+        "Id": "boringvlln.rshops_RandomPaint",
+        "ItemId": "RANDOM_ITEMS (F) 1565 1606 @requirePrice @isRandomSale",
+		"AvailableStock": 1,
+      },
+	"boringvlln.rshops_RandomChair": {
+      "Condition": "DAY_OF_WEEK Friday",
+	  "RandomItemId": [ "(F)0", "(F)3", "(F)6", "(F)9", "(F)12", "(F)15", "(F)18", "(F)21", "(F)24", "(F)27", "(F)67", "(F)70", "(F)79", "(F)82", "(F)85", "(F)91", "(F)128", "(F)131", "(F)134" ],
+	  "Id": "boringvlln.rshops_RandomChair",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+				6,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomStool": {
+		"Condition": "DAY_OF_WEEK Thursday",
+      "RandomItemId": [ "(F)30",  "(F)31", "(F)94", "(F)95" ],
+	  "Id": "boringvlln.rshops_RandomStool",	 
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomArmchair": {
+		"Condition": "DAY_OF_WEEK Saturday",
+      "RandomItemId": [ "(F)288", "(F)294", "(F)300", "(F)306", "(F)312" ],
+	  "Id": "boringvlln.rshops_RandomArmchair",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomCouch": {
+		"Condition": "DAY_OF_WEEK Sunday",
+      "RandomItemId": [ "(F)416", "(F)424", "(F)432", "(F)440", "(F)512", "(F)520", "(F)528", "(F)536", "(F)2720" ],
+	  "Id": "boringvlln.rshops_RandomCouch",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomBench": {
+		"Condition": "DAY_OF_WEEK Thursday",
+      "RandomItemId": [ "(F)192", "(F)197", "(F)202", "(F)207", "(F)212" ],
+	  "Id": "boringvlln.rshops_RandomBench",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomDresser": {
+		"Condition": "DAY_OF_WEEK Thursday",
+      "RandomItemId": [ "(F)704", "(F)709", "(F)714", "(F)719" ],
+	  "Id": "boringvlln.rshops_RandomDresser",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomBookcase": {
+		"Condition": "DAY_OF_WEEK Monday",
+      "RandomItemId": [ "(F)1283", "(F)1285", "(F)1287", "(F)1289" ],
+	  "Id": "boringvlln.rshops_RandomBookcase",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomTable": {
+		"Condition": "DAY_OF_WEEK Wednesday",
+      "RandomItemId": [ "(F)724", "(F)727", "(F)800", "(F)807", "(F)814", "(F)821", "(F)1120", "(F)1122", "(F)1124", "(F)1126", "(F)1128", "(F)1130", "(F)1132", "(F)1134", "(F)1136", "(F)1138", "(F)1140", "(F)1142", "(F)1144", "(F)1146", "(F)1148", "(F)1150", "(F)1216", "(F)1218", "(F)1220", "(F)1222", "(F)1224", "(F)1363", "(F)1391", "(F)1393", "(F)1395", "(F)1397", "(F)1399", "(F)1400", "(F)1401" ],
+	  "Id": "boringvlln.rshops_RandomTable",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomRug": {
+		"Condition": "DAY_OF_WEEK Sunday",
+      "RandomItemId": [ "(F)1451", "(F)1456", "(F)1461", "(F)1618", "(F)1623", "(F)1628", "(F)1664", "(F)1737", "(F)1742", "(F)1755", "(F)1777", "(F)1902", "(F)1964", "(F)1909", "(F)1978", "(F)1228", "(F)2488", "(F)2784", "(F)2790", "(F)2794", "(F)2798", "(F)2802", "(F)2742", "(F)2870", "(F)2875" ],
+	  "Id": "boringvlln.rshops_RandomRug",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomBed": {
+		"Condition": "DAY_OF_WEEK Wednesday",
+      "RandomItemId": [ "(F)2048", "(F)2052", "(F)2058", "(F)2064", "(F)2070", "(F)2076", "(F)2176", "(F)2180", "(F)2186", "(F)2192", "(F)2496", "(F)2502", "(F)2508", "(F)2514", "(F)BluePinstripeBed", "(F)BluePinstripeDoubleBed" ],
+	  "Id": "boringvlln.rshops_RandomBed",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomElectronics": {
+		"Condition": "DAY_OF_WEEK Sunday",
+      "RandomItemId": [ "(F)1402", "(BC)208", "(BC)211", "(BC)216", "(BC)214", "(F)1466", "(F)1468", "(F)1680" ],
+	  "Id": "boringvlln.rshops_RandomElectronics",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomLogs": {
+		"Condition": "DAY_OF_WEEK Monday",
+      "RandomItemId": [ "(F)2635", "(F)2636", "(BC)35", "(BC)46", "(BC)130", "(BC)BigChest" ],
+	  "Id": "boringvlln.rshops_RandomLogs",
+	  "Price": 1000,
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomFireplace": {
+		"Condition": "DAY_OF_WEEK Wednesday",
+      "RandomItemId": [ "(F)1792", "(F)1794", "(F)1796", "(F)1798", "(F)1866" ],
+	  "Id": "boringvlln.rshops_RandomFireplace",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomDivider": {
+		"Condition": "DAY_OF_WEEK Monday",
+      "RandomItemId": [ "(F)2637", "(F)2638", "(F)2639", "(F)2640", "(F)2641", "(F)2642", "(F)2643", "(F)2644", "(F)2645", "(F)2646", "(F)2647", "(F)2648", "(F)2649", "(F)2650", "(F)2651", "(F)2652" ],
+	  "Id": "boringvlln.rshops_RandomDivider",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomWindow": {
+		"Condition": "DAY_OF_WEEK Friday",
+      "RandomItemId": [ "(F)1614", "(F)1616", "(F)1630", "(F)1673", "(F)1678", "(F)1682", "(F)1749" ],
+	  "Id": "boringvlln.rshops_RandomWindow",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },	  
+ },
+  "When": { "Carpenter": "standard" }
+},
+
+//hardmode
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Carpenter",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(O)388": null,
+	  "(O)390": null,
+	  "(F)1614": null,
+	  "(F)1616": null,
+	  "(F)0": null,
+	  "(F)192": null,
+	  "(F)704": null,
+	  "(F)1120": null,
+	  "(F)1216": null,
+	  "(F)1391": null,
+	  "(F)3": null,
+	  "(F)197": null,
+	  "(F)709": null,
+	  "(F)1122": null,
+	  "(F)1218": null,
+	  "(F)1393": null,
+	  "(F)6": null,
+	  "(F)202": null,
+	  "(F)714": null,
+	  "(F)1124": null,
+	  "(F)1220": null,
+	  "(F)1395": null,
+	  "RandomDecoration_ThursdayA": null,
+	  "RandomDecoration_ThursdayB": null,
+	  "RandomLamp": null,
+	  "RandomArmchair": null,
+	  "RandomPainting": null,
+	  "RandomChair": null,
+	  "RandomDecoration_Sunday": null,
+	  "RandomCouch": null,
+	  "RandomFurniture_A": null,
+	  "RandomFurniture_B": null,
+	  "RandomFurniture_C": null,
+	  "RandomFurniture_D": null,
+	  "RandomFurniture_E": null,
+	  "RandomFurniture_F": null,
+	  "RandomFurniture_G": null,
+	  "(F)BluePinstripeBed": null,
+	  "(F)BluePinstripeDoubleBed": null,
+	  "(F)1402": null,
+	  "(BC)208": null,
+	  "WoodChipper_AfterYearOne": null,
+	  "WoodChipper_BeforeWinterYearOne": null,
+	  "(BC)216": null,
+	  "(BC)214": null,
+	  "(F)1466": null,
+	  "(F)1680": null,
+	  "(F)1468": null,
+	  "(BC)200": null,
+	  "(BC)35": null,
+	  "(BC)46": null,
+	  "(F)1792": null,
+	  "(F)1794": null,
+	  "(F)1798": null,
+	  "(F)2186": null,
+	  "(F)2048": null,
+	  "(F)2052": null,
+	  "(F)2076": null,
+	  
+	"boringvlln.rshops_RobinWood": {
+		"Condition": "SYNCED_RANDOM day boringvlln.rshops_RobinWood 0.5", 
+      "ItemId": "(O)388",
+	  "Id": "boringvlln.rshops_RobinWood",
+	  "Price": 100,
+	  "AvailableStock": 40,
+	   "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RobinStone": {
+		"Condition": "SYNCED_RANDOM day boringvlln.rshops_RobinStone 0.5", 
+      "ItemId": "(O)390",
+	  "Id": "boringvlln.rshops_RobinStone",
+	  "Price": 100,
+	  "AvailableStock": 40,
+	   "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomFarmR": {
+		"Condition": "SYNCED_RANDOM day boringvlln.rshops_RandomFarmR 0.5", 
+      "RandomItemId": [ "(BC)8", "(BC)10", "(BC)12", "(BC)13", "(BC)15", "(BC)16", "(BC)17", "(BC)19", "(BC)37", "(BC)38", "(BC)62", "(BC)71" ],
+	  "Id": "boringvlln.rshops_RandomFarmR",
+	  "Price": 2000,
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomLamp": {        
+        "Condition": "DAY_OF_WEEK Friday, SYNCED_RANDOM day boringvlln.rshops_RandomLamp 0.5",
+        "Id": "boringvlln.rshops_RandomLamp",
+        "ItemId": "RANDOM_ITEMS (F) 1443 1449 @requirePrice @isRandomSale",
+        "AvailableStock": 4,
+		"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+      },
+	"boringvlln.rshops_RandomPaint":   {        
+       "Condition": "DAY_OF_WEEK Saturday, SYNCED_RANDOM day boringvlln.rshops_RandomPaint 0.5",
+        "Id": "boringvlln.rshops_RandomPaint",
+        "ItemId": "RANDOM_ITEMS (F) 1565 1606 @requirePrice @isRandomSale",
+		"AvailableStock": 1,
+      },
+	"boringvlln.rshops_RandomChair": {
+      "Condition": "DAY_OF_WEEK Friday, SYNCED_RANDOM day boringvlln.rshops_RandomChair 0.5",
+	  "RandomItemId": [ "(F)0", "(F)3", "(F)6", "(F)9", "(F)12", "(F)15", "(F)18", "(F)21", "(F)24", "(F)27", "(F)67", "(F)70", "(F)79", "(F)82", "(F)85", "(F)91", "(F)128", "(F)131", "(F)134" ],
+	  "Id": "boringvlln.rshops_RandomChair",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+				6,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomStool": {
+		"Condition": "DAY_OF_WEEK Thursday, SYNCED_RANDOM day boringvlln.rshops_RandomStool 0.5",
+      "RandomItemId": [ "(F)30",  "(F)31", "(F)94", "(F)95" ],
+	  "Id": "boringvlln.rshops_RandomStool",	 
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomArmchair": {
+		"Condition": "DAY_OF_WEEK Saturday, SYNCED_RANDOM day boringvlln.rshops_RandomArmchair 0.5",
+      "RandomItemId": [ "(F)288", "(F)294", "(F)300", "(F)306", "(F)312" ],
+	  "Id": "boringvlln.rshops_RandomArmchair",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomCouch": {
+		"Condition": "DAY_OF_WEEK Sunday, SYNCED_RANDOM day boringvlln.rshops_RandomCouch 0.5",
+      "RandomItemId": [ "(F)416", "(F)424", "(F)432", "(F)440", "(F)512", "(F)520", "(F)528", "(F)536", "(F)2720" ],
+	  "Id": "boringvlln.rshops_RandomCouch",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomBench": {
+		"Condition": "DAY_OF_WEEK Thursday, SYNCED_RANDOM day boringvlln.rshops_RandomBench 0.5",
+      "RandomItemId": [ "(F)192", "(F)197", "(F)202", "(F)207", "(F)212" ],
+	  "Id": "boringvlln.rshops_RandomBench",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomDresser": {
+		"Condition": "DAY_OF_WEEK Thursday, SYNCED_RANDOM day boringvlln.rshops_RandomDresser 0.5",
+      "RandomItemId": [ "(F)704", "(F)709", "(F)714", "(F)719" ],
+	  "Id": "boringvlln.rshops_RandomDresser",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomBookcase": {
+		"Condition": "DAY_OF_WEEK Monday, SYNCED_RANDOM day boringvlln.rshops_RandomBookcase 0.5",
+      "RandomItemId": [ "(F)1283", "(F)1285", "(F)1287", "(F)1289" ],
+	  "Id": "boringvlln.rshops_RandomBookcase",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomTable": {
+		"Condition": "DAY_OF_WEEK Wednesday, SYNCED_RANDOM day boringvlln.rshops_RandomTable 0.5",
+      "RandomItemId": [ "(F)724", "(F)727", "(F)800", "(F)807", "(F)814", "(F)821", "(F)1120", "(F)1122", "(F)1124", "(F)1126", "(F)1128", "(F)1130", "(F)1132", "(F)1134", "(F)1136", "(F)1138", "(F)1140", "(F)1142", "(F)1144", "(F)1146", "(F)1148", "(F)1150", "(F)1216", "(F)1218", "(F)1220", "(F)1222", "(F)1224", "(F)1363", "(F)1391", "(F)1393", "(F)1395", "(F)1397", "(F)1399", "(F)1400", "(F)1401" ],
+	  "Id": "boringvlln.rshops_RandomTable",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomRug": {
+		"Condition": "DAY_OF_WEEK Sunday, SYNCED_RANDOM day boringvlln.rshops_RandomRug 0.5",
+      "RandomItemId": [ "(F)1451", "(F)1456", "(F)1461", "(F)1618", "(F)1623", "(F)1628", "(F)1664", "(F)1737", "(F)1742", "(F)1755", "(F)1777", "(F)1902", "(F)1964", "(F)1909", "(F)1978", "(F)1228", "(F)2488", "(F)2784", "(F)2790", "(F)2794", "(F)2798", "(F)2802", "(F)2742", "(F)2870", "(F)2875" ],
+	  "Id": "boringvlln.rshops_RandomRug",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomBed": {
+		"Condition": "DAY_OF_WEEK Wednesday, SYNCED_RANDOM day boringvlln.rshops_RandomBed 0.5",
+      "RandomItemId": [ "(F)2048", "(F)2052", "(F)2058", "(F)2064", "(F)2070", "(F)2076", "(F)2176", "(F)2180", "(F)2186", "(F)2192", "(F)2496", "(F)2502", "(F)2508", "(F)2514", "(F)BluePinstripeBed", "(F)BluePinstripeDoubleBed" ],
+	  "Id": "boringvlln.rshops_RandomBed",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomElectronics": {
+		"Condition": "DAY_OF_WEEK Sunday, SYNCED_RANDOM day boringvlln.rshops_RandomElectronics 0.5",
+      "RandomItemId": [ "(F)1402", "(BC)208", "(BC)211", "(BC)216", "(BC)214", "(F)1466", "(F)1468", "(F)1680" ],
+	  "Id": "boringvlln.rshops_RandomElectronics",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomLogs": {
+		"Condition": "DAY_OF_WEEK Monday, SYNCED_RANDOM day boringvlln.rshops_RandomLogs 0.5",
+      "RandomItemId": [ "(F)2635", "(F)2636", "(BC)35", "(BC)46", "(BC)130", "(BC)BigChest" ],
+	  "Id": "boringvlln.rshops_RandomLogs",
+	  "Price": 1000,
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomFireplace": {
+		"Condition": "DAY_OF_WEEK Wednesday, SYNCED_RANDOM day boringvlln.rshops_RandomFireplace 0.5",
+      "RandomItemId": [ "(F)1792", "(F)1794", "(F)1796", "(F)1798", "(F)1866" ],
+	  "Id": "boringvlln.rshops_RandomFireplace",
+	  "AvailableStock": 1,
+    },
+	"boringvlln.rshops_RandomDivider": {
+		"Condition": "DAY_OF_WEEK Monday, SYNCED_RANDOM day boringvlln.rshops_RandomDivider 0.5",
+      "RandomItemId": [ "(F)2637", "(F)2638", "(F)2639", "(F)2640", "(F)2641", "(F)2642", "(F)2643", "(F)2644", "(F)2645", "(F)2646", "(F)2647", "(F)2648", "(F)2649", "(F)2650", "(F)2651", "(F)2652" ],
+	  "Id": "boringvlln.rshops_RandomDivider",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },
+	"boringvlln.rshops_RandomWindow": {
+		"Condition": "DAY_OF_WEEK Friday, SYNCED_RANDOM day boringvlln.rshops_RandomWindow 0.5",
+      "RandomItemId": [ "(F)1614", "(F)1616", "(F)1630", "(F)1673", "(F)1678", "(F)1682", "(F)1749" ],
+	  "Id": "boringvlln.rshops_RandomWindow",
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+    },	  
+ },
+  "When": { "Carpenter": "hardmode" }
+},
+]
+}

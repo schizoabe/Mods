@@ -1,0 +1,95 @@
+{
+	"Changes": [
+        
+        //Martin
+        {
+            "LogName": "Seasons",
+            "Action": "EditImage",
+            "Target": "Portraits/Martin_{{Season}}",
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall"
+            }            
+        },
+        {
+            "LogName": "Winter Variants",
+            "Action": "EditImage",
+            "Target": "Portraits/Martin_{{Season}}_Indoor , Portraits/Martin_{{Season}}_Outdoor", 
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "winter"
+            }            
+        },
+        {
+            "LogName": "Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/Martin_FlowerDance , Portraits/Martin_SpiritsEve",
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"          
+        },
+        {
+            "LogName": "Extras",
+            "Action": "EditImage",
+            "Target": "Portraits/Martin_Joja, Portraits/Martin_Theater",
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"          
+        },
+        {
+            "LogName": "Vendor",
+            "Action": "EditImage",
+            "Target": "Mods/FlashShifter.StardewValleyExpandedCP/Martin_Vendor",
+            "FromFile": "assets/BunBunz/{{TargetWithoutPath}}.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"          
+        },
+        {
+            "LogName": "First-Time Theater Event",
+            "Action": "EditImage",
+            "Target": "Portraits/**Martin**",
+            "FromFile": "assets/BunBunz/Martin_Theater.png",
+            "Update": "OnLocationChange",
+            "Priority": "Late + 1"          
+        },
+
+        //Redunant But Will Fix any issues of portraits not showing up for Temporary Actor Calls within SVE
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Martin",
+            "FromFile": "assets/BunBunz/Martin_{{Season}}.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "spring, summer, fall"
+            }            
+        },
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Martin",
+            "FromFile": "assets/BunBunz/Martin_Winter_Outdoor.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "winter",
+                "IsOutdoors": "true"
+            }            
+        },
+        {
+            "LogName": "Replace Portraits from SVE",
+            "Action": "EditImage",
+            "Target": "Portraits/Martin",
+            "FromFile": "assets/BunBunz/Martin_Winter_Indoor.png",
+            "Priority": "Late + 1",
+            "When":{
+                "Season": "winter",
+                "IsOutdoors": "false"
+            }            
+        }
+
+    ]
+}

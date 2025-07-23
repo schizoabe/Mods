@@ -1,0 +1,250 @@
+{
+	"Changes": [
+//Year2
+	//Rain Stage
+	{
+		"LogName": "Add Flooding - Sign",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/sign.json",
+		"Update": "OnLocationChange",
+		"Priority": "Late",
+		"When": {
+		"Day": "13,14,15,16,19,20,21",
+		"Season": "summer",
+		"Year": "2",	
+		"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3": false
+		}
+	},	
+	{
+		"LogName": "Add Flooding - Blocks",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/fences.json",
+		"Update": "OnLocationChange",
+		"Priority": "Late",
+		"When": {
+		"Day": "16,17,18,19",
+		"Season": "summer",
+		"Year": "2",	
+		"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3": false
+		}
+	},			
+	//Heavy Rain Stage
+		{
+			"LogName": "Add Flooding Stage Heavy Rain",
+			"Action": "Include",
+			"FromFile": "Data/Weather/Monsoon/Maps/flooding1.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"Day": "13,14,15,20,21",
+			"Season": "summer",
+			"Year": "2",				
+			"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3, FlashShifter.StardewValleyExpandedCP": false
+			}
+		},
+		{
+			"LogName": "Add SVE Flooding Stage Heavy Rain",
+			"Action": "Include",
+			"FromFile": "Data/Weather/Monsoon/Maps/SVEflooding1.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"Day": "13,14,15,20,21",
+			"Season": "summer",
+			"Year": "2",
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+	//Monsoon Stage 1
+	{
+		"LogName": "Add Flooding Stage Heavy Rain",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/flooding2.json",
+		"Update": "OnLocationChange",
+		"When": {
+		"Day": "16,19",
+		"Season": "summer",
+		"Year": "2",				
+		"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3": false
+		}
+	},	
+	/*{
+		"LogName": "Add Flooding Stage Heavy Rain",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/SVEflooding2.json",
+		"Update": "OnLocationChange",
+		"When": {
+		"Day": "16,19",
+		"Season": "summer",
+		"Year": "2",				
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+		}
+	},*/
+	//Monsoon Stage 2
+	{
+		"LogName": "Add Flooding Stage Heavy Rain",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/flooding3.json",
+		"Update": "OnLocationChange",
+		"When": {
+		"Day": "17,18",
+		"Season": "summer",
+		"Year": "2",				
+		"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3": false
+		}
+	},	
+	/*{
+		"LogName": "Add Flooding Stage Heavy Rain",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/SVEflooding3.json",
+		"Update": "OnLocationChange",
+		"When": {
+		"Day": "17,18",
+		"Season": "summer",
+		"Year": "2",				
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+		}
+	},*/
+//Year4+	
+	//Rain Stage
+	{
+		"LogName": "Add Flooding - Sign",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/sign.json",
+		"Update": "OnLocationChange",
+		"Priority": "Late",
+		"When": {
+		"Day": "27,28",
+		"Season": "summer",
+		"Year": "4,6,7,9,10,12,14,16,17,19,20,22",
+		"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3": false
+		}
+	},	
+	{
+		"LogName": "Add Flooding - Sign",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/sign.json",
+		"Update": "OnLocationChange",
+		"Priority": "Late",
+		"When": {
+		"Day": "1,2,3,4,9,10,11,12,13",
+		"Season": "fall",
+		"Year": "4,6,7,9,10,12,14,16,17,19,20,22",
+		"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3": false
+		}
+	},
+	//	
+	{
+		"LogName": "Add Flooding - Blocks",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/fences.json",
+		"Update": "OnLocationChange",
+		"Priority": "Late",
+		"When": {
+		"Day": "3,4,5,6,7,8,9,10",
+		"Season": "fall",
+		"Year": "4,6,7,9,10,12,14,16,17,19,20,22",
+		"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3": false
+		}
+	},	
+	//Heavy Rain Stage
+		{
+			"LogName": "Add Flooding Stage Heavy Rain",
+			"Action": "Include",
+			"FromFile": "Data/Weather/Monsoon/Maps/flooding1.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"Day": "27,28",
+			"Season": "summer",
+			"Year": "4,6,7,9,10,12,14,16,17,19,20,22",
+			"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3, FlashShifter.StardewValleyExpandedCP": false
+			}
+		},	
+		{
+			"LogName": "Add Flooding Stage Heavy Rain",
+			"Action": "Include",
+			"FromFile": "Data/Weather/Monsoon/Maps/flooding1.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"Day": "1,2,11,12",
+			"Season": "fall",
+			"Year": "4,6,7,9,10,12,14,16,17,19,20,22",
+			"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3, FlashShifter.StardewValleyExpandedCP": false
+			}
+		},	
+		//	
+		{
+			"LogName": "Add SVE Flooding Stage Heavy Rain",
+			"Action": "Include",
+			"FromFile": "Data/Weather/Monsoon/Maps/SVEflooding1.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"Day": "27,28",
+			"Season": "summer",
+			"Year": "4,6,7,9,10,12,14,16,17,19,20,22",			
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},		
+		{
+			"LogName": "Add SVE Flooding Stage Heavy Rain",
+			"Action": "Include",
+			"FromFile": "Data/Weather/Monsoon/Maps/SVEflooding1.json",
+			"Update": "OnLocationChange",
+			"When": {
+			"Day": "1,2,11,12",
+			"Season": "fall",
+			"Year": "4,6,7,9,10,12,14,16,17,19,20,22",				
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+	//Monsoon Stage 1
+	{
+		"LogName": "Add Flooding Stage Heavy Rain",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/flooding2.json",
+		"Update": "OnLocationChange",
+		"When": {
+		"Day": "3,4,9,10",
+		"Season": "fall",
+		"Year": "4,6,7,9,10,12,14,16,17,19,20,22",				
+		"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3": false
+		}
+	},	
+	/*{
+		"LogName": "Add Flooding Stage Heavy Rain",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/SVEflooding2.json",
+		"Update": "OnLocationChange",
+		"When": {
+		"Day": "3,4,9,10",
+		"Season": "fall",
+		"Year": "4,6,7,9,10,12,14,16,17,19,20,22",				
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+		}
+	},*/	
+	//Monsoon Stage 2
+	{
+		"LogName": "Add Flooding Stage Heavy Rain",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/flooding3.json",
+		"Update": "OnLocationChange",
+		"When": {
+		"Day": "5,6,7,8",
+		"Season": "fall",
+		"Year": "4,6,7,9,10,12,14,16,17,19,20,22",				
+		"HasMod |contains=DaisyNiko.SVR2, DaisyNiko.SVR3": false
+		}
+	}		
+	/*{
+		"LogName": "Add Flooding Stage Heavy Rain",
+		"Action": "Include",
+		"FromFile": "Data/Weather/Monsoon/Maps/SVEflooding3.json",
+		"Update": "OnLocationChange",
+		"When": {
+		"Day": "5,6,7,8",
+		"Season": "fall",
+		"Year": "4,6,7,9,10,12,14,16,17,19,20,22",				
+		"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+		}
+	}*/
+//End
+]
+}

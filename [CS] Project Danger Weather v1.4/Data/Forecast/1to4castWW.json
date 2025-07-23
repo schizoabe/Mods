@@ -1,0 +1,398 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Happening",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts",
+			"TargetField": [ "Desert", "WeatherConditions" ],
+			"Entries": {	
+							"HeavyRainSpring": {
+        						"Id": "HeavyRainSpring",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 11, YEAR 1 1\" \"SEASON spring, DAY_OF_MONTH 19, YEAR 2 2\" \"SEASON spring, DAY_OF_MONTH 3 20, YEAR 3 3\" \"SEASON spring, DAY_OF_MONTH 19 26, YEAR 4 4\"",
+        						"Weather": "kath.weathering_HeavyRain"
+      						},
+							"SandStormSummer": {
+        						"Id": "SandStormSummer",
+        						"Condition": "ANY \"SEASON summer, DAY_OF_MONTH 17 18, YEAR 1 1\" \"SEASON summer, DAY_OF_MONTH 7 8, YEAR 2 2\" \"SEASON summer, DAY_OF_MONTH 2 19, YEAR 3 3\" \"SEASON summer, DAY_OF_MONTH 8 9 21, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Sandstorm"
+      						},
+							"HeatWaveSummer": {
+        						"Id": "HeatWaveSummer",
+        						"Condition": "ANY \"SEASON summer, DAY_OF_MONTH 22, YEAR 1 1\" \"SEASON summer, DAY_OF_MONTH 22 23 24, YEAR 2 2\" \"SEASON summer, DAY_OF_MONTH 4 5 13, YEAR 3 3\" \"SEASON summer, DAY_OF_MONTH 2 11 12 13 14 15 16 17, YEAR 4 4\"",
+        						"Weather": "kath.weathering_HeatWave"
+      						},
+							"RainPostDrought": {
+        						"Id": "RainPostDrought",
+        						"Condition": "!WEATHER Here kath.weathering_HeatWave, CS_WEATHER Desert -1 kath.weathering_HeatWave",
+        						"Weather": "Rain"
+      						},
+							"HailWinter": {
+        						"Id": "HailWinter",
+        						"Condition": "ANY \"SEASON winter, DAY_OF_MONTH 3, YEAR 1 1\" \"SEASON winter, DAY_OF_MONTH 5, YEAR 2 2\" \"SEASON winter, DAY_OF_MONTH 2 10, YEAR 3 3\" \"SEASON winter, DAY_OF_MONTH 13 21, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Hail"
+      						},
+							"Eclipse": {
+        						"Id": "Eclipse",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 4, YEAR 2 2\" \"SEASON winter, DAY_OF_MONTH 2, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Darkness"
+      						},
+							/*"Ash": {
+        						"Id": "Ash",
+        						"Condition": "{{AshSummonOut}}",
+        						"Weather": "kath.weathering_Ash"
+      						},	
+							"AshSummon": {
+        						"Id": "AshSummon",
+        						"Condition": "{{AshSummon2Out}}",
+        						"Weather": "kath.weathering_AshSummon"
+      						},							
+							"AshMNE": {
+        						"Id": "AshMNE",
+        						"Condition": "{{PlannedAsh}}",
+        						"Weather": "kath.weathering_Ash"
+      						},*/
+							"NorthLights": {
+        						"Id": "NorthLights",
+        						"Condition": "ANY \"SEASON winter, DAY_OF_MONTH 4, YEAR 1 1\" \"SEASON winter, DAY_OF_MONTH 6, YEAR 2 2\" \"SEASON winter, DAY_OF_MONTH 3, YEAR 3 3\" \"SEASON winter, DAY_OF_MONTH 6, YEAR 4 4\"",
+        						"Weather": "kath.weathering_NorthernLights"
+      						},
+							"Meatball": {
+        						"Id": "Meatball",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 7, YEAR 1 1\" \"SEASON spring, DAY_OF_MONTH 10, YEAR 3 3\" \"SEASON spring, DAY_OF_MONTH 17 18, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Meatball"
+      						},
+							"LocustSwarm": {
+        						"Id": "LocustSwarm",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 20, YEAR 2 2\" \"SEASON spring, DAY_OF_MONTH 7, YEAR 3 3\"",
+        						"Weather": "kath.weathering_Locust"
+      						},
+							"MayoRain": {
+        						"Id": "MayoRain",
+        						"Condition": "SEASON spring, DAY_OF_MONTH 10, YEAR 2 2",
+        						"Weather": "kath.weathering_Mayo"
+      						},
+							"NoVis2": {
+        						"Id": "NoVis2",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 22, YEAR 1 1\" \"SEASON fall, DAY_OF_MONTH 21, YEAR 3 3\"",
+        						"Weather": "kath.weathering_NoVis"
+      						},
+							"NoVis": {
+        						"Id": "NoVis",
+        						"Condition": "RANDOM 0.2",
+        						"Weather": "kath.weathering_NoVis"
+      						}
+									},
+			"MoveEntries": [
+			{ "Id": "HeavyRainSpring", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			{ "Id": "SandStormSummer", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			{ "Id": "HeatWaveSummer", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			{ "Id": "HailWinter", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			{ "Id": "RainPostDrought", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			{ "Id": "Eclipse", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			//{ "Id": "AshMNE", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			//{ "Id": "Ash", "ToPosition": "Top" },
+			{ "Id": "NorthLights", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			{ "Id": "Meatball", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			{ "Id": "LocustSwarm", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			{ "Id": "MayoRain", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			{ "Id": "NoVis", "BeforeId": "Default" },
+			{ "Id": "NoVis2", "BeforeId": "Kana.WeatherWonders_HeatwaveStartSummer" },
+			{ "Id": "Default", "ToPosition": "Bottom" }
+			//{ "Id": "AshSummon", "ToPosition": "Top" }
+			]
+		},
+		{
+      		"LogName": "The Weather Happening",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts", 
+			"TargetField": [ "Default", "WeatherConditions" ],
+			"Entries": {	
+							"SnowSpring": {
+        						"Id": "SnowSpring",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 1, YEAR 2 2\" \"SEASON spring, DAY_OF_MONTH 2, YEAR 3 3\" \"SEASON spring, DAY_OF_MONTH 2, YEAR 4 4\"",
+        						"Weather": "Snow"
+      						},
+							"HeavyRainSpring": {
+        						"Id": "HeavyRainSpring",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 11, YEAR 1 1\" \"SEASON spring, DAY_OF_MONTH 19, YEAR 2 2\" \"SEASON spring, DAY_OF_MONTH 3 20, YEAR 3 3\" \"SEASON spring, DAY_OF_MONTH 19 26, YEAR 4 4\"",
+        						"Weather": "kath.weathering_HeavyRain"
+      						},
+							"DryLightningSummer": {
+        						"Id": "DryLightningSummer", 
+        						"Condition": "ANY \"SEASON summer, DAY_OF_MONTH 7, YEAR 1 1\" \"SEASON summer, DAY_OF_MONTH 3, YEAR 2 2\" \"SEASON summer, DAY_OF_MONTH 3 15 16, YEAR 3 3\" \"SEASON summer, DAY_OF_MONTH 4 24, YEAR 4 4\"",
+        						"Weather": "kath.weathering_DryLightning"
+      						},
+							"Wildfire": {
+        						"Id": "Wildfire", 
+        						"Condition": "ANY \"SEASON summer, DAY_OF_MONTH 4, YEAR 2 2\" \"SEASON summer, DAY_OF_MONTH 17, YEAR 3 3\"",
+        						"Weather": "kath.weathering_Wildfire"
+      						},
+							/*"SandStormSummer": {
+        						"Id": "SandStormSummer",
+        						"Condition": "{{PTSand}}",
+        						"Weather": "kath.weathering_Sandstorm"
+      						},*/
+							"HeatWaveSummer": {
+        						"Id": "HeatWaveSummer",
+        						"Condition": "ANY \"SEASON summer, DAY_OF_MONTH 22, YEAR 1 1\" \"SEASON summer, DAY_OF_MONTH 22 23 24, YEAR 2 2\" \"SEASON summer, DAY_OF_MONTH 4 5 13, YEAR 3 3\" \"SEASON summer, DAY_OF_MONTH 2 11 12 13 14 15 16 17, YEAR 4 4\"",
+        						"Weather": "kath.weathering_HeatWave"
+      						},
+							"HailWinter": {
+        						"Id": "HailWinter",
+        						"Condition": "ANY \"SEASON winter, DAY_OF_MONTH 3, YEAR 1 1\" \"SEASON winter, DAY_OF_MONTH 5, YEAR 2 2\" \"SEASON winter, DAY_OF_MONTH 2 10, YEAR 3 3\" \"SEASON winter, DAY_OF_MONTH 13 21, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Hail"
+      						},
+							"BlizzardWinter": {
+        						"Id": "BlizzardWinter",
+        						"Condition": "ANY \"SEASON winter, DAY_OF_MONTH 11, YEAR 1 2\" \"SEASON winter, DAY_OF_MONTH 8 13, YEAR 3 3\" \"SEASON winter, DAY_OF_MONTH 18 26, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Blizzard"
+      						},
+							"StarFalling": {
+        						"Id": "StarFalling",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 27, YEAR 1 1\" \"SEASON winter, DAY_OF_MONTH 27, YEAR 2 2\" \"SEASON summer, DAY_OF_MONTH 26, YEAR 3 3\" \"SEASON fall, DAY_OF_MONTH 25, YEAR 4 4\"",
+        						"Weather": "kath.weathering_StarFalling"
+      						},
+							"SnowFall": { 
+        						"Id": "SnowFall",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 25, YEAR 2 2\" \"SEASON fall, DAY_OF_MONTH 27, YEAR 3 3\" \"SEASON fall, DAY_OF_MONTH 24, YEAR 4 4\"",
+        						"Weather": "Snow"
+      						}, 
+							"RainWinter": {
+        						"Id": "RainWinter",
+        						"Condition": "ANY \"SEASON winter, DAY_OF_MONTH 25, YEAR 1 2\" \"SEASON winter, DAY_OF_MONTH 27, YEAR 3 4\"",
+        						"Weather": "Rain"
+      						},
+							"RainPostDrought": {
+        						"Id": "RainPostDrought",
+        						"Condition": "!WEATHER Here kath.weathering_HeatWave, CS_WEATHER Town -1 kath.weathering_HeatWave",
+        						"Weather": "Rain"
+      						},
+							"Smoggy": {
+        						"Id": "Smoggy",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 2, YEAR 1 1\" \"SEASON fall, DAY_OF_MONTH 1 4, YEAR 2 2\" \"SEASON fall, DAY_OF_MONTH 11 19, YEAR 3 3\" \"SEASON fall, DAY_OF_MONTH 3 16, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Smog"
+      						},
+							"SmoggyJoja": {
+        						"Id": "SmoggyJoja",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 2, YEAR 1 1\" \"SEASON fall, DAY_OF_MONTH 1 4, YEAR 2 2\" \"SEASON fall, DAY_OF_MONTH 11 19 24, YEAR 3 3\" \"SEASON fall, DAY_OF_MONTH 3 16 21, YEAR 4 4\"",
+        						"Weather": "kath.weathering_SmogJoja"
+      						},
+							"AcidRainFall": {
+        						"Id": "AcidRainFall",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 3, YEAR 1 1\" \"SEASON fall, DAY_OF_MONTH 2 7, YEAR 2 2\" \"SEASON fall, DAY_OF_MONTH 12 20 25, YEAR 3 3\" \"SEASON fall, DAY_OF_MONTH 4 17 22, YEAR 4 4\"",
+        						"Weather": "kath.weathering_AcidRain"
+      						},
+							"MudRainFall": {
+        						"Id": "MudRainFall",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 24, YEAR 1 1\" \"SEASON fall, DAY_OF_MONTH 20 23, YEAR 2 2\" \"SEASON fall, DAY_OF_MONTH 7 10, YEAR 3 3\" \"SEASON fall, DAY_OF_MONTH 1 20, YEAR 4 4\"",
+        						"Weather": "kath.weathering_MudRain"
+      						},
+							"Eclipse": {
+        						"Id": "Eclipse",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 4, YEAR 2 2\" \"SEASON winter, DAY_OF_MONTH 2, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Darkness"
+      						},
+							/*"Ash": {
+        						"Id": "Ash",
+        						"Condition": "{{AshSummonOut}}",
+        						"Weather": "kath.weathering_Ash"
+      						},
+							"AshSummon": {
+        						"Id": "AshSummon",
+        						"Condition": "{{AshSummon2Out}}",
+        						"Weather": "kath.weathering_AshSummon"
+      						},	
+							"AshMNE": {
+        						"Id": "AshMNE",
+        						"Condition": "{{PlannedAsh}}",
+        						"Weather": "kath.weathering_Ash"
+      						},*/
+							"NorthLights": {
+        						"Id": "NorthLights",
+        						"Condition": "ANY \"SEASON winter, DAY_OF_MONTH 4, YEAR 1 1\" \"SEASON winter, DAY_OF_MONTH 6, YEAR 2 2\" \"SEASON winter, DAY_OF_MONTH 3, YEAR 3 3\" \"SEASON winter, DAY_OF_MONTH 6, YEAR 4 4\"",
+        						"Weather": "kath.weathering_NorthernLights"
+      						},
+							"Meatball": {
+        						"Id": "Meatball",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 7, YEAR 1 1\" \"SEASON spring, DAY_OF_MONTH 10, YEAR 3 3\" \"SEASON spring, DAY_OF_MONTH 17 18, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Meatball"
+      						},
+							"LocustSwarm": {
+        						"Id": "LocustSwarm",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 20, YEAR 2 2\" \"SEASON spring, DAY_OF_MONTH 7, YEAR 3 3\"",
+        						"Weather": "kath.weathering_Locust"
+      						},
+							"Tornado": {
+        						"Id": "Tornado",
+        						"Condition": "SEASON spring, DAY_OF_MONTH 14, YEAR 3 3",
+        						"Weather": "kath.weathering_Tornado"
+      						},
+							"MayoRain": {
+        						"Id": "MayoRain",
+        						"Condition": "SEASON spring, DAY_OF_MONTH 10, YEAR 2 2",
+        						"Weather": "kath.weathering_Mayo"
+      						},
+							"NoVis2": {
+        						"Id": "NoVis2",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 22, YEAR 1 1\" \"SEASON fall, DAY_OF_MONTH 21, YEAR 3 3\"",
+        						"Weather": "kath.weathering_NoVis"
+      						},
+							"NoVis": {
+        						"Id": "NoVis",
+        						"Condition": "RANDOM 0.2",
+        						"Weather": "kath.weathering_NoVis"
+      						},
+							"RainbowSnake2": {
+        						"Id": "RainbowSnake2",
+        						"Condition": "ANY \"SEASON summer, DAY_OF_MONTH 14, YEAR 1 2\" \"SEASON summer, DAY_OF_MONTH 15 16, YEAR 1 2, {{HasMod|contains=sapphicsaph_pitv}}\" \"SEASON spring, DAY_OF_MONTH 9, YEAR 1 1, {{AddWeather|contains=rainy}}\" \"SEASON spring, DAY_OF_MONTH 10, YEAR 1 1, {{AddWeather|contains=meatball}}\" \"SEASON fall, DAY_OF_MONTH 8, YEAR 2 2, {{AddWeather|contains=firerain}}\"",
+        						"Weather": "kath.weathering_Rainbow"
+      						},
+							"RainbowSnake": {
+        						"Id": "RainbowSnake",
+        						"Condition": "ANY \"RANDOM 0.01, CS_WEATHER_IS_RAINING Town -1\" \"RANDOM 0.05, CS_WEATHER_IS_RAINING Town\"",
+        						"Weather": "kath.weathering_Rainbow"
+      						}							
+					},
+			"MoveEntries": [
+			{ "Id": "GreenRain", "AfterID": "Ash" },
+			{ "Id": "SnowSpring", "AfterID": "GreenRain" },
+			{ "Id": "HeavyRainSpring", "AfterID": "SnowSpring" },
+			{ "Id": "DryLightningSummer", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			//{ "Id": "SandStormSummer", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "HeatWaveSummer", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "HailWinter", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "BlizzardWinter", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "StarFalling", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "SnowFall", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "RainWinter", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "RainPostDrought", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "Smoggy", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "SmoggyJoja", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "AcidRainFall", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "MudRainFall", "BeforeId": "Kana.WeatherWonders_HailstormStart" },			
+			{ "Id": "Eclipse", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			//{ "Id": "AshMNE", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			//{ "Id": "Ash", "ToPosition": "Top" },
+			{ "Id": "NorthLights", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "Wildfire", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "Meatball", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "LocustSwarm", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "Tornado", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "MayoRain", "BeforeId": "Kana.WeatherWonders_HailstormStart" },
+			{ "Id": "Default", "ToPosition": "Bottom" },
+			{ "Id": "RainbowSnake2", "BeforeId": "SummerStorm2" },
+			{ "Id": "NoVis2", "BeforeId": "SummerStorm" },
+			{ "Id": "RainbowSnake", "BeforeId": "SummerStorm" },
+			{ "Id": "NoVis", "BeforeId": "Default" }
+			//{ "Id": "AshSummon", "ToPosition": "Top" }
+			]
+		},
+		{
+      		"LogName": "The Weather Happening",
+			"Action": "EditData",
+			"Target": "Data/LocationContexts",
+			"TargetField": [ "Island", "WeatherConditions" ],
+			"Entries": {	
+							"HeavyRainSpring": {
+        						"Id": "HeavyRainSpring",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 11, YEAR 1 1\" \"SEASON spring, DAY_OF_MONTH 19, YEAR 2 2\" \"SEASON spring, DAY_OF_MONTH 3 20, YEAR 3 3\" \"SEASON spring, DAY_OF_MONTH 19 26, YEAR 4 4\"",
+        						"Weather": "kath.weathering_HeavyRain"
+      						},
+							"HeatWaveSummer": {
+        						"Id": "HeatWaveSummer",
+        						"Condition": "ANY \"SEASON summer, DAY_OF_MONTH 22, YEAR 1 1\" \"SEASON summer, DAY_OF_MONTH 22 23 24, YEAR 2 2\" \"SEASON summer, DAY_OF_MONTH 4 5 13, YEAR 3 3\" \"SEASON summer, DAY_OF_MONTH 2 11 12 13 14 15 16 17, YEAR 4 4\"",
+        						"Weather": "kath.weathering_HeatWave"
+      						},
+							"HurricaneFall": {
+        						"Id": "HurricaneFall",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 18 19, YEAR 1 1\" \"SEASON fall,  DAY_OF_MONTH 5 6, YEAR 2 2\" \"SEASON fall, DAY_OF_MONTH 2 16 17, YEAR 3 3\" \"SEASON fall, DAY_OF_MONTH 24 25 27, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Hurry"
+      						},
+							"RainPostDrought": {
+        						"Id": "RainPostDrought",
+        						"Condition": "!WEATHER Here kath.weathering_HeatWave, CS_WEATHER IslandSouth -1 kath.weathering_HeatWave",
+        						"Weather": "Rain"
+      						},
+							"Smoggy": {
+        						"Id": "Smoggy",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 2, YEAR 1 1\" \"SEASON fall, DAY_OF_MONTH 1 4, YEAR 2 2\" \"SEASON fall, DAY_OF_MONTH 11 19, YEAR 3 3\" \"SEASON fall, DAY_OF_MONTH 3 16, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Smog"
+      						},
+							"SmoggyJoja": {
+        						"Id": "SmoggyJoja",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 2, YEAR 1 1\" \"SEASON fall, DAY_OF_MONTH 1 4, YEAR 2 2\" \"SEASON fall, DAY_OF_MONTH 11 19 24, YEAR 3 3\" \"SEASON fall, DAY_OF_MONTH 3 16 21, YEAR 4 4\"",
+        						"Weather": "kath.weathering_SmogJoja"
+      						},
+							"AcidRainFall": {
+        						"Id": "AcidRainFall",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 3, YEAR 1 1\" \"SEASON fall, DAY_OF_MONTH 2 7, YEAR 2 2\" \"SEASON fall, DAY_OF_MONTH 12 20 25, YEAR 3 3\" \"SEASON fall, DAY_OF_MONTH 4 17 22, YEAR 4 4\"",
+        						"Weather": "kath.weathering_AcidRain"
+      						},
+							"Eclipse": {
+        						"Id": "Eclipse",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 4, YEAR 2 2\" \"SEASON winter, DAY_OF_MONTH 2, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Darkness"
+      						},
+							"Ash": {
+        						"Id": "Ash",
+        						"Condition": "PLAYER_HAS_MAIL Any SummonAsh",
+        						"Weather": "kath.weathering_Ash"
+      						},
+							"AshSummon": {
+        						"Id": "AshSummon",
+        						"Condition": "PLAYER_HAS_MAIL Any SummonAsh2",
+        						"Weather": "kath.weathering_AshSummon"
+      						},	
+							"AshMNE": {
+        						"Id": "AshMNE",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 2, YEAR 2 2\" \"SEASON winter, DAY_OF_MONTH 4, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Ash"
+      						},
+							"NorthLights": {
+        						"Id": "NorthLights",
+        						"Condition": "ANY \"SEASON winter, DAY_OF_MONTH 4, YEAR 1 1\" \"SEASON winter, DAY_OF_MONTH 6, YEAR 2 2\" \"SEASON winter, DAY_OF_MONTH 3, YEAR 3 3\" \"SEASON winter, DAY_OF_MONTH 6, YEAR 4 4\"",
+        						"Weather": "kath.weathering_NorthernLights"
+      						},
+							"Meatball": {
+        						"Id": "Meatball",
+        						"Condition": "ANY \"SEASON spring, DAY_OF_MONTH 7, YEAR 1 1\" \"SEASON spring, DAY_OF_MONTH 10, YEAR 3 3\" \"SEASON spring, DAY_OF_MONTH 17 18, YEAR 4 4\"",
+        						"Weather": "kath.weathering_Meatball"
+      						},
+							"MayoRain": {
+        						"Id": "MayoRain",
+        						"Condition": "SEASON spring, DAY_OF_MONTH 10, YEAR 2 2",
+        						"Weather": "kath.weathering_Mayo"
+      						},
+							"NoVis2": {
+        						"Id": "NoVis2",
+        						"Condition": "ANY \"SEASON fall, DAY_OF_MONTH 22, YEAR 1 1\" \"SEASON fall, DAY_OF_MONTH 21, YEAR 3 3\"",
+        						"Weather": "kath.weathering_NoVis"
+      						},
+							"NoVis": {
+        						"Id": "NoVis",
+        						"Condition": "RANDOM 0.2",
+        						"Weather": "kath.weathering_NoVis"
+      						}	
+					},
+			"MoveEntries": [
+			{ "Id": "HeavyRainSpring", "AfterID": "AshMNE" },
+			{ "Id": "HeatWaveSummer", "BeforeId": "Kana.WeatherWonders_DelugeStart" },
+			{ "Id": "HurricaneFall", "BeforeId": "Kana.WeatherWonders_DelugeStart" },
+			{ "Id": "RainPostDrought", "BeforeId": "Kana.WeatherWonders_DelugeStart" },
+			{ "Id": "Smoggy", "BeforeId": "Kana.WeatherWonders_DelugeStart" },
+			{ "Id": "SmoggyJoja", "BeforeId": "Kana.WeatherWonders_DelugeStart" },
+			{ "Id": "AcidRainFall", "BeforeId": "Kana.WeatherWonders_DelugeStart" },
+			{ "Id": "Eclipse", "BeforeId": "Kana.WeatherWonders_DelugeStart" },
+			{ "Id": "AshMNE", "AfterID": "Ash" },
+			{ "Id": "Ash", "ToPosition": "Top" },
+			{ "Id": "NorthLights", "BeforeId": "Kana.WeatherWonders_DelugeStart" },
+			{ "Id": "Meatball", "BeforeId": "Kana.WeatherWonders_DelugeStart" },
+			{ "Id": "MayoRain", "BeforeId": "Kana.WeatherWonders_DelugeStart" },
+			{ "Id": "AshSummon", "ToPosition": "Top" },
+			{ "Id": "NoVis", "BeforeId": "Default" },
+			{ "Id": "NoVis2", "BeforeId": "Kana.WeatherWonders_DelugeStart" }
+			]
+		}
+//End
+]
+}

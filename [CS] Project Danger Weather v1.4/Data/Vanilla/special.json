@@ -1,0 +1,787 @@
+{
+	"Changes": [	
+		{
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+			"MakingitRainFestivals": {
+				"Id": "MakingitRainFestivals",
+                "Trigger": "DayStarted",
+                "Condition": "ANY \"YEAR 4 4, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 6 7, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 9 10, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 12 12, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 14 14, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 16 17, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 19 20, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 22, SEASON_DAY summer 28, {{Monsoon|contains=true}}\"",
+				"MarkActionApplied": false,
+                "Actions": [
+					"leclair.cloudyskies_WaterDirt Context Default"
+                    ]
+				},	
+			"MakingitRainFestivals2": {
+				"Id": "MakingitRainFestivals2",
+                "Trigger": "DayStarted",
+                "Condition": "YEAR 4, SEASON_DAY fall 27, {{RainEve|contains=true}}",
+				"MarkActionApplied": false,
+                "Actions": [
+					"leclair.cloudyskies_WaterDirt Context Default"
+                    ]
+				}
+			}
+		},
+		//
+		{
+			"LogName": "Heart Texture",
+			"Action": "EditImage",
+			"Target": "LooseSprites/Cursors",
+			"FromFile": "assets/1_3/heartfall.png",
+			"FromArea": { "X": 0, "Y": 0, "Width": 188, "Height": 49 },
+			"ToArea": { "X": 352, "Y": 1183, "Width": 188, "Height": 49 },
+			"When": {
+			"DayEvent": "wedding"
+			}
+		},
+		{
+			"LogName": "Leaf Colour Texture",
+			"Action": "EditImage",
+			"Target": "LooseSprites/Cursors",
+			"FromFile": "assets/1_3/leafcolour.png",
+			"FromArea": { "X": 0, "Y": 0, "Width": 188, "Height": 49 },
+			"ToArea": { "X": 352, "Y": 1183, "Width": 188, "Height": 49 },
+			"When": {
+			"DayEvent": "flower dance"
+			}
+		},		
+		//
+		{
+			"LogName": "Icon Change - Wedding",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/IconsFestival",
+			"FromFile": "assets/1_3/festivalicons.png",
+			"FromArea": { "X": 0, "Y": "{{Random:0,8,16,24}}", "Width": 12, "Height": 8 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 12, "Height": 8 },
+			"When": {
+			"DayEvent": "wedding"
+			}
+		},
+		{
+			"LogName": "Icon Change - Egg Festival",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/IconsFestival",
+			"FromFile": "assets/1_3/festivalicons.png",
+			"FromArea": { "X": 12, "Y": "{{Random:0,8,16,24}}", "Width": 12, "Height": 8 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 12, "Height": 8 },
+			"When": {
+			"DayEvent": "egg festival"
+			}
+		},
+		{
+			"LogName": "Icon Change - Flower Dance",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/IconsFestival",
+			"FromFile": "assets/1_3/festivalicons.png",
+			"FromArea": { "X": 24, "Y": "{{Random:0,8,16,24}}", "Width": 12, "Height": 8 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 12, "Height": 8 },
+			"When": {
+			"DayEvent": "flower dance"
+			}
+		},
+		{
+			"LogName": "Icon Change - Luau",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/IconsFestival",
+			"FromFile": "assets/1_3/festivalicons.png",
+			"FromArea": { "X": 36, "Y": "{{Random:0,8,16,24}}", "Width": 12, "Height": 8 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 12, "Height": 8 },
+			"When": {
+			"DayEvent": "luau"
+			}
+		},
+		{
+			"LogName": "Icon Change - Dance of Moonlight Jellies",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/IconsFestival",
+			"FromFile": "assets/1_3/festivalicons.png",
+			"FromArea": { "X": 48, "Y": "{{Random:0,8,16,24}}", "Width": 12, "Height": 8 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 12, "Height": 8 },
+			"When": {
+			"DayEvent": "dance of the moonlight jellies"
+			}
+		},
+		{
+			"LogName": "Icon Change - SDV Fair",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/IconsFestival",
+			"FromFile": "assets/1_3/festivalicons.png",
+			"FromArea": { "X": 60, "Y": "{{Random:0,8,16,24}}", "Width": 12, "Height": 8 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 12, "Height": 8 },
+			"When": {
+			"DayEvent": "stardew valley fair"
+			}
+		},
+		{
+			"LogName": "Icon Change - Spirit's Eve",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/IconsFestival",
+			"FromFile": "assets/1_3/festivalicons.png",
+			"FromArea": { "X": 72, "Y": "{{Random:0,8,16,24}}", "Width": 12, "Height": 8 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 12, "Height": 8 },
+			"When": {
+			"DayEvent": "spirit's eve"
+			}
+		},
+		{
+			"LogName": "Icon Change - Ice Festival",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/IconsFestival",
+			"FromFile": "assets/1_3/festivalicons.png",
+			"FromArea": { "X": 84, "Y": "{{Random:0,8,16,24}}", "Width": 12, "Height": 8 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 12, "Height": 8 },
+			"When": {
+			"DayEvent": "festival of ice"
+			}
+		},
+		{
+			"LogName": "Icon Change - Winter Star",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/IconsFestival",
+			"FromFile": "assets/1_3/festivalicons.png",
+			"FromArea": { "X": 96, "Y": "{{Random:0,8,16,24}}", "Width": 12, "Height": 8 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 12, "Height": 8 },
+			"When": {
+			"DayEvent": "feast of the winter star"
+			}
+		},			
+		//
+        {
+			"LogName": "Icon Change - Egg Festival",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/IconsFestival",
+			"FromFile": "assets/1_3/festivalicons.png",
+			"FromArea": { "X": 108, "Y": "{{Random:0,8,16,24}}", "Width": 12, "Height": 8 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 12, "Height": 8 },
+			"When": {
+			"Season": "Spring",
+            "Day": 2,
+            "Year|contains=1": false,
+            "HasMod": "kath.starlight"
+			}
+		},
+        //
+		{
+      		"LogName": "The Weather Data Specials",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"Festival": {
+					"Id": "Festival",
+					"DisplayName": "[LocalizedText Strings\\StringsFromCSFiles:Festival.Name]",
+
+					"Forecast": "{{i18n: Weather.Festival.Forecast{{Random: 1,2}} }}[LocalizedText Strings\\StringsFromCSFiles:Festival.Info]",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Festival.Forecast{{Random: 1,2}} }}[LocalizedText Strings\\StringsFromCSFiles:Festival.Info]", "Desert": "{{i18n: Weather.Festival.Forecast{{Random: 1,2}} }}[LocalizedText Strings\\StringsFromCSFiles:Festival.Info]"},
+					
+					"UseNightTiles": "{{SpiritEveNT}}",
+					"IsSnowing": false,
+					"IsRaining": false,
+					"SpawnCritters": true,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+
+					"TVTexture": "LooseSprites/Cursors",
+					"TVSource": {"X": 413, "Y": 372},
+					"TVFrames": 4,
+					
+					"IconTexture": "Mods/kath.weathering/IconsFestival",
+					"IconSource": {"X": 0, "Y": 0},
+
+					"SoftMusicOverrides": [
+					    {
+							"Id": "Luau",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY summer 11",
+							"Track": "summer2"
+						},
+					    {
+							"Id": "SDVFair",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY fall 16",
+							"Track": "Majestic"
+						},
+					    {
+							"Id": "SpiritEve",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY fall 27",
+							"Track": "{{SpiritEveMusic}}"
+						},
+					    {
+							"Id": "WinterStar",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY winter 25",
+							"Track": "Cloth"
+						}
+					],
+					
+					"Critters":[			
+						//egg
+						{
+							"Id": "Butterflies",
+							"Group": "Flies",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY spring 13",
+							"Chance": 2.0,
+
+							"Type": "Butterfly"
+						},
+						{
+							"Id": "Bunnies",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY spring 13",
+							"Chance": 1.0,
+							"Type": "Rabbit"
+						},
+						
+						//flower
+						{
+							"Id": "Butterflies2",
+							"Group": "Flies",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY spring 24",
+							"Chance": 2.0,
+
+							"Type": "Butterfly"
+						},
+
+						//luau
+						{
+							"Id": "Clouds",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY summer 11",
+							"Chance": 2.0,
+
+							"Type": "Cloud"
+						},
+
+						//jellies
+						{
+							"Id": "Fireflies",
+							"Group": "Flies",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY summer 28",
+							"Chance": 1.0,
+
+							"Type": "Firefly"
+						},	
+
+						//sdv fair
+						{
+							"Id": "Birdies",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY fall 16",
+							"Chance": 1.0,
+
+							"Type": "Birdie"
+						},
+						
+						//spirits
+						{
+							"Id": "Fireflies2",
+							"Group": "Flies",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY fall 27",
+							"Chance": 2.0,
+
+							"Type": "Firefly"
+						}							
+					],	
+					
+					"Effects":[
+						{
+							"Id": "FestJoyEgg",
+							"Type": "Buff",
+							"BuffId": "FestivalJoy",
+							"Condition": "!LOCATION_NAME Here Temp, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here, SEASON_DAY spring 13, TIME 600 900",
+							"TargetMapType": "Outdoors"
+						},
+						{
+							"Id": "FestJoyFlower",
+							"Type": "Buff",
+							"BuffId": "FestivalJoy",
+							"Condition": "!LOCATION_NAME Here Temp, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here, SEASON_DAY spring 24, TIME 600 900",
+							"TargetMapType": "Outdoors"
+						},
+						{
+							"Id": "FestJoyLuau",
+							"Type": "Buff",
+							"BuffId": "FestivalJoy",
+							"Condition": "!LOCATION_NAME Here Temp, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here, SEASON_DAY summer 11, TIME 600 900",
+							"TargetMapType": "Outdoors"
+						},
+						{
+							"Id": "FestJoyJelly",
+							"Type": "Buff",
+							"BuffId": "FestivalJoy",
+							"Condition": "!LOCATION_NAME Here Temp, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here, SEASON_DAY summer 28, TIME 600 2200",
+							"TargetMapType": "Outdoors"
+						},
+						{
+							"Id": "FestJoySDVF",
+							"Type": "Buff",
+							"BuffId": "FestivalJoy",
+							"Condition": "!LOCATION_NAME Here Temp, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here, SEASON_DAY fall 16, TIME 600 900",
+							"TargetMapType": "Outdoors"
+						},
+						{
+							"Id": "FestJoySpirit",
+							"Type": "Buff",
+							"BuffId": "FestivalJoy",
+							"Condition": "!LOCATION_NAME Here Temp, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here, SEASON_DAY fall 27, TIME 600 2200",
+							"TargetMapType": "Outdoors"
+						},
+						{
+							"Id": "FestJoyIce",
+							"Type": "Buff",
+							"BuffId": "FestivalJoy",
+							"Condition": "!LOCATION_NAME Here Temp, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here, SEASON_DAY winter 8, TIME 600 900",
+							"TargetMapType": "Outdoors"
+						},
+						{
+							"Id": "FestJoyStar",
+							"Type": "Buff",
+							"BuffId": "FestivalJoy",
+							"Condition": "!LOCATION_NAME Here Temp, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here, SEASON_DAY winter 25, TIME 600 900",
+							"TargetMapType": "Outdoors"
+						},
+                        {
+							"Id": "FestJoyStarlight",
+							"Type": "Buff",
+							"BuffId": "FestivalJoy",
+							"Condition": "{{HasMod|contains=kath.starlight}}, !LOCATION_NAME Here Temp, !LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here, SEASON_DAY spring 2, TIME 600 2000",
+							"TargetMapType": "Outdoors"
+						}							
+					],//close effect
+
+					"Layers": [
+					//Egg Festival
+						{
+							"Id": "DebrisFallEggy",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY spring 13",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 0,
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 16,
+							"MaxCount": 32
+						},
+						{
+							"Id": "DebrisFallEggyEvent",
+							"Condition": "IS_EVENT festival_spring13",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 0,
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 16,
+							"MaxCount": 32
+						},
+					//Flower Dance
+						{
+							"Id": "DebrisFallFlowerEvent1",
+							"Condition": "IS_EVENT festival_spring24",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 0,
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 2,
+							"CanBlow": false,
+							"MinCount": 8,
+							"MaxCount": 16
+						},
+						{
+							"Id": "DebrisFallFlowerEvent2",
+							"Condition": "IS_EVENT festival_spring24",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 1,
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 3,
+							"CanBlow": false,
+							"MinCount": 8,
+							"MaxCount": 16
+						},
+						{
+							"Id": "DebrisFallFlowerEvent3",
+							"Condition": "IS_EVENT festival_spring24",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 2,
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 8,
+							"MaxCount": 16
+						},						
+						{
+							"Id": "DebrisFallFlowerEvent4",
+							"Condition": "IS_EVENT festival_spring24",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"Texture": "Mods/kath.weathering/LeafColour",
+							"Sources": [{"X": 0, "Y": 0, "Width": 16, "Height": 16 }],
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 2,
+							"CanBlow": false,
+							"MinCount": 8,
+							"MaxCount": 16
+						},
+						{
+							"Id": "DebrisFallFlowerEvent5",
+							"Condition": "IS_EVENT festival_spring24",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"Texture": "Mods/kath.weathering/LeafColour",
+							"Sources": [{"X": 0, "Y": 16, "Width": 16, "Height": 16 }],
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 3,
+							"CanBlow": false,
+							"MinCount": 8,
+							"MaxCount": 16
+						},
+						{
+							"Id": "DebrisFallFlowerEvent6",
+							"Condition": "IS_EVENT festival_spring24",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"Texture": "Mods/kath.weathering/LeafColour",
+							"Sources": [{"X": 0, "Y": 32, "Width": 16, "Height": 16 }],
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 8,
+							"MaxCount": 16
+						},							
+						{
+							"Id": "DebrisFallFlowerEvent7",
+							"Condition": "IS_EVENT festival_spring24",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"Texture": "Mods/kath.weathering/LeafColour",
+							"Sources": [{"X": 0, "Y": 48, "Width": 16, "Height": 16 }],
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 2,
+							"CanBlow": false,
+							"MinCount": 8,
+							"MaxCount": 16
+						},
+						{
+							"Id": "DebrisFallFlowerEvent8",
+							"Condition": "IS_EVENT festival_spring24",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"Texture": "Mods/kath.weathering/LeafColour",
+							"Sources": [{"X": 0, "Y": 64, "Width": 16, "Height": 16 }],
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 3,
+							"CanBlow": false,
+							"MinCount": 8,
+							"MaxCount": 16
+						},
+						{
+							"Id": "DebrisFallFlowerEvent9",
+							"Condition": "IS_EVENT festival_spring24",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"Texture": "Mods/kath.weathering/LeafColour",
+							"Sources": [{"X": 0, "Y": 80, "Width": 16, "Height": 16 }],
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 8,
+							"MaxCount": 16
+						},							
+					
+
+
+					
+						{
+							"Id": "DebrisFallFlower",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY spring 24",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 0,
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 8,
+							"MaxCount": 16
+						},
+					//Luau
+						{
+							"Id": "HotColourEvent",
+							"Condition": "IS_EVENT festival_summer11",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "236, 166, 52",
+							"Opacity": 0.33
+						},
+						{
+							"Id": "FoggyHotEvent",
+							"Condition": "IS_EVENT festival_summer11",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 64, "Y": 0, "Width": 64, "Height": 64 },
+							"Color": "210, 210, 210",
+							"Opacity": 0.28,
+							"Speed": "-0.05, -0.05",
+							"ViewSpeed": "-1, -1",
+							"Scale": 4
+						},
+						{
+							"Id": "HeatHazeEvent",
+							"Type": "Shader",
+							"Condition": "IS_EVENT festival_summer11",
+							"TargetMapType": "Outdoors",
+							"Shader": "Distortion",
+							"Strength": 0.001,
+							"Frequency": 500
+						},
+						//
+						{
+							"Id": "HotColour",
+							"Condition": "!LOCATION_NAME Here Beach, !LOCATION_NAME Here Temp, SEASON_DAY summer 11",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "236, 166, 52",
+							"Opacity": 0.21
+						},
+						{
+							"Id": "FoggyHot",
+							"Condition": "!LOCATION_NAME Here Beach, !LOCATION_NAME Here Temp, SEASON_DAY summer 11",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Blizzard",
+							"Source": {"X": 64, "Y": 0, "Width": 64, "Height": 64 },
+							"Color": "210, 210, 210",
+							"Opacity": 0.18,
+							"Speed": "-0.05, -0.05",
+							"ViewSpeed": "-1, -1",
+							"Scale": 4
+						},
+						{
+							"Id": "HeatHaze",
+							"Type": "Shader",
+							"Condition": "!LOCATION_NAME Here Beach, !LOCATION_NAME Here Temp, SEASON_DAY summer 11",
+							"TargetMapType": "Outdoors",
+							"Shader": "Distortion",
+							"Strength": 0.001,
+							"Frequency": 200
+						},		
+					//Jelly if Monsoon
+						{
+							"Id": "RainyMonsoon",
+							"Condition": "ANY \"YEAR 4 4, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 6 7, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 9 10, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 12 12, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 14 14, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 16 17, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 19 20, SEASON_DAY summer 28, {{Monsoon|contains=true}}\" \"YEAR 22, SEASON_DAY summer 28, {{Monsoon|contains=true}}\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Count": 60
+						},					
+					//Stardew Valley Fair
+						{
+							"Id": "DebrisFallFair",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY fall 16",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 2,
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 16,
+							"MaxCount": 32
+						},
+						{
+							"Id": "DebrisFallFairEvent",
+							"Condition": "IS_EVENT festival_fall16",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 2,
+							"Color": null,
+							"Opacity": 1.0,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 16,
+							"MaxCount": 32
+						},
+					//Spirit's Eve
+						{
+							"Id": "FoggyEvent",
+							"Condition": "IS_EVENT festival_fall27",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Fog",
+							"Source": {"X": 0, "Y": 0, "Width": 1200, "Height": 1200 },
+							"Color": "White",
+							"Opacity": 0.25,
+							"Speed": "-0.03, -0.03",
+							"ViewSpeed": "-1, -1",
+							"Scale": 2
+						},
+						{
+							"Id": "FoggyEvent",
+							"Condition": "IS_EVENT festival_fall27",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 21",
+							"Opacity": 0.37
+						},
+						{
+							"Id": "RainyBlood",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY fall 27, {{RainEve|contains=true}}",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": "158, 24, 3",
+							"Opacity": 1,
+							"Speed": "-16, 32",
+							"Scale": 4,
+							"Count": 25,
+							"Vibrancy": 2
+						},
+						{
+							"Id": "RainyBloodEvent",
+							"Condition": "SEASON_DAY fall 27, {{RainEve|contains=true}}",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color": "158, 24, 3",
+							"Opacity": 1,
+							"Speed": "-8, 16",
+							"Scale": 4,
+							"Count": 12,
+							"Vibrancy": 2
+						},
+						
+						{
+							"Id": "Foggy",
+							"Condition": "SEASON_DAY fall 27",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Fog",
+							"Source": {"X": 0, "Y": 0, "Width": 1200, "Height": 1200 },
+							"Color": "White",
+							"Opacity": 0.45,
+							"Speed": "-0.03, -0.03",
+							"ViewSpeed": "-1, -1",
+							"Scale": 2
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "SEASON_DAY fall 27",
+							"TargetMapType": "Outdoors, Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.67
+						},							
+					//Ice Fishing
+						{
+							"Id": "SnowfallEvent",
+							"Type": "Debris",
+							"Condition": "IS_EVENT festival_winter8",
+							"TargetMapType": "Outdoors",
+							"UseSeasonal": 3,
+							"Color": null,
+							"Opacity": 1,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 75,
+							"MaxCount": 125
+						},
+						{
+							"Id": "Snowfall",
+							"Type": "Debris",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY winter 8",
+							"TargetMapType": "Outdoors",
+							"UseSeasonal": 3,
+							"Color": null,
+							"Opacity": 1,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 75,
+							"MaxCount": 125
+						},
+					//Winter Star
+						{
+							"Id": "StarSnowfallEvent",
+							"Type": "Debris",
+							"Condition": "IS_EVENT festival_winter25",
+							"TargetMapType": "Outdoors",
+							"UseSeasonal": 3,
+							"Color": null,
+							"Opacity": 1,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 75,
+							"MaxCount": 125
+						},
+						{
+							"Id": "StarSnowfall",
+							"Type": "Debris",
+							"Condition": "!LOCATION_NAME Here Temp, SEASON_DAY winter 25",
+							"TargetMapType": "Outdoors",
+							"UseSeasonal": 3,
+							"Color": null,
+							"Opacity": 1,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 75,
+							"MaxCount": 125
+						}
+					]
+				},
+				
+				
+				"Wedding": {
+					"Id": "Wedding",
+					"DisplayName": "{{i18n: Patch.Wedding}}",
+
+					"Forecast": "{{i18n: Weather.Wedding.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Wedding.Forecast}}", "Desert": "{{i18n: Weather.Festival.Forecast}}"},
+					
+					"UseNightTiles": false,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+
+					"TVTexture": "Mods/kath.weathering/Hearts",
+					"TVSource": {"X": 0, "Y": 0},
+					"TVFrames": 4,
+					
+					"IconTexture": "Mods/kath.weathering/IconsFestival",
+					"IconSource": {"X": 0, "Y": 0},
+					
+					"Effects":[],//close effect
+
+					"Layers": [				
+						{
+							"Id": "HeartFall",
+							"Type": "Debris",
+							"TargetMapType": "Outdoors",
+							"UseSeasonal": 1,
+							"Color": null,
+							"Opacity": 1,
+							"Scale": 2,
+							"CanBlow": false,
+							"MinCount": 32,
+							"MaxCount": 64
+						}				
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

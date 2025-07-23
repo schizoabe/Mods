@@ -1,0 +1,39 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sebastian",
+			"Entries": {
+				"marriage_Tue": "700 BusStop 11 22 2 \"Strings\\schedules\\Sebastian:marriage_{{Random:bus, bus2, bus3, bus4, bus5}}\"/900 SeedShop 15 20 0 \"Strings\\schedules\\Sebastian:marriage_shop\"/1200 SebastianRoom 9 4 3 sebastian_computer \"Strings\\schedules\\Sebastian:marriage_{{Random:comp, comp2, comp3}}\"/1800 BusStop 9 23 3",
+				"marriage_Fri": "830 Beach 12 39 2 \"Strings\\schedules\\Sebastian:marriage_Fri.000\"/1500 Saloon 42 21 3 \"Strings\\schedules\\Sebastian:marriage_Fri.001\"/2010 BusStop 9 23 3",
+				"marriage_Sat": "800 Town 26 98 2 \"Strings\\schedules\\Sebastian:marriage_{{Random:sam, sam2, sam3, sam4}}\"/1100 Town 18 95 0 \"Strings\\schedules\\Sebastian:marriage_{{Random:sam5, sam6, sam7, sam8}}\"/1230 SamHouse 19 18 0 sebastian_keyboard_up \"Strings\\schedules\\Sebastian:marriage_{{Random:band, band2, band3}}\"/1500 SamHouse 17 14 0 \"Strings\\schedules\\Sebastian:marriage_{{Random:banda, banda2}}\"/1800 Town 10 94 1 \"Strings\\schedules\\Sebastian:marriage_{{Random:r, r2, r3, r4}}\"/1930 BusStop 9 23 3"
+			}
+		},
+		
+		// DOCTORS CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sebastian",
+			"Entries": {
+				"marriage_Thu": "1000 Hospital 15 16 3 sebastian_cardsDoc \"Strings\\schedules\\Sebastian:marriage_doc\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Sebastian:marriage_doc2\"/1600 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Summer",
+				"Day": "4"
+			}
+		},
+		
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Sebastian",
+			"Entries": {
+				"marriage_Tue": "1000 BusStop 11 22 2 \"Strings\\schedules\\Sebastian:marriage_nmpre\"/1300 SeedShop 15 20 0 \"Strings\\schedules\\Sebastian:marriage_nmpre2\"/1600 Beach 10 39 2 \"Strings\\schedules\\Sebastian:marriage_nm\"/2300 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "16"
+			}
+		},
+	]
+}

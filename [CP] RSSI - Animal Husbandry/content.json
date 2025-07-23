@@ -1,0 +1,106 @@
+{
+    "Format": "2.3.0",
+     "ConfigSchema": {
+	
+	"Only Joja Sells Meat": {
+	"AllowValues": "true, false",
+    "Default": "false"
+	}
+	},
+	"Changes": [
+ 
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Sandy",
+    "Items"
+  ],
+  "Entries": {
+	  	  
+    "{{ModId}}_MeatRawRandomS": {
+      "Id": "{{ModId}}_MeatRawRandomS",
+      "RandomItemId": [ "(O)642", "(O)641" ],
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },
+  },
+  "When": { "Only Joja Sells Meat": "false" }
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "Priority": "Default+2",
+  "TargetField": [
+    "Joja",
+    "Items"
+  ],
+  "Entries": {
+	  
+    "{{ModId}}_MeatRawRandomJ": {
+      "Id": "{{ModId}}_MeatRawRandomJ",
+      "RandomItemId": [ "(O)639", "(O)640", "(O)641", "(O)642", "(O)643" ],
+	  "AvailableStock": 20,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+  }
+},
+ {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "AnimalShop", "Items" ],
+      "Entries": {
+		  
+		 "{{ModId}}_MeatRawRandomM": {
+      "Id": "{{ModId}}_MeatRawRandomM",
+      "RandomItemId": [ "(O)639", "(O)640", "(O)641" ],
+	  "AvailableStock": 10,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+    },
+  },
+  "When": { "Only Joja Sells Meat": "false" }
+ },
+]
+}

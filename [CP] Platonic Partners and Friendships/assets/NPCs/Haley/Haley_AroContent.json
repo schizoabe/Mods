@@ -1,0 +1,385 @@
+{
+    "Changes": [
+        // FRIENDSHIP BRACELET
+        {
+            "LogName": "Enable friendship bracelet for Haley",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "TargetField": [
+                "{{ModID}}_FriendshipBracelet",
+                "ContextTags"
+            ],
+            "Entries": {
+                "#-2": "propose_roommate_haley"
+            }
+        },
+        // DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "summer_Fri10": "{{i18n:PPAF.Haley.DialogueEdits.Aro.summer_Fri10}}",
+                "winter_Sun6": "{{i18n:PPAF.Haley.DialogueEdits.Aro.winter_Sun6}}",
+                "winter_Sun10": "{{i18n:PPAF.Haley.DialogueEdits.Aro.winter_Sun10}}",
+                "SpouseStardrop": "{{i18n:PPAF.Haley.DialogueEdits.Aro.SpouseStardrop |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "SpouseGiftJealous": "{{i18n:PPAF.Haley.DialogueEdits.Aro.SpouseGiftJealous}}",
+                "AcceptBouquet": "{{i18n:PPAF.Haley.DialogueEdits.Aro.AcceptBouquet.{{Random:1,2}}}}",
+                "dating_Haley": "{{i18n:PPAF.Haley.DialogueEdits.Aro.dating_Haley}}",
+                "dating_Haley_memory_oneday": "{{i18n:PPAF.Haley.DialogueEdits.Aro.dating_Haley_memory_oneday}}",
+                "dating_Haley_memory_oneyear": "{{i18n:PPAF.Haley.DialogueEdits.Aro.dating_Haley_memory_oneyear}}",
+                "FlowerDance_Accept": "{{i18n:PPAF.Haley.DialogueEdits.Aro.FlowerDance_Accept}}",
+                "FlowerDance_Accept_Spouse": "{{i18n:PPAF.Haley.DialogueEdits.Aro.FlowerDance_Accept_SpouseRoommate}}",
+                "FlowerDance_Accept_Roommate": "{{i18n:PPAF.Haley.DialogueEdits.Aro.FlowerDance_Accept_SpouseRoommate}}"
+            }
+        },
+        // PLATONIC PARTNER DIALOGUE
+        {
+            "LogName": "Haley pendant and bracelet engagement dialogue",
+            "Action": "EditData",
+            "Target": "Data/EngagementDialogue",
+            "Entries": {
+                "Haley0": "{{i18n:PPAF.Haley.EngagementDialogue.Aro.Haley0 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "HaleyRoommate0": "{{i18n:PPAF.Haley.EngagementDialogue.Aro.Haley0 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Haley1": "{{i18n:PPAF.Haley.EngagementDialogue.Aro.Haley1}}",
+                "HaleyRoommate1": "{{i18n:PPAF.Haley.EngagementDialogue.Aro.Haley1}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueHaley",
+            "Entries": {
+                "summer_3": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.summer_3}}",
+                "Indoor_Day_Haley": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Indoor_Day_Haley |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "Rainy_Day_3": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Rainy_Day_3}}",
+                "Rainy_Day_4": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Rainy_Day_4 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Rainy_Night_4": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Rainy_Night_4 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Indoor_Day_1": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Indoor_Day_1 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Indoor_Day_2": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Indoor_Day_2}}",
+                "Indoor_Day_3": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Indoor_Day_3}}",
+                "Indoor_Day_4": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Indoor_Day_4 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Outdoor_1": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Outdoor_1}}",
+                "Outdoor_2": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Outdoor_2 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "Outdoor_4": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Outdoor_4 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "funReturn_Haley": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.funReturn_Haley |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "TwoKids_3": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.TwoKids_3}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries": {
+                "Rainy_Night_Haley": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Rainy_Night_Haley}}",
+                "Outdoor_Haley": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.Outdoor_Haley}}",
+                "spring_Haley": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.spring_Haley |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "winter_Haley": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.winter_Haley |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}",
+                "spouseRoom_Haley": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.spouseRoom_Haley |LowercaseEndearment={{LowercaseEndearmentToken}}}}"
+            }
+        },
+        {
+            "LogName": "Haley aro yes, ace no",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueHaley",
+            "Entries": {
+                "Indoor_Night_Haley": "{{i18n:PPAF.Haley.PartnerDialogue.Sexual.Indoor_Night_Haley}}"
+            },
+            "When": {
+                "PPAF.Core/ConfigValue:HaleyRelationshipType |contains= SexWithoutRomance": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/ExtraDialogue",
+            "Entries": {
+                "SummitEvent_Dialogue3_Haley": "{{i18n:PPAF.Haley.SummitDialogue.Aro.SummitEvent_Dialogue3_Haley.1 |LovePortraitsNeutral={{LovePortraitsNeutralToken}} |LovePortraitsHappy={{LovePortraitsHappyToken}}}}\"/faceDirection farmer 1 true/emote farmer 8/pause 1000/speak Haley \"{{i18n:PPAF.Haley.SummitDialogue.Aro.SummitEvent_Dialogue3_Haley.2 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "Entries": {
+                "Haley_spouse_y2": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.MoonlightJellies.Haley_spouse_y2 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter8",
+            "Entries": {
+                "Haley_spouse": "{{i18n:PPAF.Haley.PartnerDialogue.Aro.IceFest.Haley_spouse}}"
+            }
+        },
+        // OTHER CHARACTERS' DIALOGUE
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Emily",
+            "Entries": {
+                "divorced_Haley": "{{i18n:PPAF.Haley.OtherDialogue.Aro.Emily.divorced_Haley}}",
+                "married_Haley": "{{i18n:PPAF.Haley.OtherDialogue.Aro.Emily.married_Haley |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Alex",
+            "Entries": {
+                "winter_Tue_inlaw_Haley": "{{i18n:PPAF.Haley.OtherDialogue.Aro.Alex.winter_Tue_inlaw_Haley}}",
+                "winter_Tue4_inlaw_Haley": "{{i18n:PPAF.Haley.OtherDialogue.Aro.Alex.winter_Tue4_inlaw_Haley}}"
+            }
+        },
+        // STRINGS
+        {
+            "LogName": "Haley pendant and bracelet proposal acceptance",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "Haley_Engaged": "{{i18n:PPAF.Haley.Strings.Aro.Haley_Engaged |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}",
+                "Haley_EngagedRoommate": "{{i18n:PPAF.Haley.Strings.Aro.Haley_EngagedRoommate |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            }
+        },
+        {
+            "LogName": "Haley terms of endearment and other misc lines, no poly",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Haley.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Haley.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Haley.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Haley.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Haley.Strings.Aro.Nickname.2}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Haley.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Haley",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory": false
+            }
+        },
+        {
+            "LogName": "Haley terms of endearment and other misc lines, poly with CFD",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "NPC.cs.4507": "@",
+                "NPC.cs.4508": "@",
+                "NPC.cs.4509": "@",
+                "NPC.cs.4510": "@",
+                "NPC.cs.4511": "@",
+                "NPC.cs.4517": "{{i18n:PPAF.Haley.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4518": "{{i18n:PPAF.Haley.Strings.Aro.Nickname.1}}",
+                "NPC.cs.4519": "{{i18n:PPAF.Haley.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4522": "{{i18n:PPAF.Haley.Strings.Aro.Nickname.2}}",
+                "NPC.cs.4523": "{{i18n:PPAF.Haley.Strings.Aro.Nickname.2}}",
+                "Event.cs.1736": "$q -1 null#{{i18n:PPAF.Haley.Strings.Aro.Event.cs.1736}}#$r -1 0 danceAsk#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.2}}#$r -1 0 null#{{i18n:PPAF.GenericTweaks.Dialogue.Strings.Event.cs.1736.3}}",
+                "NPC.cs.4425": "{{i18n:PPAF.Shared.Strings.Aro.NPC.cs.4425 |RelationshipLabel={{PPAF.Core/ConfigValue:RelationshipLabel}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Haley",
+                "HasMod |contains=aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Haley",
+            "Entries": {
+                "marriage_Mon.000": "{{i18n:PPAF.Haley.Strings.Aro.marriage_Mon.000 |LowercaseEndearment={{LowercaseEndearmentToken}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/Characters",
+            "Entries": {
+                "MovieInvite_Spouse_Haley": "{{i18n:PPAF.Haley.Strings.Aro.MovieInvite_Spouse_Haley}}"
+            }
+        },
+        // PENDANT REJECTION
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "RejectMermaidPendant_AlreadyAccepted_Engaged": "{{i18n:PPAF.Haley.PendantRejections.Engaged.{{Random:1,2}}}}",
+                "RejectMermaidPendant_AlreadyAccepted_Married": "{{i18n:PPAF.Haley.PendantRejections.Married.{{Random:1,2}}}}"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Emily",
+            "Entries": {
+                "RejectMermaidPendant_PlayerWithSomeoneElse": "{{i18n:PPAF.BraceletPendantRejections.{{TargetWithoutPath}}.{{Random:1,2}}}}"
+            },
+            "When": {
+                "SpouseOrRoommateToken": "Haley"
+            }
+        },
+        // QUESTS
+        {
+            "Action": "EditData",
+            "Target": "Data/Quests",
+            "Fields": {
+                "127": {
+                    2: "{{i18n:PPAF.Haley.Quests.Aro.2}}"
+                }
+            }
+        },
+        // SPRITE EDITS
+        {
+            "Action": "EditImage",
+            "Target": "Characters/Haley",
+            "FromFile": "assets/Sprites/HaleyDressRecolor.png",
+            "ToArea": {
+                "X": 0,
+                "Y": 288,
+                "Width": 48,
+                "Height": 32
+            },
+            "PatchMode": "Overlay",
+            "When": {
+                "PPAF.Core/ConfigValue:EditSprites": "True",
+                "HasMod |contains=DSVTeam.DiverseSeasonalOutfits, DSVTeam.DSVNonSeasonal, Poltergeister.SeasonalCuteCharacters": false
+            }
+        },
+        // EVENTS
+        {
+            "LogName": "Haley 6 heart event",
+            "Action": "EditData",
+            "Target": "Data/Events/Beach",
+            "Fields": {
+                "13/f Haley 1500/z winter/t 1000 1600": {
+                    84: "speak Haley \"{{i18n:PPAF.Haley.Events.Aro.6Heart.84}}\""
+                }
+            },
+            "When": {                
+                "PPAF.Core/ConfigValue:UseLovePortraits": "False"
+            }
+        },
+        {
+            "LogName": "Haley 8 heart event",
+            "Action": "EditData",
+            "Target": "Data/Events/Forest",
+            "Fields": {
+                "14/f Haley 2000/z winter/t 1000 1600/w sunny": {
+                    38: "speak Haley \"{{i18n:PPAF.Haley.Events.Aro.8Heart.38}}\""
+                }
+            }
+        },
+        {
+            "LogName": "Haley 8 heart event, SVE",
+            "Action": "EditData",
+            "Target": "Data/Events/Forest",
+            "Fields": {
+                "14/f Haley 2000/z winter/t 1000 1600/w sunny": {
+                    2: "farmer 94 24 1 Haley 100 23 1",
+                    26: "faceDirection Haley 3/move farmer 0 -1 1"
+                }
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+        {
+            "LogName": "Haley 10 heart event",
+            "Action": "EditData",
+            "Target": "Data/Events/HaleyHouse",
+            "Entries": {
+                "15/f Haley 2500/p Haley": "Hospital_Ambient/-1000 -1000/farmer 5 9 0 Haley -100 -100 2/skippable/specificTemporarySprite haleyRoomDark/viewport 5 4 true/pause 500/emote farmer 8/move farmer 0 -4 0/move farmer -1 0 0/move farmer 0 -1 0/pause 1000/animate farmer false false 650 15/playSound woodyStep/pause 200/playSound woodyStep/pause 200/playSound woodyStep/pause 200/pause 800/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10Heart.0}}\"/pause 1000/warp farmer -100 -100/playSound doorClose/globalFade/viewport -1000 -1000/changeToTemporaryMap Darkroom false/warp Haley 1 5/warp farmer 3 7/viewport 4 4 true/pause 800/faceDirection Haley 2/jump Haley/pause 600/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10Heart.1}}\"/move farmer 0 -1 3/move farmer -1 0 0/move farmer 0 -1 3/faceDirection Haley 1/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10Heart.2}}\"/faceDirection farmer 2/pause 500/faceDirection farmer 1/pause 500/faceDirection farmer 0/pause 500/faceDirection farmer 3/pause 500/emote Haley 40/pause 500/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10Heart.3}}\"/faceDirection Haley 0/question haleyDarkRoom \"{{i18n:PPAF.Haley.Events.Aro.10Heart.4}}\"/faceDirection Haley 1/fork leave/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10Heart.5}}\"/pause 600/faceDirection Haley 2/pause 200/textAboveHead Haley \"{{i18n:PPAF.Haley.Events.Aro.10Heart.6}}\"/pause 2500/playMusic musicboxsong/pause 500/faceDirection Haley 1/pause 400/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10Heart.7}}\"/pause 800/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 100/showFrame Haley 28/pause 400/showFrame farmer 101 true/pause 2500/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10Heart.8 |LovePortraitsNeutral={{LovePortraitsNeutralToken}}}}\"/pause 2500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Haley \"{{i18n:PPAF.Haley.Events.Aro.10Heart.9}}\""
+            }
+        },
+        {
+            "LogName": "Haley 10 heart event branches",
+            "Action": "EditData",
+            "Target": "Data/Events/Temp",
+            "Entries": {
+                "decorate": "faceDirection Haley 1/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10HeartDecorate.0}}\"/pause 600/faceDirection Haley 2/pause 200/textAboveHead Haley \"{{i18n:PPAF.Haley.Events.Aro.10HeartDecorate.1}}\"/pause 2500/playMusic musicboxsong/pause 500/faceDirection Haley 1/pause 400/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10HeartDecorate.2}}\"/pause 800/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 30/positionOffset Haley 2 0/pause 100/showFrame Haley 28/pause 400/showFrame farmer 101 true/pause 2500/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10HeartDecorate.3 {{ImportToken}} }}\"/pause 2500/globalFade/viewport -1000 -1000/pause 1000/end dialogue Haley \"{{i18n:PPAF.Haley.Events.Aro.10HeartDecorate.4}}\"",
+                "leave": "speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10HeartLeave.0}}\"/pause 500/move farmer 0 1 1/faceDirection Haley 2 true/move farmer 1 0 2/move farmer 0 1 2/playSound doorClose/warp farmer -1000 -1000/pause 1000/showFrame Haley 22/pause 1000/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.10HeartLeave.1}}\"/end dialogue Haley \"{{i18n:PPAF.Haley.Events.Aro.10HeartLeave.2}}\""
+            }
+        },
+        {
+            "LogName": "Haley 14 heart event setup",
+            "Action": "EditData",
+            "Target": "Data/Events/FarmHouse",
+            "Entries": {
+                "8675611/e 6184643/O Haley/A haleyCakewalk1/t 620 1700/p Haley": "continue/-1000 -1000/farmer 23 24 3 Haley 22 24 1/makeInvisible 23 24/addQuest 127/addConversationTopic haleyCakewalk2 0/skippable/viewport -100 -100 true unfreeze/pause 3000/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.14HeartInitial.0 |LowercaseEndearment={{LowercaseEndearmentToken}}}}\"/pause 500/emote farmer 8/pause 1000/speak Haley \"{{i18n:PPAF.Haley.Events.Aro.14HeartInitial.1}}\"/quickQuestion {{i18n: PPAF.Haley.Events.Aro.14HeartInitial.2}}(break)speak Haley \"{{i18n:PPAF.Haley.Events.Aro.14HeartInitial.3}}\"\\animate Haley false true 100 28\\animate farmer true true 100 101\\positionOffset Haley 8 0\\positionOffset farmer -8 0(break)emote Haley 12\\speak Haley \"{{i18n:PPAF.Haley.Events.Aro.14HeartInitial.4}}\"/pause 2000/fade/viewport -1000 -1000/end dialogue Haley \"{{i18n:PPAF.Haley.Events.Aro.14HeartInitial.5}}\""
+            }
+        },
+        {
+            "LogName": "Haley 14 heart event",
+            "Action": "EditData",
+            "Target": "Data/Events/Town",
+            "Fields": {
+                "6184644/e 8675611/O Haley/A haleyCakewalk2/t 600 1500/w sunny/i 220": {
+                    104: "speak Haley \"{{i18n: PPAF.Haley.Events.Aro.14Heart.104}}\"",
+                    178: "speak Haley \"{{i18n: PPAF.Haley.Events.Aro.14Heart.178 |LowercaseEndearment={{LowercaseEndearmentToken}}}}\""
+                }
+            }
+        },
+        //COMPATIBILITY: PLATONIC RELATIONSHIPS
+        //This section prevents the dating-flag-required version of the vanilla 10 heart event added by Platonic Relationships from triggering. Thanks to Cherry for providing the event codes!
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/HaleyHouse",
+            "Entries": {
+                "15/f Haley 2500/D Haley/p Haley": null
+            },
+            "When": {
+                "HasMod |contains=Cherry.PlatonicRelationships": true
+            }
+        },
+        //COMPATIBILITY: SPOUSES REACT TO PLAYER 'DEATH' v1.1.0
+        //Lines in this section are based on the original lines written by CasualInvidia, used and edited with permission. (Thank you, CasualInvidia!)
+        {
+            "LogName": "Enable Haley's Spouses React to Player 'Death' content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Haley/Haley_SpousesReact.json",
+            "When": {
+                "HasMod |contains=CasualInvidia.SpousesReactToDeath": true
+            }
+        },
+        //
+        //COMPATIBILITY IMMERSIVE SPOUSES - IMPROVED SPOUSE SCHEDULES v0.5-beta
+        //Lines in this section are based on the original lines written by yeet (Someguy363), used and edited with permission. (Thank you, yeet!)
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueHaley",
+            "Entries": {
+                "funLeave_Haley": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.{{DayOfWeek}}.funLeave_Haley.Part1 |LowercaseEndearment={{LowercaseEndearmentToken}}}}{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.funLeave_Haley.Part2.{{Random:1,2,3,4,5}} |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "funReturn_Haley": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.funReturn_Haley |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "winter_16": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.Monday.winter_16}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Strings/schedules/Haley",
+            "Entries": {
+                "marriage_r3": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.marriage_r3}}",
+                "marriage_r4": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.marriage_r4}}",
+                "marriage_marriageroom": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.marriage_marriageroom |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_doctorafter": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.marriage_doctorafter}}",
+                "marriage_photobus": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.marriage_photobus}}",
+                "marriage_photobus2": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.marriage_photobus2}}",
+                "marriage_photobus3": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.marriage_photobus3 |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_photobeach": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.marriage_photobeach}}",
+                "marriage_nmpre": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.marriage_nmpre |LowercaseEndearment={{LowercaseEndearmentToken}}}}",
+                "marriage_nm": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.marriage_nm}}",
+                "marriage_13": "{{i18n:PPAF.Haley.DialogueEdits.Aro.ISS.marriage_13}}"
+            },
+            "When": {
+                "HasMod |contains=iss.immersivespouses": true
+            }
+        },
+        //COMPATIBILITY: PLEASE REMEMBER MY MARRIAGE v1.0.1
+        //Lines in this section are based on the original lines written by nraittanna, used and edited with permission. (Thank you, nraittanna!)
+        {
+            "LogName": "Enable Haley's Please Remember My Marriage content",
+            "Action": "Include",
+            "FromFile": "assets/NPCs/Haley/Haley_RememberMyMarriage.json",
+            "When": {
+                "HasMod |contains=nraittanna.RememberMyMarriage": true
+            }
+        }
+    ]
+}

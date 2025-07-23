@@ -1,0 +1,45 @@
+{
+	"Changes": [	
+	{
+		"LogName": "Message Strings",
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+			"Entries": {
+			"No.Stars.Cosmos": "{{i18n: No.Stars.Cosmos.{{Random: 1,2,3}} }}",
+			"No.View.Cosmos": "{{i18n: No.View.Cosmos.{{Random: 1,2,3}} }}"
+			}
+	},
+	{
+		"LogName": "Message Strings",
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+		"When": {"Weather": "kath.weathering_Sandstorm"},
+			"Entries": {
+			"No.Stars.Cosmos": "{{i18n: No.Stars.Cosmos.4}}"
+			}
+	},
+	{
+		"LogName": "Message Strings",
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+		"When": {"Weather": "kath.weathering_Locust"},
+			"Entries": {
+			"No.Stars.Cosmos": "{{i18n: No.Stars.Cosmos.5}}"
+			}
+	},
+	{
+		"LogName": "Adding the Music",
+		"Action": "EditData",
+		"Target": "Data/AudioChanges",
+		"Entries": {
+			"CosmosBookNoPage": {
+				"ID": "CosmosBookNoPage",
+				"Category": "Sound",
+				"FilePaths": [ "{{AbsoluteFilePath: assets/Sound/booknopage.ogg}}" ],
+				"StreamedVorbis": true,
+				"Looped": false
+			}
+		}
+	}
+]
+}

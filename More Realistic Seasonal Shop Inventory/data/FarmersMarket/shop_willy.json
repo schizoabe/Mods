@@ -1,0 +1,312 @@
+{
+  "Changes": [
+  	//Standard Willy
+    {
+      "LogName": "MRSSI_Willy_TownFair",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["br93.FarmersMarket_Willy_TownFair", "Items"],
+      "When": {"Willy": "Standard"},
+      "Fields": 
+      	{
+          "br93.FarmersMarket_Willy_Bait":{
+          	"AvailableStock": 40,
+          	"AvailableStockModifiers": [
+		            {
+		              "Modification": "Multiply",
+		              "RandomAmount": [
+		                1.5,
+										1.4,
+										1.3,
+										1.2,
+										1.1,
+										1.0,
+										0.9,
+										0.8,
+										0.7,
+										0.6,
+										0.5,
+		              ]
+		            }
+		          ]
+				  },
+				  "br93.FarmersMarket_Willy_Random":{
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random 0.6, PLAYER_BASE_FISHING_LEVEL Any 2"
+				  },
+				  "br93.FarmersMarket_Willy_Random2":{
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random2 0.6, PLAYER_BASE_FISHING_LEVEL Any 4"
+				  },
+				  "br93.FarmersMarket_Willy_Random3":{
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random3 0.6, PLAYER_BASE_FISHING_LEVEL Any 6"
+				  },
+				  "br93.FarmersMarket_Willy_Random4":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random4 0.8"
+				  },
+				  "br93.FarmersMarket_Willy_Random5":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random5 0.8"
+				  },
+				  "br93.FarmersMarket_Willy_Random6":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random6 0.8"
+				  },
+				  "br93.FarmersMarket_Willy_Random7":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random7 0.8"
+				  },
+				  "br93.FarmersMarket_Willy_Random8":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random8 0.8, PLAYER_FRIENDSHIP_POINTS Any Willy 250"
+				  },
+				  "br93.FarmersMarket_Willy_Random9":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random9 0.8, PLAYER_FRIENDSHIP_POINTS Any Willy 500"
+				  },
+				  "br93.FarmersMarket_Willy_Random10":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random10 0.8, PLAYER_FRIENDSHIP_POINTS Any Willy 750"
+				  },
+				  "br93.FarmersMarket_Willy_Random11":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random11 0.8, PLAYER_FRIENDSHIP_POINTS Any Willy 1000"
+				  },
+				  "br93.FarmersMarket_Willy_Random12":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random12 0.8, PLAYER_FRIENDSHIP_POINTS Any Willy 1250"
+				  },
+				  "br93.FarmersMarket_Willy_Random13":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random13 0.8, PLAYER_FRIENDSHIP_POINTS Any Willy 1500"
+				  },
+				  "br93.FarmersMarket_Willy_Random14":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random14 0.8, PLAYER_FRIENDSHIP_POINTS Any Willy 1750"
+				  },
+				  "br93.FarmersMarket_Willy_RandomYear2":{
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [5, 6, 7, 8]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_RandomYear2 0.8, PLAYER_FRIENDSHIP_POINTS Any Willy 2000"
+				  },
+                        }
+    },
+    //Hardmode Willy
+    {
+      "LogName": "MRSSI_Willy_TownFair",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["br93.FarmersMarket_Willy_TownFair", "Items"],
+      "When": {"Willy": "Hardmode"},
+      "Fields": 
+      	{
+          "br93.FarmersMarket_Willy_Bait":{
+          	"AvailableStock": 40,
+          	"AvailableStockModifiers": [
+		            {
+		              "Modification": "Multiply",
+		              "RandomAmount": [
+		                0.1,
+										0.2,
+										0.3,
+										0.4,
+										0.5,
+										0.6,
+										0.7,
+										0.8,
+										0.9,
+		              ]
+		            }
+		          ]
+				  },
+				  "br93.FarmersMarket_Willy_Random":{
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random 0.3, PLAYER_BASE_FISHING_LEVEL Any 4"
+				  },
+				  "br93.FarmersMarket_Willy_Random2":{
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random2 0.3, PLAYER_BASE_FISHING_LEVEL Any 6"
+				  },
+				  "br93.FarmersMarket_Willy_Random3":{
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random3 0.3, PLAYER_BASE_FISHING_LEVEL Any 8"
+				  },
+				  "br93.FarmersMarket_Willy_Random4":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random4 0.5"
+				  },
+				  "br93.FarmersMarket_Willy_Random5":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random5 0.5"
+				  },
+				  "br93.FarmersMarket_Willy_Random6":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random6 0.5"
+				  },
+				  "br93.FarmersMarket_Willy_Random7":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random7 0.5"
+				  },
+				  "br93.FarmersMarket_Willy_Random8":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random8 0.5, PLAYER_FRIENDSHIP_POINTS Any Willy 750"
+				  },
+				  "br93.FarmersMarket_Willy_Random9":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random9 0.5, PLAYER_FRIENDSHIP_POINTS Any Willy 1000"
+				  },
+				  "br93.FarmersMarket_Willy_Random10":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random10 0.5, PLAYER_FRIENDSHIP_POINTS Any Willy 1250"
+				  },
+				  "br93.FarmersMarket_Willy_Random11":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random11 0.5, PLAYER_FRIENDSHIP_POINTS Any Willy 1500"
+				  },
+				  "br93.FarmersMarket_Willy_Random12":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random12 0.5, PLAYER_FRIENDSHIP_POINTS Any Willy 1750"
+				  },
+				  "br93.FarmersMarket_Willy_Random13":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random13 0.5, PLAYER_FRIENDSHIP_POINTS Any Willy 2000"
+				  },
+				  "br93.FarmersMarket_Willy_Random14":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_Random14 0.5, PLAYER_FRIENDSHIP_POINTS Any Willy 2250"
+				  },
+				  "br93.FarmersMarket_Willy_RandomYear2":{
+				  	"AvailableStock": 4,
+				  	"AvailableStockModifiers":[
+				  		{
+				  			"Modification": "Set",
+			  				"RandomAmount": [1, 2, 3, 4]
+			  																}
+				  	],
+				  	"Condition": "SYNCED_RANDOM year br93.FarmersMarket_Willy_RandomYear2 0.5, PLAYER_FRIENDSHIP_POINTS Any Willy 2500"
+				  },
+                        }
+    }
+  ]
+}

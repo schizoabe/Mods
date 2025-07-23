@@ -1,0 +1,1803 @@
+{
+
+ "Changes": [
+
+//FARM DOGHOUSE
+
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_SmallDoghouse": {
+          "Name": "{{i18n:DustyDoghouseSmall.name}}",
+          "Description": "{{i18n:DustyDoghouseSmall.description}}",
+          "Texture": "Buildings/DOSVESmlDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 1,
+            "Y": 2
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 48
+          },
+          "SeasonOffset": {
+            "X": 16,
+            "Y": 0
+          },
+          "SortTileOffset": 1,
+          "CollisionMap": "X\nO",
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 200,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 10
+            },
+            {
+              "ItemId": "388",
+              "Amount": 15
+            }
+
+          ],
+
+        }
+
+      }
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_LargeDoghouse": {
+          "Name": "{{i18n:DustyDoghouseLarge.name}}",
+          "Description": "{{i18n:DustyDoghouseLarge.description}}",
+          "Texture": "Buildings/DOSVELrgDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 3,
+            "Y": 3
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 48,
+            "Height": 64
+          },
+          "SeasonOffset": {
+            "X": 48,
+            "Y": 0
+          },
+          "SortTileOffset": 1,
+          "CollisionMap": "XXX\nXXX\nOOO",
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildingToUpgrade": "CF.CP.DustyOverhaulSVE_SmallDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 300,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 20
+            },
+            {
+              "ItemId": "388",
+              "Amount": 25
+            }
+
+          ],
+
+        }
+
+      }
+    },
+
+
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_SmallDoghouse": {
+          "Name": "{{i18n:DustyDoghouseSmall.name}}",
+          "Description": "{{i18n:DustyDoghouseSmall.description}}",
+          "Texture": "Buildings/DOSVESmlDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 1,
+            "Y": 2
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 48
+          },
+          "SeasonOffset": {
+            "X": 16,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVESmlDusty",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 16,
+                 "Height": 48
+                },
+               "DrawPosition": "0,0",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 1,
+               "FrameDuration": 6000,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "X\nX",
+          "DefaultAction": "NPCSpeechMessageNoRadius DustyDO dustyInteraction",
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 200,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 10
+            },
+            {
+              "ItemId": "388",
+              "Amount": 15
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Season": "Spring, Summer, Fall",
+            "Time": "{{Range: 1700, 1950}}",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_SmallDoghouse": {
+          "Name": "{{i18n:DustyDoghouseSmall.name}}",
+          "Description": "{{i18n:DustyDoghouseSmall.description}}",
+          "Texture": "Buildings/DOSVESmlDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 1,
+            "Y": 2
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 48
+          },
+          "SeasonOffset": {
+            "X": 16,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVESmlDustyMB",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 16,
+                 "Height": 48
+                },
+               "DrawPosition": "0,0",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 1,
+               "FrameDuration": 6000,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "X\nX",
+          "DefaultAction": "NPCSpeechMessageNoRadius DustyDO dustyInteraction",
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 200,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 10
+            },
+            {
+              "ItemId": "388",
+              "Amount": 15
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Season": "Spring, Summer, Fall",
+            "Time": "{{Range: 1700, 1950}}",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": true
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_LargeDoghouse": {
+          "Name": "{{i18n:DustyDoghouseLarge.name}}",
+          "Description": "{{i18n:DustyDoghouseLarge.description}}",
+          "Texture": "Buildings/DOSVELrgDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 3,
+            "Y": 3
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 48,
+            "Height": 64
+          },
+          "SeasonOffset": {
+            "X": 48,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVELrgDusty",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 48,
+                 "Height": 64
+                },
+               "DrawPosition": "0,0",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 1,
+               "FrameDuration": 6000,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "XXX\nXXX\nOXO",
+          "DefaultAction": "NPCSpeechMessageNoRadius DustyDO dustyInteraction",
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildingToUpgrade": "CF.CP.DustyOverhaulSVE_SmallDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 300,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 20
+            },
+            {
+              "ItemId": "388",
+              "Amount": 25
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Season": "Spring, Summer, Fall",
+            "Time": "{{Range: 1700, 1950}}",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_LargeDoghouse": {
+          "Name": "{{i18n:DustyDoghouseLarge.name}}",
+          "Description": "{{i18n:DustyDoghouseLarge.description}}",
+          "Texture": "Buildings/DOSVELrgDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 3,
+            "Y": 3
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 48,
+            "Height": 64
+          },
+          "SeasonOffset": {
+            "X": 48,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVELrgDustyMB",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 48,
+                 "Height": 64
+                },
+               "DrawPosition": "0,0",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 1,
+               "FrameDuration": 6000,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "XXX\nXXX\nOXO",
+          "DefaultAction": "NPCSpeechMessageNoRadius DustyDO dustyInteraction",
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildingToUpgrade": "CF.CP.DustyOverhaulSVE_SmallDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 300,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 20
+            },
+            {
+              "ItemId": "388",
+              "Amount": 25
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Season": "Spring, Summer, Fall",
+            "Time": "{{Range: 1700, 1950}}",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": true
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_SmallDoghouse": {
+          "Name": "{{i18n:DustyDoghouseSmall.name}}",
+          "Description": "{{i18n:DustyDoghouseSmall.description}}",
+          "Texture": "Buildings/DOSVESmlDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 1,
+            "Y": 2
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 48
+          },
+          "SeasonOffset": {
+            "X": 16,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVESmlDusty",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 96,
+                 "Width": 16,
+                 "Height": 48
+                },
+               "DrawPosition": "0,0",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 1,
+               "FrameDuration": 6000,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "X\nX",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 200,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 10
+            },
+            {
+              "ItemId": "388",
+              "Amount": 15
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Season": "Spring, Summer, Fall",
+            "Time": "{{Range: 2000, 2550}}",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_SmallDoghouse": {
+          "Name": "{{i18n:DustyDoghouseSmall.name}}",
+          "Description": "{{i18n:DustyDoghouseSmall.description}}",
+          "Texture": "Buildings/DOSVESmlDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 1,
+            "Y": 2
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 48
+          },
+          "SeasonOffset": {
+            "X": 16,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVESmlDustyMB",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 96,
+                 "Width": 16,
+                 "Height": 48
+                },
+               "DrawPosition": "0,0",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 1,
+               "FrameDuration": 6000,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "X\nX",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 200,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 10
+            },
+            {
+              "ItemId": "388",
+              "Amount": 15
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Season": "Spring, Summer, Fall",
+            "Time": "{{Range: 2000, 2550}}",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": true
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_LargeDoghouse": {
+          "Name": "{{i18n:DustyDoghouseLarge.name}}",
+          "Description": "{{i18n:DustyDoghouseLarge.description}}",
+          "Texture": "Buildings/DOSVELrgDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 3,
+            "Y": 3
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 48,
+            "Height": 64
+          },
+          "SeasonOffset": {
+            "X": 48,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVELrgDusty",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 128,
+                 "Width": 48,
+                 "Height": 64
+                },
+               "DrawPosition": "0,0",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 1,
+               "FrameDuration": 6000,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "XXX\nXXX\nOXO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildingToUpgrade": "CF.CP.DustyOverhaulSVE_SmallDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 300,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 20
+            },
+            {
+              "ItemId": "388",
+              "Amount": 25
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Season": "Spring, Summer, Fall",
+            "Time": "{{Range: 2000, 2550}}",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_LargeDoghouse": {
+          "Name": "{{i18n:DustyDoghouseLarge.name}}",
+          "Description": "{{i18n:DustyDoghouseLarge.description}}",
+          "Texture": "Buildings/DOSVELrgDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 3,
+            "Y": 3
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 48,
+            "Height": 64
+          },
+          "SeasonOffset": {
+            "X": 48,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVELrgDustyMB",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 128,
+                 "Width": 48,
+                 "Height": 64
+                },
+               "DrawPosition": "0,0",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 1,
+               "FrameDuration": 6000,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "XXX\nXXX\nOXO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildingToUpgrade": "CF.CP.DustyOverhaulSVE_SmallDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 300,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 20
+            },
+            {
+              "ItemId": "388",
+              "Amount": 25
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Season": "Spring, Summer, Fall",
+            "Time": "{{Range: 2000, 2550}}",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": true
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_SmallDoghouse": {
+          "Name": "{{i18n:DustyDoghouseSmall.name}}",
+          "Description": "{{i18n:DustyDoghouseSmall.description}}",
+          "Texture": "Buildings/DOSVESmlDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 1,
+            "Y": 2
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 48
+          },
+          "SeasonOffset": {
+            "X": 16,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVEDustyEyes",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 12,
+                 "Height": 10
+                },
+               "DrawPosition": "2,19",
+               "SortTileOffset": 1,
+               "FrameCount": 20,
+               "FramesPerRow": 20,
+               "FrameDuration": 500,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "X\nO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 200,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 10
+            },
+            {
+              "ItemId": "388",
+              "Amount": 15
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Weather": "Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash",
+            "Time": "{{Range: 0600, 1950}}",
+            "Colour Scheme |contains=SeasideValley": false,
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "False",
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_LargeDoghouse": {
+          "Name": "{{i18n:DustyDoghouseLarge.name}}",
+          "Description": "{{i18n:DustyDoghouseLarge.description}}",
+          "Texture": "Buildings/DOSVELrgDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 3,
+            "Y": 3
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 48,
+            "Height": 64
+          },
+          "SeasonOffset": {
+            "X": 48,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVEDustyEyes",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 12,
+                 "Height": 10
+                },
+               "DrawPosition": "17,33",
+               "SortTileOffset": 1,
+               "FrameCount": 20,
+               "FramesPerRow": 20,
+               "FrameDuration": 500,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "XXX\nXXX\nOOO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildingToUpgrade": "CF.CP.DustyOverhaulSVE_SmallDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 300,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 20
+            },
+            {
+              "ItemId": "388",
+              "Amount": 25
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Weather": "Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash",
+            "Time": "{{Range: 0600, 1950}}",
+            "Colour Scheme |contains=SeasideValley": false,
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "False",
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          },
+         "Update": "OnLocationChange"
+    },
+
+
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_SmallDoghouse": {
+          "Name": "{{i18n:DustyDoghouseSmall.name}}",
+          "Description": "{{i18n:DustyDoghouseSmall.description}}",
+          "Texture": "Buildings/DOSVESmlDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 1,
+            "Y": 2
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 48
+          },
+          "SeasonOffset": {
+            "X": 16,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVEDustyEyesSeaside",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 12,
+                 "Height": 10
+                },
+               "DrawPosition": "2,19",
+               "SortTileOffset": 1,
+               "FrameCount": 20,
+               "FramesPerRow": 20,
+               "FrameDuration": 500,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "X\nO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 200,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 10
+            },
+            {
+              "ItemId": "388",
+              "Amount": 15
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Weather": "Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash",
+            "Time": "{{Range: 0600, 1950}}",
+            "Colour Scheme": "SeasideValley",
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "False",
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_LargeDoghouse": {
+          "Name": "{{i18n:DustyDoghouseLarge.name}}",
+          "Description": "{{i18n:DustyDoghouseLarge.description}}",
+          "Texture": "Buildings/DOSVELrgDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 3,
+            "Y": 3
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 48,
+            "Height": 64
+          },
+          "SeasonOffset": {
+            "X": 48,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVEDustyEyesSeaside",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 12,
+                 "Height": 10
+                },
+               "DrawPosition": "17,33",
+               "SortTileOffset": 1,
+               "FrameCount": 20,
+               "FramesPerRow": 20,
+               "FrameDuration": 500,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "XXX\nXXX\nOOO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildingToUpgrade": "CF.CP.DustyOverhaulSVE_SmallDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 300,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 20
+            },
+            {
+              "ItemId": "388",
+              "Amount": 25
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Weather": "Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash",
+            "Time": "{{Range: 0600, 1950}}",
+            "Colour Scheme": "SeasideValley",
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "False",
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_SmallDoghouse": {
+          "Name": "{{i18n:DustyDoghouseSmall.name}}",
+          "Description": "{{i18n:DustyDoghouseSmall.description}}",
+          "Texture": "Buildings/DOSVESmlDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 1,
+            "Y": 2
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 48
+          },
+          "SeasonOffset": {
+            "X": 16,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVEDustyEyesMB",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 10,
+                 "Height": 8
+                },
+               "DrawPosition": "3,19",
+               "SortTileOffset": 1,
+               "FrameCount": 20,
+               "FramesPerRow": 20,
+               "FrameDuration": 500,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "X\nO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 200,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 10
+            },
+            {
+              "ItemId": "388",
+              "Amount": 15
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Weather": "Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash",
+            "Time": "{{Range: 0600, 1950}}",
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "False",
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": true
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_LargeDoghouse": {
+          "Name": "{{i18n:DustyDoghouseLarge.name}}",
+          "Description": "{{i18n:DustyDoghouseLarge.description}}",
+          "Texture": "Buildings/DOSVELrgDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 3,
+            "Y": 3
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 48,
+            "Height": 64
+          },
+          "SeasonOffset": {
+            "X": 48,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVEDustyEyesMB",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 10,
+                 "Height": 8
+                },
+               "DrawPosition": "19,33",
+               "SortTileOffset": 1,
+               "FrameCount": 20,
+               "FramesPerRow": 20,
+               "FrameDuration": 500,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "XXX\nXXX\nOOO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildingToUpgrade": "CF.CP.DustyOverhaulSVE_SmallDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 300,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 20
+            },
+            {
+              "ItemId": "388",
+              "Amount": 25
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Weather": "Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash",
+            "Time": "{{Range: 0600, 1950}}",
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "False",
+	    "DustyOnFarm": true,
+            "HasMod |contains=Gweniaczek.Medieval_buildings": true
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_SmallDoghouse": {
+          "Name": "{{i18n:DustyDoghouseSmall.name}}",
+          "Description": "{{i18n:DustyDoghouseSmall.description}}",
+          "Texture": "Buildings/DOSVESmlDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 1,
+            "Y": 2
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 48
+          },
+          "SeasonOffset": {
+            "X": 16,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVEDustyzzz",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 16,
+                 "Height": 16
+                },
+               "DrawPosition": "10,5",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 2,
+               "FrameDuration": 1500,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "X\nO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 200,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 10
+            },
+            {
+              "ItemId": "388",
+              "Amount": 15
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Weather": "Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash",
+            "Time": "{{Range: 2000, 2550}}",
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "False",
+	    "DustyOnFarm": true
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_SmallDoghouse": {
+          "Name": "{{i18n:DustyDoghouseSmall.name}}",
+          "Description": "{{i18n:DustyDoghouseSmall.description}}",
+          "Texture": "Buildings/DOSVESmlDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 1,
+            "Y": 2
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 16,
+            "Height": 48
+          },
+          "SeasonOffset": {
+            "X": 16,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVEDustyzzz",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 16,
+                 "Height": 16
+                },
+               "DrawPosition": "10,5",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 2,
+               "FrameDuration": 1500,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "X\nO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 200,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 10
+            },
+            {
+              "ItemId": "388",
+              "Amount": 15
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Season": "Winter",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+            "Time": "{{Range: 2000, 2550}}",
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "False",
+	    "DustyOnFarm": true
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_LargeDoghouse": {
+          "Name": "{{i18n:DustyDoghouseLarge.name}}",
+          "Description": "{{i18n:DustyDoghouseLarge.description}}",
+          "Texture": "Buildings/DOSVELrgDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 3,
+            "Y": 3
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 48,
+            "Height": 64
+          },
+          "SeasonOffset": {
+            "X": 48,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVEDustyzzz",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 16,
+                 "Height": 16
+                },
+               "DrawPosition": "28,20",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 2,
+               "FrameDuration": 1500,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "XXX\nXXX\nOOO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildingToUpgrade": "CF.CP.DustyOverhaulSVE_SmallDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 300,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 20
+            },
+            {
+              "ItemId": "388",
+              "Amount": 25
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Weather": "Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash",
+            "Time": "{{Range: 2000, 2550}}",
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "False",
+	    "DustyOnFarm": true
+          },
+         "Update": "OnLocationChange"
+    },
+  {
+
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Entries": {
+        "CF.CP.DustyOverhaulSVE_LargeDoghouse": {
+          "Name": "{{i18n:DustyDoghouseLarge.name}}",
+          "Description": "{{i18n:DustyDoghouseLarge.description}}",
+          "Texture": "Buildings/DOSVELrgDoghouseExterior",
+          "Skins": [],
+          "DrawShadow": false,
+          "Size": {
+            "X": 3,
+            "Y": 3
+          },
+          "FadeWhenBehind": false,
+          "SourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 48,
+            "Height": 64
+          },
+          "SeasonOffset": {
+            "X": 48,
+            "Y": 0
+          },
+           "DrawLayers": [
+             {
+               "Texture": "Buildings/DOSVEDustyzzz",
+               "SourceRect": {
+                 "X": 0,
+                 "Y": 0,
+                 "Width": 16,
+                 "Height": 16
+                },
+               "DrawPosition": "28,20",
+               "SortTileOffset": 1,
+               "FrameCount": 2,
+               "FramesPerRow": 2,
+               "FrameDuration": 1500,
+             }
+           ],
+          "SortTileOffset": 1,
+          "CollisionMap": "XXX\nXXX\nOOO",
+          "DefaultAction": null,
+          "Builder": "Robin",
+          "BuildCondition": "PLAYER_NPC_RELATIONSHIP Any Alex Married, BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_SmallDoghouse, !BUILDINGS_CONSTRUCTED Farm CF.CP.DustyOverhaulSVE_LargeDoghouse",
+          "BuildingToUpgrade": "CF.CP.DustyOverhaulSVE_SmallDoghouse",
+          "BuildDays": 1,
+          "BuildCost": 300,
+          "BuildMaterials": [
+            {
+              "ItemId": "390",
+              "Amount": 20
+            },
+            {
+              "ItemId": "388",
+              "Amount": 25
+            }
+
+          ],
+
+        }
+
+      },
+      "When": 
+          { "Season": "Winter",
+            "Weather |contains=Rain, GreenRain, Storm, Snow, Kana.WeatherWonders_Hailstorm, Kana.WeatherWonders_Heatwave, Kana.WeatherWonders_MuddyRain, Kana.WeatherWonders_Deluge, Kana.WeatherWonders_RainSnowMix, Kana.WeatherWonders_Blizzard, Kana.WeatherWonders_Drizzle, kath.weathering_HeavyRain, kath.weathering_Hail, kath.weathering_Locust, kath.weathering_HeatWave, kath.weathering_AcidRain, kath.weathering_Hurry, kath.weathering_MudRain, kath.weathering_Tornado, kath.weathering_Meatball, kath.weathering_Smog, kath.weathering_SmogJoja, kath.weathering_Blizzard, kath.weathering_Darkness, kath.weathering_Ash": false,
+            "Time": "{{Range: 2000, 2550}}",
+            "CF.SMAPI.DustyOverhaulSVE/HostMarriedToAlex": "False",
+	    "DustyOnFarm": true
+          },
+         "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVESmlDoghouseExterior",
+      "FromFile": "assets/Tilesheets/buildingsmlmb.png",
+      "PatchMode": "Replace",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 48
+      },
+      "When": 
+          { 
+            "HasMod |contains=Gweniaczek.Medieval_buildings": true,
+	    "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+          },
+         "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVESmlDoghouseExterior",
+      "FromFile": "assets/Tilesheets/buildingsmlmb.png",
+      "PatchMode": "Replace",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 48
+      },
+      "When": 
+          { 
+            "HasMod |contains=Gweniaczek.Medieval_buildings": true
+          },
+         "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVESmlDoghouseExterior",
+      "FromFile": "assets/Tilesheets/{{Folder}}/buildingsml.png",
+      "PatchMode": "Replace",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 48
+      },
+      "When": 
+          { 
+            "Colour Scheme": "DaisyNiko, WittilyNamed, Starblue, FoliageRedone, SeasideValley",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVESmlDoghouseExterior",
+      "FromFile": "assets/Tilesheets/vibrant/buildingsml.png",
+      "PatchMode": "Replace",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 48
+      },
+      "When": 
+          { 
+            "Colour Scheme": "VibrantPastoralOrange, VibrantPastoralGreen",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVELrgDoghouseExterior",
+      "FromFile": "assets/Tilesheets/buildinglrgmb.png",
+      "PatchMode": "Replace",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 192,
+        "Height": 64
+      },
+      "When": 
+          { 
+            "Colour Scheme": "Vanilla",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": true
+          },
+         "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVELrgDoghouseExterior",
+      "FromFile": "assets/Tilesheets/{{Folder}}/buildinglrgmb.png",
+      "PatchMode": "Replace",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 192,
+        "Height": 64
+      },
+      "When": 
+          { 
+            "Colour Scheme": "DaisyNiko, WittilyNamed, Starblue, VibrantPastoralGreen, VibrantPastoralOrange, EemieGreen, EemieOrange, FoliageRedone, SeasideValley",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": true
+          },
+         "Update": "OnLocationChange"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVELrgDoghouseExterior",
+      "FromFile": "assets/Tilesheets/vibrant/buildinglrg.png",
+      "PatchMode": "Replace",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 192,
+        "Height": 64
+      },
+      "When": 
+          { 
+            "Colour Scheme": "VibrantPastoralOrange, VibrantPastoralGreen",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVELrgDoghouseExterior",
+      "FromFile": "assets/Tilesheets/{{Folder}}/buildinglrg.png",
+      "PatchMode": "Replace",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 192,
+        "Height": 64
+      },
+      "When": 
+          { 
+            "Colour Scheme": "WittilyNamed, Starblue, FoliageRedone, SeasideValley",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVESmlDoghouseExterior",
+      "FromFile": "assets/Tilesheets/icedoghousesml.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 48
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Ice",
+            "Colour Scheme": "Vanilla, EemieOrange, EemieGreen",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVESmlDoghouseExterior",
+      "FromFile": "assets/Tilesheets/{{Folder}}/icedoghousesml.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 48
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Ice",
+            "Colour Scheme": "DaisyNiko, WittilyNamed, Starblue, FoliageRedone, SeasideValley",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVESmlDoghouseExterior",
+      "FromFile": "assets/Tilesheets/vibrant/icedoghousesml.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 48
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Ice",
+            "Colour Scheme": "VibrantPastoralOrange, VibrantPastoralGreen",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVESmlDoghouseExterior",
+      "FromFile": "assets/Tilesheets/snowdoghousesml.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 48
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Snow",
+            "Colour Scheme": "Vanilla, EemieOrange, EemieGreen",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVESmlDoghouseExterior",
+      "FromFile": "assets/Tilesheets/{{Folder}}/snowdoghousesml.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 48
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Snow",
+            "Colour Scheme": "DaisyNiko, WittilyNamed, Starblue, FoliageRedone, SeasideValley",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVESmlDoghouseExterior",
+      "FromFile": "assets/Tilesheets/vibrant/snowdoghousesml.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 48
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Snow",
+            "Colour Scheme": "VibrantPastoralOrange, VibrantPastoralGreen",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVELrgDoghouseExterior",
+      "FromFile": "assets/Tilesheets/icedoghouselrg.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 192,
+        "Height": 64
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Ice",
+            "Colour Scheme": "Vanilla, EemieOrange, EemieGreen",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVELrgDoghouseExterior",
+      "FromFile": "assets/Tilesheets/{{Folder}}/icedoghouselrg.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 192,
+        "Height": 64
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Ice",
+            "Colour Scheme": "DaisyNiko, WittilyNamed, Starblue, FoliageRedone, SeasideValley",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVELrgDoghouseExterior",
+      "FromFile": "assets/Tilesheets/vibrant/icedoghouselrg.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 192,
+        "Height": 64
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Ice",
+            "Colour Scheme": "VibrantPastoralOrange, VibrantPastoralGreen",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVELrgDoghouseExterior",
+      "FromFile": "assets/Tilesheets/snowdoghouselrg.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 192,
+        "Height": 64
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Snow",
+            "Colour Scheme": "Vanilla, EemieOrange, EemieGreen",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVELrgDoghouseExterior",
+      "FromFile": "assets/Tilesheets/{{Folder}}/snowdoghouselrg.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 192,
+        "Height": 64
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Snow",
+            "Colour Scheme": "DaisyNiko, WittilyNamed, Starblue, FoliageRedone, SeasideValley",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Buildings/DOSVELrgDoghouseExterior",
+      "FromFile": "assets/Tilesheets/vibrant/snowdoghouselrg.png",
+      "PatchMode": "Overlay",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 192,
+        "Height": 64
+      },
+      "When": 
+          { 
+            "Farm Doghouse Seasonal Changes": "True",
+            "Farm Doghouse Winter Roof": "Snow",
+            "Colour Scheme": "VibrantPastoralOrange, VibrantPastoralGreen",
+            "HasMod |contains=Gweniaczek.Medieval_buildings": false
+          }
+    }
+
+  ]
+
+}

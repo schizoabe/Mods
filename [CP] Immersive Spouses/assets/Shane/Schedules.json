@@ -1,0 +1,51 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {
+				"marriage_Tue": "630 AnimalShop 12 16 0 \"Strings\\schedules\\Shane:marriage_workpre\"/900 AnimalShop 15 5 1 \"Strings\\schedules\\Shane:marriage_workpre2\"/950 AnimalShop 12 14 2 \"Strings\\schedules\\Shane:marriage_{{Random:work, work2, work3, work4, work5}}\"/1600 AnimalShop 28 15 0 \"Strings\\schedules\\Shane:marriage_a\"/1630 AnimalShop 25 15 0 \"Strings\\schedules\\Shane:marriage_a\"/1700 AnimalShop 24 15 0 \"Strings\\schedules\\Shane:marriage_a\"/1730 Forest 89 16 2 \"Strings\\schedules\\Shane:marriage_{{Random:r, r2, r3, r4, r5, r6, r7}}\"/1930 BusStop 9 23 3"
+			},
+			"When": {
+				"ShaneTuesdaySchedule": true
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {
+				"marriage_Sun": "MAIL saloonSportsRoom/GOTO marriage_Sun_NoS/800 CommunityCenter 24 9 2 shane_drink \"Strings\\schedules\\Shane:marriage_{{Random:cc, cc2, cc3, cc4}}\"/1200 Saloon 33 8 0 \"Strings\\schedules\\Shane:marriage_Sun.000\"/1500 Saloon 38 18 0 \"Strings\\schedules\\Shane:marriage_{{Random:saloon2, saloon3, saloon4}}\"/2000 BusStop 9 23 3",
+				"marriage_Sun_NoS": "800 CommunityCenter 24 9 2 shane_drink \"Strings\\schedules\\Shane:marriage_{{Random:cc, cc2, cc3, cc4}}\"/1200 Town 8 63 1 \"Strings\\schedules\\Shane:marriage_{{Random:r, r2, r3, r4, r5, r6}}\"/1500 Saloon 21 17 2 shane_drink \"Strings\\schedules\\Shane:marriage_{{Random:saloon, saloon2, saloon3}}\"/1800 BusStop 9 23 3"
+			},
+			"When": {
+				"IsCommunityCenterComplete": true
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {
+				"marriage_Sun": "MAIL saloonSportsRoom/GOTO marriage_Sun_NoS/830 Town 33 101 2 shane_drink \"Strings\\schedules\\Shane:marriage_Fri.000\"/1200 Saloon 33 8 0 \"Strings\\schedules\\Shane:marriage_Sun.000\"/1500 Saloon 38 18 0 \"Strings\\schedules\\Shane:marriage_{{Random:saloon2, saloon3, saloon4}}\"/2000 BusStop 9 23 3",
+				"marriage_Sun_NoS": "830 Town 8 63 1 \"Strings\\schedules\\Shane:marriage_{{Random:r, r2, r3, r4, r5, r6}}\"/1200 Town 33 101 2 shane_drink \"Strings\\schedules\\Shane:marriage_Fri.000\"/1500 Saloon 21 17 2 shane_drink \"Strings\\schedules\\Shane:marriage_{{Random:saloon, saloon2, saloon3}}\"/1800 BusStop 9 23 3"
+			},
+			"When": {
+				"IsCommunityCenterComplete": false
+			}
+		},
+		
+		// DOCTORS CHECKUP
+
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Shane",
+			"Entries": {
+				"marriage_Mon": "830 AnimalShop 16 13 2 \"Strings\\schedules\\Shane:marriage_nmpre\"/1100 Forest 37 10 2 \"Strings\\schedules\\Shane:marriage_nmpre\"/1300 AnimalShop 16 13 2 \"Strings\\schedules\\Shane:marriage_nmpre2\"/1500 Beach 20 24 2 \"Strings\\schedules\\Shane:marriage_nm\"/2300 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "15"
+			}
+		},
+	]
+}

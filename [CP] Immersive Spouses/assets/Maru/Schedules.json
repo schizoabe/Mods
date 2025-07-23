@@ -1,0 +1,27 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Maru",
+			"Entries": {
+				"marriage_Mon": "800 ScienceHouse 6 20 0 \"Strings\\schedules\\Maru:marriage_{{Random:marriageMon, marriageMon2, marriageMon3}}\"/1200 ScienceHouse 16 18 0 \"Strings\\schedules\\Maru:marriage_{{Random:lab, lab2, lab3}}\"/1400 Town 43 77 2 maru_sit_down \"Strings\\schedules\\Maru:marriage_{{Random:sit, sit2, sit3}}\"/1830 BusStop 9 23 3",
+				"marriage_Sun": "800 ScienceHouse 5 6 1 maru_tinker \"Strings\\schedules\\Maru:marriage_{{Random:t, t2, t3}}\"/1400 Mountain 55 31 0 \"Strings\\schedules\\Maru:marriage_{{Random:r, r2, r3, r4}}\"/1800 Town 63 15 2 maru_sit_down \"Strings\\schedules\\Maru:marriage_{{Random:p, p2, p3, p4}}\"/2030 BusStop 9 23 3"
+			}
+		},
+		
+		// DOCTORS CHECKUP
+
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Maru",
+			"Entries": {
+				"marriageJob": "800 ScienceHouse 6 20 0 \"Strings\\schedules\\Maru:marriage_nightmarket\"/1200 ScienceHouse 16 18 0 \"Strings\\schedules\\Maru:marriage_nightmarket\"/1540 Beach 11 33 3 \"Strings\\schedules\\Maru:winter_16.000\"/2300 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Winter",
+				"Day": "16"
+			}
+		},
+	]
+}

@@ -1,0 +1,153 @@
+{
+	"Changes": [
+		{
+			"LogName": "Star Texture",
+			"Action": "EditImage",
+			"Target": "LooseSprites/Cursors",
+			"FromFile": "assets/Textures/Weather/starfall.png",
+			"Update": "OnLocationChange",
+			"FromArea": { "X": 0, "Y": 0, "Width": 188, "Height": 49 },
+			"ToArea": { "X": 352, "Y": 1183, "Width": 188, "Height": 49 },
+			"When": {
+			"Weather": "kath.weathering_StarFalling",
+			"LocationContext |contains=Island,Desert": false,
+			},
+		},
+		{
+			"LogName": "Star Icon Change",
+			"Action": "EditImage",
+			"Target": "Mods/kath.weathering/Icons",
+			"FromFile": "assets/Textures/Icon/vanillaicons.png",
+			"Update": "OnTimeChange",
+			"FromArea": { "X": 24, "Y": 0, "Width": 12, "Height": 8 },
+			"ToArea": { "X": 0, "Y": 24, "Width": 12, "Height": 8 },
+			"When": {
+			"Time": "{{Range: 0600, 1900}}",
+			"Weather": "kath.weathering_StarFalling",
+			},
+		},
+		{
+      		"LogName": "The Weather Data Hail",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_StarFalling": {
+					"Id": "kath.weathering_StarFalling",
+					"DisplayName": "{{i18n: Weather.Starry}}",
+
+					"Forecast": "{{i18n: Weather.Starry.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.Starry.ForecastIsland}}", "Desert": "{{i18n: Weather.Starry.ForecastDesert}}",},
+					
+					"UseNightTiles":false,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"IsLightning": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": true,
+					"SpawnFrogs": false,
+					"SpawnClouds": true,
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 0, "Y": 24},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 0, "Y": 52},
+					"TVFrames": 4,				
+
+					"TotemMessage": "{{i18n: Weather.StarryTotem}}",
+					"TotemScreenTint": "white",
+					"TotemSound": "wand",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+
+					"Critters":[
+						{
+							"Id": "Fireflies",
+							"Group": "Flies",
+							"Condition": "!CS_LOCATION_IS_TYPE Here Beach, CS_LOCATION_TIME Here Dark",
+							"Chance": 0.8,
+
+							"Type": "Firefly"
+						},
+					],
+
+
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDMeteor 3",
+							],
+						},
+						{
+							"Id": "FeelingLucky",
+							"Type": "Buff",
+							"BuffId": "FeelingLucky",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, TIME 2000 2600",
+							"TargetMapType": "Outdoors",
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "DebrisFall1",
+							"Condition": "!CS_LOCATION_IGNORE_DEBRIS_WEATHER Here, !LOCATION_CONTEXT Here Desert Island, TIME 1930 2100, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 1,
+							"Color": null,
+							"Opacity": 0.25,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 2,
+							"MaxCount": 4,
+						},
+						{
+							"Id": "DebrisFall2",
+							"Condition": "!CS_LOCATION_IGNORE_DEBRIS_WEATHER Here, !LOCATION_CONTEXT Here Desert Island, TIME 2030 2230, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 1,
+							"Color": null,
+							"Opacity": 0.5,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 4,
+							"MaxCount": 8,
+						},
+						{
+							"Id": "DebrisFall3",
+							"Condition": "!CS_LOCATION_IGNORE_DEBRIS_WEATHER Here, !LOCATION_CONTEXT Here Desert Island, TIME 2200 2400, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 1,
+							"Color": null,
+							"Opacity": 0.75,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 8,
+							"MaxCount": 16,
+						},
+						{
+							"Id": "DebrisFall4",
+							"Condition": "!CS_LOCATION_IGNORE_DEBRIS_WEATHER Here, !LOCATION_CONTEXT Here Desert Island, TIME 2330 2600, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Debris",
+							"UseSeasonal": 1,
+							"Color": null,
+							"Opacity": 1,
+							"Scale": 4,
+							"CanBlow": false,
+							"MinCount": 12,
+							"MaxCount": 24,
+						},
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

@@ -1,0 +1,119 @@
+{
+	"Changes": [
+		{
+      			"LogName": "The Weather Data Wildfire",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_Wildfire": {
+					"Id": "kath.weathering_Wildfire",
+					"DisplayName": "{{i18n: Weather.FFire}}",
+
+					"Forecast": "{{i18n: Weather.FFire.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.FFire.ForecastIsland}}", "Desert": "{{i18n: Weather.FFire.ForecastDesert}}",},
+					
+					"UseNightTiles": false,
+					"IsSnowing": false,
+					"IsRaining": false,
+					"IsDebrisWeather": false,
+					"IsLightning": false,
+					"SpawnCritters": false,
+					"SpawnFrogs": false,
+					"SpawnClouds": false,
+
+					"IconTexture": "Mods/kath.weathering/Icons",
+					"IconSource": {"X": 12, "Y": 80},
+
+					"TVTexture": "Mods/kath.weathering/TV",
+					"TVSource": {"X": 52, "Y": 13},
+					"TVFrames": 4,
+
+					"MusicOverride": "KathEclipse1",
+					"MusicFrequencyOutside": 75,
+					"MusicFrequencyInside": 10,
+					"SoftMusicOverrides": [
+					    {
+							"Id": "FireCrackle",
+							"Condition": "LOCATION_NAME Target Forest",
+							"Track": "KathFire"
+						},					
+					],
+
+					"TotemMessage": "{{i18n: Weather.FFireTotem}}",
+					"TotemScreenTint": "orangered",
+					"TotemSound": "cracklingFire",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDWildfire 3",
+								"AddMail Current WildfireMapFlag received",
+							],
+						},					
+					],//close effect
+
+					"Layers": [
+						{
+							"Id": "HeatHaze",
+							"Type": "Shader",
+							"Shader": "Distortion",
+							"Condition": "LOCATION_NAME Target Forest",
+							"TargetMapType": "Outdoors",
+							"Strength": 0.002,
+							"Frequency": 100
+						},
+						{
+							"Id": "cloudymaybe1",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Forest, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Fog",
+							"Source": {"X": 0, "Y": 0, "Width": 1200, "Height": 1200 },
+							"Color": "white",
+							"Opacity": 0.41,
+							"Speed": "0.05, 0.15",
+							"ViewSpeed": "-1, -1",
+							"Scale": 2,
+						},
+						{
+							"Id": "cloudymaybe2",
+							"Condition": "LOCATION_NAME Target Forest",
+							"TargetMapType": "Outdoors",
+							"Type": "TextureScroll",
+							"Texture": "Mods/kath.weathering/Fog",
+							"Source": {"X": 0, "Y": 0, "Width": 1200, "Height": 1200 },
+							"Color": "gray",
+							"Opacity": 0.51,
+							"Speed": "0.05, 0.15",
+							"ViewSpeed": "-1, -1",
+							"Scale": 2,
+						},
+						{
+							"Id": "LightingCloudy1",
+							"Condition": "!LOCATION_CONTEXT Here Desert Island, !LOCATION_NAME Target Woods, !LOCATION_NAME Target Forest, !LOCATION_NAME Target Custom_SpriteSpring2",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "40, 42, 54",
+							"Opacity": 0.21
+						},
+						{
+							"Id": "LightingCloudy2",
+							"Condition": "LOCATION_NAME Target Forest",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "40, 42, 54",
+							"Opacity": 0.21
+						},
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

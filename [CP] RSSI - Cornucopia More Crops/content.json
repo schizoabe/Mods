@@ -1,0 +1,2228 @@
+{
+    "Format": "2.3.0",
+	"ConfigSchema": {
+	
+	"Cornucopia Saloon": {
+	"AllowValues": "standard, hardmode, off",
+    "Default": "standard"
+	},
+	"Cornucopia SeedShop": {
+	"AllowValues": "standard, hardmode, off",
+    "Default": "standard"
+	},
+	"Cornucopia Dwarf": {
+	"AllowValues": "standard, hardmode, off",
+    "Default": "standard"
+	},
+	"Cornucopia Joja": {
+	"AllowValues": "standard, hardmode, off",
+    "Default": "standard"
+	},
+	"Cornucopia AnimalShop": {
+	"AllowValues": "standard, hardmode, off",
+    "Default": "standard"
+	},
+	"Cornucopia Sandy": {
+	"AllowValues": "standard, hardmode, off",
+    "Default": "standard"
+	},
+	},
+    "Changes": [
+		
+	 //standard	Cornucopia Saloon
+		
+	{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Saloon",
+    "Items"
+  ],
+  "Entries": {
+		 
+    "RSSI_Cornucopia.MoreCrops_RandomAlco": {
+      "RandomItemId": [ "Cornucopia_DarkAle", "Cornucopia_Porter", "Cornucopia_SparklingWine", "Cornucopia_Stout" ],
+	  "Id": "RSSI_Cornucopia.MoreCrops_RandomAlco",
+	  "AvoidRepeat": true,
+	  "Price": 5000,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+				6,
+              ]
+            }
+          ],
+    },
+  },
+  "When": { "Cornucopia Saloon": "standard" }
+	},
+	
+	//hardmode Cornucopia Saloon
+	
+	{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Saloon",
+    "Items"
+  ],
+  "Entries": {
+		 
+    "RSSI_Cornucopia.MoreCrops_RandomAlco": {
+      "RandomItemId": [ "Cornucopia_DarkAle", "Cornucopia_Porter", "Cornucopia_SparklingWine", "Cornucopia_Stout" ],
+	  "Id": "RSSI_Cornucopia.MoreCrops_RandomAlco",
+	  "AvoidRepeat": true,
+	  "Price": 5000,
+	  "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+    },
+  },
+  "When": { "Cornucopia Saloon": "hardmode" }
+	},
+		
+		//standard Cornucopia SeedShop
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"SeedShop",
+				"Items"
+			],
+			"Entries": {
+				
+				"Cornucopia.MoreCrops_CropSeedsSpringCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsSummerCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsFallCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsWinterCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsSpringRare": null,
+				"Cornucopia.MoreCrops_CropSeedsSummerRare": null,
+				"Cornucopia.MoreCrops_CropSeedsFallRare": null,
+				"Cornucopia.MoreCrops_CropSeedsWinterRare": null,
+				"Cornucopia.MoreCrops_BushSeeds": null,
+				"Cornucopia.MoreCrops_FruitTreeSaplings": null,
+				
+				
+				"RSSI_Cornucopia.MoreCrops_RandomSpringFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_RandomSpringFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_RandomSummerFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_RandomSummerFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_RandomFallFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_RandomFallFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_RandomWinterFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_RandomWinterFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_RandomArtisan": {
+					"Id": "RSSI_Cornucopia.MoreCrops_RandomArtisan",
+					"RandomItemId": [ "Cornucopia_OliveOil", "Cornucopia_Tofu", "Cornucopia_Molasses", "Cornucopia_BuckwheatFlour", "Cornucopia_SparklingWine", "Cornucopia_WholeGrainFlour" ],
+					"AvoidRepeat": true,
+					 "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_CropSeedsSpringCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsSpringCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_CropSeedsSummerCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsSummerCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_CropSeedsFallCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsFallCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_CropSeedsWinterCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsWinterCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_CropSeedsSpringRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsSpringRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_CropSeedsSummerRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsSummerRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+				
+				"RSSI_Cornucopia_FormerFestivalSeeds": {
+					"Condition": "SEASON summer, SYNCED_RANDOM day RSSI_Cornucopia_FormerFestivalSeeds 0.05",
+					"Id": "RSSI_Cornucopia_FormerFestivalSeeds",
+					"RandomItemId": [ "Cornucopia_KiwiSeeds", "Cornucopia_WatermelonSeeds", "Cornucopia_WasabiRootSeeds", "Cornucopia_CottonBollSeeds" ],
+					"Price": 300,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_CropSeedsFallRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsFallRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_CropSeedsWinterRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsWinterRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_BushSeeds": {
+					"Condition": "SYNCED_RANDOM day RSSI_Cornucopia.MoreCrops_BushSeeds 0.6",
+					"Id": "RSSI_Cornucopia.MoreCrops_BushSeeds",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_bush_seed, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 1,
+					"IgnoreShopPriceModifiers": true,
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_FruitTreeSaplings": {
+					"Condition": "SYNCED_RANDOM day RSSI_Cornucopia.MoreCrops_FruitTreeSaplings 0.6",
+					"Id": "RSSI_Cornucopia.MoreCrops_FruitTreeSaplings",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_fruittree_sapling, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 1,
+					"IgnoreShopPriceModifiers": true,
+				}
+			},
+			"When": { "Cornucopia SeedShop": "standard" }
+		},
+		
+		//hardmode Cornucopia SeedShop
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"SeedShop",
+				"Items"
+			],
+			"Entries": {
+				
+				"Cornucopia.MoreCrops_CropSeedsSpringCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsSummerCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsFallCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsWinterCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsSpringRare": null,
+				"Cornucopia.MoreCrops_CropSeedsSummerRare": null,
+				"Cornucopia.MoreCrops_CropSeedsFallRare": null,
+				"Cornucopia.MoreCrops_CropSeedsWinterRare": null,
+				"Cornucopia.MoreCrops_BushSeeds": null,
+				"Cornucopia.MoreCrops_FruitTreeSaplings": null,
+				
+				
+				"RSSI_Cornucopia.MoreCrops_RandomSpringFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_RandomSpringFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_RandomSummerFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_RandomSummerFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_RandomFallFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_RandomFallFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_RandomWinterFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_RandomWinterFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_RandomArtisan": {
+					"Id": "RSSI_Cornucopia.MoreCrops_RandomArtisan",
+					"RandomItemId": [ "Cornucopia_OliveOil", "Cornucopia_Tofu", "Cornucopia_Molasses", "Cornucopia_BuckwheatFlour", "Cornucopia_SparklingWine", "Cornucopia_WholeGrainFlour" ],
+					"AvoidRepeat": true,
+					 "AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_CropSeedsSpringCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsSpringCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,				
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_CropSeedsSummerCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsSummerCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,				
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_CropSeedsFallCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsFallCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,				
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_CropSeedsWinterCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsWinterCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,				
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_CropSeedsSpringRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsSpringRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_CropSeedsSummerRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsSummerRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+				
+				"RSSI_Cornucopia_FormerFestivalSeeds": {
+					"Condition": "SEASON summer, SYNCED_RANDOM day RSSI_Cornucopia_FormerFestivalSeeds 0.05",
+					"Id": "RSSI_Cornucopia_FormerFestivalSeeds",
+					"RandomItemId": [ "Cornucopia_KiwiSeeds", "Cornucopia_WatermelonSeeds", "Cornucopia_WasabiRootSeeds", "Cornucopia_CottonBollSeeds" ],
+					"Price": 300,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_CropSeedsFallRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsFallRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_CropSeedsWinterRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_CropSeedsWinterRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+					"IgnoreShopPriceModifiers": true,
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_BushSeeds": {
+					"Condition": "SYNCED_RANDOM day RSSI_Cornucopia.MoreCrops_BushSeeds 0.3",
+					"Id": "RSSI_Cornucopia.MoreCrops_BushSeeds",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_bush_seed, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 1,
+					"IgnoreShopPriceModifiers": true,
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_FruitTreeSaplings": {
+					"Condition": "SYNCED_RANDOM day RSSI_Cornucopia.MoreCrops_FruitTreeSaplings 0.3",
+					"Id": "RSSI_Cornucopia.MoreCrops_FruitTreeSaplings",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_fruittree_sapling, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 1,
+					"IgnoreShopPriceModifiers": true,
+				}
+			},
+			"When": { "Cornucopia SeedShop": "hardmode" }
+		},
+		//standard Cornucopia Dwarf
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"Dwarf",
+				"Items"
+			],
+			"Entries": {
+				
+				"Cornucopia_ChickenoftheWoodsSeeds": null,
+				"Cornucopia_ShiitakeSeeds": null,	
+				"Cornucopia_SapodillaSeed": null,
+				"Cornucopia_LicoriceRootSeeds": null,
+				"Cornucopia_WormwoodSeeds": null,
+				
+				"RSSI_Cornucopia_DwarfSeeds": {
+					"Condition": "SYNCED_RANDOM day RSSI_Cornucopia_DwarfSeeds 0.6",
+					"Id": "RSSI_Cornucopia_DwarfSeeds",
+					"RandomItemId": [ "Cornucopia_ChickenoftheWoodsSeeds", "Cornucopia_ShiitakeSeeds", "Cornucopia_SapodillaSeed", "Cornucopia_LicoriceRootSeeds", "Cornucopia_WormwoodSeeds" ],
+					"AvailableStock": 1,
+				}
+			},
+			"When": { "Cornucopia Dwarf": "standard" }
+		},
+		//hardmode Cornucopia Dwarf
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"Dwarf",
+				"Items"
+			],
+			"Entries": {
+				
+				"Cornucopia_ChickenoftheWoodsSeeds": null,
+				"Cornucopia_ShiitakeSeeds": null,	
+				"Cornucopia_SapodillaSeed": null,
+				"Cornucopia_LicoriceRootSeeds": null,
+				"Cornucopia_WormwoodSeeds": null,
+				
+				"RSSI_Cornucopia_DwarfSeeds": {
+					"Condition": "SYNCED_RANDOM day RSSI_Cornucopia_DwarfSeeds 0.3",
+					"Id": "RSSI_Cornucopia_DwarfSeeds",
+					"RandomItemId": [ "Cornucopia_ChickenoftheWoodsSeeds", "Cornucopia_ShiitakeSeeds", "Cornucopia_SapodillaSeed", "Cornucopia_LicoriceRootSeeds", "Cornucopia_WormwoodSeeds" ],
+					"AvailableStock": 1,
+				}
+			},
+			"When": { "Cornucopia Dwarf": "hardmode" }
+		},
+		
+		//No Luau seeds
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"Festival_Luau_Pierre",
+				"Items"
+			],
+			"Entries": {
+				
+				"Cornucopia_KiwiSeeds": null,
+				"Cornucopia_WatermelonSeeds": null,		
+				
+			},			
+		},		
+		//No Egg Festival seeds
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"Festival_EggFestival_Pierre",
+				"Items"
+			],
+			"Entries": {
+				
+				"Cornucopia_WasabiRootSeeds": null,
+				
+			},			
+		},
+		//No Stardew Valley Fair seeds
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"Festival_StardewValleyFair_StarTokens",
+				"Items"
+			],
+			"Entries": {
+				
+				"Cornucopia_CottonBollSeeds": null,
+				
+			},			
+		},
+		
+		//standard Cornucopia Joja
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"Priority": "Default+2",
+			"TargetField": [
+				"Joja",
+				"Items"
+			],
+			"Entries": {
+				
+				"Cornucopia.MoreCrops_CropSeedsSpringCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsSummerCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsFallCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsWinterCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsSpringRare": null,
+				"Cornucopia.MoreCrops_CropSeedsSummerRare": null,
+				"Cornucopia.MoreCrops_CropSeedsFallRare": null,
+				"Cornucopia.MoreCrops_CropSeedsWinterRare": null,
+				
+				
+				"RSSI_Cornucopia.MoreCrops_JRandomSpringFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomSpringFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomSummerFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomSummerFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomFallFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomFallFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomWinterFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomWinterFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomArtisan": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomArtisan",
+					"RandomItemId": [ "Cornucopia_OliveOil", "Cornucopia_Tofu", "Cornucopia_Molasses", "Cornucopia_BuckwheatFlour", "Cornucopia_SparklingWine", "Cornucopia_WholeGrainFlour" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomOffSpringFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomOffSpringFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer fall winter",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"Price": 3000,
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomOffSummerFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomOffSummerFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring fall winter",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"Price": 3000,
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomOffFallFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomOffFallFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring summer winter",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"Price": 3000,
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomOffWinterFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomOffWinterFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring summer fall",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"Price": 3000,
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsSpringCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsSpringCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 100,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsSummerCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsSummerCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 100,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsFallCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsFallCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 100,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsWinterCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsWinterCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 100,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsSpringRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsSpringRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 50,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsSummerRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsSummerRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 50,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsFallRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsFallRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 50,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsWinterRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsWinterRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 50,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JBushSeeds": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JBushSeeds",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_bush_seed, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JFruitTreeSaplings": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JFruitTreeSaplings",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_fruittree_sapling, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				}	
+			},
+			"When": { "Cornucopia Joja": "standard" }
+		},
+		
+		//hardmode Cornucopia Joja
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"Priority": "Default+2",
+			"TargetField": [
+				"Joja",
+				"Items"
+			],
+			"Entries": {
+				
+				"Cornucopia.MoreCrops_CropSeedsSpringCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsSummerCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsFallCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsWinterCommon": null,
+				"Cornucopia.MoreCrops_CropSeedsSpringRare": null,
+				"Cornucopia.MoreCrops_CropSeedsSummerRare": null,
+				"Cornucopia.MoreCrops_CropSeedsFallRare": null,
+				"Cornucopia.MoreCrops_CropSeedsWinterRare": null,
+				
+				
+				"RSSI_Cornucopia.MoreCrops_JRandomSpringFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomSpringFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,			
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomSummerFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomSummerFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,			
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomFallFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomFallFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,			
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomWinterFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomWinterFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,				
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomArtisan": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomArtisan",
+					"RandomItemId": [ "Cornucopia_OliveOil", "Cornucopia_Tofu", "Cornucopia_Molasses", "Cornucopia_BuckwheatFlour", "Cornucopia_SparklingWine", "Cornucopia_WholeGrainFlour" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,			
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomOffSpringFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomOffSpringFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer fall winter",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"Price": 3000,
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,			
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomOffSummerFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomOffSummerFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring fall winter",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"Price": 3000,
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,			
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomOffFallFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomOffFallFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring summer winter",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"Price": 3000,
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+				0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,		
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.MoreCrops_JRandomOffWinterFood": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JRandomOffWinterFood",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring summer fall",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_crop_produce, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"Price": 3000,
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,			
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsSpringCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsSpringCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 100,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,		
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsSummerCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsSummerCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 100,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+				0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,		
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsFallCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsFallCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 100,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,		
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsWinterCommon": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsWinterCommon",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter, YEAR 1 1",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_rarity_common, ITEM_CONTEXT_TAG Target cornucopia_season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 100,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,		
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsSpringRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsSpringRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON spring, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_spring, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 50,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,		
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsSummerRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsSummerRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON summer, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_summer, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 50,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,		
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsFallRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsFallRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON fall, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_fall, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 50,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,		
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JCropSeedsWinterRare": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JCropSeedsWinterRare",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"Condition": "SEASON winter, YEAR 2",
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_season_winter, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 50,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,		
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JBushSeeds": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JBushSeeds",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_bush_seed, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,		
+              ]
+            }
+          ],
+				},
+			
+				"RSSI_Cornucopia.MoreCrops_JFruitTreeSaplings": {
+					"Id": "RSSI_Cornucopia.MoreCrops_JFruitTreeSaplings",
+					"ItemId": "RANDOM_ITEMS (O)",
+					"MaxItems": 1,
+					"PerItemCondition": "ITEM_CONTEXT_TAG Target cornucopia_shop_pierre, ITEM_CONTEXT_TAG Target cornucopia_fruittree_sapling, ITEM_CONTEXT_TAG Target modid_cornucopia.morecrops, !ITEM_CONTEXT_TAG Target cornucopia_shop_pierre_generic_banned",
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,	
+              ]
+            }
+          ],
+				}	
+			},
+			"When": { "Cornucopia Joja": "hardmode" }
+		},
+	
+	//standard Cornucopia AnimalShop
+	
+	{
+      "Action": "EditData",
+	  "Target": "Data/Shops",
+      "TargetField": [ "AnimalShop", "Items" ],
+      "Entries": {
+		  
+		"Cornucopia_CatnipSeeds": null,
+		"Cornucopia_MelaleucaLeavesSapling": null,
+		  
+		"RSSI_Cornucopia_CatnipSeeds": {
+			"Id": "RSSI_Cornucopia_CatnipSeeds",
+			"ItemId": "Cornucopia_CatnipSeeds",
+			"Condition": "SEASON spring",
+			"Price": 60,
+			"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+		},
+		"RSSI_Cornucopia_MelaleucaLeavesSapling": {
+			"Id": "RSSI_Cornucopia_MelaleucaLeavesSapling",
+			"ItemId": "Cornucopia_MelaleucaLeavesSapling",
+			"Condition": "YEAR 2, SYNCED_RANDOM day RSSI_Cornucopia_MelaleucaLeavesSapling 0.6",
+			"Price": 2000,
+			"PriceModifiers": [
+				{
+					"Modification": "Multiply",
+					"Amount": 2.0
+				}
+			],
+			"AvailableStock": 1,
+		}
+      },
+	  "When": { "Cornucopia AnimalShop": "standard" }
+    },
+	
+	//hardmode Cornucopia AnimalShop
+	{
+      "Action": "EditData",
+	  "Target": "Data/Shops",
+      "TargetField": [ "AnimalShop", "Items" ],
+      "Entries": {
+		  
+		"Cornucopia_CatnipSeeds": null,
+		"Cornucopia_MelaleucaLeavesSapling": null,
+		  
+		"RSSI_Cornucopia_CatnipSeeds": {
+			"Id": "RSSI_Cornucopia_CatnipSeeds",
+			"ItemId": "Cornucopia_CatnipSeeds",
+			"Condition": "SEASON spring",
+			"Price": 60,
+			"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+              ]
+            }
+          ],
+		},
+		"RSSI_Cornucopia_MelaleucaLeavesSapling": {
+			"Id": "RSSI_Cornucopia_MelaleucaLeavesSapling",
+			"ItemId": "Cornucopia_MelaleucaLeavesSapling",
+			"Condition": "YEAR 2, SYNCED_RANDOM day RSSI_Cornucopia_MelaleucaLeavesSapling 0.3",
+			"Price": 2000,
+			"PriceModifiers": [
+				{
+					"Modification": "Multiply",
+					"Amount": 2.0
+				}
+			],
+			"AvailableStock": 1,
+		}
+      },
+	  "When": { "Cornucopia AnimalShop": "hardmode" }
+    },
+	//standard Cornucopia Sandy
+	
+	{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"Sandy",
+				"Items"
+			],
+			"Entries": {
+				
+				"Cornucopia_SugarcaneSeeds": null,
+				"Cornucopia_AgaveSeeds": null,
+				"Cornucopia_BlueAgaveSeeds": null,
+				"Cornucopia_BambooSeeds": null,
+				"Cornucopia_BreadfruitSapling": null,
+				"Cornucopia_DragonFruitSapling": null,
+				"Cornucopia_LycheeSapling": null,
+				"Cornucopia_AloeSeeds": null,
+				"Cornucopia_CuminSeeds": null,
+				"Cornucopia_LemongrassSeeds": null,
+				
+				
+				"RSSI_Cornucopia_CSandySeeds": {
+					"Id": "RSSI_Cornucopia_CSandySeeds",
+					"RandomItemId": [ "Cornucopia_SugarcaneSeeds", "Cornucopia_AgaveSeeds", "Cornucopia_BlueAgaveSeeds", "Cornucopia_BambooSeeds", "Cornucopia_AloeSeeds", "Cornucopia_CuminSeeds", "Cornucopia_LemongrassSeeds" ],
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,				
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia_CSandySapling": {
+					"Condition": "SYNCED_RANDOM day RSSI_Cornucopia_CSandySapling 0.6",
+					"Id": "RSSI_Cornucopia_CSandySapling",
+					"RandomItemId": [ "Cornucopia_BreadfruitSapling", "Cornucopia_DragonFruitSapling", "Cornucopia_LycheeSapling" ],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 2.0
+						}
+					],
+					"AvailableStock": 1,
+				}
+			},
+			"When": { "Cornucopia Sandy": "standard" }
+		},
+		//hardmode Cornucopia Sandy
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"Sandy",
+				"Items"
+			],
+			"Entries": {
+				
+				"Cornucopia_SugarcaneSeeds": null,
+				"Cornucopia_AgaveSeeds": null,
+				"Cornucopia_BlueAgaveSeeds": null,
+				"Cornucopia_BambooSeeds": null,
+				"Cornucopia_BreadfruitSapling": null,
+				"Cornucopia_DragonFruitSapling": null,
+				"Cornucopia_LycheeSapling": null,
+				"Cornucopia_AloeSeeds": null,
+				"Cornucopia_CuminSeeds": null,
+				"Cornucopia_LemongrassSeeds": null,
+				
+				
+				"RSSI_Cornucopia_CSandySeeds": {
+					"Id": "RSSI_Cornucopia_CSandySeeds",
+					"RandomItemId": [ "Cornucopia_SugarcaneSeeds", "Cornucopia_AgaveSeeds", "Cornucopia_BlueAgaveSeeds", "Cornucopia_BambooSeeds", "Cornucopia_AloeSeeds", "Cornucopia_CuminSeeds", "Cornucopia_LemongrassSeeds" ],
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+				0.2,
+				0.3,
+				0.4,
+				0.5,
+				0.6,
+				0.7,
+				0.8,
+				0.9,	
+              ]
+            }
+          ],
+				},
+				
+				"RSSI_Cornucopia_CSandySapling": {
+					"Condition": "SYNCED_RANDOM day RSSI_Cornucopia_CSandySapling 0.3",
+					"Id": "RSSI_Cornucopia_CSandySapling",
+					"RandomItemId": [ "Cornucopia_BreadfruitSapling", "Cornucopia_DragonFruitSapling", "Cornucopia_LycheeSapling" ],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 2.0
+						}
+					],
+					"AvailableStock": 1,
+				}
+			},
+			"When": { "Cornucopia Sandy": "hardmode" }
+		},
+	]
+}

@@ -1,0 +1,99 @@
+{
+  "Format": "1.25.0",
+  "Changes": [
+    {
+      "LogName": "NPC Manifestation",
+      "Action": "EditData",
+      "Target": "data/NPCDispositions",
+      "Entries": {
+        "[65]Teela": "child/polite/outgoing/negative/female/non-datable/null/Other/spring 6//Custom_Claire_WarpRoom 3 3/Teela"
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+   	"LogName": "Teela's AntiSocial Flag",
+  	"Action": "EditData",
+  	"Target": "Data/AntiSocialNPCs",
+  	"Entries": {"[65]Teela": true}
+    },
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/[65]Teela",
+      "FromFile": "assets/spritesheet.png",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "NPC Portrait",
+      "Action": "Load",
+      "Target": "Portraits/[65]Teela",
+      "FromFile": "assets/portrait.png",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/[65]Teela",
+      "FromFile": "assets/schedule.json",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/[65]Teela",
+      "FromFile": "assets/Dialogue.json",
+	"When": {"HasSeenEvent": "9695002"}
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "Teela_read_left": "17/17/17"	
+      },
+	"When": {"HasSeenEvent": "9695002"}
+    },
+{	 
+     "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.1":  "This is Teela's seat. I have the POWER!"},
+     "When": {"HasSeenEvent": "9695002"}
+},
+
+//If SKE is installed Teela will move to the top left seating area when Tina is in school.
+	
+{	 
+     "Action": "EditData",
+     "Target": "Strings/StringsFromMaps",
+     "Entries": { "Desk.1":  "This is Tina and Teela's seat. We have the powa!"},
+     "When": {"HasSeenEvent": "9695002","HasMod": "BURAKMESE.SKE"}
+},
+
+{ 
+     "Action": "EditData",	 
+     "Target": "characters/schedules/[65]Teela",
+     "Entries": { 
+  "Mon": "0 BusStop 20 23 1/610 Custom_SchoolHouse 23 8 3/700 Custom_SchoolHouse 22 8 3 Teela_read_left/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Tue": "0 BusStop 20 23 1/610 Custom_SchoolHouse 5 5 3/700 Custom_SchoolHouse 5 5 3 Teela_read_left/1130 Town 19 16 0/1240 Custom_SchoolHouse 5 5 3 Teela_read_left/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Wed": "0 BusStop 20 23 1/610 Custom_SchoolHouse 5 5 3/700 Custom_SchoolHouse 5 5 3 Teela_read_left/1130 Town 19 16 0/1240 Custom_SchoolHouse 5 5 3 Teela_read_left/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Thu": "0 BusStop 20 23 1/610 Custom_SchoolHouse 23 8 3/700 Custom_SchoolHouse 22 8 3 Teela_read_left/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Fri": "0 BusStop 20 23 1/610 Custom_SchoolHouse 5 5 3/700 Custom_SchoolHouse 5 5 3 Teela_read_left/1130 Town 19 16 0/1240 Custom_SchoolHouse 5 5 3 Teela_read_left/1600 BusStop 12 8 0/1900 Custom_DayEnd_WarpRoom 3 3 0",
+  "Sat": "0 Custom_Claire_WarpRoom 1 3 3",
+  "Sun": "0 Custom_Claire_WarpRoom 1 3 3",
+
+//Festivals School is closed
+"spring_13": "0 Custom_Claire_WarpRoom 1 3 3",
+"spring_24": "0 Custom_Claire_WarpRoom 1 3 3",
+"summer_11": "0 Custom_Claire_WarpRoom 1 3 3",
+"summer_28": "0 Custom_Claire_WarpRoom 1 3 3",
+"fall_16": "0 Custom_Claire_WarpRoom 1 3 3",
+"fall_27": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_8": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_25": "0 Custom_Claire_WarpRoom 1 3 3",
+"winter_28": "0 Custom_Claire_WarpRoom 1 3 3",
+		    },       	
+	"When": {"HasSeenEvent": "9695002","HasMod": "BURAKMESE.SKE"},
+}
+
+
+  ]
+}

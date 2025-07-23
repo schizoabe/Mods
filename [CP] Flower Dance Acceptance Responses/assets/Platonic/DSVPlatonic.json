@@ -1,0 +1,34 @@
+{
+	"Changes":[
+		{
+			"LogName": "Haley - Flower Dance, Best Friends, Not Flower Queen",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Haley.Friends.Accept}}",
+			},
+			"When": {
+				"HasMod": "DSV.Core",
+				"Hearts:Haley": "6, 7, 8",
+				"DSV.Core/FlowerQueen |contains= Haley": false,
+				"Haley": "enabled",
+			},
+		},
+
+// The following section is just in case a bouquet is given. Should be overridden with PPAF.
+		{
+			"LogName": "Haley - Flower Dance, Dating",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Haley",
+			"Entries":{
+				"FlowerDance_Accept": "{{i18n:FDAR.DSV.Haley.Dating.Accept}}",
+			},
+			"When": {
+				"HasMod": "DSV.Core",
+				"relationship:Haley": "dating",
+				"DSV.Core/FlowerQueen |contains= Haley": false,
+				"Haley": "enabled",
+			},
+		},
+	],
+}

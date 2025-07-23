@@ -1,0 +1,484 @@
+{
+    "Format": "2.3.0",
+    "Changes": [
+		
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"SeedShop",
+				"Items"
+			],
+			"Entries": {
+				
+				
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanUP": {
+					"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanUP",
+					"RandomItemId": [ "Cornucopia_ChiliPowder", "Cornucopia_RiceNoodles", "Cornucopia_Salt", "Cornucopia_SeaSalt", "Cornucopia_OrangeZest", "Cornucopia_LemonZest", "Cornucopia_Paprika", "Cornucopia_Pepper", "Cornucopia_SoySauce", "Cornucopia_BuckwheatNoodles", "Cornucopia_Kimchi" ],
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanUPComm": {
+					"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanUPComm",
+					"RandomItemId": [ "Cornucopia_ChiliPowder", "Cornucopia_RiceNoodles", "Cornucopia_Salt", "Cornucopia_SeaSalt", "Cornucopia_OrangeZest", "Cornucopia_LemonZest", "Cornucopia_Paprika", "Cornucopia_Pepper", "Cornucopia_SoySauce", "Cornucopia_BuckwheatNoodles", "Cornucopia_Kimchi" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 15,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+					"PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": 1.3
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanEP": {
+					"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanEP",
+					"RandomItemId": [ "Cornucopia_Applesauce", "Cornucopia_Butter", "Cornucopia_Margarine", "Cornucopia_NutMilk", "Cornucopia_RoastedSunflowerSeeds", "Cornucopia_RoastedPumpkinSeeds", "Cornucopia_SnackCheese", "Cornucopia_PlainYogurt", "Cornucopia_PeanutButter", "Cornucopia_ChewingGum" ],
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanEPComm": {
+					"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanEPComm",
+					"RandomItemId": [ "Cornucopia_Applesauce", "Cornucopia_Butter", "Cornucopia_Margarine", "Cornucopia_NutMilk", "Cornucopia_RoastedSunflowerSeeds", "Cornucopia_RoastedPumpkinSeeds", "Cornucopia_SnackCheese", "Cornucopia_PlainYogurt", "Cornucopia_PeanutButter", "Cornucopia_ChewingGum" ],
+					"AvailableStock": 15,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+					"PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": 1.3
+            }
+          ],
+				},
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"Priority": "Default+2",
+			"TargetField": [
+				"Joja",
+				"Items"
+			],
+			"Entries": {
+				
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanVegan": {
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanVegan",
+					"RandomItemId": [ "Cornucopia_CoconutButter", "Cornucopia_CoconutMilk", "Cornucopia_StinkyTofu", "Cornucopia_Margarine", "Cornucopia_NutButter", "Cornucopia_NutCheese", "Cornucopia_NutMilk" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanSSnack": {
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanSSnack",
+					"RandomItemId": [ "Cornucopia_ChewingGum", "Cornucopia_Applesauce", "Cornucopia_PlainYogurt", "Cornucopia_SnackCheese", "Cornucopia_RoastedPumpkinSeeds", "Cornucopia_RoastedSunflowerSeeds" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanButter": {
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanButter",
+					"RandomItemId": [ "Cornucopia_Butter", "Cornucopia_CoconutButter", "Cornucopia_CookieButter", "Cornucopia_HoneyButter", "Cornucopia_MapleButter", "Cornucopia_NutButter", "Cornucopia_CocoaButter", "Cornucopia_PeanutButter" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanBSnack": {
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanBSnack",
+					"RandomItemId": [ "Cornucopia_BrinedOlives", "Cornucopia_SnackCheese", "Cornucopia_SmokedSalmon", "Cornucopia_SmokedMeat", "Cornucopia_SmokedCheese" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanBSauce": {
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanBSauce",
+					"RandomItemId": [ "Cornucopia_Pepper", "Cornucopia_Paprika", "Cornucopia_SeaSalt", "Cornucopia_Salt", "Cornucopia_Saffron", "Cornucopia_ChiliPowder" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanSauce": {
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanSauce",
+					"RandomItemId": [ "Cornucopia_DillMayonnaise", "Cornucopia_WasabiMayonnaise", "Cornucopia_Kimchi", "Cornucopia_SoySauce", "Cornucopia_FishSauce", "Cornucopia_GarlicMayonnaise", "Cornucopia_OliveOilMayonnaise", "Cornucopia_BlackPepperMayonnaise", "Cornucopia_TruffleMayonnaise", "Cornucopia_SpicyMayonnaise" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 20,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanNoodle": {
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanNoodle",
+					"RandomItemId": [ "Cornucopia_WholeGrainNoodles", "Cornucopia_SemolinaNoodles", "Cornucopia_BuckwheatNoodles", "Cornucopia_WheatNoodles", "Cornucopia_RiceNoodles", "Cornucopia_CornFlour" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 30,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+				},
+			}	
+		},
+	{
+      "Action": "EditData",
+	  "Target": "Data/Shops",
+      "TargetField": [ "AnimalShop", "Items" ],
+      "Entries": {
+		  
+		"RSSI_Cornucopia.ArtisanMachines_RandomArtisanMarnie": {
+					"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanMarnie",
+					"RandomItemId": [ "Cornucopia_Butter", "Cornucopia_CookieButter", "Cornucopia_HoneyButter", "Cornucopia_MapleButter" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 6,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanMarnieComm": {
+					"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanMarnieComm",
+					"RandomItemId": [ "Cornucopia_Butter", "Cornucopia_CookieButter", "Cornucopia_HoneyButter", "Cornucopia_MapleButter" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+					"PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": 1.3
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanMarnie2": {
+					"Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanMarnie2",
+					"RandomItemId": [ "Cornucopia_SmokedCheese", "Cornucopia_SnackCheese" ],
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],					
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanMarnie2Comm": {
+					"Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanMarnie2Comm",
+					"RandomItemId": [ "Cornucopia_SmokedCheese", "Cornucopia_SnackCheese" ],
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+				6,
+              ]
+            }
+          ],
+					"PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": 1.3
+            }
+          ],
+				},
+		}
+    },
+	{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [
+				"Sandy",
+				"Items"
+			],
+			"Entries": {
+				
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanSandy": {
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanSandy",
+					"RandomItemId": [ "Cornucopia_CoconutButter", "Cornucopia_CoconutMilk", "Cornucopia_CoconutOil" ],
+					"AvoidRepeat": true,
+					"AvailableStock": 10,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+				1.4,
+				1.3,
+				1.2,
+				1.1,
+				1.0,
+				0.9,
+				0.8,
+				0.7,
+				0.6,
+				0.5,
+              ]
+            }
+          ],
+				},
+				"RSSI_Cornucopia.ArtisanMachines_RandomArtisanSandy2": {
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanSandy",
+					"RandomItemId": [ "Cornucopia_Pepper", "Cornucopia_Paprika", "Cornucopia_SeaSalt", "Cornucopia_Salt", "Cornucopia_Saffron", "Cornucopia_ChiliPowder" ],
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+				},
+				
+			},
+			
+	},
+	{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "FishShop",
+    "Items"
+  ],
+  "Entries": {
+		
+		"RSSI_Cornucopia.ArtisanMachines_RandomArtisanFishman": {
+					"Id": "RSSI_Cornucopia.ArtisanMachines_RandomArtisanFishman",
+					"RandomItemId": [ "Cornucopia_FishOil", "Cornucopia_FishSauce", "Cornucopia_PickledFish" ],
+					"AvoidRepeat": true,
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+				5,
+              ]
+            }
+          ],
+				},
+		
+		}	
+	}		
+	]
+}

@@ -1,0 +1,520 @@
+{
+ "Changes": [
+ 
+ //standard MoonlightJellies
+ 
+ {
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_DanceOfTheMoonlightJellies_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(F)2626": null,
+	  "(F)1687": null,
+	  "(F)1692": null,
+	  "(F)2631": null,
+	  "(F)2875": null,
+	  "(O)265": null,
+	  
+	  
+	  "boringvlln.rshops_JellyFestReward1": {
+      "Id": "boringvlln.rshops_JellyFestReward1",
+      "RandomItemId": [ "(F)2626", "(F)1687", "(F)1692", "(F)2631" ],
+	  "Price": 1000,
+	  "AvailableStock": 6,
+	  },
+	  "boringvlln.rshops_F2875": {
+      "Id": "boringvlln.rshops_F2875",
+      "ItemId": "(F)2875",
+	  "Price": 4000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_O265": {
+      "Id": "boringvlln.rshops_O265",
+      "ItemId": "(O)265",
+	  "Price": 5000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GTeaFest": {
+      "Id": "boringvlln.rshops_GTeaFest",
+      "ItemId": "(O)614",
+	  "Price": 300,
+	  "AvailableStock": 10,
+	  }
+ },
+  "When": { "MoonlightJellies": "standard" }
+},
+
+//hardmode MoonlightJellies
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_DanceOfTheMoonlightJellies_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(F)2626": null,
+	  "(F)1687": null,
+	  "(F)1692": null,
+	  "(F)2631": null,
+	  "(F)2875": null,
+	  "(O)265": null,
+	  
+	  
+	  "boringvlln.rshops_JellyFestReward1": {
+      "Id": "boringvlln.rshops_JellyFestReward1",
+      "RandomItemId": [ "(F)2626", "(F)1687", "(F)1692", "(F)2631" ],
+	  "Price": 2000,
+	  "AvailableStock": 3,
+	  },
+	  "boringvlln.rshops_F2875": {
+      "Id": "boringvlln.rshops_F2875",
+      "ItemId": "(F)2875",
+	  "Price": 8000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_O265": {
+      "Id": "boringvlln.rshops_O265",
+      "ItemId": "(O)265",
+	  "Price": 10000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_GTeaFest": {
+      "Id": "boringvlln.rshops_GTeaFest",
+      "ItemId": "(O)614",
+	  "Price": 600,
+	  "AvailableStock": 5,
+	  }
+ },
+  "When": { "MoonlightJellies": "hardmode" }
+},
+
+//standard EggFestival
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_EggFestival_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(BC)36": null,
+	  "(BC)107": null,
+	  "(O)745": null,
+	  "(BC)184": null,
+	  "(BC)188": null,
+	  "(F)1684": null,
+	  "(F)2624": null,
+	  "(F)2632": null,
+	 
+	  
+	  "boringvlln.rshops_EggFestReward1": {
+      "Id": "boringvlln.rshops_EggFestReward1",
+      "RandomItemId": [ "(BC)36", "(BC)107", "(BC)184", "(BC)188" ],
+	  "Price": 500,
+	  "AvailableStock": 10,
+	  },
+	  "boringvlln.rshops_EggFestReward2": {
+      "Id": "boringvlln.rshops_EggFestReward2",
+      "RandomItemId": [ "(F)1684", "(F)2624", "(F)2632" ],
+	  "Price": 1000,
+	  "AvailableStock": 5,
+	  },
+	  "boringvlln.rshops_StrawberryF": {
+		  "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_StrawberryF",
+      "ItemId": "(O)400",
+	  "Price": 100,
+	  "AvailableStock": 10,
+	  },
+	  "boringvlln.rshops_StrawberryFComm": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_StrawberryFComm",
+      "ItemId": "(O)400",
+	  "Price": 200,
+	  "AvailableStock": 30,
+	  },
+	  "boringvlln.rshops_GTeaFest": {
+      "Id": "boringvlln.rshops_GTeaFest",
+      "ItemId": "(O)614",
+	  "Price": 300,
+	  "AvailableStock": 10,
+	  }
+ },
+  "When": { "EggFestival": "standard" }
+},
+
+//hardmode EggFestival
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_EggFestival_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(BC)36": null,
+	  "(BC)107": null,
+	  "(O)745": null,
+	  "(BC)184": null,
+	  "(BC)188": null,
+	  "(F)1684": null,
+	  "(F)2624": null,
+	  "(F)2632": null,
+	 
+	  
+	  "boringvlln.rshops_EggFestReward1": {
+      "Id": "boringvlln.rshops_EggFestReward1",
+      "RandomItemId": [ "(BC)36", "(BC)107", "(BC)184", "(BC)188" ],
+	  "Price": 1000,
+	  "AvailableStock": 5,
+	  },
+	  "boringvlln.rshops_EggFestReward2": {
+      "Id": "boringvlln.rshops_EggFestReward2",
+      "RandomItemId": [ "(F)1684", "(F)2624", "(F)2632" ],
+	  "Price": 2000,
+	  "AvailableStock": 3,
+	  },
+	  "boringvlln.rshops_StrawberryF": {
+		  "Condition": "!PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_StrawberryF",
+      "ItemId": "(O)400",
+	  "Price": 200,
+	  "AvailableStock": 5,
+	  },
+	  "boringvlln.rshops_StrawberryFComm": {
+		  "Condition": "PLAYER_HAS_SEEN_EVENT Any 191393",
+      "Id": "boringvlln.rshops_StrawberryFComm",
+      "ItemId": "(O)400",
+	  "Price": 400,
+	  "AvailableStock": 15,
+	  },
+	  "boringvlln.rshops_GTeaFest": {
+      "Id": "boringvlln.rshops_GTeaFest",
+      "ItemId": "(O)614",
+	  "Price": 600,
+	  "AvailableStock": 5,
+	  }
+ },
+  "When": { "EggFestival": "hardmode" }
+},
+
+//standard WinterStar
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_FeastOfTheWinterStar_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(F)2625": null,
+	  "(F)1745": null,
+	  "(F)1747": null,
+	  "(F)1678": null,
+	  "(F)1390": null,
+	  "(F)807": null,
+	  "(F)2798": null,
+	  "(F)2634": null,
+	  "(F)2633": null,
+	  "(F)2635": null,
+	  "(F)2636": null,
+	  "(F)1440": null,
+	  "(F)1296": null,
+	 
+	  "boringvlln.rshops_WinterStarFestReward1": {
+      "Id": "boringvlln.rshops_WinterStarFestReward1",
+      "RandomItemId": [ "(F)1747", "(F)1390", "(F)2633", "(F)2635", "(F)2636" ],
+	  "Price": 500,
+	  "AvailableStock": 10,
+	  },
+	  "boringvlln.rshops_WinterStarFestReward2": {
+      "Id": "boringvlln.rshops_WinterStarFestReward2",
+      "RandomItemId": [ "(F)2625", "(F)1745", "(F)1678", "(F)2798", "(F)2634", "(F)1296" ],
+	  "Price": 1000,
+	  "AvailableStock": 5,
+	  },
+	  "boringvlln.rshops_F807": {
+      "Id": "boringvlln.rshops_F807",
+      "ItemId": "(F)807",
+	  "Price": 5000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_F1440": {
+      "Id": "boringvlln.rshops_F1440",
+      "ItemId": "(F)1440",
+	  "Price": 10000,
+	  "AvailableStock": 1,
+	  }
+ },
+  "When": { "WinterStar": "standard" }
+},
+
+//hardmode WinterStar
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_FeastOfTheWinterStar_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(F)2625": null,
+	  "(F)1745": null,
+	  "(F)1747": null,
+	  "(F)1678": null,
+	  "(F)1390": null,
+	  "(F)807": null,
+	  "(F)2798": null,
+	  "(F)2634": null,
+	  "(F)2633": null,
+	  "(F)2635": null,
+	  "(F)2636": null,
+	  "(F)1440": null,
+	  "(F)1296": null,
+	 
+	  "boringvlln.rshops_WinterStarFestReward1": {
+      "Id": "boringvlln.rshops_WinterStarFestReward1",
+      "RandomItemId": [ "(F)1747", "(F)1390", "(F)2633", "(F)2635", "(F)2636" ],
+	  "Price": 1000,
+	  "AvailableStock": 5,
+	  },
+	  "boringvlln.rshops_WinterStarFestReward2": {
+      "Id": "boringvlln.rshops_WinterStarFestReward2",
+      "RandomItemId": [ "(F)2625", "(F)1745", "(F)1678", "(F)2798", "(F)2634", "(F)1296" ],
+	  "Price": 2000,
+	  "AvailableStock": 3,
+	  },
+	  "boringvlln.rshops_F807": {
+      "Id": "boringvlln.rshops_F807",
+      "ItemId": "(F)807",
+	  "Price": 10000,
+	  "AvailableStock": 1,
+	  },
+	  "boringvlln.rshops_F1440": {
+      "Id": "boringvlln.rshops_F1440",
+      "ItemId": "(F)1440",
+	  "Price": 20000,
+	  "AvailableStock": 1,
+	  }
+ },
+  "When": { "WinterStar": "hardmode" }
+},
+
+//standard FlowerDance
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_FlowerDance_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(BC)48": null,
+	  "(BC)192": null,
+	  "(BC)204": null,
+	  "(BC)108": null,
+	  "(F)1973": null,
+	  "(F)1974": null,
+	  "(F)1820": null,
+	  "(F)1821": null,
+	 
+	  
+	  "boringvlln.rshops_FlowerDanceReward1": {
+      "Id": "boringvlln.rshops_FlowerDanceReward1",
+      "RandomItemId": [  "(BC)48", "(BC)192", "(BC)204", "(BC)108" ],
+	  "Price": 500,
+	  "AvailableStock": 10,
+	  },
+	  "boringvlln.rshops_FlowerDanceReward2": {
+      "Id": "boringvlln.rshops_FlowerDanceReward2",
+      "RandomItemId": [ "(F)1973", "(F)1974", "(F)1820", "(F)1821" ],
+	  "Price": 1000,
+	  "AvailableStock": 5,
+	  }	  
+ },
+  "When": { "FlowerDance": "standard" }
+},
+
+//hardmode FlowerDance
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_FlowerDance_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(BC)48": null,
+	  "(BC)192": null,
+	  "(BC)204": null,
+	  "(BC)108": null,
+	  "(F)1973": null,
+	  "(F)1974": null,
+	  "(F)1820": null,
+	  "(F)1821": null,
+	 
+	  
+	  "boringvlln.rshops_FlowerDanceReward1": {
+      "Id": "boringvlln.rshops_FlowerDanceReward1",
+      "RandomItemId": [  "(BC)48", "(BC)192", "(BC)204", "(BC)108" ],
+	  "Price": 1000,
+	  "AvailableStock": 5,
+	  },
+	  "boringvlln.rshops_FlowerDanceReward2": {
+      "Id": "boringvlln.rshops_FlowerDanceReward2",
+      "RandomItemId": [ "(F)1973", "(F)1974", "(F)1820", "(F)1821" ],
+	  "Price": 2000,
+	  "AvailableStock": 3,
+	  }	  
+ },
+  "When": { "FlowerDance": "hardmode" }
+},
+
+//standard Luau
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_Luau_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(F)2654": null,
+	  "(F)2627": null,
+	  "(F)2628": null,
+	  "(F)2629": null,
+	  "(F)2630": null,
+	  "(F)1817": null,
+	  "(F)1818": null,
+	  "(F)1819": null,
+	  "(F)1295": null,
+	  "(F)2397": null,
+	 
+	  
+	  "boringvlln.rshops_LuauReward1": {
+      "Id": "boringvlln.rshops_LuauReward1",
+      "RandomItemId": [ "(F)2654", "(F)2627", "(F)2628", "(F)2629", "(F)2630", "(F)1295" ],
+	  "Price": 1000,
+	  "AvailableStock": 5,
+	  },
+	  "boringvlln.rshops_LuauReward2": {
+      "Id": "boringvlln.rshops_LuauReward2",
+      "RandomItemId": [ "(F)1817", "(F)1818", "(F)1819", "(F)2397" ],
+	  "Price": 500,
+	  "AvailableStock": 10,
+	  }	  
+ },
+  "When": { "Luau": "standard" }
+},
+
+//hardmode Luau
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_Luau_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(F)2654": null,
+	  "(F)2627": null,
+	  "(F)2628": null,
+	  "(F)2629": null,
+	  "(F)2630": null,
+	  "(F)1817": null,
+	  "(F)1818": null,
+	  "(F)1819": null,
+	  "(F)1295": null,
+	  "(F)2397": null,
+	 
+	  
+	  "boringvlln.rshops_LuauReward1": {
+      "Id": "boringvlln.rshops_LuauReward1",
+      "RandomItemId": [ "(F)2654", "(F)2627", "(F)2628", "(F)2629", "(F)2630", "(F)1295" ],
+	  "Price": 2000,
+	  "AvailableStock": 3,
+	  },
+	  "boringvlln.rshops_LuauReward2": {
+      "Id": "boringvlln.rshops_LuauReward2",
+      "RandomItemId": [ "(F)1817", "(F)1818", "(F)1819", "(F)2397" ],
+	  "Price": 1000,
+	  "AvailableStock": 5,
+	  }	  
+ },
+  "When": { "Luau": "hardmode" }
+},
+
+//standard SpiritsEve
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_SpiritsEve_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(BC)47": null,
+	  "(F)2870": null,
+	 
+	  
+	  "boringvlln.rshops_SpiritsEveReward1": {
+      "Id": "boringvlln.rshops_SpiritsEveReward1",
+      "RandomItemId": [ "(BC)47", "(F)2870" ],
+	  "Price": 1000,
+	  "AvailableStock": 5,
+	  }
+ },
+  "When": { "SpiritsEve": "standard" }
+},
+
+//hardmode SpiritsEve
+
+{
+  "Action": "EditData",
+  "Target": "Data/Shops",
+  "TargetField": [
+    "Festival_SpiritsEve_Pierre",
+    "Items"
+  ],
+  "Entries": {
+	  
+	  "(BC)47": null,
+	  "(F)2870": null,
+	 
+	  
+	  "boringvlln.rshops_SpiritsEveReward1": {
+      "Id": "boringvlln.rshops_SpiritsEveReward1",
+      "RandomItemId": [ "(BC)47", "(F)2870" ],
+	  "Price": 2000,
+	  "AvailableStock": 3,
+	  }
+ },
+  "When": { "SpiritsEve": "hardmode" }
+},
+]
+}

@@ -1,0 +1,54 @@
+{
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Abigail",
+			"Entries": {
+				"marriage_Wed": "900 ArchaeologyHouse 11 9 0 \"Strings\\schedules\\Abigail:marriage_{{Random:museum, museum2, museum3}}\"/1730 Town 47 87 0 \"Strings\\schedules\\Abigail:marriage_Mon.001\"/2000 BusStop 9 23 3",
+				"marriage_Sun": "800 BusStop 17 22 2 \"Strings\\schedules\\Abigail:marriage_{{Random:bus, bus2}}\"/1000 Forest 14 40 2 \"Strings\\schedules\\Abigail:marriage_{{Random:forest, forest2, forest3}}\"/1430 SeedShop 34 5 0/1830 SeedShop 3 6 0 abigail_videogamesmarriage \"Strings\\schedules\\Abigail:marriage_{{Random:vgm, vgm2}}\"/2000 BusStop 9 23 3"
+			}
+		},
+
+	//NEW SCHEDULES NOT TESTED
+//		{
+//			"Action": "EditData",
+//			"Target": "Characters/schedules/Abigail",
+//			"Entries": {
+//				"marriage_Mon": "630 SeedShop 39 5 0/1030 Railroad 30 45 0/1400 Mountain 49 31 1/1740 SeedShop 3 6 0 abigail_videogames/2000 BusStop 9 23 3"
+//			},
+//			"When": {"Season": "Summer"}
+//		},
+//		{
+//			"Action": "EditData",
+//			"Target": "Characters/schedules/Abigail",
+//			"Entries": {
+//				"marriage_Mon": "800 Beach 13 39 2/1800 BusStop 9 23 3"
+//			},
+//			"When": {"Season": "Fall"}
+//		},
+//		{
+//			"Action": "EditData",
+//			"Target": "Characters/schedules/Abigail",
+//			"Entries": {
+//				"marriage_Sun": "700 ScienceHouse 5 19 17/1200 Mines 12 12 0/1500 BathHouse_WomensLocker/2000 BusStop 9 23 3"
+//			},
+//			"When": {"Season": "Winter"}
+//		},
+
+		// DOCTORS CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/schedules/Abigail",
+			"Entries": {
+				"marriage_Thu": "1000 Hospital 13 14 0 \"Strings\\schedules\\Abigail:marriage_doctormarriage\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Abigail:spring_4.002\"/1600 BusStop 9 23 3"
+			},
+			"When": {
+				"Season": "Spring",
+				"Day": "4"
+			}
+		},
+		
+		//NIGHT MARKET
+
+	]
+}

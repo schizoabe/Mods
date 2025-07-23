@@ -1,0 +1,58 @@
+﻿{
+  "Format": "2.0.0",
+  
+  "Changes": [
+    {
+      "LogName": "Add PIF Hallway of Doors",
+      "Action": "EditData",
+      "Target": "DLX.PIF/Farms",
+      "Entries": {
+        "Sharogg.HallofDoors_small": {
+          "DisplayName": "{{i18n:Sharogg.HallofDoors.name}}",
+          "DefaultArrivalTile": { "X": 25, "Y": 7 },
+          "ExcludeFromNpcPathfinding": true,
+
+          "ArrivalTile_T0": { "X": 7, "Y": 7 },
+
+          "MapAsset_T0": "Maps/PIF/HallofDoors1",
+
+          "Preview": "Sharogg.HallofDoors1_Preview"
+        },
+        "Sharogg.HallofDoors_medium": {
+          "DisplayName": "{{i18n:Sharogg.HallofDoors.name}}",
+          "DefaultArrivalTile": { "X": 25, "Y": 7 },
+          "ExcludeFromNpcPathfinding": true,
+
+          "ArrivalTile_T0": { "X": 13, "Y": 7 },
+
+          "MapAsset_T0": "Maps/PIF/HallofDoors2",
+
+          "Preview": "Sharogg.HallofDoors2_Preview"
+        },
+        "Sharogg.HallofDoors_large": {
+          "DisplayName": "{{i18n:Sharogg.HallofDoors.name}}",
+          "DefaultArrivalTile": { "X": 25, "Y": 7 },
+          "ExcludeFromNpcPathfinding": true,
+
+          "ArrivalTile_T0": { "X": 25, "Y": 7 },
+
+          "MapAsset_T0": "Maps/PIF/HallofDoors3",
+
+          "Preview": "Sharogg.HallofDoors3_Preview"
+        }
+      }
+    },
+    {
+      "LogName": "Load Hallway Map",
+      "Action": "Load",
+      "Target": "Maps/PIF/HallofDoors1, Maps/PIF/HallofDoors2, Maps/PIF/HallofDoors3",
+      "FromFile": "assets/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "LogName": "Load Hallway Previews",
+      "Action": "Load",
+      "Target": "Sharogg.HallofDoors1_Preview, Sharogg.HallofDoors2_Preview, Sharogg.HallofDoors3_Preview",
+      "FromFile": "assets/{{TargetWithoutPath}}.png"
+    }
+  ]
+}

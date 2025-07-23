@@ -1,0 +1,3339 @@
+{
+	"Changes": [
+        {
+			"Action": "Load",
+			"Target": "Mods/{{ModId}}/Machines",
+			"FromFile": "assets/Resources/Machines.png"
+		},
+		{
+			"LogName": "SM Machines SETUP",
+			"Action": "EditData",
+			"Target": "Data/BigCraftables",
+			"Entries": {
+				"{{ModId}}_AF": {
+					"Name": "Alchemical Fuser",
+					"DisplayName": "{{i18n: smAF_Name}}",
+					"Description": "{{i18n: smAF_Description}}",
+					"Price": 1,
+					"Fragility": 0,
+					"CanBePlacedOutdoors": true,
+					"CanBePlacedIndoors": true,
+					"IsLamp": false,
+					"Texture": "Mods/{{ModId}}/Machines",
+					"SpriteIndex": 0,
+					"CustomFields": {}
+				},
+				"{{ModId}}_BF": {
+					"Name": "Brazier Furnace",
+					"DisplayName": "{{i18n: smBF_Name}}",
+					"Description": "{{i18n: smBF_Description}}",
+					"Price": 1,
+					"Fragility": 0,
+					"CanBePlacedOutdoors": true,
+					"CanBePlacedIndoors": true,
+					"IsLamp": false,
+					"Texture": "Mods/{{ModId}}/Machines",
+					"SpriteIndex": 10,
+					"CustomFields": {}
+				},
+				"{{ModId}}_CZ": {
+					"Name": "Carbonizer",
+					"DisplayName": "{{i18n: smCZ_Name}}",
+					"Description": "{{i18n: smCZ_Description}}",
+					"Price": 1,
+					"Fragility": 0,
+					"CanBePlacedOutdoors": true,
+					"CanBePlacedIndoors": true,
+					"IsLamp": false,
+					"Texture": "Mods/{{ModId}}/Machines",
+					"SpriteIndex": 20,
+					"CustomFields": {}
+				},
+				"{{ModId}}_FM": {
+					"Name": "Fertilizer Maker",
+					"DisplayName": "{{i18n: smFM_Name}}",
+					"Description": "{{i18n: smFM_Description}}",
+					"Price": 1,
+					"Fragility": 0,
+					"CanBePlacedOutdoors": true,
+					"CanBePlacedIndoors": true,
+					"IsLamp": false,
+					"Texture": "Mods/{{ModId}}/Machines",
+					"SpriteIndex": 30,
+					"CustomFields": {}
+				},
+				"{{ModId}}_GP": {
+					"Name": "Gourmet Cheese Press",
+					"DisplayName": "{{i18n: smGP_Name}}",
+					"Description": "{{i18n: smGP_Description}}",
+					"Price": 1,
+					"Fragility": 0,
+					"CanBePlacedOutdoors": true,
+					"CanBePlacedIndoors": true,
+					"IsLamp": false,
+					"Texture": "Mods/{{ModId}}/Machines",
+					"SpriteIndex": 13,
+					"CustomFields": {}
+				},
+				"{{ModId}}_GM": {
+					"Name": "Gourmet Mayonnaise Machine",
+					"DisplayName": "{{i18n: smGM_Name}}",
+					"Description": "{{i18n: smGM_Description}}",
+					"Price": 1,
+					"Fragility": 0,
+					"CanBePlacedOutdoors": true,
+					"CanBePlacedIndoors": true,
+					"IsLamp": false,
+					"Texture": "Mods/{{ModId}}/Machines",
+					"SpriteIndex": 23,
+					"CustomFields": {}
+				},
+				"{{ModId}}_NP": {
+					"Name": "Nickel Lamp-post",
+					"DisplayName": "{{i18n: smNP_Name}}",
+					"Description": "{{i18n: smNP_Description}}",
+					"Price": 1,
+					"Fragility": 0,
+					"CanBePlacedOutdoors": true,
+					"CanBePlacedIndoors": true,
+					"IsLamp": true,
+					"Texture": "Mods/{{ModId}}/Machines",
+					"SpriteIndex": 34,
+					"ContextTags": [
+						"light_source",
+					  ],
+					"CustomFields": {}
+				},
+				"{{ModId}}_PM": {
+					"Name": "Pan of Meals",
+					"DisplayName": "{{i18n: smPM_Name}}",
+					"Description": "{{i18n: smPM_Description}}",
+					"Price": 1,
+					"Fragility": 0,
+					"CanBePlacedOutdoors": true,
+					"CanBePlacedIndoors": true,
+					"IsLamp": false,
+					"Texture": "Mods/{{ModId}}/Machines",
+					"SpriteIndex": 16,
+					"CustomFields": {}
+				},
+            },
+        },
+		{
+			"LogName": "SM Machines PROCESS",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"Entries": {
+				"(BC){{ModId}}_AF": {
+					"OutputRules": [
+						{
+							"Id": "{{ModId}}.AF.Hardwood",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)388", //Wood
+									"RequiredCount": 20,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)709",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 5,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 120,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.AF.Slime",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)153", //Algae
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)766",
+									"CopyQuality": false,
+                                    "MinStack": 10,
+                                    "MaxStack": 35,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 250,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.AF.BlueSlimeEgg",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)680", //Green Egg
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)413",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 2160,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.AF.RedSlimeEgg",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)413", //Blue Egg
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)437",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 2880,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.AF.PurpleSlimeEgg",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)437", //Red Egg
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)439",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 3600,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.AF.TigerSlimeEgg",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)439", //Purple Egg
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)857",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 5760,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.AF.SlimeTwo",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)157", //White Algae
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)766",
+									"CopyQuality": false,
+                                    "MinStack": 15,
+                                    "MaxStack": 20,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 250,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.AF.Slime",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)153", //Algae
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)766",
+									"CopyQuality": false,
+                                    "MinStack": 10,
+                                    "MaxStack": 35,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 250,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.AF.PrismaticShard",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O){{ModId}}_RainbowFragment",
+									"RequiredCount": 10,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)74",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 10080,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.AF.LiquidLuck",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)268", //
+									"RequiredCount": 10,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_LiquidLuck",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 20160,
+							"DaysUntilReady": -1,
+						},
+					],
+					"AdditionalConsumedItems": null,
+					"WorkingEffects":[
+						{
+							"Id": "Default",
+							"Condition": null,
+							"Sounds": [
+							  {
+								"Id": "Ship",
+								"Delay": 0
+							  },
+							  {
+								"Id": "bubbles",
+								"Delay": 0
+							  }
+							],
+							"Frames":[2,3,4,5,6,7],
+							"Interval":200
+						}
+					],
+					"InvalidItemMessage": "{{i18n: Invalid.AF}}",
+					"ShowNextIndexWhenReady": true,
+				},
+				"(BC){{ModId}}_BF": {
+					"OutputRules": [
+						{
+							"Id": "{{ModId}}.BF.CBar",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)378", //COre
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)334",
+									"CopyQuality": false,
+                                    "MinStack": 2,
+                                    "MaxStack": 2,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 30,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.BF.CIron",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)380", //IOre
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)335",
+									"CopyQuality": false,
+                                    "MinStack": 2,
+                                    "MaxStack": 2,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 120,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.BF.GBar",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)384", //GIore
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)336",
+									"CopyQuality": false,
+                                    "MinStack": 2,
+                                    "MaxStack": 2,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 300,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.BF.IBar",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)386", //IIore
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)337",
+									"CopyQuality": false,
+                                    "MinStack": 2,
+                                    "MaxStack": 2,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 480,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.BF.RBar",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)909", //RIore
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)910",
+									"CopyQuality": false,
+                                    "MinStack": 2,
+                                    "MaxStack": 2,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 560,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.BF.RQuartz",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)80", //QQ
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)338",
+									"CopyQuality": false,
+                                    "MinStack": 2,
+                                    "MaxStack": 2,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 90,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.BF.FQuartz",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)82", //FQQ
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)338",
+									"CopyQuality": false,
+                                    "MinStack": 6,
+                                    "MaxStack": 6,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 120,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.BF.NBar",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O){{ModId}}_NickelNugget", //NOre
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_NickelBar",
+									"CopyQuality": false,
+                                    "MinStack": 2,
+                                    "MaxStack": 2,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 180,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.BF.BBrick",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O){{ModId}}_Blackstone",
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_BlackBrick",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 720,
+							"DaysUntilReady": -1,
+						},
+					],
+					"AdditionalConsumedItems": [
+						{
+							"ItemID": "(O)382",
+							"RequiredCount": 1,
+							"InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12772]"
+						}
+					],
+					"LoadEffects":[
+						{
+							"Sounds": [
+							  {
+								"Id": "openBox",
+								"Delay": 0
+							  },
+							  {
+								"Id": "Ship",
+								"Delay": 0
+							  },
+							  {
+								"Id": "furnace",
+								"Delay": 0
+							  }
+							],
+							"Interval": 100
+						}
+					],
+					"InvalidItemMessage": "{{i18n: Invalid.BF}}",
+					"InvalidCountMessage": "[LocalizedText Strings\\StringsFromCSFiles:Object.cs.12777]",
+					"ShowNextIndexWhileWorking": true,
+				},
+				"(BC){{ModId}}_CZ": {
+					"OutputRules": [
+						{
+							"Id": "{{ModId}}.CZ.WoodC",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)388", //W
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)382",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 30,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.CZ.HWC",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)709", //HW
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)382",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 60,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.CZ.DWC",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)169", //DW
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)382",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 15,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 15,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.CZ.WFC",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)322", //WF
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)382",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 60,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.CZ.HWFC",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)298", //HWF
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)382",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 60,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.CZ.WFFC",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)328", //WFF
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)382",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 30,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.CZ.WPC",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)405", //WP
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)382",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 30,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.CZ.WGC",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)325", //WG
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)382",
+									"CopyQuality": false,
+                                    "MinStack": 1,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 60,
+							"DaysUntilReady": -1,
+						},
+					],
+					"LoadEffects":[
+						{
+							"Sounds": [
+							  {
+								"Id": "openBox",
+								"Delay": 0
+							  },
+							  {
+								"Id": "Ship",
+								"Delay": 0
+							  },
+							  {
+								"Id": "furnace",
+								"Delay": 0
+							  }
+							],
+							"Interval": 100
+						}
+					],
+					"InvalidItemMessage": "{{i18n: Invalid.CZ}}",
+					"ShowNextIndexWhileWorking": true,
+				},
+				"(BC){{ModId}}_GM": {
+					"OutputRules": [
+						{
+							"Id": "{{ModId}}.GM.LDMayo",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O){{ModId}}_LargeDuckEgg",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_LargeDuckMayonnaise",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 200,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.GM.DMayo",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)442",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)307",
+									"CopyQuality": true,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 90,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.GM.LVMayo",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O){{ModId}}_LargeVoidEgg",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_LargeVoidMayonnaise",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 200,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.GM.VMayo",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)305",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)308",
+									"CopyQuality": true,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 90,
+							"DaysUntilReady": -1,
+						},
+
+						{
+							"Id": "{{ModId}}.GM.OMayo",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)289",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_DelightMayonnaise",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 240,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.GM.DnMayo",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)107",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)807",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 90,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.GM.LGMayo",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O){{ModId}}_LargeGoldenEgg",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_ShinyMayonnaise",
+									"CopyQuality": true,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 200,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.GM.GMayo",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)928",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)306",
+                                    "MinStack": 3,
+                                    "MaxStack": 3,
+									"Quality": 2
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 90,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.GM.LMayo",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredTags": [
+										"egg_item",
+										"large_egg_item"
+									],
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_LargeMayonnaise",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 200,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.GM.Mayo",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredTags": [
+										"egg_item",
+										"!large_egg_item"
+									],
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)306",
+									"CopyQuality": true,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 90,
+							"DaysUntilReady": -1,
+						},
+					],
+					"LoadEffects":[
+						{
+							"Sounds": [
+							  {
+								"Id": "Ship",
+								"Delay": 0
+							  },
+							  {
+								"Id": "bubbles",
+								"Delay": 0
+							  }
+							],
+							"Interval": 100
+						}
+					],
+					"InvalidItemMessage": "{{i18n: Invalid.GM}}",
+					"ShowNextIndexWhileWorking": true,
+				},
+				"(BC){{ModId}}_GP": {
+					"OutputRules": [
+						{
+							"Id": "{{ModId}}.GP.BCheese",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)186",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_BigCheese",
+									"CopyQuality": true,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								},
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 400,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.GP.Cheese",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)184",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)424",
+									"CopyQuality": true,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 100,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.GP.GBCheese",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)438",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O){{ModId}}_BigGoatCheese",
+									"CopyQuality": true,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								},
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 400,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.GP.GCheese",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)436",
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)426",
+									"CopyQuality": true,
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 100,
+							"DaysUntilReady": -1,
+						},
+					],
+					"LoadEffects":[
+						{
+							"Sounds": [
+							  {
+								"Id": "Ship",
+								"Delay": 0
+							  },
+							  {
+								"Id": "bubbles",
+								"Delay": 0
+							  }
+							],
+							"Interval": 100
+						}
+					],
+					"InvalidItemMessage": "{{i18n: Invalid.GP}}",
+					"ShowNextIndexWhileWorking": true,
+				},
+				"(BC){{ModId}}_PM": {
+					"OutputRules": [
+						{
+							"Id": "{{ModId}}.PM.Random",
+							"Triggers": [
+								{
+									"Trigger": "OutputCollected, MachinePutDown",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "RANDOM_ITEMS (O)",
+									"PerItemCondition": "ITEM_CATEGORY Target -7",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 720,
+							"DaysUntilReady": -1,
+						},
+					],
+					"LoadEffects":[
+						{
+							"Sounds": [
+							  {
+								"Id": "openBox",
+								"Delay": 0
+							  },
+							  {
+								"Id": "Ship",
+								"Delay": 0
+							  }
+							],
+							"Interval": 100
+						}
+					],
+					"ShowNextIndexWhileWorking": false,
+					"ShowNextIndexWhenReady": true,
+				},
+			},
+		},
+		{
+			"LogName": "SM Machines FM - Immersive Config",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+            "When": {
+                "Immersive Fertilizer Maker": true
+            },
+			"Entries": {
+				"(BC){{ModId}}_FM": {
+					"OutputRules": [
+						{
+							"Id": "{{ModId}}.FM.Quality.1",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": null,
+									"RequiredTags": [
+										"category_fish"
+									  ],
+									"RequiredCount": 5,
+									"Condition": "SYNCED_CHOICE tick itemChosen 1 2 1",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)368",
+									"CopyQuality": false,
+                                    "MinStack": 15,
+                                    "MaxStack": 50,
+									"CustomData": {
+										"selph.ExtraMachineConfig.RequirementId.1": "(O)771",
+										"selph.ExtraMachineConfig.RequirementCount.1": "5",
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n: Missing.Fiber}}"
+									},
+								},
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 240,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.Quality.2",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": null,
+									"RequiredTags": [
+										"category_fish"
+									  ],
+									"RequiredCount": 5,
+									"Condition": "SYNCED_CHOICE tick itemChosen 1 2 2",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)369",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 15,
+									"CustomData": {
+										"selph.ExtraMachineConfig.RequirementId.1": "(O)771",
+										"selph.ExtraMachineConfig.RequirementCount.1": "5",
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n: Missing.Fiber}}"
+									},
+								},
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 240,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.Water.1",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": 330,
+									"RequiredCount": 5,
+									"Condition": "SYNCED_CHOICE tick itemChosen 1 3 1",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)370",
+									"CopyQuality": false,
+                                    "MinStack": 30,
+                                    "MaxStack": 50,
+									"CustomData": {
+										"selph.ExtraMachineConfig.RequirementId.1": "(O)771",
+										"selph.ExtraMachineConfig.RequirementCount.1": "5",
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n: Missing.Fiber}}"
+									},
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 240,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.Water.2",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": 330,
+									"RequiredCount": 5,
+									"Condition": "SYNCED_CHOICE tick itemChosen 1 3 2",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)371",
+									"CopyQuality": false,
+                                    "MinStack": 15,
+                                    "MaxStack": 30,
+									"CustomData": {
+										"selph.ExtraMachineConfig.RequirementId.1": "(O)771",
+										"selph.ExtraMachineConfig.RequirementCount.1": "5",
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n: Missing.Fiber}}"
+									},
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 240,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.Water.3",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": 330,
+									"RequiredCount": 5,
+									"Condition": "SYNCED_CHOICE tick itemChosen 1 3 3",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)920",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+									"CustomData": {
+										"selph.ExtraMachineConfig.RequirementId.1": "(O)771",
+										"selph.ExtraMachineConfig.RequirementCount.1": "5",
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n: Missing.Fiber}}"
+									},
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 240,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.Speed.1",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": null,
+									"RequiredTags": [
+										"category_syrup"
+									  ],
+									"RequiredCount": 5,
+									"Condition": "SYNCED_CHOICE tick itemChosen 1 2 1",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)465",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 15,
+									"CustomData": {
+										"selph.ExtraMachineConfig.RequirementId.1": "(O)771",
+										"selph.ExtraMachineConfig.RequirementCount.1": "5",
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n: Missing.Fiber}}"
+									},
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 240,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.Speed.2",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": null,
+									"RequiredTags": [
+										"category_syrup"
+									  ],
+									"RequiredCount": 5,
+									"Condition": "SYNCED_CHOICE tick itemChosen 1 2 2",
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)466",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+									"CustomData": {
+										"selph.ExtraMachineConfig.RequirementId.1": "(O)771",
+										"selph.ExtraMachineConfig.RequirementCount.1": "5",
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n: Missing.Fiber}}"
+									},
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 240,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.TopQuality",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": null,
+									"RequiredTags": [
+										"category_vegetable"
+									  ],
+									"RequiredCount": 5,
+									"Condition": "PLAYER_STAT Current walnutsFound 100 100"
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)919",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+									"CustomData": {
+										"selph.ExtraMachineConfig.RequirementId.1": "(O)771",
+										"selph.ExtraMachineConfig.RequirementCount.1": "5",
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n: Missing.Fiber}}"
+									},
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 480,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.TopSpeed",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": null,
+									"RequiredTags": [
+										"category_fruits"
+									  ],
+									"RequiredCount": 5,
+									"Condition": "PLAYER_STAT Current walnutsFound 100 100"
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)918",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+									"CustomData": {
+										"selph.ExtraMachineConfig.RequirementId.1": "(O)771",
+										"selph.ExtraMachineConfig.RequirementCount.1": "5",
+										"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n: Missing.Fiber}}"
+									},
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 480,
+							"DaysUntilReady": -1,
+						},
+					],
+					"AdditionalConsumedItems": [
+						{
+							"ItemID": "(O){{ModId}}_Glue",
+							"RequiredCount": 1,
+							"InvalidCountMessage": "{{i18n: Missing.Glue}}"
+						}
+					],
+					"LoadEffects":[
+						{
+							"Sounds": [
+							  {
+								"Id": "Ship",
+								"Delay": 0
+							  },
+							  {
+								"Id": "bubbles",
+								"Delay": 0
+							  }
+							],
+							"Interval": 100
+						}
+					],
+					"InvalidItemMessage": "{{i18n: Invalid.FM}}",
+					"ShowNextIndexWhileWorking": true,
+				},
+			}
+		},
+		{
+			"LogName": "SM Machines FM - Content Patcher Only",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"When": {
+                "Immersive Fertilizer Maker": false
+            },
+
+			"Entries": {
+				"(BC){{ModId}}_FM": {
+					"OutputRules": [
+						{
+							"Id": "{{ModId}}.FM.BF",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)92", //SAP
+									"RequiredCount": 10,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)368",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 20,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.QF",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": null,
+									"RequiredTags": [
+										"category_fish"
+									  ],
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)369",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 240,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.DF",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": "(O)337", //IBar
+									"RequiredCount": 5,
+									"Condition": "PLAYER_STAT Current walnutsFound 100 100"
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)919",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 680,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.BRS",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": null,
+									"RequiredTags": [
+										"item_stone"
+									],
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)370",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 20,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.QRS",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": null,
+									"RequiredTags": [
+										"item_fiber"
+									],
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)371",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 240,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.DRS",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": null,
+									"RequiredTags": [
+										"item_clay"
+									],
+									"RequiredCount": 5,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)920",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 680,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.BSG",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": 726,
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)465",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 20,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.DSG",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": 725,
+									"RequiredCount": 1,
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)466",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 180,
+							"DaysUntilReady": -1,
+						},
+						{
+							"Id": "{{ModId}}.FM.HSG",
+							"Triggers": [
+								{
+									"Trigger": "ItemPlacedInMachine",
+									"RequiredItemId": 909,
+									"RequiredCount": 5,
+									"Condition": "PLAYER_STAT Current walnutsFound 100 100"
+								}
+							],
+							"OutputItem": [
+								{
+									"ItemId": "(O)918",
+									"CopyQuality": false,
+                                    "MinStack": 5,
+                                    "MaxStack": 10,
+								}
+							],
+							"UseFirstValidOutput": false,
+							"MinutesUntilReady": 680,
+							"DaysUntilReady": -1,
+						},
+					],
+					"AdditionalConsumedItems": [
+						{
+							"ItemID": "(O){{ModId}}_Glue",
+							"RequiredCount": 1,
+							"InvalidCountMessage": "{{i18n: Missing.Glue}}"
+						}
+					],
+					"LoadEffects":[
+						{
+							"Sounds": [
+							  {
+								"Id": "Ship",
+								"Delay": 0
+							  },
+							  {
+								"Id": "bubbles",
+								"Delay": 0
+							  }
+							],
+							"Interval": 100
+						}
+					],
+					"InvalidItemMessage": "{{i18n: Invalid.FM}}",
+					"ShowNextIndexWhileWorking": true,
+				},
+			}
+		},
+		// VANILLA
+		{
+			"LogName": "SM Machines KEG - Extra Config",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"When": {
+                "HasMod |contains=selph.ExtraMachineConfig": "true",
+            },
+			"TargetField": [ "(BC)12", "OutputRules" ],
+			"Entries": {
+				"{{ModId}}_Glue.Process":{
+					"Id": "{{ModId}}_Glue.Process",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": 92,
+							"RequiredCount": 10,
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O){{ModId}}_Glue",
+							"CopyQuality": true,
+							"MinStack": 1,
+							"MaxStack": 1,
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)724",
+								"selph.ExtraMachineConfig.RequirementCount.1": "1",
+								"selph.ExtraMachineConfig.RequirementId.2": "(O)725",
+								"selph.ExtraMachineConfig.RequirementCount.2": "1",
+								"selph.ExtraMachineConfig.RequirementId.3": "(O)726",
+								"selph.ExtraMachineConfig.RequirementCount.3": "1",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n: Missing.Syrup}}"
+							},
+						},
+					],
+					"UseFirstValidOutput": false,
+					"MinutesUntilReady": 150,
+					"DaysUntilReady": -1,
+				},
+			},
+		},
+		{
+			"LogName": "SM Machines KEG - Content Patcher Only",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"When": {
+                "HasMod |contains=selph.ExtraMachineConfig": "false",
+            },
+			"TargetField": [ "(BC)12", "OutputRules" ],
+			"Entries": {
+				"{{ModId}}_Glue.Process":{
+					"Id": "{{ModId}}_Glue.Process",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredTags": [
+								"syrup_item"
+							],
+							"RequiredCount": 3,
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O){{ModId}}_Glue",
+							"CopyQuality": true,
+							"MinStack": 1,
+							"MaxStack": 1,
+						},
+					],
+					"UseFirstValidOutput": false,
+					"MinutesUntilReady": 150,
+					"DaysUntilReady": -1,
+				},
+			},
+		},
+		{
+			"LogName": "SM Machines MAYO",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC)24", "OutputRules" ],
+			"Entries": {
+				"{{ModId}}_LDMayo": {
+					"Id": "{{ModId}}_LDMayo",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O){{ModId}}_LargeDuckEgg",
+							"RequiredCount": 1,
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)307",
+							"MinStack": 1,
+							"MaxStack": 1,
+							"Quality": 2
+						}
+					],
+					"UseFirstValidOutput": false,
+					"MinutesUntilReady": 180,
+					"DaysUntilReady": -1,
+				},
+				"{{ModId}}_LVMayo": {
+					"Id": "{{ModId}}_LVMayo",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O){{ModId}}_LargeVoidEgg",
+							"RequiredCount": 1,
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)308",
+							"MinStack": 1,
+							"MaxStack": 1,
+							"Quality": 2
+						}
+					],
+					"UseFirstValidOutput": false,
+					"MinutesUntilReady": 180,
+					"DaysUntilReady": -1,
+				},
+				"{{ModId}}_LGMayo": {
+					"Id": "{{ModId}}_LGMayo",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O){{ModId}}_LargeGoldenEgg",
+							"RequiredCount": 1,
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)306",
+							"MinStack": 3,
+							"MaxStack": 5,
+							"Quality": 2
+						}
+					],
+					"UseFirstValidOutput": false,
+					"MinutesUntilReady": 180,
+					"DaysUntilReady": -1,
+				},
+			},
+			"MoveEntries": [
+				{
+					"ID": "{{ModId}}_LDMayo",
+					"BeforeId": "Default_LargeEgg"
+				},
+				{
+					"ID": "{{ModId}}_LVMayo",
+					"BeforeId": "{{ModId}}_LDMayo"
+				},
+				{
+					"ID": "{{ModId}}_LGMayo",
+					"BeforeId": "{{ModId}}_LVMayo"
+
+				}
+			]
+		},
+		{
+			"LogName": "SM Machines CASK",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC)163", "OutputRules" ],
+			"Entries": {
+				"SM.Cask": {
+					"Id": "SM.Cask.Outputs",
+					"Triggers": [
+						{
+						  "RequiredItemId": "(O){{ModId}}_BigCheese",
+						},
+						{
+							"RequiredItemId": "(O){{ModId}}_BigGoatCheese",
+						}
+					],
+					"OutputItem": [
+						{
+						  "CustomData": {
+							"AgingMultiplier": "4"
+						  },
+						  "OutputMethod": "StardewValley.Objects.Cask, Stardew Valley: OutputCask",
+						  "PriceModifierMode": "Stack",
+						  "Id": "Default",
+						  "MinStack": 1,
+						  "MaxStack": 1,
+						  "Quality": -1,
+						  "StackModifierMode": "Stack",
+						  "QualityModifierMode": "Stack",
+						}
+					],
+				},
+			}
+		},
+		{
+			"LogName": "SM Machines Furnace",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC)13", "OutputRules" ],
+			"Entries": {
+				"{{ModId}}_NBar": {
+					"Id": "NBar",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O){{ModId}}_NickelNugget",
+							"RequiredCount": 5,
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O){{ModId}}_NickelBar",
+							"CopyQuality": false,
+							"MinStack": 1,
+							"MaxStack": 1,
+						}
+					],
+					"UseFirstValidOutput": false,
+					"MinutesUntilReady": 360,
+					"DaysUntilReady": -1,
+				},
+				"{{ModId}}_Blackstone": {
+					"Id": "Blackstone",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O){{ModId}}_Blackstone",
+							"RequiredCount": 5,
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O){{ModId}}_BlackBrick",
+							"CopyQuality": false,
+							"MinStack": 1,
+							"MaxStack": 1,
+						}
+					],
+					"UseFirstValidOutput": false,
+					"MinutesUntilReady": 1440,
+					"DaysUntilReady": -1,
+				},
+			},
+		},
+		{
+			"LogName": "SM Machines Heavy Furnace",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC)HeavyFurnace", "OutputRules" ],
+			"Entries": {
+				"{{ModId}}_NBar": {
+					"Id": "{{ModId}}_NOre",
+					"Triggers": [
+					  {
+						"Id": "ItemPlacedInMachine",
+						"Trigger": "ItemPlacedInMachine",
+						"RequiredItemId": "(O){{ModId}}_NickelNugget",
+						"RequiredTags": null,
+						"RequiredCount": 25,
+						"Condition": null
+					  }
+					],
+					"UseFirstValidOutput": false,
+					"OutputItem": [
+					  {
+						"CustomData": null,
+						"OutputMethod": null,
+						"CopyColor": false,
+						"CopyPrice": false,
+						"CopyQuality": false,
+						"PreserveType": null,
+						"PreserveId": null,
+						"IncrementMachineParentSheetIndex": 0,
+						"PriceModifiers": null,
+						"PriceModifierMode": "Stack",
+						"Condition": null,
+						"Id": "(O){{ModId}}_NickelBar",
+						"ItemId": "(O){{ModId}}_NickelBar",
+						"RandomItemId": null,
+						"MaxItems": null,
+						"MinStack": 5,
+						"MaxStack": 6,
+						"Quality": -1,
+						"ObjectInternalName": null,
+						"ObjectDisplayName": null,
+						"ToolUpgradeLevel": -1,
+						"IsRecipe": false,
+						"StackModifiers": null,
+						"StackModifierMode": "Stack",
+						"QualityModifiers": null,
+						"QualityModifierMode": "Stack",
+						"ModData": null,
+						"PerItemCondition": null
+					  }
+					],
+					"MinutesUntilReady": 360,
+					"DaysUntilReady": -1,
+					"InvalidCountMessage": null,
+					"RecalculateOnCollect": false
+				},
+				"{{ModId}}_Blackstone": {
+					"Id": "{{ModId}}_Blackstone",
+					"Triggers": [
+					  {
+						"Id": "ItemPlacedInMachine",
+						"Trigger": "ItemPlacedInMachine",
+						"RequiredItemId": "(O){{ModId}}_Blackstone",
+						"RequiredTags": null,
+						"RequiredCount": 25,
+						"Condition": null
+					  }
+					],
+					"UseFirstValidOutput": false,
+					"OutputItem": [
+					  {
+						"CustomData": null,
+						"OutputMethod": null,
+						"CopyColor": false,
+						"CopyPrice": false,
+						"CopyQuality": false,
+						"PreserveType": null,
+						"PreserveId": null,
+						"IncrementMachineParentSheetIndex": 0,
+						"PriceModifiers": null,
+						"PriceModifierMode": "Stack",
+						"Condition": null,
+						"Id": "(O){{ModId}}_BlackBrick",
+						"ItemId": "(O){{ModId}}_BlackBrick",
+						"RandomItemId": null,
+						"MaxItems": null,
+						"MinStack": 5,
+						"MaxStack": 6,
+						"Quality": -1,
+						"ObjectInternalName": null,
+						"ObjectDisplayName": null,
+						"ToolUpgradeLevel": -1,
+						"IsRecipe": false,
+						"StackModifiers": null,
+						"StackModifierMode": "Stack",
+						"QualityModifiers": null,
+						"QualityModifierMode": "Stack",
+						"ModData": null,
+						"PerItemCondition": null
+					  }
+					],
+					"MinutesUntilReady": 1440,
+					"DaysUntilReady": -1,
+					"InvalidCountMessage": null,
+					"RecalculateOnCollect": false
+				},
+			},
+		},
+		// COMPATIBILITIES
+		{
+			"LogName": "SM Machines MAYO - VMV",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC){{ModId}}_GM",
+				"OutputRules"
+			],
+			"Entries": {
+				"Lumisteria.MtVapius_MayonnaiseMachineGooseMayoRules": {
+					"Id": "Lumisteria.MtVapius_MayonnaiseMachineGooseMayoRules",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "Lumisteria.MtVapius_GooseEgg",
+							"RequiredTags": null,
+							"RequiredCount": 1,
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"Id": "Lumisteria.MtVapius_GooseMayonnaise",
+							"ItemId": "(O)Lumisteria.MtVapius_GooseMayonnaise",
+						}
+					],
+					"MinutesUntilReady": 90,
+					"DaysUntilReady": -1,
+				},
+				"Lumisteria.MtVapius_MayonnaiseMachineStellarGooseMayoRules": {
+					"Id": "Lumisteria.MtVapius_MayonnaiseMachineStellarGooseMayoRules",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "Lumisteria.MtVapius_StellarGooseEgg",
+							"RequiredTags": null,
+							"RequiredCount": 1,
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"Id": "Lumisteria.MtVapius_StellarGooseMayonnaise",
+							"ItemId": "(O)Lumisteria.MtVapius_StellarGooseMayonnaise",
+						}
+					],
+					"MinutesUntilReady": 90,
+					"DaysUntilReady": -1,
+				},
+				"Lumisteria.MtVapius_MayonnaiseMachineSpeckledFowlMayoRules": {
+					"Id": "Lumisteria.MtVapius_MayonnaiseMachineSpeckledFowlMayoRules",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "Lumisteria.MtVapius_SpeckledFowlEgg",
+							"RequiredTags": null,
+							"RequiredCount": 1,
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"Id": "Lumisteria.MtVapius_SpeckledFowlMayonnaise",
+							"ItemId": "(O)Lumisteria.MtVapius_SpeckledFowlMayonnaise",
+						}
+					],
+					"MinutesUntilReady": 90,
+					"DaysUntilReady": -1,
+				},
+				"Lumisteria.MtVapius_MayonnaiseMachineSpeckledFowlVoidMayoRules": {
+					"Id": "Lumisteria.MtVapius_MayonnaiseMachineSpeckledFowlVoidMayoRules",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "Lumisteria.MtVapius_SpeckledFowlVoidEgg",
+							"RequiredTags": null,
+							"RequiredCount": 1,
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"Id": "Lumisteria.MtVapius_SpeckledFowlVoidMayonnaise",
+							"ItemId": "(O)Lumisteria.MtVapius_SpeckledFowlVoidMayonnaise",
+						}
+					],
+					"MinutesUntilReady": 90,
+					"DaysUntilReady": -1,
+				},
+			},
+			"MoveEntries": [
+				{
+					"ID": "Lumisteria.MtVapius_MayonnaiseMachineGooseMayoRules",
+					"BeforeId": "{{ModId}}.GM.LDMayo"
+				},
+				{
+					"ID": "Lumisteria.MtVapius_MayonnaiseMachineStellarGooseMayoRules",
+					"BeforeId": "Lumisteria.MtVapius_MayonnaiseMachineGooseMayoRules"
+				},
+				{
+					"ID": "Lumisteria.MtVapius_MayonnaiseMachineSpeckledFowlMayoRules",
+					"BeforeId": "Lumisteria.MtVapius_MayonnaiseMachineStellarGooseMayoRules"
+				},
+				{
+					"ID": "Lumisteria.MtVapius_MayonnaiseMachineSpeckledFowlVoidMayoRules",
+					"BeforeId": "Lumisteria.MtVapius_MayonnaiseMachineSpeckledFowlMayoRules"
+				},
+			],
+			"When": {
+                "HasMod |contains=Lumisteria.MtVapius": "true",
+            },
+		},
+		{
+			"LogName": "SM Machines CHEESE - VMV",
+			"Action": "EditData",
+			"When": { "HasMod |contains=Lumisteria.MtVapius": "true" },
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC){{ModId}}_GP",
+				"OutputRules"
+			],
+			"Entries": {
+				"Lumisteria.MtVapius_CheesePressButter": {
+					"Id": "Lumisteria.MtVapius_CheesePressButter",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "Lumisteria.MtVapius_Cream",
+							"RequiredTags": null,
+							"RequiredCount": 1,
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"IncrementMachineParentSheetIndex": 0,
+							"Id": "Lumisteria.MtVapius_Butter",
+							"ItemId": "(O)Lumisteria.MtVapius_Butter",
+							"MinStack": 2,
+							"MaxStack": 3,
+						}
+					],
+					"MinutesUntilReady": 100,
+					"DaysUntilReady": -1,
+				},
+				"Lumisteria.MtVapius_CheesePressWoodgoatCheese": {
+					"Id": "Lumisteria.MtVapius_CheesePressWoodgoatCheese",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "Lumisteria.MtVapius_WoodgoatMushroom",
+							"RequiredTags": null,
+							"RequiredCount": 1,
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"IncrementMachineParentSheetIndex": 0,
+							"Id": "GoatCheese",
+							"ItemId": "(O)426",
+							"MinStack": 1,
+							"MaxStack": 1,
+							"StackModifiers": [
+								{
+									"Id": "IncreaseSilverQuality",
+									"Condition": "ITEM_QUALITY Input 1, !ITEM_QUALITY Input 2, RANDOM 0.1",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								},
+								{
+									"Id": "IncreaseGoldQuality",
+									"Condition": "ITEM_QUALITY Input 2, !ITEM_QUALITY Input 3, RANDOM 0.25",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								},
+								{
+									"Id": "DoubleIridiumQuality",
+									"Condition": "ITEM_QUALITY Input 4, !ITEM_QUALITY Input 5, RANDOM 0.5",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								}
+							],
+						}
+					],
+					"MinutesUntilReady": 100,
+					"DaysUntilReady": -1,
+				},
+				"Lumisteria.MtVapius_CheesePressEweMilk": {
+					"Id": "Lumisteria.MtVapius_CheesePressEweMilk",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "Lumisteria.MtVapius_EweMilk",
+							"RequiredTags": null,
+							"RequiredCount": 1,
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"IncrementMachineParentSheetIndex": 0,
+							"Id": "Lumisteria.MtVapius_EweCheese",
+							"ItemId": "(O)Lumisteria.MtVapius_EweCheese",
+							"MinStack": 1,
+							"MaxStack": 1,
+						}
+					],
+					"MinutesUntilReady": 200,
+					"DaysUntilReady": -1,
+				},
+				"Lumisteria.MtVapius_CheesePressEweMilkLarge": {
+					"Id": "Lumisteria.MtVapius_CheesePressEweMilkLarge",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "Lumisteria.MtVapius_EweMilkLarge",
+							"RequiredCount": 1,
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"IncrementMachineParentSheetIndex": 0,
+							"Id": "Lumisteria.MtVapius_EweCheese",
+							"ItemId": "(O)Lumisteria.MtVapius_EweCheese",
+							"MinStack": 1,
+							"Quality": 2,
+							"StackModifiers": [
+								{
+									"Id": "IncreaseSilverQuality",
+									"Condition": "ITEM_QUALITY Input 1, !ITEM_QUALITY Input 2, RANDOM 0.1",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								},
+								{
+									"Id": "IncreaseGoldQuality",
+									"Condition": "ITEM_QUALITY Input 2, !ITEM_QUALITY Input 3, RANDOM 0.25",
+									"Modification": "Add",
+									"Amount": 1.0,
+								},
+								{
+									"Id": "DoubleIridiumQuality",
+									"Condition": "ITEM_QUALITY Input 4, !ITEM_QUALITY Input 5, RANDOM 0.5",
+									"Modification": "Add",
+									"Amount": 1.0,
+								}
+							],
+							"StackModifierMode": "Stack",
+						}
+					],
+					"MinutesUntilReady": 100,
+					"DaysUntilReady": -1,
+				},
+				"Lumisteria.MtVapius_CheesePressEweMilkExtraLarge": {
+					"Id": "Lumisteria.MtVapius_CheesePressEweMilkExtraLarge",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "Lumisteria.MtVapius_EweMilkExtraLarge",
+							"RequiredTags": null,
+							"RequiredCount": 1,
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"IncrementMachineParentSheetIndex": 0,
+							"Id": "Lumisteria.MtVapius_EweCheese",
+							"ItemId": "(O)Lumisteria.MtVapius_EweCheese",
+							"MinStack": 2,
+							"Quality": 2,
+							"StackModifiers": [
+								{
+									"Id": "IncreaseSilverQuality",
+									"Condition": "ITEM_QUALITY Input 1, !ITEM_QUALITY Input 2, RANDOM 0.1",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								},
+								{
+									"Id": "IncreaseGoldQuality",
+									"Condition": "ITEM_QUALITY Input 2, !ITEM_QUALITY Input 3, RANDOM 0.25",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								},
+								{
+									"Id": "DoubleIridiumQuality",
+									"Condition": "ITEM_QUALITY Input 4, !ITEM_QUALITY Input 5, RANDOM 0.5",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								}
+							],
+							"StackModifierMode": "Stack",
+						}
+					],
+					"MinutesUntilReady": 100,
+					"DaysUntilReady": -1,
+				},
+				"Lumisteria.MtVapius_CheesePressGoatMilkExtraLarge": {
+					"Id": "Lumisteria.MtVapius_CheesePressGoatMilkExtraLarge",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "Lumisteria.MtVapius_GoatMilkExtraLarge",
+							"RequiredTags": null,
+							"RequiredCount": 1,
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"IncrementMachineParentSheetIndex": 0,
+							"Id": "BigGoatCheese",
+							"ItemId": "(O){{ModId}}_BigGoatCheese",
+							"MinStack": 1,
+							"MaxStack": 2,
+							"StackModifiers": [
+								{
+									"Id": "IncreaseSilverQuality",
+									"Condition": "ITEM_QUALITY Input 1, !ITEM_QUALITY Input 2, RANDOM 0.1",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								},
+								{
+									"Id": "IncreaseGoldQuality",
+									"Condition": "ITEM_QUALITY Input 2, !ITEM_QUALITY Input 3, RANDOM 0.25",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								},
+								{
+									"Id": "DoubleIridiumQuality",
+									"Condition": "ITEM_QUALITY Input 4, !ITEM_QUALITY Input 5, RANDOM 0.5",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								}
+							],
+							"StackModifierMode": "Stack",
+						}
+					],
+					"MinutesUntilReady": 600,
+					"DaysUntilReady": -1,
+				},
+				"Lumisteria.MtVapius_CheesePressMilkExtraLarge": {
+					"Id": "Lumisteria.MtVapius_CheesePressMilkExtraLarge",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "Lumisteria.MtVapius_MilkExtraLarge",
+							"RequiredTags": null,
+							"RequiredCount": 1,
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"IncrementMachineParentSheetIndex": 0,
+							"Id": "BigCheese",
+							"ItemId": "(O){{ModId}}_BigCheese",
+							"MinStack": 1,
+							"MaxStack": 2,
+							"StackModifiers": [
+								{
+									"Id": "IncreaseSilverQuality",
+									"Condition": "ITEM_QUALITY Input 1, !ITEM_QUALITY Input 2, RANDOM 0.1",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								},
+								{
+									"Id": "IncreaseGoldQuality",
+									"Condition": "ITEM_QUALITY Input 2, !ITEM_QUALITY Input 3, RANDOM 0.25",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								},
+								{
+									"Id": "DoubleIridiumQuality",
+									"Condition": "ITEM_QUALITY Input 4, !ITEM_QUALITY Input 5, RANDOM 0.5",
+									"Modification": "Add",
+									"Amount": 1.0,
+									"RandomAmount": null
+								}
+							],
+							"StackModifierMode": "Stack",
+						}
+					],
+					"MinutesUntilReady": 600,
+					"DaysUntilReady": -1,
+				},
+			},
+		},
+		{
+			"LogName": "SM Machines MAYO - EMCE",
+			"Action": "EditData",
+			"When": { "HasMod |contains=LordDracon.EMCExpansion": "true" },
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC){{ModId}}_GM",
+				"OutputRules"
+			],
+			"Entries": {
+				"LordDracon.EMCExpansion_Calico_Mayo": {
+					"Id": "LordDracon.EMCExpansion_Calico_Mayo",
+					"Triggers": [{ "RequiredItemId": "(O)CalicoEgg" }],
+					"OutputItem": [{ "ItemId": "(O)LordDracon.EMCExpansion_CalicoMayo" }],
+					"MinutesUntilReady": 90,
+				},
+				"LordDracon.EMCExpansion_Frog_Mayo": {
+					"Id": "LordDracon.EMCExpansion_Frog_Mayo",
+					"Triggers": [{ "RequiredItemId": "(TR)FrogEgg" }],
+					"OutputItem": [{ "ItemId": "(O)LordDracon.EMCExpansion_FrogMayo" }],
+					"MinutesUntilReady": 90,
+				},
+				"LordDracon.EMCExpansion_Parrot_Mayo": {
+					"Id": "LordDracon.EMCExpansion_Parrot_Mayo",
+					"Triggers": [{ "RequiredItemId": "(TR)ParrotEgg" }],
+					"OutputItem": [{ "ItemId": "(O)LordDracon.EMCExpansion_ParrotMayo" }],
+					"MinutesUntilReady": 90,
+				},
+				"LordDracon.EMCExpansion_Green_Slime_Mayo": {
+					"Id": "LordDracon.EMCExpansion_Green_Slime_Mayo",
+					"Triggers": [{ "RequiredItemId": "(O)680" }],
+					"OutputItem": [{ "ItemId": "(O)LordDracon.EMCExpansion_GreenSlimeMayo" }],
+					"MinutesUntilReady": 90,
+				},
+				"LordDracon.EMCExpansion_Blue_Slime_Mayo": {
+					"Id": "LordDracon.EMCExpansion_Blue_Slime_Mayo",
+					"Triggers": [{ "RequiredItemId": "(O)413" }],
+					"OutputItem": [{ "ItemId": "(O)LordDracon.EMCExpansion_BlueSlimeMayo" }],
+					"MinutesUntilReady": 150,
+				},
+				"LordDracon.EMCExpansion_Red_Slime_Mayo": {
+					"Id": "LordDracon.EMCExpansion_Red_Slime_Mayo",
+					"Triggers": [{ "RequiredItemId": "(O)437" }],
+					"OutputItem": [{ "ItemId": "(O)LordDracon.EMCExpansion_RedSlimeMayo" }],
+					"MinutesUntilReady": 240,
+				},
+				"LordDracon.EMCExpansion_Purple_Slime_Mayo": {
+					"Id": "LordDracon.EMCExpansion_Purple_Slime_Mayo",
+					"Triggers": [{ "RequiredItemId": "(O)439" }],
+					"OutputItem": [{ "ItemId": "(O)LordDracon.EMCExpansion_PurpleSlimeMayo" }],
+					"MinutesUntilReady": 480,
+				},
+				"LordDracon.EMCExpansion_Tiger_Slime_Mayo": {
+					"Id": "LordDracon.EMCExpansion_Tiger_Slime_Mayo",
+					"Triggers": [{ "RequiredItemId": "(O)857" }],
+					"OutputItem": [{ "ItemId": "LordDracon.EMCExpansion_TigerSlimeMayo" }],
+					"MinutesUntilReady": 720,
+				},
+			},
+		},
+		{
+			"LogName": "SM Machines CHEESE - EMCE",
+			"Action": "EditData",
+			"When": { "HasMod |contains=LordDracon.EMCExpansion": "true" },
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC){{ModId}}_GP",
+				"OutputRules"
+			],
+			"Entries": {
+				"Cauliflower_Cheese": {
+					"Id": "Cauliflower_Cheese",
+					"Triggers": [{ "RequiredItemId": "(O)190" }],
+					"OutputItem": [{
+						"ItemId": "(O)LordDracon.EMCExpansion_VeganCheese",
+						"ObjectDisplayName": "Dairy-Free Cheese (Cauliflower)",
+						"CopyPrice": true,
+						"CopyQuality": true,
+						"PriceModifiers": [ {
+							"Modification": "Multiply",
+							"Amount": 1.8
+						}]
+					}],
+					"MinutesUntilReady": 100,
+				},
+				"Coconut_Cheese": {
+					"Id": "Coconut_Cheese",
+					"Triggers": [{ "RequiredItemId": "(O)88" }],
+					"OutputItem": [{
+						"ItemId": "(O)LordDracon.EMCExpansion_VeganCheese",
+						"ObjectDisplayName": "Dairy-Free Cheese (Coconut)",
+						"CopyPrice": true,
+						"CopyQuality": true,
+						"PriceModifiers": [ {
+							"Modification": "Multiply",
+							"Amount": 1.8
+						}]
+					}],
+					"MinutesUntilReady": 100,
+				},
+				"Oil_Cheese": {
+					"Id": "Oil_Cheese",
+					"Triggers": [{ "RequiredItemId": "(O)247" }],
+					"OutputItem": [{
+						"ItemId": "(O)LordDracon.EMCExpansion_VeganCheese",
+						"ObjectDisplayName": "Dairy-Free Cheese (Oil)",
+						"CopyPrice": true,
+						"CopyQuality": true,
+						"PriceModifiers": [ {
+							"Modification": "Multiply",
+							"Amount": 1.8
+						}]
+					}],
+					"MinutesUntilReady": 100,
+				},
+				"Potato_Cheese": {
+					"Id": "Potato_Cheese",
+					"Triggers": [{ "RequiredItemId": "(O)192" }],
+					"OutputItem": [{
+						"ItemId": "(O)LordDracon.EMCExpansion_VeganCheese",
+						"ObjectDisplayName": "Dairy-Free Cheese (Potato)",
+						"CopyPrice": true,
+						"CopyQuality": true,
+						"PriceModifiers": [ {
+							"Modification": "Multiply",
+							"Amount": 1.8
+						}]
+					}],
+					"MinutesUntilReady": 100,
+				},
+				"Rice_Cheese": {
+					"Id": "Rice_Cheese",
+					"Triggers": [{ "RequiredItemId": "(O)423" }],
+					"OutputItem": [{
+						"ItemId": "(O)LordDracon.EMCExpansion_VeganCheese",
+						"ObjectDisplayName": "Dairy-Free Cheese (Rice)",
+						"CopyPrice": true,
+						"CopyQuality": true,
+						"PriceModifiers": [ {
+							"Modification": "Multiply",
+							"Amount": 1.8
+						}]
+					}],
+					"MinutesUntilReady": 100,
+				},
+			}
+		},
+		{
+			"LogName": "SM Machines MAYO - C-AM",
+			"Action": "EditData",
+			"When": { "HasMod |contains=Cornucopia.ArtisanMachines": "true" },
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC){{ModId}}_GM",
+				"OutputRules"
+			],
+			"Entries": {
+				"Cornucopia_GarlicMayonnaise": {
+					"Id": "Cornucopia_GarlicMayonnaise",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)248"
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"Id": "Cornucopia_GarlicMayonnaiseLargeBrownEgg",
+							"ItemId": "(O)Cornucopia_GarlicMayonnaise",
+							"Quality": 2,
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)182",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						},
+						{
+							"Id": "Cornucopia_GarlicMayonnaiseSmallBrownEgg",
+							"ItemId": "(O)Cornucopia_GarlicMayonnaise",
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)180",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						},
+						{
+							"Id": "Cornucopia_GarlicMayonnaiseLargeWhiteEgg",
+							"ItemId": "(O)Cornucopia_GarlicMayonnaise",
+							"Quality": 2,
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)174",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						},
+						{
+							"Id": "Cornucopia_GarlicMayonnaiseSmallWhiteEgg",
+							"ItemId": "(O)Cornucopia_GarlicMayonnaise",
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)176",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						}
+					],
+					"MinutesUntilReady": 90
+				},
+				"Cornucopia_SpicyMayonnaise": {
+					"Id": "Cornucopia_SpicyMayonnaise",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)260"
+						},
+						{
+							"RequiredTags": [
+								"chili_item"
+							]
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"Id": "Cornucopia_SpicyMayonnaiseLargeBrownEgg",
+							"ItemId": "(O)Cornucopia_SpicyMayonnaise",
+							"Quality": 2,
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)182",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						},
+						{
+							"Id": "Cornucopia_SpicyMayonnaiseSmallBrownEgg",
+							"ItemId": "(O)Cornucopia_SpicyMayonnaise",
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)180",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						},
+						{
+							"Id": "Cornucopia_SpicyMayonnaiseLargeWhiteEgg",
+							"ItemId": "(O)Cornucopia_SpicyMayonnaise",
+							"Quality": 2,
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)174",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						},
+						{
+							"Id": "Cornucopia_SpicyMayonnaiseSmallWhiteEgg",
+							"ItemId": "(O)Cornucopia_SpicyMayonnaise",
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)176",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						}
+					],
+					"MinutesUntilReady": 90
+				},
+				"Cornucopia_TruffleMayonnaise": {
+					"Id": "Cornucopia_TruffleMayonnaise",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)430"
+						}
+					],
+					"UseFirstValidOutput": true,
+					"OutputItem": [
+						{
+							"Id": "Cornucopia_TruffleMayonnaiseLargeBrownEgg",
+							"ItemId": "(O)Cornucopia_TruffleMayonnaise",
+							"Quality": 2,
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)182",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						},
+						{
+							"Id": "Cornucopia_TruffleMayonnaiseSmallBrownEgg",
+							"ItemId": "(O)Cornucopia_TruffleMayonnaise",
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)180",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						},
+						{
+							"Id": "Cornucopia_TruffleMayonnaiseLargeWhiteEgg",
+							"ItemId": "(O)Cornucopia_TruffleMayonnaise",
+							"Quality": 2,
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)174",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						},
+						{
+							"Id": "Cornucopia_TruffleMayonnaiseSmallWhiteEgg",
+							"ItemId": "(O)Cornucopia_TruffleMayonnaise",
+							"CustomData": {
+								"selph.ExtraMachineConfig.RequirementId.1": "(O)176",
+								"selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:MayonnaiseMachineFuelNeededMessage}}"
+							}
+						}
+					],
+					"MinutesUntilReady": 90
+				}
+			}
+		},
+		{
+			"LogName": "SM Machines CHEESE - C-AM",
+			"Action": "EditData",
+			"When": { "HasMod |contains=Cornucopia.ArtisanMachines": "true" },
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC){{ModId}}_GP",
+				"OutputRules"
+			],
+			"Entries": {
+				"Cornucopia_NutCheese_NutMilk": {
+					"Id": "Cornucopia_NutCheese_NutMilk",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)Cornucopia_NutMilk"
+						},
+					],
+					"OutputItem": [
+						{
+							"Id": "CornucopiaPineNutMilk",
+							"ItemId": "(O)Cornucopia_NutCheese",
+							"Condition": "ITEM_CONTEXT_TAG Input id_o_cornucopia_nutmilk preserve_sheet_index_cornucopia_pinenuts",
+							"ObjectInternalName": "{0} Cornucopia_NutCheese",
+							"ObjectDisplayName": "{{i18n:NutCheese_PineNutMilk}}",
+							"PreserveId": "DROP_IN",
+							"CopyPrice": true,
+							"CopyColor": true,
+							"CustomData": {
+								"selph.ExtraMachineConfig.InheritPreserveId": true
+							},
+							"PriceModifiers": [
+								{
+									"Id": "NutCheese",
+									"Modification": "Multiply",
+									"Amount": 1.25
+								}
+							]
+						},
+						{
+							"Id": "CornucopiaSoyMilk",
+							"ItemId": "(O)Cornucopia_NutCheese",
+							"Condition": "ITEM_CONTEXT_TAG Input id_o_cornucopia_nutmilk preserve_sheet_index_cornucopia_soybeans",
+							"ObjectInternalName": "{0} Cornucopia_NutCheese",
+							"ObjectDisplayName": "{{i18n:NutCheese_SoyMilk}}",
+							"PreserveId": "DROP_IN",
+							"CopyPrice": true,
+							"CopyColor": true,
+							"CustomData": {
+								"selph.ExtraMachineConfig.InheritPreserveId": true
+							},
+							"PriceModifiers": [
+								{
+									"Id": "NutCheese",
+									"Modification": "Multiply",
+									"Amount": 1.25
+								}
+							]
+						},
+						{
+							"Id": "CornucopiaOatMilk",
+							"ItemId": "(O)Cornucopia_NutCheese",
+							"Condition": "ITEM_CONTEXT_TAG Input id_o_cornucopia_nutmilk preserve_sheet_index_cornucopia_oats",
+							"ObjectInternalName": "{0} Cornucopia_NutCheese",
+							"ObjectDisplayName": "{{i18n:NutCheese_OatMilk}}",
+							"PreserveId": "DROP_IN",
+							"CopyPrice": true,
+							"CopyColor": true,
+							"CustomData": {
+								"selph.ExtraMachineConfig.InheritPreserveId": true
+							},
+							"PriceModifiers": [
+								{
+									"Id": "NutCheese",
+									"Modification": "Multiply",
+									"Amount": 1.25
+								}
+							]
+						},
+						{
+							"Id": "Default",
+							"ItemId": "(O)Cornucopia_NutCheese",
+							"ObjectInternalName": "{0} Cornucopia_NutCheese",
+							"ObjectDisplayName": "[LocalizedText Strings/Objects:Cornucopia_NutCheese %PRESERVED_DISPLAY_NAME]",
+							"PreserveId": "DROP_IN",
+							"CopyPrice": true,
+							"CopyColor": true,
+							"CustomData": {
+								"selph.ExtraMachineConfig.InheritPreserveId": true
+							},
+							"PriceModifiers": [
+								{
+									"Id": "NutCheese",
+									"Modification": "Multiply",
+									"Amount": 1.25
+								}
+							]
+						},
+					],
+					"MinutesUntilReady": 100,
+					"UseFirstValidOutput": true,
+				},
+				"Cornucopia_NutCheeseDefault": {
+					"Id": "Cornucopia_NutCheeseDefault",
+					"Triggers": [
+						{
+							"RequiredTags": [
+								"plant_milk_item"
+								]
+						},
+						{
+							"RequiredTags": [
+								"wildflour_pantry",
+								"milk_item"
+								]
+						}
+					],
+					"OutputItem": [
+						{
+							"Id": "Default",
+							"ItemId": "(O)Cornucopia_NutCheese",
+							"ObjectInternalName": "{0} Cornucopia_NutCheese",
+							"ObjectDisplayName": "[LocalizedText Strings/Objects:Cornucopia_NutCheese %PRESERVED_DISPLAY_NAME]",
+							"PreserveId": "DROP_IN",
+							"CopyPrice": true,
+							"CopyColor": true,
+							"CustomData": {
+								"selph.ExtraMachineConfig.CopyColor": true,
+							},
+							"PriceModifiers": [
+								{
+									"Id": "NutCheese",
+									"Modification": "Multiply",
+									"Amount": 1.25
+								}
+							]
+						}
+					],
+					"MinutesUntilReady": 100,
+					"UseFirstValidOutput": true,
+				}
+			}
+		},
+		{
+			"LogName": "SM Machines MAYO - MIZU-Q",
+			"Action": "EditData",
+			"When": { "HasMod |contains=Mizu.Quail": "true" },
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC){{ModId}}_GM",
+				"OutputRules"
+			],
+			"Entries": {
+				"QuailMayonnaise": {
+					"Id": "QuailMayonnaise",
+					"Triggers": 
+						[
+							{
+								"RequiredItemId": "(O)Mizu.Quail_QuailEgg"
+							}
+						],
+					"OutputItem":
+						[
+							{
+								"ItemId": "(O)Mizu.Quail_QuailMayonnaise"
+							}
+						],
+					"MinutesUntilReady": 180
+				},
+				"QuailMayonnaiseQuailty": {
+					"Id": "QuailMayonnaiseQuailty",
+					"Triggers": 
+						[
+							{
+								"RequiredItemId": "(O)Mizu.Quail_LargeQuailEgg"
+							}
+						],
+					"OutputItem":
+						[
+							{
+								"ItemId": "(O)Mizu.Quail_QuailMayonnaise",
+								"Quality": 2
+							}
+						],
+					"MinutesUntilReady": 180
+				}
+			}
+		},
+		{
+			"LogName": "SM Machines MAYO - MIZU-T",
+			"Action": "EditData",
+			"When": { "HasMod |contains=Mizu.Turkey": "true" },
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC){{ModId}}_GM",
+				"OutputRules"
+			],
+			"Entries": {
+				"TurkeyMayonnaise": {
+					"Id": "TurkeyMayonnaise",
+					"Triggers": 
+						[
+							{
+								"RequiredItemId": "(O)Mizu.Turkey_TurkeyEgg",
+							}
+						],
+					"OutputItem":
+						[
+							{
+								"ItemId": "(O)Mizu.Turkey_TurkeyMayonnaise",
+							}
+						],
+					"MinutesUntilReady": 180,
+				}
+			}
+		},
+		{
+			"LogName": "SM Machines MAYO - ARRBYTE-C",
+			"Action": "EditData",
+			"When": { "HasMod |contains=Arrbyte.Canaries": "true" },
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC){{ModId}}_GM",
+				"OutputRules"
+			],
+			"Entries": {
+				"Arrbyte.Canaries_MachineCanaryEggs": {
+					"Id": "Arrbyte.Canaries_MachineCanaryEggs",
+					"MinutesUntilReady": 90,
+					"OutputItem": [
+						{
+							"CopyQuality": false,
+							"Id": "Arrbyte.Canaries_Mayonnaise",
+							"ItemId": "Arrbyte.Canaries_Mayonnaise",
+							"MaxItems": null,
+							"MaxStack": -1,
+							"MinStack": -1
+						}
+					],
+					"Triggers": [
+						{
+							"Condition": null,
+							"Id": "ItemPlacedInMachine",
+							"RequiredItemId": "Arrbyte.Canaries_CanaryEggs",
+							"RequiredTags": null
+						}
+					],
+					"UseFirstValidOutput": false
+				},
+				"Arrbyte.Canaries_MachineVoidCanaryEggs": {
+					"Id": "Arrbyte.Canaries_MachineVoidCanaryEggs",
+					"MinutesUntilReady": 90,
+					"OutputItem": [
+						{
+							"CopyQuality": false,
+							"Id": "Arrbyte.Canaries_VoidMayonnaise",
+							"ItemId": "Arrbyte.Canaries_VoidMayonnaise",
+							"MaxItems": null,
+							"MaxStack": -1,
+							"MinStack": -1
+						}
+					],
+					"Triggers": [
+						{
+							"Condition": null,
+							"Id": "ItemPlacedInMachine",
+							"RequiredItemId": "Arrbyte.Canaries_VoidCanaryEggs",
+							"RequiredTags": null
+						}
+					],
+					"UseFirstValidOutput": false
+				}
+			},
+			"MoveEntries": [
+				{
+					"Id": "Arrbyte.Canaries_MachineCanaryEggs",
+					"ToPosition": "Top"
+				},
+				{
+					"Id": "Arrbyte.Canaries_MachineVoidCanaryEggs",
+					"ToPosition": "Top"
+				}
+			],
+		},
+		{
+			"LogName": "SM Machines MAYO - ARRBYTE-L",
+			"Action": "EditData",
+			"When": { "HasMod |contains=Arrbyte.Lovebird": "true" },
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC){{ModId}}_GM",
+				"OutputRules"
+			],
+			"Entries": {
+				"Arrbyte.Lovebirds_MachineLovebirdEggs": {
+					"Id": "Arrbyte.Lovebirds_MachineLovebirdEggs",
+					"MinutesUntilReady": 90,
+					"OutputItem": [
+						{
+							"CopyQuality": false,
+							"Id": "Arrbyte.Lovebird_Mayonnaise",
+							"ItemId": "Arrbyte.Lovebird_Mayonnaise",
+							"MaxItems": null,
+							"MaxStack": -1,
+							"MinStack": -1
+						}
+					],
+					"Triggers": [
+						{
+							"Condition": null,
+							"Id": "ItemPlacedInMachine",
+							"RequiredCount": 1,
+							"RequiredItemId": "Arrbyte.Lovebirds_LovebirdEggs",
+							"RequiredTags": null
+						}
+					],
+					"UseFirstValidOutput": false
+				},
+				"Arrbyte.Lovebirds_MachineVoidLovebirdEggs": {
+					"Id": "Arrbyte.Lovebirds_MachineVoidLovebirdEggs",
+					"MinutesUntilReady": 90,
+					"OutputItem": [
+						{
+							"CopyQuality": false,
+							"Id": "Arrbyte.Lovebird_VoidMayonnaise",
+							"ItemId": "Arrbyte.Lovebird_VoidMayonnaise",
+							"MaxItems": null,
+							"MaxStack": -1,
+							"MinStack": -1
+						}
+					],
+					"Triggers": [
+						{
+							"Condition": null,
+							"Id": "ItemPlacedInMachine",
+							"RequiredCount": 1,
+							"RequiredItemId": "Arrbyte.Lovebirds_VoidLovebirdEggs",
+							"RequiredTags": null
+						}
+					],
+					"UseFirstValidOutput": false
+				},
+				"Arrbyte.Lovebirds_MachineGoldLovebirdEggs": {
+					"Id": "Arrbyte.Lovebirds_MachineGoldLovebirdEggs",
+					"MinutesUntilReady": 90,
+					"OutputItem": [
+						{
+							"CopyQuality": false,
+							"Id": "Arrbyte.Lovebird_GoldMayonnaise",
+							"ItemId": "Arrbyte.Lovebird_GoldMayonnaise",
+							"MaxItems": null,
+							"MaxStack": -1,
+							"MinStack": -1
+						}
+					],
+					"Triggers": [
+						{
+							"Condition": null,
+							"Id": "ItemPlacedInMachine",
+							"RequiredCount": 1,
+							"RequiredItemId": "Arrbyte.Lovebirds_GoldLovebirdEggs",
+							"RequiredTags": null
+						}
+					],
+					"UseFirstValidOutput": false
+				}
+			},
+			"MoveEntries": [
+				{
+					"Id": "Arrbyte.Lovebirds_MachineLovebirdEggs",
+					"ToPosition": "Top"
+				},
+				{
+					"Id": "Arrbyte.Lovebirds_MachineVoidLovebirdEggs",
+					"ToPosition": "Top"
+				},
+				{
+					"Id": "Arrbyte.Lovebirds_MachineGoldLovebirdEggs",
+					"ToPosition": "Top"
+				}
+			],
+		},
+		{
+			"LogName": "SM Machines MAYO - ARRBYTE-Z",
+			"Action": "EditData",
+			"When": { "HasMod |contains=Arrbyte.Zebrafinches": "true" },
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC){{ModId}}_GM",
+				"OutputRules"
+			],
+			"Entries": {
+				"Arrbyte.Zebrafinches_MachineZebrafinchEggs": {
+					"Id": "Arrbyte.Zebrafinches_MachineZebrafinchEggs",
+					"MinutesUntilReady": 90,
+					"OutputItem": [
+						{
+							"CopyQuality": false,
+							"Id": "Arrbyte.Zebrafinches_Mayonnaise",
+							"ItemId": "Arrbyte.Zebrafinches_Mayonnaise",
+							"MaxItems": null,
+							"MaxStack": -1,
+							"MinStack": -1
+						}
+					],
+					"Triggers": [
+						{
+							"Condition": null,
+							"Id": "ItemPlacedInMachine",
+							"RequiredCount": 1,
+							"RequiredItemId": "Arrbyte.Zebrafinches_ZebrafinchEggs",
+							"RequiredTags": null
+						}
+					],
+					"UseFirstValidOutput": false
+				},
+				"Arrbyte.Zebrafinches_MachineGoldZebrafinchEggs": {
+					"Id": "Arrbyte.Zebrafinches_MachineGoldZebrafinchEggs",
+					"MinutesUntilReady": 90,
+					"OutputItem": [
+						{
+							"CopyQuality": false,
+							"Id": "Arrbyte.Zebrafinches_GoldMayonnaise",
+							"ItemId": "Arrbyte.Zebrafinches_GoldMayonnaise",
+							"MaxItems": null,
+							"MaxStack": -1,
+							"MinStack": -1
+						}
+					],
+					"Triggers": [
+						{
+							"Condition": null,
+							"Id": "ItemPlacedInMachine",
+							"RequiredCount": 1,
+							"RequiredItemId": "Arrbyte.Zebrafinches_GoldZebrafinchEggs",
+							"RequiredTags": null
+						}
+					],
+					"UseFirstValidOutput": false
+				}
+			},
+			"MoveEntries": [
+				{
+					"Id": "Arrbyte.Zebrafinches_MachineZebrafinchEggs",
+					"ToPosition": "Top"
+				},
+				{
+					"Id": "Arrbyte.Zebrafinches_MachineGoldZebrafinchEggs",
+					"ToPosition": "Top"
+				}
+			],
+		},
+		{
+			"LogName": "SM Machines Void Duck",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC){{ModId}}_GM", "OutputRules" ],
+			"Entries": {
+				"VoidDuckMayonnaise": {
+					"Id": "VoidDuckMayonnaise",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)VoidDuckEgg",
+							"RequiredCount": 1,
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)VoidDuckMayonnaise",
+							"CopyQuality": true,
+							"MinStack": 1,
+							"MaxStack": 1,
+						}
+					],
+					"UseFirstValidOutput": false,
+					"MinutesUntilReady": 60,
+					"DaysUntilReady": -1,
+				},
+			},
+			"MoveEntries": [
+				{
+					"Id": "VoidDuckMayonnaise",
+					"BeforeId": "{{ModId}}.GM.Mayo"
+				}
+			],
+            "When": {
+                "HasMod |contains=Angelltear.BFAV.voidduck1.6": "true",
+            },
+		},
+		{
+			"LogName": "SM Machines Blue Chicken",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC){{ModId}}_GM", "OutputRules" ],
+			"Entries": {
+				"6480.blueegg_BlueEgg": {
+					"Id": "6480.blueegg_BlueEgg",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)6480.blueegg_BlueEgg",
+							"RequiredCount": 1
+						}
+					],
+					"OutputItem": [
+						{
+							"Id": "(O)6480.blueegg_BlueMayo",
+							"ItemId": "(O)6480.blueegg_BlueMayo"
+						}
+					],
+					"MinutesUntilReady": 60
+				},
+				"6480.blueegg_GoldenEgg": {
+					"Id": "6480.blueegg_GoldenEgg",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)928",
+							"RequiredCount": 1
+						}
+					],
+					"OutputItem": [
+						{
+							"Id": "(O)6480.blueegg_GoldenMayo",
+							"ItemId": "(O)6480.blueegg_GoldenMayo"
+						}
+					],
+					"MinutesUntilReady": 60
+				}
+			},
+			"MoveEntries": [
+				{
+					"Id": "6480.blueegg_BlueEgg",
+					"BeforeId": "{{ModId}}.GM.Mayo"
+				},
+				{
+					"Id": "6480.blueegg_GoldenEgg",
+					"BeforeId": "{{ModId}}.GM.Mayo"
+				}
+			],
+            "When": {
+                "HasMod |contains=6480.blueegg": "true",
+            },
+		},
+		{
+			"LogName": "SM Machines Quail",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC){{ModId}}_GM", "OutputRules" ],
+			"Entries": {
+				"QuailMayo": {
+					"Id": "QuailMayo",
+					"Triggers": 
+						[
+							{
+							"RequiredItemId": "QuailEgg",
+							"RequiredCount": 10
+							},
+							{
+							"RequiredItemId": "LargeQuailEgg",
+							"RequiredCount": 5
+							}
+						],
+					"OutputItem":
+						[
+							{
+							"ItemId": "QuailMayo"
+							}
+						],
+					"MinutesUntilReady": 150
+				}
+			},
+			"MoveEntries": [
+				{
+					"Id": "QuailMayo",
+					"BeforeId": "{{ModId}}.GM.Mayo"
+				}
+			],
+            "When": {
+                "HasMod |contains=Teapot.Quails": "true",
+            },
+		}
+    ],
+}

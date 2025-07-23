@@ -1,0 +1,264 @@
+{
+	"Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+			"kath.weathering_SummonEruptionStop": {
+				"Id": "kath.weathering_SummonEruptionStop",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_HAS_MAIL Any SummonByTotem, CS_WEATHER IslandNorth -1 kath.weathering_AshSummon",
+                "Actions": [
+					"AddMail All StopSummon received",
+					"RemoveMail All SummonAsh2 all",
+					"MarkActionApplied All kath.weathering_SummonEruptionStop2 false",
+                    ],
+				},
+			"kath.weathering_SummonEruptionStop2": {
+				"Id": "kath.weathering_SummonEruptionStop2",
+                "Trigger": "DayEnding",
+                "Condition": "PLAYER_HAS_MAIL Any StopSummon",
+                "Actions": [
+					"RemoveMail All SummonByTotem all",
+					"RemoveMail All VolcanoEruption all",
+					"RemoveMail All SummonAsh2 all",
+					"MarkActionApplied All kath.weathering_SummonEruptionStop false",
+                    ],
+				},
+			}
+		},
+	
+	{
+	"LogName": "The Weather Tornado Event Damaging",
+	"Action": "EditData",
+	"Target": "Mods/leclair.morenightlyevents/Events",
+	"Entries": {	
+	"kath.weathering_NadoSummonedDanger": {
+		"Id": "kath.weathering_NadoSummonedDanger",
+		"Type": "Placement",
+		"IsExclusive": true,
+		"Conditions": [ { "Condition": "PLAYER_HAS_MAIL Current NadoSummonedDanger" } ],
+		"TargetMap": "Town",
+		"SoundName": "KathSiren",
+		"Message": "{{i18n: TornadoPass}}",
+		"MessageDelay": 26000,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"388",
+					"390",
+					"142",
+				],
+				"MinStack": 50,
+				"MaxStack": 75,
+				"SpawnAreas":[],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"leclair.cloudyskies_KillCrops --fertilizer-query \"!ITEM_ID Input (O)ManaFertilizer\" Context Default",
+			"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:PlantDeath.Check}}\" (O)PlantDeath",
+			"AddConversationTopic WCDTornadoH 5",
+			"If !PLAYER_HAS_MAIL Current Wizard.SummonMNE ## AddMail All Wizard.SummonMNE now",
+			"RemoveMail All NadoSummonedDanger",
+			]
+		}
+		]
+		},
+
+	"kath.weathering_NadoSummonedSafe": {
+		"Id": "kath.weathering_NadoSummonedSafe",
+		"Type": "Placement",
+		"IsExclusive": true,
+		"Conditions": [ { "Condition": "PLAYER_HAS_MAIL Current NadoSummonedSafe" } ],
+		"TargetMap": "Town",
+		"SoundName": "KathSiren",
+		"Message": "{{i18n: TornadoPass}}",
+		"MessageDelay": 26000,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"388",
+					"390",
+					"142",
+				],
+				"MinStack": 50,
+				"MaxStack": 75,
+				"SpawnAreas":[],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDTornadoH 5",
+			"RemoveMail All NadoSummonedSafe",
+			]
+		}
+		]
+		},
+
+	"kath.weathering_EarthquakeSummonedDanger": {
+		"Id": "kath.weathering_EarthquakeSummonedDanger",
+		"Type": "Placement",
+		"IsExclusive": true,
+		"Conditions": [ { "Condition": "PLAYER_HAS_MAIL Current EarthquakeSummonedDanger" } ],
+		"TargetMap": "Town",
+		"SoundName": "KathQuake",
+		"Message": "{{i18n: EarthquakeIsland1}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)12",
+					"(O)14",
+					"(O)6",
+					"(O)590",
+				],
+				"MinStack": 10,
+				"MaxStack": 30,
+				"SpawnAreas":[],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDEarthquake 3",
+			"leclair.cloudyskies_KillCrops -c 0.45 --max 10 --fertilizer-query \"!ITEM_ID Input (O)ManaFertilizer\" Context Default",
+			"If !PLAYER_HAS_MAIL Current Wizard.SummonMNE ## AddMail All Wizard.SummonMNE now",
+			"RemoveMail All EarthquakeSummonedDanger",
+			]
+		}
+		]
+	},
+	
+	"kath.weathering_EarthquakeSummonedSafe": {
+		"Id": "kath.weathering_EarthquakeSummonedSafe",
+		"Type": "Placement",
+		"IsExclusive": true,
+		"Conditions": [ { "Condition": "PLAYER_HAS_MAIL Current EarthquakeSummonedSafe" } ],
+		"TargetMap": "Town",
+		"SoundName": "KathQuake",
+		"Message": "{{i18n: EarthquakeIsland1}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)12",
+					"(O)14",
+					"(O)6",
+					"(O)590",
+				],
+				"MinStack": 10,
+				"MaxStack": 30,
+				"SpawnAreas":[],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDEarthquake 3",
+			"RemoveMail All EarthquakeSummonedSafe",
+			]
+		}
+		]
+	},	
+	
+	"kath.weathering_VolcanoSummonDanger": {
+		"Id": "kath.weathering_VolcanoSummonDanger",
+		"Type": "Placement",
+		"IsExclusive": true,
+		"Conditions": [ { "Condition": "PLAYER_HAS_MAIL Current VolcanoSummonDanger" } ],
+		"TargetMap": "IslandSouth",
+		"SoundName": "KathQuake",
+		"Message": "{{i18n: EarthquakeIsland2}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)589",
+					"(O)586",
+					"(O)584",
+					"(O)570",
+					"(O)575",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+				],
+				"MinStack": 10,
+				"MaxStack": 15,
+				"SpawnAreas":[{"X": 9, "Y": 23, "Width": 23, "Height": 9}],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDEruption 4",
+			"leclair.cloudyskies_KillCrops -c 0.45 --max 10 --fertilizer-query \"!ITEM_ID Input (O)ManaFertilizer\" Context Island",
+			"If !PLAYER_HAS_MAIL Any SummonAsh2 ## AddMail All SummonAsh2 received",
+			"AddMail All SummonByTotem received",
+			"If !PLAYER_HAS_MAIL Current Wizard.SummonMNE ## AddMail All Wizard.SummonMNE now",	
+			"RemoveMail All VolcanoSummonDanger",	
+			"AddMail All VolcanoEruption received",			
+			]
+		}
+		]
+	},
+	
+	"kath.weathering_VolcanoSummonSafe": {
+		"Id": "kath.weathering_VolcanoSummonSafe",
+		"Type": "Placement",
+		"IsExclusive": true,
+		"Conditions": [ { "Condition": "PLAYER_HAS_MAIL Current VolcanoSummonSafe" } ],
+		"TargetMap": "IslandSouth",
+		"SoundName": "KathQuake",
+		"Message": "{{i18n: EarthquakeIsland2}}",
+		"MessageDelay": 1500,
+		"Output": [
+			{
+				"Type": "Item",
+				"Condition": "TRUE",
+				"RandomItemId":[
+					"(O)589",
+					"(O)586",
+					"(O)584",
+					"(O)570",
+					"(O)575",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+					"(O)390",
+				],
+				"MinStack": 10,
+				"MaxStack": 15,
+				"SpawnAreas":[{"X": 9, "Y": 23, "Width": 23, "Height": 9}],
+			}
+		],
+		"SideEffects": [
+		{
+			"Actions":[
+			"AddConversationTopic WCDEruption 4",
+			"If !PLAYER_HAS_MAIL Any SummonAsh2 ## AddMail All SummonAsh2 received",
+			"AddMail All SummonByTotem received",
+			"RemoveMail All VolcanoSummonSafe",
+			"AddMail All VolcanoEruption received",
+			]
+		}
+		]
+	},	
+	
+	}
+	},
+]
+}

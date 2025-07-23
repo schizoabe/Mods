@@ -1,0 +1,17 @@
+{ // Island Death - Post Leo - Krobus Friday
+  "Changes": [
+    {
+      "LogName": "KO Island - PL - Krobus Friday",
+      "Action": "EditData",
+      "Target": "Data/Events/IslandSouth",
+      "When": {
+        "HasFlag": "leoMoved",
+        "Roommate": "Krobus",
+        "DayOfWeek": "Friday",
+      },
+      "Entries": {
+        "PlayerKilled": "none/-100 -100/farmer 13 33 2 Willy 15 33 3/skippable/pause 1500/showFrame 5/message \" ...{2}?\"/pause 1000/message \"{{i18n:Island.Wake}}\"/viewport 13 33 clamp true/pause 1000/speak Willy \"{{i18n:IslandKilled.Willy.01}}\"/emote farmer 16/faceDirection farmer 1/pause 500/speak Willy \"{{i18n:IslandKilled.Willy.02}}\"/faceDirection farmer 2/showFrame 0/pause 1000/emote farmer 28/minedeath/end dialogue {{Spouse}} \"{{i18n:IslandEnd.{{SpouseName}}.02}}\""
+      }
+    }
+  ]
+}

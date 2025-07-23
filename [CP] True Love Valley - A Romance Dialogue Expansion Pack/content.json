@@ -1,0 +1,109 @@
+{
+    "Format": "1.19.0",
+    "ConfigSchema": {
+        "Abigail": {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+        "Haley": {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+        "Leah": {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+        "Penny": {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+        "Sebastian": {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+        "Shane": {
+            "AllowValues": "true, false",
+            "Default": "true"
+        }
+    },
+    "Changes": [
+        {
+            "LogName": "Abigail",
+            "Action": "Include",
+            "FromFile": "Data/default/NPCs/Abigail.json",
+            "When": {
+                "Abigail": "true"
+            }
+        },
+        {
+            "LogName": "Haley",
+            "Action": "Include",
+            "FromFile": "Data/default/NPCs/Haley.json",
+            "When": {
+                "Haley": "true"
+            }
+        },
+        {
+            "LogName": "Leah",
+            "Action": "Include",
+            "FromFile": "Data/default/NPCs/Leah.json",
+            "When": {
+                "Leah": "true"
+            }
+        },
+        {
+            "LogName": "Penny",
+            "Action": "Include",
+            "FromFile": "Data/default/NPCs/Penny.json",
+            "When": {
+                "Penny": "true"
+            }
+        },
+        {
+            "LogName": "Sebastian",
+            "Action": "Include",
+            "FromFile": "Data/default/NPCs/Sebastian.json",
+            "When": {
+                "Sebastian": "true"
+            }
+        },
+        {
+            "LogName": "Shane",
+            "Action": "Include",
+            "FromFile": "Data/default/NPCs/Shane.json",
+            "When": {
+                "Shane": "true"
+            }
+        },
+        {
+            "LogName": "Festival Y2",
+            "Action": "Include",
+            "FromFile": "Data/default/Festivals/Y2.json",
+            "When": {
+                "Year": "2"
+            }
+        },
+        {
+            "LogName": "Festival Y3",
+            "Action": "Include",
+            "FromFile": "Data/default/Festivals/Y3.json",
+            "When": {
+                "Year": "3"
+            }
+        },
+        {
+            "LogName": "Festival Randomized (After Y3)",
+            "Action": "Include",
+            "FromFile": "Data/default/Festivals/Y{{Random:null, 2, 3}}.json",
+            "When": {
+                "HasFile:{{FromFile}}": true,
+                "Year |contains= 1, 2, 3": false
+            }
+        },
+        {
+            "LogName": "Misc Dialogue",
+            "Action": "Include",
+            "FromFile": "Data/default/Misc/MiscDialogue.json"
+        }
+    ]
+}

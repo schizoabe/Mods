@@ -1,0 +1,690 @@
+{
+  "Changes": [{
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)15", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "FlashShifter.StardewValleyExpandedCP_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+         }],
+        "MinutesUntilReady": 4000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },      
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_SteelPreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "FlashShifter.StardewValleyExpandedCP_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+         }],
+        "MinutesUntilReady": 3000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_GoldPreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "FlashShifter.StardewValleyExpandedCP_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+         }],
+        "MinutesUntilReady": 2000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_DiamondPreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "FlashShifter.StardewValleyExpandedCP_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+         }],
+        "MinutesUntilReady": 1000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_IridiumPreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "FlashShifter.StardewValleyExpandedCP_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+          "CopyQuality": true,
+         }],
+        "MinutesUntilReady": 1000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_RadioactivePreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "FlashShifter.StardewValleyExpandedCP_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+          "CopyQuality": true,
+          "StackModifiers": [{
+            "Id": "RareDouble",
+            "Condition": "RANDOM .1",
+            "Modification": "Multiply",
+            "Amount": 2.0
+          }],
+          "StackModifierMode": "Stack"
+        }],
+        "MinutesUntilReady": 1000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_PrismaticPreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "FlashShifter.StardewValleyExpandedCP_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+          "CopyQuality": true,
+          "StackModifiers": [{
+            "Id": "RareDouble",
+            "Condition": "RANDOM .3",
+            "Modification": "Multiply",
+            "Amount": 2.0
+          }],
+          "StackModifierMode": "Stack"
+        }],
+        "MinutesUntilReady": 1000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=Cornucopia.ArtisanMachines": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)Cornucopia_Extruder", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SVEGlassNoodles": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SVEGlassNoodles",
+        "Triggers": [{
+          "RequiredItemId": "(O)FlashShifter.StardewValleyExpandedCP_Sweet_Potato",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_GlassNoodles",
+          "IncrementMachineParentSheetIndex": 1,
+        }],
+        "MinutesUntilReady": 460
+      },
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)12", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
+        "Triggers": [{
+          "Trigger": "ItemPlacedInMachine",
+          "RequiredTags": ["juniper_berry_item"],
+          "RequiredCount": 1
+        }],
+        "OutputItem": [{
+          "Id": "(0)ilucie.JuniperGin",
+          "ItemId": "(O)ilucie.JuniperGin",
+          "Quality": -1,
+          "CopyQuality": true
+        }],
+        "MinutesUntilReady": 1800,
+        "DaysUntilReady": -1
+      }
+    },
+    "MoveEntries": [
+        { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_GoldKeg", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
+        "Triggers": [{
+          "Trigger": "ItemPlacedInMachine",
+          "RequiredTags": ["juniper_berry_item"],
+          "RequiredCount": 1
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)ilucie.JuniperGin",
+          "CopyQuality": true,
+        }],
+        "MinutesUntilReady": 1620,
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_DiamondKeg", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
+        "Triggers": [{
+          "Trigger": "ItemPlacedInMachine",
+          "RequiredTags": ["juniper_berry_item"],
+          "RequiredCount": 1
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)ilucie.JuniperGin",
+          "CopyQuality": true,
+        }],
+        "MinutesUntilReady": 1440,
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_IridiumKeg", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
+        "Triggers": [{
+          "Trigger": "ItemPlacedInMachine",
+          "RequiredTags": ["juniper_berry_item"],
+          "RequiredCount": 1
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)ilucie.JuniperGin",
+          "CopyQuality": true,
+        }],
+        "MinutesUntilReady": 1260,
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_RadioactiveKeg", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
+        "Triggers": [{
+          "Trigger": "ItemPlacedInMachine",
+          "RequiredTags": ["juniper_berry_item"],
+          "RequiredCount": 1
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)ilucie.JuniperGin",
+          "CopyQuality": true,
+        }],
+        "MinutesUntilReady": 1080,
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_PrismaticKeg", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
+        "Triggers": [{
+          "Trigger": "ItemPlacedInMachine",
+          "RequiredTags": ["juniper_berry_item"],
+          "RequiredCount": 1
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)ilucie.JuniperGin",
+          "CopyQuality": true,
+        }],
+        "MinutesUntilReady": 900,
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=Cornucopia.ArtisanMachines": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)Cornucopia_Extruder", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.GrainsOverhullBuckwheatNoodles": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.GrainsOverhullBuckwheatNoodles",
+        "Triggers": [{
+          "RequiredItemId": "(O)slimerrain.grainsoverhullcp_Buckwheat_Flour",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_BuckwheatNoodles",
+          "IncrementMachineParentSheetIndex": 1,
+        }],
+        "MinutesUntilReady": 460
+      },
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)15", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {      
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],   
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_SteelPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {      
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],   
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_GoldPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {      
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],   
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_DiamondPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {      
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],   
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_IridiumPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {      
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],   
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_RadioactivePreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {      
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],   
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_PrismaticPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {      
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],   
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_SteelPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Cornucopia_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_GoldPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Cornucopia_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_DiamondPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Cornucopia_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_IridiumPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Cornucopia_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_RadioactivePreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Cornucopia_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=slimerrain.grainsoverhullcp": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_PrismaticPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Cornucopia_Overnight_Oats" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "Triggers": [{
+        "Id": "ItemPlacedInMachine_Oats",
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": [
+          "oat_item"
+        ],
+      }],
+    },
+  }]
+}

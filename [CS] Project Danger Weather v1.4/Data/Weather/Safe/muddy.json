@@ -1,0 +1,119 @@
+{
+	"Changes": [
+		{
+      		"LogName": "The Weather Data Heavy Rain",
+			"Action": "EditData",
+			"Target": "Mods/leclair.cloudyskies/WeatherData",
+			"Entries": {		
+				"kath.weathering_MudRain": {
+					"Id": "kath.weathering_MudRain",
+					"DisplayName": "{{i18n: Weather.MudRain}}",
+
+					"Forecast": "{{i18n: Weather.MudRain.Forecast}}",
+					"ForecastByContext": 
+						{"Island": "{{i18n: Weather.MudRain.ForecastIsland}}", "Desert": "{{i18n: Weather.MudRain.ForecastDesert}}",},
+					
+					"UseNightTiles": true,
+					"IsSnowing": false,
+					"IsRaining": true,
+					"IsLightning": false,
+					"IsDebrisWeather": false,
+					"SpawnCritters": true,
+					"SpawnFrogs": true,
+					"SpawnClouds": false,
+										
+					"MusicOverride": "rain",
+
+					"IconTexture": "Mods/kath.weathering/IconsVanilla",
+					"IconSource": {"X": 48, "Y": 0},
+
+					"TVTexture": "LooseSprites/Cursors",
+					"TVSource": {"X": 465, "Y": 333},
+
+					"AmbientColor": "255, 200, 80",
+					"LightingTint": "orangered",
+					"LightingTintOpacity": 0.45,
+					"PostLightingTint": "blue",
+					"PostLightingTintOpacity": 0.22,					
+
+					"TotemMessage": "{{i18n: Weather.MudRainTotem}}",
+					"TotemScreenTint": "brown",
+					"TotemSound": "rainsound",
+					"TotemParticleTexture": "Mods/kath.weathering/TotemBlank",
+					
+					"Effects":[
+						{
+							"Id": "CTFlag",
+							"Type": "Trigger",
+							"ApplyActions": [
+								"AddConversationTopic WCDMudRain 3",
+							],
+						},
+					],//close effect
+
+
+
+					"Layers": [
+						{
+							"Id": "MakeItRain1",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Group": "Rain",
+							"Color": "156, 123, 52",
+							"Opacity": 1,
+							"Vibrancy": 1,
+							"Scale": 4,
+							"Count": 100,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "MakeItRain2",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Color":"156, 135, 89",
+							"Opacity": 1,
+							"Vibrancy": 1,
+							"Scale": 4,
+							"Count": 100,
+							"Speed": "-8, 32",
+						},
+						{
+							"Id": "MakeItRainLess",
+							"Condition": "ANY \"LOCATION_NAME Target Woods\" \"LOCATION_NAME Target IslandEast\" \"LOCATION_NAME Target IslandShrine\" \"LOCATION_NAME Target CaptainRoom\" \"LOCATION_NAME Target Custom_SpriteSpring2\"",
+							"TargetMapType": "Outdoors",
+							"Type": "Rain",
+							"Group": "Rain",
+							"Color": "156, 135, 89",
+							"Opacity": 1,
+							"Vibrancy": 1,
+							"Scale": 4,
+							"Count": 80,
+							"Speed": "-16, 32",
+						},
+						{
+							"Id": "LightingDarken",
+							"Condition": "!LOCATION_NAME Target Woods, !LOCATION_NAME Target Custom_SpriteSpring2, !LOCATION_NAME Target IslandEast, !LOCATION_NAME Target IslandShrine, !LOCATION_NAME Target CaptainRoom",
+							"TargetMapType": "Outdoors",
+							"Type": "Color",
+							"Mode": "Normal",
+							"Color": "27, 44, 126",
+							"Opacity": 0.3
+						},
+						{
+							"Id": "Darkness",
+							"Condition": "!LOCATION_IS_MINES Here, !LOCATION_IS_SKULL_CAVE Here",
+							"TargetMapType": "Indoors",
+							"Type": "Color",
+							"Mode": "Lighting",
+							"Color": "210, 210, 210",
+							"Opacity": 0.47
+						},							
+					]//close layers
+				}//close in-entry
+			}//close entry
+		}//close edit
+//End
+]
+}

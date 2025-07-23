@@ -1,0 +1,74 @@
+{
+    "Changes": [
+        {
+            "LogName": "Changes general birth-related messages to be about adoption",
+            "Action": "EditData",
+            "Target": "Strings/Events",
+            "Entries": {
+                "BirthMessage_PlayerMother": "{{i18n:PPAF.AlwaysAdopt.Strings.BirthMessage_PlayerMother}}",
+                "BirthMessage_SpouseMother": "{{i18n:PPAF.AlwaysAdopt.Strings.BirthMessage_SpouseMother}}",
+                "HaveBabyQuestion": "{{i18n:PPAF.AlwaysAdopt.Strings.HaveBabyQuestion |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}}}}",
+                "HaveBabyQuestion_Adoption": "{{i18n:PPAF.AlwaysAdopt.Strings.HaveBabyQuestion_Adoption |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}}}}",
+                "HavePlayerBabyQuestion": "{{i18n:PPAF.AlwaysAdopt.Strings.HavePlayerBabyQuestion}}",
+                "HavePlayerBabyQuestion_Adoption": "{{i18n:PPAF.AlwaysAdopt.Strings.HavePlayerBabyQuestion_Adoption}}"
+            }
+        },
+        {
+            "LogName": "Adoption Strings",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4442": "{{i18n:PPAF.AlwaysAdopt.Strings.{{AdoptionSpouseToken}}.NPC.cs.4442}}",
+                "NPC.cs.4446": "{{i18n:PPAF.AlwaysAdopt.Strings.{{AdoptionSpouseToken}}.NPC.cs.4446}}",
+                "NPC.cs.4443": "{{i18n:PPAF.AlwaysAdopt.Strings.Universal.NPC.cs.4443}}",
+                "NPC.cs.4444": "{{i18n:PPAF.AlwaysAdopt.Strings.{{AdoptionSpouseToken}}.NPC.cs.4444.4447 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "NPC.cs.4447": "{{i18n:PPAF.AlwaysAdopt.Strings.{{AdoptionSpouseToken}}.NPC.cs.4444.4447 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "NPC.cs.4445": "{{i18n:PPAF.AlwaysAdopt.Strings.{{AdoptionSpouseToken}}.NPC.cs.4445.4448 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "NPC.cs.4448": "{{i18n:PPAF.AlwaysAdopt.Strings.{{AdoptionSpouseToken}}.NPC.cs.4445.4448 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} |LovePortraitsHappy={{LovePortraitsHappyToken}}}}"
+            }
+        },
+        {
+            "LogName": "Shane adoption, IC Shane",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "NPC.cs.4448": "{{i18n:PPAF.AlwaysAdopt.Strings.ImmersiveShane.NPC.cs.4448}}"
+            },
+            "When": {
+                "HasMod |contains=tenthousandcats.ImmersiveCShane": "true",
+                "Relationship:Shane": "Married",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove": "false"
+            }
+        },
+        {
+            "LogName": "Elliott adoption, romantic",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromCSFiles",
+            "Entries": {
+                "NPC.cs.4444": "{{i18n:PPAF.AlwaysAdopt.Strings.RomanticElliott.NPC.cs.4444.4447 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} |LovePortraitsHappy={{LovePortraitsHappyToken}}}}",
+                "NPC.cs.4447": "{{i18n:PPAF.AlwaysAdopt.Strings.RomanticElliott.NPC.cs.4444.4447 |TermOfEndearment={{PPAF.Core/ConfigValue:TermOfEndearment}} |LovePortraitsHappy={{LovePortraitsHappyToken}}}}"
+            },
+            "When": {
+                "Relationship:Elliott": "Married",
+                "HasMod |contains=aedenthorn.MultipleSpouses, aedenthorn.FreeLove, ApryllForever.PolyamorySweetLove": "false",
+                "PPAF.Core/ConfigValue:ElliottRelationshipType |contains=RomanceWithoutSex, RomanceAndSex": "true"
+            }
+        },
+        {
+            "LogName": "Sam adoption dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueSam",
+            "Entries": {
+                "OneKid_3": "{{i18n:PPAF.AlwaysAdopt.Dialogue.Sam.OneKid_3}}"
+            }
+        },
+        {
+            "LogName": "Generic marriage dialogue, always adopt",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogue",
+            "Entries": {
+                "TwoKids_2": "{{i18n:PPAF.GenericTweaks.Dialogue.PartnerDialogue.TwoKids_2}}"
+            }
+        }
+    ]
+}

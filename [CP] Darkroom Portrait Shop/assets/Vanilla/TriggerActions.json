@@ -1,0 +1,1359 @@
+{
+"Changes": [
+	
+		{
+			"LogName": "Mail Triggers",
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+			
+				/* //Example Trigger Template
+				"AgentLyoko.PortraitShop_ExampleTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ExampleMailID",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current MailFlag",
+					"HostOnly": false,
+					"Action": "AddMail Current MailFlag", //Use "Action" if only setting one action. *If setting multiple, use the example in "Actions" instead of this!!* Do not use both Action and Actions.
+					"Actions": [
+						"AddMail Current Abigail_LeoMoved", //From example on wiki. Always use the "now" argument for heart events or it's likely people will think the event is bugged.
+						"AddConversationTopic LeoMoved 5"
+					],
+				},*/
+				
+				//Initial Mail
+				
+				"AgentLyoko.PortraitShop_ShopOpen": {
+					"Id": "AgentLyoko.PortraitShop_ShopOpen",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HEARTS Current Haley {{HaleyHearts}}",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.PortraitShopOpen",
+				},
+				
+				//Abigail Triggers
+				
+				"AgentLyoko.PortraitShop_AbigailNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AbigailNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AbigailStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Abigail Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.AbigailPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AbigailStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AbigailStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AbigailPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.AbigailStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AbigailResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AbigailResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AbigailPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.AbigailPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.AbigailPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AbigailSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AbigailSpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AbigailStealthFlag, PLAYER_NPC_RELATIONSHIP Current Abigail Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.AbigailSpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AbigailSpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_AbigailSpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AbigailPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Abigail Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.AbigailPortraitMail",
+						"AddMail Current AgentLyoko.AbigailSpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AbigailStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AbigailStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AbigailSpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.AbigailStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AbigailSpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AbigailSpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AbigailSpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.AbigailPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.AbigailSpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AbigailBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AbigailBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AbigailSpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Abigail Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.AbigailSpousePortraitMail",
+						"AddMail Current AgentLyoko.AbigailDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AbigailPermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AbigailPermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Abigail Divorced, PLAYER_HAS_MAIL AgentLyoko.AbigailPermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.AbigailPermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AbigailDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_AbigailDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AbigailDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Abigail Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.AbigailDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				//Leah Triggers
+				
+				"AgentLyoko.PortraitShop_LeahNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_LeahNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.LeahStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Leah Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.LeahPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_LeahStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_LeahStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.LeahPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.LeahStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_LeahResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_LeahResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.LeahPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.LeahPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.LeahPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_LeahSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_LeahSpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.LeahStealthFlag, PLAYER_NPC_RELATIONSHIP Current Leah Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.LeahSpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_LeahSpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_LeahSpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.LeahPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Leah Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.LeahPortraitMail",
+						"AddMail Current AgentLyoko.LeahSpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_LeahStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_LeahStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.LeahSpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.LeahStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_LeahSpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_LeahSpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.LeahSpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.LeahPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.LeahSpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_LeahBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_LeahBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.LeahSpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Leah Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.LeahSpousePortraitMail",
+						"AddMail Current AgentLyoko.LeahDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_LeahPermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_LeahPermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Leah Divorced, PLAYER_HAS_MAIL AgentLyoko.LeahPermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.LeahPermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_LeahDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_LeahDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.LeahDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Leah Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.LeahDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				
+				//Penny Triggers
+				
+				"AgentLyoko.PortraitShop_PennyNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_PennyNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.PennyStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Penny Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.PennyPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_PennyStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_PennyStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.PennyPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.PennyStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_PennyResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_PennyResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.PennyPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.PennyPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.PennyPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_PennySpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_PennySpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.PennyStealthFlag, PLAYER_NPC_RELATIONSHIP Current Penny Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.PennySpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_PennySpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_PennySpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.PennyPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Penny Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.PennyPortraitMail",
+						"AddMail Current AgentLyoko.PennySpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_PennyStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_PennyStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.PennySpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.PennyStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_PennySpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_PennySpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.PennySpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.PennyPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.PennySpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_PennyBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_PennyBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.PennySpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Penny Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.PennySpousePortraitMail",
+						"AddMail Current AgentLyoko.PennyDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_PennyPermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_PennyPermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Penny Divorced, PLAYER_HAS_MAIL AgentLyoko.PennyPermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.PennyPermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_PennyDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_PennyDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.PennyDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Penny Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.PennyDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				
+				//Maru Triggers
+				
+				"AgentLyoko.PortraitShop_MaruNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_MaruNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.MaruStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Maru Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.MaruPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_MaruStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_MaruStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.MaruPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.MaruStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_MaruResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_MaruResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.MaruPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.MaruPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.MaruPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_MaruSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_MaruSpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.MaruStealthFlag, PLAYER_NPC_RELATIONSHIP Current Maru Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.MaruSpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_MaruSpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_MaruSpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.MaruPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Maru Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.MaruPortraitMail",
+						"AddMail Current AgentLyoko.MaruSpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_MaruStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_MaruStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.MaruSpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.MaruStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_MaruSpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_MaruSpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.MaruSpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.MaruPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.MaruSpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_MaruBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_MaruBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.MaruSpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Maru Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.MaruSpousePortraitMail",
+						"AddMail Current AgentLyoko.MaruDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_MaruPermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_MaruPermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Maru Divorced, PLAYER_HAS_MAIL AgentLyoko.MaruPermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.MaruPermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_MaruDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_MaruDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.MaruDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Maru Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.MaruDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				//Haley Triggers
+				
+				"AgentLyoko.PortraitShop_HaleyNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HaleyNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HaleyStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Haley Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.HaleyPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HaleyStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HaleyStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HaleyPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.HaleyStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HaleyResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HaleyResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HaleyPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.HaleyPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.HaleyPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HaleySpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HaleySpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HaleyStealthFlag, PLAYER_NPC_RELATIONSHIP Current Haley Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.HaleySpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HaleySpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_HaleySpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HaleyPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Haley Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.HaleyPortraitMail",
+						"AddMail Current AgentLyoko.HaleySpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HaleyStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HaleyStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HaleySpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.HaleyStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HaleySpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HaleySpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HaleySpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.HaleyPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.HaleySpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HaleyBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HaleyBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HaleySpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Haley Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.HaleySpousePortraitMail",
+						"AddMail Current AgentLyoko.HaleyDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HaleyPermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HaleyPermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Haley Divorced, PLAYER_HAS_MAIL AgentLyoko.HaleyPermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.HaleyPermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HaleyDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_HaleyDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HaleyDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Haley Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.HaleyDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				//Emily Triggers
+				
+				"AgentLyoko.PortraitShop_EmilyNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_EmilyNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.EmilyStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Emily Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.EmilyPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_EmilyStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_EmilyStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.EmilyPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.EmilyStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_EmilyResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_EmilyResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.EmilyPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.EmilyPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.EmilyPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_EmilySpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_EmilySpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.EmilyStealthFlag, PLAYER_NPC_RELATIONSHIP Current Emily Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.EmilySpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_EmilySpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_EmilySpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.EmilyPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Emily Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.EmilyPortraitMail",
+						"AddMail Current AgentLyoko.EmilySpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_EmilyStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_EmilyStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.EmilySpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.EmilyStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_EmilySpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_EmilySpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.EmilySpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.EmilyPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.EmilySpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_EmilyBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_EmilyBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.EmilySpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Emily Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.EmilySpousePortraitMail",
+						"AddMail Current AgentLyoko.EmilyDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_EmilyPermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_EmilyPermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Emily Divorced, PLAYER_HAS_MAIL AgentLyoko.EmilyPermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.EmilyPermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_EmilyDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_EmilyDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.EmilyDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Emily Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.EmilyDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				//Sebastian Triggers
+				
+				"AgentLyoko.PortraitShop_SebastianNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SebastianNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SebastianStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Sebastian Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.SebastianPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SebastianStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SebastianStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SebastianPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.SebastianStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SebastianResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SebastianResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SebastianPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.SebastianPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.SebastianPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SebastianSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SebastianSpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SebastianStealthFlag, PLAYER_NPC_RELATIONSHIP Current Sebastian Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.SebastianSpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SebastianSpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_SebastianSpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SebastianPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Sebastian Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.SebastianPortraitMail",
+						"AddMail Current AgentLyoko.SebastianSpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SebastianStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SebastianStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SebastianSpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.SebastianStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SebastianSpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SebastianSpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SebastianSpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.SebastianPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.SebastianSpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SebastianBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SebastianBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SebastianSpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Sebastian Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.SebastianSpousePortraitMail",
+						"AddMail Current AgentLyoko.SebastianDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SebastianPermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SebastianPermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Sebastian Divorced, PLAYER_HAS_MAIL AgentLyoko.SebastianPermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.SebastianPermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SebastianDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_SebastianDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SebastianDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Sebastian Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.SebastianDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				//Elliott Triggers
+				
+				"AgentLyoko.PortraitShop_ElliottNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ElliottNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ElliottStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Elliott Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.ElliottPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ElliottStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ElliottStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ElliottPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.ElliottStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ElliottResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ElliottResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ElliottPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.ElliottPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.ElliottPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ElliottSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ElliottSpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ElliottStealthFlag, PLAYER_NPC_RELATIONSHIP Current Elliott Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.ElliottSpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ElliottSpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_ElliottSpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ElliottPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Elliott Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.ElliottPortraitMail",
+						"AddMail Current AgentLyoko.ElliottSpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ElliottStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ElliottStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ElliottSpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.ElliottStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ElliottSpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ElliottSpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ElliottSpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.ElliottPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.ElliottSpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ElliottBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ElliottBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ElliottSpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Elliott Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.ElliottSpousePortraitMail",
+						"AddMail Current AgentLyoko.ElliottDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ElliottPermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ElliottPermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Elliott Divorced, PLAYER_HAS_MAIL AgentLyoko.ElliottPermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.ElliottPermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ElliottDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_ElliottDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ElliottDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Elliott Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.ElliottDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				//Sam Triggers
+				
+				"AgentLyoko.PortraitShop_SamNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SamNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SamStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Sam Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.SamPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SamStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SamStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SamPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.SamStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SamResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SamResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SamPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.SamPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.SamPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SamSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SamSpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SamStealthFlag, PLAYER_NPC_RELATIONSHIP Current Sam Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.SamSpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SamSpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_SamSpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SamPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Sam Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.SamPortraitMail",
+						"AddMail Current AgentLyoko.SamSpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SamStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SamStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SamSpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.SamStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SamSpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SamSpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SamSpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.SamPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.SamSpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SamBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SamBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SamSpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Sam Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.SamSpousePortraitMail",
+						"AddMail Current AgentLyoko.SamDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SamPermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_SamPermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Sam Divorced, PLAYER_HAS_MAIL AgentLyoko.SamPermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.SamPermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_SamDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_SamDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.SamDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Sam Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.SamDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				//Harvey Triggers
+				
+				"AgentLyoko.PortraitShop_HarveyNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HarveyNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HarveyStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Harvey Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.HarveyPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HarveyStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HarveyStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HarveyPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.HarveyStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HarveyResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HarveyResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HarveyPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.HarveyPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.HarveyPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HarveySpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HarveySpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HarveyStealthFlag, PLAYER_NPC_RELATIONSHIP Current Harvey Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.HarveySpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HarveySpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_HarveySpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HarveyPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Harvey Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.HarveyPortraitMail",
+						"AddMail Current AgentLyoko.HarveySpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HarveyStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HarveyStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HarveySpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.HarveyStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HarveySpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HarveySpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HarveySpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.HarveyPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.HarveySpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HarveyBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HarveyBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HarveySpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Harvey Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.HarveySpousePortraitMail",
+						"AddMail Current AgentLyoko.HarveyDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HarveyPermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_HarveyPermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Harvey Divorced, PLAYER_HAS_MAIL AgentLyoko.HarveyPermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.HarveyPermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_HarveyDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_HarveyDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.HarveyDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Harvey Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.HarveyDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				//Alex Triggers
+				
+				"AgentLyoko.PortraitShop_AlexNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AlexNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AlexStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Alex Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.AlexPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AlexStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AlexStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AlexPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.AlexStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AlexResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AlexResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AlexPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.AlexPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.AlexPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AlexSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AlexSpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AlexStealthFlag, PLAYER_NPC_RELATIONSHIP Current Alex Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.AlexSpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AlexSpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_AlexSpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AlexPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Alex Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.AlexPortraitMail",
+						"AddMail Current AgentLyoko.AlexSpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AlexStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AlexStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AlexSpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.AlexStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AlexSpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AlexSpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AlexSpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.AlexPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.AlexSpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AlexBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AlexBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AlexSpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Alex Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.AlexSpousePortraitMail",
+						"AddMail Current AgentLyoko.AlexDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AlexPermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_AlexPermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Alex Divorced, PLAYER_HAS_MAIL AgentLyoko.AlexPermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.AlexPermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_AlexDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_AlexDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.AlexDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Alex Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.AlexDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				//Shane Triggers
+				
+				"AgentLyoko.PortraitShop_ShaneNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ShaneNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ShaneStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Shane Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.ShanePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ShaneStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ShaneStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ShanePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.ShaneStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ShaneResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ShaneResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ShanePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.ShanePermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.ShanePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ShaneSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ShaneSpouseTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ShaneStealthFlag, PLAYER_NPC_RELATIONSHIP Current Shane Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.ShaneSpousePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ShaneSpousePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_ShaneSpousePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ShanePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Shane Married", //In the event you marry while the portrait's in progress, have the marriage mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.ShanePortraitMail",
+						"AddMail Current AgentLyoko.ShaneSpousePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ShaneStealthSpouseTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ShaneStealthSpouseTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ShaneSpousePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.ShaneStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ShaneSpouseResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ShaneSpouseResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ShaneSpousePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.ShanePermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.ShaneSpousePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ShaneBrokenHeartTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ShaneBrokenHeartTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ShaneSpousePortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Shane Divorced",
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.ShaneSpousePortraitMail",
+						"AddMail Current AgentLyoko.ShaneDivorcedPortrait now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ShanePermaRemovalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_ShanePermaRemovalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current Shane Divorced, PLAYER_HAS_MAIL AgentLyoko.ShanePermaPortraitMail",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.ShanePermaPortraitMail", //Yeah, I'm not letting you buy extra portraits of a divorced spouse, code reader. Even I have my limits.
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_ShaneDivorceReset": {
+					"Id": "AgentLyoko.PortraitShop_ShaneDivorceReset",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.ShaneDivorcedPortrait Received, !PLAYER_NPC_RELATIONSHIP Current Shane Divorced",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.ShaneDivorcedPortrait",
+					"MarkActionApplied": false,
+				},
+				
+				//Krobus Triggers
+				
+				"AgentLyoko.PortraitShop_KrobusNormalTrigger": {
+					"Id": "AgentLyoko.PortraitShop_KrobusNormalTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.KrobusStealthFlag, !PLAYER_NPC_RELATIONSHIP Current Krobus Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.KrobusPortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_KrobusStealthTrigger": {
+					"Id": "AgentLyoko.PortraitShop_KrobusStealthTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.KrobusPortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.KrobusStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_KrobusResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_KrobusResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.KrobusPortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.KrobusPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.KrobusPortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_KrobusRoommateTrigger": {
+					"Id": "AgentLyoko.PortraitShop_KrobusRoommateTrigger",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.KrobusStealthFlag, PLAYER_NPC_RELATIONSHIP Current Krobus Married",
+					"HostOnly": false,
+					"Action": "AddMail Current AgentLyoko.KrobusRoommatePortraitMail",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_KrobusRoommatePortraitMailSwap": {
+					"Id": "AgentLyoko.PortraitShop_KrobusRoommatePortraitMailSwap",
+					"Trigger": "DayStarted",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.KrobusPortraitMail Mailbox, PLAYER_NPC_RELATIONSHIP Current Krobus Married", //In the event you roommate while the portrait's in progress, have the roommate mail instead
+					"HostOnly": false,
+					"Actions": [
+						"RemoveMail Current AgentLyoko.KrobusPortraitMail",
+						"AddMail Current AgentLyoko.KrobusRoommatePortraitMail now",
+					],
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_KrobusStealthRoommateTrigger": {
+					"Id": "AgentLyoko.PortraitShop_KrobusStealthRoommateTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.KrobusRoommatePortraitMail tomorrow",
+					"HostOnly": false,
+					"Action": "RemoveMail Current AgentLyoko.KrobusStealthFlag",
+					"MarkActionApplied": false,
+				},
+				
+				"AgentLyoko.PortraitShop_KrobusRoommateResetTrigger": {
+					"Id": "AgentLyoko.PortraitShop_KrobusRoommateResetTrigger",
+					"Trigger": "DayEnding",
+					"Condition": "PLAYER_HAS_MAIL Current AgentLyoko.KrobusRoommatePortraitMail Received",
+					"HostOnly": false,
+					"Actions": [
+						"AddMail Current AgentLyoko.KrobusPermaPortraitMail received",
+						"RemoveMail Current AgentLyoko.KrobusRoommatePortraitMail received",
+					],
+					"MarkActionApplied": false,
+				},
+			},
+		},
+	],
+}

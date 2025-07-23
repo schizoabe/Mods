@@ -1,0 +1,868 @@
+{
+    "Changes": [
+ 
+  	{
+		"LogName": "QL Candied Flowers Rules",
+		"Action": "EditData",
+		"Target": "Data/Machines",
+		"TargetField": ["(BC)15", "OutputRules"],
+		"Entries": {	
+"QL_CandiedFlowers": {
+        "Id": "QL_CandiedFlowers",
+        "Triggers": [
+          {
+            "Id": "QL_CandiedFlowers",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": null,
+            "RequiredTags": [
+              "edible_flower_item"
+            ],
+            "RequiredCount": 1,
+            "Condition": null
+          },
+          {
+            "Id": "QL_CandiedFlowersVanillaFairyRose",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)595",
+            "RequiredTags": null,
+            "RequiredCount": 1,
+            "Condition": null
+          },
+           {
+            "Id": "QL_CandiedFlowersSunflower",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)421",
+            "RequiredTags": null,
+            "RequiredCount": 1,
+            "Condition": null
+          },
+           {
+            "Id": "QL_CandiedFlowersTulip",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)591",
+            "RequiredTags": null,
+            "RequiredCount": 1,
+            "Condition": null
+          }
+                            
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_CandiedFlowers",
+            "ItemId": "(O)QL_CandiedFlowers",
+			"CopyQuality":true,
+			"CopyPrice": false,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 600,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": null,
+        "RecalculateOnCollect": false
+      }
+	}
+},
+
+/*
+//DRIED FLOWERS
+  	{
+		"LogName": "QL Dried Flowers Rules",
+		"Action": "EditData",
+		"Target": "Data/Machines",
+		"TargetField": ["(BC)Dehydrator", "OutputRules"],
+		"Entries": {	
+		"QL_DriedFlower": {
+        "Triggers": [
+          {
+            "Id": "QL_DriedFlower",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": null,
+            "RequiredTags": [
+              "flower_item"
+            ],
+            "RequiredCount": 1,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_DriedFlower",
+            "ItemId": "(O)QL_DriedFlower",
+			"CopyQuality":true,
+			"CopyPrice": false,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": -1,
+        "DaysUntilReady": 1,
+        "InvalidCountMessage": null,
+        "RecalculateOnCollect": false
+      }
+	}
+},
+*/
+
+	
+//FLOWER WINE
+	{
+		"LogName": "QL Flower Wine & Vanilla Bouquet Rules",
+		"Action": "EditData",
+		"Target": "Data/Machines",
+		"Entries": {
+		  "(BC)QL_FloralKeg": {
+    "HasInput": false,
+    "HasOutput": false,
+    "InteractMethod": null,
+        "OutputRules": [	
+	      {
+        "Id": "QL_FlowerWine",
+        "Triggers": [
+          {
+            "Id": "QL_FlowerWine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": null,
+            "RequiredTags": [
+              "edible_flower_item", "aromatic_flower_item"
+            ],
+            "RequiredCount": 1,
+            "Condition": null
+          },
+          {
+            "Id": "QL_FlowerWineFairyRose",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)595",
+            "RequiredTags": null,
+            "RequiredCount": 1,
+            "Condition": null
+          },
+          {
+            "Id": "QL_FlowerWinePoppy",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)376",
+            "RequiredTags": null,
+            "RequiredCount": 1,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "CustomData": null,
+            "OutputMethod": null,
+            "CopyColor": false,
+            "CopyPrice": false,
+            "CopyQuality": false,
+            "PreserveType": null,
+            "PreserveId": null,
+            "IncrementMachineParentSheetIndex": 0,
+			"PriceModifiers": null,
+            "PriceModifierMode": "Stack",
+            "Condition": null,
+            "Id": "Default",
+            "ItemId": "FLAVORED_ITEM Wine DROP_IN_ID",
+            "RandomItemId": null,
+            "MaxItems": null,
+            "MinStack": -1,
+            "MaxStack": -1,
+            "Quality": -1,
+            "ObjectInternalName": null,
+            "ObjectDisplayName": null,
+            "ToolUpgradeLevel": -1,
+            "IsRecipe": false,
+            "StackModifiers": null,
+            "StackModifierMode": "Stack",
+            "QualityModifiers": null,
+            "QualityModifierMode": "Stack",
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": -1,
+        "DaysUntilReady": 7,
+        "InvalidCountMessage": null,
+        "RecalculateOnCollect": false
+      }
+   ],
+    "AdditionalConsumedItems": null,
+    "PreventTimePass": null,
+    "ReadyTimeModifiers": null,
+    "ReadyTimeModifierMode": "Stack",
+    "InvalidItemMessage": null,
+    "InvalidItemMessageCondition": null,
+    "InvalidCountMessage": null,
+    "LoadEffects": [
+      {
+        "Id": "Default",
+        "Condition": null,
+        "Sounds": [
+          {
+            "Id": "Ship",
+            "Delay": 0
+          },
+          {
+            "Id": "bubbles",
+            "Delay": 0
+          }
+        ],
+        "Interval": 100,
+        "Frames": null,
+        "ShakeDuration": -1,
+        "TemporarySprites": [
+          {
+            "Id": "QL_FlowerWine",
+            "Condition": "ITEM_ID Target (O)348",
+            "Texture": "TileSheets\\animations",
+            "SourceRect": {
+              "X": 256,
+              "Y": 1856,
+              "Width": 64,
+              "Height": 128
+            },
+            "Interval": 80.0,
+            "Frames": 6,
+            "Loops": 999999,
+            "PositionOffset": "0, -32",
+            "Flicker": false,
+            "Flip": false,
+            "SortOffset": 0.0,
+            "AlphaFade": 0.005,
+            "Scale": 0.25,
+            "ScaleChange": 0.0,
+            "Rotation": 0.0,
+            "RotationChange": 0.0,
+            "Color": "#ACBFACBF"
+          },
+          
+        ]
+      }
+    ],
+    "WorkingEffects": [
+
+      {
+        "Id": "Default",
+        "Condition": null,
+        "Sounds": [
+          {
+            "Id": "bubbles",
+            "Delay": 0
+          }
+        ],
+        "Interval": 100,
+        "Frames": null,
+        "ShakeDuration": -1,
+        "TemporarySprites": [
+          {
+            "Id": "FlowerWine",
+            "Condition": "ITEM_ID Target (O)348",
+            "Texture": "TileSheets\\animations",
+            "SourceRect": {
+              "X": 256,
+              "Y": 1856,
+              "Width": 64,
+              "Height": 128
+            },
+            "Interval": 80.0,
+            "Frames": 6,
+            "Loops": 999999,
+            "PositionOffset": "0, -32",
+            "Flicker": false,
+            "Flip": false,
+            "SortOffset": 0.0,
+            "AlphaFade": 0.005,
+            "Scale": 0.25,
+            "ScaleChange": 0.0,
+            "Rotation": 0.0,
+            "RotationChange": 0.0,
+            "Color": "#ACBFACBF"
+          },
+
+          {
+            "Id": "Default",
+            "Condition": null,
+            "Texture": "TileSheets\\animations",
+            "SourceRect": {
+              "X": 256,
+              "Y": 1856,
+              "Width": 64,
+              "Height": 128
+            },
+            "Interval": 80.0,
+            "Frames": 6,
+            "Loops": 999999,
+            "PositionOffset": "0, -32",
+            "Flicker": false,
+            "Flip": false,
+            "SortOffset": 0.0,
+            "AlphaFade": 0.005,
+            "Scale": 0.25,
+            "ScaleChange": 0.0,
+            "Rotation": 0.0,
+            "RotationChange": 0.0,
+            "Color": "#7E7E7EBF"
+          }
+        ]
+      }
+    ],
+    "WorkingEffectChance": 0.33,
+    "AllowLoadWhenFull": false,
+    "WobbleWhileWorking": true,
+    "LightWhileWorking": null,
+    "ShowNextIndexWhileWorking": false,
+    "ShowNextIndexWhenReady": true,
+    "AllowFairyDust": true,
+    "IsIncubator": false,
+    "ClearContentsOvernightCondition": null,
+    "StatsToIncrementWhenLoaded": null,
+    "StatsToIncrementWhenHarvested": [
+      {
+        "RequiredItemId": null,
+        "RequiredTags": null,
+        "StatName": "BeveragesMade"
+      }
+    ],
+    "ExperienceGainOnHarvest": null,
+    "CustomFields": null
+  },  
+	"(BC)QL_FloristTable": {
+        "OutputRules": [	
+//VANILLA FLOWER BOUQUETS
+	      {
+        "Id": "QL_BlueJazzBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)597",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_BlueJazzBouquet",
+            "ItemId": "(O)QL_BlueJazzBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      }, 
+	      {
+        "Id": "QL_FairyRoseBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)595",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_FairyRoseBouquet",
+            "ItemId": "(O)QL_FairyRoseBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      }, 
+
+	      {
+        "Id": "QL_PoppyBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)376",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_PoppyBouquet",
+            "ItemId": "(O)QL_PoppyBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      }, 
+       {
+        "Id": "QL_SummerSpangleBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)593",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_SummerSpangleBouquet",
+            "ItemId": "(O)QL_SummerSpangleBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "DaysUntilReady": -1
+      },
+
+      {
+        "Id": "QL_SunflowerBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)421",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_SunflowerBouquet",
+            "ItemId": "(O)QL_SunflowerBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+      {
+        "Id": "QL_TulipBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)591",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_TulipBouquet",
+            "ItemId": "(O)QL_TulipBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+//VANILLA FORAGE BOUQUET
+      {
+        "Id": "QL_CrocusBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)418",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_CrocusBouquet",
+            "ItemId": "(O)QL_CrocusBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+      {
+        "Id": "QL_DaffodilBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)18",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_DaffodilBouquet",
+            "ItemId": "(O)QL_DaffodilBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+      {
+        "Id": "QL_SweetPeaBouquet",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)402",
+            "RequiredTags": null,
+            "RequiredCount": 3,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+        "OutputItem": [
+          {
+            "Id": "(O)QL_SweetPeaBouquet",
+            "ItemId": "(O)QL_SweetPeaBouquet",
+			"CopyQuality":true,
+			"CopyPrice": true,
+			"PriceModifiers": 
+				[
+				   {
+						"Modification": "Multiply",
+						"Amount": 4
+					}
+				],
+            "ModData": null,
+            "PerItemCondition": null
+          }
+        ],
+        "MinutesUntilReady": 60,
+        "DaysUntilReady": -1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidItem.message}}",
+        "RecalculateOnCollect": false
+      },
+
+     ],
+	"AdditionalConsumedItems": [
+      {
+        "ItemId": "(O)QL_FloristPaper",
+        "RequiredCount": 1,
+        "InvalidCountMessage": "{{i18n:FloristTable.InvalidCountFuel.message}}"
+			}
+		],
+	"WorkingEffectChance": 0.33,
+    "AllowLoadWhenFull": false,
+    "WobbleWhileWorking": true,
+    "LightWhileWorking": null,
+    "ShowNextIndexWhileWorking": false,
+    "ShowNextIndexWhenReady": true,
+    "AllowFairyDust": true,
+    "IsIncubator": false,
+    "ClearContentsOvernightCondition": null,
+    "StatsToIncrementWhenLoaded": null,
+    "StatsToIncrementWhenHarvested": null,
+    "ExperienceGainOnHarvest": null,
+    "CustomFields": null
+				}
+			}
+		},
+//EXTRACTOR
+	{
+		"LogName": "QL Flower Extracts Rules",
+		"Action": "EditData",
+		"Target": "Data/Machines",
+		"Entries": {
+		  "(BC)QL_Extractor": {
+		  "OutputRules": [
+      {
+        "Id": "QL_FairyRoseExtract",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)595",
+            "RequiredCount": 10,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+      "OutputItem": [
+        {
+          "ID": "QL_FairyRoseExtract",
+          "ItemID": "(O)QL_FairyRoseExtract",
+          "CopyQuality":true,
+          "CopyPrice": true,
+          "PriceModifiers": 
+                   [
+                           {
+                           "Modification": "Multiply",
+                           "Amount": 13.5
+                            },
+                           {
+                           "Modification": "Add",
+                           "Amount": 50
+                            }
+                        ]
+                     }
+                   ],       
+		"DaysUntilReady": 3,
+        "InvalidCountMessage": null
+        },        
+        
+      {
+        "Id": "QL_PoppyExtract",
+        "Triggers": [
+          {
+            "Id": "ItemPlacedInMachine",
+            "Trigger": "ItemPlacedInMachine",
+            "RequiredItemId": "(O)376",
+            "RequiredCount": 10,
+            "Condition": null
+          }
+        ],
+        "UseFirstValidOutput": false,
+      "OutputItem": [
+        {
+          "ID": "QL_PoppyExtract",
+          "ItemID": "(O)QL_PoppyExtract",
+          "CopyQuality":true,
+          "CopyPrice": true,
+          "PriceModifiers": 
+                   [
+                           {
+                           "Modification": "Multiply",
+                           "Amount": 13.5
+                            },
+                           {
+                           "Modification": "Add",
+                           "Amount": 50
+                            }
+                        ]
+                     }
+                   ],       
+		"DaysUntilReady": 3,
+        "InvalidCountMessage": null
+        },  
+    ],
+    "AdditionalConsumedItems": null,
+    "PreventTimePass": null,
+    "ReadyTimeModifiers": null,
+    "ReadyTimeModifierMode": "Stack",
+    "InvalidItemMessage": null,
+    "InvalidItemMessageCondition": null,
+    "InvalidCountMessage": null,
+    "LoadEffects": [
+      {
+        "Id": "Default",
+        "Condition": null,
+        "Sounds": [
+          {
+            "Id": "bubbles",
+            "Delay": 0
+          },
+          {
+            "Id": "sipTea",
+            "Delay": 0
+          }
+        ],
+        "Interval": 100,
+        "Frames": null,
+        "ShakeDuration": -1,
+        "TemporarySprites": [
+          {
+            "Id": "Default",
+            "Condition": null,
+            "Texture": "TileSheets\\animations",
+            "SourceRect": {
+              "X": 256,
+              "Y": 1856,
+              "Width": 64,
+              "Height": 128
+            },
+            "Interval": 80.0,
+            "Frames": 6,
+            "Loops": 999999,
+            "PositionOffset": "0, -32",
+            "Flicker": false,
+            "Flip": false,
+            "SortOffset": 0.0,
+            "AlphaFade": 0.005,
+            "Scale": 0.25,
+            "ScaleChange": 0.0,
+            "Rotation": 0.0,
+            "RotationChange": 0.0,
+            "Color": "#BFBF00BF"
+          }
+        ]
+      }
+    ],
+    "WorkingEffects": [
+      {
+        "Id": "Animation",
+        "Frames":[4,1,2,3,4,1,2,3,4],
+        "Interval":250
+                },
+      {
+        "Id": "Default",
+        "Condition": null,
+        "Sounds": [
+          {
+            "Id": "fireball",
+            "Delay": 0
+          }
+        ],
+        "Interval": 100,
+        "Frames": null,
+        "ShakeDuration": -1,
+        "TemporarySprites": [
+          {
+            "Id": "Default",
+            "Condition": null,
+            "Texture": "Mods\\PC.QL.FlowerGarden2\\Machines",
+            "SourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 16,
+              "Height": 32
+            },
+            "Interval": 300.0,
+            "Frames": 4,
+            "Loops": 999999,
+            "PositionOffset": "0, -16",
+            "Rotation": 0.0,
+            "RotationChange": 0.0,
+            "Color": null
+          }
+        ]
+      }
+    ],
+	"AdditionalConsumedItems": [
+      {
+        "ItemId": "(O)382",
+        "RequiredCount": 1,
+        "InvalidCountMessage": "{{i18n:Extractor.InvalidCountFuel.message}}"
+			}
+		],
+    "WorkingEffectChance": 1,
+    "WobbleWhileWorking": false,
+    "ShowNextIndexWhileWorking": true,
+    "ShowNextIndexWhenReady": true,
+    "InvalidItemMessage":"{{i18n:Extractor.InvalidItem.message}}",
+    "InvalidCountMessage":"{{i18n:Extractor.InvalidCount.message}}",
+    "AllowFairyDust": true,
+    "IsIncubator": false,
+    "CustomFields": null
+				},  
+			}
+		}
+	]
+}
+
+
+
+
+

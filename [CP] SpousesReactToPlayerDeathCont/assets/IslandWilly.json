@@ -1,0 +1,16 @@
+{ // Island Death - Willy
+  "Changes": [
+    {
+      "LogName": "KO Island - Willy",
+      "Action": "EditData",
+      "Target": "Data/Events/IslandSouth",
+      "When": {
+        "HasValue: {{Spouse}}": true,
+        "Spouse": "Willy",
+      },
+      "Entries": {
+        "PlayerKilled": "none/-1000 -1000/farmer 13 33 2 Willy 15 33 3/skippable/pause 1500/showFrame 5/message \" ...{2}?\"/pause 1000/message \"{{i18n:IslandKilled.Willy.00}}\"/pause 500/viewport 13 33 clamp true/pause 1000/speak Willy \"{{i18n:IslandKilled.Willy.03}}\"/emote farmer 16/faceDirection farmer 1/pause 500/speak Willy \"{{i18n:IslandKilled.Willy.04}}\"/pause 500/emote farmer 28/pause 500/speak Willy \"{{i18n:IslandKilled.Willy.05}}\"/faceDirection farmer 2/showFrame 0/pause 1000/emote farmer 32/minedeath/end dialogue Willy \"{{i18n:IslandEnd.Willy.01}}\""
+      }
+    }
+  ]
+}

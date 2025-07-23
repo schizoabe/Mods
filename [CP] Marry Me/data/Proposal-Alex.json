@@ -1,0 +1,24 @@
+{
+"Changes": [
+
+//ALEX -- proposes in the cemetery, in front of his mother's gravestone
+{
+    "Action": "EditData",
+    "Target": "Data/Events/Town",
+    "Entries": {
+        "{{ModId}}_Proposal_Alex/Dating Alex/f Alex 2500/t 1000 1800/w sunny/c 1/LocalMail {{ModId}}_Letter_Alex": "{{DayAmbient}}/-1000 -1000/farmer 47 100 0 Alex 47 87 0/--skippable/mailReceived {{ModId}}_StopBlack_Alex/viewport 47 88 clamp true/positionOffset farmer 0 -16/pause 2000/advancedMove farmer false 0 -10 4 500/pause 2500/playSound leafrustle/pause 300/playSound leafrustle/waitForAllStationary/pause 200/emote farmer 8/pause 1800/emote Alex 40/pause 200/speak Alex \"{{i18n:White_Alex.0}}\"/pause 1500/faceDirection Alex 2/pause 800/speak Alex \"{{i18n:White_Alex.1}}\"/pause 200/emote farmer 32/pause 400/speed Alex 1/move Alex 0 2 2/pause 2000/faceDirection Alex 1/pause 500/faceDirection Alex 3/emote Alex 40/pause 1500/faceDirection Alex 2/pause 200/speak Alex \"{{i18n:White_Alex.2}}\"/pause 1500/speak Alex \"{{i18n:White_Alex.3}}\"/pause 100/emote farmer 8/pause 200/playMusic musicboxsong/pause 1000/speed Alex 1/advancedMove Alex false 1 0 0 1 3 500/pause 200/viewport move 0 1 2000/pause 500/faceDirection farmer 1/waitForAllStationary/pause 1500/speak Alex \"{{i18n:White_Alex.4}}\"/pause 1000/speak Alex \"{{i18n:White_Alex.5}}\"/pause 800/message \"{{i18n:White_Alex.6 |You={{You}}}}\"/pause 200/speak Alex \"{{i18n:White_Alex.7}}\"/pause 400/emote farmer 16/pause 200/question fork1  \"{{i18n:proposalResponse}}\"/fork {{ModId}}_Alex_No/switchEvent {{ModId}}_Alex_Yes",
+      
+      "{{ModId}}_Alex_Yes": "emote Alex 20/pause 200/message \"{{i18n:White_Alex.YES.0 |Your={{Your}}}}\"/pause 200/speak Alex \"{{i18n:White_Alex.YES.1}}\"/pause 200/{{Farmer_Kiss}}/{{Alex_Kiss}}/emote Alex 20/pause 200/emote farmer 20/pause 1000/stopAnimation farmer/stopAnimation Alex 12/pause 1000/speak Alex \"{{i18n:White_Alex.YES.2}}\"/pause 200/move Alex 0 -2 0/faceDirection farmer 0/pause 800/speak Alex \"{{i18n:White_Alex.YES.3}}\"/pause 200/faceDirection Alex 2/pause 400/speed farmer 1/move farmer 0 -2 0/faceDirection Alex 0/pause 500/action Kantrip.HeartActions_DoEngagement Alex/action AddItem 460/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_Alex_No": "speed Alex 2/jump Alex/emote Alex 16/pause 800/emote Alex 28/pause 2000/speak Alex \"{{i18n:White_Alex.NO.Q}}\"/quickQuestion {{i18n:noContinue}}(break)switchEvent {{ModId}}_Alex_notReady(break)switchEvent {{ModId}}_Alex_noMarriage(break)switchEvent {{ModId}}_Alex_breakup/",
+        
+        "{{ModId}}_Alex_notReady": "pause 400/emote Alex 60/pause 800/speak Alex \"{{i18n:White_Alex.NO1.0}}\"/pause 500/speak Alex \"{{i18n:White_Alex.NO1.1}}\"/pause 200/emote farmer 32/pause 400/emote Alex 32/pause 200/speak Alex \"{{i18n:White_Alex.NO1.2}}\"/pause 200/{{Farmer_Kiss}}/{{Alex_Kiss}}/pause 2000/globalFade/viewport -1000 -1000/stopMusic/end",
+        
+        "{{ModId}}_Alex_noMarriage": "pause 200/speak Alex \"{{i18n:White_Alex.NO2.0}}\"/pause 200/faceDirection Alex 1/emote Alex 40/pause 2000/faceDirection Alex 3/pause 100/speak Alex \"{{i18n:White_Alex.NO2.1}}\"/pause 200/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+        
+        "{{ModId}}_Alex_breakup": "pause 400/playSound dwop/positionOffset Alex 2 0/pause 100/positionOffset Alex 2 0/pause 100/positionOffset Alex 2 0/pause 100/playSound dwop/positionOffset Alex 2 0/pause 100/positionOffset Alex 2 0/pause 100/positionOffset Alex 2 0/pause 1500/faceDirection Alex 2/shake Alex 500/pause 1000/emote Alex 28/pause 2500/faceDirection Alex 3/speak Alex \"{{i18n:White_Alex.NO3.0}}\"/advancedMove Alex false 0 2 -1 0 2 3500/pause 100/faceDirection farmer 2/pause 3500/speak Alex \"{{i18n:White_Alex.NO3.1}}\"/pause 1000/shake Alex 500/pause 1500/advancedMove Alex false 0 4 10 0/pause 1000/faceDirection farmer 2/pause 1500/action Kantrip.HeartActions_DoBreakup Alex/friendship Alex -1000/globalFade/viewport -1000 -1000/stopMusic/end/",
+    },
+},
+
+]
+}

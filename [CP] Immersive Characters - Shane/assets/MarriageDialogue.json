@@ -1,0 +1,252 @@
+{
+	"Changes": [
+		{
+			"LogName": "Marriage Flower Dance Accept",
+			"Action": "EditData",
+			"Target": "Strings/Events",
+			"Entries": {
+				"SpouseFlowerDanceAccept_Shane": "{{i18n:ICS.SpecialDialogue.General.FlowerDance_Accept_Spouse}}"
+			}
+		},
+		{
+			"LogName": "Special Dialogue Changes",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Shane",
+			"Entries": {
+				"FlowerDance_Accept_Spouse": "{{i18n:ICS.SpecialDialogue.General.FlowerDance_Accept_Spouse}}",
+				"SpouseStardrop": "{{i18n:ICS.SpecialDialogue.General.SpouseStardrop}}",
+				"SpouseFarmhouseClutter": "{{i18n:ICS.SpecialDialogue.General.SpouseFarmhouseClutter.{{Random: 1,2}}}}",
+				"Spouse_MonstersInHouse": "{{i18n:ICS.SpecialDialogue.General.Spouse_MonstersInHouse.{{NoProfanity}}}}",
+				"WinterStar_GiveGift_Before_Spouse": "{{i18n:ICS.SpecialDialogue.General.WinterStar_GiveGift_Before_Spouse}}",
+				"WinterStar_GiveGift_After_Spouse": "{{i18n:ICS.SpecialDialogue.General.WinterStar_GiveGift_After_Spouse}}"
+			}
+		},
+		{
+			"LogName": "Default Marriage Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogue",
+			"Entries": {
+				"Rainy_Day_Shane": "{{i18n:ICS.MarriageDialogue.Rainy_Day_Shane}}",
+				"Rainy_Night_Shane": "{{i18n:ICS.MarriageDialogue.Rainy_Night_Shane}}",
+				"Indoor_Day_Shane": "{{i18n:ICS.MarriageDialogue.Indoor_Day_Shane}}",
+				"Indoor_Night_Shane": "{{i18n:ICS.MarriageDialogue.Indoor_Night_Shane}}",
+				"Outdoor_Shane": "{{i18n:ICS.MarriageDialogue.Outdoor_Shane}}",
+				"spring_Shane": "{{i18n:ICS.MarriageDialogue.spring_Shane}}",
+				"summer_Shane": "{{i18n:ICS.MarriageDialogue.summer_Shane}}",
+				"fall_Shane": "{{i18n:ICS.MarriageDialogue.fall_Shane}}",
+				"winter_Shane": "{{i18n:ICS.MarriageDialogue.winter_Shane}}",
+				"spouseRoom_Shane": "{{i18n:ICS.MarriageDialogue.spouseRoom_Shane.{{NoProfanity}}}}"
+			}
+		},
+		//FESTIVAL DIALOGUE
+			{
+				"LogName": "Festival of Ice Edit",
+				"Action": "EditData",
+				"Target": "Data/Festivals/winter8",
+				"Entries": {
+					"Shane_spouse_y2": "{{i18n:ICS.FestivalDialogue.IceFest}}"
+				}
+			},
+		{
+			"LogName": "Shane Marriage Dialogue GNO Day/Night Dated",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries": {
+			//Good
+				"Good_0": "{{i18n:ICS.MarriageDialogue.Good_0.{{Random: 1,2}}}}",
+				"Good_1": "{{i18n:ICS.MarriageDialogue.Good_1.{{Random: 1,2}}}}",
+				"Good_2": "{{i18n:ICS.MarriageDialogue.Good_2.{{Random: 1,2}}}}",
+				"Good_3": "{{i18n:ICS.MarriageDialogue.Good_3.{{Random: 1,2}}}}",
+				"Good_4": "{{i18n:ICS.MarriageDialogue.Good_4.{{Random: 1,2}}}}",
+				"Good_5": "{{i18n:ICS.MarriageDialogue.Good_5.{{Random: 1,2}}}}",
+				"Good_6": "{{i18n:ICS.MarriageDialogue.Good_6.{{Random: 1,2.{{NoProfanity}}}}}}",
+				"Good_7": "{{i18n:ICS.MarriageDialogue.Good_7.{{Random: 1,2}}}}",
+				"Good_8": "{{i18n:ICS.MarriageDialogue.Good_8.{{Random: 1,2}}}}",
+				"Good_9": "{{i18n:ICS.MarriageDialogue.Good_9.{{Random: 1,2}}}}",
+			//Neutral
+				"Neutral_0": "{{i18n:ICS.MarriageDialogue.Neutral_0.{{Random: 1,2}}}}",
+				"Neutral_1": "{{i18n:ICS.MarriageDialogue.Neutral_1.{{Random: 1,2}}}}",
+				"Neutral_2": "{{i18n:ICS.MarriageDialogue.Neutral_2.{{Random: 1,2}}}}",
+				"Neutral_3": "{{i18n:ICS.MarriageDialogue.Neutral_3.{{Random: 1,2}}}}",
+				"Neutral_4": "{{i18n:ICS.MarriageDialogue.Neutral_4.{{Random: 1,2.{{NoProfanity}}}}}}",
+				"Neutral_5": "{{i18n:ICS.MarriageDialogue.Neutral_5.{{Random: 1,2}}}}",
+				"Neutral_6": "{{i18n:ICS.MarriageDialogue.Neutral_6.{{Random: 1,2}}}}",
+				"Neutral_7": "{{i18n:ICS.MarriageDialogue.Neutral_7.{{Random: 1,2}}}}",
+				"Neutral_8": "{{i18n:ICS.MarriageDialogue.Neutral_8.{{Random: 1,2}}}}",
+				"Neutral_9": "{{i18n:ICS.MarriageDialogue.Neutral_9.{{Random: 1,2}}}}",
+			
+			//Outdoor
+				"Outdoor_0": "{{i18n:ICS.MarriageDialogue.Outdoor_0.{{Random: 1,2}}}}",
+				"Outdoor_1": "{{i18n:ICS.MarriageDialogue.Outdoor_1.{{Random: 1,2}}}}",
+				"Outdoor_2": "{{i18n:ICS.MarriageDialogue.Outdoor_2.{{Random: 1,2}}}}",
+				"Outdoor_3": "{{i18n:ICS.MarriageDialogue.Outdoor_3.{{Random: 1,2}}}}",
+				"Outdoor_4": "{{i18n:ICS.MarriageDialogue.Outdoor_4.{{Random: 1,2}}}}",
+			
+			//Day/Night
+				"Indoor_Day_0": "{{i18n:ICS.MarriageDialogue.Indoor_Day_0.{{Random: 1,2}}}}",
+				"Indoor_Day_2": "{{i18n:ICS.MarriageDialogue.Indoor_Day_2.{{Random: 1,2}}}}",
+				"Indoor_Day_3": "{{i18n:ICS.MarriageDialogue.Indoor_Day_3.{{Random: 1,2}}}}",
+				"Indoor_Day_4": "{{i18n:ICS.MarriageDialogue.Indoor_Day_4.{{Random: 1,2.{{NoProfanity}}}}}}",
+				"Indoor_Night_0": "{{i18n:ICS.MarriageDialogue.Indoor_Night_0.{{Random: 1,2}}}}",
+				"Indoor_Night_1": "{{i18n:ICS.MarriageDialogue.Indoor_Night_1.{{Random: 1,2}}}}",
+				"Indoor_Night_2": "{{i18n:ICS.MarriageDialogue.Indoor_Night_2.{{Random: 1,2}}}}",
+				"Indoor_Night_3": "{{i18n:ICS.MarriageDialogue.Indoor_Night_3.{{Random: 1,2.{{NoProfanity}}}}}}",
+				"Indoor_Night_4": "{{i18n:ICS.MarriageDialogue.Indoor_Night_4.{{Random: 1,2}}}}",
+				"Rainy_Day_0": "{{i18n:ICS.MarriageDialogue.Rainy_Day_0.{{Random: 1,2}}}}",
+				"Rainy_Day_1": "{{i18n:ICS.MarriageDialogue.Rainy_Day_1.{{Random: 1,2.{{NoProfanity}}}}}}",
+				"Rainy_Day_2": "{{i18n:ICS.MarriageDialogue.Rainy_Day_2.{{Random: 1,2}}}}",
+				"Rainy_Day_3": "{{i18n:ICS.MarriageDialogue.Rainy_Day_3.{{Random: 1,2}}}}",
+				"Rainy_Day_4": "{{i18n:ICS.MarriageDialogue.Rainy_Day_4.{{Random: 1,2}}}}",
+				"Rainy_Night_0": "{{i18n:ICS.MarriageDialogue.Rainy_Night_0.{{Random: 1,2.{{NoProfanity}}}}}}",
+				"Rainy_Night_1": "{{i18n:ICS.MarriageDialogue.Rainy_Night_1.{{Random: 1,2}}}}",
+				"Rainy_Night_2": "{{i18n:ICS.MarriageDialogue.Rainy_Night_2.{{Random: 1.{{NoProfanity}},2}}}}",
+				"Rainy_Night_3": "{{i18n:ICS.MarriageDialogue.Rainy_Night_3.{{Random: 1,2}} |PotluckCompat={{PotluckCompat}}}}",
+				"Rainy_Night_4": "{{i18n:ICS.MarriageDialogue.Rainy_Night_4.{{Random: 1,2}}}}",	
+			//Leave/Return
+				"funLeave_Shane": "{{i18n:ICS.MarriageDialogue.funLeave_Shane.{{Random: 1,2}}}}",
+				"funReturn_Shane": "{{i18n:ICS.MarriageDialogue.funReturn_Shane.{{Random: 1,2}}}}",
+			//General
+				"OneKid_0": "{{i18n:ICS.MarriageDialogue.OneKid_0}}",
+				"OneKid_1": "{{i18n:ICS.MarriageDialogue.OneKid_1}}",
+				"TwoKids_1": "{{i18n:ICS.MarriageDialogue.TwoKids_1}}",
+				"TwoKids_3": "{{i18n:ICS.MarriageDialogue.TwoKids_3.{{NoProfanity}}}}",
+			//Dated Dialogue
+				"spring_1": "{{i18n:ICS.MarriageDialogue.spring_1.{{NoProfanity}}}}",
+				"spring_8": "{{i18n:ICS.MarriageDialogue.spring_8}}",
+				"spring_12": "{{i18n:ICS.MarriageDialogue.spring_12}}",
+				"spring_13": "{{i18n:ICS.MarriageDialogue.spring_13}}",
+				"spring_20": "{{i18n:ICS.MarriageDialogue.spring_20.{{NoProfanity}}}}",
+				"spring_23": "{{i18n:ICS.MarriageDialogue.spring_23 |SpouseTitle={{SpouseTitle}}}}",
+				"spring_24": "{{i18n:ICS.MarriageDialogue.spring_24}}",
+				"spring_25": "{{i18n:ICS.MarriageDialogue.spring_25}}",
+				"summer_1": "{{i18n:ICS.MarriageDialogue.summer_1}}",
+				"summer_4": "{{i18n:ICS.MarriageDialogue.summer_4}}",
+				"summer_10": "{{i18n:ICS.MarriageDialogue.summer_10 |PotluckCompat={{PotluckCompat}}}}",
+				"summer_11": "{{i18n:ICS.MarriageDialogue.summer_11}}",
+				"summer_27": "{{i18n:ICS.MarriageDialogue.summer_27}}",
+				"summer_28": "{{i18n:ICS.MarriageDialogue.summer_28}}",
+				"fall_1": "{{i18n:ICS.MarriageDialogue.fall_1}}",
+				"fall_8": "{{i18n:ICS.MarriageDialogue.fall_8}}",
+				"fall_15": "{{i18n:ICS.MarriageDialogue.fall_15}}",
+				"fall_16": "{{i18n:ICS.MarriageDialogue.fall_16}}",
+				"fall_18": "{{i18n:ICS.MarriageDialogue.fall_18}}",
+				"fall_26": "{{i18n:ICS.MarriageDialogue.fall_26}}",
+				"fall_27": "{{i18n:ICS.MarriageDialogue.fall_27}}",
+				"winter_1": "{{i18n:ICS.MarriageDialogue.winter_1}}",
+				"winter_7": "{{i18n:ICS.MarriageDialogue.winter_7 |SpouseTitle={{SpouseTitle}}}}",
+				"winter_8": "{{i18n:ICS.MarriageDialogue.winter_8}}",
+				"winter_9": "{{i18n:ICS.MarriageDialogue.winter_9}}",
+				"winter_24": "{{i18n:ICS.MarriageDialogue.winter_24}}",
+				"winter_25": "{{i18n:ICS.MarriageDialogue.winter_25}}",
+				"winter_28": "{{i18n:ICS.MarriageDialogue.winter_28}}"			
+			}
+		},
+		{
+			"LogName": "Shane Marriage Dialogue Bad 8 Hearts",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries": {
+				"Bad_0": "{{i18n:ICS.MarriageDialogue.0-8.Bad_0.{{NoProfanity}}}}",
+				"Bad_1": "{{i18n:ICS.MarriageDialogue.0-8.Bad_1}}",
+				"Bad_2": "{{i18n:ICS.MarriageDialogue.0-8.Bad_2}}",
+				"Bad_3": "{{i18n:ICS.MarriageDialogue.0-8.Bad_3.{{NoProfanity}}}}",
+				"Bad_4": "{{i18n:ICS.MarriageDialogue.0-8.Bad_4}}",
+				"Bad_5": "{{i18n:ICS.MarriageDialogue.0-8.Bad_5}}",
+				"Bad_6": "{{i18n:ICS.MarriageDialogue.0-8.Bad_6}}",
+				"Bad_7": "{{i18n:ICS.MarriageDialogue.0-8.Bad_7.{{NoProfanity}}}}",
+				"Bad_8": "{{i18n:ICS.MarriageDialogue.0-8.Bad_8.{{NoProfanity}}}}",
+				"Bad_9": "{{i18n:ICS.MarriageDialogue.0-8.Bad_9.{{NoProfanity}}}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 0, 8}}"
+			}
+		},
+		{
+			"LogName": "Shane Marriage Dialogue Bad 9 Hearts",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries": {
+				"Bad_0": "{{i18n:ICS.MarriageDialogue.9-14.Bad_0}}",
+				"Bad_1": "{{i18n:ICS.MarriageDialogue.9-14.Bad_1}}",
+				"Bad_2": "{{i18n:ICS.MarriageDialogue.9-14.Bad_2}}",
+				"Bad_3": "{{i18n:ICS.MarriageDialogue.9-14.Bad_3}}",
+				"Bad_4": "{{i18n:ICS.MarriageDialogue.9-14.Bad_4}}",
+				"Bad_5": "{{i18n:ICS.MarriageDialogue.9-14.Bad_5}}",
+				"Bad_6": "{{i18n:ICS.MarriageDialogue.9-14.Bad_6}}",
+				"Bad_7": "{{i18n:ICS.MarriageDialogue.9-14.Bad_7}}",
+				"Bad_8": "{{i18n:ICS.MarriageDialogue.9-14.Bad_8}}",
+				"Bad_9": "{{i18n:ICS.MarriageDialogue.9-14.Bad_9}}"
+			},
+			"When": {
+				"Hearts:Shane": "{{Range: 9, 14}}"
+			}
+		},
+		{
+			"LogName": "Shane Anniversary Dialogue",
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueShane",
+			"Entries": {
+				"{{ASeason}}_{{AnniversaryDayOfMonth}}": "{{i18n:ICS.MarriageDialogue.Anniversary}}"
+			}
+		},
+//PATCHES FOR PLAYERS WHO DON'T USE CFD
+		{
+			"LogName": "Marriage Strings",
+			"Action": "EditData",
+			"Target": "Strings/StringsFromCSFiles",
+			"Entries": {
+				"NPC.cs.4439": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4439}}",
+				"NPC.cs.4440": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4440}}",
+				"NPC.cs.4441": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4441}}",				
+				"NPC.cs.4444": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4444}}",
+				"NPC.cs.4447": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4447}}",
+				"NPC.cs.4448": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4448.{{NoProfanity}}}}",
+				"NPC.cs.4449": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4449.{{NoProfanity}}}}",
+				"NPC.cs.4462": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4462}}",
+				"NPC.cs.4463": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4463}}",
+				"NPC.cs.4465": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4465}}",
+				"NPC.cs.4466": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4466}}",
+				"NPC.cs.4470": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4470}}",
+				"NPC.cs.4474": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4474}}",
+				"NPC.cs.4481": "{{i18n:ICS.CFD.DatingMarried.NPC.cs.4481}}"
+			},
+			"When": {
+				"Relationship:Shane": "Married",
+				"HasMod |contains= aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": false
+			}
+		},
+		{
+			"LogName": "Marriage Extra Dialogue",
+			"Action": "EditData",
+			"Target": "Data/ExtraDialogue",
+			"Entries": {
+				"NewChild_SecondChild1": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_NewChild_SecondChild1}}",
+				"NewChild_SecondChild2": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_NewChild_SecondChild2}}",
+				"NewChild_Adoption": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_NewChild_Adoption}}",
+				"NewChild_FirstChild": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_NewChild_FirstChild}}",
+				"Mines_PlayerKilled_Spouse_PlayerMale": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_Mines_PlayerKilled_Spouse_Player.{{NoProfanity}}}}",
+				"Mines_PlayerKilled_Spouse_PlayerFemale": "{{i18n:ICS.CFD.DatingMarried.ExtraDialogue_Mines_PlayerKilled_Spouse_Player.{{NoProfanity}}}}"
+			},
+			"When": {
+				"Relationship:Shane": "Married",
+				"HasMod |contains= aedenthorn.CustomFixedDialogue, datamancer.CustomFixedDialogue": false
+			}
+		},
+		{
+			"LogName": "Movie Invitation Reactions Married",
+			"Action": "EditData",
+			"Target": "Strings/Characters",
+			"Entries": {
+				"MovieInvite_Spouse_Shane": "{{i18n:ICS.CFD.MovieInvite.9-14.Characters_MovieInvite_Invited}}"
+			}
+		},
+		{
+			"LogName": "Summit Event Dialogue",
+			"Action": "EditData",
+			"Target": "Data/ExtraDialogue",
+			"Entries": {
+				"SummitEvent_Dialogue3_Shane": "{{i18n:ICS.SummitEvent.0}}\"/pause 500/speak Shane \"{{i18n:ICS.SummitEvent.1}}\"/pause 1000/speak Shane \"{{i18n:ICS.SummitEvent.2}}\"/pause 100/emote farmer 12/pause 200/speak Shane \"{{i18n:ICS.SummitEvent.3}}\"/pause 1000/emote Shane 40/pause 1000/speak Shane \"{{i18n:ICS.SummitEvent.4}}\"/faceDirection Shane 3/speak Shane \"{{i18n:ICS.SummitEvent.5}}"
+			}
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"Changes": [
+    {
+		"Action": "EditData",
+		"Target": "Characters/schedules/Sam",
+		"Priority": "Late",
+		"When": {"Weather": "kath.weathering_Darkness, kath.weathering_HeavyRain, kath.weathering_Locust, kath.weathering_Blizzard, kath.weathering_Hail"},
+      "Entries": {
+  "rain": "1000 SamHouse 15 13 0/1100 SamHouse 17 15 2 sam_guitar/1500 SamHouse 8 6 3 sam_gameboy/1700 SamHouse 17 13 0/1830 SamHouse 22 16 1/2000 SamHouse 22 13 1 sam_sleep",
+  "marriage_Mon": "GOTO rain",
+  "marriage_Fri": "GOTO rain",
+  "rain2": "GOTO rain",
+  "summer": "GOTO rain",
+  "fall": "GOTO rain",
+  "winter": "GOTO rain",
+  "fall_11": "GOTO rain",
+  "Sat": "GOTO rain",
+  "9_6": "GOTO spring",
+  "23_6": "GOTO spring",
+  "9": "GOTO rain",
+  "23": "GOTO rain",
+  "Mon": "GOTO rain",
+  "Wed": "GOTO rain",
+  "Fri": "GOTO rain",
+  "spring": "1000 SamHouse 15 13 0/1100 SamHouse 17 15 2 sam_guitar/1500 SamHouse 8 6 3 sam_gameboy/1700 SamHouse 17 13 0/1830 SamHouse 22 16 1/2000 SamHouse 22 13 1 sam_sleep"
+      },
+    },
+
+]
+}

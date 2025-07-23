@@ -1,0 +1,80 @@
+{
+	"Changes": [
+	//STANDARD LEAVE/RETURN DIALOGUE
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries": {
+				"funLeave_Sebastian": "#$c .5#My body's feeling a little sore this morning. I need to stretch these legs.#Hey, you're up. I didn't want to leave without seeing your face first.$h#$e#$c .5#I'm going out. Need some time for myself.#Wonder how Mom's doing. Think I'll visit her later today.#$b#If we don't bump into each other in town then I'll see you in the evening.",
+				"funReturn_Sebastian": "#$c .5#My day was fine, nothing much to tell you about.#I didn't do much today so I won't bore you with the details.#$e#$c .5#Why don't you tell how yours went instead?$h#I'm heading out early tomorrow so I'll be going to bed soon.#$e#Hey, I...$7#$b#$c .5#Heh, do I even need to finish it? You already know.$l#...I love you. Sorry, I lost my breathe there for a moment.$l"
+			},
+			"When": {
+				"DayOfWeek": "Monday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries": {
+				"funLeave_Sebastian": "#$c .5#Hey, morning. Did you sleep well?$h#Hey... You look extra good this morning. I sorta wish I did too.$l#$e#$c .5#I need to head into town later today. I'll stick around the house for a few more hours.$7#I think I need some air today...#$b#Hey, I love you. Don't forget that.$l",
+				"funReturn_Sebastian": "#$c .5#My legs are stiff from sitting around all the day but I got a lot done.$7#Here, this was in my snack bundle. I didn't get to finish it... Okay, maybe I just don't like them.[403 243 203 731 223]$h#$e#Let's head to bed soon.$7#$b#I love you.$l"
+			},
+			"When": {
+				"DayOfWeek": "Tuesday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries": {
+				"funLeave_Sebastian": "#$c .5#I might've drank too much coffee this morning. I'm feeling oddly energetic.#What are you up to today? I'm not quite sure what I'm gonna do this morning.#$e#$c .5#Hmm. Haven't visited the beach in a while. Might be a good time to do so.#The saloon's going to be packed tonight. Sort of don't want to go but it's too late to cancel...$s#$e#Stay safe, alright?$7",
+				"funReturn_Sebastian": "#$c .5#Hey, you're still up. You weren't worried about me, were you?$7#Sorry I'm late. Sam didn't want to stop until he won.#$e#$c .5#You look great by the way. Like always.$7#I'll be glad to spend the rest of the night alone. With you, of course.$l"
+			},
+			"When": {
+				"DayOfWeek": "Friday"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries": {
+				"funLeave_Sebastian": "#$c .5#You look cute when you're fumbling around in your sleep, you know that?$1#It's weird, I always feel at ease whenever you're awake.$l#$e#$c .5#So.. anyways... I'll be visiting Sam today.$l#It's Saturday so I've got practice with Sam today.",
+				"funReturn_Sebastian": "#$c .5#Hey, I'm exhausted. How was your day?$7#I caught up with Sam. I've never been good at keeping friends but I'm trying."
+			},
+			"When": {
+				"DayOfWeek": "Saturday"
+			}
+		},
+
+	//SPECIFIC DAYS
+
+		//DOCTOR CHECKUP
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries": {
+				"summer_4": "Ugh. I got a doctor's appointment today. Do I really have to?#$e#Yeah, I know I'm not doing anything today... Shoot, I'll go."
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries": {
+				"funReturn_Sebastian": "Hey, it wasn't all that bad. Harvey didn't really have any concerns for me.#$e#Why does the oven smell burnt? Well... since I had nothing better to do, I wanted to try my hand at baking. Here.[220]$7#$e#I hope I made it right.$s"
+			},
+			"When": {
+				"Season": "Summer",
+				"Day": "4"
+			}
+		},
+
+		//NIGHT MARKET
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/MarriageDialogueSebastian",
+			"Entries": {
+				"winter_16": "My family wants me to go to the Night Market with them.#$e#I'll go, but I'm walking down there either alone or with you.$7"
+			}
+		},
+	]
+}

@@ -1,0 +1,186 @@
+{
+  "Name": "DustySVERoam",
+  "Type": "Walking",
+  "EnableSpawnAtDayStart": true,
+  "EnableCharacterCollision": true,
+  "EnableFarmerCollision": true,
+  "EnableShadow": false,
+  "Shadow": {
+    "OffsetX": 0,
+    "OffsetY": 0,
+    "Scale": 1.0,
+    "Alpha": 255
+  },
+  "InspectionDialogue": "",
+  "TravelSpeed": 2,
+  "SpawnOffsetX": 0,
+  "SpawnOffsetY": 0,
+  "MaxIdleDistance": -1,
+  "MaxDistanceBeforeTeleport": -1,
+  "DirectionChangeChanceWhileIdle": 0.8,
+  "ChanceForHalting": 0.8,
+  "IdleBehavior": "Wander",
+  "IdleArguments": [1.0, 9000],
+  "IsPrismatic": false,
+  "AppearUnderwater": false,
+  "FrameSizeWidth": 32,
+  "FrameSizeHeight": 32,
+  "CollisionPositionX": 16,
+  "CollisionPositionY": 0,
+  "CollisionPositionHeight": 48,
+  "CollisionPositionWidth": 96,
+
+
+  // This plays when the companion travels upwards
+  "UpAnimation": {
+    "StartingFrame": 8,
+    "NumberOfFrames": 4,
+    "Duration": 125,
+
+    "IdleAnimation": {
+    "ManualFrames": [
+      {
+      "Frame": 8,
+      "Duration": 400
+      },
+      {
+      "Frame": 10,
+      "Duration": 400
+      },
+    ],
+  }
+},
+
+  // This plays when the companion travels downwards
+  "DownAnimation": {
+    "StartingFrame": 0,
+    "NumberOfFrames": 4,
+    "Duration": 125,
+
+    "IdleAnimation": {
+      "StartingFrame": 16,
+      "NumberOfFrames": 3,
+      "Duration": 250
+    }
+  },
+
+  // This plays when the companion travels left
+  "LeftAnimation": {
+    "StartingFrame": 12,
+    "NumberOfFrames": 4,
+    "Duration": 125,
+
+    "IdleAnimation": {
+    "ManualFrames": [
+      {
+        "Frame": 20,
+        "Duration": 100,
+        "Flip": true,
+        "PlayOnlyOnce": true,
+      },
+      {
+        "Frame": 21,
+        "Duration": 100,
+        "Flip": true,
+        "PlayOnlyOnce": true,
+      },
+      {
+        "Frame": 22,
+        "Duration": 100,
+        "Flip": true,
+        "PlayOnlyOnce": true,
+      },
+      {
+        "Frame": 23,
+        "Duration": 100,
+        "Flip": true,
+        "PlayOnlyOnce": true,
+      },
+      {
+        "Frame": 26,
+        "Duration": 250,
+        "Flip": true
+      },
+      {
+        "Frame": 25,
+        "Duration": 250,
+        "Flip": true
+      },
+      {
+        "Frame": 27,
+        "Duration": 250,
+        "Flip": true
+      }
+    ],
+  }
+},
+
+  // This plays when the companion travels right
+  "RightAnimation": {
+    "StartingFrame": 4,
+    "NumberOfFrames": 4,
+    "Duration": 125,
+
+    "IdleAnimation": {
+    "ManualFrames": [
+      {
+        "Frame": 20,
+        "Duration": 100,
+        "PlayOnlyOnce": true,
+      },
+      {
+        "Frame": 21,
+        "Duration": 100,
+        "PlayOnlyOnce": true,
+      },
+      {
+        "Frame": 22,
+        "Duration": 100,
+        "PlayOnlyOnce": true,
+      },
+      {
+        "Frame": 23,
+        "Duration": 100,
+        "PlayOnlyOnce": true,
+      },
+      {
+        "Frame": 26,
+        "Duration": 250,
+      },
+      {
+        "Frame": 25,
+        "Duration": 250,
+      },
+      {
+        "Frame": 27,
+        "Duration": 250,
+      }
+    ],
+  }
+},
+
+"Sounds": [
+  {
+    "SoundName": "dog_pant",
+    "WhenToPlay": "Idle",
+    "TimeBetweenSound": 5000,
+    "ChanceOfPlaying": 0.3
+  },
+  {
+    "SoundName": "dog_bark",
+    "WhenToPlay": "Moving",
+    "TimeBetweenSound": 8000,
+    "ChanceOfPlaying": 0.4
+  },
+
+ ],
+
+    "Portrait": {
+      "PortraitDisplayName": "Dusty",
+      "FrameSizeWidth": 64,
+      "FrameSizeHeight": 64,
+      "FrameIndex": 0,
+  }
+
+
+}

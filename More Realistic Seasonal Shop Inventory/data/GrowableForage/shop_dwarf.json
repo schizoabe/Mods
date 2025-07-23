@@ -1,0 +1,84 @@
+ {
+    "Changes": [
+    //Standard Dwarf
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "Dwarf", "Items" ],
+      "When": {"Dwarf": "Standard", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Common Mushroom Planter": true},
+      "Fields": {
+
+        "Cornucopia_CommonMushroomSeeds": {
+        "AvailableStock": 1,
+        "Condition": "SEASON Spring Fall, SYNCED_RANDOM day Cornucopia_CommonMushroomSeeds 0.6, PLAYER_BASE_FORAGING_LEVEL Any 4"
+        }
+      }
+    },
+    { 
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "Dwarf", "Items" ],
+      "When": {"Dwarf": "Standard", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Chanterelle Planter": true},
+      "Fields": {
+
+        "Cornucopia_ChanterelleSeeds": {
+        "AvailableStock": 1,
+        "Condition": "SEASON Fall, SYNCED_RANDOM day Cornucopia_ChanterelleSeeds 0.6, PLAYER_BASE_FORAGING_LEVEL Any 4, PLAYER_VISITED_LOCATION Any Woods"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "Dwarf", "Items" ],
+      "When": {"Dwarf": "Standard", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Morel Planter": true},
+      "Fields": {
+
+        "Cornucopia_MorelSeeds": {
+        "AvailableStock": 1,
+        "Condition": "SEASON Spring, SYNCED_RANDOM day Cornucopia_MorelSeeds 0.6, PLAYER_BASE_FORAGING_LEVEL Any 4, PLAYER_VISITED_LOCATION Any Woods"
+        }
+      }
+    },
+    //Hardmode Dwarf
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "Dwarf", "Items" ],
+      "When": {"Dwarf": "Hardmode", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Common Mushroom Planter": true},
+      "Fields": {
+
+        "Cornucopia_CommonMushroomSeeds": {
+        "AvailableStock": 1,
+        "Condition": "SEASON Spring Fall, SYNCED_RANDOM day Cornucopia_CommonMushroomSeeds 0.3, PLAYER_BASE_FORAGING_LEVEL Any 6"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "Dwarf", "Items" ],
+      "When": {"Dwarf": "Hardmode", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Chanterelle Planter": true},
+      "Fields": {
+
+        "Cornucopia_ChanterelleSeeds": {
+        "AvailableStock": 1,
+        "Condition": "SEASON Fall, SYNCED_RANDOM day Cornucopia_ChanterelleSeeds 0.3, PLAYER_BASE_FORAGING_LEVEL Any 6, PLAYER_VISITED_LOCATION Any Woods"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "Dwarf", "Items" ],
+      "When": {"Dwarf": "Hardmode", "Spiderbuttons.CMCT/Config: Cornucopia.GrowableForage, Morel Planter": true},
+      "Fields": {
+
+        "Cornucopia_MorelSeeds": {
+        "AvailableStock": 1,
+        "Condition": "SEASON Spring, SYNCED_RANDOM day Cornucopia_MorelSeeds 0.3, PLAYER_BASE_FORAGING_LEVEL Any 6, PLAYER_VISITED_LOCATION Any Woods"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,505 @@
+{
+	"Changes": [
+//Object Load
+
+        {
+            "LogName":"Add Items",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "ManaFertilizer": {
+                    "Name": "ManaFertilizer",
+                    "DisplayName": "{{i18n: ManaFertilizer.Name}}",
+                    "Description": "{{i18n: ManaFertilizer.Desc}}",
+                    "Type": "Basic",          
+                    "Category": -19,
+                    "Edibility": -300,
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Objects",
+                    "SpriteIndex": "{{IndexFerti}}",
+					"ContextTags": [
+						"color_brown",
+						"color_lime",
+						"not_giftable",
+						"quality_fertilizer_item"
+						],
+					"CustomFields": {}
+            	},
+                "PlantDeath": {
+                    "Name": "PlantDeath",
+                    "DisplayName": "{{i18n: PlantDeath.Name}}",
+                    "Description": "{{i18n: PlantDeath.Desc}}",
+                    "Type": "Basic",          
+                    "Category": -20,
+                    "Edibility": -300,
+					"Buffs":[],
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Objects",
+                    "SpriteIndex": "7",
+					"ContextTags": [
+						"color_gray",
+						"color_brown",
+						"not_giftable",
+						"not_placeable"
+						],
+					"CustomFields": {}
+            	},
+				"PDW.ErrorFood": {
+                    "Name": "PDW.ErrorFood",
+                    "DisplayName": "???",
+                    "Description": "???",
+                    "Type": "Basic",          
+                    "Category": -20,
+                    "Edibility": 0,
+					"Buffs":[
+						{
+							"Id": "Food",
+							"BuffId": "ErrorBuff",
+							"Duration": 360,
+							"GlowColor": null
+						}
+					],
+                    "Price": 0,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/ErrorObject",
+                    "SpriteIndex": "0",
+					"ContextTags": [
+						"color_red",
+						"not_giftable",
+						"not_placeable"
+						],
+					"CustomFields": {}
+            	}
+			}
+		},		
+        {
+            "LogName":"Add Items",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "heat"},
+            "Entries": {		
+                "SPF": {
+                    "Name": "SPF",
+                    "DisplayName": "{{i18n: SPF.Name}}",
+                    "Description": "{{i18n: SPF.Desc}}",
+                    "Type": "Basic",          
+                    "Category": -26,
+					"IsDrink": "{{SeasonDrink}}",
+                    "Edibility": "{{SeasonBlock}}",
+					"Buffs":[
+						{
+						"Id": "SPF",
+						"BuffId": "SPF50"
+						}
+					],
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Objects",
+                    "SpriteIndex": "4",
+					"ContextTags": [
+						"color_white",
+						"color_orange",
+						"not_giftable"
+						],
+					"CustomFields": {}
+            	}
+			}
+		},
+        {
+            "LogName":"Add Items",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "locust"},
+            "Entries": {		
+                "SprayBug": {
+                    "Name": "SprayBug",
+                    "DisplayName": "{{i18n: SprayBug.Name}}",
+                    "Description": "{{i18n: SprayBug.Desc}}",
+                    "Type": "Basic",          
+                    "Category": -26,
+					"IsDrink": "{{SeasonDrink}}",
+                    "Edibility": "{{SeasonBlock2}}",
+					"Buffs":[
+						{
+						"Id": "BugBGone",
+						"BuffId": "BugBGone"
+						}
+					],
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Objects",
+                    "SpriteIndex": "8",
+					"ContextTags": [
+						"color_green",
+						"not_giftable"
+						],
+					"CustomFields": {}
+            	}				
+			}
+		},
+        {
+            "LogName":"Add Items",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"AddWeather": "rainy, hail, hurry, firerain"},
+            "Entries": {		
+                "ParaguasUmbrella": {
+                    "Name": "ParaguasUmbrella",
+                    "DisplayName": "{{i18n: ParaguasUmbrella.Name}}",
+                    "Description": "{{i18n: ParaguasUmbrella.Desc}}",
+                    "Type": "Basic",          
+                    "Category": -26,
+                    "Edibility": -300,
+					"Buffs":[],
+                    "Price": 1,
+                    "ExcludeFromShippingCollection": true,
+					"ExcludeFromRandomSale": true,
+                    "Texture": "Mods/kath.weathering/Objects",
+                    "SpriteIndex": "6",
+					"ContextTags": [
+						"color_gray",
+						"color_orange",
+						"not_giftable"
+						],
+					"CustomFields": {}
+            	}
+			}
+		},
+		
+        {
+            "LogName":"Add Drink Colour",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"TargetField": [ "SPF" ],
+			"When": {"DrinkSPF": "true", "AddWeather": "heat"},
+            "Entries": {
+				"CustomFields": {"mistyspring.ItemExtensions/DrinkColor": "#fc8105"}
+			}
+		},		
+        {
+            "LogName":"Add Drink Colour",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"TargetField": [ "SprayBug" ],
+			"When": {"DrinkSPF": "true", "AddWeather": "locust"},
+            "Entries": {
+				"CustomFields": {"mistyspring.ItemExtensions/DrinkColor": "#00d138"}
+			}
+		},		
+//Shopping
+        {
+            "LogName": "Change Description in Shop",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+			"When": {"LocationName |contains=QiNutRoom, SeedShop": true},
+            "Fields": {
+                "ManaFertilizer": {
+                    "Description": "{{i18n: ManaFertilizer.Desc2}}"
+                }
+            }
+        },		
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "QiGemShop", "Items" ],
+            "Entries": {
+                "ManaFertilizer": {
+                    "Id": "ManaFertilizer",
+                    "ItemId": "(O)ManaFertilizer",
+					"TradeItemID": "(O)858",
+                    "TradeItemAmount": 50,
+					"AvailableStock": 5,
+					"Condition": "PLAYER_HAS_MAIL Current Wizard.FertiStart, DAY_OF_WEEK Monday Friday",
+					"IsRecipe": false
+                		},
+                "ManaFertilizerWT": {
+                    "Id": "ManaFertilizerWT",
+                    "ItemId": "(O)ManaFertilizer",
+					"TradeItemID": "(O)WeatherToken",
+                    "TradeItemAmount": 1,
+					"AvailableStock": 25,
+					"Condition": "PLAYER_HAS_MAIL Any CoinStart received, PLAYER_HAS_MAIL Current Wizard.FertiStart, !DAY_OF_WEEK Monday Friday",
+					"IsRecipe": false
+                		}						
+			}
+		},
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "SeedShop", "Items" ],
+            "Entries": {
+                "ManaFertilizer": {
+                    "Id": "ManaFertilizer",
+                    "ItemId": "(O)ManaFertilizer",
+                    "Price": 7500,
+					"AvailableStock": 1,
+					"Condition": "PLAYER_HAS_MAIL Current Wizard.FertiStart, DAY_OF_WEEK Saturday",
+					"IsRecipe": false
+                		},
+                "SPF": {
+                    "Id": "SPF",
+                    "ItemId": "(O)SPF",
+                    "Price": 1000,
+					"AvailableStock": 10,
+					"Condition": "SEASON Summer, DAY_OF_WEEK Sunday, {{AddWeather|contains=heat}}",
+					"IsRecipe": false
+                		},
+                "SprayBug": {
+                    "Id": "SprayBug",
+                    "ItemId": "(O)SprayBug",
+                    "Price": 500,
+					"AvailableStock": 10,
+					"Condition": "SEASON Spring, DAY_OF_WEEK Sunday, {{AddWeather|contains=locust}}",
+					"IsRecipe": false
+                		},
+                "ParaguasUmbrella": {
+                    "Id": "ParaguasUmbrella",
+                    "ItemId": "(O)ParaguasUmbrella",
+                    "Price": 1000,
+					"AvailableStock": 1,
+					"Condition": "DAYS_PLAYED 28, !PLAYER_HAS_ITEM Current (O)ParaguasUmbrella 1, {{AddWeather|contains=rainy, hail, hurry, firerain}}",
+					"IsRecipe": false
+                		}
+			}
+		},	
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Joja", "Items" ],
+			"When": {"HasFlag |contains=jojaMember":false},
+            "Entries": {
+                "SPF": {
+                    "Id": "SPF",
+                    "ItemId": "(O)SPF",
+                    "Price": 5000,
+					"AvailableStock": 20,
+					"Condition": "SEASON Summer, DAY_OF_WEEK Wednesday, {{AddWeather|contains=heat}}",
+					"IsRecipe": false
+                		},
+                "SprayBug": {
+                    "Id": "SprayBug",
+                    "ItemId": "(O)SprayBug",
+                    "Price": 1000,
+					"AvailableStock": 20,
+					"Condition": "SEASON Spring, DAY_OF_WEEK Wednesday, {{AddWeather|contains=locust}}",
+					"IsRecipe": false
+                		},
+                "ParaguasUmbrella": {
+                    "Id": "ParaguasUmbrella",
+                    "ItemId": "(O)ParaguasUmbrella",
+                    "Price": 3000,
+					"AvailableStock": 1,
+					"Condition": "DAYS_PLAYED 56, !PLAYER_HAS_ITEM Current (O)ParaguasUmbrella 1, {{AddWeather|contains=rainy, hail, hurry, firerain}}",
+					"IsRecipe": false
+                		}
+			}
+		},
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Joja", "Items" ],
+			"When": {"HasFlag |contains=jojaMember":true},
+            "Entries": {
+                "SPF": {
+                    "Id": "SPF",
+                    "ItemId": "(O)SPF",
+                    "Price": 900,
+					"AvailableStock": 20,
+					"Condition": "SEASON Summer, DAY_OF_WEEK Wednesday, {{AddWeather|contains=heat}}",
+					"IsRecipe": false
+                		},
+                "SprayBug": {
+                    "Id": "SprayBug",
+                    "ItemId": "(O)SprayBug",
+                    "Price": 400,
+					"AvailableStock": 20,
+					"Condition": "SEASON Spring, DAY_OF_WEEK Wednesday, {{AddWeather|contains=locust}}",
+					"IsRecipe": false
+                		},
+                "ParaguasUmbrella": {
+                    "Id": "ParaguasUmbrella",
+                    "ItemId": "(O)ParaguasUmbrella",
+                    "Price": 900,
+					"AvailableStock": 1,
+					"Condition": "DAYS_PLAYED 56, !PLAYER_HAS_ITEM Current (O)ParaguasUmbrella 1, {{AddWeather|contains=rainy, hail, hurry, firerain}}",
+					"IsRecipe": false
+                		}
+			}
+		},		
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Hospital", "Items" ],
+            "Entries": {
+                "SPF": {
+                    "Id": "SPF",
+                    "ItemId": "(O)SPF",
+                    "Price": 800,
+					"AvailableStock": 1,
+					"Condition": "SEASON Summer, {{AddWeather|contains=heat}}",
+					"IsRecipe": false
+                		},
+                "SprayBug": {
+                    "Id": "SprayBug",
+                    "ItemId": "(O)SprayBug",
+                    "Price": 200,
+					"AvailableStock": 1,
+					"Condition": "SEASON Spring, {{AddWeather|contains=locust}}",
+					"IsRecipe": false
+                		}
+			}
+		},
+//Umbrella Break
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+			"When": {"AddWeather": "rainy, hail, hurry, firerain"},
+            "Entries": {
+			"kath.weathering_UmbrellaBreak": {
+				"Id": "kath.weathering_UmbrellaBreak",
+                "Trigger": "DayEnding",
+                "Condition": "ANY \"PLAYER_HAS_ITEM Current (O)ParaguasUmbrella 1, WEATHER Here kath.weathering_AcidRain, RANDOM 0.55\" \"PLAYER_HAS_ITEM Current (O)ParaguasUmbrella 1, WEATHER Here kath.weathering_HeavyRain, RANDOM 0.05\" \"PLAYER_HAS_ITEM Current (O)ParaguasUmbrella 1, WEATHER Here kath.weathering_HeavyRainMonsoon, RANDOM 0.1\" \"PLAYER_HAS_ITEM Current (O)ParaguasUmbrella 1, WEATHER Here kath.weathering_Monsoon, RANDOM 0.2\" \"PLAYER_HAS_ITEM Current (O)ParaguasUmbrella 1, WEATHER Here kath.weathering_Hurry, RANDOM 0.15\"",
+                "Actions": [
+					"RemoveItem (O)ParaguasUmbrella 1",
+					"MarkActionApplied All kath.weathering_UmbrellaBreakRESET false",
+					"spacechase0.SpaceCore_ShowHudMessage \"{{i18n:ParaguasUmbrella.Break}}\" (O)ParaguasUmbrella"
+                    ]
+				},
+			"kath.weathering_UmbrellaBreakRESET": {
+				"Id": "kath.weathering_UmbrellaBreakRESET",
+                "Trigger": "DayStarted",
+                "Condition": "PLAYER_HAS_RUN_TRIGGER_ACTION Current kath.weathering_UmbrellaBreak",
+                "Actions": [
+					"MarkActionApplied All kath.weathering_UmbrellaBreak false"
+                    ]
+				}
+			}
+		},
+
+
+//Override Stuff
+		{
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/ObjectExtensionData",
+			"When": {"HasMod": "spacechase0.SpaceCore"},
+			"Entries": {
+				"ManaFertilizer": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 50,
+					"CategoryTextOverride": "{{i18n: ManaFertilizerCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				},
+				"ParaguasUmbrella": {
+					"CanBeShipped": false,
+					"MaxStackSizeOverride": 1,
+					"CategoryTextOverride": "{{i18n: SPFCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				},
+				"SPF": {
+					"EatenHealthRestoredOverride": 0,
+					"EatenStaminaRestoredOverride": 0,
+					"MaxStackSizeOverride": 5,
+					"CanBeShipped": false,
+					"CategoryTextOverride": "{{i18n: SPFCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				},
+				"SprayBug": {
+					"EatenHealthRestoredOverride": 0,
+					"EatenStaminaRestoredOverride": 0,
+					"MaxStackSizeOverride": 5,
+					"CanBeShipped": false,
+					"CategoryTextOverride": "{{i18n: SPFCategory}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				},	
+				"WeatherToken": {
+					"CanBeShipped": false,
+					"CategoryTextOverride": "{{i18n: WeatherToken.Name}}",
+					"CategoryColorOverride": {
+						"R": 32,
+						"G": 127,
+						"B": 172,
+						"A": 255
+					}
+				},				
+				"PlantDeath": {
+					"MaxStackSizeOverride": 1,
+					"CanBeShipped": false
+					},
+				"PDW.ErrorFood": {
+					"CategoryTextOverride": "???",
+					"CategoryColorOverride": {
+						"R": 237,
+						"G": 40,
+						"B": 26,
+						"A": 255
+					}
+					}	
+				}
+			},
+		
+//ITEM EXTENSIONS
+{
+  "Action": "EditData",
+  "Target": "Mods/mistyspring.ItemExtensions/Data",
+  "When": {"HasMod": "mistyspring.ItemExtensions"},
+  "Entries": {
+	  "(O)ManaFertilizer": {
+		"Light":{
+			"Size": 1.0,
+			"Hex": "#00e335",
+			"R": 0,
+			"G": 227,
+			"B": 54,
+			"Transparency": "{{AddLight2}}"
+		}
+	  },
+		"(O)SPF": {
+		  "FoodDialogue": {
+		  "ConsumeQuestion":"{{i18n: EatenSPFQ}}",
+		  "CannotConsume":"{{i18n: EatenSPFNot}}",
+		  "Yes": "{{i18n: EatenSPFYes}}",
+		  "No":"{{i18n: EatenSPFNo}}" 
+		  }
+		},
+		"(O)SprayBug": {
+		  "FoodDialogue": {
+		  "ConsumeQuestion":"{{i18n: EatenBBGQ}}",
+		  "CannotConsume":"{{i18n: EatenBBGNot}}",
+		  "Yes": "{{i18n: EatenBBGYes}}",
+		  "No":"{{i18n: EatenBBGNo}}" 
+		  }
+		}	  
+	}
+}
+
+	
+//End
+]
+}

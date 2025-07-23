@@ -1,0 +1,259 @@
+{
+	"Format": "2.0.0",
+	"ConfigSchema": {
+		"S.J.B.": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Global",
+			"Description": "Fully enables/disables this Content Patch."
+		},
+
+		"Buildings": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Categories",
+			"Description": "Enables/disables all farm buildings changes."
+		},
+		"Craftables": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Categories",
+			"Description": "Enables/disables all craftable items changes."
+		},
+		"Furniture": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Categories",
+			"Description": "Enables/disables all furniture items changes."
+		},
+		
+		"Barn": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Buildings"
+		},
+		"Cabins": {
+			"AllowValues": "Log, Plank, Stone", 
+			"Default": "Log, Plank, Stone",
+			"Section": "Buildings",
+			"AllowMultiple": true,
+			"AllowBlank": true
+		},
+		"Coop": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Buildings"
+		},
+		"Houses": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Buildings"
+		},
+		"Obelisks": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Buildings",
+			"Description": "Enables/disables all Obelisks.\nThis is ignored when using the Modular Zen Garden mod."
+		},
+		"Shed": {
+			"AllowValues": "disabled, shop, tea", 
+			"Default": "shop",
+			"Section": "Buildings"
+		},
+		"Big Shed": {
+			"AllowValues": "disabled, shop, tea", 
+			"Default": "tea",
+			"Section": "Buildings"
+		},
+		"Slime Hutch": {
+			"AllowValues": "disabled, normal, big", 
+			"Default": "normal",
+			"Section": "Buildings",
+			"Description": "The big Slime Hutch reverts the size of the building to pre-1.6 : 11x6 instead of 7x4."
+		},
+		"Stable": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Buildings"
+		},
+		"Well": {
+			"AllowValues": "disabled, static, animated",
+			"Default": "animated",
+			"Section": "Buildings"
+		},
+		"Greenhouse": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Buildings"
+		},
+		"Junimo Hut": {
+			"AllowValues": "disabled, stone, tree", 
+			"Default": "stone",
+			"Section": "Buildings"
+		},
+		"Mill": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Buildings"
+		},
+		"Silo": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Buildings"
+		},
+
+		"Artisan Equipment": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Craftables",
+			"Description": "Includes Bee House, Preserves Jar and Keg."
+		},
+		"Braziers": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Craftables",
+			"Description": "Wooden, Carved, Stump and Barrel."
+		},
+		"Lamp-Posts": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Craftables"
+		},
+		"Refining Equipment": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Craftables",
+			"Description": "Includes Furnace, Lightning Rod and Seed Maker."
+		},
+		"Chest": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Craftables",
+			"Description": "Only includes the classic wooden chest with its colored variations."
+		},
+		"Signs": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Craftables",
+			"Description": "Wood and Stone."
+		},
+		"Scarecrow": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Craftables",
+			"Description": "Only includes the classic scarecrow."
+		},
+		"Statues": {
+			"AllowValues": "disabled, static, animated",
+			"Default": "animated",
+			"Section": "Craftables"
+		},
+
+		"Doghouses": {
+			"AllowValues": "true, false", 
+			"Default": "true",
+			"Section": "Furniture"
+		},
+
+		"Earth Border": {
+			"AllowValues": "top, right, bottom, left",
+			"Default": "top, right, bottom, left",
+			"Section": "Obelisks",
+			"AllowMultiple": true,
+			"AllowBlank": true
+		},
+		"Earth Corner": {
+			"AllowValues": "top-left, top-right, bottom-left, bottom-right",
+			"Default": "",
+			"Section": "Obelisks",
+			"AllowMultiple": true,
+			"AllowBlank": true
+		},
+
+		"Water Border": {
+			"AllowValues": "top, right, bottom, left",
+			"Default": "top, right, bottom, left",
+			"Section": "Obelisks",
+			"AllowMultiple": true,
+			"AllowBlank": true
+		},
+		"Water Corner": {
+			"AllowValues": "top-left, top-right, bottom-left, bottom-right",
+			"Default": "",
+			"Section": "Obelisks",
+			"AllowMultiple": true,
+			"AllowBlank": true
+		},
+
+		"Desert Border": {
+			"AllowValues": "top, right, bottom, left",
+			"Default": "top, right, bottom, left",
+			"Section": "Obelisks",
+			"AllowMultiple": true,
+			"AllowBlank": true
+		},
+		"Desert Corner": {
+			"AllowValues": "top-left, top-right, bottom-left, bottom-right",
+			"Default": "",
+			"Section": "Obelisks",
+			"AllowMultiple": true,
+			"AllowBlank": true
+		},
+
+		"Island Border": {
+			"AllowValues": "top, right, bottom, left",
+			"Default": "top, right, bottom, left",
+			"Section": "Obelisks",
+			"AllowMultiple": true,
+			"AllowBlank": true
+		},
+		"Island Corner": {
+			"AllowValues": "top-left, top-right, bottom-left, bottom-right",
+			"Default": "",
+			"Section": "Obelisks",
+			"AllowMultiple": true,
+			"AllowBlank": true
+		}
+	},
+
+	"DynamicTokens": [
+		{
+			"Name": "disable_obelisks",
+			"Value": "false"
+		},
+		{
+			"Name": "disable_obelisks",
+			"Value": "true",
+			"When": {
+				"HasMod": "leroymilo.ModularZenGarden"
+			}
+		}
+	],
+
+	"Changes": [
+		{
+			"Action": "Include",
+			"FromFile": "assets/Buildings/content.json",
+			"When": {
+				"S.J.B.": "true",
+				"Buildings": "true"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Craftables/content.json",
+			"When": {
+				"S.J.B.": "true",
+				"Craftables": "true"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Furniture/content.json",
+			"When": {
+				"S.J.B.": "true",
+				"Furniture": "true"
+			}
+		}
+	]
+}

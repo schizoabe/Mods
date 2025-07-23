@@ -1,0 +1,70 @@
+{
+	"Changes": [
+		//Marnie Standard
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "AnimalShop", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_CaveCarrotSeeds": {
+					"AvailableStock": 10,
+        		"AvailableStockModifiers": [
+            		{
+              "Modification": "Multiply",
+              "RandomAmount": [
+                1.5,
+                1.4,
+                1.3,
+                1.2,
+                1.1,
+                1.0,
+                0.9,
+                0.8,
+                0.7,
+                0.6,
+                0.5,                
+              ]
+            }
+          		],
+					"Condition": "PLAYER_HAS_MAIL Current ZoeyHoshi.ForageCrops_MarnieCaveCarrots Received, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_CaveCarrotSeeds 0.6"
+				}
+			},
+			"When": {
+				"Marnie": "Standard",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, CaveCarrotCrop": true
+			}
+		},
+		//Marnie Hardmode
+		{
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "AnimalShop", "Items" ],
+			"Fields": {
+				"ZoeyHoshi.ForageCrops_CaveCarrotSeeds": {
+					"AvailableStock": 10,
+        		"AvailableStockModifiers": [
+            		{
+              "Modification": "Multiply",
+              "RandomAmount": [
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,                
+              ]
+            }
+          		],
+					"Condition": "PLAYER_HAS_MAIL Current ZoeyHoshi.ForageCrops_MarnieCaveCarrots Received, SYNCED_RANDOM Day ZoeyHoshi.ForageCrops_CaveCarrotSeeds 0.3"
+				}
+			},
+			"When": {
+				"Marnie": "Hardmode",
+				"Spiderbuttons.CMCT/Config: ZoeyHoshi.ForageCrops, CaveCarrotCrop": true
+			}
+		}
+	]
+}

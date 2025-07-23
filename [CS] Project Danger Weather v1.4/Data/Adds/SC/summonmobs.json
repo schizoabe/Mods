@@ -1,0 +1,1332 @@
+{
+	"Changes": [
+//Cackles in evil
+	
+//Monster Load
+//HP/Attack/0/0/flies?/1000 or random movement duration/ITEM ID %/Defense/.01 or jitters/distance to aggro/speed/% for miss attack/mine monst?/EXP/display name
+        {
+            "LogName":"Making Monster Data",
+            "Action": "EditData",
+            "Target": "Data/Monsters",
+            "Entries": {
+				"DarkClones": "250/10/0/0/false/1000/769 .95 769 .05/5/.01/100/4/.01/false/25/???",
+			},
+		},
+//Spawn Definition
+        {
+            "LogName":"Making the Spawn Data",
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/SpawnableDefinitions",
+            "Entries": {
+                "Clone.ToddlerBoy": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Toddler",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.ToddlerGirl": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Toddler_girl",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},				
+                "Clone.Abigail": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Abigail",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "(W)40",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Alex": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Alex",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "(W)25",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Caroline": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Caroline",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_ID Target 251 614",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Clint": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Clint",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_ID Target 334 335 336 338",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Demetrius": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Demetrius",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Dwarf": {
+					"Type": "Monster",
+					"MonsterType": "ShadowShaman",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Dwarf",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_ID Target 96 97 98 99 109 121 122",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Elliott": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Elliott",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "(W)35",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Emily": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Emily",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_CATEGORY Target -2, ITEM_ID Target 60 62 64 66 68 70",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Evelyn": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Evelyn",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.25,
+                                "Value": {
+                                    "ItemId": "(O)223",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },	
+                            {
+                                "Weight": 0.01,
+                                "Value": {
+                                    "ItemId": "(O)341",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.George": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/George",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Gus": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Gus",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Haley": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Haley",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "(W)42",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Harvey": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Harvey",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "(W)37",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Jas": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Jas",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Jodi": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Jodi",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Kent": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Kent",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_ID Target 441 607",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Krobus": {
+					"Type": "Monster",
+					"MonsterType": "ShadowShaman",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Krobus",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_ID Target 769 768",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Leah": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Leah",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "(W)39",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Lewis": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Lewis",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "(O)789",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Linus": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Linus",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Marnie": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Marnie",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Maru": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Maru",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "(W)36",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Morris": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Morris",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Pam": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Pam",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_CONTEXT_TAG Target alcohol_item",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.ParrotBoy": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/ParrotBoy",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_ID Target 834 832 830 829 848",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Penny": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Penny",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "(W)38",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},		
+                "Clone.Pierre": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Pierre",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Robin": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Robin",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_ID Target 169 388 709",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.SafariGuy": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/SafariGuy",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_ID Target 820 821 822 823 824 825 826 827 828 829 830 832 834",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Sam": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Sam",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "(W)30",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Sandy": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Sandy",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_ID Target 88 90 164",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},
+                "Clone.Sebastian": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Sebastian",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "(W)41",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},	
+                "Clone.Shane": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Shane",
+					"MonsterDropOverride": [
+                        [
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_CATEGORY Target -5, !ITEM_ID Target 289 928",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},	
+                "Clone.Vincent": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Vincent",
+					"MonsterDropOverride": [],
+					"MonsterAdditionalData": {},
+            	},	
+                "Clone.Willy": {
+					"Type": "Monster",
+					"MonsterType": "ShadowBrute",
+					"MonsterName": "DarkClones",
+					"MonsterTextureOverride": "Characters/Willy",
+					"MonsterDropOverride": [
+						[
+                            {
+                                "Weight": 1.0,
+                                "Value": {
+                                    "ItemId": "(O)769",
+                                    "MinStack": 1,
+                                    "MaxStack": 2,
+                                }
+                            },
+                            {
+                                "Weight": 0.05,
+                                "Value": {
+                                    "ItemId": "RANDOM_ITEMS (O)",
+									"MaxItems": 1,
+									"PerItemCondition": "ITEM_CATEGORY Target -4, !ITEM_ID Target 128 148 149 151 155 154 158 159 160 161 162 163 164 165 267 269 682 698 775 795 796 798 799 800 836 837 838 898 899 900 901 902 Goby",
+                                    "MinStack": 1,
+                                    "MaxStack": 1,
+                                }
+                            },							
+                        ]					
+					],
+					"MonsterAdditionalData": {},
+            	},					
+				//No Wizard, Rasmodius is outta the matrix
+			}
+		},
+//Spawn Groups
+        {
+            "Action": "EditData",
+            "Target": "spacechase0.SpaceCore/SpawningGroups",
+            "Entries": {
+                "Clone_Spawn.Town": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Abigail"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Alex"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Caroline"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Clint"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Emily"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Evelyn"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.George"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Gus"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Haley"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Harvey"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Jodi"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Lewis"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Pam"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},	
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Penny"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},	
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Pierre"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},	
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Sam"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},	
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Vincent"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},								
+						]
+				},
+				"Clone_Spawn.Kent": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Kent"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},						
+					]
+				},
+				"Clone_Spawn.Dwarf": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Dwarf"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},						
+					]
+				},
+				"Clone_Spawn.Krobus": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Krobus"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},						
+					]
+				},	
+				"Clone_Spawn.ParrotBoy": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.ParrotBoy"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},						
+					]
+				},				
+				"Clone_Spawn.Forest": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Leah"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},		
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Jas"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},	
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Marnie"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},	
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Shane"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},									
+					]
+				},	
+				"Clone_Spawn.Mountain": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Demetrius"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},		
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Robin"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},	
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Maru"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},	
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Sebastian"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},				
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Linus"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},							
+					]
+				},				
+				"Clone_Spawn.Beach": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Willy"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},		
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Elliott"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},							
+					]
+				},	
+				"Clone_Spawn.Island": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.SafariGuy"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},				
+					]
+				},
+				"Clone_Spawn.Desert": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.Sandy"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},				
+					]
+				},				
+				"Clone_Spawn.Toddlers": {
+					"SpawnablesToSpawn": [
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.ToddlerBoy"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},	
+							{
+								"SpawnableIds": [
+									{
+										"Weight": 1.0,
+										"Value": "Clone.ToddlerGirl"
+									}
+								],
+								"Minimum": 1,
+								"Maximum": 2,
+							},								
+					]
+				},					
+				//
+			}
+		},
+		
+//Spawning Stuff in
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {		
+			"kath.weathering_SpawnsReset": {
+				"Id": "kath.weathering_SpawnsReset",
+                "Trigger": "DayStarted",
+                "Condition": "!WEATHER Town kath.weathering_Clones,",
+				"MarkActionApplied": false,
+                "Actions": [
+					"MarkActionApplied All kath.weathering_SpawnDefault false",
+					"MarkActionApplied All kath.weathering_SpawnDefault_ParrotBoy false",
+					"MarkActionApplied All kath.weathering_SpawnDesert false",
+					"MarkActionApplied All kath.weathering_SpawnIsland false",
+					"MarkActionApplied All kath.weathering_SpawnIsland_ParrotBoy false",
+					"MarkActionApplied All kath.weathering_SpawnToddlers false",
+					"MarkActionApplied All kath.weathering_SpawnToddlers2 false",
+                    ],
+				},				
+			"kath.weathering_SpawnDefault": {
+				"Id": "kath.weathering_SpawnDefault",
+                "Trigger": "LocationChanged",
+                "Condition": "WEATHER Town kath.weathering_Clones, PLAYER_LOCATION_CONTEXT Any Default",
+                "Actions": [
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Town Town",
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Forest Forest",
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Mountain Mountain",
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Beach Beach",
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Dwarf {{Random:Railroad,Mine}}",
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Krobus {{Random:Forest,Town,{{KrobusSummon}} }}",
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Kent Town",
+                    ],
+				},	
+			"kath.weathering_SpawnDefault_ParrotBoy": {
+				"Id": "kath.weathering_SpawnDefault_ParrotBoy",
+                "Trigger": "LocationChanged",
+                "Condition": "WEATHER Town kath.weathering_Clones, PLAYER_LOCATION_CONTEXT Any Default, PLAYER_HAS_MAIL Host leoMoved",
+                "Actions": [
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.ParrotBoy Town",
+                    ],
+				},				
+			"kath.weathering_SpawnDesert": {
+				"Id": "kath.weathering_SpawnDesert",
+                "Trigger": "LocationChanged",
+                "Condition": "WEATHER Desert kath.weathering_Clones, PLAYER_LOCATION_CONTEXT Any Desert",
+                "Actions": [
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Desert Desert",
+                    ],
+				},	
+			"kath.weathering_SpawnIsland": {
+				"Id": "kath.weathering_SpawnIsland",
+                "Trigger": "LocationChanged",
+                "Condition": "WEATHER IslandSouth kath.weathering_Clones, PLAYER_LOCATION_CONTEXT Any Island, PLAYER_HAS_MAIL Host islandNorthCaveOpened",
+                "Actions": [
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Island IslandNorth",
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Island IslandSouth",
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Island IslandEast",
+                    ],
+				},	
+			"kath.weathering_SpawnIsland_ParrotBoy": {
+				"Id": "kath.weathering_SpawnIsland_ParrotBoy",
+                "Trigger": "LocationChanged",
+                "Condition": "WEATHER IslandSouth kath.weathering_Clones, PLAYER_LOCATION_CONTEXT Any Island, !PLAYER_HAS_MAIL Host leoMoved",
+                "Actions": [
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.ParrotBoy IslandEast",
+                    ],
+				},	
+			"kath.weathering_SpawnToddlers": {
+				"Id": "kath.weathering_SpawnToddlers",
+                "Trigger": "LocationChanged",
+                "Condition": "WEATHER Farm kath.weathering_Clones, PLAYER_LOCATION_CONTEXT Any Default, PLAYER_STAT Any childrenTurnedToDoves 1",
+                "Actions": [
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Toddlers Farm",
+                    ],
+				},	
+			"kath.weathering_SpawnToddlers2": {
+				"Id": "kath.weathering_SpawnToddlers2",
+                "Trigger": "LocationChanged",
+                "Condition": "WEATHER Farm kath.weathering_Clones, PLAYER_LOCATION_CONTEXT Any Default, PLAYER_HAS_CHILDREN Any 1",
+                "Actions": [
+					"spacechase0.SpaceCore_TriggerSpawnGroup Clone_Spawn.Toddlers Farm",
+                    ],
+				},				
+			//
+			}
+		},
+
+//End
+]
+}
