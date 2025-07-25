@@ -86,5 +86,16 @@
         "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.SekunsDriedThymeName}}",
       },
     },
+  },
+
+  // Context Tags
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": [ "RiftstalkerSekun.CropExpansion_Cinnamon", "ContextTags" ],
+    "Entries": {
+      "cinnamon_item": "cinnamon_item",
+    },
   }]
 }

@@ -53,6 +53,9 @@
       "Lumisteria.MtVapius_Butter": {
         "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.VMVButterName}}",
       },
+      "Lumisteria.MtVapius_Candy_CandyCane": {
+        "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.VMVCandyCaneName}}",
+      },
       "Lumisteria.MtVapius_Cream": {
         "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.VMVCreamName}}",
       },
@@ -65,6 +68,9 @@
       "Lumisteria.MtVapius_GooseMayonnaise": {
         "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.VMVGooseMayonnaiseName}}",
       },
+      "Lumisteria.MtVapius_ArtisanGoods_OliveOil": {
+        "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.VMVOliveOilName}}",
+      },
       "Lumisteria.MtVapius_Rosemary": {
         "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.VMVRosemaryName}}",
       },
@@ -72,12 +78,70 @@
         "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.VMVRyeBreadName}}",
       },
     },
-  }, {
+  },
+
+  // Context Tags
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": ["Lumisteria.MtVapius_GemPigeonFeather", "ContextTags"],
+    "Entries": {
+       "animal_feather_item": "animal_feather_item"
+    }
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": ["Lumisteria.MtVapius_GooseDown", "ContextTags"],
+    "Entries": {
+       "animal_feather_item": "animal_feather_item"
+    }
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": ["Lumisteria.MtVapius_SpeckledFowlFeather", "ContextTags"],
+    "Entries": {
+       "animal_feather_item": "animal_feather_item"
+    }
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": ["Lumisteria.MtVapius_SpeckledFowlVoidFeather", "ContextTags"],
+    "Entries": {
+       "animal_feather_item": "animal_feather_item"
+    }
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": ["Lumisteria.MtVapius_VoidFeather", "ContextTags"],
+    "Entries": {
+       "animal_feather_item": "animal_feather_item"
+    }
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": ["Lumisteria.MtVapius_SeaBuckthornBerry", "ContextTags"],
+    "Entries": {
+       "berry_item": "berry_item"
+    }
+  },
+
+  // Animals
+  {
     "Action": "EditData",
     "Target": "Data/FarmAnimals",
     "Priority": "Late + 10",
     "Fields": {
-      // Animals
       "Lumisteria.MtVapius_Goose": {
         "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.VMVGooseName}}",
         "ShopDisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.VMVGooseName}}",

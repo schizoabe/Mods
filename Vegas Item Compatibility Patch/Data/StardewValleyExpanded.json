@@ -81,12 +81,61 @@
         "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.SVEStuffedPersimmonName}}",
       },
     },
-  }, {
+  },
+
+  // Context Tags
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": [ "FlashShifter.StardewValleyExpandedCP_Bearberrys", "ContextTags" ],
+    "Entries": {
+      "berry_item": "berry_item",
+    },
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": [ "FlashShifter.StardewValleyExpandedCP_Dewdrop_Berry", "ContextTags" ],
+    "Entries": {
+      "berry_item": "berry_item",
+    },
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": [ "FlashShifter.StardewValleyExpandedCP_Red_Baneberry", "ContextTags" ],
+    "Entries": {
+      "berry_item": "berry_item",
+    },
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": [ "FlashShifter.StardewValleyExpandedCP_Salal_Berry", "ContextTags" ],
+    "Entries": {
+      "berry_item": "berry_item",
+    },
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": [ "FlashShifter.StardewValleyExpandedCP_Slime_Berry", "ContextTags" ],
+    "Entries": {
+      "berry_item": "berry_item",
+    },
+  },
+  
+  // Animals
+  {
     "Action": "EditData",
     "Target": "Data/FarmAnimals",
     "Priority": "Late + 10",
     "Fields": {
-      // Animals
       "FlashShifter.StardewValleyExpandedCP_Goose": {
         "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.SVEGooseName}}",
         "ShopDisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.SVEGooseName}}",

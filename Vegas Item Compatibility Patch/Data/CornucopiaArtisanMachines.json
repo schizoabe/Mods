@@ -29,15 +29,44 @@
       "Cornucopia_Saffron": {
         "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.CornucopiaSaffronName}}",
       },
+
+      // Strings for Dynamic Replacement
+      "Cornucopia_Candles": {
+        "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.CornucopiaCandlesName}}",
+      },
+      "Cornucopia_SmokedCheese": {
+        "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.CornucopiaSmokedCheeseName}}",
+      },
+      "Cornucopia_SmokedEgg": {
+        "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.CornucopiaSmokedEggName}}",
+      },
     },
-  }, {
+  }, 
+  
+  // Strings for Dynamic Replacement
+  {
     "Action": "EditData",
     "Target": "Data/Machines",
     "TargetField": [ "(BC)Cornucopia_WaxBarrel", "OutputRules", "Cornucopia_Candles", "OutputItem", "Cornucopia_Candles" ],
     "Priority": "Late + 10",
     "Entries": {
-      // Strings for Dynamic Replacement
-      "ObjectDisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.CornucopiaCandlesName}}",
+      "ObjectDisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.CornucopiaCandlesDynamicName}}",
+    },
+  }, {
+    "Action": "EditData",
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)Cornucopia_DeluxeSmoker", "OutputRules", "Cornucopia_SmokedCheese", "OutputItem", "(O)Cornucopia_SmokedCheese" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "ObjectDisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.CornucopiaSmokedDynamicName}}",
+    },
+  }, {
+    "Action": "EditData",
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)Cornucopia_DeluxeSmoker", "OutputRules", "Cornucopia_SmokedEgg", "OutputItem", "(O)Cornucopia_SmokedEgg" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "ObjectDisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.CornucopiaSmokedDynamicName}}",
     },
   }]
 }

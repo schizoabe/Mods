@@ -19,7 +19,7 @@
          }],
         "MinutesUntilReady": 4000,
         "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
-      },      
+      },
     },
     "MoveEntries": [
       { "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears", "BeforeId": "Default_Pickled" },
@@ -202,6 +202,211 @@
     },
     "MoveEntries": [
       { "Id": "VegasOctober.ItemCompatibilityPatch.SVEPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=RiftstalkerSekun.CropExpansion": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)15", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "RiftstalkerSekun.CropExpansion_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+         }],
+        "MinutesUntilReady": 4000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+      "HasMod |contains=RiftstalkerSekun.CropExpansion": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_SteelPreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "RiftstalkerSekun.CropExpansion_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+         }],
+        "MinutesUntilReady": 3000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+      "HasMod |contains=RiftstalkerSekun.CropExpansion": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_GoldPreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "RiftstalkerSekun.CropExpansion_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+         }],
+        "MinutesUntilReady": 2000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+      "HasMod |contains=RiftstalkerSekun.CropExpansion": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_DiamondPreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "RiftstalkerSekun.CropExpansion_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+         }],
+        "MinutesUntilReady": 1000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+      "HasMod |contains=RiftstalkerSekun.CropExpansion": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_IridiumPreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "RiftstalkerSekun.CropExpansion_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+          "CopyQuality": true,
+         }],
+        "MinutesUntilReady": 1000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+      "HasMod |contains=RiftstalkerSekun.CropExpansion": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_RadioactivePreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "RiftstalkerSekun.CropExpansion_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+          "CopyQuality": true,
+          "StackModifiers": [{
+            "Id": "RareDouble",
+            "Condition": "RANDOM .1",
+            "Modification": "Multiply",
+            "Amount": 2.0
+          }],
+          "StackModifierMode": "Stack"
+        }],
+        "MinutesUntilReady": 1000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears", "BeforeId": "Default_Pickled" },
+    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=nachonline.mps": true,
+      "HasMod |contains=RiftstalkerSekun.CropExpansion": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_PrismaticPreservesJar", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears",
+        "Triggers": [{
+          "RequiredItemId": "RiftstalkerSekun.CropExpansion_Cucumber",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_PickleSpears",
+          "CopyQuality": true,
+          "StackModifiers": [{
+            "Id": "RareDouble",
+            "Condition": "RANDOM .3",
+            "Modification": "Multiply",
+            "Amount": 2.0
+          }],
+          "StackModifierMode": "Stack"
+        }],
+        "MinutesUntilReady": 1000,
+        "InvalidCountMessage": "{{i18n: PreservesJarInvalidCount_Pickles}}"
+      },
+    },
+    "MoveEntries": [
+      { "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionPickleSpears", "BeforeId": "Default_Pickled" },
     ]
   },
   {
@@ -432,19 +637,43 @@
     "Action": "EditData",
     "When": {
       "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=Cornucopia.ArtisanMachines": true,
+      "HasMod |contains=RiftstalkerSekun.CropExpansion": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)Cornucopia_Extruder", "OutputRules" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionZoodles": {
+        "Id": "VegasOctober.ItemCompatibilityPatch.SekunsCropExpansionZoodles",
+        "Triggers": [{
+          "RequiredItemId": "(O)RiftstalkerSekun.CropExpansion_Zucchini",
+        }],
+        "OutputItem": [{
+          "ItemId": "(O)Cornucopia_Zoodles",
+          "IncrementMachineParentSheetIndex": 1,
+        }],
+        "MinutesUntilReady": 240
+      },
+    },
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
       "HasMod |contains=slimerrain.grainsoverhullcp": true,
     },
     "Target": "Data/Machines",
     "TargetField": [ "(BC)15", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
     "Priority": "Late + 10",
-    "Entries": {      
+    "Entries": {
       "Triggers": [{
         "Id": "ItemPlacedInMachine_Oats",
         "Trigger": "ItemPlacedInMachine",
         "RequiredTags": [
           "oat_item"
         ],
-      }],   
+      }],
     },
   },
   {
@@ -457,14 +686,14 @@
     "Target": "Data/Machines",
     "TargetField": [ "(BC)nachonline.mps_SteelPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
     "Priority": "Late + 10",
-    "Entries": {      
+    "Entries": {
       "Triggers": [{
         "Id": "ItemPlacedInMachine_Oats",
         "Trigger": "ItemPlacedInMachine",
         "RequiredTags": [
           "oat_item"
         ],
-      }],   
+      }],
     },
   },
   {
@@ -477,14 +706,14 @@
     "Target": "Data/Machines",
     "TargetField": [ "(BC)nachonline.mps_GoldPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
     "Priority": "Late + 10",
-    "Entries": {      
+    "Entries": {
       "Triggers": [{
         "Id": "ItemPlacedInMachine_Oats",
         "Trigger": "ItemPlacedInMachine",
         "RequiredTags": [
           "oat_item"
         ],
-      }],   
+      }],
     },
   },
   {
@@ -497,14 +726,14 @@
     "Target": "Data/Machines",
     "TargetField": [ "(BC)nachonline.mps_DiamondPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
     "Priority": "Late + 10",
-    "Entries": {      
+    "Entries": {
       "Triggers": [{
         "Id": "ItemPlacedInMachine_Oats",
         "Trigger": "ItemPlacedInMachine",
         "RequiredTags": [
           "oat_item"
         ],
-      }],   
+      }],
     },
   },
   {
@@ -517,14 +746,14 @@
     "Target": "Data/Machines",
     "TargetField": [ "(BC)nachonline.mps_IridiumPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
     "Priority": "Late + 10",
-    "Entries": {      
+    "Entries": {
       "Triggers": [{
         "Id": "ItemPlacedInMachine_Oats",
         "Trigger": "ItemPlacedInMachine",
         "RequiredTags": [
           "oat_item"
         ],
-      }],   
+      }],
     },
   },
   {
@@ -537,14 +766,14 @@
     "Target": "Data/Machines",
     "TargetField": [ "(BC)nachonline.mps_RadioactivePreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
     "Priority": "Late + 10",
-    "Entries": {      
+    "Entries": {
       "Triggers": [{
         "Id": "ItemPlacedInMachine_Oats",
         "Trigger": "ItemPlacedInMachine",
         "RequiredTags": [
           "oat_item"
         ],
-      }],   
+      }],
     },
   },
   {
@@ -557,14 +786,14 @@
     "Target": "Data/Machines",
     "TargetField": [ "(BC)nachonline.mps_PrismaticPreservesJar", "OutputRules", "slimerrain.grainsoverhullcp_Overnight_Oats" ],
     "Priority": "Late + 10",
-    "Entries": {      
+    "Entries": {
       "Triggers": [{
         "Id": "ItemPlacedInMachine_Oats",
         "Trigger": "ItemPlacedInMachine",
         "RequiredTags": [
           "oat_item"
         ],
-      }],   
+      }],
     },
   },
   {
