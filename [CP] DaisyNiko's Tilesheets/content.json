@@ -9,10 +9,6 @@
             "AllowValues":"Off, Vanilla, Earthy, OvergrownFlowery, StarrySky, StarrySkyDark, Vintage",
             "Default":"Off"
         },
-        "VibrantPastoralFallVariant": {
-            "AllowValues": "Green, Orange",
-            "Default": "Green"
-        },
         "EnableArrows":{
             "AllowValues":"true, false",
             "Default":"true"
@@ -196,15 +192,6 @@
             "Action": "Load",
             "Target": "Maps/spring_daisyextras, Maps/summer_daisyextras, Maps/fall_daisyextras, Maps/winter_daisyextras",
             "FromFile": "assets/{{recolour}}/{{TargetWithoutPath}}.png"
-        },
-        {
-            "Action":"EditImage",
-            "Target":"Maps/fall_daisyextras",
-            "FromFile":"assets/{{recolour}}/orange_fall_daisyextras.png",
-            "When":{
-                "VibrantPastoralFallVariant":"Orange",
-                "recolour":"VibrantPastoral"
-            }
         },
         //cave
         {

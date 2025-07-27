@@ -1,0 +1,76 @@
+{
+	"Changes": [
+		{
+			"LogName": "EMRSSI -- Marnies Shop -- Standard",	
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "AnimalShop", "Items" ],
+			"Entries": {
+				"ZoeyHoshi.SVEForageCrops_ThistleSeeds": null,
+				
+				"EMRSSI_ZoeyHoshi.SVEForageCrops_ThistleSeeds": {
+					"Id": "EMRSSI_ZoeyHoshi.SVEForageCrops_ThistleSeeds",
+					"ItemId": "ZoeyHoshi.SVEForageCrops_ThistleSeeds",
+					"IgnoreShopPriceModifiers": true,
+					"AvailableStock": 15,
+					"AvailableStockModifiers": [
+						{
+						"Modification": "Multiply",
+						"RandomAmount": [
+							1.5,
+							1.4,
+							1.3,
+							1.2,
+							1.1,	
+							1.0,
+							0.9,
+							0.8,
+							0.7,
+							0.6,
+							0.5,                
+							]
+						}
+					],
+			"Condition": "SYNCED_RANDOM Day EMRSSI_ZoeyHoshi.SVEForageCrops_ThistleSeeds 0.8"
+				}
+			},
+		"When": { "Shop_Marnie": "Standard" },
+		},
+		{
+			"LogName": "EMRSSI -- Marnies Shop -- Hardmode",	
+			"Action": "EditData",
+			"Target": "Data/Shops",
+			"TargetField": [ "AnimalShop", "Items" ],
+			"Entries": {
+				"ZoeyHoshi.SVEForageCrops_ThistleSeeds": null,
+				
+				"EMRSSI_ZoeyHoshi.SVEForageCrops_ThistleSeeds": {
+					"Id": "EMRSSI_ZoeyHoshi.SVEForageCrops_ThistleSeeds",
+					"ItemId": "ZoeyHoshi.SVEForageCrops_ThistleSeeds",
+					"IgnoreShopPriceModifiers": true,
+					"AvailableStock": 5,
+					"AvailableStockModifiers": [
+						{
+						"Modification": "Multiply",
+						"RandomAmount": [
+							1.5,
+							1.4,
+							1.3,
+							1.2,
+							1.1,	
+							1.0,
+							0.9,
+							0.8,
+							0.7,
+							0.6,
+							0.5,                
+							]
+						}
+					],
+			"Condition": "SYNCED_RANDOM Day EMRSSI_ZoeyHoshi.SVEForageCrops_ThistleSeeds 0.4"
+				}
+			},
+		"When": { "Shop_Marnie": "Hardmode" },
+		},
+	]
+}

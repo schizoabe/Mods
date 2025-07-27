@@ -1,0 +1,36 @@
+{
+  "Format": "2.3.0",
+  "ConfigSchema": {
+    "Shop_Dwarf": {
+      "AllowValues": "Standard, Hardmode, Off",
+      "Default": "Standard",
+      "Description": "The darf sometimes sells selected mushroom planters."
+    },
+    "Shop_Marnie": {
+      "AllowValues": "Standard, Hardmode, Off",
+      "Default": "Standard",
+      "Description": "Marnie might occassionally sells Thistle Seeds."
+    },
+    "Shop_Pierre": {
+      "AllowValues": "Standard, Hardmode, Off",
+      "Default": "Standard",
+      "Description": "Pierre sometimes sells some additional flower seeds."
+    },
+    "Shop_Willy": {
+      "AllowValues": "Standard, Hardmode, Off",
+      "Default": "Off",
+      "Description": "If you are using the Custom Tapper mod, Willy will sell Dulse Seaweed planters. "
+    },
+    "PolyamorySweet.LantanaLoveShop": {
+      "AllowValues": "Standard, Hardmode, Off",
+      "Default": "Standard",
+      "Description": "Lantana sometimes sells selected flowers."
+    }
+  },
+  "Changes": [
+    {
+      "Action": "Include",
+      "FromFile": "data/shop_dwarf.json, data/shop_marnie.json, data/shop_pierre.json, data/shop_willy.json, data/shop_lantana.json",
+     }
+   ],
+}
