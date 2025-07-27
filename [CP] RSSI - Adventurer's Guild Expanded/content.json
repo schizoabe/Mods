@@ -1,0 +1,84 @@
+{
+    "Format": "2.3.0",
+    "Changes": [
+ {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "AdventureShop", "Items" ],
+            "Entries": {
+				
+				"supert_FireSlimeSoul": null,
+				"supert_FrozenSlimeSoul": null,
+				"supert_LifeEssence": null,
+				"supert_SlimeSoul": null,
+				"supert_TrueSlimeEnergy": null,
+				"supert_SwordOfTheSlimes": null,
+				
+				
+                "{{ModId}}_supert_SlimeSouls2": {
+                    "Id": "{{ModId}}_supert_SlimeSouls2",
+                    "RandomItemId": [ "(O)supert_FireSlimeSoul", "(O)supert_FrozenSlimeSoul" ],
+                    "Condition": "PLAYER_HAS_MAIL Any choseGabriel",
+					"AvailableStock": 1,
+                },   
+				"{{ModId}}_supert_SlimeSouls1": {
+                    "Id": "{{ModId}}_supert_SlimeSouls1",
+                    "RandomItemId": [ "(O)supert_LifeEssence", "(O)supert_SlimeSoul" ],
+                    "Condition": "PLAYER_HAS_MAIL current GErecipes1",
+					"AvailableStock": 1,
+                },  
+              
+                "{{ModId}}_supert_TrueSlimeEnergy": {
+                    "Id": "{{ModId}}_supert_TrueSlimeEnergy",
+                    "ItemId": "(O)supert_TrueSlimeEnergy",
+                    "Price": 15000,
+                    "Condition": "PLAYER_HAS_MAIL Any gabePathEnd",
+					"AvailableStock": 1,
+                },
+                "{{ModId}}_supert_SwordOfTheSlimes": {
+                    "Id": "{{ModId}}_supert_SwordOfTheSlimes",
+                    "ItemId": "(W)supert_SwordOfTheSlimes",
+                    "Price": 10000,
+                    "Condition": "PLAYER_HAS_MAIL current slimeSword",
+					"AvailableStock": 1,
+                }
+              }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "SeedShop", "Items" ],
+            "Entries": {
+				
+				 "supert_SlimeHeartSeeds": null,
+				 "supert_ZinniaSeeds": null,
+				
+				
+                "{{ModId}}_supert_SlimeHeartSeeds": {
+                    "Id": "{{ModId}}_supert_SlimeHeartSeeds",
+                    "ItemId": "supert_SlimeHeartSeeds",
+                    "Price": 500,
+                    "Condition": "PLAYER_HAS_MAIL Any slimeSeeds, WEATHER Town Rain",
+					"AvailableStock": 1,
+                },
+                "{{ModId}}_supert_ZinniaSeeds": {
+                    "Id": "{{ModId}}_supert_ZinniaSeeds",
+                    "ItemId": "supert_ZinniaSeeds",
+                    "Price": 80,
+                    "Condition": "PLAYER_HAS_MAIL Any zinniaSeeds",
+					"AvailableStockModifiers": [
+            {
+              "Modification": "Set",
+              "RandomAmount": [
+                1,
+				2,
+				3,
+				4,
+              ]
+            }
+          ],
+                }
+               }
+         }
+]
+ }
