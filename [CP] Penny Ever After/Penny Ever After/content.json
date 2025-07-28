@@ -1,0 +1,82 @@
+{
+    "Format": "2.4.0",
+    "ConfigSchema": {
+        "Festivals": {
+            "AllowValues": "true, false",
+            "Default": "true",
+            "Description": "Enable married festival dialogue for Penny from year 2 through to year 20.",
+            "Section": "Festivals"
+    },
+        "SpiceLevel": {
+            "AllowValues": "Sweet, Mature, ExtraSpicy",
+            "Default": "Mature",
+            "Description": "Sweet is SFW and has no bad language. Mature adds approximately 1000 tasteful NSFW lines. Extra Spicy adds an additional 250 lines that dial up the NSFW and includes some (rare) coarse language.",
+            "Section": "Spice Level"
+		},
+        "DatedDialogueOrder": {
+            "AllowValues": "Randomized, Sequential",
+            "Default": "Sequential",
+            "Description": "By default date specific lines display sequentially through the years. Set to Randomized if you're looking to mix up the dialogue on later playthroughs married to Penny.",
+            "Section": "Dated Dialogue Ordering"
+
+        }
+    },
+    "Changes": [
+        {
+            "LogName": "Schedule Changes",
+            "Action": "Include",
+            "FromFile": "assets/Schedules.json"
+        },
+        {
+            "LogName": "Penny Sweet",
+            "Action": "Include",
+            "FromFile": "assets/Penny_Sweet_{{DatedDialogueOrder}}.json",
+            "When": {
+                "SpiceLevel": "Sweet"
+            }
+        },
+                {
+            "LogName": "Penny Mature",
+            "Action": "Include",
+            "FromFile": "assets/Penny_Mature_{{DatedDialogueOrder}}.json",
+            "When": {
+                "SpiceLevel": "Mature"
+            }
+        },
+                {
+            "LogName": "Penny Extra Spicy",
+            "Action": "Include",
+            "FromFile": "assets/Penny_ExtraSpicy_{{DatedDialogueOrder}}.json",
+            "When": {
+                "SpiceLevel": "ExtraSpicy"
+            }
+        },
+        {
+            "LogName": "Festivals Sweet",
+            "Action": "Include",
+            "FromFile": "assets/Festivals_Sweet.json",
+            "When": {
+                "Festivals": true,
+                "SpiceLevel": "Sweet"
+            }
+        },
+        {
+            "LogName": "Festivals Mature",
+            "Action": "Include",
+            "FromFile": "assets/Festivals_Mature.json",
+            "When": {
+                "Festivals": true,
+                "SpiceLevel": "Mature"
+            }
+        },
+        {
+            "LogName": "Festivals Extra Spicy",
+            "Action": "Include",
+            "FromFile": "assets/Festivals_ExtraSpicy.json",
+            "When": {
+                "Festivals": true,
+                "SpiceLevel": "ExtraSpicy"
+            }
+        }
+    ]
+}

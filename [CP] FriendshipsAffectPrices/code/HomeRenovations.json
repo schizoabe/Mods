@@ -1,0 +1,175 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/HomeRenovations",
+            "Fields": {
+              "open_bedroom": {
+                "Price": "{{Round: {{Query: 10000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "close_bedroom": {
+                "Price": "{{Round: {{Query: -10000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "add_southern_room": {
+                "Price": "{{Round: {{Query: 30000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "remove_southern_room": {
+                "Price": "{{Round: {{Query: -30000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "add_corner_room": {
+                "Price": "{{Round: {{Query: 20000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "remove_corner_room": {
+                "Price": "{{Round: {{Query: -20000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "add_dining_room": {
+                "Price": "{{Round: {{Query: 150000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "remove_dining_room": {
+                "Price": "{{Round: {{Query: -150000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "add_cubby": {
+                "Price": "{{Round: {{Query: 10000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "remove_cubby": {
+                "Price": "{{Round: {{Query: -10000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "add_farupperroom": {
+                "Price": "{{Round: {{Query: 60000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "remove_farupperroom": {
+                "Price": "{{Round: {{Query: -60000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "add_extendedcorner": {
+                "Price": "{{Round: {{Query: 100000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "remove_extendedcorner": {
+                "Price": "{{Round: {{Query: -100000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "add_diningroomwall": {
+                "Price": "{{Round: {{Query: 10000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "remove_diningroomwall": {
+                "Price": "{{Round: {{Query: -10000 * {{1st Stage Multiplier}} }} }}"
+              }
+            },
+            "When": {
+              "Hearts:Robin": "{{Range: {{Round: {{Query: {{1st Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+           }
+        },
+        {
+          "Action": "EditData",
+          "Target": "Data/HomeRenovations",
+          "Fields": {
+            "open_bedroom": {
+              "Price": "{{Round: {{Query: 10000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "close_bedroom": {
+              "Price": "{{Round: {{Query: -10000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "add_southern_room": {
+              "Price": "{{Round: {{Query: 30000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "remove_southern_room": {
+              "Price": "{{Round: {{Query: -30000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "add_corner_room": {
+              "Price": "{{Round: {{Query: 20000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "remove_corner_room": {
+              "Price": "{{Round: {{Query: -20000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "add_dining_room": {
+              "Price": "{{Round: {{Query: 150000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "remove_dining_room": {
+              "Price": "{{Round: {{Query: -150000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "add_cubby": {
+              "Price": "{{Round: {{Query: 10000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "remove_cubby": {
+              "Price": "{{Round: {{Query: -10000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "add_farupperroom": {
+              "Price": "{{Round: {{Query: 60000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "remove_farupperroom": {
+              "Price": "{{Round: {{Query: -60000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "add_extendedcorner": {
+              "Price": "{{Round: {{Query: 100000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "remove_extendedcorner": {
+              "Price": "{{Round: {{Query: -100000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "add_diningroomwall": {
+              "Price": "{{Round: {{Query: 10000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "remove_diningroomwall": {
+              "Price": "{{Round: {{Query: -10000 * {{2nd Stage Multiplier}} }} }}"
+            }
+          },
+          "When": {
+            "Hearts:Robin": "{{Range: {{Round: {{Query: {{2nd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+         }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/HomeRenovations",
+        "Fields": {
+          "open_bedroom": {
+            "Price": "{{Round: {{Query: 10000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "close_bedroom": {
+            "Price": "{{Round: {{Query: -10000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "add_southern_room": {
+            "Price": "{{Round: {{Query: 30000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "remove_southern_room": {
+            "Price": "{{Round: {{Query: -30000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "add_corner_room": {
+            "Price": "{{Round: {{Query: 20000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "remove_corner_room": {
+            "Price": "{{Round: {{Query: -20000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "add_dining_room": {
+            "Price": "{{Round: {{Query: 150000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "remove_dining_room": {
+            "Price": "{{Round: {{Query: -150000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "add_cubby": {
+            "Price": "{{Round: {{Query: 10000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "remove_cubby": {
+            "Price": "{{Round: {{Query: -10000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "add_farupperroom": {
+            "Price": "{{Round: {{Query: 60000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "remove_farupperroom": {
+            "Price": "{{Round: {{Query: -60000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "add_extendedcorner": {
+            "Price": "{{Round: {{Query: 100000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "remove_extendedcorner": {
+            "Price": "{{Round: {{Query: -100000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "add_diningroomwall": {
+            "Price": "{{Round: {{Query: 10000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "remove_diningroomwall": {
+            "Price": "{{Round: {{Query: -10000 * {{3rd Stage Multiplier}} }} }}"
+          }
+        },
+        "When": {
+          "Hearts:Robin": "{{Range: {{Round: {{Query: {{3rd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+       }
+    }
+    ]
+}

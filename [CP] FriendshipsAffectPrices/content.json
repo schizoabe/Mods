@@ -1,0 +1,148 @@
+{
+    "Format": "2.0.0",
+    "ConfigSchema": {
+        "1st Stage Multiplier": {
+            "AllowValues": "0.1, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.9, 1, 1.1, 1.2, 1.25, 1.3, 1.4, 1.5, 1.6, 1.7, 1.75, 1.8, 1.9, 2",
+			"Default": "0.9",
+            "Section": "Multiplier"
+		},
+        "2nd Stage Multiplier": {
+            "AllowValues": "0.1, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.9, 1, 1.1, 1.2, 1.25, 1.3, 1.4, 1.5, 1.6, 1.7, 1.75, 1.8, 1.9, 2",
+			"Default": "0.75",
+            "Section": "Multiplier"
+		},
+         "3rd Stage Multiplier": {
+            "AllowValues": "0.1, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.9, 1, 1.1, 1.2, 1.25, 1.3, 1.4, 1.5, 1.6, 1.7, 1.75, 1.8, 1.9, 2",
+			"Default": "0.5",
+            "Section": "Multiplier"
+		},
+        "1st Stage Required Friendship Lvl": {
+            "AllowValues": "0, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500",
+			"Default": "750",
+            "Section": "Required Friendship Level"
+		},
+        "2nd Stage Required Friendship Lvl": {
+            "AllowValues": "0, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500",
+			"Default": "1500",
+            "Section": "Required Friendship Level"
+		},
+         "3rd Stage Required Friendship Lvl": {
+            "AllowValues": "0, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500",
+			"Default": "2500",
+            "Section": "Required Friendship Level"
+		},
+        "Affect_Joja_(SVE)": {
+          "AllowValues": "true, false",
+      "Default": "false",
+            "Section": "Miscellaneous"
+}
+    },
+    "Changes": [
+      {
+        "Action": "Include",
+        "FromFile": "code/VanillaShops.json"
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/PierreFixes.json"
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/BuildingsRobin.json"
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/BuildingsWizard.json"
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/HomeRenovations.json"
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/Animals.json"
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/PetAdoption.json"
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/SVEShops.json",
+        "When": {
+             "HasMod": "FlashShifter.StardewValleyExpandedCP"
+        }
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/SVESJoja.json",
+        "When": {
+             "HasMod": "FlashShifter.StardewValleyExpandedCP",
+             "Affect_Joja_(SVE)": true
+        }
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/LunnaShops.json",
+        "When": {
+             "HasMod": "Rafseazz.LunnaCP"
+        }
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/RidgesideShops.json",
+        "When": {
+             "HasMod": "Rafseazz.RSVCP"
+        }
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/LaceyShops.json",
+        "When": {
+             "HasMod": "ichortower.HatMouseLacey"
+        }
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/BuyableDinosaursAndOstriches.json",
+        "When": {
+             "HasMod": "weissnicht01.BuyableDinosaursAndOstriches"
+        }
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/DwarvenExpansion.json",
+        "When": {
+             "HasMod": "mytigio.dwarven_expansion"
+        }
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/RealMarlonShops.json",
+        "When": {
+             "HasMod": "Ghost.Marlon"
+        }
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/MakeMarlonRealShop.json",
+        "When": {
+             "HasMod": "Wolf.Marlon"
+        }
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/BuildableCamper.json",
+        "When": {
+             "HasMod": "Harry.BuildCamper"
+        }
+      },
+      {
+        "Action": "Include",
+        "FromFile": "code/JonbowsAnimals.json",
+        "When": {
+             "HasMod": "Jonbow.Animals"
+        }
+      }
+    ]
+}

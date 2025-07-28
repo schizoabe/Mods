@@ -1,0 +1,55 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Fields": {
+              "Dinosaur": {
+                "PurchasePrice": "{{Round: {{Query: 1000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 2000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Ostrich": {
+                "PurchasePrice": "{{Round: {{Query: 8000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 16000 * {{1st Stage Multiplier}} }} }}"
+              }
+            },
+            "When": {
+              "Hearts:Marnie": "{{Range: {{Round: {{Query: {{1st Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+           }
+        },
+        {
+          "Action": "EditData",
+          "Target": "Data/FarmAnimals",
+          "Fields": {
+            "Dinosaur": {
+              "PurchasePrice": "{{Round: {{Query: 1000 * {{2nd Stage Multiplier}} }} }}",
+              "SellPrice": "{{Round: {{Query: 2000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Ostrich": {
+              "PurchasePrice": "{{Round: {{Query: 8000 * {{2nd Stage Multiplier}} }} }}",
+              "SellPrice": "{{Round: {{Query: 16000 * {{2nd Stage Multiplier}} }} }}"
+            }
+          },
+          "When": {
+            "Hearts:Marnie": "{{Range: {{Round: {{Query: {{2nd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+         }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/FarmAnimals",
+        "Fields": {
+          "Dinosaur": {
+            "PurchasePrice": "{{Round: {{Query: 1000 * {{3rd Stage Multiplier}} }} }}",
+            "SellPrice": "{{Round: {{Query: 2000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Ostrich": {
+            "PurchasePrice": "{{Round: {{Query: 8000 * {{3rd Stage Multiplier}} }} }}",
+            "SellPrice": "{{Round: {{Query: 16000 * {{3rd Stage Multiplier}} }} }}"
+          }
+        },
+        "When": {
+          "Hearts:Marnie": "{{Range: {{Round: {{Query: {{3rd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+       }
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Fields": {
+              "antEater": {
+                "PurchasePrice": "{{Round: {{Query: 10000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Antelope": {
+                "PurchasePrice": "{{Round: {{Query: 13000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Bilby": {
+                "PurchasePrice": "{{Round: {{Query: 13000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Giraffe": {
+                "PurchasePrice": "{{Round: {{Query: 20000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 30000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Hippo": {
+                "PurchasePrice": "{{Round: {{Query: 10000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Jerboa": {
+                "PurchasePrice": "{{Round: {{Query: 5000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 10000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Kangaroo": {
+                "PurchasePrice": "{{Round: {{Query: 15000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 30000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Kiwi": {
+                "PurchasePrice": "{{Round: {{Query: 5000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 10000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Lyrebird": {
+                "PurchasePrice": "{{Round: {{Query: 19000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 29000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Moose": {
+                "PurchasePrice": "{{Round: {{Query: 20000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 30000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Okapi": {
+                "PurchasePrice": "{{Round: {{Query: 16000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 22000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Pangolin": {
+                "PurchasePrice": "{{Round: {{Query: 18000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 24000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Porcupine": {
+                "PurchasePrice": "{{Round: {{Query: 10000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 17000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Quokka": {
+                "PurchasePrice": "{{Round: {{Query: 3000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 6000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Rhino": {
+                "PurchasePrice": "{{Round: {{Query: 50000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 60000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Tapir": {
+                "PurchasePrice": "{{Round: {{Query: 30000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 45000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Zebra": {
+                "PurchasePrice": "{{Round: {{Query: 30000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 40000 * {{1st Stage Multiplier}} }} }}"
+              }
+            },
+            "When": {
+              "Hearts:Marnie": "{{Range: {{Round: {{Query: {{1st Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+           }
+        },
+        {
+          "Action": "EditData",
+          "Target": "Data/FarmAnimals",
+          "Fields": {
+            "antEater": {
+                "PurchasePrice": "{{Round: {{Query: 10000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Antelope": {
+                "PurchasePrice": "{{Round: {{Query: 13000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Bilby": {
+                "PurchasePrice": "{{Round: {{Query: 13000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Giraffe": {
+                "PurchasePrice": "{{Round: {{Query: 20000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 30000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Hippo": {
+                "PurchasePrice": "{{Round: {{Query: 10000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Jerboa": {
+                "PurchasePrice": "{{Round: {{Query: 5000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 10000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Kangaroo": {
+                "PurchasePrice": "{{Round: {{Query: 15000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 30000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Kiwi": {
+                "PurchasePrice": "{{Round: {{Query: 5000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 10000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Lyrebird": {
+                "PurchasePrice": "{{Round: {{Query: 19000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 29000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Moose": {
+                "PurchasePrice": "{{Round: {{Query: 20000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 30000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Okapi": {
+                "PurchasePrice": "{{Round: {{Query: 16000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 22000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Pangolin": {
+                "PurchasePrice": "{{Round: {{Query: 18000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 24000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Porcupine": {
+                "PurchasePrice": "{{Round: {{Query: 10000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 17000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Quokka": {
+                "PurchasePrice": "{{Round: {{Query: 3000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 6000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Rhino": {
+                "PurchasePrice": "{{Round: {{Query: 50000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 60000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Tapir": {
+                "PurchasePrice": "{{Round: {{Query: 30000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 45000 * {{2nd Stage Multiplier}} }} }}"
+              },
+              "Zebra": {
+                "PurchasePrice": "{{Round: {{Query: 30000 * {{2nd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 40000 * {{2nd Stage Multiplier}} }} }}"
+              }
+          },
+          "When": {
+            "Hearts:Marnie": "{{Range: {{Round: {{Query: {{2nd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+         }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/FarmAnimals",
+        "Fields": {
+          "antEater": {
+                "PurchasePrice": "{{Round: {{Query: 10000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Antelope": {
+                "PurchasePrice": "{{Round: {{Query: 13000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Bilby": {
+                "PurchasePrice": "{{Round: {{Query: 13000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Giraffe": {
+                "PurchasePrice": "{{Round: {{Query: 20000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 30000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Hippo": {
+                "PurchasePrice": "{{Round: {{Query: 10000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 18000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Jerboa": {
+                "PurchasePrice": "{{Round: {{Query: 5000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 10000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Kangaroo": {
+                "PurchasePrice": "{{Round: {{Query: 15000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 30000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Kiwi": {
+                "PurchasePrice": "{{Round: {{Query: 5000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 10000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Lyrebird": {
+                "PurchasePrice": "{{Round: {{Query: 19000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 29000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Moose": {
+                "PurchasePrice": "{{Round: {{Query: 20000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 30000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Okapi": {
+                "PurchasePrice": "{{Round: {{Query: 16000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 22000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Pangolin": {
+                "PurchasePrice": "{{Round: {{Query: 18000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 24000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Porcupine": {
+                "PurchasePrice": "{{Round: {{Query: 10000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 17000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Quokka": {
+                "PurchasePrice": "{{Round: {{Query: 3000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 6000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Rhino": {
+                "PurchasePrice": "{{Round: {{Query: 50000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 60000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Tapir": {
+                "PurchasePrice": "{{Round: {{Query: 30000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 45000 * {{3rd Stage Multiplier}} }} }}"
+              },
+              "Zebra": {
+                "PurchasePrice": "{{Round: {{Query: 30000 * {{3rd Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 40000 * {{3rd Stage Multiplier}} }} }}"
+              }
+        },
+        "When": {
+          "Hearts:Marnie": "{{Range: {{Round: {{Query: {{3rd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+       }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Fields": {
+        "Animal Tent": {
+          "BuildCost": "{{Round: {{Query: 100000 * {{1st Stage Multiplier}} }} }}"
+        }
+      },
+      "When": {
+        "Hearts:Robin": "{{Range: {{Round: {{Query: {{1st Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+     }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Fields": {
+        "Animal Tent": {
+          "BuildCost": "{{Round: {{Query: 100000 * {{2nd Stage Multiplier}} }} }}"
+        }
+      },
+      "When": {
+        "Hearts:Robin": "{{Range: {{Round: {{Query: {{2nd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+     }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "Fields": {
+        "Animal Tent": {
+          "BuildCost": "{{Round: {{Query: 100000 * {{3rd Stage Multiplier}} }} }}"
+        }
+      },
+      "When": {
+        "Hearts:Robin": "{{Range: {{Round: {{Query: {{3rd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+     }
+    }
+  ]
+}
+
+
+//MIT License
+//
+//Copyright (c) 2024 mytigio, modifications by weissnicht01
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in all
+//copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//SOFTWARE.

@@ -1,0 +1,403 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVJericShop"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 0.7
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVPikaShop"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 0.7
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Pika {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Pika {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Pika {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVPikaRecipes"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 0.6
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.6 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Pika {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.6 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Pika {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.6 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Pika {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVLolaShop"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 10
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 10 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Lola {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 10 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Lola {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 10 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Lola {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVFestPika"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 0.8
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Pika {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Pika {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Pika {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVFestGirls"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 0.8
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Alissa {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Alissa {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Alissa {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVFestBoys"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 0.8
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVJioShop"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{1st Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Jio {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{2nd Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Jio {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{3rd Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Jio {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVMalayaShop"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 0.7
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Malaya {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Malaya {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Malaya {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVMalayaRecipes"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 0.6
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.6 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Malaya {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.6 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Malaya {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.6 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Malaya {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVKimpoiShop"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 2.5
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 0.5,
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Kimpoi 2000"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 2.5 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Kimpoi {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 2.5 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Kimpoi {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 2.5 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Kimpoi {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVHeapsStore"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": 0.8
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.8 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVFayeShop"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{1st Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Faye {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{2nd Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Faye {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{3rd Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Faye {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["RSVEggFestKeahiTrinnie"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{1st Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Keahi {{1st Stage Required Friendship Lvl}}, PLAYER_FRIENDSHIP_POINTS Current Trinnie {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{2nd Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Keahi {{2nd Stage Required Friendship Lvl}}, PLAYER_FRIENDSHIP_POINTS Current Trinnie {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{3rd Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Keahi {{3rd Stage Required Friendship Lvl}}, PLAYER_FRIENDSHIP_POINTS Current Trinnie {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        }
+    ]
+}

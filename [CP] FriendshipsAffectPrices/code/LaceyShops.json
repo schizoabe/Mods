@@ -1,0 +1,86 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["HatMouse"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{1st Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current ichortower.HatMouseLacey_Lacey {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{2nd Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current ichortower.HatMouseLacey_Lacey {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{3rd Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current ichortower.HatMouseLacey_Lacey {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "Fields": {
+              "HatMouse": {
+                "Currency": 1,
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.5* {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current ichortower.HatMouseLacey_Lacey {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.5* {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current ichortower.HatMouseLacey_Lacey {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.5* {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current ichortower.HatMouseLacey_Lacey {{3rd Stage Required Friendship Lvl}}",
+                    },
+                    {"Modification": "Set", "Amount": 9999}
+                ],
+                "PriceModifierMode": "Minimum"
+              }
+            },
+            "When": {
+              "DayEvent": "stardew valley fair",
+              "LocationName": "Temp"
+            },
+            "Update": "OnLocationChange"
+        }
+    ]
+}
+
+//This file is covered by the following license:
+//
+//MIT License
+//
+///Hat Mouse Lacey: Copyright (c) 2023 ichortower, changes by weissnicht01, 2024
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in all
+//copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//SOFTWARE.

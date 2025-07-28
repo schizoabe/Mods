@@ -1,0 +1,29 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["LASV_RaphShop"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{1st Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Raphael {{1st Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{2nd Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Raphael {{2nd Stage Required Friendship Lvl}}"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{3rd Stage Multiplier}}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current Raphael {{3rd Stage Required Friendship Lvl}}"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        }
+    ]
+}

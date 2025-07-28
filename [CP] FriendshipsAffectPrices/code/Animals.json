@@ -1,0 +1,160 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "Fields": {
+              "White Chicken": {
+                "PurchasePrice": "{{Round: {{Query: 400 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 800 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Brown Chicken": {
+                "SellPrice": "{{Round: {{Query: 800 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Blue Chicken": {
+                "SellPrice": "{{Round: {{Query: 800 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Void Chicken": {
+                "SellPrice": "{{Round: {{Query: 800 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Golden Chicken": {
+                "SellPrice": "{{Round: {{Query: 800 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Duck": {
+                "PurchasePrice": "{{Round: {{Query: 600 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 1200 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Rabbit": {
+                "PurchasePrice": "{{Round: {{Query: 4000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 8000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "White Cow": {
+                "PurchasePrice": "{{Round: {{Query: 750 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 1500 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Brown Cow": {
+                "SellPrice": "{{Round: {{Query: 800 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Goat": {
+                "PurchasePrice": "{{Round: {{Query: 2000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 4000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Sheep": {
+                "PurchasePrice": "{{Round: {{Query: 4000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 8000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Pig": {
+                "PurchasePrice": "{{Round: {{Query: 8000 * {{1st Stage Multiplier}} }} }}",
+                "SellPrice": "{{Round: {{Query: 16000 * {{1st Stage Multiplier}} }} }}"
+              }
+            },
+            "When": {
+              "Hearts:Marnie": "{{Range: {{Round: {{Query: {{1st Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+           }
+        },
+        {
+          "Action": "EditData",
+          "Target": "Data/FarmAnimals",
+          "Fields": {
+            "White Chicken": {
+              "PurchasePrice": "{{Round: {{Query: 400 * {{2nd Stage Multiplier}} }} }}",
+              "SellPrice": "{{Round: {{Query: 800 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Brown Chicken": {
+              "SellPrice": "{{Round: {{Query: 800 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Blue Chicken": {
+              "SellPrice": "{{Round: {{Query: 800 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Void Chicken": {
+              "SellPrice": "{{Round: {{Query: 800 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Golden Chicken": {
+              "SellPrice": "{{Round: {{Query: 800 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Duck": {
+              "PurchasePrice": "{{Round: {{Query: 600 * {{2nd Stage Multiplier}} }} }}",
+              "SellPrice": "{{Round: {{Query: 1200 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Rabbit": {
+              "PurchasePrice": "{{Round: {{Query: 4000 * {{2nd Stage Multiplier}} }} }}",
+              "SellPrice": "{{Round: {{Query: 8000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "White Cow": {
+              "PurchasePrice": "{{Round: {{Query: 750 * {{2nd Stage Multiplier}} }} }}",
+              "SellPrice": "{{Round: {{Query: 1500 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Brown Cow": {
+              "SellPrice": "{{Round: {{Query: 800 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Goat": {
+              "PurchasePrice": "{{Round: {{Query: 2000 * {{2nd Stage Multiplier}} }} }}",
+              "SellPrice": "{{Round: {{Query: 4000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Sheep": {
+              "PurchasePrice": "{{Round: {{Query: 4000 * {{2nd Stage Multiplier}} }} }}",
+              "SellPrice": "{{Round: {{Query: 8000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Pig": {
+              "PurchasePrice": "{{Round: {{Query: 8000 * {{2nd Stage Multiplier}} }} }}",
+              "SellPrice": "{{Round: {{Query: 16000 * {{2nd Stage Multiplier}} }} }}"
+            }
+          },
+          "When": {
+            "Hearts:Marnie": "{{Range: {{Round: {{Query: {{2nd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+         }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/FarmAnimals",
+        "Fields": {
+          "White Chicken": {
+            "PurchasePrice": "{{Round: {{Query: 400 * {{3rd Stage Multiplier}} }} }}",
+            "SellPrice": "{{Round: {{Query: 800 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Brown Chicken": {
+            "SellPrice": "{{Round: {{Query: 800 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Blue Chicken": {
+            "SellPrice": "{{Round: {{Query: 800 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Void Chicken": {
+            "SellPrice": "{{Round: {{Query: 800 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Golden Chicken": {
+            "SellPrice": "{{Round: {{Query: 800 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Duck": {
+            "PurchasePrice": "{{Round: {{Query: 600 * {{3rd Stage Multiplier}} }} }}",
+            "SellPrice": "{{Round: {{Query: 1200 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Rabbit": {
+            "PurchasePrice": "{{Round: {{Query: 4000 * {{3rd Stage Multiplier}} }} }}",
+            "SellPrice": "{{Round: {{Query: 8000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "White Cow": {
+            "PurchasePrice": "{{Round: {{Query: 750 * {{3rd Stage Multiplier}} }} }}",
+            "SellPrice": "{{Round: {{Query: 1500 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Brown Cow": {
+            "SellPrice": "{{Round: {{Query: 800 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Goat": {
+            "PurchasePrice": "{{Round: {{Query: 2000 * {{3rd Stage Multiplier}} }} }}",
+            "SellPrice": "{{Round: {{Query: 4000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Sheep": {
+            "PurchasePrice": "{{Round: {{Query: 4000 * {{3rd Stage Multiplier}} }} }}",
+            "SellPrice": "{{Round: {{Query: 8000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Pig": {
+            "PurchasePrice": "{{Round: {{Query: 8000 * {{3rd Stage Multiplier}} }} }}",
+            "SellPrice": "{{Round: {{Query: 16000 * {{3rd Stage Multiplier}} }} }}"
+          }
+        },
+        "When": {
+          "Hearts:Marnie": "{{Range: {{Round: {{Query: {{3rd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+       }
+    }
+  ]
+}

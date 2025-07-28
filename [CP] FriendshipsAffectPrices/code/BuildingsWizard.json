@@ -1,0 +1,85 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Buildings",
+            "Fields": {
+              "Junimo Hut": {
+                "BuildCost": "{{Round: {{Query: 20000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Earth Obelisk": {
+                "BuildCost": "{{Round: {{Query: 500000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Water Obelisk": {
+                "BuildCost": "{{Round: {{Query: 500000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Desert Obelisk": {
+                "BuildCost": "{{Round: {{Query: 1000000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Island Obelisk": {
+                "BuildCost": "{{Round: {{Query: 1000000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Gold Clock": {
+                "BuildCost": "{{Round: {{Query: 10000000 * {{1st Stage Multiplier}} }} }}"
+              }
+            },
+            "When": {
+              "Hearts:Wizard": "{{Range: {{Round: {{Query: {{1st Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+           }
+        },
+        {
+          "Action": "EditData",
+          "Target": "Data/Buildings",
+          "Fields": {
+            "Junimo Hut": {
+              "BuildCost": "{{Round: {{Query: 20000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Earth Obelisk": {
+              "BuildCost": "{{Round: {{Query: 500000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Water Obelisk": {
+              "BuildCost": "{{Round: {{Query: 500000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Desert Obelisk": {
+              "BuildCost": "{{Round: {{Query: 1000000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Island Obelisk": {
+              "BuildCost": "{{Round: {{Query: 1000000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Gold Clock": {
+              "BuildCost": "{{Round: {{Query: 10000000 * {{2nd Stage Multiplier}} }} }}"
+            }
+          },
+          "When": {
+            "Hearts:Wizard": "{{Range: {{Round: {{Query: {{2nd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+         }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/Buildings",
+        "Fields": {
+          "Junimo Hut": {
+            "BuildCost": "{{Round: {{Query: 20000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Earth Obelisk": {
+            "BuildCost": "{{Round: {{Query: 500000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Water Obelisk": {
+            "BuildCost": "{{Round: {{Query: 500000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Desert Obelisk": {
+            "BuildCost": "{{Round: {{Query: 1000000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Island Obelisk": {
+            "BuildCost": "{{Round: {{Query: 1000000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Gold Clock": {
+            "BuildCost": "{{Round: {{Query: 10000000 * {{3rd Stage Multiplier}} }} }}"
+          }
+        },
+        "When": {
+          "Hearts:Wizard": "{{Range: {{Round: {{Query: {{3rd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+       }
+    }
+  ]
+}

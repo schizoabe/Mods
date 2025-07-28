@@ -1,0 +1,175 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Buildings",
+            "Fields": {
+              "Coop": {
+                "BuildCost": "{{Round: {{Query: 4000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Barn": {
+                "BuildCost": "{{Round: {{Query: 6000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Well": {
+                "BuildCost": "{{Round: {{Query: 1000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Silo": {
+                "BuildCost": "{{Round: {{Query: 100 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Mill": {
+                "BuildCost": "{{Round: {{Query: 2500 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Shed": {
+                "BuildCost": "{{Round: {{Query: 15000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Fish Pond": {
+                "BuildCost": "{{Round: {{Query: 5000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Cabin": {
+                "BuildCost": "{{Round: {{Query: 100 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Pet Bowl": {
+                "BuildCost": "{{Round: {{Query: 5000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Stable": {
+                "BuildCost": "{{Round: {{Query: 10000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Slime Hutch": {
+                "BuildCost": "{{Round: {{Query: 10000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Big Coop": {
+                "BuildCost": "{{Round: {{Query: 10000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Deluxe Coop": {
+                "BuildCost": "{{Round: {{Query: 20000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Big Barn": {
+                "BuildCost": "{{Round: {{Query: 12000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Deluxe Barn": {
+                "BuildCost": "{{Round: {{Query: 25000 * {{1st Stage Multiplier}} }} }}"
+              },
+              "Shipping Bin": {
+                "BuildCost": "{{Round: {{Query: 250 * {{1st Stage Multiplier}} }} }}"
+              }
+            },
+            "When": {
+              "Hearts:Robin": "{{Range: {{Round: {{Query: {{1st Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+           }
+        },
+        {
+          "Action": "EditData",
+          "Target": "Data/Buildings",
+          "Fields": {
+            "Coop": {
+              "BuildCost": "{{Round: {{Query: 4000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Barn": {
+              "BuildCost": "{{Round: {{Query: 6000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Well": {
+              "BuildCost": "{{Round: {{Query: 1000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Silo": {
+              "BuildCost": "{{Round: {{Query: 100 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Mill": {
+              "BuildCost": "{{Round: {{Query: 2500 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Shed": {
+              "BuildCost": "{{Round: {{Query: 15000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Fish Pond": {
+              "BuildCost": "{{Round: {{Query: 5000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Cabin": {
+              "BuildCost": "{{Round: {{Query: 100 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Pet Bowl": {
+              "BuildCost": "{{Round: {{Query: 5000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Stable": {
+              "BuildCost": "{{Round: {{Query: 10000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Slime Hutch": {
+              "BuildCost": "{{Round: {{Query: 10000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Big Coop": {
+              "BuildCost": "{{Round: {{Query: 10000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Deluxe Coop": {
+              "BuildCost": "{{Round: {{Query: 20000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Big Barn": {
+              "BuildCost": "{{Round: {{Query: 12000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Deluxe Barn": {
+              "BuildCost": "{{Round: {{Query: 25000 * {{2nd Stage Multiplier}} }} }}"
+            },
+            "Shipping Bin": {
+              "BuildCost": "{{Round: {{Query: 250 * {{2nd Stage Multiplier}} }} }}"
+            }
+          },
+          "When": {
+            "Hearts:Robin": "{{Range: {{Round: {{Query: {{2nd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+         }
+      },
+      {
+        "Action": "EditData",
+        "Target": "Data/Buildings",
+        "Fields": {
+          "Coop": {
+            "BuildCost": "{{Round: {{Query: 4000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Barn": {
+            "BuildCost": "{{Round: {{Query: 6000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Well": {
+            "BuildCost": "{{Round: {{Query: 1000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Silo": {
+            "BuildCost": "{{Round: {{Query: 100 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Mill": {
+            "BuildCost": "{{Round: {{Query: 2500 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Shed": {
+            "BuildCost": "{{Round: {{Query: 15000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Fish Pond": {
+            "BuildCost": "{{Round: {{Query: 5000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Cabin": {
+            "BuildCost": "{{Round: {{Query: 100 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Pet Bowl": {
+            "BuildCost": "{{Round: {{Query: 5000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Stable": {
+            "BuildCost": "{{Round: {{Query: 10000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Slime Hutch": {
+            "BuildCost": "{{Round: {{Query: 10000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Big Coop": {
+            "BuildCost": "{{Round: {{Query: 10000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Deluxe Coop": {
+            "BuildCost": "{{Round: {{Query: 20000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Big Barn": {
+            "BuildCost": "{{Round: {{Query: 12000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Deluxe Barn": {
+            "BuildCost": "{{Round: {{Query: 25000 * {{3rd Stage Multiplier}} }} }}"
+          },
+          "Shipping Bin": {
+            "BuildCost": "{{Round: {{Query: 250 * {{3rd Stage Multiplier}} }} }}"
+          }
+        },
+        "When": {
+          "Hearts:Robin": "{{Range: {{Round: {{Query: {{3rd Stage Required Friendship Lvl}} / 250}}}}, 14}}"
+       }
+    }
+  ]
+}

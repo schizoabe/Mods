@@ -1,0 +1,58 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": ["Joja"],
+            "Entries": {
+                "PriceModifiers": [
+                    {
+                        "Id": "EarlyGameMarkdown",
+                        "Condition": "!IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                        "Modification": "Multiply",
+                        "Amount": 0.9,
+                        "RandomAmount": null
+                    },
+                    {
+                        "Id": "JojaDayMarkDown",
+                        "Condition": "IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay",
+                        "Modification": "Multiply",
+                        "Amount": 0.7,
+                        "RandomAmount": null
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.9 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current MorrisTod {{1st Stage Required Friendship Lvl}}, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.9 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current MorrisTod {{2nd Stage Required Friendship Lvl}}, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.9 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current MorrisTod {{3rd Stage Required Friendship Lvl}}, !IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{1st Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current MorrisTod {{1st Stage Required Friendship Lvl}}, IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{2nd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current MorrisTod {{2nd Stage Required Friendship Lvl}}, IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    },
+                    {
+                        "Modification": "Multiply",
+                        "Amount": "{{Query: 0.7 * {{3rd Stage Multiplier}} }}",
+                        "Condition": "PLAYER_FRIENDSHIP_POINTS Current MorrisTod {{3rd Stage Required Friendship Lvl}}, IS_PASSIVE_FESTIVAL_TODAY FlashShifter.StardewValleyExpandedCP_JojaDay"
+                    }
+                ],
+                "PriceModifierMode": "Minimum"
+            }
+        }
+    ]
+}
