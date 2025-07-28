@@ -2,6 +2,40 @@
 	"Changes": [
 	//VANILLA IMAGENS MAPS
 	//ADIÇÃO DAS IMAGENS NO NIMI-MAPA, PARA O MAPA PADRÃO (A) E OS DAS ESTAÇÕES (B)
+		{	//38
+			"LogName": "Remapping Therapist",
+			"Action": "EditImage",
+			"Target": "LooseSprites/map, LooseSprites/map_{{season}}",
+			"FromFile": "assets/Tilesheets/Therapist_{{season}}.png",
+			"ToArea": {"X": 116, "Y": 102, "Width": 6, "Height": 8},
+			"PatchMode": "Overlay",
+			"When": {
+				"HasMod: |contains=Endwyr.TherapistNPC": true
+			}
+		},
+		{	//37
+			"LogName": "Remapping Downhill Project",
+			"Action": "EditImage",
+			"Target": "LooseSprites/map, LooseSprites/map_{{season}}",
+			"FromFile": "assets/Tilesheets/Downhill.Project_{{season}}.png",
+			"ToArea": {"X": 100, "Y": 9, "Width": 74, "Height": 48},
+			"PatchMode": "Overlay",
+			"When": {
+				"HasMod: |contains=DH.Kiyuga.Main": true
+			}
+		},
+			{	//37.1
+				"LogName": "Remapping Downhill Project Fix",
+				"Action": "EditImage",
+				"Target": "LooseSprites/map, LooseSprites/map_{{season}}",
+				"FromFile": "assets/Tilesheets/Downhill.Project.fix_{{season}}.png",
+				"ToArea": {"X": 131, "Y": 25, "Width": 12, "Height": 9},
+				"PatchMode": "Overlay",
+				"When": {
+					"HasMod: |contains=DH.Kiyuga.Main": true,
+					"HasSeenEvent: anyPlayer|contains=28645005": true
+				}
+			},
 		{	//36
 			"LogName": "Remapping Sunberry Village",
 			"Action": "EditImage",
@@ -155,7 +189,7 @@
 			"Action": "EditImage",
 			"Target": "LooseSprites/map, LooseSprites/map_{{season}}",
 			"FromFile": "assets/Tilesheets/SVE/Louis.Garage_{{season}}_SVE.png", 
-			"ToArea": {"X": 230, "Y": 108, "Width": 8, "Height": 9},	
+			"ToArea": {"X": 230, "Y": 108, "Width": 10, "Height": 9},	
 			"PatchMode": "Overlay",
 			"When": {
 				"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
@@ -680,7 +714,21 @@
 				"FarmType |contains=A_TK.FarmProjectForaging/WaFFLE": "false",
 				"HasMod: |contains=Rafseazz.RSVFTM": true
 			}
-		},
+		},/*
+		{	//04.0.1
+			"LogName": "Remapping Ridgeside Village true",
+			"Action": "EditImage",
+			"Target": "LooseSprites/map, LooseSprites/map_{{season}}",
+			"FromFile": "assets/Tilesheets/Ridgeside.Village_true_{{season}}.png",
+			"ToArea": {"X": 0, "Y": 22, "Width": 174, "Height": 312},
+			"PatchMode": "Overlay",
+			"When": {
+				"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"FarmType |contains=A_TK.FarmProjectForaging/WaFF": "false",
+				"FarmType |contains=A_TK.FarmProjectForaging/WaFFLE": "false",
+				"HasMod: |contains=Rafseazz.RSVFTM": true
+			}
+		},*/
 		{	//04.1
 			"LogName": "Remapping Ridgeside Village SVE",
 			"Action": "EditImage",
@@ -1328,6 +1376,30 @@
 			}
 		},
 		//MEADOWLANDS VANILLA
+		{	//10
+			"LogName": "RMP Therapist Meadowlands",
+			"Action": "EditImage",
+			"Target": "LooseSprites/Farm_ranching_map, LooseSprites/Farm_ranching_map_{{season}}",
+			"FromFile": "assets/Tilesheets/Therapist_{{season}}.png",
+			"FromArea": {	"X": 1,	"Y": 0,	"Width": 4, "Height": 2 },
+			"ToArea": {"X": 117, "Y": 59, "Width": 4, "Height": 2},	
+			"PatchMode": "Overlay",
+			"When": {
+				"HasMod: |contains=Endwyr.TherapistNPC": true
+			}
+		},
+		{	//9
+			"LogName": "RMP Downhill Project Meadowlands",
+			"Action": "EditImage",
+			"Target": "LooseSprites/Farm_ranching_map, LooseSprites/Farm_ranching_map_{{season}}",
+			"FromFile": "assets/Tilesheets/Downhill.Project_{{season}}.png",
+			"FromArea": {"X": 0,	"Y": 34,	"Width": 31, "Height": 13 },
+			"ToArea": {"X": 100, "Y": 0, "Width": 31, "Height": 13},	
+			"PatchMode": "Overlay",
+			"When": {
+				"HasMod: |contains=DH.Kiyuga.Main": true
+			}
+		},
 		{	//8
 			"LogName": "RMP Northwest Coast Meadowlands",
 			"Action": "EditImage",
@@ -1533,6 +1605,44 @@
 
 
 		//WATERFALL FOREST BY ARCHIBALDTK --------------------------------------------------------------------------------------
+		{	//10
+			"LogName": "RMP Therapist Waterfall",
+			"Action": "EditData",
+			"Target": "Data/WorldMap",
+			"TargetField": [ "Valley", "MapAreas" ],
+			"When": {
+				"FarmType |contains=A_TK.FarmProjectForaging/WaFF": "true",
+				"HasMod: |contains=Endwyr.TherapistNPC": true},
+			"Entries": {
+			   	"RMP Therapist": {
+					"Id": "Endwyr.TherapistNPC",
+					"PixelArea": { "X": 117, "Y": 102, "Width": 4, "Height": 2 },
+				  	"Textures": [{
+						"Id": "Default",
+						"Texture": "{{InternalAssetKey: assets/Tilesheets/Therapist_{{season}}.png}}",
+						"SourceRect": { "X": 1,	"Y": 0,	"Width": 4, "Height": 2  } }]
+				}
+			}
+		},
+		{	//09
+			"LogName": "RMP Downhill Project Waterfall",
+			"Action": "EditData",
+			"Target": "Data/WorldMap",
+			"TargetField": [ "Valley", "MapAreas" ],
+			"When": {
+				"FarmType |contains=A_TK.FarmProjectForaging/WaFF": "true",
+				"HasMod: |contains=DH.Kiyuga.Main": true},
+			"Entries": {
+			   	"RMP Downhill Project": {
+					"Id": "DH.Kiyuga.Main",
+					"PixelArea": { "X": 26, "Y": 78, "Width": 10, "Height": 14 },
+				  	"Textures": [{
+						"Id": "Default",
+						"Texture": "{{InternalAssetKey: assets/Tilesheets/Downhill.Project_{{season}}.png}}",
+						"SourceRect": { "X": 0,	"Y": 0,	"Width": 10,	"Height": 14  } }]
+				}
+			}
+		},
 		{	//08
 			"LogName": "RMP  Northwest Coast Waterfall",
 			"Action": "EditData",
@@ -1545,11 +1655,11 @@
 			"Entries": {
 			   	"RMP Northwest Coast": {
 					"Id": "MK215.Northwestcoast",
-					"PixelArea": { "X": 0, "Y": 48, "Width": 93, "Height": 51 },
+					"PixelArea": { "X": 100,	"Y": 43, "Width": 31, "Height": 13 },
 				  	"Textures": [{
 						"Id": "Default",
 						"Texture": "{{InternalAssetKey: assets/Tilesheets/Farms/WF/Northwest.Coast.WF_{{season}}.png}}",
-						"SourceRect": { "X": 0, "Y": 0, "Width": 93, "Height": 51  } }]
+						"SourceRect": { "X": 0,	"Y": 34, "Width": 31, "Height": 13  } }]
 				}
 			}
 		},
@@ -1833,10 +1943,45 @@
 		 	}
 		},
 
-		//SVE
-		
-
 		//WATERFALL LE FOREST BY ARCHIBALDTK --------------------------------------------------------------------------------------
+		{	//10
+			"LogName": "RMP Therapist Waterfall LE",
+			"Action": "EditData",
+			"Target": "Data/WorldMap",
+			"TargetField": [ "Valley", "MapAreas" ],
+			"When": {
+				"FarmType |contains=A_TK.FarmProjectForaging/WaFFLE": "true",
+				"HasMod: |contains=Endwyr.TherapistNPC": true},
+			"Entries": {
+			   	"RMP Therapist": {
+					"Id": "Endwyr.TherapistNPC",
+					"PixelArea": { "X": 117, "Y": 102, "Width": 4, "Height": 2 },
+				  	"Textures": [{
+						"Id": "Default",
+						"Texture": "{{InternalAssetKey: assets/Tilesheets/Therapist_{{season}}.png}}",
+						"SourceRect": { "X": 1,	"Y": 0,	"Width": 4, "Height": 2  } }]
+				}
+			}
+		},
+		{	//09
+			"LogName": "RMP Downhill Project Waterfall LE",
+			"Action": "EditData",
+			"Target": "Data/WorldMap",
+			"TargetField": [ "Valley", "MapAreas" ],
+			"When": {
+				"FarmType |contains=A_TK.FarmProjectForaging/WaFFLE": "true",
+				"HasMod: |contains=DH.Kiyuga.Main": true},
+			"Entries": {
+			   	"RMP Downhill Project": {
+					"Id": "DH.Kiyuga.Main",
+					"PixelArea": { "X": 26, "Y": 78, "Width": 10, "Height": 14 },
+				  	"Textures": [{
+						"Id": "Default",
+						"Texture": "{{InternalAssetKey: assets/Tilesheets/Downhill.Project_{{season}}.png}}",
+						"SourceRect": { "X": 0,	"Y": 0,	"Width": 10,	"Height": 14  } }]
+				}
+			}
+		},
 		{	//08
 			"LogName": "RMP Northwest Coast Waterfall LE",
 			"Action": "EditData",

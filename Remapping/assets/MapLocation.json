@@ -3,6 +3,144 @@
 
 	//NOMES E LOCALIZAÇÕES DE REGIÕES
 		{
+            "LogName": "RMP Therapist on Minimap",
+            "Action": "EditData",
+            "Target": "Data/WorldMap",
+            "TargetField": [ "Valley", "MapAreas" ],
+          	"When": {
+				"HasMod: |contains=Endwyr.TherapistNPC": true },
+            "Entries": {
+				"Endwyr.TherapistNPC": {
+                  	"Id": "Custom_GreysHome",
+                  	"ScrollText": "{{i18n: RMP.therapist}}",
+                  	"Tooltips": [{
+                        	"Id": "Custom_GreysHome", 
+                        	"Text": "{{i18n: RMP.therapist}}",
+                        	"PixelArea": { "X": 117, "Y": 102, "Width": 4, "Height": 5}
+                    }],
+					"WorldPositions": [{
+                      	"Id": "Custom_GreysHome",
+                      	"LocationName": "Custom_GreysHome",
+                      	"MapPixelArea": { "X": 118, "Y": 104, "Width": 1, "Height": 1}
+                    }]
+               	}
+			}
+        },
+		{
+            "LogName": "RMP Downhill Project on Minimap",
+            "Action": "EditData",
+            "Target": "Data/WorldMap",
+            "TargetField": [ "Valley", "MapAreas" ],
+          	"When": {
+				"HasMod: |contains=DH.Kiyuga.Main": true },
+            "Entries": {
+				"DH.Kiyuga.Main": {
+                  	"Id": "Downhill",
+                  	"ScrollText": "{{i18n: RMP.downhill.project6}}",
+					"WorldPositions": [{
+                      	"Id": "Downhill",
+                      	"LocationName": "Downhill",
+                      	"MapPixelArea": { "X": 112, "Y": 10, "Width": 45, "Height": 41 }
+                    }]
+               	},
+				"DH.Church": {
+                  	"Id": "DH.Church",
+                  	"ScrollText": "{{i18n: RMP.downhill.project}}",
+                  	"Tooltips": [{
+                        	"Id": "DH.Church", 
+                        	"Text": "{{i18n: RMP.downhill.project}}",
+                        	"PixelArea": { "X": 135, "Y": 27, "Width": 5, "Height": 7}
+                    }],
+					"WorldPositions": [{
+                      	"Id": "DH.Church",
+                      	"LocationName": "DH.Church",
+                      	"MapPixelArea": { "X": 137, "Y": 30, "Width": 1, "Height": 1}
+                    }]
+               	},
+				"DH.Anderson.House": {
+                  	"Id": "DH.Anderson.House",
+                  	"ScrollText": "{{i18n: RMP.downhill.project3}}",
+                  	"Tooltips": [{
+                        	"Id": "DH.Anderson.House", 
+                        	"Text": "{{i18n: RMP.downhill.project3}}",
+                        	"PixelArea": { "X": 140, "Y": 27, "Width": 3, "Height": 5}
+                    }],
+					"WorldPositions": [{
+                      	"Id": "DH.Anderson.House",
+                      	"LocationName": "DH.Anderson.House",
+                      	"MapPixelArea": { "X": 141, "Y": 29, "Width": 1, "Height": 1}
+                    }]
+               	},
+				"DH.Julia.House": {
+                  	"Id": "DH.Julia.House",
+                  	"ScrollText": "{{i18n: RMP.downhill.project2}}",
+                  	"Tooltips": [{
+                        	"Id": "DH.Julia.House", 
+                        	"Text": "{{i18n: RMP.downhill.project2}}",
+                        	"PixelArea": { "X": 148, "Y": 38, "Width": 6, "Height": 6}
+                    }],
+					"WorldPositions": [{
+                      	"Id": "DH.Julia.House",
+                      	"LocationName": "DH.Julia.House",
+                      	"MapPixelArea": { "X": 152, "Y": 40, "Width": 1, "Height": 1}
+                    }]
+               	},
+				"DH.Arthur.House": {
+                  	"Id": "DH.Arthur.House",
+                  	"ScrollText": "{{i18n: RMP.downhill.project4}}",
+                  	"Tooltips": [{
+                        	"Id": "DH.Arthur.House", 
+                        	"Text": "{{i18n: RMP.downhill.project4}}",
+                        	"PixelArea": { "X": 123, "Y": 18, "Width": 6, "Height": 6}
+                    }],
+					"WorldPositions": [{
+                      	"Id": "DH.Arthur.House",
+                      	"LocationName": "DH.Arthur.House",
+                      	"MapPixelArea": { "X": 126, "Y": 20, "Width": 1, "Height": 1}
+                    }]
+               	},
+				"DDH.Mine": {
+                  	"Id": "DH.Mine",
+                  	"ScrollText": "{{i18n: RMP.downhill.project5}}",
+                  	"Tooltips": [{
+                        	"Id": "DH.Mine", 
+                        	"Text": "{{i18n: RMP.downhill.project5}}",
+                        	"PixelArea": { "X": 116, "Y": 12, "Width": 4, "Height": 3}
+                    }],
+					"WorldPositions": [{
+                      	"Id": "DH.Mine",
+                      	"LocationName": "DH.Mine",
+                      	"MapPixelArea": { "X": 117, "Y": 12, "Width": 2, "Height": 1}
+                    }]
+               	}
+			}
+        },
+		{
+            "LogName": "RMP Downhill Project Fix Church on Minimap",
+            "Action": "EditData",
+            "Target": "Data/WorldMap",
+            "TargetField": [ "Valley", "MapAreas" ],
+          	"When": {
+				"HasMod: |contains=DH.Kiyuga.Main": true,
+				"HasSeenEvent: anyPlayer|contains=28645005": true },
+            "Entries": {
+				"DH.Kiyuga.Main": {
+                  	"Id": "DH.Church",
+                  	"ScrollText": "{{i18n: RMP.downhill.project1}}",
+                  	"Tooltips": [{
+                        	"Id": "DH.Church", 
+                        	"Text": "{{i18n: RMP.downhill.project1}}",
+                        	"PixelArea": { "X": 135, "Y": 27, "Width": 5, "Height": 7}
+                    }],
+					"WorldPositions": [{
+                      	"Id": "DH.Church",
+                      	"LocationName": "DH.Church",
+                      	"MapPixelArea": { "X": 137, "Y": 30, "Width": 1, "Height": 1}
+                    }]
+               	}
+			}
+        },
+		{
             "LogName": "RMP Sunberry on Minimap",
             "Action": "EditData",
             "Target": "Data/WorldMap",
