@@ -9,11 +9,10 @@
 			"Target": "Data/Events/Saloon",
 			"Fields": {
 				"poolEnding": {
-					24: "message \"{{i18n:Pool.6.{{SpouseGender}} |Date={{Date}} }}\"",
+					25: "message \"{{i18n:Pool.6.{{SpouseGender}} |Date={{Date}} }}\"",
 				}
 			},
 			"When": {
-				"GenderedDialogue": "enabled",
 				"HasMod": "siliconmodding.NPCTokens",
 			},
         },
@@ -31,7 +30,6 @@
 				},
 			},
 			"When": {
-				"GenderedDialogue": "enabled",
 				"HasMod": "siliconmodding.NPCTokens",
 			},
         },
@@ -47,8 +45,22 @@
 				}
 			},
 			"When": {
-				"GenderedDialogue": "enabled",
 				"HasMod": "siliconmodding.NPCTokens",
+			},
+        },
+		
+		{
+			"LogName": "Generic Saloon Date - NPC Tokens",
+			"Action": "EditData",
+			"Target": "Data/Events/Saloon",
+			"Fields": {
+				"22714-winterstarend": {
+					5: "message \"{{i18n:WinterStarDate.Sleep.2.{{SpouseGender}} |Date={{Date}} }}\"",
+				}
+			},
+			"When": {
+				"HasMod": "siliconmodding.NPCTokens",
+				"SuggestiveEndings": "disabled",
 			},
         },
 		
@@ -67,7 +79,6 @@
 			},
 			"When": {
 				"Date": "Alex",
-				"GenderedDialogue": "enabled",
 				"HasMod": "siliconmodding.NPCTokens",
 				"siliconmodding.NPCTokens/NPC:Alex+gender": "Female", // Alex is Genderbent
 				"SuggestiveEndings": "disabled",
@@ -87,7 +98,6 @@
 			},
 			"When": {
 				"Date": "Emily",
-				"GenderedDialogue": "enabled",
 				"HasMod": "siliconmodding.NPCTokens",
 				"siliconmodding.NPCTokens/NPC:Haley+gender": "Male", // Haley is Genderbent
 			},
@@ -106,7 +116,6 @@
 			},
 			"When": {
 				"Date": "Haley",
-				"GenderedDialogue": "enabled",
 				"HasMod": "siliconmodding.NPCTokens",
 				"siliconmodding.NPCTokens/NPC:Emily+gender": "Male", // Haley is Genderbent
 			},
@@ -126,7 +135,6 @@
 			},
 			"When": {
 				"Date": "Haley",
-				"GenderedDialogue": "enabled",
 				"HasMod": "siliconmodding.NPCTokens",
 				"siliconmodding.NPCTokens/NPC:Haley+gender": "Male", // Haley is Genderbent
 			},

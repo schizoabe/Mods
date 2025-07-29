@@ -1,7 +1,19 @@
 {
 	"Format": "2.0.0",
 	
-	"ConfigSchema": {
+	"ConfigSchema": {	
+		"IslandDate": {
+			"AllowValues": "disabled, enabled",
+			"Default": "disabled",
+			"Description": "Allows for a new date to enter the pool of available dates if the Island Resort has been unlocked.",
+			"Section": "New Dates",
+		},
+		"WinterStarDate": {
+			"AllowValues": "disabled, enabled",
+			"Default": "disabled",
+			"Description": "Allows for a new rare date to occur after the Feast of the Winter Star.",
+			"Section": "New Dates",
+		},
 		"DateAskPercentChance": {
 			"AllowValues": "0, 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19 , 20 , 21 , 22 , 23 , 24 , 25 , 26 , 27 , 28 , 29 , 30 , 31 , 32 , 33 , 34 , 35 , 36 , 37 , 38 , 39 , 40 , 41 , 42 , 43 , 44 , 45 , 46 , 47 , 48 , 49 , 50 , 51 , 52 , 53 , 54 , 55 , 56 , 57 , 58 , 59 , 60 , 61 , 62 , 63 , 64 , 65 , 66 , 67 , 68 , 69 , 70 , 71 , 72 , 73 , 74 , 75 , 76 , 77 , 78 , 79 , 80 , 81 , 82 , 83 , 84 , 85 , 86 , 87 , 88 , 89 , 90 , 91 , 92 , 93 , 94 , 95 , 96 , 97 , 98 , 99 , 100",
 			"Default": 10,
@@ -14,17 +26,29 @@
 			"Description": "Choose the chance that, when asked on a date, it will be a spouse-unique date (given the spouse has the chance of asking specific date event). This will not affect anything if your spouse has no unique dates yet. If set to 0, disables spouse-specific unique dates. If set to 100, disables generic dates for spouses with specific events (if your spouse does not have any unique dates yet they will still ask for generic dates).",
 			"Section": "Date Chances",
 		},
-		"MinHeartsRequired": {
-			"AllowValues": "0, 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14",
-			"Default": 10,
-			"Description": "Change the minimum number of hearts required with your spouse for them to ask you on a date. Default is 10 hearts.",
-			"Section": "Friendship Requirements",
-		},
 		"FriendshipBonus": {
 			"AllowValues": "none, small, medium, large",
 			"Default": "medium",
 			"Description": "Change the amount of friendship received with your spouse if you go on a date with them. 'none' will disable any friendship bonuses, 'small' will increase friendship by 25 points (1/10 of a heart), 'medium' increases by 50 points (2/10 of a heart), and large increases by 100 points (4/10 of a heart).",
-			"Section": "Friendship Requirements",
+			"Section": "Date Reactions",
+		},
+		"SpouseDispleased": {
+			"AllowValues": "disabled, enabled",
+			"Default": "disabled",
+			"Description": "Allows your spouse to react if you miss their date. (Dialogue reactions will require the mod BETAS to be installed.)",
+			"Section": "Date Reactions",
+		},
+		"FriendshipLoss": {
+			"AllowValues": "none, low, medium, high, heart",
+			"Default": "none",
+			"Description": "Determines friendship loss for missing a date.",
+			"Section": "Date Reactions",
+		},
+		"MinHeartsRequired": {
+			"AllowValues": "0, 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14",
+			"Default": 10,
+			"Description": "Change the minimum number of hearts required with your spouse for them to ask you on a date. Default is 10 hearts.",
+			"Section": "Date Tweaks",
 		},
 		"FreeLovePatch": {
 			"AllowValues": "disabled, enabled",
@@ -38,10 +62,10 @@
 			"Description": "Enable gendered dialogue for dialogue used in Date Night events. Note: Due to the large amount of dialogues in this mod, I was unable to catch all dialogue errors, so please inform me if you encounter any strange dialogue! Default set to false.",
 			"Section": "Date Tweaks",
 		},
-		"SuggestiveEndings": {
-			"AllowValues": "disabled, enabled",
+		"SuggestiveEnds": {
+			"AllowValues": "disabled, enabled, random",
 			"Default": "disabled",
-			"Description": "Enable/Disable suggestive endings to the date events. The endings are not NSFW, but can be disabled if you would rather keep it PG.",
+			"Description": "Enable/Disable suggestive endings to the date events. The endings are not NSFW, but can be enabled if you would prefer some spice with your date (in-line with the original Date Night). Set to Randomized if you want it to be a surprise whether the ending is suggestive or not.",
 			"Section": "Date Tweaks",
 		},
 		"LibraryDateCutscene": {
@@ -71,8 +95,31 @@
 		"DatesOnFestivalDays": {
 			"AllowValues": "disabled, enabled",
 			"Default": "disabled",
-			"Description": "Enable/Disable being asked on a date on a festival day. Usually many areas are closed or off-limits on festival days, making it impossible for you to complete the date if asked. Enabling this will allow dates to be asked on a date with a festival, even if you won't be able to complete it. When disabled, dates will never be asked on every festival day (except the Night Market). Works on every vanilla festival, the Pelican Town Potluck, and the Ridgeside festivals - more can be added on request.",
+			"Description": "Enable/Disable being asked on a date on a festival day. Usually many areas are closed or off-limits on festival days, making it impossible for you to complete the date if asked. Enabling this will allow dates to be asked on a date with a festival, even if you won't be able to complete it. When disabled, dates will never be asked on any festival day, including all modded festivals.",
 			"Section": "Date Tweaks",
+		},
+		"Alcoholism": {
+			"AllowValues": "sober, alcohol, varies",
+			"Default": "sober",
+			"Description": "On the Island date, chooses whether a spouse is able to ask for alcoholic drinks. Defaults to no in order to not have a spouse (like Penny) drink without reason. Varies defaults to yes *except* for the NPCs manually entered in the NPC blacklist (see below config).",
+			"Section": "Date Tweaks",
+		},
+		"DesignatedDrivers": {
+			"AllowBlank": true,
+			"Description": "If the drink choice config is set to varies, this list will determine which villagers are banned from ordering drinks. Must be manually specified by the user. Does nothing if not set to varies above. If left blank and this config is used, will behave as if all spouses can drink alcohol.",
+			"Section": "Date Tweaks",
+		},
+		"ForceDateType": {
+			"AllowValues": "none, saloon, grocery, beach, forest, dance, camping, library, winterstar, island, common",
+			"Default": "none",
+			"Description": "Forces a particular generic date to fire, regardless of settings, as long as you succeed the date roll. Helpful for debugging or if you just want to see a particular date!",
+			"Section": "Allowed Dates",
+		},
+		"ForceUniqueDate": {
+			"AllowValues": "disabled, enabled",
+			"Default": "disabled",
+			"Description": "Forces a character's unique date to fire if the character is Alex, Maru, Haley, or Emily.",
+			"Section": "Allowed Dates",
 		},
 		"AllowRoommateDates": {
 			"AllowValues": "disabled, enabled",
@@ -107,7 +154,8 @@
 			"When": {
 				"relationship:{{Spouse}}": "engaged",
 				"HasMod |contains=aedenthorn.FreeLove": false,
-				"HasMod |contains=ApryllForever.PolyamorySweetLove": false, //If the player does NOT have a poly mod installed, remove ability to get dates while engaged for immersion.
+				"HasMod |contains=ApryllForever.PolyamorySweetLove": false,
+				"HasMod |contains=EnderTedi.Polyamory": false, //If the player does NOT have a poly mod installed, remove ability to get dates while engaged for immersion.
 			},
 		},
 		
@@ -117,6 +165,7 @@
 			"When": {
 				"relationship:{{Roommmate}}": "engaged",
 				"HasMod |contains=aedenthorn.FreeLove": false,
+				"HasMod |contains=EnderTedi.Polyamory": false,
 				"HasMod |contains=ApryllForever.PolyamorySweetLove": false, //If the player does NOT have a poly mod installed, remove ability to get dates while the roommate is moving in for immersion.
 			},
 		},
@@ -383,6 +432,17 @@
 			},
 		},
 		
+		// ANY SEASON
+		
+		{
+			"Name": "DateTypes",
+			"Value": "{{DateTypes}}, island",
+			"When": {
+				"IslandDate": "enabled",
+				"HasFlag": "Island_Resort", //Island Farmhouse automatically occurs with Island Resort active.
+			},
+		},
+		
 		//Pick Date From List of Valid Dates
 		{
 			"Name": "DateType",
@@ -392,11 +452,30 @@
 			},
 		},
 		
+		{
+			"Name": "DateType",
+			"Value": "{{ForceDateType}}",
+			"When": {
+				"ForceDateType |contains=common": false,
+				"ForceDateType |contains=none": false,
+				"ValidDate": "true",
+			},
+		},
+		
+		{
+			"Name": "DateType",
+			"Value": "{{Random:saloon, grocery, beach, forest, camping, library, island}}",
+			"When": {
+				"ForceDateType |contains=common": true,
+				"ValidDate": "true",
+			},
+		},
+		
 		//Debug Token. If the following is actually enabled (e.g. the comment things aren't around it), *immediately* put a bug report on the mod page!
 		
 		/*{
 			"Name": "DateType",
-			"Value": "saloon",
+			"Value": "island",
 		},*/
 
 	//VANILLA MODDED SPOUSE FIXES
@@ -584,6 +663,37 @@
 			"When": {
 				"Date": "Maru",
 				"Day": "15",
+			},
+		},
+		
+		//Force Unique Dates
+		{
+			"Name": "UniqueDateType",
+			"Value": "alexGridball",
+			"When": {
+				"Date": "Alex",
+				"ForceUniqueDate": "enabled",
+			},
+		},
+
+		//Emily's is already forced.
+		
+		{
+			"Name": "UniqueDateType",
+			"Value": "haleyDesert",
+			"When": {
+				"Date": "Haley",
+				"HasFlag": "ccVault, jojaVault",
+				"ForceUniqueDate": "enabled",
+			},
+		},
+		
+		{ 
+			"Name": "UniqueDateType",
+			"Value": "maruLunar",
+			"When": {
+				"Date": "Maru",
+				"ForceUniqueDate": "enabled",
 			},
 		},
 
@@ -874,7 +984,7 @@
 				"Query: {{DateAskPercentChance}} > 0": "true",
 			},
 		},
-
+		
 		{
 			"Name": "DateType",
 			"Value": "dance",
@@ -885,7 +995,33 @@
 			},
 		},
 		
-		//Turn off Unique Dates to force Dance Date
+	// WINTER STAR
+		{
+			"Name": "DateInterest",
+			"Value": "-1",
+			"When": {
+				"ValidDate": "true",
+				"Season": "Winter",
+				"Day": "25",
+				"Query: {{DateAskPercentChance}} > 0": "true",
+				"WinterStarDate": "enabled",
+			},
+		},
+		
+		{
+			"Name": "DateType",
+			"Value": "winterstar",
+			"When": {
+				"ValidDate": "true",
+				"Season": "Winter",
+				"Day": "25",
+				"Query: {{DateAskPercentChance}} > 0": "true",
+				"WinterStarDate": "enabled",
+			},
+		},
+
+		
+		//Turn off Unique Dates to force Dance/Winter Star Date
 		{
 			"Name": "UniqueDateType",
 			"Value": "none",
@@ -903,6 +1039,30 @@
 				"ValidDate": "true",
 				"Day": "1",
 				"Query: {{DateAskPercentChance}} > 0": "true",
+			},
+		},
+		
+		{
+			"Name": "UniqueDateType",
+			"Value": "none",
+			"When": {
+				"ValidDate": "true",
+				"Season": "Winter",
+				"Day": "25",
+				"Query: {{DateAskPercentChance}} > 0": "true",
+				"WinterStarDate": "enabled",
+			},
+		},
+
+		{
+			"Name": "UniqueInterest",
+			"Value": "101",
+			"When": {
+				"ValidDate": "true",
+				"Season": "Winter",
+				"Day": "25",
+				"Query: {{DateAskPercentChance}} > 0": "true",
+				"WinterStarDate": "enabled",
 			},
 		},
 
@@ -941,19 +1101,42 @@
 			},
 		},
 		
-	//ROOMMATE FIXES
+		// Marriage Check
+		
+		{
+			"Name": "MarriageCheck",
+			"Value": "Spouse {{Date}}", // New preconditions if not using a polyamory mod or using Free Love, which has updated to catch Spouse preconditions.
+		},
+		
+		{
+			"Name": "MarriageCheck",
+			"Value": "O {{Date}}",
+			"When": {
+				"HasMod": "ApryllForever.PolyamorySweetLove, EnderTedi.Polyamory", //Until these are updated, these will only check for the "O" precondition, and as such will require old logic.
+			},
+		},
+		
+		
+		//Baseline Game State Query Token for event 
+		
+		{
+			"Name": "Conditions",
+			"Value": "GameStateQuery TRUE", // Building the preconditions
+		},
+		
+		//ROOMMATE FIXES
 
 		{
-			"Name": "DateInterest",
-			"Value": "101",
+			"Name": "Conditions",
+			"Value": "{{Conditions}}/GameStateQuery !PLAYER_NPC_RELATIONSHIP Current {{Date}} Roommate",
 			"When": {
-				"HasFlag": "NoDateNight",
+				"AllowRoommateDates": "disabled",
 			},
 		},
 
 		{
-			"Name": "DateInterest",
-			"Value": "101",
+			"Name": "Conditions",
+			"Value": "{{Conditions}}/GameStateQuery FALSE",
 			"When": {
 				"Date": "{{DisabledDates}}",
 			},
@@ -961,57 +1144,49 @@
 	
 		//Remove date chance if the player is somehow married on Green Rain in Year 1
 		{
-			"Name": "DateInterest",
-			"Value": "101",
+			"Name": "Conditions",
+			"Value": "{{Conditions}}/GameStateQuery FALSE",
 			"When": {
 				"Weather": "GreenRain",
 				"Year": "1",
 			},
 		},
+		
+	
 
 	//DISABLE DATES ON FESTIVAL DAYS
 
 		{
-			"Name": "DateInterest",
-			"Value": "101",
+			"Name": "Conditions",
+			"Value": "{{Conditions}}/GameStateQuery IS_FESTIVAL_DAY",
 			"When": {
-				"DayEvent": "egg festival, flower dance, luau, dance of the moonlight jellies, stardew valley fair, spirit's eve, festival of ice, feast of the winter star",
 				"DatesOnFestivalDays": "disabled",
+				"WinterStarDate": "disabled",
 			},
 		},
 		
-		//RSV Festivals
-
 		{
-			"Name": "DateInterest",
-			"Value": "101",
+			"Name": "Conditions",
+			"Value": "{{Conditions}}/GameStateQuery ANY \"IS_FESTIVAL_DAY, !SEASON Winter\" \"IS_FESTIVAL_DAY, SEASON Winter, !DAY_OF_MONTH 25\"", //If it's either not Winter and a festival, or Winter, a festival, but NOT day 25 (Winter Star). This is the default for the Winter Star date.
 			"When": {
-				"DayEvent": "Ember of Resolutions, Ridgeside Gathering",
 				"DatesOnFestivalDays": "disabled",
-				"HasMod": "Rafseazz.RSVCP",
-			},
-		},
-		
-		//Pelican Town Potluck compatibility
-		
-		{
-			"Name": "DateInterest",
-			"Value": "101",
-			"When": {
-				"DayEvent": "Pelican Town Potluck",
-				"DatesOnFestivalDays": "disabled",
-				"HasMod": "LenneDalben.PelicanTownPotluck",
+				"WinterStarDate": "enabled",
 			},
 		},
 		
 		//Elliott Tour Date Prevention
 		{
-			"Name": "DateInterest",
-			"Value": "101",
+			"Name": "Conditions",
+			"Value": "{{Conditions}}/GameStateQuery FALSE",
 			"When": {
 				"Date": "Elliott",
 				"HasConversationTopic": "elliottGone", //Removes Elliott dates if he's on tour
 			},
+		},
+		
+		{
+			"Name": "ExtraConditions",
+			"Value": "{{Conditions}}",
 		},
 
 	//FRIENDSHIP BONUS CONFIG DATA
@@ -1141,6 +1316,15 @@
 			"Value": "true",
 			"When": {
 				"Date": "Abigail, Emily, Elliott, Harvey, Maru, Sebastian, Shane"
+			},
+		},
+		
+		{
+			"Name": "KissFrameFlip",
+			"Value": "true",
+			"When": {
+				"HasMod": "Blazonix.Tim.Mod",
+				"Date": "Blazonix.Tim.ModTim"
 			},
 		},
 		
@@ -2322,7 +2506,7 @@
 			"Value": "{{Date}}Theme",
 			"When": {
 				"Date": "Alissa, Corine, Daia, Flor, Ian, Jeric, Jio, Kenneth, Maddie, Philip, Shiro, Ysabelle, Sean, Kiarra, Anton, Paula, Blair",
-				"HasMod": "Rafseazz.RSVSAATExtra",
+				"HasMod": "Rafseazz.RSVCP",
 			},
 		},
 		
@@ -2331,7 +2515,6 @@
 			"Value": "Satiety",
 			"When": {
 				"Date": "Irene",
-				"HasMod": "Rafseazz.RSVSAATExtra",
 			},
 		},
 		
@@ -2340,7 +2523,6 @@
 			"Value": "Saliency",
 			"When": {
 				"Date": "Zayne",
-				"HasMod": "Rafseazz.RSVSAATExtra",
 			},
 		},
 		
@@ -2349,7 +2531,6 @@
 			"Value": "Daydreaming",
 			"When": {
 				"Date": "Faye",
-				"HasMod": "Rafseazz.RSVSAATExtra",
 			},
 		},
 		
@@ -2358,7 +2539,6 @@
 			"Value": "Defending",
 			"When": {
 				"Date": "Bryle",
-				"HasMod": "Rafseazz.RSVSAATExtra",
 			},
 		},
 
@@ -2486,7 +2666,622 @@
 				"Query: {{DateInterest}} <= {{DateAskPercentChance}}": true,
 			},
 		},
-
+		
+		//New Suggestive Endings Toggle
+		{
+			"Name": "SuggestiveEndings",
+			"Value": "disabled",
+		},
+		
+		{
+			"Name": "SuggestiveEndings",
+			"Value": "enabled",
+			"When": {
+				"SuggestiveEnds": "enabled",
+			},
+		},
+		
+		{
+			"Name": "SuggestiveEndings",
+			"Value": "{{Random:disabled, enabled}}",
+			"When": {
+				"SuggestiveEnds": "random",
+			},
+		},
+		
+		//Winter Star Date Tokens
+		
+		{
+			"Name": "GiftList",
+			"Value": "(O)341",
+		},
+		
+		{
+			"Name": "WinterStar",
+			"Value": "WinterStar",
+		},
+		
+		{
+			"Name": "WinterStar",
+			"Value": "Solstice",
+			"When": {
+				"HasMod |contains=Airyn.CPSolsticeWinterStar": true,
+			},
+		},
+		
+		//Farmer has children or not (ported from my other mod, Part of a Saloon Breakfast)
+		{
+			"Name": "Kids",
+			"Value": "NoKids",
+		},
+		
+		
+		{
+			"Name": "Kids",
+			"Value": "TwoKids",
+			"When": {
+				"HasValue: {{ChildGenders}}": true,
+			},
+		},
+		
+		{
+			"Name": "Kids",
+			"Value": "OneKid",
+			"When": {
+				"HasValue: {{ChildGenders}}": true,
+				"HasValue: {{ChildGenders|valueAt=1}}": false, //No value at 1, so the player can only have one kid. (This token will balloon if checking more than two.)
+			},
+		},
+		
+		//Spouse Consequences, if enabled
+		
+		{
+			"Name": "Sadness",
+			"Value": -30
+		},
+		
+		{
+			"Name": "Sadness",
+			"Value": -75,
+			"When": {
+				"FriendshipLoss": "medium",
+			},
+		},
+		
+		{
+			"Name": "Sadness",
+			"Value": -125,
+			"When": {
+				"FriendshipLoss": "high",
+			},
+		},
+		
+		{
+			"Name": "Sadness",
+			"Value": -250, //full heart loss is probably the limit. Your spouse may be broken hearted, but they won't be MULTIPLE broken hearted - it's one missed thing, and while it hurts, it's not a relationship ender.
+			"When": {
+				"FriendshipLoss": "heart",
+			},
+		},
+		
+		//Island Date Tokens
+		
+		// Basic Islander Tokens
+		
+		// For those of you trying to read this complicated code, I essentially am trying to variably determine a pool of four islanders. I alter the pool based on the following:
+		
+			// The date is Caroline, Abigail, Sebastian, or Lewis (in each case, I pick from the same pool, shifted and pinned keyed so it won't choose the same character)
+			// Expansion mods are installed (RSV, SVE, Adventurer's Guild Expanded)
+			// The character is unlocked
+			// A date from the expansion mod is chosen in the pools from expansions (Sophia, Victor, Flor, and Jio), in which case an alternate shifted pool is chosen from.
+		
+		{
+			//Regular Villagers with Swimsuits
+			"Name": "Island1Pool",
+			"Value": "{{Random:{{Caroline}},Clint,{{Jodi}},{{Marnie}},Pam,{{Pierre}},{{Robin}} |key=IslandDate1}}",
+		},
+		
+		{
+			"Name": "Island1PoolAlt",
+			"Value": "{{Random:Clint,{{Jodi}},{{Marnie}},Pam,{{Pierre}},{{Robin}}, {{Caroline}} |key=IslandDate2}}",
+		},
+		
+		{
+			"Name": "Island1",
+			"Value": "{{Island1Pool}}",
+		},
+		
+		{
+			"Name": "Island1",
+			"Value": "{{Island1PoolAlt}}",
+			"When": {
+				"Date": "Caroline",
+				"Island1Pool": "Caroline",
+			},
+		},
+		
+		{
+			//Bachelorettes
+			"Name": "Island2Pool",
+			"Value": "{{Random:Abigail,Leah,Penny,Maru,Haley,Emily |key=IslandDate2}}",
+		},
+		
+		{
+			"Name": "Island2PoolAlt",
+			"Value": "{{Random:Leah,Penny,Maru,Haley,Emily,Abigail |key=IslandDate2}}",
+		},
+		
+		{
+			"Name": "Island2",
+			"Value": "{{Island2Pool}}",
+		},
+		
+		{
+			"Name": "Island2",
+			"Value": "{{Island2PoolAlt}}",
+			"When": {
+				"Date": "Abigail",
+				"Island2Pool": "Abigail",
+			},
+		},
+		
+		{
+			//Bachelors
+			"Name": "Island3Pool",
+			"Value": "{{Random:Sebastian,Elliott,Sam,Harvey,Alex,Shane |key=IslandDate3}}",
+		},
+		
+		{
+			"Name": "Island3PoolAlt",
+			"Value": "{{Random:Elliott,Sam,Harvey,Alex,Shane,Sebastian |key=IslandDate3}}",
+		},
+		
+		{
+			"Name": "Island3",
+			"Value": "{{Island3Pool}}",
+		},
+		
+		{
+			"Name": "Island3",
+			"Value": "{{Island3PoolAlt}}",
+			"When": {
+				"Date": "Sebastian",
+				"Island3Pool": "Sebastian",
+			},
+		},
+		
+		{
+			//Regular Villagers, no swimsuits
+			"Name": "Island4Pool",
+			"Value": "{{Random:Lewis,Sandy,{{Demetrius}},Jas,Vincent,Marlon |key=IslandDate4}}",
+		},
+		
+		{
+			"Name": "Island4PoolAlt",
+			"Value": "{{Random:Sandy,{{Demetrius}},Jas,Vincent,Marlon,Lewis |key=IslandDate4}}",
+		},
+		
+		{
+			"Name": "Island4",
+			"Value": "{{Island4Pool}}",
+		},
+		
+		{
+			"Name": "Island4",
+			"Value": "{{Island4PoolAlt}}",
+			"When": {
+				"Date": "Lewis",
+				"Island4Pool": "Lewis",
+			},
+		},
+		
+		// BONUS COMPATIBILITY
+		
+			//SVE Villagers
+			
+		{
+			 "Name": "SVEIslandRegular",
+			 "Value": "{{Random:Andy,Martin,MarlonFay,Susan}}",
+			 "When": {
+				 "HasMod": "FlashShifter.StardewValleyExpandedCP",
+			 },
+		},
+		
+		{
+			"Name": "Island4",
+			"Value": "{{Random:{{Island4}}, {{SVEIslandRegular}} }}",
+			"When": {
+				 "HasMod": "FlashShifter.StardewValleyExpandedCP",
+			},
+		},
+		
+		{
+			 "Name": "SVEIslandBachelorette1",
+			 "Value": "{{Random:Sophia,Claire,Olivia |key=IslandDateSVE}}",
+			 "When": {
+				 "HasMod": "FlashShifter.StardewValleyExpandedCP",
+			},
+		},
+		
+		{
+			 "Name": "SVEIslandBacheloretteAlt",
+			 "Value": "{{Random:Claire,Olivia,Sophia |key=IslandDateSVE}}",
+			 "When": {
+				 "HasMod": "FlashShifter.StardewValleyExpandedCP",
+			},
+		},
+		
+		{
+			"Name": "SVEIslandBachelorette",
+			"Value": "{{SVEIslandBachelorette1}}",
+			"When": {
+				 "HasMod": "FlashShifter.StardewValleyExpandedCP",
+			},
+		},
+		
+		{
+			"Name": "SVEIslandBachelorette",
+			"Value": "{{SVEIslandBacheloretteAlt}}",
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"Date": "Sophia",
+				"SVEIslandBachelorette1": "Sophia",
+			},
+		},
+		
+		{
+			"Name": "SVEIslandBachelorette",
+			"Value": "{{Random:{{SVEIslandBachelorette}}, Scarlett}}",
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"HasSeenEvent: hostPlayer |contains=3691371": true,
+				"Date |contains= Scarlett": false,
+			},
+		},
+		
+		{
+			"Name": "Island2",
+			"Value": "{{Random:{{Island2}}, {{SVEIslandBachelorette}} }}",
+			"When": {
+				 "HasMod": "FlashShifter.StardewValleyExpandedCP",
+			},
+		},
+		
+		{
+			"Name": "SVEIslandBachelor",
+			"Value": "Victor", //There are only three. Victor is one, Lance is unlockable, and....
+			"When": {
+				 "HasMod": "FlashShifter.StardewValleyExpandedCP",
+			},
+		},
+		
+		{
+			"Name": "SVEIslandBachelor",
+			"Value": "Wizard",
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"Date": "Victor", // The Wizard cannot normally be at the resort, but if he wins all the rolls while Victor is the date, you may see him. It shouldn't cause too many issues.
+			},
+		},
+		
+		{
+			"Name": "SVEIslandBachelor",
+			"Value": "{{Random:{{SVEIslandBachelor}}, Lance}}",
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"HasSeenEvent: hostPlayer |contains=6951319": true,
+				"Date |contains= Lance": false,
+			},
+		},
+		
+		{
+			"Name": "Island3",
+			"Value": "{{Random:{{Island3}}, {{SVEIslandBachelor}} }}",
+			"When": {
+				 "HasMod": "FlashShifter.StardewValleyExpandedCP",
+			},
+		},
+		
+			// RSV Villagers
+		
+		{
+			 "Name": "RSVIslandRegular1",
+			 "Value": "{{Random:Carmen,Kiwi,Lenny,Lola,Maive,Malaya,Aguar,Olga,Shanice}}",
+			 "When": {
+				"HasMod": "Rafseazz.RSVCP",
+			 },
+		},
+		{
+			 "Name": "RSVIslandRegular1",
+			 "Value": "{{Random:{{RSVIslandRegular1}}, Naomi}}",
+			 "When": {
+				 "HasMod": "Rafseazz.RSVCP",
+				"HasSeenEvent: hostPlayer |contains=75160249": true,
+			 },
+		},
+		
+		{
+			"Name": "Island4",
+			"Value": "{{Random:{{Island4}}, {{RSVIslandRegular1}} }}",
+			"When": {
+				 "HasMod": "Rafseazz.RSVCP",
+			},
+		},
+		
+		{
+			 "Name": "RSVIslandRegular2",
+			 "Value": "{{Random:Aguar,Bert,Ezekiel,Freddie,Kimpoi,Lorenzo,Pika,Richard,Sonny}}",
+			 "When": {
+				"HasMod": "Rafseazz.RSVCP",
+			 },
+		},
+		
+		{
+			"Name": "Island1",
+			"Value": "{{Random:{{Island1}}, {{RSVIslandRegular2}} }}",
+			"When": {
+				 "HasMod": "Rafseazz.RSVCP",
+			},
+		},
+		
+		{
+			 "Name": "RSVIslandBachelorette1",
+			 "Value": "{{Random:Alissa,Blair,Corine,Flor,Kiarra,Maddie,Ysabelle,Paula,Irene,Faye |key=IslandDateRSV1}}", //Daia missing because she is unlocked later, add to the list separately
+			 "When": {
+				"HasMod": "Rafseazz.RSVCP",
+			 },
+		},
+		
+		{
+			 "Name": "RSVIslandBacheloretteAlt",
+			 "Value": "{{Random:Alissa,Blair,Corine,Kiarra,Maddie,Ysabelle,Paula,Irene,Faye,Flor |key=IslandDateRSV1}}",
+			 "When": {
+				"HasMod": "Rafseazz.RSVCP",
+			 },
+		},
+		
+		{
+			"Name": "RSVIslandBachelorette",
+			"Value": "{{RSVIslandBachelorette1}}",
+			"When": {
+				"HasMod": "Rafseazz.RSVCP",
+			 },
+		},
+		
+		{
+			"Name": "RSVIslandBachelorette",
+			"Value": "{{RSVIslandBacheloretteAlt}}",
+			"When": {
+				"HasMod": "Rafseazz.RSVCP",
+				"Date": "Flor",
+				"RSVIslandBachelorette1": "Flor",
+			},
+		},
+		
+		{
+			"Name": "RSVIslandBachelorette",
+			"Value": "{{Random:{{RSVIslandBachelorette}}, Daia}}",
+			"When": {
+				"HasMod": "Rafseazz.RSVCP",
+				"HasSeenEvent: hostPlayer |contains=75160263": true,
+				"Date |contains= Daia": false, //Don't add her if she's the date! That defeats the purpose.
+			},
+		},
+		
+		{
+			"Name": "Island2",
+			"Value": "{{Random:{{Island2}}, {{RSVIslandBachelorette}} }}",
+			"When": {
+				 "HasMod": "Rafseazz.RSVCP",
+			},
+		},
+		
+		{
+			 "Name": "RSVIslandBachelor1",
+			 "Value": "{{Random:Anton,Jio,Ian,Jeric,Kenneth,Philip,Sean,Shiro |key=IslandDateRSV2}}", //Bryle, Zayne, and June all have specialized adds.
+			 "When": {
+				"HasMod": "Rafseazz.RSVCP",
+			 },
+		},
+		
+		{
+			 "Name": "RSVIslandBachelorAlt",
+			 "Value": "{{Random:Anton,Ian,Jeric,Kenneth,Philip,Sean,Shiro,Jio |key=IslandDateRSV2}}",
+			 "When": {
+				"HasMod": "Rafseazz.RSVCP",
+			 },
+		},
+		
+		{
+			"Name": "RSVIslandBachelor",
+			"Value": "{{RSVIslandBachelor1}}",
+			"When": {
+				"HasMod": "Rafseazz.RSVCP",
+			 },
+		},
+		
+		{
+			"Name": "RSVIslandBachelor",
+			"Value": "{{RSVIslandBachelorAlt}}",
+			"When": {
+				"HasMod": "Rafseazz.RSVCP",
+				"Date": "Jio",
+				"RSVIslandBachelor1": "Jio",
+			},
+		},
+		
+		{
+			"Name": "RSVIslandBachelor",
+			"Value": "{{Random:{{RSVIslandBachelor}}, Bryle}}",
+			"When": {
+				"HasMod": "Rafseazz.RSVCP",
+				"HasSeenEvent: hostPlayer |contains=75160375": true,
+				"Date |contains= Bryle": false,
+			},
+		},
+		
+		{
+			"Name": "RSVIslandBachelor",
+			"Value": "{{Random:{{RSVIslandBachelor}}, Zayne}}",
+			"When": {
+				"HasMod": "Rafseazz.RSVCP",
+				"HasSeenEvent: hostPlayer |contains=75160338": true,
+				"Date |contains= Zayne": false,
+			},
+		},
+		
+		{
+			"Name": "RSVIslandBachelor",
+			"Value": "{{Random:{{RSVIslandBachelor}}, June}}",
+			"When": {
+				"HasMod": "Rafseazz.RSVCP",
+				"Season": "Fall, Winter",
+				"Date |contains= June": false, //If June is the date, he's married. If June is married, he's around year-round. I'm not going to write code for the edge case where June is poly married and it's Spring/Summer - he just won't show up in the background if that happens.
+			},
+		},
+		
+		{
+			"Name": "Island3",
+			"Value": "{{Random:{{Island3}}, {{RSVIslandBachelor}} }}",
+			"When": {
+				 "HasMod": "Rafseazz.RSVCP",
+			},
+		},
+		
+			// Adventurer's Guild Expanded Villagers
+		
+		{
+			"Name": "Island1",
+			"Value": "{{Random:{{Island1}}, Gabriel }}",
+			"When": {
+				 "HasMod": "supert.adventureguildexpanded",
+				 "Date |contains= Gabriel": false,
+			},
+		},
+		
+		{
+			"Name": "Island1",
+			"Value": "{{Random:{{Island1}}, Zinnia }}",
+			"When": {
+				 "HasMod": "supert.adventureguildexpanded",
+				 "Date |contains= Zinnia": false,
+			},
+		},
+		
+		// CHOOSE THE ISLANDERS ON THE ISLAND DATE, PICKED BY PINNED KEY RANDOMIZATION
+		
+		{
+			"Name": "Islander1",
+			"Value": "{{Random:{{Island1}},{{Island2}},{{Island3}},{{Island4}}|key=IslandDate}}",
+		},
+		{
+			"Name": "Islander2",
+			"Value": "{{Random:{{Island2}},{{Island3}},{{Island4}},{{Island1}}|key=IslandDate}}",
+		},
+		{
+			"Name": "Islander3",
+			"Value": "{{Random:{{Island3}},{{Island4}},{{Island1}},{{Island2}}|key=IslandDate}}",
+		},
+		{
+			"Name": "Islander4",
+			"Value": "{{Random:{{Island4}},{{Island1}},{{Island2}},{{Island3}}|key=IslandDate}}",
+		},
+		
+			//If you've read this far in the Island tokens, congratulations. Please note that I would love to add more people as background characters, but unless I can get a list of people visiting the resort, I have to stay within the bounds already established with this mod (SVE/RSV/AGE characters) because as you can see, adding more will require a lot of tokenry just to variably add people, especially if they're more complicated! 
+		
+		//Food Comments for Date
+		
+		{
+			 "Name": "BartenderComment", //This is technically a weird relic from generifying this date. Future updates, if this date is liked, can add cross-compatibility with Ridgeside Village and East Scarp, as I had this set up for Pika and Rosa to also be bartenders.
+			 "Value": "{{i18n:IslandDate.GusBartender |Date={{Date}} }}",
+			 "When": {
+				 "Date |contains= Gus": false,
+			 },
+		},
+		
+		{
+			 "Name": "BartenderComment", //If Gus is somehow the date, account for Emily.
+			 "Value": "{{i18n:IslandDate.EmilyBartender |Date={{Date}} }}",
+			 "When": {
+				 "Date": "Gus",
+			 },
+		},
+		
+		// Food and Drink. Food randomizes normally. Drink only randomizes for the spouse - switchEvent for the farmer.
+		
+		//Food
+		
+		{
+			 "Name": "Food",
+			 "Value": "{{Random:[LocalizedText Strings\\Objects:Pizza_Name],[LocalizedText Strings\\Objects:CrabCakes_Name],[LocalizedText Strings\\Objects:FriedCalamari_Name],[LocalizedText Strings\\Objects:BananaPudding_Name] |key=Snacks}}",
+		},
+		{
+			 "Name": "FoodID",
+			 "Value": "{{Random:206,732,202,904 |key=Snacks}}",
+		},
+		
+		//Drinks
+		
+			//Base Drinks (incl. Alcohol)
+		{
+			 "Name": "Drink",
+			 "Value": "{{Random:[LocalizedText Strings\\Objects:PinaColada_Name], [LocalizedText Strings\\Objects:GingerAle_Name], [LocalizedText Strings\\Objects:Wine_Name], [LocalizedText Strings\\Objects:PaleAle_Name], [LocalizedText Strings\\Objects:CranberryCandy_Name], [LocalizedText Strings\\Objects:GreenTea_Name] |key=Hydration}}",
+		},
+		{
+			 "Name": "DrinkID",
+			 "Value": "{{Random:873, 903, 348, 303, 612, 614 |key=Hydration}}",
+		},
+		
+			//Alterations for sober villagers
+		
+		{
+			 "Name": "Drink",
+			 "Value": "{{Random:[LocalizedText Strings\\Objects:GingerAle_Name], [LocalizedText Strings\\Objects:CranberryCandy_Name], [LocalizedText Strings\\Objects:GreenTea_Name] |key=Sober}}",
+			 "When": {
+				 "Alcoholism": "sober",
+			 },
+		},
+		{
+			 "Name": "DrinkID",
+			 "Value": "{{Random:903, 612, 614 |key=Sober}}",
+			 "When": {
+				 "Alcoholism": "sober",
+			 },
+		},
+		
+		{
+			 "Name": "NoDrinks",
+			 "Value": "{{DesignatedDrivers}}",
+			 "When": {
+				 "HasValue:{{DesignatedDrivers}}": "true",
+			 },
+		},
+		
+		{
+			 "Name": "Drink",
+			 "Value": "{{Random:[LocalizedText Strings\\Objects:GingerAle_Name], [LocalizedText Strings\\Objects:CranberryCandy_Name], [LocalizedText Strings\\Objects:GreenTea_Name] |key=Sober}}",
+			 "When": {
+				 "Alcoholism": "varies",
+				 "HasValue:{{DesignatedDrivers}}": "true", //Necessary to prevent this patch if nothing is entered into the blacklist.
+				 "Date": "{{NoDrinks}}",
+			 },
+		},
+		{
+			 "Name": "DrinkID",
+			 "Value": "{{Random:903, 612, 614 |key=Sober}}",
+			 "When": {
+				 "Alcoholism": "varies",
+				 "HasValue:{{DesignatedDrivers}}": "true",
+				 "Date": "{{NoDrinks}}",
+			 },
+		},
+		
+		// Island Date Code, Middle Portion, to prevent complicated forks
+		
+		{
+			 "Name": "IslandMiddle",
+			 "Value": "pause 300/faceDirection {{Date}} 0/faceDirection farmer 0/speak {{Date}} \"{{i18n:IslandDate.8 |Drink={{Drink}} |Gus={{Gus}} }}\"/pause 200/emote farmer 32/pause 300/speak {{Gus}} \"{{i18n:IslandDate.ComingRightUp}}\"/pause 200/playSound money/faceDirection {{Date}} 1/faceDirection farmer 3/pause 300/speak {{Date}} \"{{i18n:IslandDate.9 |Food={{Food}} }}\"/pause 200/emote farmer 32/pause 500/move {{Date}} 0 5 2 true/move farmer 0 4 2 false/move {{Date}} -4 0 3 true/move farmer -3 0 3 false/move {{Date}} 0 -1 1/speak {{Date}} \"{{i18n:IslandDate.10.{{Gender}} }}\"/pause 500/shake {{Date}} 250/playSound eat/pause 600/removeObject 11 27/farmerEat {{FoodID}}/pause 1500/message \"{{i18n:IslandDate.11 |Food={{Food}} }}\"/faceDirection farmer 3/pause 500/speak {{Date}} \"{{i18n:IslandDate.12 |Food={{Food}} |Drink={{Drink}} }}\"/pause 500/shake {{Date}} 250/playSound gulp/pause 100/playSound gulp/pause 500",
+		},
 	],
 	
    "Changes": [
@@ -2573,9 +3368,9 @@
 			},
 		},
 		
-		// Extra Stuff (Event Repeater replacement patch, mod compatibility patches)
+		// Extra Stuff
 		{
-			"LogName": "Event Repeater Replacement (Allow Dates to Repeat)",
+			"LogName": "Trigger Actions",
 			"Action": "Include",
 			"FromFile": "data/Triggers.json",
 		},
