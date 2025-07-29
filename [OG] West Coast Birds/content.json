@@ -1,0 +1,2425 @@
+﻿{
+    "FormatVersion": 1,
+    "Birdies": [
+        {
+            "ID": "BewicksWren",
+            "AssetPath": "assets/BewicksWren.png",
+            "SoundAssetPath": "assets/BewicksWren.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 9,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 4,
+            "PerchPreference": 2,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Tube": 0.2,
+                "Hopper": 0.15,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1000, 1030}}"
+                    },
+                    "AddWt": 0.2
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1700, 1730}}"
+                    },
+                    "AddWt": 0.2
+                }
+            ]
+        },
+        {
+            "ID": "BlackPhoebe",
+            "AssetPath": "assets/BlackPhoebe.png",
+            "SoundAssetPath": "assets/BlackPhoebe.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 4,
+            "PerchPreference": 2,
+            "BaseWt": 0.1,
+            "FeederBaseWts": {
+                "Tube": 0.2,
+                "Hopper": 0.15,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1000, 1030}}"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1700, 1730}}"
+                    },
+                    "AddWt": 0.1
+                }
+            ]
+        },
+        {
+            "ID": "CarolinaWren",
+            "AssetPath": "assets/CarolinaWren.png",
+            "SoundAssetPath": "assets/CarolinaWren.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 9,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 4,
+            "PerchPreference": 2,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Tube": 0.2,
+                "Hopper": 0.15,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1000, 1030}}"
+                    },
+                    "AddWt": 0.2
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1700, 1730}}"
+                    },
+                    "AddWt": 0.2
+                }
+            ]
+        },
+        {
+            "ID": "PintailedWhydah",
+            "AssetPath": "assets/PintailedWhydah.png",
+            "SoundAssetPath": "assets/PintailedWhydah.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 4,
+            "PerchPreference": 2,
+            "BaseWt": 0.01,
+            "FeederBaseWts": {
+                "Tube": 0.2,
+                "Hopper": 0.15,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "GreaterScaup",
+            "AssetPath": "assets/GreaterScaup.png",
+            "SoundAssetPath": "assets/GreaterScaup.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 5,
+            "Cautiousness": 3,
+            "FlapDuration": 350,
+            "FlySpeed": 4,
+            "BaseWt": 0.025,
+            "PerchPreference": 0,
+            "WaterPreference": 1,
+            "CanUseBaths": false,
+            "CanNestInTrees": false,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "wetland"
+                    },
+                    "AddWt": 0.5
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest, farm"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "city"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "Redhead",
+            "AssetPath": "assets/Redhead.png",
+            "SoundAssetPath": "assets/Redhead.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 5,
+            "Cautiousness": 3,
+            "FlapDuration": 350,
+            "FlySpeed": 4,
+            "BaseWt": 0.035,
+            "PerchPreference": 0,
+            "WaterPreference": 1,
+            "CanUseBaths": false,
+            "CanNestInTrees": false,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "wetland"
+                    },
+                    "AddWt": 0.5
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest, farm"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "city"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "HoodedMerganser",
+            "AssetPath": "assets/HoodedMerganser.png",
+            "SoundAssetPath": "assets/HoodedMerganser.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 2,
+            "Cautiousness": 3,
+            "FlapDuration": 350,
+            "FlySpeed": 4,
+            "BaseWt": 0.025,
+            "PerchPreference": 0,
+            "WaterPreference": 1,
+            "CanUseBaths": false,
+            "CanNestInTrees": false,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, city"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "wetland"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest, farm"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "PineSisken",
+            "AssetPath": "assets/PineSisken.png",
+            "SoundAssetPath": "assets/PineSisken.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 5,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 4,
+            "PerchPreference": 2,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Tube": 0.2,
+                "Hopper": 0.15,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1000, 1030}}"
+                    },
+                    "AddWt": 0.2
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1700, 1730}}"
+                    },
+                    "AddWt": 0.2
+                }
+            ]
+        },
+        {
+            "ID": "BluegrayGnatcatcher",
+            "AssetPath": "assets/BluegrayGnatcatcher.png",
+            "SoundAssetPath": "assets/BluegrayGnatcatcher.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 9,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 4,
+            "PerchPreference": 2,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Tube": 0.2,
+                "Hopper": 0.15,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1000, 1030}}"
+                    },
+                    "AddWt": 0.2
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1700, 1730}}"
+                    },
+                    "AddWt": 0.2
+                }
+            ]
+        },
+        {
+            "ID": "RubycrownedKinglet",
+            "AssetPath": "assets/RubycrownedKinglet.png",
+            "SoundAssetPath": "assets/RubycrownedKinglet.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 6,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 4,
+            "PerchPreference": 2,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Tube": 0.2,
+                "Hopper": 0.15,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1000, 1030}}"
+                    },
+                    "AddWt": 0.2
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1700, 1730}}"
+                    },
+                    "AddWt": 0.2
+                }
+            ]
+        },
+        {
+            "ID": "YellowbreastedChat",
+            "AssetPath": "assets/YellowbreastedChat.png",
+            "SoundAssetPath": "assets/YellowbreastedChat.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 5,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 4,
+            "PerchPreference": 2,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Tube": 0.2,
+                "Hopper": 0.15,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1000, 1030}}"
+                    },
+                    "AddWt": 0.2
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1700, 1730}}"
+                    },
+                    "AddWt": 0.2
+                }
+            ]
+        },
+        {
+            "ID": "Dickcissel",
+            "AssetPath": "assets/Dickcissel.png",
+            "SoundAssetPath": "assets/Dickcissel.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 5,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 4,
+            "PerchPreference": 2,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Tube": 0.2,
+                "Hopper": 0.15,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1000, 1030}}"
+                    },
+                    "AddWt": 0.2
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1700, 1730}}"
+                    },
+                    "AddWt": 0.2
+                }
+            ]
+        },
+        {
+            "ID": "AcornWoodpecker",
+            "AssetPath": "assets/AcornWoodpecker.png",
+            "SoundAssetPath": "assets/AcornWoodpecker.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 2,
+            "Cautiousness": 4,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "BaseWt": 0.2,
+            "PerchPreference": 1,
+            "CanUseBaths": false,
+            "FeederBaseWts": {
+                "Hopper": 0.05,
+                "Platform": 0.1
+            },
+            "FoodBaseWts": {
+                "MixedSeeds": 0.05,
+                "Fruit": 0.15
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 2000, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island, ocean"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "RedheadedWoodpecker",
+            "AssetPath": "assets/RedheadedWoodpecker.png",
+            "SoundAssetPath": "assets/RedheadedWoodpecker.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 2,
+            "Cautiousness": 4,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "BaseWt": 0.1,
+            "PerchPreference": 1,
+            "CanUseBaths": false,
+            "FeederBaseWts": {
+                "Hopper": 0.05,
+                "Platform": 0.1
+            },
+            "FoodBaseWts": {
+                "MixedSeeds": 0.05,
+                "Fruit": 0.15
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 2000, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island, ocean"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "NorthernFlicker",
+            "AssetPath": "assets/NorthernFlicker.png",
+            "SoundAssetPath": "assets/NorthernFlicker.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 2,
+            "Cautiousness": 4,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "BaseWt": 0.2,
+            "PerchPreference": 1,
+            "CanUseBaths": false,
+            "FeederBaseWts": {
+                "Hopper": 0.05,
+                "Platform": 0.1
+            },
+            "FoodBaseWts": {
+                "MixedSeeds": 0.05,
+                "Fruit": 0.15
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 2000, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island, ocean"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "BarnOwl",
+            "AssetPath": "assets/BarnOwl.png",
+            "SoundAssetPath": "assets/BarnOwl.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 4,
+            "FlapDuration": 300,
+            "FlySpeed": 4,
+            "BaseWt": 0.05,
+            "PerchPreference": 2,
+            "CanUseBaths": false,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 2000}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island, ocean"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "GreatHornedOwl",
+            "AssetPath": "assets/GreatHornedOwl.png",
+            "SoundAssetPath": "assets/GreatHornedOwl.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 2,
+            "Cautiousness": 4,
+            "FlapDuration": 300,
+            "FlySpeed": 4,
+            "BaseWt": 0.025,
+            "PerchPreference": 2,
+            "CanUseBaths": false,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 2000}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island, ocean"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "SnowyOwl",
+            "AssetPath": "assets/SnowyOwl.png",
+            "SoundAssetPath": "assets/SnowyOwl.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 4,
+            "FlapDuration": 300,
+            "FlySpeed": 4,
+            "BaseWt": 0.05,
+            "PerchPreference": 2,
+            "CanUseBaths": false,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 2000}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Winter"
+                    },
+                    "AddWt": 0.25
+                }
+            ]
+        },
+        {
+            "ID": "BarredOwl",
+            "AssetPath": "assets/BarredOwl.png",
+            "SoundAssetPath": "assets/BarredOwl.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 4,
+            "FlapDuration": 300,
+            "FlySpeed": 4,
+            "BaseWt": 0.05,
+            "PerchPreference": 2,
+            "CanUseBaths": false,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 2000}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island, ocean"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "RosebreastedGrosbeak",
+            "AssetPath": "assets/RosebreastedGrosbeak.png",
+            "SoundAssetPath": "assets/RosebreastedGrosbeak.wav",
+            "Attributes": 3,
+            "MaxFlockSize": 4,
+            "Cautiousness": 5,
+            "FlapDuration": 250,
+            "FlySpeed": 5.5,
+            "PerchPreference": 2,
+            "CanUseBaths": true,
+            "CanNestInTrees": true,
+            "BaseWt": 0.025,
+            "FeederBaseWts": {
+                "Hopper": 0.1,
+                "Tube": 0.1
+            },
+            "FoodBaseWts": {
+                "Fruit": 0.05,
+                "MixedSeeds": 0.2,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Spring, Summer"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "mountain, forest"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, city, island, ocean"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "YellowheadedBlackbird",
+            "AssetPath": "assets/YellowheadedBlackbird.png",
+            "SoundAssetPath": "assets/YellowheadedBlackbird.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 6,
+            "Cautiousness": 4,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "BaseWt": 0.01,
+            "CanNestInTrees": false,
+            "FeederBaseWts": {
+                "Platform": 0.1
+            },
+            "FoodBaseWts": {
+                "Corn": 0.2,
+                "SunflowerSeeds": 0.1
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest, wetland",
+                        "Season": "Spring, Summer"
+                    },
+                    "AddWt": 0.03
+                }
+            ]
+        },
+        {
+            "ID": "BrownheadedCowbird",
+            "AssetPath": "assets/BrownheadedCowbird.png",
+            "SoundAssetPath": "assets/BrownheadedCowbird.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 8,
+            "Cautiousness": 4,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "BaseWt": 0.025,
+            "CanNestInTrees": false,
+            "FeederBaseWts": {
+                "Platform": 0.1
+            },
+            "FoodBaseWts": {
+                "Corn": 0.2,
+                "SunflowerSeeds": 0.1
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest, wetland",
+                        "Season": "Spring, Summer"
+                    },
+                    "AddWt": 0.025
+                }
+            ]
+        },
+        {
+            "ID": "RuddyDuck",
+            "AssetPath": "assets/RuddyDuck.png",
+            "SoundAssetPath": "assets/RuddyDuck.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 2,
+            "Cautiousness": 3,
+            "FlapDuration": 350,
+            "FlySpeed": 4,
+            "BaseWt": 0.03,
+            "PerchPreference": 0,
+            "WaterPreference": 1,
+            "CanUseBaths": false,
+            "CanNestInTrees": true,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "AddWt": 0.05
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, city"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "wetland"
+                    },
+                    "AddWt": 0.05
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "GreenwingedTeal",
+            "AssetPath": "assets/GreenwingedTeal.png",
+            "SoundAssetPath": "assets/GreenwingedTeal.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 4,
+            "Cautiousness": 3,
+            "FlapDuration": 350,
+            "FlySpeed": 4,
+            "BaseWt": 0.04,
+            "PerchPreference": 0,
+            "WaterPreference": 1,
+            "CanUseBaths": false,
+            "CanNestInTrees": true,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "AddWt": 0.05
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, city"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "wetland"
+                    },
+                    "AddWt": 0.2
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "AmericanWigeon",
+            "AssetPath": "assets/AmericanWigeon.png",
+            "SoundAssetPath": "assets/AmericanWigeon.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 4,
+            "Cautiousness": 3,
+            "FlapDuration": 350,
+            "FlySpeed": 4,
+            "BaseWt": 0.04,
+            "PerchPreference": 0,
+            "WaterPreference": 1,
+            "CanUseBaths": false,
+            "CanNestInTrees": true,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "AddWt": 0.05
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, city"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "wetland"
+                    },
+                    "AddWt": 0.2
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "WoodDuck",
+            "AssetPath": "assets/WoodDuck.png",
+            "SoundAssetPath": "assets/WoodDuck.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 5,
+            "Cautiousness": 3,
+            "FlapDuration": 350,
+            "FlySpeed": 4,
+            "BaseWt": 0.01,
+            "PerchPreference": 0,
+            "WaterPreference": 1,
+            "CanUseBaths": false,
+            "CanNestInTrees": true,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, city"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "wetland"
+                    },
+                    "AddWt": 0.025
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "CaliforniaScrubjay",
+            "AssetPath": "assets/CaliforniaScrubjay.png",
+            "SoundAssetPath": "assets/CaliforniaScrubjay.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 4,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "PerchPreference": 2,
+            "CanUseBaths": true,
+            "CanNestInTrees": true,
+            "BaseWt": 0.025,
+            "FeederBaseWts": {
+                "Platform": 0.1
+            },
+            "FoodBaseWts": {
+                "Fruit": 0.05,
+                "MixedSeeds": 0.1,
+                "Corn": 0.1
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, ocean"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest, farm"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Season": "Winter, fall"
+                    },
+                    "AddWt": 0.15
+                }
+            ]
+        },
+        {
+            "ID": "WhitecrownedSparrow",
+            "AssetPath": "assets/WhitecrownedSparrow.png",
+            "SoundAssetPath": "assets/WhitecrownedSparrow.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 6,
+            "Cautiousness": 3,
+            "FlapDuration": 450,
+            "FlySpeed": 4.5,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Tube": 0.1,
+                "Hopper": 0.1,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "Corn": 0.1,
+                "MixedSeeds": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "farm"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Season": "Winter"
+                    },
+                    "AddWt": 0.25
+                }
+            ]
+        },
+        {
+            "ID": "SongSparrow",
+            "AssetPath": "assets/SongSparrow.png",
+            "SoundAssetPath": "assets/SongSparrow.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 4,
+            "FlapDuration": 450,
+            "FlySpeed": 4.5,
+            "BaseWt": 0.025,
+            "FeederBaseWts": {
+                "Tube": 0.1,
+                "Hopper": 0.1,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "Corn": 0.1,
+                "MixedSeeds": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "farm, forest"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "MourningDove",
+            "AssetPath": "assets/MourningDove.png",
+            "SoundAssetPath": "assets/MourningDove.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 4,
+            "Cautiousness": 5,
+            "FlapDuration": 350,
+            "FlySpeed": 5.5,
+            "PerchPreference": 2,
+            "BaseWt": 0.2,
+            "CanNestInTrees": true,
+            "FeederBaseWts": {
+                "Hopper": 0.3,
+                "Platform": 0.1,
+                "Tube": 0.4
+            },
+            "FoodBaseWts": {
+                "MixedSeeds": 0.05,
+                "SunflowerSeeds": 0.1
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, island"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "NorthernBobwhite",
+            "AssetPath": "assets/NorthernBobwhite.png",
+            "SoundAssetPath": "assets/NorthernBobwhite.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 6,
+            "Cautiousness": 5,
+            "FlapDuration": 350,
+            "FlySpeed": 5.5,
+            "PerchPreference": 2,
+            "BaseWt": 0.1,
+            "CanNestInTrees": false,
+            "FeederBaseWts": {
+                "Hopper": 0.3,
+                "Platform": 0.1,
+                "Tube": 0.4
+            },
+            "FoodBaseWts": {
+                "MixedSeeds": 0.05,
+                "SunflowerSeeds": 0.1
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "farm, forest"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, island"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "CaliforniaQuail",
+            "AssetPath": "assets/CaliforniaQuail.png",
+            "SoundAssetPath": "assets/CaliforniaQuail.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 4,
+            "Cautiousness": 5,
+            "FlapDuration": 350,
+            "FlySpeed": 5.5,
+            "PerchPreference": 2,
+            "BaseWt": 0.1,
+            "CanNestInTrees": false,
+            "FeederBaseWts": {
+                "Hopper": 0.3,
+                "Platform": 0.1,
+                "Tube": 0.4
+            },
+            "FoodBaseWts": {
+                "MixedSeeds": 0.05,
+                "SunflowerSeeds": 0.1
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 2000, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1600, 2000}}"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 0900}}"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "farm, forest"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, island"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "ChippingSparrow",
+            "AssetPath": "assets/ChippingSparrow.png",
+            "SoundAssetPath": "assets/ChippingSparrow.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 3,
+            "Cautiousness": 4,
+            "FlapDuration": 450,
+            "FlySpeed": 4.5,
+            "BaseWt": 0.025,
+            "FeederBaseWts": {
+                "Tube": 0.1,
+                "Hopper": 0.1,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "Corn": 0.1,
+                "MixedSeeds": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "farm, forest"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "LarkSparrow",
+            "AssetPath": "assets/LarkSparrow.png",
+            "SoundAssetPath": "assets/LarkSparrow.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 4,
+            "FlapDuration": 450,
+            "FlySpeed": 4.5,
+            "BaseWt": 0.025,
+            "FeederBaseWts": {
+                "Tube": 0.1,
+                "Hopper": 0.1,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "Corn": 0.1,
+                "MixedSeeds": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "farm, forest"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "ScalybreastedMunia",
+            "AssetPath": "assets/ScalybreastedMunia.png",
+            "SoundAssetPath": "assets/ScalybreastedMunia.wav",
+            "Attributes": 3,
+            "MaxFlockSize": 7,
+            "Cautiousness": 6,
+            "FlapDuration": 400,
+            "FlySpeed": 5.5,
+            "PerchPreference": 3,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Hopper": 0.2,
+                "Platform": 0.1,
+                "Tube": 0.3
+            },
+            "FoodBaseWts": {
+                "SunflowerSeeds": 0.1
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, marsh"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "farm, forest"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Season": "Spring, Fall"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "RedeyedVireo",
+            "AssetPath": "assets/RedeyedVireo.png",
+            "SoundAssetPath": "assets/RedeyedVireo.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 4,
+            "FlapDuration": 450,
+            "FlySpeed": 4.5,
+            "BaseWt": 0.025,
+            "FeederBaseWts": {
+                "Tube": 0.1,
+                "Hopper": 0.1,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "Corn": 0.1,
+                "MixedSeeds": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "farm, forest"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "DarkeyedJunco",
+            "AssetPath": "assets/DarkeyedJunco.png",
+            "SoundAssetPath": "assets/DarkeyedJunco.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 6,
+            "Cautiousness": 4,
+            "FlapDuration": 450,
+            "FlySpeed": 4.5,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Tube": 0.1,
+                "Hopper": 0.1,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "Corn": 0.1,
+                "MixedSeeds": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "farm, forest"
+                    },
+                    "AddWt": 0.05
+                }
+            ]
+        },
+        {
+            "ID": "PaintedBunting",
+            "AssetPath": "assets/PaintedBunting.png",
+            "SoundAssetPath": "assets/PaintedBunting.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 2,
+            "Cautiousness": 4,
+            "FlapDuration": 450,
+            "FlySpeed": 4.5,
+            "BaseWt": 0.01,
+            "FeederBaseWts": {
+                "Tube": 0.1,
+                "Hopper": 0.1,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "Corn": 0.1,
+                "MixedSeeds": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "farm, forest"
+                    },
+                    "AddWt": 0.01
+                }
+            ]
+        },
+        {
+            "ID": "AllensHummingbird",
+            "AssetPath": "assets/AllensHummingbird.png",
+            "SoundAssetPath": "assets/AllensHummingbird.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 3,
+            "FlapDuration": 50,
+            "FlySpeed": 6,
+            "BaseWt": 0.1,
+            "FeederBaseWts": {
+                "Hummingbird": 0.15
+            },
+            "FoodBaseWts": {
+                "Sugar": 0.15
+            },
+            "LandPreference": 0,
+            "PerchPreference": 1,
+            "WaterPreference": 0,
+            "CanUseBaths": false,
+            "CanNestInTrees": true,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Spring, Fall"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Season": "Winter"
+                    },
+                    "SubWt": 0.1
+                }
+            ]
+        },
+        {
+            "ID": "RufousHummingbird",
+            "AssetPath": "assets/RufousHummingbird.png",
+            "SoundAssetPath": "assets/RufousHummingbird.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 3,
+            "FlapDuration": 50,
+            "FlySpeed": 6,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Hummingbird": 0.15
+            },
+            "FoodBaseWts": {
+                "Sugar": 0.15
+            },
+            "LandPreference": 0,
+            "PerchPreference": 1,
+            "WaterPreference": 0,
+            "CanUseBaths": false,
+            "CanNestInTrees": true,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Spring, Fall"
+                    },
+                    "AddWt": 0.05
+                },
+                {
+                    "When": {
+                        "Season": "Winter"
+                    },
+                    "SubWt": 0.04
+                }
+            ]
+        },
+        {
+            "ID": "VioletcrownedHummingbird",
+            "AssetPath": "assets/VioletcrownedHummingbird.png",
+            "SoundAssetPath": "assets/VioletcrownedHummingbird.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 3,
+            "FlapDuration": 50,
+            "FlySpeed": 6,
+            "BaseWt": 0.1,
+            "FeederBaseWts": {
+                "Hummingbird": 0.15
+            },
+            "FoodBaseWts": {
+                "Sugar": 0.15
+            },
+            "LandPreference": 0,
+            "PerchPreference": 1,
+            "WaterPreference": 0,
+            "CanUseBaths": false,
+            "CanNestInTrees": true,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Spring, Fall"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Season": "Winter"
+                    },
+                    "SubWt": 0.1
+                }
+            ]
+        },
+        {
+            "ID": "CostasHummingbird",
+            "AssetPath": "assets/CostasHummingbird.png",
+            "SoundAssetPath": "assets/CostasHummingbird.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 3,
+            "FlapDuration": 50,
+            "FlySpeed": 6,
+            "BaseWt": 0.1,
+            "FeederBaseWts": {
+                "Hummingbird": 0.15
+            },
+            "FoodBaseWts": {
+                "Sugar": 0.15
+            },
+            "LandPreference": 0,
+            "PerchPreference": 1,
+            "WaterPreference": 0,
+            "CanUseBaths": false,
+            "CanNestInTrees": true,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "desert"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Season": "Spring, Fall"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Season": "Winter"
+                    },
+                    "SubWt": 0.1
+                }
+            ]
+        },
+        {
+            "ID": "RubythroatedHummingbird",
+            "AssetPath": "assets/RubythroatedHummingbird.png",
+            "SoundAssetPath": "assets/RubythroatedHummingbird.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 3,
+            "FlapDuration": 50,
+            "FlySpeed": 6,
+            "BaseWt": 0.2,
+            "FeederBaseWts": {
+                "Hummingbird": 0.15
+            },
+            "FoodBaseWts": {
+                "Sugar": 0.15
+            },
+            "LandPreference": 0,
+            "PerchPreference": 1,
+            "WaterPreference": 0,
+            "CanUseBaths": false,
+            "CanNestInTrees": true,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Spring, Fall"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Season": "Winter"
+                    },
+                    "SubWt": 0.1
+                }
+            ]
+        },
+        {
+            "ID": "VioletSabrewing",
+            "AssetPath": "assets/VioletSabrewing.png",
+            "SoundAssetPath": "assets/VioletSabrewing.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 3,
+            "FlapDuration": 50,
+            "FlySpeed": 6,
+            "BaseWt": 0.025,
+            "FeederBaseWts": {
+                "Hummingbird": 0.15
+            },
+            "FoodBaseWts": {
+                "Sugar": 0.15
+            },
+            "LandPreference": 0,
+            "PerchPreference": 1,
+            "WaterPreference": 0,
+            "CanUseBaths": false,
+            "CanNestInTrees": true,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Spring, Summer"
+                    },
+                    "AddWt": 0.05
+                },
+                {
+                    "When": {
+                        "Season": "Winter"
+                    },
+                    "SubWt": 0.1
+                }
+            ]
+        },
+        {
+            "ID": "StellersJay",
+            "AssetPath": "assets/StellersJay.png",
+            "SoundAssetPath": "assets/StellersJay.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 4,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "PerchPreference": 2,
+            "CanUseBaths": true,
+            "CanNestInTrees": true,
+            "BaseWt": 0.025,
+            "FeederBaseWts": {
+                "Platform": 0.1
+            },
+            "FoodBaseWts": {
+                "Fruit": 0.05,
+                "MixedSeeds": 0.1,
+                "Corn": 0.1
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, ocean"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest, farm"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Season": "Winter, fall"
+                    },
+                    "AddWt": 0.15
+                }
+            ]
+        },
+        {
+            "ID": "NorthernMockingbird",
+            "AssetPath": "assets/NorthernMockingbird.png",
+            "SoundAssetPath": "assets/NorthernMockingbird.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 4,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Platform": 0.05
+            },
+            "FoodBaseWts": {
+                "Fruit": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 2000, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "WesternBluebird",
+            "AssetPath": "assets/WesternBluebird.png",
+            "SoundAssetPath": "assets/WesternBluebird.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 3,
+            "Cautiousness": 4,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Platform": 0.05
+            },
+            "FoodBaseWts": {
+                "Fruit": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 0800}}"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2000}}"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 2000, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Spring"
+                    },
+                    "AddWt": 0.25
+                }
+            ]
+        },
+        {
+            "ID": "MountainBluebird",
+            "AssetPath": "assets/MountainBluebird.png",
+            "SoundAssetPath": "assets/MountainBluebird.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 5,
+            "Cautiousness": 4,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Platform": 0.05
+            },
+            "FoodBaseWts": {
+                "Fruit": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 0800}}"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2000}}"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 2000, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Spring"
+                    },
+                    "AddWt": 0.25
+                }
+            ]
+        },
+        {
+            "ID": "HoodedOriole",
+            "AssetPath": "assets/HoodedOriole.png",
+            "SoundAssetPath": "assets/HoodedOriole.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 4,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 6,
+            "PerchPreference": 2,
+            "BaseWt": 0.1,
+            "FeederBaseWts": {
+                "Hopper": 0.05,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "Corn": 0.05,
+                "Fruit": 0.3
+            },
+            "CanUseBaths": false,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 0800}}"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island, ocean, city, wetland"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Winter"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "OrchardOriole",
+            "AssetPath": "assets/OrchardOriole.png",
+            "SoundAssetPath": "assets/OrchardOriole.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 4,
+            "Cautiousness": 5,
+            "FlapDuration": 400,
+            "FlySpeed": 6,
+            "PerchPreference": 2,
+            "BaseWt": 0.1,
+            "FeederBaseWts": {
+                "Hopper": 0.05,
+                "Platform": 0.2
+            },
+            "FoodBaseWts": {
+                "Corn": 0.05,
+                "Fruit": 0.3
+            },
+            "CanUseBaths": false,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 0800}}"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island, ocean, city, wetland"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Winter"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "WhipPoorWill",
+            "AssetPath": "assets/WhipPoorWill.png",
+            "SoundAssetPath": "assets/WhipPoorWill.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 1,
+            "Cautiousness": 4,
+            "FlapDuration": 300,
+            "FlySpeed": 4,
+            "BaseWt": 0.1,
+            "PerchPreference": 2,
+            "CanUseBaths": false,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 2000}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island, ocean"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "BlueJay",
+            "AssetPath": "assets/BlueJay.png",
+            "SoundAssetPath": "assets/BlueJay.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 3,
+            "Cautiousness": 4,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Platform": 0.05
+            },
+            "FoodBaseWts": {
+                "Fruit": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 0800}}"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2000}}"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 2000, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                }
+            ]
+        },
+        {
+            "ID": "NorthernCardinal",
+            "AssetPath": "assets/NorthernCardinal.png",
+            "SoundAssetPath": "assets/NorthernCardinal.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 2,
+            "Cautiousness": 4,
+            "FlapDuration": 400,
+            "FlySpeed": 5,
+            "BaseWt": 0.05,
+            "FeederBaseWts": {
+                "Platform": 0.05
+            },
+            "FoodBaseWts": {
+                "Fruit": 0.05,
+                "SunflowerSeeds": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 0600, 0800}}"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2000}}"
+                    },
+                    "AddWt": 0.15
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 2000, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Season": "Winter"
+                    },
+                    "AddWt": 0.2
+                }
+            ]
+        },
+        {
+            "ID": "SandhillCrane",
+            "AssetPath": "assets/SandhillCrane.png",
+            "SoundAssetPath": "assets/SandhillCrane.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 5,
+            "Cautiousness": 4,
+            "FlapDuration": 350,
+            "FlySpeed": 4,
+            "BaseWt": 0.05,
+            "PerchPreference": 0,
+            "CanUseBaths": false,
+            "CanNestInTrees": false,
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 2000, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, island, ocean, forest, mountain, city",
+                        "Season": "Spring, Summer, Fall"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "wetland"
+                    },
+                    "AddWt": 0.1
+                },
+                {
+                    "When": {
+                        "Season": "Summer"
+                    },
+                    "AddWt": 0.05
+                },
+                {
+                    "When": {
+                        "Season": "Fall"
+                    },
+                    "SubWt": 0.025
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert, ocean, farm, city, wetland, forest, mountain",
+                        "Season": "Winter"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "wetland",
+                        "Season": "Winter"
+                    },
+                    "AddWt": 0.1
+                }
+            ]
+        },
+        {
+            "ID": "WesternTanager",
+            "AssetPath": "assets/WesternTanager.png",
+            "SoundAssetPath": "assets/WesternTanager.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 2,
+            "Cautiousness": 5,
+            "FlapDuration": 350,
+            "FlySpeed": 5.5,
+            "PerchPreference": 5,
+            "BaseWt": 0.05,
+            "CanNestInTrees": true,
+            "FeederBaseWts": {
+                "Platform": 0.05
+            },
+            "FoodBaseWts": {
+                "Fruit": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1000, 1500}}"
+                    },
+                    "SubWt": 0.05
+                },
+                {
+                    "When": {
+                        "Season": "Spring, Summer, Fall"
+                    },
+                    "AddWt": 0.05
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest"
+                    },
+                    "AddWt": 0.25
+                }
+            ]
+        },
+        {
+            "ID": "ScarletTanager",
+            "AssetPath": "assets/ScarletTanager.png",
+            "SoundAssetPath": "assets/ScarletTanager.wav",
+            "Attributes": 2,
+            "MaxFlockSize": 2,
+            "Cautiousness": 5,
+            "FlapDuration": 350,
+            "FlySpeed": 5.5,
+            "PerchPreference": 5,
+            "BaseWt": 0.05,
+            "CanNestInTrees": true,
+            "FeederBaseWts": {
+                "Platform": 0.05
+            },
+            "FoodBaseWts": {
+                "Fruit": 0.05
+            },
+            "Conditions": [
+                {
+                    "When": {
+                        "Time": "{{Range: 1800, 2600}}"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Time": "{{Range: 1000, 1500}}"
+                    },
+                    "SubWt": 0.05
+                },
+                {
+                    "When": {
+                        "Season": "Spring, Summer, Fall"
+                    },
+                    "AddWt": 0.05
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "void, desert"
+                    },
+                    "NilWt": true
+                },
+                {
+                    "When": {
+                        "Ivy.OrnithologistsGuild/LocationBiome": "forest"
+                    },
+                    "AddWt": 0.25
+                }
+            ]
+        }
+    ]
+}

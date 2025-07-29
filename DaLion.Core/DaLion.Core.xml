@@ -715,6 +715,13 @@
         <member name="T:DaLion.Core.Framework.Extensions.GameLocationExtensions">
             <summary>Extensions for the <see cref="T:StardewValley.GameLocation"/> class.</summary>
         </member>
+        <member name="M:DaLion.Core.Framework.Extensions.GameLocationExtensions.TryGetHopperAt(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2,StardewValley.Objects.Chest@)">
+            <summary>Checks if there is a hopper at the specified <paramref name="tile"/> in the <paramref name="location"/>.</summary>
+            <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
+            <param name="tile">The <see cref="T:Microsoft.Xna.Framework.Vector2"/> tile coordinates.</param>
+            <param name="hopper">A <see cref="T:StardewValley.Objects.Chest"/> reference to the hopper, if found. Otherwise <see langword="null"/>.</param>
+            <returns><see langword="true"/> if the instance is a hopper chest, otherwise <see langword="false"/>.</returns>
+        </member>
         <member name="M:DaLion.Core.Framework.Extensions.GameLocationExtensions.DoLightningBarrage(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2,System.Int32,StardewValley.Farmer)">
             <summary>Triggers a barrage of lightning strikes at the specified <paramref name="tileLocation"/>.</summary>
             <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
@@ -879,6 +886,15 @@
             <summary>Checks the pixel offset to clear the <paramref name="monster"/>s head.</summary>
             <param name="monster">The <see cref="T:StardewValley.Monsters.Monster"/>.</param>
             <returns>The X and Y offsets as a <see cref="T:Microsoft.Xna.Framework.Vector2"/>.</returns>
+        </member>
+        <member name="T:DaLion.Core.Framework.Extensions.SObjectExtensions">
+            <summary>Extensions for the <see cref="T:StardewValley.Object"/> class.</summary>
+        </member>
+        <member name="M:DaLion.Core.Framework.Extensions.SObjectExtensions.TryGetHopper(StardewValley.Object,StardewValley.Objects.Chest@)">
+            <summary>Checks if the <paramref name="object"/> instance is a hopper chest, and if so returns a <see cref="T:StardewValley.Objects.Chest"/> reference to the instance.</summary>
+            <param name="object">The <see cref="T:StardewValley.Object"/>.</param>
+            <param name="hopper">A <see cref="T:StardewValley.Objects.Chest"/> reference to the <paramref name="@object"/>, if applicable. Otherwise <see langword="null"/>.</param>
+            <returns><see langword="true"/> if the instance is a hopper chest, otherwise <see langword="false"/>.</returns>
         </member>
         <member name="T:DaLion.Core.Framework.Extensions.SpriteBatchExtensions">
             <summary>Extensions for the <see cref="T:Microsoft.Xna.Framework.Graphics.SpriteBatch"/> class.</summary>
@@ -1075,6 +1091,14 @@
         </member>
         <member name="M:DaLion.Core.Framework.Patchers.ObjectDrawPatcher.ObjectDrawPrefix(StardewValley.Object,Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Int32,System.Int32,System.Single)">
             <summary>Patch to draw colored Slime Balls.</summary>
+        </member>
+        <member name="M:DaLion.Core.Framework.Patchers.ObjectMinutesElapsedPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Core.Framework.Patchers.ObjectMinutesElapsedPatcher"/> class.</summary>
+            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
+            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
+        </member>
+        <member name="M:DaLion.Core.Framework.Patchers.ObjectMinutesElapsedPatcher.ObjectMinutesElapsedPostfix(StardewValley.Object)">
+            <summary>Patch to make Hopper actually useful. Attempt load to chest underneath.</summary>
         </member>
         <member name="M:DaLion.Core.Framework.Patchers.ObjectOnReadyForHarvestPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Core.Framework.Patchers.ObjectOnReadyForHarvestPatcher"/> class.</summary>
@@ -1293,6 +1317,9 @@
         <member name="T:DaLion.Core.I18n.Keys">
             <summary>A lookup of available translation keys.</summary>
         </member>
+        <member name="F:DaLion.Core.I18n.Keys.Schema">
+            <summary>The unique key for a translation equivalent to "https://smapi.io/schemas/i18n.json".</summary>
+        </member>
         <member name="F:DaLion.Core.I18n.Keys.Ui_Buffs_Burnt_Damage">
             <summary>The unique key for a translation equivalent to "-50% Damage".</summary>
         </member>
@@ -1329,6 +1356,9 @@
         <member name="M:DaLion.Core.I18n.Init(StardewModdingAPI.ITranslationHelper)">
             <summary>Construct an instance.</summary>
             <param name="translations">The mod's translation helper.</param>
+        </member>
+        <member name="M:DaLion.Core.I18n.Schema">
+            <summary>Get a translation equivalent to "https://smapi.io/schemas/i18n.json".</summary>
         </member>
         <member name="M:DaLion.Core.I18n.Ui_Buffs_Burnt_Damage">
             <summary>Get a translation equivalent to "-50% Damage".</summary>
@@ -1369,7 +1399,7 @@
             <summary>Get a translation by its key.</summary>
             <param name="key">The translation key.</param>
             <param name="tokens">An object containing token key/value pairs. This can be an anonymous object (like <c>new { value = 42, name = "Cranberries" }</c>), a dictionary, or a class instance.</param>
-            <remarks>You should usually use a strongly-typed method like <see cref="M:DaLion.Core.I18n.Ui_Buffs_Burnt_Damage" /> instead.</remarks>
+            <remarks>You should usually use a strongly-typed method like <see cref="M:DaLion.Core.I18n.Schema" /> instead.</remarks>
         </member>
         <member name="T:DaLion.Shared.Attributes.DebugAttribute">
             <summary>Indicates that an implicitly-used marked symbol should only be available in debug mode.</summary>
@@ -1471,227 +1501,6 @@
         </member>
         <member name="F:DaLion.Shared.Constants.MathConstants.PHI">
             <summary>The golden ratio.</summary>
-        </member>
-        <member name="T:DaLion.Shared.Enums.FacingDirection">
-            <summary>The direction which a <see cref="T:StardewValley.Character"/> is facing.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.FacingDirection.Up">
-            <summary>The up direction.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.FacingDirection.Right">
-            <summary>The right direction.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.FacingDirection.Down">
-            <summary>The down direction.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.FacingDirection.Left">
-            <summary>The left direction.</summary>
-        </member>
-        <member name="T:DaLion.Shared.Enums.FacingDirectionExtensions">
-            <summary>Extensions for the <see cref="T:DaLion.Shared.Enums.FacingDirection"/> enum.</summary>
-            <summary>Extensions for the <see cref="T:DaLion.Shared.Enums.Direction"/> enum.</summary>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.IsHorizontal(DaLion.Shared.Enums.FacingDirection)">
-            <summary>Checks whether the <see cref="T:DaLion.Shared.Enums.FacingDirection"/> is left or right.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.FacingDirection"/>.</param>
-            <returns><see langword="true"/> if <paramref name="direction"/> is left or right, otherwise <see langword="false"/>.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.IsVertical(DaLion.Shared.Enums.FacingDirection)">
-            <summary>Checks whether the <see cref="T:DaLion.Shared.Enums.FacingDirection"/> is up or down.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.FacingDirection"/>.</param>
-            <returns><see langword="true"/> if <paramref name="direction"/> is up or down, otherwise <see langword="false"/>.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.Opposite(DaLion.Shared.Enums.FacingDirection)">
-            <summary>Gets the opposite <see cref="T:DaLion.Shared.Enums.FacingDirection"/>.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.FacingDirection"/>.</param>
-            <returns>The opposite direction.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.NextClockwise(DaLion.Shared.Enums.FacingDirection)">
-            <summary>Gets the opposite <see cref="T:DaLion.Shared.Enums.FacingDirection"/>.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.FacingDirection"/>.</param>
-            <returns>The opposite direction.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.NextAntiClockwise(DaLion.Shared.Enums.FacingDirection)">
-            <summary>Gets the opposite <see cref="T:DaLion.Shared.Enums.FacingDirection"/>.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.FacingDirection"/>.</param>
-            <returns>The opposite direction.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.AngleWith(DaLion.Shared.Enums.FacingDirection,DaLion.Shared.Enums.FacingDirection)">
-            <summary>Gets the angle between two <see cref="T:DaLion.Shared.Enums.FacingDirection"/>s.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.FacingDirection"/>.</param>
-            <param name="other">Another <see cref="T:DaLion.Shared.Enums.FacingDirection"/>.</param>
-            <returns>The angle between the two directions, in degrees.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.ToVector(DaLion.Shared.Enums.FacingDirection)">
-            <summary>Gets a unit vector which points in the specified direction.</summary>
-            <param name="direction">A <see cref="T:DaLion.Shared.Enums.FacingDirection"/>.</param>
-            <returns>A unit <see cref="T:Microsoft.Xna.Framework.Vector2"/> pointing towards <paramref name="direction"/>.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.IsHorizontal(DaLion.Shared.Enums.Direction)">
-            <summary>Checks whether the <see cref="T:DaLion.Shared.Enums.Direction"/> is left or right.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
-            <returns><see langword="true"/> if <paramref name="direction"/> is left or right, otherwise <see langword="false"/>.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.IsVertical(DaLion.Shared.Enums.Direction)">
-            <summary>Checks whether the <see cref="T:DaLion.Shared.Enums.Direction"/> is up or down.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
-            <returns><see langword="true"/> if <paramref name="direction"/> is up or down, otherwise <see langword="false"/>.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.Invert(DaLion.Shared.Enums.Direction)">
-            <summary>Gets the opposite <see cref="T:DaLion.Shared.Enums.Direction"/>.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
-            <returns>The opposite direction.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.NextClockwise(DaLion.Shared.Enums.Direction)">
-            <summary>Gets the opposite <see cref="T:DaLion.Shared.Enums.Direction"/>.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
-            <returns>The opposite direction.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.NextAntiClockwise(DaLion.Shared.Enums.Direction)">
-            <summary>Gets the opposite <see cref="T:DaLion.Shared.Enums.Direction"/>.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
-            <returns>The opposite direction.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.AngleWith(DaLion.Shared.Enums.Direction,DaLion.Shared.Enums.Direction)">
-            <summary>Gets the angle between two <see cref="T:DaLion.Shared.Enums.Direction"/>s.</summary>
-            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
-            <param name="other">Another <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
-            <returns>The angle between the two directions, in degrees.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.FacingDirectionExtensions.ToVector(DaLion.Shared.Enums.Direction)">
-            <summary>Gets a unit vector which points in the specified direction.</summary>
-            <param name="direction">A <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
-            <returns>A unit <see cref="T:Microsoft.Xna.Framework.Vector2"/> pointing towards <paramref name="direction"/>.</returns>
-        </member>
-        <member name="T:DaLion.Shared.Enums.ObjectCategory">
-            <summary>A <see cref="T:StardewValley.Object"/> category.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.None">
-            <summary>No particular category.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Gems">
-            <summary>The category for gemstones.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Fish">
-            <summary>The category for fish.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Eggs">
-            <summary>The category for eggs.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Milk">
-            <summary>The category for milk.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Cooking">
-            <summary>The category for cooking ingredients.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Crafting">
-            <summary>The category for crafting materials.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Minerals">
-            <summary>The category for minerals.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Meats">
-            <summary>The category for meats (unused in vanilla).</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Metals">
-            <summary>The category for metal ores and bars.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.AnimalGoods">
-            <summary>The category for animal goods.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Junk">
-            <summary>The category for junk items.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.ArtisanGoods">
-            <summary>The category for artisan goods.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Syrups">
-            <summary>The category for saps and syrups.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.MonsterLoot">
-            <summary>The category for monster loot.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Seeds">
-            <summary>The category for seeds.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Vegetables">
-            <summary>The category for vegetables.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Fruits">
-            <summary>The category for fruits.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Flowers">
-            <summary>The category for flowers.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Greens">
-            <summary>The category for foraged goods.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Rings">
-            <summary>The category for rings.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectCategory.Artifacts">
-            <summary>Special case category for artifacts.</summary>
-        </member>
-        <member name="T:DaLion.Shared.Enums.Direction">
-            <summary>Represents a cardinal direction in the game world.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.Direction.Up">
-            <summary>The up direction.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.Direction.Right">
-            <summary>The right direction.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.Direction.Down">
-            <summary>The down direction.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.Direction.Left">
-            <summary>The left direction.</summary>
-        </member>
-        <member name="T:DaLion.Shared.Enums.ObjectQuality">
-            <summary>The star quality of an <see cref="T:StardewValley.Object"/>.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectQuality.Regular">
-            <summary>Regular quality.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectQuality.Silver">
-            <summary>Silver quality.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectQuality.Gold">
-            <summary>Gold quality.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.ObjectQuality.Iridium">
-            <summary>Iridium quality.</summary>
-        </member>
-        <member name="T:DaLion.Shared.Enums.QualityExtensions">
-            <summary>Extensions for the <see cref="T:DaLion.Shared.Enums.ObjectQuality"/> enum.</summary>
-        </member>
-        <member name="M:DaLion.Shared.Enums.QualityExtensions.Increment(DaLion.Shared.Enums.ObjectQuality)">
-            <summary>Improves a <see cref="T:DaLion.Shared.Enums.ObjectQuality"/> level by one stage.</summary>
-            <param name="quality">The <see cref="T:DaLion.Shared.Enums.ObjectQuality"/>.</param>
-            <returns>The <see cref="T:DaLion.Shared.Enums.ObjectQuality"/> one stage higher than <paramref name="quality"/>.</returns>
-        </member>
-        <member name="M:DaLion.Shared.Enums.QualityExtensions.Decrement(DaLion.Shared.Enums.ObjectQuality)">
-            <summary>Lowers a <see cref="T:DaLion.Shared.Enums.ObjectQuality"/> level by one stage.</summary>
-            <param name="quality">The <see cref="T:DaLion.Shared.Enums.ObjectQuality"/>.</param>
-            <returns>The <see cref="T:DaLion.Shared.Enums.ObjectQuality"/> one stage lower than <paramref name="quality"/>.</returns>
-        </member>
-        <member name="T:DaLion.Shared.Enums.WeaponType">
-            <summary>The actual type of <see cref="T:StardewValley.Tools.MeleeWeapon"/> or <see cref="T:StardewValley.Tools.Slingshot"/>.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.WeaponType.StabbingSword">
-            <summary>The <see cref="F:StardewValley.Tools.MeleeWeapon.stabbingSword"/> type.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.WeaponType.Dagger">
-            <summary>The <see cref="F:StardewValley.Tools.MeleeWeapon.dagger"/> type.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.WeaponType.Club">
-            <summary>The <see cref="F:StardewValley.Tools.MeleeWeapon.club"/> type.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.WeaponType.DefenseSword">
-            <summary>The <see cref="F:StardewValley.Tools.MeleeWeapon.defenseSword"/> type.</summary>
-        </member>
-        <member name="F:DaLion.Shared.Enums.WeaponType.Slingshot">
-            <summary>The <see cref="F:DaLion.Shared.Enums.WeaponType.Slingshot"/> type.</summary>
         </member>
         <member name="T:DaLion.Shared.Events.ButtonDoublePressUpdateTickedEvent">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Shared.Events.ButtonDoublePressReleasedEvent"/> class, used for detecting double-press-and-hold events.</summary>
@@ -3424,6 +3233,13 @@
             <param name="r">A <see cref="T:System.Random"/> number generator.</param>
             <returns>A random <typeparamref name="T"/> element from within <paramref name="enumerable"/>.</returns>
         </member>
+        <member name="M:DaLion.Shared.Extensions.Collections.EnumerableExtensions.Shuffle``1(System.Collections.Generic.IEnumerable{``0},System.Random)">
+            <summary>Shuffles the elements in the specified <paramref name="enumerable"/>.</summary>
+            <typeparam name="T">The type of elements in the <paramref name="enumerable"/>.</typeparam>
+            <param name="enumerable">An <see cref="T:System.Collections.Generic.IEnumerable`1"/>.</param>
+            <param name="r">A <see cref="T:System.Random"/> number generator.</param>
+            <returns>The <paramref name="enumerable"/> with shuffled elements.</returns>
+        </member>
         <member name="M:DaLion.Shared.Extensions.Collections.EnumerableExtensions.StandardDeviation(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>Calculates the standard deviation of the <paramref name="values"/>.</summary>
             <param name="values">An <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:System.Int32"/> values.</param>
@@ -3571,6 +3387,7 @@
             <typeparam name="T">The type of elements in the list.</typeparam>
             <param name="list">The <see cref="T:System.Collections.Generic.IList`1"/>.</param>
             <param name="r">A <see cref="T:System.Random"/> number generator.</param>
+            <returns>The same <paramref name="list"/>, with shuffled elements.</returns>
         </member>
         <member name="T:DaLion.Shared.Extensions.SMAPI.SButtonExtensions">
             <summary>Extensions for the <see cref="T:StardewModdingAPI.SButton"/> enum.</summary>
@@ -4055,6 +3872,12 @@
             <returns><see langword="true"/> if the <paramref name="location"/> is a <see cref="T:StardewValley.Locations.MineShaft"/> or one of several recognized dungeon locations, otherwise <see langword="false"/>.</returns>
             <remarks>Includes locations from Stardew Valley Expanded, Ridgeside Village and Moon Misadventures.</remarks>
         </member>
+        <member name="M:DaLion.Shared.Extensions.Stardew.GameLocationExtensions.HasStoneAt(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
+            <summary>Determines whether there is a stone at the specified <paramref name="tile"/>.</summary>
+            <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
+            <param name="tile">The <see cref="T:Microsoft.Xna.Framework.Vector2"/> tile position.</param>
+            <returns><see langword="true"/> if there is a stone at the specified <paramref name="tile"/>, otherwise <see langword="false"/>.</returns>
+        </member>
         <member name="M:DaLion.Shared.Extensions.Stardew.GameLocationExtensions.IsActionableTile(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2,StardewValley.Farmer)">
             <summary>Determines whether there is anything to interact with in the specified <paramref name="tile"></paramref>.</summary>
             <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
@@ -4133,11 +3956,6 @@
             <param name="item">The <see cref="T:StardewValley.Item"/>.</param>
             <returns><see langword="true"/> if the <paramref name="item"/> is a forage item typically found at the beach, otherwise <see langword="false"/>.</returns>
         </member>
-        <member name="M:DaLion.Shared.Extensions.Stardew.ItemExtensions.IsStone(StardewValley.Item)">
-            <summary>Determines whether the <paramref name="item"/> is a simple Stone.</summary>
-            <param name="item">The <see cref="T:StardewValley.Item"/>.</param>
-            <returns><see langword="true"/> if the <paramref name="item"/> is a mining node not containing only stone, otherwise <see langword="false"/>.</returns>
-        </member>
         <member name="M:DaLion.Shared.Extensions.Stardew.ItemExtensions.IsTwig(StardewValley.Item)">
             <summary>Determines whether the <paramref name="item"/> is a twig.</summary>
             <param name="item">The <see cref="T:StardewValley.Item"/>.</param>
@@ -4150,6 +3968,11 @@
         </member>
         <member name="T:DaLion.Shared.Extensions.Stardew.SpriteBatchExtensions">
             <summary>Extensions for the <see cref="T:Microsoft.Xna.Framework.Graphics.SpriteBatch"/> class.</summary>
+        </member>
+        <member name="M:DaLion.Shared.Extensions.Stardew.SpriteBatchExtensions.DrawHealthIcon(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2)">
+            <summary>Draws health icon.</summary>
+            <param name="batch">The <see cref="T:Microsoft.Xna.Framework.Graphics.SpriteBatch"/>.</param>
+            <param name="position">The <see cref="T:Microsoft.Xna.Framework.Vector2"/> position.</param>
         </member>
         <member name="M:DaLion.Shared.Extensions.Stardew.SpriteBatchExtensions.DrawAttackIcon(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2)">
             <summary>Draws attack icon.</summary>
@@ -4301,6 +4124,12 @@
             <param name="farmer">The <see cref="T:StardewValley.Farmer"/>.</param>
             <returns>The number of completed Monster Eradication goals.</returns>
         </member>
+        <member name="M:DaLion.Shared.Extensions.Stardew.FarmerExtensions.GetScreenId(StardewValley.Farmer,StardewModdingAPI.IMultiplayerHelper)">
+            <summary>Gets the screen ID of the <paramref name="farmer"/>. </summary>
+            <param name="farmer">The <see cref="T:StardewValley.Farmer"/>.</param>
+            <param name="helper">The <see cref="T:StardewModdingAPI.IMultiplayerHelper"/> API.</param>
+            <returns>The <paramref name="farmer"/>'s screen ID.</returns>
+        </member>
         <member name="T:DaLion.Shared.Extensions.Stardew.MeleeWeaponExtensions">
             <summary>Extensions for the <see cref="T:StardewValley.Tools.MeleeWeapon"/> class.</summary>
         </member>
@@ -4351,6 +4180,11 @@
             </summary>
             <param name="monster">The <see cref="T:StardewValley.Monsters.Monster"/>.</param>
             <returns><see langword="true"/> if the <paramref name="monster"/> is a <see cref="T:StardewValley.Monsters.GreenSlime"/> or <see cref="T:StardewValley.Monsters.BigSlime"/>, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:DaLion.Shared.Extensions.Stardew.MonsterExtensions.IsTigerSlime(StardewValley.Monsters.GreenSlime)">
+            <summary>Determines whether the <paramref name="slime"/> is a Tiger Slime.</summary>
+            <param name="slime">The <see cref="T:StardewValley.Monsters.GreenSlime"/>.</param>
+            <returns><see langword="true"/> if the <paramref name="slime"/>'s name is "Tiger Slime", otherwise <see langword="false"/>.</returns>
         </member>
         <member name="M:DaLion.Shared.Extensions.Stardew.MonsterExtensions.IsUndead(StardewValley.Monsters.Monster)">
             <summary>Determines whether the <paramref name="monster"/> is an undead being or void spirit.</summary>
@@ -4688,15 +4522,15 @@
             <param name="rectangle">The <see cref="T:Microsoft.Xna.Framework.Rectangle"/>.</param>
             <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1"/>, where <see cref="F:Microsoft.Xna.Framework.Vector2.X"/> and <see cref="F:Microsoft.Xna.Framework.Vector2.Y"/> represent the coordinates of tiles contained by the <paramref name="rectangle"/>.</returns>
         </member>
-        <member name="M:DaLion.Shared.Extensions.Stardew.RectangleExtensions.Highlight(Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Nullable{Microsoft.Xna.Framework.Vector2})">
-            <summary>Highlights the <paramref name="rectangle"/> with the specified <paramref name="color"/>.</summary>
+        <member name="M:DaLion.Shared.Extensions.Stardew.RectangleExtensions.TileHighlight(Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Nullable{Microsoft.Xna.Framework.Vector2})">
+            <summary>Highlights the tile defined by the specified <paramref name="rectangle"/> with the specified <paramref name="color"/>.</summary>
             <param name="rectangle">The <see cref="T:Microsoft.Xna.Framework.Rectangle"/>.</param>
             <param name="color">Border color.</param>
             <param name="batch"><see cref="T:Microsoft.Xna.Framework.Graphics.SpriteBatch"/> to draw to.</param>
             <param name="offset">An optional offset.</param>
         </member>
-        <member name="M:DaLion.Shared.Extensions.Stardew.RectangleExtensions.DrawBorder(Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Int32)">
-            <summary>Draws the <paramref name="rectangle"/>'s border.</summary>
+        <member name="M:DaLion.Shared.Extensions.Stardew.RectangleExtensions.BorderHighlight(Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Int32)">
+            <summary>Highlights the border of the tile defined by the specified <paramref name="rectangle"/> with the specified <paramref name="color"/>.</summary>
             <param name="rectangle">The <see cref="T:Microsoft.Xna.Framework.Rectangle"/>.</param>
             <param name="color">Border color.</param>
             <param name="batch"><see cref="T:Microsoft.Xna.Framework.Graphics.SpriteBatch"/> to draw to.</param>
@@ -4791,6 +4625,20 @@
             <param name="distance">The actual tile distance to the closest candidate found.</param>
             <param name="predicate">An optional condition with which to filter out candidates.</param>
             <returns>The closest target from among the specified <paramref name="candidates"/> to this <paramref name="vector"/>.</returns>
+        </member>
+        <member name="M:DaLion.Shared.Extensions.Stardew.Vector2Extensions.TileHighlight(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Nullable{Microsoft.Xna.Framework.Vector2})">
+            <summary>Highlights the tile at the position defined by the specified <paramref name="vector"/> with the specified <paramref name="color"/>.</summary>
+            <param name="vector">The <see cref="T:Microsoft.Xna.Framework.Vector2"/>.</param>
+            <param name="color">Border color.</param>
+            <param name="batch"><see cref="T:Microsoft.Xna.Framework.Graphics.SpriteBatch"/> to draw to.</param>
+            <param name="offset">An optional offset.</param>
+        </member>
+        <member name="M:DaLion.Shared.Extensions.Stardew.Vector2Extensions.BorderHighlight(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Int32)">
+            <summary>Highlights the border of the tile at the position defined by the specified <paramref name="vector"/> with the specified <paramref name="color"/>.</summary>
+            <param name="vector">The <see cref="T:Microsoft.Xna.Framework.Vector2"/>.</param>
+            <param name="color">Border color.</param>
+            <param name="batch"><see cref="T:Microsoft.Xna.Framework.Graphics.SpriteBatch"/> to draw to.</param>
+            <param name="thickness">Border thickness.</param>
         </member>
         <member name="T:DaLion.Shared.Extensions.DoubleExtensions">
             <summary>Extensions for the primitive <see cref="T:System.Double"/> type.</summary>
@@ -5469,15 +5317,16 @@
             <param name="vector">The <see cref="T:Microsoft.Xna.Framework.Vector2"/>.</param>
             <returns>Two unit vectors which point in the same direction as the components of <paramref name="vector"/>.</returns>
         </member>
-        <member name="M:DaLion.Shared.Extensions.Xna.Vector2Extensions.FloodFill(Microsoft.Xna.Framework.Vector2,System.Int32,System.Int32,System.Func{Microsoft.Xna.Framework.Vector2,System.Boolean},System.Int32,System.Int32)">
+        <member name="M:DaLion.Shared.Extensions.Xna.Vector2Extensions.FloodFill(Microsoft.Xna.Framework.Vector2,System.Int32,System.Int32,System.Func{Microsoft.Xna.Framework.Vector2,System.Boolean},System.Int32,System.Int32,System.Int32)">
             <summary>Searches for region boundaries using a Flood Fill algorithm.</summary>
             <param name="origin">The starting point for the fill, as a <see cref="T:Microsoft.Xna.Framework.Vector2"/>.</param>
             <param name="width">The width of the region.</param>
             <param name="height">The height of the region.</param>
             <param name="boundary">The boundary condition.</param>
-            <param name="minDistance">The shortest Chebyshev distance acceptable from the origin.</param>
-            <param name="maxDistance">The largest Chebyshev distance acceptable from the origin.</param>
-            <returns>The list of <see cref="T:Microsoft.Xna.Framework.Vector2"/>s belonging to the enclosed region.</returns>
+            <param name="minDistance">The shortest Manhattan distance acceptable from the origin.</param>
+            <param name="maxDistance">The largest Manhattan distance acceptable from the origin.</param>
+            <param name="maxSteps">The maximum allowed number of iterations for the algorithm.</param>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <see cref="T:Microsoft.Xna.Framework.Vector2"/>s belonging to the enclosed region and their respective Manhattan distances from the origin.</returns>
         </member>
         <member name="T:DaLion.Shared.Extensions.ArrayExtensions">
             <summary>Extensions for generic arrays of objects.</summary>
@@ -6403,7 +6252,7 @@
         <member name="T:DaLion.Shared.Classes.CircleTileGrid">
             <summary>Represents a circular grid of tiles.</summary>
         </member>
-        <member name="M:DaLion.Shared.Classes.CircleTileGrid.#ctor(Microsoft.Xna.Framework.Vector2,System.UInt32)">
+        <member name="M:DaLion.Shared.Classes.CircleTileGrid.#ctor(Microsoft.Xna.Framework.Vector2,System.Int32)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Shared.Classes.CircleTileGrid"/> class.</summary>
             <param name="origin">The center tile of the circle in the world reference.</param>
             <param name="radius">The radius of the circle in tile units.</param>
@@ -6797,6 +6646,188 @@
         </member>
         <member name="M:DaLion.Shared.Content.TextureProvider.Provide(StardewModdingAPI.Events.AssetRequestedEventArgs)">
             <inheritdoc />
+        </member>
+        <member name="T:DaLion.Shared.Enums.ObjectCategory">
+            <summary>A <see cref="T:StardewValley.Object"/> category.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.None">
+            <summary>No particular category.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Gems">
+            <summary>The category for gemstones.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Fish">
+            <summary>The category for fish.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Eggs">
+            <summary>The category for eggs.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Milk">
+            <summary>The category for milk.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Cooking">
+            <summary>The category for cooking ingredients.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Crafting">
+            <summary>The category for crafting materials.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Minerals">
+            <summary>The category for minerals.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Meats">
+            <summary>The category for meats (unused in vanilla).</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Metals">
+            <summary>The category for metal ores and bars.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.AnimalGoods">
+            <summary>The category for animal goods.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Junk">
+            <summary>The category for junk items.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.ArtisanGoods">
+            <summary>The category for artisan goods.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Syrups">
+            <summary>The category for saps and syrups.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.MonsterLoot">
+            <summary>The category for monster loot.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Seeds">
+            <summary>The category for seeds.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Vegetables">
+            <summary>The category for vegetables.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Fruits">
+            <summary>The category for fruits.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Flowers">
+            <summary>The category for flowers.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Greens">
+            <summary>The category for foraged goods.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Rings">
+            <summary>The category for rings.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Artifacts">
+            <summary>Special case category for artifacts.</summary>
+        </member>
+        <member name="T:DaLion.Shared.Enums.Direction">
+            <summary>Represents a cardinal direction in the game world.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.Direction.Up">
+            <summary>The up direction.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.Direction.Right">
+            <summary>The right direction.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.Direction.Down">
+            <summary>The down direction.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.Direction.Left">
+            <summary>The left direction.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.Direction.Undefined">
+            <summary>An illegal direction.</summary>
+        </member>
+        <member name="T:DaLion.Shared.Enums.DirectionExtensions">
+            <summary>Extensions for the <see cref="T:DaLion.Shared.Enums.Direction"/> enum.</summary>
+        </member>
+        <member name="M:DaLion.Shared.Enums.DirectionExtensions.IsHorizontal(DaLion.Shared.Enums.Direction)">
+            <summary>Checks whether the <see cref="T:DaLion.Shared.Enums.Direction"/> is left or right.</summary>
+            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
+            <returns><see langword="true"/> if <paramref name="direction"/> is left or right, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:DaLion.Shared.Enums.DirectionExtensions.IsVertical(DaLion.Shared.Enums.Direction)">
+            <summary>Checks whether the <see cref="T:DaLion.Shared.Enums.Direction"/> is up or down.</summary>
+            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
+            <returns><see langword="true"/> if <paramref name="direction"/> is up or down, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:DaLion.Shared.Enums.DirectionExtensions.Inverse(DaLion.Shared.Enums.Direction)">
+            <summary>Gets the opposite <see cref="T:DaLion.Shared.Enums.Direction"/>.</summary>
+            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
+            <returns>The opposite direction.</returns>
+        </member>
+        <member name="M:DaLion.Shared.Enums.DirectionExtensions.NextClockwise(DaLion.Shared.Enums.Direction)">
+            <summary>Gets the opposite <see cref="T:DaLion.Shared.Enums.Direction"/>.</summary>
+            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
+            <returns>The opposite direction.</returns>
+        </member>
+        <member name="M:DaLion.Shared.Enums.DirectionExtensions.NextAntiClockwise(DaLion.Shared.Enums.Direction)">
+            <summary>Gets the opposite <see cref="T:DaLion.Shared.Enums.Direction"/>.</summary>
+            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
+            <returns>The opposite direction.</returns>
+        </member>
+        <member name="M:DaLion.Shared.Enums.DirectionExtensions.AngleBetween(DaLion.Shared.Enums.Direction,DaLion.Shared.Enums.Direction)">
+            <summary>Gets the angle between two <see cref="T:DaLion.Shared.Enums.Direction"/>s, in degrees.</summary>
+            <param name="direction">The <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
+            <param name="other">Another <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
+            <returns>The angle between the two directions, in degrees.</returns>
+        </member>
+        <member name="M:DaLion.Shared.Enums.DirectionExtensions.Degrees(DaLion.Shared.Enums.Direction)">
+            <summary>Gets the angle which points in this direction, in degrees.</summary>
+            <param name="direction">A <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
+            <returns>The angle which points in this direction, in degrees.</returns>
+        </member>
+        <member name="M:DaLion.Shared.Enums.DirectionExtensions.Radians(DaLion.Shared.Enums.Direction)">
+            <summary>Gets the angle which points in this direction, in radians.</summary>
+            <param name="direction">A <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
+            <returns>The angle which points in this direction, in radians.</returns>
+        </member>
+        <member name="M:DaLion.Shared.Enums.DirectionExtensions.ToVector(DaLion.Shared.Enums.Direction)">
+            <summary>Gets a unit vector which points in the specified direction.</summary>
+            <param name="direction">A <see cref="T:DaLion.Shared.Enums.Direction"/>.</param>
+            <returns>A unit <see cref="T:Microsoft.Xna.Framework.Vector2"/> pointing towards <paramref name="direction"/>.</returns>
+        </member>
+        <member name="T:DaLion.Shared.Enums.ObjectQuality">
+            <summary>The star quality of an <see cref="T:StardewValley.Object"/>.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectQuality.Regular">
+            <summary>Regular quality.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectQuality.Silver">
+            <summary>Silver quality.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectQuality.Gold">
+            <summary>Gold quality.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectQuality.Iridium">
+            <summary>Iridium quality.</summary>
+        </member>
+        <member name="T:DaLion.Shared.Enums.QualityExtensions">
+            <summary>Extensions for the <see cref="T:DaLion.Shared.Enums.ObjectQuality"/> enum.</summary>
+        </member>
+        <member name="M:DaLion.Shared.Enums.QualityExtensions.Increment(DaLion.Shared.Enums.ObjectQuality)">
+            <summary>Improves a <see cref="T:DaLion.Shared.Enums.ObjectQuality"/> level by one stage.</summary>
+            <param name="quality">The <see cref="T:DaLion.Shared.Enums.ObjectQuality"/>.</param>
+            <returns>The <see cref="T:DaLion.Shared.Enums.ObjectQuality"/> one stage higher than <paramref name="quality"/>.</returns>
+        </member>
+        <member name="M:DaLion.Shared.Enums.QualityExtensions.Decrement(DaLion.Shared.Enums.ObjectQuality)">
+            <summary>Lowers a <see cref="T:DaLion.Shared.Enums.ObjectQuality"/> level by one stage.</summary>
+            <param name="quality">The <see cref="T:DaLion.Shared.Enums.ObjectQuality"/>.</param>
+            <returns>The <see cref="T:DaLion.Shared.Enums.ObjectQuality"/> one stage lower than <paramref name="quality"/>.</returns>
+        </member>
+        <member name="T:DaLion.Shared.Enums.WeaponType">
+            <summary>The actual type of <see cref="T:StardewValley.Tools.MeleeWeapon"/> or <see cref="T:StardewValley.Tools.Slingshot"/>.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.WeaponType.StabbingSword">
+            <summary>The <see cref="F:StardewValley.Tools.MeleeWeapon.stabbingSword"/> type.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.WeaponType.Dagger">
+            <summary>The <see cref="F:StardewValley.Tools.MeleeWeapon.dagger"/> type.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.WeaponType.Club">
+            <summary>The <see cref="F:StardewValley.Tools.MeleeWeapon.club"/> type.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.WeaponType.DefenseSword">
+            <summary>The <see cref="F:StardewValley.Tools.MeleeWeapon.defenseSword"/> type.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.WeaponType.Slingshot">
+            <summary>The <see cref="F:DaLion.Shared.Enums.WeaponType.Slingshot"/> type.</summary>
         </member>
         <member name="T:DaLion.Shared.Data.ModDataManager">
             <summary>Handles reading from and writing to the <see cref="T:StardewValley.Mods.ModDataDictionary"/> of different objects.</summary>
@@ -8707,7 +8738,7 @@
             <returns>The <typeparamref name="TGenericModConfigMenu"/> instance.</returns>
             <remarks>
                 You must also call <see cref="M:DaLion.Shared.Integrations.GMCM.GMCMBuilder`1.AddPageLink(System.String,System.Func{System.String},System.Func{System.String})"/> to make the page accessible. This is only needed to set up a
-                multi-page config UI. If you don't call this method, all options will be part of the mod's main config UI instead.
+                multipage config UI. If you don't call this method, all options will be part of the mod's main config UI instead.
             </remarks>
         </member>
         <member name="M:DaLion.Shared.Integrations.GMCM.GMCMBuilder`1.AddPageLink(System.String,System.Func{System.String},System.Func{System.String})">

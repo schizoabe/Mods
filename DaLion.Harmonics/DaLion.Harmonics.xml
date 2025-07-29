@@ -234,6 +234,17 @@
         <member name="M:DaLion.Harmonics.Framework.Events.HarmonicsReturnedToTitleEvent.OnReturnedToTitleImpl(System.Object,StardewModdingAPI.Events.ReturnedToTitleEventArgs)">
             <inheritdoc />
         </member>
+        <member name="T:DaLion.Harmonics.Framework.Events.HarmonicsSaveLoadedEvent">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Harmonics.Framework.Events.HarmonicsSaveLoadedEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="M:DaLion.Harmonics.Framework.Events.HarmonicsSaveLoadedEvent.#ctor(DaLion.Shared.Events.EventManager)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Harmonics.Framework.Events.HarmonicsSaveLoadedEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="M:DaLion.Harmonics.Framework.Events.HarmonicsSaveLoadedEvent.OnSaveLoadedImpl(System.Object,StardewModdingAPI.Events.SaveLoadedEventArgs)">
+            <inheritdoc />
+        </member>
         <member name="T:DaLion.Harmonics.Framework.GarnetEnchantment">
             <summary>The Garnet gemstone forge.</summary>
         </member>
@@ -1238,6 +1249,9 @@
         <member name="T:DaLion.Harmonics.I18n.Keys">
             <summary>A lookup of available translation keys.</summary>
         </member>
+        <member name="F:DaLion.Harmonics.I18n.Keys.Schema">
+            <summary>The unique key for a translation equivalent to "https://smapi.io/schemas/i18n.json".</summary>
+        </member>
         <member name="F:DaLion.Harmonics.I18n.Keys.Objects_Garnet_Name">
             <summary>The unique key for a translation equivalent to "Garnet".</summary>
         </member>
@@ -1385,6 +1399,9 @@
         <member name="M:DaLion.Harmonics.I18n.Init(StardewModdingAPI.ITranslationHelper)">
             <summary>Construct an instance.</summary>
             <param name="translations">The mod's translation helper.</param>
+        </member>
+        <member name="M:DaLion.Harmonics.I18n.Schema">
+            <summary>Get a translation equivalent to "https://smapi.io/schemas/i18n.json".</summary>
         </member>
         <member name="M:DaLion.Harmonics.I18n.Objects_Garnet_Name">
             <summary>Get a translation equivalent to "Garnet".</summary>
@@ -1542,7 +1559,7 @@
             <summary>Get a translation by its key.</summary>
             <param name="key">The translation key.</param>
             <param name="tokens">An object containing token key/value pairs. This can be an anonymous object (like <c>new { value = 42, name = "Cranberries" }</c>), a dictionary, or a class instance.</param>
-            <remarks>You should usually use a strongly-typed method like <see cref="M:DaLion.Harmonics.I18n.Objects_Garnet_Name" /> instead.</remarks>
+            <remarks>You should usually use a strongly-typed method like <see cref="M:DaLion.Harmonics.I18n.Schema" /> instead.</remarks>
         </member>
         <member name="T:NetEscapades.EnumGenerators.EnumExtensionsAttribute">
             <summary>

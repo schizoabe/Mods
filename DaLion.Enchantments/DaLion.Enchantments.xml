@@ -358,6 +358,21 @@
         <member name="M:DaLion.Enchantments.Framework.Enchantments.QuincyEnchantment.GetName">
             <inheritdoc />
         </member>
+        <member name="T:DaLion.Enchantments.Framework.Enchantments.SharpEnchantment">
+            <summary>Replaces the defensive parry special move with a stabbing lunge attack.</summary>
+        </member>
+        <member name="M:DaLion.Enchantments.Framework.Enchantments.SharpEnchantment.CanApplyTo(StardewValley.Item)">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Enchantments.Framework.Enchantments.SharpEnchantment.GetName">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Enchantments.Framework.Enchantments.SharpEnchantment._ApplyTo(StardewValley.Item)">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Enchantments.Framework.Enchantments.SharpEnchantment._UnapplyTo(StardewValley.Item)">
+            <inheritdoc />
+        </member>
         <member name="T:DaLion.Enchantments.Framework.Enchantments.StabbingEnchantment">
             <summary>Replaces the defensive parry special move with a stabbing lunge attack.</summary>
         </member>
@@ -816,6 +831,14 @@
         <member name="M:DaLion.Enchantments.Framework.Patchers.ToolAddEquipmentEffectsPatcher.ToolAddEquipmentEffectsPrefix(StardewValley.Tool,StardewValley.Buffs.BuffEffects)">
             <summary>Allow apply Master enchantment to other tools.</summary>
         </member>
+        <member name="M:DaLion.Enchantments.Framework.Patchers.ToolDoFunctionPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Enchantments.Framework.Patchers.ToolDoFunctionPatcher"/> class.</summary>
+            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
+            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
+        </member>
+        <member name="M:DaLion.Enchantments.Framework.Patchers.ToolDoFunctionPatcher.ToolDoFunctionTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.Emit.ILGenerator,System.Reflection.MethodBase)">
+            <summary>Apply Sharp enchantment to Pickaxe.</summary>
+        </member>
         <member name="M:DaLion.Enchantments.Framework.Patchers.ToolGetExtraSpaceNeededForTooltipSpecialIconsPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Enchantments.Framework.Patchers.ToolGetExtraSpaceNeededForTooltipSpecialIconsPatcher"/> class.</summary>
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
@@ -916,6 +939,9 @@
         <member name="T:DaLion.Enchantments.I18n.Keys">
             <summary>A lookup of available translation keys.</summary>
         </member>
+        <member name="F:DaLion.Enchantments.I18n.Keys.Schema">
+            <summary>The unique key for a translation equivalent to "https://smapi.io/schemas/i18n.json".</summary>
+        </member>
         <member name="F:DaLion.Enchantments.I18n.Keys.Enchantments_Carving_Name">
             <summary>The unique key for a translation equivalent to "Carving".</summary>
         </member>
@@ -938,7 +964,7 @@
             <summary>The unique key for a translation equivalent to "Greedy".</summary>
         </member>
         <member name="F:DaLion.Enchantments.I18n.Keys.Enchantments_Stabbing_Name">
-            <summary>The unique key for a translation equivalent to "Reaving".</summary>
+            <summary>The unique key for a translation equivalent to "Reckless".</summary>
         </member>
         <member name="F:DaLion.Enchantments.I18n.Keys.Enchantments_Sunburst_Name">
             <summary>The unique key for a translation equivalent to "Radiant".</summary>
@@ -957,6 +983,9 @@
         </member>
         <member name="F:DaLion.Enchantments.I18n.Keys.Enchantments_Echo_Name">
             <summary>The unique key for a translation equivalent to "Echoing".</summary>
+        </member>
+        <member name="F:DaLion.Enchantments.I18n.Keys.Enchantments_Sharp_Name">
+            <summary>The unique key for a translation equivalent to "Sharp".</summary>
         </member>
         <member name="F:DaLion.Enchantments.I18n.Keys.Gmcm_GemstoneSocketStyle_Title">
             <summary>The unique key for a translation equivalent to "Gemstone Socket Style".</summary>
@@ -989,6 +1018,9 @@
             <summary>Construct an instance.</summary>
             <param name="translations">The mod's translation helper.</param>
         </member>
+        <member name="M:DaLion.Enchantments.I18n.Schema">
+            <summary>Get a translation equivalent to "https://smapi.io/schemas/i18n.json".</summary>
+        </member>
         <member name="M:DaLion.Enchantments.I18n.Enchantments_Carving_Name">
             <summary>Get a translation equivalent to "Carving".</summary>
         </member>
@@ -1013,7 +1045,7 @@
             <summary>Get a translation equivalent to "Greedy".</summary>
         </member>
         <member name="M:DaLion.Enchantments.I18n.Enchantments_Stabbing_Name">
-            <summary>Get a translation equivalent to "Reaving".</summary>
+            <summary>Get a translation equivalent to "Reckless".</summary>
         </member>
         <member name="M:DaLion.Enchantments.I18n.Enchantments_Sunburst_Name">
             <summary>Get a translation equivalent to "Radiant".</summary>
@@ -1032,6 +1064,9 @@
         </member>
         <member name="M:DaLion.Enchantments.I18n.Enchantments_Echo_Name">
             <summary>Get a translation equivalent to "Echoing".</summary>
+        </member>
+        <member name="M:DaLion.Enchantments.I18n.Enchantments_Sharp_Name">
+            <summary>Get a translation equivalent to "Sharp".</summary>
         </member>
         <member name="M:DaLion.Enchantments.I18n.Gmcm_GemstoneSocketStyle_Title">
             <summary>Get a translation equivalent to "Gemstone Socket Style".</summary>
@@ -1064,7 +1099,7 @@
             <summary>Get a translation by its key.</summary>
             <param name="key">The translation key.</param>
             <param name="tokens">An object containing token key/value pairs. This can be an anonymous object (like <c>new { value = 42, name = "Cranberries" }</c>), a dictionary, or a class instance.</param>
-            <remarks>You should usually use a strongly-typed method like <see cref="M:DaLion.Enchantments.I18n.Enchantments_Carving_Name" /> instead.</remarks>
+            <remarks>You should usually use a strongly-typed method like <see cref="M:DaLion.Enchantments.I18n.Schema" /> instead.</remarks>
         </member>
         <member name="T:NetEscapades.EnumGenerators.EnumExtensionsAttribute">
             <summary>

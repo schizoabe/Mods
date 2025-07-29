@@ -1,5 +1,6 @@
 {
     //查询道具id : https://mateusaquino.github.io/stardewids/
+    //事件Key产生器 : https://sorrylab.com/StardewValley/TFMGenerator.html
     //GMCM
     "GMCM.SectionTitle.TheMutteringFarmer": "咕哝的农夫",
     "GMCM.Enable": "启用",
@@ -32,7 +33,7 @@
     "Inventory.GetItem(*):0": "捡到{item}了。",
     "Inventory.GetItem(*):1": "获得{item}了！",
     //#符号代表这个句子关联到其他句子，将使用该Key之句子替代。不可多层连续引用。
-    //#Fish为鱼分类之物品，优先及会大于(*)。支援物品分类共有#Vegetable、#Fruit、#Flower#Forage、#AnimalProduct、#Cooking、#Fish、#Junk。
+    //#Fish为鱼分类之物品，优先及会大于(*)。支援物品分类共有#Vegetable、#Fruit、#Flower、#Forage、#AnimalProduct、#Cooking、#Fish、#Junk。
     "Inventory.GetItem(#Fish):0": "#Inventory.GetItem(*)",
     //填入指定物品ID，則會出現專屬該物品之反應，優先及最高。
     "Inventory.GetItem(60):0": "#Inventory.GetItem(*)",
@@ -61,17 +62,13 @@
     //以下范例为见到Sam的专属对白。填入特定人物优先级将高于(*)。
     "Npc.Nearby(Sam)(Stranger):0": "#Npc.Nearby(*)(Stranger)",
     "Npc.Nearby(Sam)(Heart>=0):0": "#Npc.Nearby(*)(Heart>=0)",
-    "Npc.Nearby(Sam)(Heart>=4):0": "#Npc.Nearby(*)(Heart>=4)",
-    "DatingNpc.Nearby(*)(Heart>=0):0": "#Npc.Nearby(*)(Heart>=0)",
-    "DatingNpc.Nearby(*)(Heart>=4):0": "#Npc.Nearby(*)(Heart>=4)",
+    "DatingNpc.Nearby(*)(Heart>=0):0": "#Npc.Nearby(*)(Heart>=4)",
     //单一「_」符号为忽略。
     "DivorcedNpc.Nearby(*)(Heart>=0):0": "_",
-    "Spouse.Nearby(*)(Heart>=0):0": "#Npc.Nearby(*)(Heart>=0)",
-    "Spouse.Nearby(*)(Heart>=4):0": "#Npc.Nearby(*)(Heart>=4)",
-    "Roommate.Nearby(*)(Heart>=0):0": "#Npc.Nearby(*)(Heart>=0)",
-    "Roommate.Nearby(*)(Heart>=4):0": "#Npc.Nearby(*)(Heart>=4)",
+    "Spouse.Nearby(*)(Heart>=0):0": "#Npc.Nearby(*)(Heart>=4)",
+    "Roommate.Nearby(*)(Heart>=0):0": "#Npc.Nearby(*)(Heart>=4)",
     "Farmer.SelectTool(Hoe):0": "来耕地吧！",
-    "Farmer.SelectTool(Hoe):1": "准备挖土！",
+    "Farmer.SelectTool(Hoe):1": "准备挖掘！",
     "Farmer.SelectTool(Hoe):2": "切换锄头！",
     "Farmer.SelectTool(Pickaxe):0": "我要敲石头！",
     "Farmer.SelectTool(Pickaxe):1": "我想清除障碍...",

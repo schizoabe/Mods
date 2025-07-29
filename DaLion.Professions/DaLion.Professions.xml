@@ -58,6 +58,23 @@
         <member name="M:DaLion.Professions.Commands.EnrageCommand.CallbackImpl(System.String,System.String[])">
             <inheritdoc />
         </member>
+        <member name="T:DaLion.Professions.Commands.FixResetDataCommand">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Commands.FixSlingshotsCommand"/> class.</summary>
+            <param name="handler">The <see cref="T:DaLion.Shared.Commands.CommandHandler"/> instance that handles this command.</param>
+        </member>
+        <member name="M:DaLion.Professions.Commands.FixResetDataCommand.#ctor(DaLion.Shared.Commands.CommandHandler)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Commands.FixSlingshotsCommand"/> class.</summary>
+            <param name="handler">The <see cref="T:DaLion.Shared.Commands.CommandHandler"/> instance that handles this command.</param>
+        </member>
+        <member name="P:DaLion.Professions.Commands.FixResetDataCommand.Triggers">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Commands.FixResetDataCommand.Documentation">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Commands.FixResetDataCommand.CallbackImpl(System.String,System.String[])">
+            <inheritdoc />
+        </member>
         <member name="T:DaLion.Professions.Commands.FixSlingshotsCommand">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Commands.FixSlingshotsCommand"/> class.</summary>
             <param name="handler">The <see cref="T:DaLion.Shared.Commands.CommandHandler"/> instance that handles this command.</param>
@@ -93,11 +110,11 @@
             <inheritdoc />
         </member>
         <member name="T:DaLion.Professions.Commands.PipeSlimeCommand">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Commands.EnrageCommand"/> class.</summary>
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Commands.PipeSlimeCommand"/> class.</summary>
             <param name="handler">The <see cref="T:DaLion.Shared.Commands.CommandHandler"/> instance that handles this command.</param>
         </member>
         <member name="M:DaLion.Professions.Commands.PipeSlimeCommand.#ctor(DaLion.Shared.Commands.CommandHandler)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Commands.EnrageCommand"/> class.</summary>
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Commands.PipeSlimeCommand"/> class.</summary>
             <param name="handler">The <see cref="T:DaLion.Shared.Commands.CommandHandler"/> instance that handles this command.</param>
         </member>
         <member name="P:DaLion.Professions.Commands.PipeSlimeCommand.Triggers">
@@ -198,6 +215,23 @@
             <inheritdoc />
         </member>
         <member name="M:DaLion.Professions.Commands.SetCommand.CallbackImpl(System.String,System.String[])">
+            <inheritdoc />
+        </member>
+        <member name="T:DaLion.Professions.Commands.StartTreasureHuntCommand">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Commands.StartTreasureHuntCommand"/> class.</summary>
+            <param name="handler">The <see cref="T:DaLion.Shared.Commands.CommandHandler"/> instance that handles this command.</param>
+        </member>
+        <member name="M:DaLion.Professions.Commands.StartTreasureHuntCommand.#ctor(DaLion.Shared.Commands.CommandHandler)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Commands.StartTreasureHuntCommand"/> class.</summary>
+            <param name="handler">The <see cref="T:DaLion.Shared.Commands.CommandHandler"/> instance that handles this command.</param>
+        </member>
+        <member name="P:DaLion.Professions.Commands.StartTreasureHuntCommand.Triggers">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Commands.StartTreasureHuntCommand.Documentation">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Commands.StartTreasureHuntCommand.CallbackImpl(System.String,System.String[])">
             <inheritdoc />
         </member>
         <member name="M:DaLion.Professions.Framework.Buffs.BruteFrenzyBuff.OnAdded">
@@ -529,17 +563,6 @@
         <member name="M:DaLion.Professions.Framework.Events.Display.RenderedActiveMenu.MasteryWarningRenderedActiveMenuEvent.OnRenderedActiveMenuImpl(System.Object,StardewModdingAPI.Events.RenderedActiveMenuEventArgs)">
             <inheritdoc />
         </member>
-        <member name="T:DaLion.Professions.Framework.Events.Display.RenderedHud.ProspectorHuntRenderedHudEvent">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Display.RenderedHud.ProspectorHuntRenderedHudEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.Display.RenderedHud.ProspectorHuntRenderedHudEvent.#ctor(DaLion.Shared.Events.EventManager)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Display.RenderedHud.ProspectorHuntRenderedHudEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.Display.RenderedHud.ProspectorHuntRenderedHudEvent.OnRenderedHudImpl(System.Object,StardewModdingAPI.Events.RenderedHudEventArgs)">
-            <inheritdoc />
-        </member>
         <member name="T:DaLion.Professions.Framework.Events.Display.RenderedHud.ProspectorRenderedHudEvent">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Display.RenderedHud.ProspectorRenderedHudEvent"/> class.</summary>
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
@@ -558,6 +581,9 @@
         <member name="M:DaLion.Professions.Framework.Events.Display.RenderedHud.ScavengerHuntRenderedHudEvent.#ctor(DaLion.Shared.Events.EventManager)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Display.RenderedHud.ScavengerHuntRenderedHudEvent"/> class.</summary>
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Events.Display.RenderedHud.ScavengerHuntRenderedHudEvent.IsEnabled">
+            <inheritdoc />
         </member>
         <member name="M:DaLion.Professions.Framework.Events.Display.RenderedHud.ScavengerHuntRenderedHudEvent.OnRenderedHudImpl(System.Object,StardewModdingAPI.Events.RenderedHudEventArgs)">
             <inheritdoc />
@@ -598,6 +624,20 @@
         <member name="M:DaLion.Professions.Framework.Events.Display.RenderedWorld.LimitOverlayRenderedWorldEvent.OnRenderedWorldImpl(System.Object,StardewModdingAPI.Events.RenderedWorldEventArgs)">
             <inheritdoc />
         </member>
+        <member name="T:DaLion.Professions.Framework.Events.Display.RenderedWorld.ProspectorHuntRenderedWorldEvent">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Display.RenderedWorld.ProspectorHuntRenderedWorldEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Events.Display.RenderedWorld.ProspectorHuntRenderedWorldEvent.#ctor(DaLion.Shared.Events.EventManager)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Display.RenderedWorld.ProspectorHuntRenderedWorldEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Events.Display.RenderedWorld.ProspectorHuntRenderedWorldEvent.IsEnabled">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Events.Display.RenderedWorld.ProspectorHuntRenderedWorldEvent.OnRenderedWorldImpl(System.Object,StardewModdingAPI.Events.RenderedWorldEventArgs)">
+            <inheritdoc />
+        </member>
         <member name="T:DaLion.Professions.Framework.Events.Display.RenderingHud.LimitGaugeRenderingHudEvent">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Display.RenderingHud.LimitGaugeRenderingHudEvent"/> class.</summary>
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
@@ -607,6 +647,20 @@
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
         </member>
         <member name="M:DaLion.Professions.Framework.Events.Display.RenderingHud.LimitGaugeRenderingHudEvent.OnRenderingHudImpl(System.Object,StardewModdingAPI.Events.RenderingHudEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:DaLion.Professions.Framework.Events.Display.WindowResized.PipedMinionHudWindowResizedEvent">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Display.WindowResized.PipedMinionHudWindowResizedEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Events.Display.WindowResized.PipedMinionHudWindowResizedEvent.#ctor(DaLion.Shared.Events.EventManager)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Display.WindowResized.PipedMinionHudWindowResizedEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Events.Display.WindowResized.PipedMinionHudWindowResizedEvent.IsEnabled">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Events.Display.WindowResized.PipedMinionHudWindowResizedEvent.OnWindowResizedImpl(System.Object,StardewModdingAPI.Events.WindowResizedEventArgs)">
             <inheritdoc />
         </member>
         <member name="T:DaLion.Professions.Framework.Events.GameLoop.DayEnding.ConservationismDayEndingEvent">
@@ -654,6 +708,20 @@
         <member name="M:DaLion.Professions.Framework.Events.GameLoop.DayEnding.StatueDayEndingEvent.OnDayEndingImpl(System.Object,StardewModdingAPI.Events.DayEndingEventArgs)">
             <inheritdoc />
         </member>
+        <member name="T:DaLion.Professions.Framework.Events.GameLoop.DayEnding.TreasureHunterDayEndingEvent">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.DayEnding.TreasureHunterDayEndingEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Events.GameLoop.DayEnding.TreasureHunterDayEndingEvent.#ctor(DaLion.Shared.Events.EventManager)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.DayEnding.TreasureHunterDayEndingEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Events.GameLoop.DayEnding.TreasureHunterDayEndingEvent.IsEnabled">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Events.GameLoop.DayEnding.TreasureHunterDayEndingEvent.OnDayEndingImpl(System.Object,StardewModdingAPI.Events.DayEndingEventArgs)">
+            <inheritdoc />
+        </member>
         <member name="T:DaLion.Professions.Framework.Events.GameLoop.DayStarted.LuremasterDayStartedEvent">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.DayStarted.LuremasterDayStartedEvent"/> class.</summary>
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
@@ -699,17 +767,6 @@
             <inheritdoc />
         </member>
         <member name="M:DaLion.Professions.Framework.Events.GameLoop.DayStarted.SpelunkerDayStartedEvent.OnDayStartedImpl(System.Object,StardewModdingAPI.Events.DayStartedEventArgs)">
-            <inheritdoc />
-        </member>
-        <member name="T:DaLion.Professions.Framework.Events.GameLoop.DayStarted.StatueDayStartedEvent">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.DayStarted.StatueDayStartedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.DayStarted.StatueDayStartedEvent.#ctor(DaLion.Shared.Events.EventManager)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.DayStarted.StatueDayStartedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.DayStarted.StatueDayStartedEvent.OnDayStartedImpl(System.Object,StardewModdingAPI.Events.DayStartedEventArgs)">
             <inheritdoc />
         </member>
         <member name="T:DaLion.Professions.Framework.Events.GameLoop.LateLoadSecondUpdateTickedEvent">
@@ -795,6 +852,20 @@
         <member name="M:DaLion.Professions.Framework.Events.GameLoop.ProfessionsReturnedToTitleEvent.OnReturnedToTitleImpl(System.Object,StardewModdingAPI.Events.ReturnedToTitleEventArgs)">
             <inheritdoc />
         </member>
+        <member name="T:DaLion.Professions.Framework.Events.GameLoop.ReturnedToTitle.TreasureHunterReturnedToTitleEvent">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.ReturnedToTitle.TreasureHunterReturnedToTitleEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Events.GameLoop.ReturnedToTitle.TreasureHunterReturnedToTitleEvent.#ctor(DaLion.Shared.Events.EventManager)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.ReturnedToTitle.TreasureHunterReturnedToTitleEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Events.GameLoop.ReturnedToTitle.TreasureHunterReturnedToTitleEvent.IsEnabled">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Events.GameLoop.ReturnedToTitle.TreasureHunterReturnedToTitleEvent.OnReturnedToTitleImpl(System.Object,StardewModdingAPI.Events.ReturnedToTitleEventArgs)">
+            <inheritdoc />
+        </member>
         <member name="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.LuremasterTimeChangedEvent">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.LuremasterTimeChangedEvent"/> class.</summary>
         </member>
@@ -805,32 +876,29 @@
         <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.LuremasterTimeChangedEvent.OnTimeChangedImpl(System.Object,StardewModdingAPI.Events.TimeChangedEventArgs)">
             <inheritdoc />
         </member>
-        <member name="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ProspectorHuntTimeChangedEvent">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ProspectorHuntTimeChangedEvent"/> class.</summary>
+        <member name="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ScavengerHuntTriggerTimeChangedEvent">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ScavengerHuntTriggerTimeChangedEvent"/> class.</summary>
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
         </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ProspectorHuntTimeChangedEvent.#ctor(DaLion.Shared.Events.EventManager)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ProspectorHuntTimeChangedEvent"/> class.</summary>
+        <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ScavengerHuntTriggerTimeChangedEvent.#ctor(DaLion.Shared.Events.EventManager)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ScavengerHuntTriggerTimeChangedEvent"/> class.</summary>
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
         </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ProspectorHuntTimeChangedEvent.OnEnabled">
+        <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ScavengerHuntTriggerTimeChangedEvent.OnTimeChangedImpl(System.Object,StardewModdingAPI.Events.TimeChangedEventArgs)">
             <inheritdoc />
         </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ProspectorHuntTimeChangedEvent.OnTimeChangedImpl(System.Object,StardewModdingAPI.Events.TimeChangedEventArgs)">
-            <inheritdoc />
-        </member>
-        <member name="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ScavengerHuntTimeChangedEvent">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ScavengerHuntTimeChangedEvent"/> class.</summary>
+        <member name="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.TreasureHuntPoolTrackerTimeChangedEvent">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.TreasureHuntPoolTrackerTimeChangedEvent"/> class.</summary>
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
         </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ScavengerHuntTimeChangedEvent.#ctor(DaLion.Shared.Events.EventManager)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ScavengerHuntTimeChangedEvent"/> class.</summary>
+        <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.TreasureHuntPoolTrackerTimeChangedEvent.#ctor(DaLion.Shared.Events.EventManager)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.TreasureHuntPoolTrackerTimeChangedEvent"/> class.</summary>
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
         </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ScavengerHuntTimeChangedEvent.OnEnabled">
+        <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.TreasureHuntPoolTrackerTimeChangedEvent.OnEnabled">
             <inheritdoc />
         </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.ScavengerHuntTimeChangedEvent.OnTimeChangedImpl(System.Object,StardewModdingAPI.Events.TimeChangedEventArgs)">
+        <member name="M:DaLion.Professions.Framework.Events.GameLoop.TimeChanged.TreasureHuntPoolTrackerTimeChangedEvent.OnTimeChangedImpl(System.Object,StardewModdingAPI.Events.TimeChangedEventArgs)">
             <inheritdoc />
         </member>
         <member name="T:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.AmbushUpdateTickedEvent">
@@ -946,31 +1014,6 @@
             <inheritdoc />
         </member>
         <member name="M:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.DesperadoQuickshotUpdateTickedEvent.OnUpdateTickedImpl(System.Object,StardewModdingAPI.Events.UpdateTickedEventArgs)">
-            <inheritdoc />
-        </member>
-        <member name="T:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.FarmhandProspectorHuntUpdateTickedEvent">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.FarmhandProspectorHuntUpdateTickedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.FarmhandProspectorHuntUpdateTickedEvent.#ctor(DaLion.Shared.Events.EventManager)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.FarmhandProspectorHuntUpdateTickedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.FarmhandProspectorHuntUpdateTickedEvent.OnEnabled">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.FarmhandProspectorHuntUpdateTickedEvent.OnUpdateTickedImpl(System.Object,StardewModdingAPI.Events.UpdateTickedEventArgs)">
-            <inheritdoc />
-        </member>
-        <member name="T:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.FarmhandScavengerHuntUpdateTickedEvent">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.FarmhandScavengerHuntUpdateTickedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.FarmhandScavengerHuntUpdateTickedEvent.#ctor(DaLion.Shared.Events.EventManager)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.FarmhandScavengerHuntUpdateTickedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.FarmhandScavengerHuntUpdateTickedEvent.OnUpdateTickedImpl(System.Object,StardewModdingAPI.Events.UpdateTickedEventArgs)">
             <inheritdoc />
         </member>
         <member name="T:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.HudPointerUpdateTickedEvent">
@@ -1117,6 +1160,9 @@
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.ProspectorHuntUpdateTickedEvent"/> class.</summary>
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
         </member>
+        <member name="P:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.ProspectorHuntUpdateTickedEvent.IsEnabled">
+            <inheritdoc />
+        </member>
         <member name="M:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.ProspectorHuntUpdateTickedEvent.OnUpdateTickedImpl(System.Object,StardewModdingAPI.Events.UpdateTickedEventArgs)">
             <inheritdoc />
         </member>
@@ -1127,6 +1173,9 @@
         <member name="M:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.ScavengerHuntUpdateTickedEvent.#ctor(DaLion.Shared.Events.EventManager)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.ScavengerHuntUpdateTickedEvent"/> class.</summary>
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.ScavengerHuntUpdateTickedEvent.IsEnabled">
+            <inheritdoc />
         </member>
         <member name="M:DaLion.Professions.Framework.Events.GameLoop.UpdateTicked.ScavengerHuntUpdateTickedEvent.OnUpdateTickedImpl(System.Object,StardewModdingAPI.Events.UpdateTickedEventArgs)">
             <inheritdoc />
@@ -1183,6 +1232,20 @@
         <member name="M:DaLion.Professions.Framework.Events.Input.ButtonPressed.DemolitionistButtonDoublePressedEvent.OnButtonDoublePressedImpl">
             <inheritdoc />
         </member>
+        <member name="T:DaLion.Professions.Framework.Events.Input.ButtonPressed.MasteryWarningButtonPressedEvent">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Input.ButtonPressed.MasteryWarningButtonPressedEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Events.Input.ButtonPressed.MasteryWarningButtonPressedEvent.#ctor(DaLion.Shared.Events.EventManager)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Input.ButtonPressed.MasteryWarningButtonPressedEvent"/> class.</summary>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Events.Input.ButtonPressed.MasteryWarningButtonPressedEvent.IsEnabled">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Events.Input.ButtonPressed.MasteryWarningButtonPressedEvent.OnButtonPressedImpl(System.Object,StardewModdingAPI.Events.ButtonPressedEventArgs)">
+            <inheritdoc />
+        </member>
         <member name="T:DaLion.Professions.Framework.Events.Input.ButtonPressed.RascalButtonDoublePressedEvent">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.Input.ButtonPressed.RascalButtonDoublePressedEvent"/> class.</summary>
         </member>
@@ -1236,20 +1299,6 @@
             <inheritdoc />
         </member>
         <member name="M:DaLion.Professions.Framework.Events.Input.CursorMoved.MasteryWarningCursorMovedEvent.OnCursorMovedImpl(System.Object,StardewModdingAPI.Events.CursorMovedEventArgs)">
-            <inheritdoc />
-        </member>
-        <member name="T:DaLion.Professions.Framework.Events.ButtonPressed.MasteryWarningButtonPressedEvent">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.ButtonPressed.MasteryWarningButtonPressedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.ButtonPressed.MasteryWarningButtonPressedEvent.#ctor(DaLion.Shared.Events.EventManager)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.ButtonPressed.MasteryWarningButtonPressedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="P:DaLion.Professions.Framework.Events.ButtonPressed.MasteryWarningButtonPressedEvent.IsEnabled">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.ButtonPressed.MasteryWarningButtonPressedEvent.OnButtonPressedImpl(System.Object,StardewModdingAPI.Events.ButtonPressedEventArgs)">
             <inheritdoc />
         </member>
         <member name="T:DaLion.Professions.Framework.Events.Multiplayer.ModMessageReceived.HuntingForTreasureModMessageReceivedEvent">
@@ -1503,28 +1552,6 @@
             <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
         </member>
         <member name="M:DaLion.Professions.Framework.Events.World.ObjectListChanged.ChromaBallObjectListChangedEvent.OnObjectListChangedImpl(System.Object,StardewModdingAPI.Events.ObjectListChangedEventArgs)">
-            <inheritdoc />
-        </member>
-        <member name="T:DaLion.Professions.Framework.Events.World.ObjectListChanged.ProspectorHuntObjectListChangedEvent">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.World.ObjectListChanged.ProspectorHuntObjectListChangedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.World.ObjectListChanged.ProspectorHuntObjectListChangedEvent.#ctor(DaLion.Shared.Events.EventManager)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.World.ObjectListChanged.ProspectorHuntObjectListChangedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.World.ObjectListChanged.ProspectorHuntObjectListChangedEvent.OnObjectListChangedImpl(System.Object,StardewModdingAPI.Events.ObjectListChangedEventArgs)">
-            <inheritdoc />
-        </member>
-        <member name="T:DaLion.Professions.Framework.Events.World.TerrainFeatureListChanged.ScavengerHuntTerrainFeatureListChangedEvent">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.World.TerrainFeatureListChanged.ScavengerHuntTerrainFeatureListChangedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.World.TerrainFeatureListChanged.ScavengerHuntTerrainFeatureListChangedEvent.#ctor(DaLion.Shared.Events.EventManager)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Events.World.TerrainFeatureListChanged.ScavengerHuntTerrainFeatureListChangedEvent"/> class.</summary>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Events.World.TerrainFeatureListChanged.ScavengerHuntTerrainFeatureListChangedEvent.OnTerrainFeatureListChangedImpl(System.Object,StardewModdingAPI.Events.TerrainFeatureListChangedEventArgs)">
             <inheritdoc />
         </member>
         <member name="T:DaLion.Professions.Framework.Extensions.BuildingExtensions">
@@ -1807,6 +1834,11 @@
             <param name="farmer">The <see cref="T:StardewValley.Farmer"/>.</param>
             <returns><see langword="true"/> if <see cref="T:DaLion.Professions.Framework.Limits.PoacherAmbush"/> is active.</returns>
         </member>
+        <member name="M:DaLion.Professions.Framework.Extensions.FarmerExtensions.SpawnMinions(StardewValley.Farmer,System.Int32)">
+            <summary>Spawns a <see cref="T:StardewValley.Monsters.GreenSlime"/> minion next to the <paramref name="piper"/>.</summary>
+            <param name="piper">The <see cref="T:StardewValley.Farmer"/>.</param>
+            <param name="numberToSpawn">The number of minions to spawn.</param>
+        </member>
         <member name="T:DaLion.Professions.Framework.Extensions.FarmExtensions">
             <summary>Extensions for the <see cref="T:StardewValley.Farm"/> class.</summary>
         </member>
@@ -1837,9 +1869,14 @@
             <returns><see langword="true"/> is at least one player in the game session has the <paramref name="profession"/>, otherwise <see langword="false"/>.</returns>
         </member>
         <member name="M:DaLion.Professions.Framework.Extensions.Game1Extensions.EnumerateAllCrabPots(StardewValley.Game1)">
-            <summary>Enumerates all <see cref="T:StardewValley.Objects.CrabPot"/> instances currently placed in a location.</summary>
+            <summary>Enumerates all <see cref="T:StardewValley.Objects.CrabPot"/> instances currently placed in any location.</summary>
             <param name="game1">The <see cref="T:StardewValley.Game1"/> instance.</param>
             <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1"/> of all placed <see cref="T:StardewValley.Objects.CrabPot"/> instances in the game world.</returns>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Extensions.Game1Extensions.EnumerateAllHoeDirt(StardewValley.Game1)">
+            <summary>Enumerates all <see cref="T:StardewValley.TerrainFeatures.HoeDirt"/> instances currently in any location.</summary>
+            <param name="game1">The <see cref="T:StardewValley.Game1"/> instance.</param>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1"/> of all <see cref="T:StardewValley.TerrainFeatures.HoeDirt"/> instances in the game world.</returns>
         </member>
         <member name="T:DaLion.Professions.Framework.Extensions.GameLocationExtensions">
             <summary>Extensions for the <see cref="T:StardewValley.GameLocation"/> class.</summary>
@@ -1865,29 +1902,13 @@
             <param name="prestiged">Whether to check for the prestiged variant.</param>
             <returns><see langword="true"/> if the <paramref name="location"/> has at least one <see cref="T:StardewValley.Farmer"/> with the specified <paramref name="profession"/>, otherwise <see langword="false"/>.</returns>
         </member>
-        <member name="M:DaLion.Professions.Framework.Extensions.GameLocationExtensions.IsSuitableScavengerHuntLocation(StardewValley.GameLocation)">
-            <summary>Checks whether the <paramref name="location"/> is suitable for a <see cref="T:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt"/>.</summary>
-            <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
-            <returns><see langword="true"/> if the <paramref name="location"/> is suitable for a <see cref="T:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt"/>, otherwise <see langword="false"/>.</returns>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Extensions.GameLocationExtensions.IsSuitablePropsectorHuntLocation(StardewValley.GameLocation)">
-            <summary>Checks whether the <paramref name="location"/> is suitable for a <see cref="T:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt"/>.</summary>
-            <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
-            <returns><see langword="true"/> if the <paramref name="location"/> is suitable for a <see cref="T:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt"/>, otherwise <see langword="false"/>.</returns>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Extensions.GameLocationExtensions.IsTileValidForTreasure(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
-            <summary>Determines whether a <paramref name="tile"/> on a map is valid for spawning diggable treasure.</summary>
-            <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
-            <param name="tile">The tile to check.</param>
-            <returns><see langword="true"/> if the <paramref name="tile"/> is completely clear of any <see cref="T:StardewValley.Object"/>, <see cref="T:StardewValley.TerrainFeatures.TerrainFeature"/> or other map property that would make it inaccessible, otherwise <see langword="false"/>.</returns>
-        </member>
         <member name="M:DaLion.Professions.Framework.Extensions.GameLocationExtensions.IsTileClearOfDebris(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
             <summary>Determines whether a <paramref name="tile"/> is clear of <see cref="T:StardewValley.Debris"/>.</summary>
             <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
             <param name="tile">The tile to check.</param>
             <returns><see langword="true"/> if the <paramref name="tile"/> is clear of <see cref="T:StardewValley.Debris"/>, otherwise <see langword="false"/>.</returns>
         </member>
-        <member name="M:DaLion.Professions.Framework.Extensions.GameLocationExtensions.MakeTileDiggable(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
+        <member name="M:DaLion.Professions.Framework.Extensions.GameLocationExtensions.EnforceTileDiggable(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
             <summary>Forces a <paramref name="tile"/> to be susceptible to a <see cref="T:StardewValley.Tools.Hoe"/>.</summary>
             <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
             <param name="tile">The tile to change.</param>
@@ -2046,6 +2067,391 @@
             <param name="spriteBatch">The <see cref="T:Microsoft.Xna.Framework.Graphics.SpriteBatch"/>.</param>
             <param name="color">The desired color for the pointer.</param>
         </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.Events.ITreasureHuntEndedEventArgs">
+            <summary>Interface for the arguments of a <see cref="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEvent"/>.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.ITreasureHuntEndedEventArgs.Player">
+            <summary>Gets the player who triggered the event.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.ITreasureHuntEndedEventArgs.Profession">
+            <summary>Gets whether this event is related to a <see cref="F:DaLion.Professions.Framework.VanillaProfession.Scavenger"/>> or <see cref="F:DaLion.Professions.Framework.VanillaProfession.Prospector"/>> hunt.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.ITreasureHuntEndedEventArgs.TreasureFound">
+            <summary>Gets a value indicating whether the player successfully discovered the treasure.</summary>
+        </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.Events.ITreasureHuntStartedEventArgs">
+            <summary>Interface for the arguments of a <see cref="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEvent"/>.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.ITreasureHuntStartedEventArgs.Player">
+            <summary>Gets the player who triggered the event.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.ITreasureHuntStartedEventArgs.Profession">
+            <summary>Gets whether this event relates to a Scavenger or Prospector hunt.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.ITreasureHuntStartedEventArgs.Target">
+            <summary>Gets the coordinates of the target tile.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.ITreasureHuntStartedEventArgs.TimeLimit">
+            <summary>Gets the time limit for the treasure hunt, in seconds.</summary>
+        </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEvent">
+            <summary>A dynamic event raised when a <see cref="T:DaLion.Professions.Framework.Hunting.ITreasureHunt"/> ends.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEvent.#ctor(System.Action{System.Object,DaLion.Professions.Framework.Hunting.Events.ITreasureHuntEndedEventArgs},DaLion.Shared.Events.EventManager)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEvent"/> class.</summary>
+            <param name="callback">The delegate to run when the event is raised.</param>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEvent.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEvent.OnEnded(System.Object,DaLion.Professions.Framework.Hunting.Events.ITreasureHuntEndedEventArgs)">
+            <summary>Raised when a <see cref="T:DaLion.Professions.Framework.Hunting.ITreasureHunt"/> ends.</summary>
+            <param name="sender">The event sender.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEventArgs">
+            <summary>The arguments for a <see cref="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEvent"/>.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEventArgs.#ctor(StardewValley.Farmer,DaLion.Professions.Framework.Hunting.TreasureHuntProfession,System.Boolean)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEventArgs"/> class.</summary>
+            <param name="player">The player who triggered the event.</param>
+            <param name="profession">Whether this event relates to a Scavenger or Prospector hunt.</param>
+            <param name="found">Whether the player successfully discovered the treasure.</param>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEventArgs.Player">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEventArgs.Profession">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.TreasureHuntEndedEventArgs.TreasureFound">
+            <inheritdoc />
+        </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEvent">
+            <summary>A dynamic event raised when a <see cref="T:DaLion.Professions.Framework.Hunting.ITreasureHunt"/> starts.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEvent.#ctor(System.Action{System.Object,DaLion.Professions.Framework.Hunting.Events.ITreasureHuntStartedEventArgs},DaLion.Shared.Events.EventManager)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEvent"/> class.</summary>
+            <param name="callback">The delegate to run when the event is raised.</param>
+            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEvent.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEvent.OnStarted(System.Object,DaLion.Professions.Framework.Hunting.Events.ITreasureHuntStartedEventArgs)">
+            <summary>Raised when a <see cref="T:DaLion.Professions.Framework.Hunting.ITreasureHunt"/> starts.</summary>
+            <param name="sender">The event sender.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEventArgs">
+            <summary>The arguments for a <see cref="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEvent"/>.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEventArgs.#ctor(StardewValley.Farmer,DaLion.Professions.Framework.Hunting.TreasureHuntProfession,Microsoft.Xna.Framework.Vector2,System.Int32)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEventArgs"/> class.</summary>
+            <param name="player">The player who triggered the event.</param>
+            <param name="profession">Whether this event relates to a Scavenger or Prospector hunt.</param>
+            <param name="target">The coordinates of the target tile.</param>
+            <param name="timeLimit">The time limit for the treasure hunt, in seconds.</param>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEventArgs.Player">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEventArgs.Profession">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEventArgs.Target">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.Events.TreasureHuntStartedEventArgs.TimeLimit">
+            <inheritdoc />
+        </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.HuntNotification">
+            <summary>HUD message for treasure hunts.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.HuntNotification.#ctor(System.String)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Hunting.HuntNotification"/> class.</summary>
+            <param name="message">The message to display.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.HuntNotification.#ctor(System.String,Microsoft.Xna.Framework.Rectangle)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Hunting.HuntNotification"/> class.</summary>
+            <param name="message">The message to display.</param>
+            <param name="iconSourceRect">Source rectangle of the icon to display.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.HuntNotification.draw(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Int32,System.Int32@)">
+            <summary>Draws the notification to the game sprite batch.</summary>
+            <param name="b">The <see cref="T:Microsoft.Xna.Framework.Graphics.SpriteBatch"/>.</param>
+            <param name="i">Unclear.</param>
+            <param name="heightUsed">The cumulative height used.</param>
+        </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.ITreasureHunt">
+            <summary>Interface for treasure hunts.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ITreasureHunt.Profession">
+            <summary>
+                Gets whether this instance pertains to a <see cref="F:DaLion.Professions.Framework.VanillaProfession.Scavenger"/> or a
+                <see cref="F:DaLion.Professions.Framework.VanillaProfession.Prospector"/>.
+            </summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ITreasureHunt.Location">
+            <summary>Gets the active hunt's <see cref="T:StardewValley.GameLocation"/>.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ITreasureHunt.TargetTile">
+            <summary>Gets the target tile containing treasure.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ITreasureHunt.IsActive">
+            <summary>Gets a value indicating whether the <see cref="P:DaLion.Professions.Framework.Hunting.ITreasureHunt.TargetTile"/> is set to a valid target.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ITreasureHunt.Elapsed">
+            <summary>Gets the elapsed time of the active hunt, in seconds.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ITreasureHunt.TimeLimit">
+            <summary>Gets the time limit of the active hunt, in seconds.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ITreasureHunt.TryStart(StardewValley.GameLocation)">
+            <summary>Tries to start a new hunt at a random tile.</summary>
+            <param name="location">The current <see cref="T:StardewValley.GameLocation"/>.</param>
+            <returns><see langword="true"/> if a hunt was started, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ITreasureHunt.Complete">
+            <summary>Ends the active hunt successfully.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ITreasureHunt.Fail">
+            <summary>Ends the active hunt unsuccessfully.</summary>
+        </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.ProspectorHunt">
+            <summary>Manages treasure hunt events for Prospector profession.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Hunting.ProspectorHunt"/> class.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ProspectorHunt.TimeLimit">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ProspectorHunt.TriggerPool">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ProspectorHunt.TreasureStone">
+            <summary>Gets the stone instance that is currently targeted.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ProspectorHunt.TriggerThreshold">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.Complete">
+            <summary>Ends the current iteration of the active hunt successfully.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.Fail">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.UpdateTriggerPool(System.Int32[])">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.OnStoneDestroyed(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
+            <summary>Invoked when the local player destroys a stone.</summary>
+            <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
+            <param name="tile">The <see cref="T:Microsoft.Xna.Framework.Vector2"/> tile where the stone was located.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.ChooseTreasureTile(StardewValley.GameLocation)">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.IsLocationSuitable(StardewValley.GameLocation)">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.End(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.StartImpl(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.Complete(System.Boolean)">
+            <summary>Ends the active hunt successfully.</summary>
+            <param name="force">If <see langword="true"/>, skips all pending iterations.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.GetStoneTreasureForMineShaft(System.Int32)">
+            <summary>Spawns hunt spoils as debris. Applies to <see cref="T:StardewValley.Locations.MineShaft"/>.</summary>
+            <remarks>Adapted from FishingRod.openTreasureMenuEndFunction.</remarks>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.GetStoneTreasureForVolcanoDungeon">
+            <summary>Spawns hunt spoils as debris. Applies to <see cref="T:StardewValley.Locations.VolcanoDungeon"/>.</summary>
+            <remarks>Adapted from FishingRod.openTreasureMenuEndFunction.</remarks>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.PlayCue">
+            <summary>Plays the sound cue.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ProspectorHunt.FadeCue">
+            <summary>Fades out the sound cue volume.</summary>
+        </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.ScavengerHunt">
+            <summary>Manages treasure hunt events for Scavenger professions.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Hunting.ScavengerHunt"/> class.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ScavengerHunt.TimeLimit">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ScavengerHunt.TriggerPool">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.ScavengerHunt.TriggerThreshold">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.Complete">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.Fail">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.UpdateTriggerPool(System.Int32[])">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.TryCacheEligibleTreasureTiles(StardewValley.GameLocation)">
+            <summary>Launches a background task to cache eligible treasure tiles in the specified <paramref name="location"/>.</summary>
+            <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.FlushMapCache">
+            <summary>Clears cached data.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.ChooseTreasureTile(StardewValley.GameLocation)">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.IsLocationSuitable(StardewValley.GameLocation)">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.End(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.StartImpl(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.GetEligibleTreasureTilesTask(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
+            <summary>Runs in the background to fetch and cache eligible treasure tiles.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.BeginFindTreasure">
+            <summary>Plays treasure chest found animation.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.OpenChestEndFunction(System.Int32)">
+            <summary>Plays open treasure chest animation.</summary>
+            <param name="extra">Not applicable.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.OpenTreasureMenuEndFunction(System.Int32)">
+            <summary>Opens the treasure chest menu.</summary>
+            <param name="extra">Not applicable.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.ScavengerHunt.GetTreasureContents">
+            <summary>Chooses the contents of the treasure chest.</summary>
+            <remarks>Adapted from FishingRod.openTreasureMenuEndFunction.</remarks>
+        </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.TreasureHunt">
+            <summary>Base class for treasure hunts.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.#ctor(DaLion.Professions.Framework.Hunting.TreasureHuntProfession,System.String,System.String,Microsoft.Xna.Framework.Rectangle)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Hunting.TreasureHunt"/> class.</summary>
+            <param name="profession">Either <see cref="F:DaLion.Professions.Framework.VanillaProfession.Scavenger"/> or <see cref="F:DaLion.Professions.Framework.VanillaProfession.Prospector"/>.</param>
+            <param name="huntStartedMessage">The message displayed to the player when the hunt starts.</param>
+            <param name="huntFailedMessage">The message displayed to the player when the hunt fails.</param>
+            <param name="iconSourceRect">The <see cref="T:Microsoft.Xna.Framework.Rectangle"/> area of the corresponding profession's icon.</param>
+        </member>
+        <member name="E:DaLion.Professions.Framework.Hunting.TreasureHunt.Started">
+            <inheritdoc cref="M:DaLion.Professions.Framework.Hunting.TreasureHunt.OnStarted(Microsoft.Xna.Framework.Vector2,System.Int32)"/>
+        </member>
+        <member name="E:DaLion.Professions.Framework.Hunting.TreasureHunt.Ended">
+            <inheritdoc cref="M:DaLion.Professions.Framework.Hunting.TreasureHunt.OnEnded(System.Boolean)"/>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.Profession">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.TargetTile">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.Location">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.IsActive">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.Elapsed">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.TimeLimit">
+            <inheritdoc />
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.TriggerPool">
+            <summary>Gets or sets the number of pooled points towards triggering a hunt.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.TriggerThreshold">
+            <summary>Gets the pool point threshold required to trigger a hunt.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.Random">
+            <summary>Gets a random number generator.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.IconSourceRect">
+            <summary>Gets the profession icon source <see cref="T:Microsoft.Xna.Framework.Rectangle"/>.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.HuntStartedMessage">
+            <summary>Gets the hunt started message.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.Hunting.TreasureHunt.HuntFailedMessage">
+            <summary>Gets the hunt failed message.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.TryStart(StardewValley.GameLocation)">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.Complete">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.Fail">
+            <inheritdoc />
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.UpdateTriggerPool(System.Int32[])">
+            <summary>Updates the <see cref="P:DaLion.Professions.Framework.Hunting.TreasureHunt.TriggerPool"/>.</summary>
+            <param name="criteria">The respective point-granting criteria.</param>
+            <remarks>Expected criteria quantity and order is defined by the implementation.</remarks>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.TimeUpdate(System.UInt32)">
+            <summary>Check for completion or failure.</summary>
+            <param name="ticks">The number of ticks elapsed since the game started.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.ChooseTreasureTile(StardewValley.GameLocation)">
+            <summary>Attempts to select the target treasure tile.</summary>
+            <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
+            <returns><see langword="true"/> if a valid tile was set, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.IsLocationSuitable(StardewValley.GameLocation)">
+            <summary>Checks if the current location is suitable for a hunt.</summary>
+            <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
+            <returns><see langword="true"/> if a hunt can begin at the location, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.End(System.Boolean)">
+            <summary>Resets treasure tile and releases the treasure hunt update event.</summary>
+            <param name="success">Whether the treasure was successfully found.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.StartImpl(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
+            <summary>Start-up logic implementation.</summary>
+            <param name="location">Reference to <see cref="P:DaLion.Professions.Framework.Hunting.TreasureHunt.Location"/>.</param>
+            <param name="treasureTile">Reference to the chosen <see cref="P:DaLion.Professions.Framework.Hunting.TreasureHunt.TargetTile"/>.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.OnStarted(Microsoft.Xna.Framework.Vector2,System.Int32)">
+            <summary>Raised when a Treasure Hunt starts.</summary>
+            <param name="treasureTile">Reference to the chosen <see cref="P:DaLion.Professions.Framework.Hunting.TreasureHunt.TargetTile"/>.</param>
+            <param name="timeLimit">Reference to the <see cref="P:DaLion.Professions.Framework.Hunting.TreasureHunt.TimeLimit"/>.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.OnEnded(System.Boolean)">
+            <summary>Raised when a Treasure Hunt ends.</summary>
+            <param name="found">Whether the player successfully discovered the treasure.</param>
+        </member>
+        <member name="T:DaLion.Professions.Framework.Hunting.TreasureHuntProfession">
+            <summary>
+                The type of <see cref="T:DaLion.Professions.Framework.Hunting.ITreasureHunt"/>; either <see cref="F:DaLion.Professions.Framework.VanillaProfession.Scavenger"/> or
+                <see cref="F:DaLion.Professions.Framework.VanillaProfession.Prospector"/>.
+            </summary>
+        </member>
+        <member name="F:DaLion.Professions.Framework.Hunting.TreasureHuntProfession.Scavenger">
+            <summary>A <see cref="F:DaLion.Professions.Framework.VanillaProfession.Scavenger"/> hunt.</summary>
+        </member>
+        <member name="F:DaLion.Professions.Framework.Hunting.TreasureHuntProfession.Prospector">
+            <summary>A <see cref="F:DaLion.Professions.Framework.VanillaProfession.Prospector"/> hunt.</summary>
+        </member>
         <member name="T:DaLion.Professions.Framework.Integrations.CombatIntegration">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Integrations.CombatIntegration"/> class.</summary>
         </member>
@@ -2167,8 +2573,35 @@
         <member name="T:DaLion.Professions.Framework.ISkill">
             <summary>Interface for all the <see cref="T:StardewValley.Farmer"/>'s skills.</summary>
         </member>
+        <member name="F:DaLion.Professions.Framework.ISkill.LEVEL_1_EXP">
+            <summary>The vanilla experience to level 1.</summary>
+        </member>
+        <member name="F:DaLion.Professions.Framework.ISkill.LEVEL_2_EXP">
+            <summary>The vanilla experience to level 2.</summary>
+        </member>
+        <member name="F:DaLion.Professions.Framework.ISkill.LEVEL_3_EXP">
+            <summary>The vanilla experience to level 3.</summary>
+        </member>
+        <member name="F:DaLion.Professions.Framework.ISkill.LEVEL_4_EXP">
+            <summary>The vanilla experience to level 4.</summary>
+        </member>
+        <member name="F:DaLion.Professions.Framework.ISkill.LEVEL_5_EXP">
+            <summary>The vanilla experience to level 5.</summary>
+        </member>
+        <member name="F:DaLion.Professions.Framework.ISkill.LEVEL_6_EXP">
+            <summary>The vanilla experience to level 6.</summary>
+        </member>
+        <member name="F:DaLion.Professions.Framework.ISkill.LEVEL_7_EXP">
+            <summary>The vanilla experience to level 7.</summary>
+        </member>
+        <member name="F:DaLion.Professions.Framework.ISkill.LEVEL_8_EXP">
+            <summary>The vanilla experience to level 8.</summary>
+        </member>
+        <member name="F:DaLion.Professions.Framework.ISkill.LEVEL_9_EXP">
+            <summary>The vanilla experience to level 9.</summary>
+        </member>
         <member name="F:DaLion.Professions.Framework.ISkill.LEVEL_10_EXP">
-            <summary>The vanilla experience cap.</summary>
+            <summary>The vanilla experience cap (level 10).</summary>
         </member>
         <member name="P:DaLion.Professions.Framework.ISkill.StringId">
             <summary>Gets a string that uniquely identifies this skill.</summary>
@@ -2197,8 +2630,11 @@
         <member name="P:DaLion.Professions.Framework.ISkill.BaseExperienceMultiplier">
             <summary>Gets the base experience multiplier set by the player for this skill.</summary>
         </member>
+        <member name="P:DaLion.Professions.Framework.ISkill.TimesReset">
+            <summary>Gets the number of times this skill has been reset.</summary>
+        </member>
         <member name="P:DaLion.Professions.Framework.ISkill.BonusExperienceMultiplier">
-            <summary>Gets the experience multiplier due to this skill's prestige level.</summary>
+            <summary>Gets the experience multiplier due to resets.</summary>
         </member>
         <member name="P:DaLion.Professions.Framework.ISkill.NewLevels">
             <summary>Gets the new levels gained during the current game day, which have not yet been accomplished by an overnight menu.</summary>
@@ -2808,9 +3244,6 @@
         <member name="P:DaLion.Professions.Framework.Lookups.AnimalDerivedGoods">
             <summary>Gets the qualified IDs of artisan goods derived from animal produce.</summary>
         </member>
-        <member name="P:DaLion.Professions.Framework.Lookups.FamilyPairs">
-            <summary>Gets a map from a legendary fish ID to that of its corresponding extended family pair.</summary>
-        </member>
         <member name="P:DaLion.Professions.Framework.Lookups.ResourceNodeIds">
             <summary>Gets or sets the ids of resource nodes.</summary>
         </member>
@@ -2979,6 +3412,9 @@
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
             <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
         </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Combat.GreenSlimeTakeDamagePatcher.GreenSlimeTakeDamagePrefix(StardewValley.Monsters.GreenSlime,System.Boolean)">
+            <summary>Patch to reset monster aggro when a piped slime is defeated.</summary>
+        </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Combat.GreenSlimeTakeDamagePatcher.GreenSlimeTakeDamagePostfix(StardewValley.Monsters.GreenSlime,StardewValley.Farmer)">
             <summary>Patch to reset monster aggro when a piped slime is defeated.</summary>
         </member>
@@ -3107,7 +3543,7 @@
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
             <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
         </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Combat.SlimeHutchUpdateWhenCurrentLocationPatcher.SlimeHutchUpdateWhenCurrentLocationPostfix(StardewValley.SlimeHutch,Microsoft.Xna.Framework.GameTime)">
+        <member name="M:DaLion.Professions.Framework.Patchers.Combat.SlimeHutchUpdateWhenCurrentLocationPatcher.SlimeHutchUpdateWhenCurrentLocationPrefix(StardewValley.SlimeHutch,Microsoft.Xna.Framework.GameTime)">
             <summary>Patch to increase Prestiged Piper Hutch capacity.</summary>
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Combat.SlingshotAttachPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
@@ -3247,6 +3683,14 @@
         <member name="M:DaLion.Professions.Framework.Patchers.Farming.AnimalHouseAddNewHatchedAnimalPatcher.AnimalHouseAddNewHatchedAnimalTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.MethodBase)">
             <summary>Patch for Rancher newborn animals to have random starting friendship.</summary>
         </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Farming.CropGetDataPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Farming.CropGetDataPatcher"/> class.</summary>
+            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
+            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Farming.CropGetDataPatcher.CropGetDataPostfix(StardewValley.Crop,StardewValley.GameData.Crops.CropData)">
+            <summary>Patch to record crop planted by Prestiged Agriculturist.</summary>
+        </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Farming.CropIsInSeasonPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Farming.CropIsInSeasonPatcher"/> class.</summary>
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
@@ -3260,7 +3704,7 @@
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
             <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
         </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Farming.CropNewDayPatcher.HoeDirtPlantPostfix(StardewValley.Crop)">
+        <member name="M:DaLion.Professions.Framework.Patchers.Farming.CropNewDayPatcher.CropNewDayPostfix(StardewValley.Crop)">
             <summary>Patch to record crop planted by Prestiged Agriculturist.</summary>
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Farming.FarmAnimalDayUpdatePatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
@@ -3301,7 +3745,7 @@
             <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Farming.HoeDirtPlantPatcher.HoeDirtPlantPostfix(StardewValley.TerrainFeatures.HoeDirt,StardewValley.Farmer)">
-            <summary>Patch to record crop planted by Prestiged Agriculturist.</summary>
+            <summary>Patch to record crops planted by Agriculturist.</summary>
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Farming.ObjectAttemptAutoLoadPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Farming.ObjectAttemptAutoLoadPatcher"/> class.</summary>
@@ -3434,9 +3878,6 @@
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
             <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
         </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishingRodPullFishFromWaterPatcher.FishingRodPullFishFromWaterPrefix(StardewValley.Tools.FishingRod,System.String@,System.Boolean)">
-            <summary>Pull out legendary family members.</summary>
-        </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishingRodPullFishFromWaterPatcher.FishingRodPullFishFromWaterPostfix(System.String,System.Boolean)">
             <summary>Count trash fished by rod.</summary>
         </member>
@@ -3448,30 +3889,6 @@
         <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishingRodStartMinigameEndFunctionPatcher.FishingRodStartMinigameEndFunctionTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.Emit.ILGenerator,System.Reflection.MethodBase)">
             <summary>Patch to remove Pirate bonus treasure chance + double Fisher bait effect.</summary>
         </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishPondAddFishToPondPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Fishing.FishPondAddFishToPondPatcher"/> class.</summary>
-            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
-            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishPondAddFishToPondPatcher.FishPondAddFishToPondPostfix(StardewValley.Buildings.FishPond,StardewValley.GameData.FishPonds.FishPondData,StardewValley.Object)">
-            <summary>Distinguish extended family pairs + increment total Fish Pond quality ratings.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishPondClearPondPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Fishing.FishPondClearPondPatcher"/> class.</summary>
-            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
-            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishPondClearPondPatcher.FishPondClearPondPrefix(StardewValley.Buildings.FishPond,StardewValley.Object@,System.Boolean@)">
-            <summary>Clear Family Living Here data.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishPondDoActionPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Fishing.FishPondDoActionPatcher"/> class.</summary>
-            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
-            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishPondDoActionPatcher.FishPondDoActionTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.MethodBase)">
-            <summary>Allow legendary fish to share a pond with their extended families.</summary>
-        </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishPondIsLegalFishForPondsPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Fishing.FishPondIsLegalFishForPondsPatcher"/> class.</summary>
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
@@ -3479,14 +3896,6 @@
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishPondIsLegalFishForPondsPatcher.FishPondIsLegalFishForPondsPrefix(StardewValley.Buildings.FishPond,System.Boolean@,System.String)">
             <summary>Patch for Aquarist to raise legendary fish.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishPondOnFishTypeChangedPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Fishing.FishPondOnFishTypeChangedPatcher"/> class.</summary>
-            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
-            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishPondOnFishTypeChangedPatcher.FishPondOnFishTypeChangedPostfix(StardewValley.Buildings.FishPond,System.String,System.String)">
-            <summary>Reset Fish Pond data.</summary>
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Fishing.FishPondUpdateMaximumOccupancyPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Fishing.FishPondUpdateMaximumOccupancyPatcher"/> class.</summary>
@@ -3530,14 +3939,6 @@
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Fishing.PondQueryMenuCtorPatcher.PondQueryMenuDrawPostfix(StardewValley.Buildings.FishPond)">
             <summary>Patch to adjust fish pond query menu for Aquarist increased max capacity.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Fishing.PondQueryMenuDrawPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Fishing.PondQueryMenuDrawPatcher"/> class.</summary>
-            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
-            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Fishing.PondQueryMenuDrawPatcher.PondQueryMenuDrawPrefix(StardewValley.Menus.PondQueryMenu,System.Single,Microsoft.Xna.Framework.Rectangle,System.String,System.Boolean,System.String,StardewValley.Object,StardewValley.Buildings.FishPond,Microsoft.Xna.Framework.Graphics.SpriteBatch)">
-            <summary>Adjust fish pond query menu for family members.</summary>
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Foraging.BushShakePatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Foraging.BushShakePatcher"/> class.</summary>
@@ -3606,6 +4007,14 @@
         <member name="M:DaLion.Professions.Framework.Patchers.Foraging.Game1GetWeatherModificationsForDatePatcher.Game1GetWeatherModificationsForDatePostfix(System.String@)">
             <summary>Patch for Prestiged Arborist Green Rain chance.</summary>
         </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Foraging.GameLocationExplodePatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Foraging.GameLocationExplodePatcher"/> class.</summary>
+            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
+            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Foraging.GameLocationExplodePatcher.FarmerTakeDamageTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.Emit.ILGenerator,System.Reflection.MethodBase)">
+            <summary>Patch to immunize treasure hunt target tile.</summary>
+        </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Foraging.GameLocationGetHarvestSpawnedObjectQualityPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Foraging.GameLocationGetHarvestSpawnedObjectQualityPatcher"/> class.</summary>
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
@@ -3624,6 +4033,16 @@
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Foraging.GameLocationSpawnObjectsPatcher.GameLocationSpawnObjectsTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.MethodBase)">
             <summary>Patch to buff max forages for Scavenger.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Foraging.HoeDirtDrawOptimizedPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Foraging.HoeDirtDrawOptimizedPatcher"/> class.</summary>
+            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
+            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Foraging.MakeHoeDirtPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Foraging.MakeHoeDirtPatcher"/> class.</summary>
+            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
+            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Foraging.ResourceClumpDestroyAction.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Foraging.ResourceClumpDestroyAction"/> class.</summary>
@@ -3838,6 +4257,9 @@
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Mining.GameLocationOnStoneDestroyedPatcher"/> class.</summary>
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
             <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Mining.GameLocationOnStoneDestroyedPatcher.OnStoneDestroyedPostfix(StardewValley.GameLocation,System.Int32,System.Int32)">
+            <summary>Patch to trigger and manage Prospector hunt.</summary>
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Mining.GameLocationOnStoneDestroyedPatcher.GameLocationOnStoneDestroyedTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.MethodBase)">
             <summary>Patch to remove Prospector double coal chance.</summary>
@@ -4084,6 +4506,14 @@
         <member name="M:DaLion.Professions.Framework.Patchers.Prestige.LevelUpMenuDrawPatcher.LevelUpMenuDrawTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.MethodBase)">
             <summary>Patch to draw acquired profession tooltips during profession selection.</summary>
         </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Prestige.LevelUpMenuReceiveGamePadButtonPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Prestige.LevelUpMenuReceiveGamePadButtonPatcher"/> class.</summary>
+            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
+            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Prestige.LevelUpMenuReceiveGamePadButtonPatcher.LevelUpMenuUpdatePrefix(StardewValley.Menus.LevelUpMenu,System.Collections.Generic.List{System.Int32},System.Int32,System.Int32,Microsoft.Xna.Framework.Input.Buttons)">
+            <summary>Patch to idiot-proof the level-up menu. </summary>
+        </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Prestige.LevelUpMenuUpdatePatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Prestige.LevelUpMenuUpdatePatcher"/> class.</summary>
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
@@ -4156,7 +4586,11 @@
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.PipedSlime"/> class.</summary>
             <param name="slime">The <see cref="T:StardewValley.Monsters.GreenSlime"/> instance.</param>
             <param name="piper">The <see cref="T:StardewValley.Farmer"/> who cast <see cref="T:DaLion.Professions.Framework.Limits.PiperConcerto"/>.</param>
+            <param name="summoned"><see cref="!:true"/> indicates that this is a summoned minion instance (permanent). <see langword="false"/> indicates that this instance is temporarily charmed by Piper limit break.</param>
             <paramref name="summoned">Whether the instance is a temporary Concerto Slime.</paramref>
+        </member>
+        <member name="P:DaLion.Professions.Framework.PipedSlime.HatSlimeIsUponUs">
+            <summary>Gets a value indicating whether a Hat Slime already exists in the world.</summary>
         </member>
         <member name="P:DaLion.Professions.Framework.PipedSlime.Slime">
             <summary>Gets the <see cref="T:StardewValley.Monsters.GreenSlime"/> instance.</summary>
@@ -4194,6 +4628,15 @@
         <member name="P:DaLion.Professions.Framework.PipedSlime.IsSummoned">
             <summary>Gets a value indicating whether the instance is a raised Slime or a temporary Concerto Slime.</summary>
         </member>
+        <member name="P:DaLion.Professions.Framework.PipedSlime.IsDismissed">
+            <summary>Gets or sets a value indicating whether the instance has been dismissed.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.PipedSlime.RespawnTimer">
+            <summary>Gets the time until the next respawn, in seconds.</summary>
+        </member>
+        <member name="P:DaLion.Professions.Framework.PipedSlime.Color">
+            <summary>Gets the <see cref="P:DaLion.Professions.Framework.PipedSlime.Color"/> value of the underlying <see cref="T:StardewValley.Monsters.GreenSlime"/> instance.</summary>
+        </member>
         <member name="P:DaLion.Professions.Framework.PipedSlime.Hat">
             <summary>Gets or sets the currently worn hat.</summary>
         </member>
@@ -4212,6 +4655,7 @@
         </member>
         <member name="M:DaLion.Professions.Framework.PipedSlime.DrawHat(Microsoft.Xna.Framework.Graphics.SpriteBatch)">
             <summary>Draws the <seealso cref="P:DaLion.Professions.Framework.PipedSlime.Hat"/>.</summary>
+            <param name="b">The <see cref="T:Microsoft.Xna.Framework.Graphics.SpriteBatch"/>.</param>
         </member>
         <member name="M:DaLion.Professions.Framework.PipedSlime.Update(Microsoft.Xna.Framework.GameTime)">
             <summary>Updates the instance state and counts down necessary timers.</summary>
@@ -4233,6 +4677,12 @@
         </member>
         <member name="M:DaLion.Professions.Framework.PipedSlime.BeginRespawn">
             <summary>Initiates the respawn countdown.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.PipedSlime.FadeIn">
+            <summary>Initiates fade in.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.PipedSlime.FadeOut">
+            <summary>Initiates fade out.</summary>
         </member>
         <member name="M:DaLion.Professions.Framework.PipedSlime.WarpToPiper">
             <summary>Warps the <seealso cref="P:DaLion.Professions.Framework.PipedSlime.Slime"/> to a new position near its <seealso cref="P:DaLion.Professions.Framework.PipedSlime.Piper"/> and resets the AI state.</summary>
@@ -4365,340 +4815,6 @@
             <param name="location">The location in which the sound is playing, if applicable.</param>
             <param name="position">The tile position from which the sound is playing, or <see langword="null"/> if it's playing throughout the location.</param>
             <param name="pitch">The pitch modifier to apply, or -1 for the default pitch.</param>
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntEndedEventArgs">
-            <summary>Interface for the arguments of a <see cref="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEvent"/>.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntEndedEventArgs.Player">
-            <summary>Gets the player who triggered the event.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntEndedEventArgs.Profession">
-            <summary>Gets whether this event is related to a <see cref="F:DaLion.Professions.Framework.VanillaProfession.Scavenger"/>> or <see cref="F:DaLion.Professions.Framework.VanillaProfession.Prospector"/>> hunt.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntEndedEventArgs.TreasureFound">
-            <summary>Gets a value indicating whether the player successfully discovered the treasure.</summary>
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntStartedEventArgs">
-            <summary>Interface for the arguments of a <see cref="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEvent"/>.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntStartedEventArgs.Player">
-            <summary>Gets the player who triggered the event.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntStartedEventArgs.Profession">
-            <summary>Gets whether this event relates to a Scavenger or Prospector hunt.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntStartedEventArgs.Target">
-            <summary>Gets the coordinates of the target tile.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntStartedEventArgs.TimeLimit">
-            <summary>Gets the time limit for the treasure hunt, in seconds.</summary>
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEvent">
-            <summary>A dynamic event raised when a <see cref="T:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt"/> ends.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEvent.#ctor(System.Action{System.Object,DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntEndedEventArgs},DaLion.Shared.Events.EventManager)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEvent"/> class.</summary>
-            <param name="callback">The delegate to run when the event is raised.</param>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEvent.Dispose">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEvent.OnEnded(System.Object,DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntEndedEventArgs)">
-            <summary>Raised when a <see cref="T:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt"/> ends.</summary>
-            <param name="sender">The event sender.</param>
-            <param name="e">The event arguments.</param>
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEventArgs">
-            <summary>The arguments for a <see cref="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEvent"/>.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEventArgs.#ctor(StardewValley.Farmer,DaLion.Professions.Framework.TreasureHunts.TreasureHuntProfession,System.Boolean)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEventArgs"/> class.</summary>
-            <param name="player">The player who triggered the event.</param>
-            <param name="profession">Whether this event relates to a Scavenger or Prospector hunt.</param>
-            <param name="found">Whether the player successfully discovered the treasure.</param>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEventArgs.Player">
-            <inheritdoc />
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEventArgs.Profession">
-            <inheritdoc />
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntEndedEventArgs.TreasureFound">
-            <inheritdoc />
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEvent">
-            <summary>A dynamic event raised when a <see cref="T:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt"/> starts.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEvent.#ctor(System.Action{System.Object,DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntStartedEventArgs},DaLion.Shared.Events.EventManager)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEvent"/> class.</summary>
-            <param name="callback">The delegate to run when the event is raised.</param>
-            <param name="manager">The <see cref="T:DaLion.Shared.Events.EventManager"/> instance that manages this event.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEvent.Dispose">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEvent.OnStarted(System.Object,DaLion.Professions.Framework.TreasureHunts.Events.ITreasureHuntStartedEventArgs)">
-            <summary>Raised when a <see cref="T:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt"/> starts.</summary>
-            <param name="sender">The event sender.</param>
-            <param name="e">The event arguments.</param>
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEventArgs">
-            <summary>The arguments for a <see cref="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEvent"/>.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEventArgs.#ctor(StardewValley.Farmer,DaLion.Professions.Framework.TreasureHunts.TreasureHuntProfession,Microsoft.Xna.Framework.Vector2,System.UInt32)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEventArgs"/> class.</summary>
-            <param name="player">The player who triggered the event.</param>
-            <param name="profession">Whether this event relates to a Scavenger or Prospector hunt.</param>
-            <param name="target">The coordinates of the target tile.</param>
-            <param name="timeLimit">The time limit for the treasure hunt, in seconds.</param>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEventArgs.Player">
-            <inheritdoc />
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEventArgs.Profession">
-            <inheritdoc />
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEventArgs.Target">
-            <inheritdoc />
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.Events.TreasureHuntStartedEventArgs.TimeLimit">
-            <inheritdoc />
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.HuntNotification">
-            <summary>HUD message for treasure hunts.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.HuntNotification.#ctor(System.String)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.TreasureHunts.HuntNotification"/> class.</summary>
-            <param name="message">The message to display.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.HuntNotification.#ctor(System.String,Microsoft.Xna.Framework.Rectangle)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.TreasureHunts.HuntNotification"/> class.</summary>
-            <param name="message">The message to display.</param>
-            <param name="iconSourceRect">Source rectangle of the icon to display.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.HuntNotification.draw(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Int32,System.Int32@)">
-            <summary>Draws the notification to the game sprite batch.</summary>
-            <param name="b">The <see cref="T:Microsoft.Xna.Framework.Graphics.SpriteBatch"/>.</param>
-            <param name="i">Unclear.</param>
-            <param name="heightUsed">The cumulative height used.</param>
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt">
-            <summary>Interface for treasure hunts.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt.Profession">
-            <summary>
-                Gets whether this instance pertains to a <see cref="F:DaLion.Professions.Framework.VanillaProfession.Scavenger"/> or a
-                <see cref="F:DaLion.Professions.Framework.VanillaProfession.Prospector"/>.
-            </summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt.Location">
-            <summary>Gets the active hunt's <see cref="T:StardewValley.GameLocation"/>.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt.TreasureTile">
-            <summary>Gets the target tile containing treasure.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt.IsActive">
-            <summary>Gets a value indicating whether the <see cref="P:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt.TreasureTile"/> is set to a valid target.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt.Elapsed">
-            <summary>Gets the elapsed time of the active hunt, in seconds.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt.TimeLimit">
-            <summary>Gets the time limit of the active hunt, in seconds.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt.TryStart(System.Double)">
-            <summary>Tries to start a new hunt.</summary>
-            <param name="chance">The percent chance of success.</param>
-            <returns><see langword="true"/> if a hunt was started, otherwise <see langword="false"/>.</returns>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt.ForceStart(Microsoft.Xna.Framework.Vector2)">
-            <summary>Forcefully starts a new hunt.</summary>
-            <param name="target">The target treasure tile.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt.Complete">
-            <summary>Ends the active hunt successfully.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt.Fail">
-            <summary>Ends the active hunt unsuccessfully.</summary>
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt">
-            <summary>Manages treasure hunt events for Prospector profession.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt.#ctor">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt"/> class.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt.TryStart(System.Double)">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt.Complete">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt.Fail">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt.TrySetTreasureTile(StardewValley.GameLocation)">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt.SetTimeLimit">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt.End(System.Boolean)">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt.StartImpl(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt.GetStoneTreasureForMineShaft(System.Int32)">
-            <summary>Spawns hunt spoils as debris. Applies to <see cref="T:StardewValley.Locations.MineShaft"/>.</summary>
-            <remarks>Adapted from FishingRod.openTreasureMenuEndFunction.</remarks>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ProspectorHunt.GetStoneTreasureForVolcanoDungeon">
-            <summary>Spawns hunt spoils as debris. Applies to <see cref="T:StardewValley.Locations.VolcanoDungeon"/>.</summary>
-            <remarks>Adapted from FishingRod.openTreasureMenuEndFunction.</remarks>
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt">
-            <summary>Manages treasure hunt events for Scavenger professions.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.#ctor">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt"/> class.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.TryStart(System.Double)">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.Complete">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.Fail">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.TrySetTreasureTile(StardewValley.GameLocation)">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.SetTimeLimit">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.End(System.Boolean)">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.StartImpl(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.BeginFindTreasure">
-            <summary>Plays treasure chest found animation.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.OpenChestEndFunction(System.Int32)">
-            <summary>Plays open treasure chest animation.</summary>
-            <param name="extra">Not applicable.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.OpenTreasureMenuEndFunction(System.Int32)">
-            <summary>Opens the treasure chest menu.</summary>
-            <param name="extra">Not applicable.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.ScavengerHunt.GetTreasureContents">
-            <summary>Chooses the contents of the treasure chest.</summary>
-            <remarks>Adapted from FishingRod.openTreasureMenuEndFunction.</remarks>
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.TreasureHunt">
-            <summary>Base class for treasure hunts.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.#ctor(DaLion.Professions.Framework.TreasureHunts.TreasureHuntProfession,System.String,System.String,Microsoft.Xna.Framework.Rectangle)">
-            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.TreasureHunts.TreasureHunt"/> class.</summary>
-            <param name="profession">Either <see cref="F:DaLion.Professions.Framework.VanillaProfession.Scavenger"/> or <see cref="F:DaLion.Professions.Framework.VanillaProfession.Prospector"/>.</param>
-            <param name="huntStartedMessage">The message displayed to the player when the hunt starts.</param>
-            <param name="huntFailedMessage">The message displayed to the player when the hunt fails.</param>
-            <param name="iconSourceRect">The <see cref="T:Microsoft.Xna.Framework.Rectangle"/> area of the corresponding profession's icon.</param>
-        </member>
-        <member name="E:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.Started">
-            <inheritdoc cref="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.OnStarted(Microsoft.Xna.Framework.Vector2,System.UInt32)"/>
-        </member>
-        <member name="E:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.Ended">
-            <inheritdoc cref="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.OnEnded(System.Boolean)"/>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.Profession">
-            <inheritdoc />
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.TreasureTile">
-            <inheritdoc />
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.Location">
-            <inheritdoc />
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.IsActive">
-            <inheritdoc />
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.Elapsed">
-            <inheritdoc />
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.TimeLimit">
-            <inheritdoc />
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.Random">
-            <summary>Gets a random number generator.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.IconSourceRect">
-            <summary>Gets the profession icon source <see cref="T:Microsoft.Xna.Framework.Rectangle"/>.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.HuntStartedMessage">
-            <summary>Gets the hunt started message.</summary>
-        </member>
-        <member name="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.HuntFailedMessage">
-            <summary>Gets the hunt failed message.</summary>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.TryStart(System.Double)">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.ForceStart(Microsoft.Xna.Framework.Vector2)">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.Complete">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.Fail">
-            <inheritdoc />
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.Update(System.UInt32)">
-            <summary>Check for completion or failure.</summary>
-            <param name="ticks">The number of ticks elapsed since the game started.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.TrySetTreasureTile(StardewValley.GameLocation)">
-            <summary>Attempts to select the target treasure tile.</summary>
-            <param name="location">The <see cref="T:StardewValley.GameLocation"/>.</param>
-            <returns><see langword="true"/> if a valid tile was set, other <see langword="false"/>.</returns>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.SetTimeLimit">
-            <summary>Sets the <see cref="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.TimeLimit"/> for this hunt.</summary>
-            <returns>The set time limit, for convenience.</returns>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.End(System.Boolean)">
-            <summary>Resets treasure tile and releases the treasure hunt update event.</summary>
-            <param name="success">Whether the treasure was successfully found.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.StartImpl(StardewValley.GameLocation,Microsoft.Xna.Framework.Vector2)">
-            <summary>Start-up logic implementation.</summary>
-            <param name="location">Reference to <see cref="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.Location"/>.</param>
-            <param name="treasureTile">Reference to the chosen <see cref="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.TreasureTile"/>.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.OnStarted(Microsoft.Xna.Framework.Vector2,System.UInt32)">
-            <summary>Raised when a Treasure Hunt starts.</summary>
-            <param name="treasureTile">Reference to the chosen <see cref="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.TreasureTile"/>.</param>
-            <param name="timeLimit">Reference to the <see cref="P:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.TimeLimit"/>.</param>
-        </member>
-        <member name="M:DaLion.Professions.Framework.TreasureHunts.TreasureHunt.OnEnded(System.Boolean)">
-            <summary>Raised when a Treasure Hunt ends.</summary>
-            <param name="found">Whether the player successfully discovered the treasure.</param>
-        </member>
-        <member name="T:DaLion.Professions.Framework.TreasureHunts.TreasureHuntProfession">
-            <summary>
-                The type of <see cref="T:DaLion.Professions.Framework.TreasureHunts.ITreasureHunt"/>; either <see cref="F:DaLion.Professions.Framework.VanillaProfession.Scavenger"/> or
-                <see cref="F:DaLion.Professions.Framework.VanillaProfession.Prospector"/>.
-            </summary>
-        </member>
-        <member name="F:DaLion.Professions.Framework.TreasureHunts.TreasureHuntProfession.Scavenger">
-            <summary>A <see cref="F:DaLion.Professions.Framework.VanillaProfession.Scavenger"/> hunt.</summary>
-        </member>
-        <member name="F:DaLion.Professions.Framework.TreasureHunts.TreasureHuntProfession.Prospector">
-            <summary>A <see cref="F:DaLion.Professions.Framework.VanillaProfession.Prospector"/> hunt.</summary>
         </member>
         <member name="T:DaLion.Professions.Framework.UI.HudPointer">
             <summary>Pointer for highlighting on-screen and off-screen objects of interest for tracker professions.</summary>
@@ -5103,6 +5219,33 @@
         <member name="T:DaLion.Professions.ProfessionsConfig">
             <summary>Config schema for the Professions mod.</summary>
         </member>
+        <member name="T:DaLion.Professions.ProfessionsConfig.ScreenAnchorPosition">
+            <summary>An anchor position relative to the player's screen.</summary>
+        </member>
+        <member name="F:DaLion.Professions.ProfessionsConfig.ScreenAnchorPosition.Top">
+            <summary>The top edge of the screen.</summary>
+        </member>
+        <member name="F:DaLion.Professions.ProfessionsConfig.ScreenAnchorPosition.Left">
+            <summary>The left edge of the screen.</summary>
+        </member>
+        <member name="F:DaLion.Professions.ProfessionsConfig.ScreenAnchorPosition.Right">
+            <summary>The right edge of the screen.</summary>
+        </member>
+        <member name="T:DaLion.Professions.ProfessionsConfig.HealthBarPosition">
+            <summary>Where to draw a minion's health bar.</summary>
+        </member>
+        <member name="F:DaLion.Professions.ProfessionsConfig.HealthBarPosition.Hud">
+            <summary>The health bar should appear only on the HUD.</summary>
+        </member>
+        <member name="F:DaLion.Professions.ProfessionsConfig.HealthBarPosition.Sprite">
+            <summary>The health bar should appear only underneath the minion's sprite.</summary>
+        </member>
+        <member name="F:DaLion.Professions.ProfessionsConfig.HealthBarPosition.Both">
+            <summary>The health bar should appear both on the HUD and underneath the sprite.</summary>
+        </member>
+        <member name="F:DaLion.Professions.ProfessionsConfig.HealthBarPosition.None">
+            <summary>The heath bar should not appear at all.</summary>
+        </member>
         <member name="P:DaLion.Professions.ProfessionsConfig.Skills">
             <inheritdoc cref="T:DaLion.Professions.Framework.Configs.SkillsConfig"/>
         </member>
@@ -5139,23 +5282,20 @@
         <member name="P:DaLion.Professions.ProfessionsConfig.MineralsNeededForBestQuality">
             <summary>Gets the number of minerals that must be mined before mined minerals become iridium-quality.</summary>
         </member>
-        <member name="P:DaLion.Professions.ProfessionsConfig.TreasureHuntStartChanceMultiplier">
-            <summary>Gets a multiplier applied to the base chance that a Scavenger or Prospector hunt will trigger in the right conditions.</summary>
+        <member name="P:DaLion.Professions.ProfessionsConfig.TreasureHuntTriggerModifier">
+            <summary>Gets a multiplier applied to the point threshold to trigger a Scavenger or Prospector hunt.</summary>
         </member>
         <member name="P:DaLion.Professions.ProfessionsConfig.AllowScavengerHuntsOnFarm">
             <summary>Gets a value indicating whether determines whether a Scavenger Hunt can trigger while entering a farm map.</summary>
         </member>
-        <member name="P:DaLion.Professions.ProfessionsConfig.ScavengerDetectionDistance">
-            <summary>Gets the minimum distance to the scavenger hunt target before the indicator appears.</summary>
+        <member name="P:DaLion.Professions.ProfessionsConfig.ScavengerHuntRange">
+            <summary>Gets the distance to the treasure tile at which the scavenger tracker disappears.</summary>
         </member>
-        <member name="P:DaLion.Professions.ProfessionsConfig.ScavengerHuntHandicap">
-            <summary>Gets a multiplier which is used to extend the duration of Scavenger hunts, in case you feel they end too quickly.</summary>
+        <member name="P:DaLion.Professions.ProfessionsConfig.ScavengerHuntTimeLimit">
+            <summary>Gets the time limit of the scavenger hunt.</summary>
         </member>
-        <member name="P:DaLion.Professions.ProfessionsConfig.ProspectorDetectionDistance">
-            <summary>Gets the minimum distance to the prospector hunt target before the indicator is heard.</summary>
-        </member>
-        <member name="P:DaLion.Professions.ProfessionsConfig.ProspectorHuntHandicap">
-            <summary>Gets a multiplier which is used to extend the duration of Prospector hunts, in case you feel they end too quickly.</summary>
+        <member name="P:DaLion.Professions.ProfessionsConfig.ProspectorHuntTimeLimit">
+            <summary>Gets the time limit of the prospector hunt.</summary>
         </member>
         <member name="P:DaLion.Professions.ProfessionsConfig.TrackingPointerScale">
             <summary>Gets the size of the pointer used to track objects by Prospector and Scavenger professions.</summary>
@@ -5165,9 +5305,6 @@
         </member>
         <member name="P:DaLion.Professions.ProfessionsConfig.DisableAlwaysTrack">
             <summary>Gets a value indicating whether Prospector and Scavenger will only track off-screen object while <see cref="P:DaLion.Professions.ProfessionsConfig.ModKey"/> is held.</summary>
-        </member>
-        <member name="P:DaLion.Professions.ProfessionsConfig.UseLegacyProspectorHunt">
-            <summary>Gets a value indicating whether to restore the legacy purple arrow for Prospector Hunts, instead of the new audio cues.</summary>
         </member>
         <member name="P:DaLion.Professions.ProfessionsConfig.AnglerPriceBonusCeiling">
             <summary>
@@ -5207,8 +5344,14 @@
         <member name="P:DaLion.Professions.ProfessionsConfig.ShowEquippedAmmo">
             <summary>Gets a value indicating whether to draw the currently equipped ammo over the slingshot's tooltip.</summary>
         </member>
-        <member name="P:DaLion.Professions.ProfessionsConfig.ShowMinionHealth">
-            <summary>Gets a value indicating whether to draw the Slime minions' health.</summary>
+        <member name="P:DaLion.Professions.ProfessionsConfig.MinionHudAnchorPosition">
+            <summary>Gets a value indicating the screen position to which the minion HUD should be anchored.</summary>
+        </member>
+        <member name="P:DaLion.Professions.ProfessionsConfig.MinionHealthBarPosition">
+            <summary>Gets a value indicating where a minion's health bar should be drawn.</summary>
+        </member>
+        <member name="P:DaLion.Professions.ProfessionsConfig.MinionHudOffset">
+            <summary>Gets the x and y offsets applied to the default position of minion HUD.</summary>
         </member>
         <member name="P:DaLion.Professions.ProfessionsConfig.UseAsyncMinionPathfinder">
             <summary>Gets a value indicating whether to use the async version of the Slime Pathfinder.</summary>
@@ -5299,6 +5442,9 @@
         <member name="T:DaLion.Professions.I18n.Keys">
             <summary>A lookup of available translation keys.</summary>
         </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Schema">
+            <summary>The unique key for a translation equivalent to "https://smapi.io/schemas/i18n.json".</summary>
+        </member>
         <member name="F:DaLion.Professions.I18n.Keys.Harvester_Title_Male">
             <summary>The unique key for a translation equivalent to "Harvester".</summary>
         </member>
@@ -5324,10 +5470,10 @@
             <summary>The unique key for a translation equivalent to "Cropwhisperer".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Agriculturist_Desc">
-            <summary>The unique key for a translation equivalent to "Crops grow 10% faster. Can harvest best-quality crops organically without fertilizer.".</summary>
+            <summary>The unique key for a translation equivalent to "Rotate crops to enrich the soil, boosting growth speed and quality. Best-quality crops can be harvested organically, without fertilizers.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Agriculturist_Desc_Prestiged">
-            <summary>The unique key for a translation equivalent to "Crops grow 10% &gt;&gt; 20% faster and can survive up to 5 days out-of-season.".</summary>
+            <summary>The unique key for a translation equivalent to "Growth speed bonuses also apply to the regrowth phase of multi-harvest crops. Crops can survive up to one week out of season.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Artisan_Title_Male">
             <summary>The unique key for a translation equivalent to "Artisan".</summary>
@@ -5783,10 +5929,10 @@
             <summary>The unique key for a translation equivalent to "Rascal".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Rascal_Desc">
-            <summary>The unique key for a translation equivalent to "Gain one additional ammo slot. 35% chance to recover certain ammo.".</summary>
+            <summary>The unique key for a translation equivalent to "Gain one additional ammo slot. 35% chance to recover ammo.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Rascal_Desc_Prestiged">
-            <summary>The unique key for a translation equivalent to "35% &gt;&gt; 55% chance to recover certain ammo. Can fire both ammo slots at once.".</summary>
+            <summary>The unique key for a translation equivalent to "35% &gt;&gt; 55% chance to recover ammo. Can fire both ammo slots at once.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Desperado_Title_Male">
             <summary>The unique key for a translation equivalent to "Desperado".</summary>
@@ -5822,16 +5968,28 @@
             <summary>The unique key for a translation equivalent to "Prismarch".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Piper_Title_Prestiged_Female">
-            <summary>The unique key for a translation equivalent to "Prismatriz".</summary>
+            <summary>The unique key for a translation equivalent to "Prismatrice".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Piper_Desc">
-            <summary>The unique key for a translation equivalent to "Summon raised Slimes to aid you in combat. Designate one Slime to carry items. Slime Hutch capacity +50%.".</summary>
+            <summary>The unique key for a translation equivalent to "Slime Hutch capacity +50%. Slimes raised in a Hutch are summoned to fight alongside you. One can be assigned as a Hat Slime to carry items.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Piper_Desc_Prestiged">
             <summary>The unique key for a translation equivalent to "Ally Slimes gain unique abilities based on their color. Obtain rare colored items from Slime Balls.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Piper_Slime_BagFull">
             <summary>The unique key for a translation equivalent to "The Slime's pouch is full.".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Piper_Slime_Health">
+            <summary>The unique key for a translation equivalent to "{{value}} Health".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Piper_Slime_Attack">
+            <summary>The unique key for a translation equivalent to "{{value}} Attack".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Piper_Slime_Defense">
+            <summary>The unique key for a translation equivalent to "{{value}} Defense".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Piper_Slime_Dismiss">
+            <summary>The unique key for a translation equivalent to "(Click to dismiss)".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Prestige_DogStatue_First">
             <summary>The unique key for a translation equivalent to "-Statue Of Transcendence-^The statue can reset a skill's level while retaining all acquired professions.".</summary>
@@ -6001,6 +6159,12 @@
         <member name="F:DaLion.Professions.I18n.Keys.Objects_Slimecheese_Desc">
             <summary>The unique key for a translation equivalent to "It smells terrible! Would anyone really want to eat this?".</summary>
         </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Honorific_Male">
+            <summary>The unique key for a translation equivalent to "Dear".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Honorific_Female">
+            <summary>The unique key for a translation equivalent to "Dear".</summary>
+        </member>
         <member name="F:DaLion.Professions.I18n.Keys.Gmcm_Pages_Prfs">
             <summary>The unique key for a translation equivalent to "Professions".</summary>
         </member>
@@ -6082,11 +6246,11 @@
             <summary>The unique key for a translation equivalent to "Gemologists must mine this many different minerals to achieve iridium quality. By default this is balanced for vanilla; you should increase this number if using mods which add many new gems or minerals.".</summary>
         </member>
         <!-- Badly formed XML comment ignored for member "F:DaLion.Professions.I18n.Keys.Gmcm_Sections_Prfs_ScavengerProspector" -->
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_TreasureHuntStartChanceMultiplier_Title">
-            <summary>The unique key for a translation equivalent to "Treasure Hunt Start Chance Multiplier".</summary>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_TreasureHuntTriggerModifier_Title">
+            <summary>The unique key for a translation equivalent to "Treasure Hunt Trigger Threshold Modifier".</summary>
         </member>
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_TreasureHuntStartChanceMultiplier_Desc">
-            <summary>The unique key for a translation equivalent to "Multiplies the base chance that your Scavenger or Prospector hunt senses will start to tingle.".</summary>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_TreasureHuntTriggerModifier_Desc">
+            <summary>The unique key for a translation equivalent to "Multiplier applied to the point threshold to trigger a Scavenger or Prospector hunt".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Gmcm_AllowScavengerHuntsOnFarm_Title">
             <summary>The unique key for a translation equivalent to "Allow Scavenger Hunts on Farm".</summary>
@@ -6094,29 +6258,23 @@
         <member name="F:DaLion.Professions.I18n.Keys.Gmcm_AllowScavengerHuntsOnFarm_Desc">
             <summary>The unique key for a translation equivalent to "Whether a Scavenger Hunt can trigger while on the farm map.".</summary>
         </member>
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ScavengerDetectionDistance_Title">
-            <summary>The unique key for a translation equivalent to "Scavenger Detection Distance".</summary>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ScavengerHuntRange_Title">
+            <summary>The unique key for a translation equivalent to "Scavenger Hunt Tracking Range".</summary>
         </member>
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ScavengerDetectionDistance_Desc">
-            <summary>The unique key for a translation equivalent to "How close you must be to the treasure tile to reveal it's location, in tiles.".</summary>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ScavengerHuntRange_Desc">
+            <summary>The unique key for a translation equivalent to "How far you must be to the treasure tile to track it's location, in tiles.".</summary>
         </member>
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ScavengerHuntHandicap_Title">
-            <summary>The unique key for a translation equivalent to "Scavenger Hunt Handicap".</summary>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ScavengerHuntTimeLimit_Title">
+            <summary>The unique key for a translation equivalent to "Scavenger Hunt Time Limit".</summary>
         </member>
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ScavengerHuntHandicap_Desc">
-            <summary>The unique key for a translation equivalent to "Increase this number if you find that Scavenger hunts end too quickly.".</summary>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ScavengerHuntTimeLimit_Desc">
+            <summary>The unique key for a translation equivalent to "The time limit of the Scavenger hunt, in seconds.".</summary>
         </member>
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ProspectorDetectionDistance_Title">
-            <summary>The unique key for a translation equivalent to "Prospector Detection Distance".</summary>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ProspectorHuntTimeLimit_Title">
+            <summary>The unique key for a translation equivalent to "Prospector Hunt Time Limit".</summary>
         </member>
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ProspectorDetectionDistance_Desc">
-            <summary>The unique key for a translation equivalent to "How close you must be to the treasure tile to hear the sound cue, in tiles.".</summary>
-        </member>
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ProspectorHuntHandicap_Title">
-            <summary>The unique key for a translation equivalent to "Prospector Hunt Handicap".</summary>
-        </member>
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ProspectorHuntHandicap_Desc">
-            <summary>The unique key for a translation equivalent to "Increase this number if you find that Prospector hunts end too quickly.".</summary>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ProspectorHuntTimeLimit_Desc">
+            <summary>The unique key for a translation equivalent to "The time limit of the Prospector hunt, in seconds.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Gmcm_TrackingPointerScale_Title">
             <summary>The unique key for a translation equivalent to "Tracking Pointer Scale".</summary>
@@ -6215,17 +6373,38 @@
         <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ShowEquippedAmmo_Desc">
             <summary>The unique key for a translation equivalent to "Whether to draw the currently equipped ammo over the slingshot's tooltip.".</summary>
         </member>
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ShowMinionHealth_Title">
-            <summary>The unique key for a translation equivalent to "Show Minion Health".</summary>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_MinionHudAnchorPosition_Title">
+            <summary>The unique key for a translation equivalent to "Minion HUD Anchor Position".</summary>
         </member>
-        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ShowMinionHealth_Desc">
-            <summary>The unique key for a translation equivalent to "Whether to draw the Slime minions' health.".</summary>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_MinionHudAnchorPosition_Desc">
+            <summary>The unique key for a translation equivalent to "Screen position to which the minion HUD should be anchored.".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ScreenAnchorPosition_Top">
+            <summary>The unique key for a translation equivalent to "Top".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ScreenAnchorPosition_Left">
+            <summary>The unique key for a translation equivalent to "Left".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_ScreenAnchorPosition_Right">
+            <summary>The unique key for a translation equivalent to "Right".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_MinionHudOffset_Title">
+            <summary>The unique key for a translation equivalent to "Minion HUD Offset".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_MinionHudOffset_Desc">
+            <summary>The unique key for a translation equivalent to "X and Y offsets applied to the default position of minion HUD.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Gmcm_UseAsyncMinionPathfinder_Title">
             <summary>The unique key for a translation equivalent to "Use Async Minion Pathfinder".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Gmcm_UseAsyncMinionPathfinder_Desc">
             <summary>The unique key for a translation equivalent to "Whether to use the asynchronous multithreaded version of the Slime Pathfinder, which should perform better in most modern systems. Recommended to keep this enabled unless your Slimes behave weirdly.".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_EnableSlimeGoods_Title">
+            <summary>The unique key for a translation equivalent to "Enable Slime Goods".</summary>
+        </member>
+        <member name="F:DaLion.Professions.I18n.Keys.Gmcm_EnableSlimeGoods_Desc">
+            <summary>The unique key for a translation equivalent to "Whether to add new Slime Mayonnaise and Slime Cheese items to the game in order to add more depth to Slime Ranching playstyle.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Gmcm_Sections_Prfs_SkillReset">
             <summary>The unique key for a translation equivalent to "Skill Reset".</summary>
@@ -6399,6 +6578,9 @@
             <summary>Construct an instance.</summary>
             <param name="translations">The mod's translation helper.</param>
         </member>
+        <member name="M:DaLion.Professions.I18n.Schema">
+            <summary>Get a translation equivalent to "https://smapi.io/schemas/i18n.json".</summary>
+        </member>
         <member name="M:DaLion.Professions.I18n.Harvester_Title_Male">
             <summary>Get a translation equivalent to "Harvester".</summary>
         </member>
@@ -6424,10 +6606,10 @@
             <summary>Get a translation equivalent to "Cropwhisperer".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Agriculturist_Desc">
-            <summary>Get a translation equivalent to "Crops grow 10% faster. Can harvest best-quality crops organically without fertilizer.".</summary>
+            <summary>Get a translation equivalent to "Rotate crops to enrich the soil, boosting growth speed and quality. Best-quality crops can be harvested organically, without fertilizers.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Agriculturist_Desc_Prestiged">
-            <summary>Get a translation equivalent to "Crops grow 10% &gt;&gt; 20% faster and can survive up to 5 days out-of-season.".</summary>
+            <summary>Get a translation equivalent to "Growth speed bonuses also apply to the regrowth phase of multi-harvest crops. Crops can survive up to one week out of season.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Artisan_Title_Male">
             <summary>Get a translation equivalent to "Artisan".</summary>
@@ -6894,10 +7076,10 @@
             <summary>Get a translation equivalent to "Rascal".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Rascal_Desc">
-            <summary>Get a translation equivalent to "Gain one additional ammo slot. 35% chance to recover certain ammo.".</summary>
+            <summary>Get a translation equivalent to "Gain one additional ammo slot. 35% chance to recover ammo.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Rascal_Desc_Prestiged">
-            <summary>Get a translation equivalent to "35% &gt;&gt; 55% chance to recover certain ammo. Can fire both ammo slots at once.".</summary>
+            <summary>Get a translation equivalent to "35% &gt;&gt; 55% chance to recover ammo. Can fire both ammo slots at once.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Desperado_Title_Male">
             <summary>Get a translation equivalent to "Desperado".</summary>
@@ -6933,16 +7115,31 @@
             <summary>Get a translation equivalent to "Prismarch".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Piper_Title_Prestiged_Female">
-            <summary>Get a translation equivalent to "Prismatriz".</summary>
+            <summary>Get a translation equivalent to "Prismatrice".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Piper_Desc">
-            <summary>Get a translation equivalent to "Summon raised Slimes to aid you in combat. Designate one Slime to carry items. Slime Hutch capacity +50%.".</summary>
+            <summary>Get a translation equivalent to "Slime Hutch capacity +50%. Slimes raised in a Hutch are summoned to fight alongside you. One can be assigned as a Hat Slime to carry items.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Piper_Desc_Prestiged">
             <summary>Get a translation equivalent to "Ally Slimes gain unique abilities based on their color. Obtain rare colored items from Slime Balls.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Piper_Slime_BagFull">
             <summary>Get a translation equivalent to "The Slime's pouch is full.".</summary>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Piper_Slime_Health(System.Object)">
+            <summary>Get a translation equivalent to "{{value}} Health".</summary>
+            <param name="value">The value to inject for the <c>{{value}}</c> token.</param>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Piper_Slime_Attack(System.Object)">
+            <summary>Get a translation equivalent to "{{value}} Attack".</summary>
+            <param name="value">The value to inject for the <c>{{value}}</c> token.</param>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Piper_Slime_Defense(System.Object)">
+            <summary>Get a translation equivalent to "{{value}} Defense".</summary>
+            <param name="value">The value to inject for the <c>{{value}}</c> token.</param>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Piper_Slime_Dismiss">
+            <summary>Get a translation equivalent to "(Click to dismiss)".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Prestige_DogStatue_First">
             <summary>Get a translation equivalent to "-Statue Of Transcendence-^The statue can reset a skill's level while retaining all acquired professions.".</summary>
@@ -7123,6 +7320,12 @@
         <member name="M:DaLion.Professions.I18n.Objects_Slimecheese_Desc">
             <summary>Get a translation equivalent to "It smells terrible! Would anyone really want to eat this?".</summary>
         </member>
+        <member name="M:DaLion.Professions.I18n.Honorific_Male">
+            <summary>Get a translation equivalent to "Dear".</summary>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Honorific_Female">
+            <summary>Get a translation equivalent to "Dear".</summary>
+        </member>
         <member name="M:DaLion.Professions.I18n.Gmcm_Pages_Prfs">
             <summary>Get a translation equivalent to "Professions".</summary>
         </member>
@@ -7204,11 +7407,11 @@
             <summary>Get a translation equivalent to "Gemologists must mine this many different minerals to achieve iridium quality. By default this is balanced for vanilla; you should increase this number if using mods which add many new gems or minerals.".</summary>
         </member>
         <!-- Badly formed XML comment ignored for member "M:DaLion.Professions.I18n.Gmcm_Sections_Prfs_ScavengerProspector" -->
-        <member name="M:DaLion.Professions.I18n.Gmcm_TreasureHuntStartChanceMultiplier_Title">
-            <summary>Get a translation equivalent to "Treasure Hunt Start Chance Multiplier".</summary>
+        <member name="M:DaLion.Professions.I18n.Gmcm_TreasureHuntTriggerModifier_Title">
+            <summary>Get a translation equivalent to "Treasure Hunt Trigger Threshold Modifier".</summary>
         </member>
-        <member name="M:DaLion.Professions.I18n.Gmcm_TreasureHuntStartChanceMultiplier_Desc">
-            <summary>Get a translation equivalent to "Multiplies the base chance that your Scavenger or Prospector hunt senses will start to tingle.".</summary>
+        <member name="M:DaLion.Professions.I18n.Gmcm_TreasureHuntTriggerModifier_Desc">
+            <summary>Get a translation equivalent to "Multiplier applied to the point threshold to trigger a Scavenger or Prospector hunt".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Gmcm_AllowScavengerHuntsOnFarm_Title">
             <summary>Get a translation equivalent to "Allow Scavenger Hunts on Farm".</summary>
@@ -7216,29 +7419,23 @@
         <member name="M:DaLion.Professions.I18n.Gmcm_AllowScavengerHuntsOnFarm_Desc">
             <summary>Get a translation equivalent to "Whether a Scavenger Hunt can trigger while on the farm map.".</summary>
         </member>
-        <member name="M:DaLion.Professions.I18n.Gmcm_ScavengerDetectionDistance_Title">
-            <summary>Get a translation equivalent to "Scavenger Detection Distance".</summary>
+        <member name="M:DaLion.Professions.I18n.Gmcm_ScavengerHuntRange_Title">
+            <summary>Get a translation equivalent to "Scavenger Hunt Tracking Range".</summary>
         </member>
-        <member name="M:DaLion.Professions.I18n.Gmcm_ScavengerDetectionDistance_Desc">
-            <summary>Get a translation equivalent to "How close you must be to the treasure tile to reveal it's location, in tiles.".</summary>
+        <member name="M:DaLion.Professions.I18n.Gmcm_ScavengerHuntRange_Desc">
+            <summary>Get a translation equivalent to "How far you must be to the treasure tile to track it's location, in tiles.".</summary>
         </member>
-        <member name="M:DaLion.Professions.I18n.Gmcm_ScavengerHuntHandicap_Title">
-            <summary>Get a translation equivalent to "Scavenger Hunt Handicap".</summary>
+        <member name="M:DaLion.Professions.I18n.Gmcm_ScavengerHuntTimeLimit_Title">
+            <summary>Get a translation equivalent to "Scavenger Hunt Time Limit".</summary>
         </member>
-        <member name="M:DaLion.Professions.I18n.Gmcm_ScavengerHuntHandicap_Desc">
-            <summary>Get a translation equivalent to "Increase this number if you find that Scavenger hunts end too quickly.".</summary>
+        <member name="M:DaLion.Professions.I18n.Gmcm_ScavengerHuntTimeLimit_Desc">
+            <summary>Get a translation equivalent to "The time limit of the Scavenger hunt, in seconds.".</summary>
         </member>
-        <member name="M:DaLion.Professions.I18n.Gmcm_ProspectorDetectionDistance_Title">
-            <summary>Get a translation equivalent to "Prospector Detection Distance".</summary>
+        <member name="M:DaLion.Professions.I18n.Gmcm_ProspectorHuntTimeLimit_Title">
+            <summary>Get a translation equivalent to "Prospector Hunt Time Limit".</summary>
         </member>
-        <member name="M:DaLion.Professions.I18n.Gmcm_ProspectorDetectionDistance_Desc">
-            <summary>Get a translation equivalent to "How close you must be to the treasure tile to hear the sound cue, in tiles.".</summary>
-        </member>
-        <member name="M:DaLion.Professions.I18n.Gmcm_ProspectorHuntHandicap_Title">
-            <summary>Get a translation equivalent to "Prospector Hunt Handicap".</summary>
-        </member>
-        <member name="M:DaLion.Professions.I18n.Gmcm_ProspectorHuntHandicap_Desc">
-            <summary>Get a translation equivalent to "Increase this number if you find that Prospector hunts end too quickly.".</summary>
+        <member name="M:DaLion.Professions.I18n.Gmcm_ProspectorHuntTimeLimit_Desc">
+            <summary>Get a translation equivalent to "The time limit of the Prospector hunt, in seconds.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Gmcm_TrackingPointerScale_Title">
             <summary>Get a translation equivalent to "Tracking Pointer Scale".</summary>
@@ -7337,17 +7534,38 @@
         <member name="M:DaLion.Professions.I18n.Gmcm_ShowEquippedAmmo_Desc">
             <summary>Get a translation equivalent to "Whether to draw the currently equipped ammo over the slingshot's tooltip.".</summary>
         </member>
-        <member name="M:DaLion.Professions.I18n.Gmcm_ShowMinionHealth_Title">
-            <summary>Get a translation equivalent to "Show Minion Health".</summary>
+        <member name="M:DaLion.Professions.I18n.Gmcm_MinionHudAnchorPosition_Title">
+            <summary>Get a translation equivalent to "Minion HUD Anchor Position".</summary>
         </member>
-        <member name="M:DaLion.Professions.I18n.Gmcm_ShowMinionHealth_Desc">
-            <summary>Get a translation equivalent to "Whether to draw the Slime minions' health.".</summary>
+        <member name="M:DaLion.Professions.I18n.Gmcm_MinionHudAnchorPosition_Desc">
+            <summary>Get a translation equivalent to "Screen position to which the minion HUD should be anchored.".</summary>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Gmcm_ScreenAnchorPosition_Top">
+            <summary>Get a translation equivalent to "Top".</summary>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Gmcm_ScreenAnchorPosition_Left">
+            <summary>Get a translation equivalent to "Left".</summary>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Gmcm_ScreenAnchorPosition_Right">
+            <summary>Get a translation equivalent to "Right".</summary>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Gmcm_MinionHudOffset_Title">
+            <summary>Get a translation equivalent to "Minion HUD Offset".</summary>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Gmcm_MinionHudOffset_Desc">
+            <summary>Get a translation equivalent to "X and Y offsets applied to the default position of minion HUD.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Gmcm_UseAsyncMinionPathfinder_Title">
             <summary>Get a translation equivalent to "Use Async Minion Pathfinder".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Gmcm_UseAsyncMinionPathfinder_Desc">
             <summary>Get a translation equivalent to "Whether to use the asynchronous multithreaded version of the Slime Pathfinder, which should perform better in most modern systems. Recommended to keep this enabled unless your Slimes behave weirdly.".</summary>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Gmcm_EnableSlimeGoods_Title">
+            <summary>Get a translation equivalent to "Enable Slime Goods".</summary>
+        </member>
+        <member name="M:DaLion.Professions.I18n.Gmcm_EnableSlimeGoods_Desc">
+            <summary>Get a translation equivalent to "Whether to add new Slime Mayonnaise and Slime Cheese items to the game in order to add more depth to Slime Ranching playstyle.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Gmcm_Sections_Prfs_SkillReset">
             <summary>Get a translation equivalent to "Skill Reset".</summary>
@@ -7523,7 +7741,7 @@
             <summary>Get a translation by its key.</summary>
             <param name="key">The translation key.</param>
             <param name="tokens">An object containing token key/value pairs. This can be an anonymous object (like <c>new { value = 42, name = "Cranberries" }</c>), a dictionary, or a class instance.</param>
-            <remarks>You should usually use a strongly-typed method like <see cref="M:DaLion.Professions.I18n.Harvester_Title_Male" /> instead.</remarks>
+            <remarks>You should usually use a strongly-typed method like <see cref="M:DaLion.Professions.I18n.Schema" /> instead.</remarks>
         </member>
         <member name="T:NetEscapades.EnumGenerators.EnumExtensionsAttribute">
             <summary>

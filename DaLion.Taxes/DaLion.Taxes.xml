@@ -297,7 +297,7 @@
             <summary>Gets or sets the day of the season when income taxes are charged.</summary>
         </member>
         <member name="P:DaLion.Taxes.TaxesConfig.IncomeTaxLatenessFine">
-            <summary>Gets the percentage rate charged over due income taxes not paid in time.</summary>
+            <summary>Gets the percentage rate charged overdue income taxes not paid in time.</summary>
         </member>
         <member name="P:DaLion.Taxes.TaxesConfig.BaselineUnusedTileCost">
             <summary>Gets the baseline cost of each unused tile.</summary>
@@ -393,6 +393,9 @@
         </member>
         <member name="T:DaLion.Taxes.I18n.Keys">
             <summary>A lookup of available translation keys.</summary>
+        </member>
+        <member name="F:DaLion.Taxes.I18n.Keys.Schema">
+            <summary>The unique key for a translation equivalent to "https://smapi.io/schemas/i18n.json".</summary>
         </member>
         <member name="F:DaLion.Taxes.I18n.Keys.Mail_Frs_Intro">
             <summary>The unique key for a translation equivalent to "Department of the Treasury^Ferngill Revenue Service^^^{{honorific}} Taxpayer,^^This letter is to inform you that your recent address change to Pelican Town, Stardew Valley has been filed and registered. All future correspondence will be directed to {{farm}} farm.^^We kindly remind you that federal income tax contributions are due end-of-day on the 1st of every season. For your convenience, your due obligations will be automatically deducted from your balance. If your balance is insufficient, ...".</summary>
@@ -571,6 +574,9 @@
         <member name="M:DaLion.Taxes.I18n.Init(StardewModdingAPI.ITranslationHelper)">
             <summary>Construct an instance.</summary>
             <param name="translations">The mod's translation helper.</param>
+        </member>
+        <member name="M:DaLion.Taxes.I18n.Schema">
+            <summary>Get a translation equivalent to "https://smapi.io/schemas/i18n.json".</summary>
         </member>
         <member name="M:DaLion.Taxes.I18n.Mail_Frs_Intro(System.Object,System.Object,System.Object,System.Object)">
             <summary>Get a translation equivalent to "Department of the Treasury^Ferngill Revenue Service^^^{{honorific}} Taxpayer,^^This letter is to inform you that your recent address change to Pelican Town, Stardew Valley has been filed and registered. All future correspondence will be directed to {{farm}} farm.^^We kindly remind you that federal income tax contributions are due end-of-day on the 1st of every season. For your convenience, your due obligations will be automatically deducted from your balance. If your balance is insufficient, ...".</summary>
@@ -781,7 +787,7 @@
             <summary>Get a translation by its key.</summary>
             <param name="key">The translation key.</param>
             <param name="tokens">An object containing token key/value pairs. This can be an anonymous object (like <c>new { value = 42, name = "Cranberries" }</c>), a dictionary, or a class instance.</param>
-            <remarks>You should usually use a strongly-typed method like <see cref="M:DaLion.Taxes.I18n.Honorific_Male" /> instead.</remarks>
+            <remarks>You should usually use a strongly-typed method like <see cref="M:DaLion.Taxes.I18n.Schema" /> instead.</remarks>
         </member>
         <member name="T:NetEscapades.EnumGenerators.EnumExtensionsAttribute">
             <summary>
