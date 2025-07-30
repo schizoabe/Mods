@@ -1,6 +1,79 @@
 {
   "Format": "2.2.0",
   "Changes": [
+{
+            "Action": "EditImage",
+            "Target": "Maps/townInterior",
+            "FromFile": "assets/Greenhouse/gh_panels_sides.png",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 16,
+                "Height": 64
+            },
+            "ToArea": {
+                "X": 416,
+                "Y": 976,
+                "Width": 16,
+                "Height": 64
+            },
+        },
+{
+            "Action": "EditImage",
+            "Target": "Maps/townInterior",
+            "FromFile": "assets/Greenhouse/gh_panels_sides.png",
+            "FromArea": {
+                "X": 16,
+                "Y": 0,
+                "Width": 16,
+                "Height": 64
+            },
+            "ToArea": {
+                "X": 464,
+                "Y": 976,
+                "Width": 16,
+                "Height": 64
+            },
+        },
+{
+            "Action": "EditImage",
+            "Target": "Maps/townInterior",
+            "FromFile": "assets/Greenhouse/gh_panels.png",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 64,
+                "Height": 48
+            },
+            "ToArea": {
+                "X": 416,
+                "Y": 976,
+                "Width": 64,
+                "Height": 48
+            },
+        },
+{
+    "Action": "EditMap",
+    "Target": "Maps/Greenhouse",
+    "MapTiles": [
+        {
+            "Position": { "X": 1, "Y": 4 },
+            "Layer": "Buildings",
+            "SetIndex": 7000
+        }
+    ]
+},
+{
+    "Action": "EditMap",
+    "Target": "Maps/Greenhouse",
+    "MapTiles": [
+        {
+            "Position": { "X": 18, "Y": 4 },
+            "Layer": "Buildings",
+            "SetIndex": 7000
+        }
+    ]
+},
     	 {
             "Action": "EditImage",
             "Target": "TileSheets/furniture",
@@ -243,6 +316,46 @@
         },
 {
             "Action": "EditImage",
+            "Target": "TileSheets/furniture_3",
+            "FromFile": "assets/sunny_winter.png",
+            "FromArea": {
+                "X": 192,
+                "Y": 0,
+                "Width": 16,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 144,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "Season": "winter"
+            }
+        },
+{
+            "Action": "EditImage",
+            "Target": "TileSheets/furniture_3",
+            "FromFile": "assets/sunny_winter.png",
+            "FromArea": {
+                "X": 208,
+                "Y": 0,
+                "Width": 16,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 16,
+                "Y": 144,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "Season": "winter"
+            }
+        },
+{
+            "Action": "EditImage",
             "Target": "TileSheets/furniture",
             "FromFile": "assets/sunny_spring.png",
             "FromArea": {
@@ -474,6 +587,46 @@
             "ToArea": {
                 "X": 304,
                 "Y": 832,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "Season": "spring"
+            }
+        },
+{
+            "Action": "EditImage",
+            "Target": "TileSheets/furniture_3",
+            "FromFile": "assets/sunny_spring.png",
+            "FromArea": {
+                "X": 192,
+                "Y": 0,
+                "Width": 16,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 144,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "Season": "spring"
+            }
+        },
+{
+            "Action": "EditImage",
+            "Target": "TileSheets/furniture_3",
+            "FromFile": "assets/sunny_spring.png",
+            "FromArea": {
+                "X": 208,
+                "Y": 0,
+                "Width": 16,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 16,
+                "Y": 144,
                 "Width": 16,
                 "Height": 32
             },
@@ -723,6 +876,46 @@
         },
 {
             "Action": "EditImage",
+            "Target": "TileSheets/furniture_3",
+            "FromFile": "assets/sunny_summer.png",
+            "FromArea": {
+                "X": 192,
+                "Y": 0,
+                "Width": 16,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 144,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "Season": "summer"
+            }
+        },
+{
+            "Action": "EditImage",
+            "Target": "TileSheets/furniture_3",
+            "FromFile": "assets/sunny_summer.png",
+            "FromArea": {
+                "X": 208,
+                "Y": 0,
+                "Width": 16,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 16,
+                "Y": 144,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "Season": "summer"
+            }
+        },
+{
+            "Action": "EditImage",
             "Target": "TileSheets/furniture",
             "FromFile": "assets/sunny_fall.png",
             "FromArea": {
@@ -954,6 +1147,46 @@
             "ToArea": {
                 "X": 304,
                 "Y": 832,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "Season": "fall"
+            }
+        },
+{
+            "Action": "EditImage",
+            "Target": "TileSheets/furniture_3",
+            "FromFile": "assets/sunny_fall.png",
+            "FromArea": {
+                "X": 192,
+                "Y": 0,
+                "Width": 16,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 144,
+                "Width": 16,
+                "Height": 32
+            },
+            "When": {
+                "Season": "fall"
+            }
+        },
+{
+            "Action": "EditImage",
+            "Target": "TileSheets/furniture_3",
+            "FromFile": "assets/sunny_fall.png",
+            "FromArea": {
+                "X": 208,
+                "Y": 0,
+                "Width": 16,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 16,
+                "Y": 144,
                 "Width": 16,
                 "Height": 32
             },
@@ -1180,7 +1413,7 @@
 
       "ToArea":{
 
-         "X":46,
+         "X":48,
 
          "Y":608,
 
@@ -1416,7 +1649,7 @@
 
       "ToArea":{
 
-         "X":46,
+         "X":48,
 
          "Y":608,
 
@@ -1652,7 +1885,7 @@
 
       "ToArea":{
 
-         "X":46,
+         "X":48,
 
          "Y":608,
 
@@ -1890,7 +2123,7 @@
 
       "ToArea":{
 
-         "X":46,
+         "X":48,
 
          "Y":608,
 

@@ -701,5 +701,55 @@
       "Target": "Mods\\SmolHooman.DomesticAnimals\\DavidGuineapig, Mods\\SmolHooman.DomesticAnimals\\DavidGuineapig_icon, Mods\\SmolHooman.DomesticAnimals\\DustyDog, Mods\\SmolHooman.DomesticAnimals\\DustyDog_icon, Mods\\SmolHooman.DomesticAnimals\\LeahsRabbits, Mods\\SmolHooman.DomesticAnimals\\LeahsRabbits_icon, Mods\\SmolHooman.DomesticAnimals\\LeahsRabbits1, Mods\\SmolHooman.DomesticAnimals\\LeahsRabbits1_icon, Mods\\SmolHooman.DomesticAnimals\\ParrotFriend, Mods\\SmolHooman.DomesticAnimals\\ParrotFriend_icon",
       "FromFile": "assets/images/pets/{{TargetWithoutPath}}.png"
     },
+
+// AUDIO
+	{
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+		"Cat_DA_Sound": {
+		"ID": "Cat_DA_Sound",
+		"Category": "Sound",
+		"FilePaths": [ "{{AbsoluteFilePath: assets/audio/cat1.wav}}", "{{AbsoluteFilePath: assets/audio/cat2.wav}}", "{{AbsoluteFilePath: assets/audio/cat3.wav}}" ],
+		"StreamedVorbis": false
+		}
+      }
+	},
+	{
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+		"CatAngry_DA_Sound": {
+		"ID": "CatAngry_DA_Sound",
+		"Category": "Sound",
+		"FilePaths": [ "{{AbsoluteFilePath: assets/audio/catgrowl1.wav}}", "{{AbsoluteFilePath: assets/audio/catgrowl2.wav}}", "{{AbsoluteFilePath: assets/audio/catgrowl3.wav}}", "{{AbsoluteFilePath: assets/audio/cathiss1.wav}}" ],
+		"StreamedVorbis": false
+		}
+      }
+	},
+	{
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+		"GuineaPig_DA_Sound": {
+		"ID": "GuineaPig_DA_Sound",
+		"Category": "Sound",
+		"FilePaths": [ "{{AbsoluteFilePath: assets/audio/guineapig1.wav}}", "{{AbsoluteFilePath: assets/audio/guineapig2.wav}}", "{{AbsoluteFilePath: assets/audio/guineapig3.wav}}", "{{AbsoluteFilePath: assets/audio/guineapig4.wav}}" ],
+		"StreamedVorbis": false
+		}
+      }
+	},
+	{
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+		"Kitten_DA_Sound": {
+		"ID": "Kitten_DA_Sound",
+		"Category": "Sound",
+		"FilePaths": [ "{{AbsoluteFilePath: assets/audio/kitten1.wav}}", "{{AbsoluteFilePath: assets/audio/kitten2.wav}}", "{{AbsoluteFilePath: assets/audio/kitten3.wav}}" ],
+		"StreamedVorbis": false
+		}
+      }
+	},
 	]
 }

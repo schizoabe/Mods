@@ -14,6 +14,7 @@
 			},
 			"When": {
 				"HasMod": "siliconmodding.NPCTokens",
+				"DateType": "saloon",
 			},
         },
 		
@@ -22,7 +23,7 @@
 			"Action": "EditData",
 			"Target": "Data/Events/Forest",
 			"Fields": {
-				"1116012/n forestDateAgree/t 1100 1500": {
+				"1116012/LocalMail forestDateAgree/Time 1100 1500": {
 					147: "message \"{{i18n:Forest.9.{{SpouseGender}} |Date={{Date}} }}\"",
 				},
 				"lakeEnding": {
@@ -31,6 +32,7 @@
 			},
 			"When": {
 				"HasMod": "siliconmodding.NPCTokens",
+				"DateType": "forest",
 			},
         },
 		
@@ -46,11 +48,12 @@
 			},
 			"When": {
 				"HasMod": "siliconmodding.NPCTokens",
+				"DateType": "beach",
 			},
         },
 		
 		{
-			"LogName": "Generic Saloon Date - NPC Tokens",
+			"LogName": "Generic Winter Star Date Edit - NPC Tokens",
 			"Action": "EditData",
 			"Target": "Data/Events/Saloon",
 			"Fields": {
@@ -61,6 +64,7 @@
 			"When": {
 				"HasMod": "siliconmodding.NPCTokens",
 				"SuggestiveEndings": "disabled",
+				"DateType": "winterstar",
 			},
         },
 		
@@ -73,7 +77,7 @@
 			"Action": "EditData",
 			"Target": "Data/Events/BusStop",
 			"Fields": {
-				"1116030/n alexGridballDateAgree/t 1200 1900": {
+				"1116030/LocalMail alexGridballDateAgree/Time 1200 1900": {
 					183: "message \"{{i18n:Alex.Gridball.27.F}}\"",
 				}
 			},
@@ -82,6 +86,7 @@
 				"HasMod": "siliconmodding.NPCTokens",
 				"siliconmodding.NPCTokens/NPC:Alex+gender": "Female", // Alex is Genderbent
 				"SuggestiveEndings": "disabled",
+				"UniqueDateType": "alexGridball",
 			},
         },
 		
@@ -92,7 +97,7 @@
 			"Action": "EditData",
 			"Target": "Data/Events/HaleyHouse",
 			"Fields": {
-				"1116016/n emilyGemDateAgree": {
+				"1116016/LocalMail emilyGemDateAgree": {
 					17: "speak Emily \"{{i18n:Emily.GemDate.3.M}}\"",
 				}
 			},
@@ -100,6 +105,7 @@
 				"Date": "Emily",
 				"HasMod": "siliconmodding.NPCTokens",
 				"siliconmodding.NPCTokens/NPC:Haley+gender": "Male", // Haley is Genderbent
+				"UniqueDateType": "emilyGem",
 			},
         },
 		
@@ -110,7 +116,7 @@
 			"Action": "EditData",
 			"Target": "Data/Events/Farm",
 			"Fields": {
-				"1116017/f Haley {{MinFriendship}}/O Haley/t 500 1600": {
+				"1116017/Friendship Haley {{MinFriendship}}/{{MarriageCheck}}/Time 500 1600": {
 					42: "speak Haley \"{{i18n:Haley.DesertDate.Intro.6.M}}\"",
 				}
 			},
@@ -118,6 +124,7 @@
 				"Date": "Haley",
 				"HasMod": "siliconmodding.NPCTokens",
 				"siliconmodding.NPCTokens/NPC:Emily+gender": "Male", // Haley is Genderbent
+				"UniqueDateType": "haleyDesert",
 			},
         },
 		
@@ -126,7 +133,7 @@
 			"Action": "EditData",
 			"Target": "Data/Events/BusStop",
 			"Fields": {
-				"1116018/n haleyDesertDateAgree/time 500 1700": {
+				"1116018/LocalMail haleyDesertDateAgree/Time 500 1700": {
 					27: "speak Emily \"{{i18n:Haley.DesertDate.3.M}}\"",
 					108: "speak Emily \"{{i18n:Haley.DesertDate.16}}\"",
 					171: "speak Sandy \"{{i18n:Haley.DesertDate.26}}\"",
@@ -136,7 +143,8 @@
 			"When": {
 				"Date": "Haley",
 				"HasMod": "siliconmodding.NPCTokens",
-				"siliconmodding.NPCTokens/NPC:Haley+gender": "Male", // Haley is Genderbent
+				"siliconmodding.NPCTokens/NPC:Haley+gender": "Male", // Haley is Genderbent.
+				"UniqueDateType": "haleyDesert",
 			},
         },
 	],
