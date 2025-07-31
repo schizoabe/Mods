@@ -1167,7 +1167,7 @@
 		
 		{
 			"Name": "Conditions",
-			"Value": "{{Conditions}}/GameStateQuery ANY \"IS_FESTIVAL_DAY, !SEASON Winter\" \"IS_FESTIVAL_DAY, SEASON Winter, !DAY_OF_MONTH 25\"", //If it's either not Winter and a festival, or Winter, a festival, but NOT day 25 (Winter Star). This is the default for the Winter Star date.
+			"Value": "{{Conditions}}/GameStateQuery ANY \"!IS_FESTIVAL_DAY, !SEASON Winter\" \"!IS_FESTIVAL_DAY, SEASON Winter, !DAY_OF_MONTH 25\" \"IS_FESTIVAL_DAY, SEASON Winter, DAY_OF_MONTH 25\"", //If it's either not Winter and a festival, or Winter, a festival, but NOT day 25 (Winter Star). This is the default for the Winter Star date.
 			"When": {
 				"DatesOnFestivalDays": "disabled",
 				"WinterStarDate": "enabled",
