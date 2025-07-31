@@ -1,11 +1,14 @@
 {
+  "$id": "1",
   "Skills": {
+    "$id": "2",
     "EnableSkillReset": true,
     "SkillResetCostMultiplier": 1.0,
     "ForgetRecipesOnSkillReset": true,
     "AllowMultipleResets": false,
     "SkillExpMultiplierPerReset": 1.25,
     "BaseMultipliers": {
+      "$id": "3",
       "Farming": 1.0,
       "Fishing": 1.0,
       "Foraging": 1.0,
@@ -14,6 +17,7 @@
     }
   },
   "Masteries": {
+    "$id": "4",
     "LockMasteryUntilFullReset": false,
     "EnableLimitBreaks": true,
     "LimitBreakKey": "LeftShift, LeftShoulder",
@@ -28,7 +32,7 @@
     "PrestigeRespecCost": 20000,
     "GoldSpritePalette": "SiliconGold"
   },
-  "ModKey": "LeftShift, LeftShoulder",
+  "ModKey": "OemPipe",
   "LaxOwnershipRequirements": false,
   "ShouldJunimosInheritProfessions": false,
   "EnableGoldenOstrichMayo": true,
@@ -37,16 +41,14 @@
   "BreederFriendlyAnimalMultiplier": 10.0,
   "ForagesNeededForBestQuality": 30,
   "MineralsNeededForBestQuality": 30,
-  "TreasureHuntStartChanceMultiplier": 1.0,
-  "AllowScavengerHuntsOnFarm": false,
-  "ScavengerDetectionDistance": 3,
-  "ScavengerHuntHandicap": 1.0,
-  "ProspectorDetectionDistance": 20,
-  "ProspectorHuntHandicap": 1.0,
+  "TreasureHuntTriggerModifier": 1.0,
+  "AllowScavengerHuntsOnFarm": true,
+  "ScavengerHuntRange": 3,
+  "ScavengerHuntTimeLimit": 40,
+  "ProspectorHuntTimeLimit": 80,
   "TrackingPointerScale": 1.0,
   "TrackingPointerBobRate": 1.0,
   "DisableAlwaysTrack": false,
-  "UseLegacyProspectorHunt": false,
   "AnglerPriceBonusCeiling": 1.0,
   "ShowFishCollectionMaxIcon": true,
   "AquaristFishPondCeiling": 12,
@@ -57,7 +59,9 @@
   "ImmersiveHeavyTapperYield": true,
   "AgingTreesQualitySyrups": true,
   "ShowEquippedAmmo": true,
-  "ShowMinionHealth": true,
+  "MinionHudAnchorPosition": "Left",
+  "MinionHealthBarPosition": "Hud",
+  "MinionHudOffset": "0, 0",
   "UseAsyncMinionPathfinder": true,
   "EnableSlimeGoods": true
 }
