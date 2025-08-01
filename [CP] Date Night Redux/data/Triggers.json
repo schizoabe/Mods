@@ -100,7 +100,7 @@
 				"{{ModId}}_WinterStarDispleased": {
 					"Id": "{{ModId}}_WinterStarDispleased",
 					"Trigger": "DayEnding",				
-					"Condition": "SEASON Winter, DAY 25, {{WinterStarDate|contains=enabled}}, !PLAYER_HAS_SEEN_EVENT Current 22714-winterstar",
+					"Condition": "SEASON Winter, DAY_OF_MONTH 25, {{WinterStarDate|contains=enabled}}, !PLAYER_HAS_SEEN_EVENT Current 22714-winterstar",
 					"HostOnly": false, 
 					"Action": "AddFriendshipPoints {{Date}} {{Sadness}}",
 				},
@@ -388,7 +388,7 @@
 				"{{ModId}}_WinterStarDisappointed": {
 					"Id": "{{ModId}}_WinterStarDisappointed",
 					"Trigger": "DayEnding",				
-					"Condition": "SEASON Winter, DAY 25, {{WinterStarDate|contains=enabled}}, !PLAYER_HAS_SEEN_EVENT Current 22714-winterstar", // If enabled, date is impossible to miss without passing out or sleeping outside the farmhouse (e.g. in a tent or on Island).
+					"Condition": "SEASON Winter, DAY_OF_MONTH 25, {{WinterStarDate|contains=enabled}}, !PLAYER_HAS_SEEN_EVENT Current 22714-winterstar", // If enabled, date is impossible to miss without passing out or sleeping outside the farmhouse (e.g. in a tent or on Island).
 					"HostOnly": false, 
 					"Action": "Spiderbuttons.BETAS_WritePlayerModData DNRWinterStarMissed {{Date}}",
 				},
@@ -1097,7 +1097,7 @@
 				"{{ModId}}_WinterStarReminder": {
 					"Id": "{{ModId}}_WinterStarReminder",
 					"Trigger": "Manual",				
-					"Condition": "SEASON Winter, DAY 25, {{WinterStarDate|contains=enabled}}, !PLAYER_HAS_SEEN_EVENT Current 22714-winterstar",
+					"Condition": "SEASON Winter, DAY_OF_MONTH 25, {{WinterStarDate|contains=enabled}}, !PLAYER_HAS_SEEN_EVENT Current 22714-winterstar",
 					"HostOnly": false, 
 					"Action": "spacechase0.SpaceCore_ShowHudMessage \"{{i18n:WinterStarReminder |Date={{Date}} }}\" (F)1440",
 				},

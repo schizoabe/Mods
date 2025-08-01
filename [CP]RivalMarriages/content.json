@@ -1,0 +1,89 @@
+{
+    "Format": "2.4.4",
+     //add dynamic tokens for little red school house compat
+"DynamicTokens": [
+   {"Name": "noschoolday","Value": "false","When":{}},
+   {"Name": "noschoolday","Value": "true","When":{"day": "9, 23"}}],
+    
+    "ConfigSchema": {
+      "Alex and Sam": {
+         "AllowValues": "true, false",
+         "Default": "true",
+         "Section": "Rival Couples",
+         "Description": "Unchecking removes this couples' new events, dialogue, schedules, and map changes."
+      },
+      "Elliott and Penny": {
+         "AllowValues": "true, false",
+         "Default": "true",
+         "Section": "Rival Couples",
+         "Description": "Unchecking removes this couples' new events, dialogue, schedules, and map changes."
+      },
+      "Emily and Leah": {
+         "AllowValues": "true, false",
+         "Default": "true",
+         "Section": "Rival Couples",
+         "Description": "Unchecking removes this couples' new events, dialogue, schedules, and map changes."
+      },
+      "Haley and Shane": {
+         "AllowValues": "true, false",
+         "Default": "true",
+         "Section": "Rival Couples",
+         "Description": "Unchecking removes this couples' new events, dialogue, schedules, and map changes."
+      },
+      "Harvey and Maru": {
+         "AllowValues": "true, false",
+         "Default": "true",
+         "Section": "Rival Couples",
+         "Description": "Unchecking removes this couples' new events, dialogue, schedules, and map changes."
+      },
+      "Sebastian and Abigail": {
+         "AllowValues": "true, false",
+         "Default": "true",
+         "Section": "Rival Couples",
+         "Description": "Unchecking removes this couples' new events, dialogue, schedules, and map changes."
+      }
+   },
+    "Changes": [
+        { //Shane and Haley
+        "Action": "Include",
+        "FromFile": "shanehaley.json",
+        "When": {
+            "Haley and Shane": "true"
+        }
+     },
+      { //Alex and Sam
+       "Action": "Include",
+       "FromFile": "alexsam.json",
+       "When": {
+           "Alex and Sam": "true"
+       }
+    },
+    { //Harvey and Maru
+       "Action": "Include",
+       "FromFile": "harveymaru.json",
+       "When": {
+           "Harvey and Maru": "true"
+       }
+    },
+    { //Elliott and Penny
+       "Action": "Include",
+       "FromFile": "elliottpenny.json",
+       "When": {
+           "Elliott and Penny": "true"
+       }
+    },
+    { //Emily and Leah
+    "Action": "Include",
+    "FromFile": "emilyleah.json",
+    "When": {
+        "Emily and Leah": "true"
+    }
+ },
+ { //Abigail and Sebastian
+    "Action": "Include",
+    "FromFile": "abigailsebastian.json",
+    "When": {
+        "Sebastian and Abigail": "true"
+    }
+ }
+]}

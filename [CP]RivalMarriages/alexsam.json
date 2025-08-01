@@ -1,0 +1,845 @@
+{"Changes": [
+      { // Alex and Sam first rival event
+          "Action": "EditData",
+          "Target": "Data/Events/Saloon",
+          "Entries":{
+            "ASHeart1/f Alex 750/f Sam 750/!D Sam/!D Alex/t 1600 2000": "Saloon1/14 15/Gus 10 18 2 farmer 11 20 0 Alex 1000 1000 0 Sam 36 20 1 Emily 16 17 0 Pam 7 18 1 Leah 2 20 1 Willy 19 23 3 Shane 21 17 2 Sebastian 40 19 2/skippable/pause 1250/playSound doorClose/warp Alex 14 24/pause 500/speak Gus \"{{i18n:ASHeart1.0}}\"/pause 200/move Alex 0 -3 0/speak Alex \"{{i18n:ASHeart1.1}}\"/speak Gus \"{{i18n:ASHeart1.2}}\"/pause 300/speak Alex \"{{i18n:ASHeart1.3}}\"/pause 300/textAboveHead Gus \"{{i18n:ASHeart1.4}}\"/viewport move 2 0 5000/move Alex 11 0 1/viewport move 2 0 5000/move Alex 0 -1 1/move Alex 6 0 1/pause 100/speak Alex \"{{i18n:ASHeart1.5}}\"/pause 100/faceDirection Sam 3/pause 200/speak Sam \"{{i18n:ASHeart1.6}}\"/move Alex 3 0 1/speak Alex \"{{i18n:ASHeart1.7}}\"/speak Sam \"{{i18n:ASHeart1.8}}\"/pause 50/speak Alex \"{{i18n:ASHeart1.9}}\"/speak Sam \"{{i18n:ASHeart1.10}}\"/speak Sam \"{{i18n:ASHeart1.11}}\"/globalFade/viewport -1000 -1000/end"
+
+          }
+  },
+  { // Alex and Sam second rival event
+          "Action": "EditData",
+          "Target": "Data/Events/Town",
+          "Entries":{
+            "ASHeart2/f Sam 1250/f Alex 1250/!D Sam/!D Alex/e ASHeart1/w rainy/t 1200 1600": "sweet/12 87/farmer -1000 1000 0 Alex 14 90 2 Sam 1000 1000 2/skippable/animate Alex false true 230 28 29 30 31 32 31 30 33 34/pause 5000/playSound doorClose/warp Sam 10 86/pause 1500/speak Sam \"{{i18n:ASHeart2.0}}\"/pause 200/stopAnimation Alex 34/speak Alex \"{{i18n:ASHeart2.1}}\"/pause 500/speak Sam \"{{i18n:ASHeart2.2}}\"/speak Alex \"{{i18n:ASHeart2.3}}\"/speak Sam \"{{i18n:ASHeart2.4}}\"/speak Alex \"{{i18n:ASHeart2.5}}\"/globalFade/viewport -1000 -1000/faceDirection Sam 2/move Alex 1 0 0/changelocation SamHouse/pause 500/doAction 12 14/playSound doorClose/warp Sam 17 13/pause 600/playSound doorClose/warp Alex 16 14/pause 800/viewport 17 14/pause 500/speak Sam \"{{i18n:ASHeart2.6}}\"/pause 500/faceDirection Alex 3/pause 500/faceDirection Alex 1/pause 500/faceDirection Alex 2/pause 500/faceDirection Alex 0/pause 200/speak Alex \"{{i18n:ASHeart2.7}}\"/pause 100/speak Sam \"{{i18n:ASHeart2.8}}\"/pause 500/speak Sam \"{{i18n:ASHeart2.9}}\"/speak Alex \"{{i18n:ASHeart2.10}}\"/speak Sam \"{{i18n:ASHeart2.11}}\"/pause 300/animate Sam false true 350 52 53/playMusic sam_acoustic2/pause 5000/globalFade/viewport 1000 1000/end"
+
+          }
+      },
+      { // Alex and Sam third rival event
+      "Action": "EditData",
+      "Target": "Data/Events/JoshHouse",
+      "Entries":{
+        "ASHeart3/f Alex 1750/f Sam 1750/!D Sam/!D Alex/t 1100 1400/d Mon Tue Wed Thu Fri Sat/w sunny/e ASHeart1/e ASHeart2": "sadpiano/9 19/farmer -1000 -1000 0 Alex 7 19 1/skippable/emote Alex 12/pause 800/move Alex 4 0 1/pause 500/faceDirection Alex 2/emote Alex 12/pause 800/move Alex -4 0 3/pause 100/faceDirection Alex 2/move Alex 4 0 1/pause 200/playSound doorClose/warp farmer 9 24/pause 300/faceDirection Alex 2/pause 200/move farmer 0 -1 0/pause 500/move Alex -2 0 2/move Alex 0 2 2/speak Alex \"{{i18n:ASHeart3.0}}\"/pause 1000/emote farmer 8/pause 800/move farmer 0 -1 0/pause 300/speak Alex \"{{i18n:ASHeart3.1}}\"/speak Alex \"{{i18n:ASHeart3.2}}\"/speak Alex \"{{i18n:ASHeart3.3}}\"/speak Alex \"{{i18n:ASHeart3.4}}\"/pause 300/quickQuestion  {{i18n:ASHeart3.5}}#{{i18n:ASHeart3.6}}#{{i18n:ASHeart3.7}}#{{i18n:ASHeart3.8}}(break) speak Alex \"{{i18n:ASHeart3.9}}\" (break) speak Alex \"{{i18n:ASHeart3.10}}\" (break) speak Alex \"{{i18n:ASHeart3.11}}\"/globalFade/viewport -1000 -1000/end"
+
+          }
+      },
+      { // Alex and Sam fourth rival event
+      "Action": "EditData",
+      "Target": "Data/Events/Saloon",
+      "Entries":{
+        "ASEngagement/f Alex 2000/f Sam 2000/!D Sam/!D Alex/e ASHeart1/e ASHeart2/e ASHeart3/t 1800 2100": "Saloon1/33 19/Gus 10 18 2 farmer 11 20 0 Alex 31 20 1 Sam 36 20 1 Emily 16 17 0 Pam 7 18 1 Leah 2 20 1 Willy 19 23 3 Shane 21 17 2 Sebastian 40 19 2/skippable/pause 200/move Alex 3 0 1/pause 500/speak Alex \"{{i18n:ASEngagement.0}}\"/pause 200/faceDirection Sam 3/pause 400/emote Sam 8/pause 800/faceDirection Sebastian 3/speak Sam \"{{i18n:ASEngagement.1}}\"/pause 300/playMusic none/move Alex 1 0 1/pause 200/speak Alex \"{{i18n:ASEngagement.2}}\"/pause 200/playMusic musicboxsong/pause 700/speak Alex \"{{i18n:ASEngagement.3}}\"/pause 200/speak Alex \"{{i18n:ASEngagement.4}}\"/emote Sam 20/pause 500/speak Sam \"{{i18n:ASEngagement.5}}\"/pause 200/speak Alex \"{{i18n:ASEngagement.6}}\"/speak Alex \"{{i18n:ASEngagement.7}}\"/speak Alex \"{{i18n:ASEngagement.8}}\"/pause 300/faceDirection Alex 0/pause 200/shake Alex 500/pause 500/addObject 35 19 460/playSound coin/pause 500/faceDirection Alex 1/pause 500/speak Sam \"{{i18n:ASEngagement.9}}\"/pause 200/speak Alex \"{{i18n:ASEngagement.10}}\"/speak Alex \"{{i18n:ASEngagement.11}}\"/pause 500/animate Sam true true 100 38/positionOffset Sam -2 -1/pause 30/positionOffset Sam -2 -1/pause 30/positionOffset Sam -2 0/pause 30/positionOffset Sam -2 1/animate Alex false true 100 42/positionOffset Alex 2 1/pause 10/positionOffset Sam -2 0/pause 10/positionOffset Alex 2 1/pause 10/positionOffset Sam -2 -1/positionOffset Alex 2 0/pause 10/positionOffset Sam -2 0/specificTemporarySprite heart 35 19/playSound dwop/pause 4000/positionOffset Sam 2 1/pause 10/positionOffset Alex -2 0/pause 10/positionOffset Sam 2 0/pause 10/positionOffset Alex -2 0/pause 10/positionOffset Sam 2 0/pause 10/positionOffset Alex -2 0/pause 10/positionOffset Sam 2 0/stopAnimation Sam 14/stopAnimation Alex 6/pause 300/speak Sam \"{{i18n:ASEngagement.12}}\"/speak Sam \"{{i18n:ASEngagement.13}}\"/emote Alex 20/pause 1500/globalFade/viewport 1000 -1000/end"
+
+
+          }
+      },
+      { // Alex and Sam eloping invitation
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries":{
+        "AlexSamElope": "{{i18n:AlexSamElope}}"
+
+         }
+      },
+      { //Send Alex and Sam elope letter
+          "Action": "EditData",
+          "Target": "Data/TriggerActions",
+          "Entries":{
+          "{{ModID}}_RivalMarriages": {
+              "ID": "{{ModID}}_RivalMarriages_AlexSamInvitation",
+              "Trigger": "DayStarted",
+              "Actions": [
+                  "AddMail Current AlexSamElope tomorrow"
+              ]
+              
+            }
+            },
+            "When": {"HasSeenEvent": "ASEngagement"}},
+{ //Alex and Sam wedding event
+"Action": "EditData",
+"Target": "Data/Events/Farm",
+"Entries":{
+  "AlexSamWedding/w sunny/t 600 900/e ASEngagement/n AlexSamElope": "wedding/-1000 1000/Alex 0 0 0 Sam 0 0 0 Abigail 0 0 0 Haley 0 0 0 Sebastian 0 0 0 farmer 0 0 0/AddConversationTopic ASWedTopic 28/skippable/viewport -1000 -1000/changelocation Town/specificTemporarySprite wedding/warp farmer 27 66/warp Abigail 27 64/warp Alex 27 63/warp Sam 28 63/warp Haley 26 66/warp Sebastian 28 66/faceDirection Abigail 0 true/animate Alex true true 150 49/animate Sam false true 150 49/faceDirection farmer 0/viewport 27 64/pause 1000/speak Abigail \"{{i18n:AlexSamWedding.0}}\"/pause 500/animate Sam false true 150 48/pause 1000/animate Sam false true 150 49/speak Sam \"{{i18n:AlexSamWedding.1}}\"/speak Abigail \"{{i18n:AlexSamWedding.2}}\"/faceDirection Abigail 2/speak Abigail \"{{i18n:AlexSamWedding.3}}\"/move Abigail 1 0 0/pause 300/speak Abigail \"{{i18n:AlexSamWedding.4}}\"/pause 400/speak Sam \"{{i18n:AlexSamWedding.5}}\"/move Abigail -1 0 0/pause 300/speak Abigail \"{{i18n:AlexSamWedding.6}}\"/pause 400/speak Alex \"{{i18n:AlexSamWedding.7}}\"/pause 300/speak Abigail \"{{i18n:AlexSamWedding.8}}\"/move Abigail -1 0 2/speak Abigail \"{{i18n:AlexSamWedding.9 |day={{day}} |season={{season}} }}\"/speak Abigail \"{{i18n:AlexSamWedding.10}}\"/pause 1000/speak Abigail \"{{i18n:AlexSamWedding.11}}\"/pause 300/speak Alex \"{{i18n:AlexSamWedding.12}}\"/animate Sam false true 100 50/positionOffset Sam -2 0/pause 30/positionOffset Sam -2 0/pause 30/positionOffset Sam -2 0/pause 30/positionOffset Sam -2 0/animate Alex true true 50 50/positionOffset Alex 2 1/pause 10/positionOffset Sam -2 0/pause 10/positionOffset Alex 2 1/pause 10/positionOffset Sam -2 0/positionOffset Alex 2 1/pause 10/positionOffset Sam -2 0/specificTemporarySprite heart 28 62/playSound dwop/pause 4000/globalFade/viewport -1000 -1000/message \"{{i18n:AlexSamWedding.13}}\"/end"
+
+          }
+},
+//Alex and Sam Wedding Conversation topic dialogue lines
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Jodi",
+"Entries": 
+  {
+    "ASWedTopic": "{{i18n:Jodi.ASWedTopic}}"
+
+  }
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Kent",
+"Entries": 
+  {
+    "ASWedTopic": "{{i18n:Kent.ASWedTopic}}"
+  }
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Vincent",
+"Entries": 
+  {
+    "ASWedTopic": "{{i18n:Vincent.ASWedTopic}}"
+  }
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Evelyn",
+"Entries": 
+  {
+    "ASWedTopic": "{{i18n:Evelyn.ASWedTopic}}"
+  }
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/George",
+"Entries": 
+  {
+    "ASWedTopic": "{{i18n:George.ASWedTopic}}"
+
+  }
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Abigail",
+"Entries": 
+  {
+    "ASWedTopic": "{{i18n:Abigail.ASWedTopic}}"
+  }
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Haley",
+"Entries": 
+  {
+    "ASWedTopic": "{{i18n:Haley.ASWedTopic}}"
+  }
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Sebastian",
+"Entries": 
+  {
+    "ASWedTopic": "{{i18n:Sebastian.ASWedTopic}}"
+
+  }
+},
+        { //sam home change
+        "Action": "EditData",
+        "Target": "Data/Characters",
+        "Fields": {
+          "Sam": 
+          {"Home": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "Location": "JoshHouse",
+              "Tile": {
+                "X": 19,
+                "Y": 4
+              },
+              "Direction": "left"
+            }
+          ]}},
+          "When": {"HasSeenEvent": "AlexSamWedding"}
+
+        },
+//Alex map changes
+        {
+          "Action": "EditMap",
+          "Target": "Maps/JoshHouse",
+          "MapTiles": [
+            {
+              "Position": { "X": 11, "Y": 4 },
+              "Layer": "Buildings",
+              "Remove": true
+          },
+          {
+            "Position": { "X": 11, "Y": 4 },
+            "Layer": "Buildings",
+            "SetTilesheet": "1",
+            "SetIndex": "441"
+          },
+          {
+            "Position": { "X": 11, "Y": 3 },
+            "Layer": "Front",
+            "SetTilesheet": "1",
+            "SetIndex": "409"
+          },
+          {
+            "Position": { "X": 11, "Y": 2 },
+            "Layer": "Front",
+            "SetTilesheet": "1",
+            "SetIndex": "306"
+          },
+          {
+            "Position": { "X": 15, "Y": 1 },
+            "Layer": "Front",
+            "SetTilesheet": "1",
+            "SetIndex": "342"
+          },
+          {
+            "Position": { "X": 17, "Y": 2 },
+            "Layer": "Front",
+            "SetTilesheet": "1",
+            "SetIndex": "1387"
+          },
+          {
+            "Position": { "X": 14, "Y": 2 },
+            "Layer": "Front",
+            "SetTilesheet": "1",
+            "SetIndex": "341"
+          }
+               ],
+               "When": {"HasSeenEvent": "AlexSamWedding"}
+        },
+//Sam map changes
+{
+  "Action": "EditMap",
+  "Target": "Maps/SamHouse",
+  "MapTiles": [
+    {
+      "Position": { "X": 21, "Y": 9 },
+      "Layer": "Front",
+      "Remove": true
+  },
+  {
+    "Position": { "X": 19, "Y": 9 },
+    "Layer": "Front",
+    "Remove": true
+},
+{
+  "Position": { "X": 16, "Y": 9 },
+  "Layer": "Front",
+  "Remove": true
+},
+{
+  "Position": { "X": 14, "Y": 9 },
+  "Layer": "Front",
+  "Remove": true
+},
+{
+  "Position": { "X": 23, "Y": 14 },
+  "Layer": "Back",
+  "SetTilesheet": "2",
+  "SetIndex": "8"
+},
+{
+  "Position": { "X": 23, "Y": 13 },
+  "Layer": "Back",
+  "SetTilesheet": "2",
+  "SetIndex": "8"
+}
+  ],
+  "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+
+        { //Alex and Sam relationship status change
+        "Action": "EditData",
+        "Target": "Data/Characters",
+        "Fields": {
+          "Alex": 
+          {"CanBeRomanced": false
+          }},
+          "When": {"HasSeenEvent": "ASEngagement"}
+
+        },
+        {"Action": "EditData",
+        "Target": "Data/Characters",
+        "Fields": {
+          "Sam": 
+          {"CanBeRomanced": false
+          }},
+          "When": {"HasSeenEvent": "ASEngagement"}},
+
+//Remove 10 heart cutscenes
+
+{
+  "Action": "EditData",
+  "Target": "Data/Events/Town",
+  "Entries": {
+      "233104/f Sam 2500/t 2000 2400/w sunny/n samMessage": null
+  },
+  "When": {"HasSeenEvent": "ASEngagement"}
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Events/Saloon",
+  "Entries": {
+      "911526/f Alex 2500/t 1900 2200/n joshMessage": null
+  },
+  "When": {"HasSeenEvent": "ASEngagement"}
+},
+
+{
+  "Action": "EditData",
+  "Target": "Data/mail",
+  "Entries": {
+    "joshMessage": null,
+    "samMessage": null
+  },
+  "When": {"HasSeenEvent": "ASEngagement"}
+},
+  //alex and sam festival dialogue
+{"Action": "EditData",
+"Target": "Data/Festivals/spring13",
+"Entries": 
+  {
+    "Alex": "{{i18n:spring13.Alex}}",
+    "Sam": "{{i18n:spring13.Sam}}",
+    "Alex_y2": "{{i18n:spring13.Alex_y2}}",
+    "Sam_y2": "{{i18n:spring13.Sam_y2}}"
+  
+  },
+"When": {"HasSeenEvent": "AlexSamWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/spring24",
+"Entries": 
+  {
+    "Alex": "{{i18n:spring24.Alex}}",
+    "Sam": "{{i18n:spring24.Sam}}",
+    "Alex_y2": "{{i18n:spring24.Alex_y2}}",
+    "Sam_y2": "{{i18n:spring24.Sam_y2}}"
+  
+  },
+"When": {"HasSeenEvent": "AlexSamWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/summer11",
+"Entries": 
+  {
+    "Alex": "{{i18n:summer11.Alex}}",
+    "Sam": "{{i18n:summer11.Sam}}",
+    "Alex_y2": "{{i18n:summer11.Alex_y2}}",
+    "Sam_y2": "{{i18n:summer11.Sam_y2}}"
+    
+    },
+"When": {"HasSeenEvent": "AlexSamWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/summer28",
+"Entries": 
+  {
+    "Alex": "{{i18n:summer28.Alex}}",
+    "Sam": "{{i18n:summer28.Sam}}",
+    "Alex_y2": "{{i18n:summer28.Alex_y2}}",
+    "Sam_y2": "{{i18n:summer28.Sam_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "AlexSamWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/fall16",
+"Entries": 
+  {
+    "Alex": "{{i18n:fall16.Alex}}",
+    "Sam": "{{i18n:fall16.Sam}}",
+    "Alex_y2": "{{i18n:fall16.Alex_y2}}",
+    "Sam_y2": "{{i18n:fall16.Sam_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "AlexSamWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/fall27",
+"Entries": 
+  {
+    "Alex": "{{i18n:fall27.Alex}}",
+    "Sam": "{{i18n:fall27.Sam}}",
+    "Alex_y2": "{{i18n:fall27.Alex_y2}}",
+    "Sam_y2": "{{i18n:fall27.Sam_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "AlexSamWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/winter8",
+"Entries": 
+  {
+    "Alex": "{{i18n:winter8.Alex}}",
+    "Sam": "{{i18n:winter8.Sam}}",
+    "Vincent": "{{i18n:winter8.Vincent}}",
+    "Alex_y2": "{{i18n:winter8.Alex_y2}}",
+    "Sam_y2": "{{i18n:winter8.Sam_y2}}",
+    "Vincent_y2": "{{i18n:winter8.Vincent_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "AlexSamWedding"}
+          },
+{"Action": "EditData",
+"Target": "Data/Festivals/winter25",
+"Entries": 
+  {
+    "Alex": "{{i18n:winter25.Alex}}",
+    "Sam": "{{i18n:winter25.Sam}}",
+    "Alex_y2": "{{i18n:winter25.Alex_y2}}",
+    "Sam_y2": "{{i18n:winter25.Sam_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "AlexSamWedding"}},
+
+//Alex and Sam festival locations
+
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/summer11",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Sam 19 17 right",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "AlexSamWedding"}
+  },
+  {
+    "Action": "EditData",
+  "Target": "Data/Festivals/summer11",
+  "TextOperations": [
+      {
+          "Operation": "Append",
+          "Target": [
+              "Entries",
+              "Set-Up_additionalCharacters"
+          ],
+          "Value": "Alex 20 17 left",
+          "Delimiter": "/"
+      }
+    ],
+    "When": {"HasSeenEvent": "AlexSamWedding"}
+    },
+  {
+    "Action": "EditData",
+  "Target": "Data/Festivals/summer11",
+  "TextOperations": [
+      {
+          "Operation": "Append",
+          "Target": [
+              "Entries",
+              "Set-Up_additionalCharacters_y2"
+          ],
+          "Value": "Alex 19 11 right",
+          "Delimiter": "/"
+      }
+    ],
+    "When": {"HasSeenEvent": "AlexSamWedding"}
+    },
+{
+    "Action": "EditMap",
+    "Target": "Maps/Beach-Luau",
+    "MapTiles": [
+                    {
+                      "Position": {"X": 56, "Y": 16 },
+                      "Layer": "Set-Up",
+                      "Remove": true
+                  },
+                  {
+                    "Position": {"X": 21, "Y": 17 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                }
+                ],
+                "When": {"HasSeenEvent": "AlexSamWedding"}
+},  
+   
+    {
+      "Action": "EditData",
+    "Target": "Data/Festivals/summer11",
+    "TextOperations": [
+        {
+            "Operation": "Append",
+            "Target": [
+                "Entries",
+                "Set-Up_additionalCharacters_y2"
+            ],
+            "Value": "Alex 26 18",
+            "Delimiter": "/"
+        }
+      ],
+      "When": {"HasSeenEvent": "AlexSamWedding"}
+      },
+      {
+        "Action": "EditMap",
+        "Target": "Maps/Beach-Luau2",
+        "MapTiles": [
+                        {
+                          "Position": {"X": 40, "Y": 9 },
+                          "Layer": "Set-Up",
+                          "Remove": true
+                      }
+                    ],
+                    "When": {"HasSeenEvent": "AlexSamWedding"}
+    },
+
+
+{"Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters"
+                    ],
+                    "Value": "Alex 14 39 right",
+                    "Delimiter": "/"
+                }
+              ]
+},
+
+{
+                "Action": "EditMap",
+                "Target": "Maps/Beach-Jellies",
+                "MapTiles": [
+                                {
+                                  "Position": {"X": 22, "Y": 24 },
+                                  "Layer": "Set-Up",
+                                  "Remove": true
+                              }
+                            ],
+                            "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+
+              {"Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "Entries",
+                        "Set-Up_additionalCharacters_y2"
+                    ],
+                    "Value": "Alex 11 33 left",
+                    "Delimiter": "/"
+                }
+              ],
+              "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Beach-Jellies2",
+  "MapTiles": [
+                  {
+                    "Position": {"X": 70, "Y": 24 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                }
+              ],
+              "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+  {"Action": "EditData",
+"Target": "Data/Festivals/fall16",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Alex 27 56 right",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+  {"Action": "EditData",
+  "Target": "Data/Festivals/fall16",
+  "TextOperations": [
+      {
+          "Operation": "Append",
+          "Target": [
+              "Entries",
+              "Set-Up_additionalCharacters"
+          ],
+          "Value": "Sam 24 57 right",
+          "Delimiter": "/"
+      }
+    ],
+    "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Town-Fair",
+  "MapTiles": [
+                  {
+                    "Position": {"X": 28, "Y": 68 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                },
+                {
+                  "Position": {"X": 50, "Y": 78 },
+                  "Layer": "Set-Up",
+                  "Remove": true
+              }
+              ],
+              "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+
+    {"Action": "EditData",
+    "Target": "Data/Festivals/fall16",
+    "TextOperations": [
+        {
+            "Operation": "Append",
+            "Target": [
+                "Entries",
+                "Set-Up_additionalCharacters_y2"
+            ],
+            "Value": "Alex 27 56 right",
+            "Delimiter": "/"
+        }
+      ],
+      "When": {"HasSeenEvent": "AlexSamWedding"}
+      },
+      {"Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": [
+                  "Entries",
+                  "Set-Up_additionalCharacters_y2"
+              ],
+              "Value": "Sam 24 57 right",
+              "Delimiter": "/"
+          }
+        ],
+        "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Town-Fair2",
+  "MapTiles": [
+                  {
+                    "Position": {"X": 31, "Y": 74 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                },
+                {
+                  "Position": {"X": 63, "Y": 72 },
+                  "Layer": "Set-Up",
+                  "Remove": true
+              }
+              ],
+              "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{"Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": [
+                    "Entries",
+                    "Set-Up_additionalCharacters"
+                ],
+                "Value": "Sam 86 38 up",
+                "Delimiter": "/"
+            }
+          ],
+          "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{"Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": [
+                    "Entries",
+                    "Set-Up_additionalCharacters"
+                ],
+                "Value": "Alex 85 38 up",
+                "Delimiter": "/"
+            }
+          ],
+          "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{"Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": [
+                    "Entries",
+                    "Set-Up_additionalCharacters"
+                ],
+                "Value": "Vincent 84 37 right",
+                "Delimiter": "/"
+            }
+          ],
+          "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{"Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "TextOperations": [
+            {
+                "Operation": "RemoveDelimited",
+                "Target": [
+                    "Entries",
+                    "set-up"
+                ],
+                "Search": "advancedMove Vincent true 0 3 3 0 2 5000 0 -5 2 0 1 5000 -5 0 0 2 3 5000",
+                "Delimiter": "/"
+            }
+          ],
+          "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Forest-IceFestival",
+  "MapTiles": [
+                  {
+                    "Position": {"X": 85, "Y": 38 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                },
+                {
+                  "Position": {"X": 63, "Y": 32 },
+                  "Layer": "Set-Up",
+                  "Remove": true
+              },
+              {
+                "Position": {"X": 68, "Y": 35 },
+                "Layer": "Set-Up",
+                "Remove": true
+            }
+              ],
+              "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{"Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": [
+                    "Entries",
+                    "Set-Up_additionalCharacters_y2"
+                ],
+                "Value": "Alex 86 22 right",
+                "Delimiter": "/"
+            }
+          ],
+          "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Forest-IceFestival2",
+  "MapTiles": [
+                  {
+                    "Position": {"X": 79, "Y": 21 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                }
+              ],
+              "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{"Action": "EditData",
+        "Target": "Data/Festivals/winter25",
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": [
+                    "Entries",
+                    "Set-Up_additionalCharacters_y2"
+                ],
+                "Value": "Alex 36 77 down",
+                "Delimiter": "/"
+            }
+          ],
+          "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Town-Christmas2",
+  "MapTiles": [
+                  {
+                    "Position": {"X": 22, "Y": 64 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                }
+              ],
+              "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+
+//Alex schedule changes
+
+{"Action": "EditData",
+"Target": "Characters/schedules/Alex",
+"Entries": {
+  "rain": "800 JoshHouse 8 19 2 alex_football/1300 JoshHouse 14 5 2 alex_lift_weights/1600 Town 50 68 1/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 3 alex_sleep",
+  "GreenRain": "610 JoshHouse 6 18 2",
+  "DesertFestival_1": "730 Town 64 64 2 alex_football/900 Desert 13 23 2 \"Strings\\1_6_Strings:DesertFestival_Alex\"/2450 JoshHouse 21 4 3 alex_sleep",
+  "summer_16": "800 Town 64 64 2 alex_football/1030 Hospital 15 15 3 alex_sit_left \"Strings\\schedules\\Alex:summer_16.000\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Alex:summer_16.001\"/1600 JoshHouse 15 4 2/2400 JoshHouse 21 4 3 alex_sleep",
+  "winter_17": "900 BathHouse_MensLocker 3 5 2 alex_lift_weights/1500 Beach 27 24 1 \"Strings\\schedules\\Alex:winter_17.000\"/2400 JoshHouse 21 4 3 alex_sleep",
+  "winter": "900 BathHouse_MensLocker 3 5 2 alex_lift_weights/1500 JoshHouse 14 5 2/1800 Town 50 68 1/1930 JoshHouse 8 19 2/2100 JoshHouse 17 5 0/2240 JoshHouse 21 4 3 alex_sleep",
+  "Wed_6": "GOTO season",
+  "Wed": "NOT friendship Haley 6/800 Town 64 64 2 alex_football/1200 HaleyHouse 7 23 3 alex_sit_left/1630 Town 50 68 1/1840 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 3 alex_sleep",
+  "Sun": "MAIL saloonSportsRoom/GOTO Sun_normal/800 Town 64 64 2 alex_football/1100 Saloon 32 7 0 \"Strings\\schedules\\Alex:Sun.000\"/1500 Town 50 68 1/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 3 alex_sleep",
+  "Sun_normal": "GOTO season",
+  "summer": "730 Beach 30 13 2 square_7_7/1000 Town 88 91 2/1300 Beach 45 24 2/1700 JoshHouse 14 5 2 alex_lift_weights/1900 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 3 alex_sleep",
+  "spring": "800 Town 64 64 2 alex_football/1300 JoshHouse 14 5 2 alex_lift_weights/1600 Town 50 68 1/1830 JoshHouse 8 19 2/2000 JoshHouse 17 5 0/2200 JoshHouse 21 4 3 alex_sleep",
+  "Fri": "800 Town 64 64 2 alex_football/1100 JoshHouse 14 5 2 alex_lift_weights/1300 Town 50 68 1/1500 Saloon 38 22 0/2200 JoshHouse 21 4 3 alex_sleep"
+},
+ "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+
+//Sam schedule changes
+
+{"Action": "EditData",
+"Target": "Characters/schedules/Sam",
+"Entries": {
+  "rain": "800 JoshHouse 19 6 2/1100 JoshHouse 18 6 3 sam_gameboy/2000 JoshHouse 20 4 1 sam_sleep",
+  "GreenRain": "610 JoshHouse 1 18 1",
+  "rain2": "800 JoshHouse 19 6 2/1100 JoshHouse 18 6 3 sam_gameboy/1400 Saloon 38 18 0 \"Strings\\schedules\\Sam:rain2.000\"/1940 JoshHouse 20 4 1 sam_sleep",
+  "DesertFestival_1": "700 JoshHouse 19 6 2/830 Desert 21 59 2 \"Strings\\1_6_Strings:DesertFestival_Sam\"/2410 JoshHouse 20 4 1 sam_sleep",
+  "winter_17": "1000 JoshHouse 19 6 2/1040 SamHouse 17 15 2 sam_guitar/1700 Beach 11 34 3 \"Strings\\schedules\\Sam:winter_17.000\"/2400 JoshHouse 20 4 1 sam_sleep",
+  "summer": "1000 JoshHouse 19 6 2/1040 SamHouse 17 15 2 sam_guitar/1340 Beach 46 24 2/1900 SamHouse 22 16 1/2100 JoshHouse 20 4 1 sam_sleep",
+  "fall": "1000 JoshHouse 19 6 2/1040 SamHouse 17 15 2 sam_guitar/1320 Forest 66 50 2/1900 SamHouse 22 16 1/2100 JoshHouse 20 4 1 sam_sleep",
+  "winter": "1000 JoshHouse 19 6 2/1040 SamHouse 17 15 2 sam_guitar/1320 Saloon 20 19 3/1900 SamHouse 22 16 1/2100 JoshHouse 20 4 1 sam_sleep",
+  "fall_11": "1000 JoshHouse 19 6 2 \"Strings\\schedules\\Sam:fall_11.000\"/1130 Hospital 14 15 3 sam_gameboy/1330 Hospital 4 6 1 \"Strings\\schedules\\Sam:fall_11.001\"/1600 Town 11 94 2 \"Strings\\schedules\\Sam:fall_11.002\"/2100 SamHouse 22 13 1 sam_sleep",
+  "Sat": "800 Town 25 98 2/1100 Town 18 94 3 sam_gameboy/1230 SamHouse 17 15 2 sam_guitar/1500 SamHouse 19 13 3/1800 Town 12 94 3/1940 JoshHouse 20 4 1 sam_sleep",
+  "9_6": "GOTO spring",
+  "23_6": "GOTO spring",
+  "9": "NOT friendship Penny 6/900 JoshHouse 19 6 2/1100 Town 79 95 2/1600 Town 24 97 3 sam_gameboy/1900 JoshHouse 19 6 2/2130 JoshHouse 20 4 1 sam_sleep",
+  "23": "NOT friendship Penny 6/GOTO 9",
+  "Mon": "1000 JoshHouse 19 6 2/1100 JojaMart 16 5 2 sam_work/1600 JoshHouse 19 6 2/2130 JoshHouse 20 4 1 sam_sleep",
+  "Wed": "GOTO Mon",
+  "JojaMart_Replacement": "ArchaeologyHouse 40 4 2",
+  "Fri": "1000 SamHouse 17 15 2 sam_guitar/1100 Town 14 90 2 sam_skateboarding/1500 Saloon 36 21 3 sam_pool/2200 JoshHouse 20 4 1 sam_sleep",
+  "spring": "1000 JoshHouse 19 6 2/1100 JoshHouse 19 6 3 sam_gameboy/1340 Town 71 99 2/1830 JoshHouse 19 6 2/2100 JoshHouse 20 4 1 sam_sleep"
+},
+ "When": {"HasSeenEvent": "AlexSamWedding"}
+},
+
+//Dialogue changes
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Alex",
+"Entries": 
+  {
+    "Beach": "{{i18n:AlexDialogue.Beach}}",
+    "JoshHouse_Tue": "{{i18n:AlexDialogue.JoshHouse_Tue}}",
+    "Saloon_Fri": "{{i18n:AlexDialogue.Saloon_Fri}}",
+    "Town_Mon": "{{i18n:AlexDialogue.Town_Mon}}",
+    "JoshHouse_Wed": "{{i18n:AlexDialogue.JoshHouse_Wed}}",
+    "Town_Wed": "{{i18n:AlexDialogue.Town_Wed}}"
+    
+  },
+"When": {"HasSeenEvent": "AlexSamWedding"}},
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Sam",
+"Entries": 
+  {
+    "Beach": "{{i18n:SamDialogue.Beach}}",
+    "JoshHouse_Wed": "{{i18n:SamDialogue.JoshHouse_Wed}}",
+    "JoshHouse_Mon": "{{i18n:SamDialogue.JoshHouse_Mon}}",
+    "SamHouse": "{{i18n:SamDialogue.SamHouse}}",
+    "Saloon_36_21": "{{i18n:SamDialogue.Saloon_36_21}}"
+    
+  },
+"When": {"HasSeenEvent": "AlexSamWedding"}}
+              
+              ]}

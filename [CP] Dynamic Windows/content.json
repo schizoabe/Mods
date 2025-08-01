@@ -17,8 +17,12 @@
                 "Width": 16,
                 "Height": 64
             },
+            "When": {
+                "Esoterick.DynamicWindows/GreenhousePanes": "Custom"
+            },
+	   "Update": "OnLocationChange, OnTimeChange"
         },
-{
+	{
             "Action": "EditImage",
             "Target": "Maps/townInterior",
             "FromFile": "assets/Greenhouse/gh_panels_sides.png",
@@ -34,8 +38,54 @@
                 "Width": 16,
                 "Height": 64
             },
+            "When": {
+                "Esoterick.DynamicWindows/GreenhousePanes": "Custom"
+           },
+	   "Update": "OnLocationChange, OnTimeChange"
         },
-{
+	{
+            "Action": "EditImage",
+            "Target": "Maps/townInterior",
+            "FromFile": "assets/Greenhouse/gh_panels_sides_vanilla.png",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 16,
+                "Height": 64
+            },
+            "ToArea": {
+                "X": 416,
+                "Y": 976,
+                "Width": 16,
+                "Height": 64
+            },
+            "When": {
+                "Esoterick.DynamicWindows/GreenhousePanes": "Vanilla"
+            },
+	   "Update": "OnLocationChange, OnTimeChange"
+        },
+	{
+            "Action": "EditImage",
+            "Target": "Maps/townInterior",
+            "FromFile": "assets/Greenhouse/gh_panels_sides_vanilla.png",
+            "FromArea": {
+                "X": 16,
+                "Y": 0,
+                "Width": 16,
+                "Height": 64
+            },
+            "ToArea": {
+                "X": 464,
+                "Y": 976,
+                "Width": 16,
+                "Height": 64
+            },
+            "When": {
+                "Esoterick.DynamicWindows/GreenhousePanes": "Vanilla"
+           },
+	   "Update": "OnLocationChange, OnTimeChange"
+        },
+	{
             "Action": "EditImage",
             "Target": "Maps/townInterior",
             "FromFile": "assets/Greenhouse/gh_panels.png",
@@ -51,26 +101,74 @@
                 "Width": 64,
                 "Height": 48
             },
+            "When": {
+                "Esoterick.DynamicWindows/GreenhousePanes": "Custom"
+           },
+	   "Update": "OnLocationChange, OnTimeChange"
         },
+	{
+            "Action": "EditImage",
+            "Target": "Maps/townInterior",
+            "FromFile": "assets/Greenhouse/gh_panels_vanilla.png",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 64,
+                "Height": 48
+            },
+            "ToArea": {
+                "X": 416,
+                "Y": 976,
+                "Width": 64,
+                "Height": 48
+            },
+            "When": {
+                "Esoterick.DynamicWindows/GreenhousePanes": "Vanilla"
+           },
+	   "Update": "OnLocationChange, OnTimeChange"
+        },
+
+
+
 {
     "Action": "EditMap",
     "Target": "Maps/Greenhouse",
+    "FromFile": "assets/Greenhouse/gh_loader.tmx",
+    "LogName": "Greenhouse Corner Patch Loader",
+    "When": {
+        "Esoterick.DynamicWindows/GreenhousePanes": "Custom"
+    }
+},
+
+{
+    "Action": "EditMap",
+    "Target": "Maps/Greenhouse",
+    "Update": "OnLocationChange, OnTimeChange",
+    "When": {
+        "Esoterick.DynamicWindows/GreenhousePanes": "Custom"
+    },
     "MapTiles": [
         {
             "Position": { "X": 1, "Y": 4 },
             "Layer": "Buildings",
-            "SetIndex": 7000
-        }
-    ]
-},
-{
-    "Action": "EditMap",
-    "Target": "Maps/Greenhouse",
-    "MapTiles": [
+            "SetIndex": 7000,
+        },
         {
             "Position": { "X": 18, "Y": 4 },
-            "Layer": "Buildings",
-            "SetIndex": 7000
+	     "Layer": "Buildings",
+            "SetIndex": 7000,
+        },
+        {
+            "Position": { "X": 1, "Y": 4 },
+            "Layer": "Front", 
+            "SetIndex": 0,
+            "SetTileSheet": "z_gh_patch" 
+        },
+        {
+            "Position": { "X": 18, "Y": 4 },
+            "Layer": "Front", 
+            "SetIndex": 1,
+            "SetTileSheet": "z_gh_patch" 
         }
     ]
 },

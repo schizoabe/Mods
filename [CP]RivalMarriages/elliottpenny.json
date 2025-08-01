@@ -1,0 +1,925 @@
+{"Changes": [
+    { //Elliott and Penny first heart event
+   "Action": "EditData",
+   "Target": "Data/Events/ArchaeologyHouse",
+   "Entries": {
+    "EPHeart1/f Elliott 750/f Penny 750/!D Penny/!D Elliott": "jaunty/15 10/Penny 16 10 1 Elliott 19 10 3 Gunther 3 8 2 farmer 10 10 3 Harvey 12 5 2/skippable/pause 800/speak Penny \"{{i18n:EPHeart1.0}}\"/pause 500/speak Elliott \"{{i18n:EPHeart1.1}}\"/pause 400/speak Penny \"{{i18n:EPHeart1.2}}\"/pause 1000/speak Elliott \"{{i18n:EPHeart1.3}}\"/pause 300/speak Penny \"{{i18n:EPHeart1.4}}\"/pause 1000/speak Elliott \"{{i18n:EPHeart1.5}}\"/pause 300/speak Penny \"{{i18n:EPHeart1.6}}\"/pause 1000/speak Elliott \"{{i18n:EPHeart1.7}}\"/pause 500/speak Penny \"{{i18n:EPHeart1.8}}\"/speak Elliott \"{{i18n:EPHeart1.9}}\"/speak Penny \"{{i18n:EPHeart1.10}}\"/pause 500/faceDirection Penny 3/pause 400/faceDirection Penny 1/speak Penny \"{{i18n:EPHeart1.11}}\"/move Penny -3 0 3/pause 300/speak Penny \"{{i18n:EPHeart1.12}}\"/faceDirection farmer 1/speak Penny \"{{i18n:EPHeart1.13}}\"/emote farmer 8/pause 1000/emote farmer 16/pause 200/move Penny 3 0 1/move farmer 0 1 2/move farmer 4 0 1/pause 500/quickQuestion {{i18n:EPHeart1.14}}#{{i18n:EPHeart1.15}}#{{i18n:EPHeart1.16}}#{{i18n:EPHeart1.17}}#{{i18n:EPHeart1.18}}(break)speak Elliott \"{{i18n:EPHeart1.19}}\"(break)speak Elliott \"{{i18n:EPHeart1.20}}\"(break)speak Elliott \"{{i18n:EPHeart1.21}}\"(break)speak Elliott \"{{i18n:EPHeart1.22}}\"/end"
+
+      }
+
+
+    },
+    { //Elliott and Penny second heart event
+    "Action": "EditData",
+    "Target": "Data/Events/Town",
+    "Entries": {
+      "EPHeart2/f Elliott 1250/f Penny 1250/DayofWeek Mon Tue Wed Thu Fri/t 1300 1600/e EPHeart1/!D Penny/!D Elliott": "jaunty/43 78/Penny 54 90 0 Elliott 30 81 1/skippable/addObject 44 77 102/pause 200/move Elliott 17 0 1/pause 200/faceDirection Elliott 3/move Elliott -3 0 0/move Elliott 0 -2 0/move Penny 0 -8 0 true/speak Elliott \"{{i18n:EPHeart2.0}}\"/pause 200/shake Elliott 800/pause 200/playSound coin/removeObject 44 77/pause 200/speak Elliott \"{{i18n:EPHeart2.1}}\"/move Penny -9 0 0 true/speak Elliott \"{{i18n:EPHeart2.2}}\"/speak Penny \"{{i18n:EPHeart2.3}}\"/pause 500/faceDirection Elliott 2/move Penny 0 -2 0/move Penny -1 0 0/speak Elliott \"{{i18n:EPHeart2.4}}\"/speak Penny \"{{i18n:EPHeart2.5}}\"/speak Elliott \"{{i18n:EPHeart2.6}}\"/pause 400/speak Penny \"{{i18n:EPHeart2.7}}\"/speak Elliott \"{{i18n:EPHeart2.8}}\"/speak Penny \"{{i18n:EPHeart2.9}}\"/speak Elliott \"{{i18n:EPHeart2.10}}\"/speak Penny \"{{i18n:EPHeart2.11}}\"/speak Elliott \"{{i18n:EPHeart2.12}}\"/speak Penny \"{{i18n:EPHeart2.13}}\"/speak Elliott \"{{i18n:EPHeart2.14}}\"/pause 200/end"
+
+      }
+
+    },
+    { //Elliott and Penny third heart event
+    "Action": "EditData",
+    "Target": "Data/Events/Beach",
+    "Entries": {
+      "EPHeart3/f Elliott 1750/f Penny 1750/t 1500 1900/e EPHeart1/e EPHeart2/!D Penny/!D Elliott": "ocean/40 8/Penny 1000 1000 2 Elliott 38 11 1 farmer 40 11 3/skippable/pause 400/warp Penny 39 0/move Penny 0 7 2 true/speak Elliott \"{{i18n:EPHeart3.0}}\"/faceDirection Elliott 0/faceDirection farmer 0/speak Elliott \"{{i18n:EPHeart3.1}}\"/pause 400/move Penny 0 2 2/speak Penny \"{{i18n:EPHeart3.2}}\"/pause 300/speak Elliott \"{{i18n:EPHeart3.3}}\"/pause 300/speak Penny \"{{i18n:EPHeart3.4}}\"/faceDirection Elliott 1/emote Elliott 28/pause 200/faceDirection Elliott 0/speak Elliott \"{{i18n:EPHeart3.5}}\"/pause 200/speak Penny \"{{i18n:EPHeart3.6}}\"/pause 300/faceDirection Elliott 1/speak Elliott \"{{i18n:EPHeart3.7}}\"/globalFade/viewport -1000 -1000/changeLocation ElliottHouse/warp Penny 7 7/warp Elliott 8 7/faceDirection Elliott 3/warp farmer 5 8/faceDirection farmer 1/playSound doorClose/playMusic musicboxsong/pause 2000/viewport 7 7 true/pause 1000/speak Elliott \"{{i18n:EPHeart3.8}}\"/pause 500/speak Penny \"{{i18n:EPHeart3.9}}\"/pause 400/emote farmer 40/pause 1000/faceDirection Penny 3/speak Penny \"{{i18n:EPHeart3.10}}\"/emote farmer 20/pause 200/move farmer -2 0 2/move farmer 0 1 2/playSound doorClose/warp farmer 1000 1000/pause 1000/faceDirection Penny 1/pause 500/speak Elliott \"{{i18n:EPHeart3.11}}\"/pause 500/speak Penny \"{{i18n:EPHeart3.12}}\"/pause 300/speak Elliott \"{{i18n:EPHeart3.13}}\"/faceDirection Elliott 0/move Elliott 0 -2 0 true/faceDirection Penny 0/pause 200//move Elliott 3 0 1/pause 200/speak Elliott \"{{i18n:EPHeart3.14}}\"/move Penny 0 -1 0/move Penny 5 0 0/pause 300/speak Elliott \"{{i18n:EPHeart3.15}}\"/faceDirection Elliott 1/pause 200/move Elliott -2 0 3/speak Elliott \"{{i18n:EPHeart3.16}}\"/faceDirection Elliott 1/move Penny -2 0 3/move Penny 0 -1 3/pause 200/speak Penny \"{{i18n:EPHeart3.17}}\"/pause 500/speak Elliott \"{{i18n:EPHeart3.18}}\"/pause 500/speak Penny \"{{i18n:EPHeart3.19}}\"/speak Elliott \"{{i18n:EPHeart3.20}}\"/speak Penny \"{{i18n:EPHeart3.21}}\"/pause 400/speak Elliott \"{{i18n:EPHeart3.22}}\"/speak Penny \"{{i18n:EPHeart3.23}}\"/speak Elliott \"{{i18n:EPHeart3.24}}\"/positionOffset Penny -1 0/pause 100/positionOffset Penny -1 0/pause 500/animate Penny true true 150 35/animate Elliott true true 150 35/positionOffset Penny -1 0/pause 10/positionOffset Elliott 1 0/pause 10/positionOffset Elliott 1 0/pause 10/positionOffset Elliott 1 0/pause 10/positionOffset Elliott 1 0/positionOffset Penny -1 0/pause 10/positionOffset Elliott 1 0/positionOffset Penny -1 0/pause 10/positionOffset Elliott 1 0/positionOffset Penny -1 0/pause 10/positionOffset Elliott 1 0/positionOffset Penny -1 0/pause 10/positionOffset Elliott 1 0/specificTemporarySprite heart 10 4/playSound dwop/pause 2000/globalFade/viewport -1000 -1000/pause 2300/end"
+
+    }
+
+    },
+    {//Elliott and Penny fourth heart event
+    "Action": "EditData",
+    "Target": "Data/Events/ArchaeologyHouse",
+    "Entries": {
+      "EPEngagement/f Elliott 2000/f Penny 2000/e EPHeart1/e EPHeart2/e EPHeart3/!D Penny/!D Elliott": "musicboxsong/11 11/Penny 1000 1000 0 Elliott 11 10 2 farmer 1000 1000 0/skippable/pause 1000/playSound doorClose/warp Penny 3 15/pause 300/move Penny 0 -2 0/move Penny 4 0 2/move Penny 0 1 2/move Penny 4 0 0/move Penny 0 -2 0/pause 500/speak Elliott \"{{i18n:EPEngagement.0}}\"/pause 200/faceDirection Penny 1/pause 200/faceDirection Penny 3/pause 200/faceDirection Penny 0/pause 200/speak Penny \"{{i18n:EPEngagement.1}}\"/pause 300/speak Elliott \"{{i18n:EPEngagement.2}}\"/speak Penny \"{{i18n:EPEngagement.3}}\"/speak Elliott \"{{i18n:EPEngagement.4}}\"/pause 500/speak Elliott \"{{i18n:EPEngagement.5}}\"/pause 2000/speak Penny \"{{i18n:EPEngagement.6}}\"/pause 1000/speak Penny \"{{i18n:EPEngagement.7}}\"/speak Elliott \"{{i18n:EPEngagement.8}}\"/speak Penny \"{{i18n:EPEngagement.9}}\"/pause 800/globalFade/viewport -1000 -1000/pause 2300/end"
+
+    }
+
+    },
+    { // Elliott and Penny wedding invitation
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries":{
+        "ElliottPennyInvitation": "{{i18n:ElliottPennyInvitation}}"
+
+         }
+      },
+      { //Send Elliott Penny wedding invitation letter
+          "Action": "EditData",
+          "Target": "Data/TriggerActions",
+          "Entries":{
+          "{{ModID}}_RivalMarriages": {
+              "ID": "{{ModID}}_RivalMarriages_ElliottPennyInvitation",
+              "Trigger": "DayStarted",
+              "Actions": [
+                  "AddMail Current ElliottPennyInvitation tomorrow"
+              ]
+              
+            }
+            },
+            "When": {"HasSeenEvent": "EPEngagement"}},
+    {//Elliott and Penny wedding and conversation topic
+    "Action": "EditData",
+    "Target":"Data/Events/Farm",
+    "Entries": {
+        "ElliottPennyWedding/w sunny/t 600 900/e EPEngagement/n ElliottPennyInvitation": "sweet/-1000 1000/Elliott 0 0 2 Penny 0 0 2 Maru 0 0 0 Robin 0 0 0 Demetrius 0 0 0 farmer 0 0 0 Sebastian 0 0 0 Pam 0 0 0 Lewis 0 0 2 Jodi 0 0 0 Kent 0 0 0 Sam 0 0 0 Jas 0 0 0 Marnie 0 0 0 Leah 0 0 0 Vincent 0 0 0/AddConversationTopic EPWedTopic 28/skippable/viewport -1000 -1000/changelocation Town/specificTemporarySprite wedding/viewport 1000 1000/warp Elliott 27 63/warp Penny 28 63/warp Pam 26 65/warp Lewis 27 64/warp Leah 29 65/warp Sam 29 66/warp Demetrius 25 66/warp Sebastian 25 67/warp Robin 26 66/warp Maru 26 67/warp Vincent 30 66/warp Jodi 29 67/warp Kent 30 67/warp Marnie 25 65/warp Jas 24 65/warp farmer 30 65/faceDirection farmer 0/animate Elliott false true 50 48/animate Penny false true 50 36/viewport 27 64/pause 1000/speak Lewis \"{{i18n:ElliottPennyWedding.0 |day={{day}} |season={{season}} }}\"/faceDirection Elliott 1/faceDirection Penny 3/pause 500/faceDirection Lewis 2/pause 2000/speak Lewis \"{{i18n:ElliottPennyWedding.1}}\"/move Lewis 0 1 0/playMusic none/pause 1000/showFrame Lewis 20/pause 300/speak Lewis \"{{i18n:ElliottPennyWedding.2}}\"/pause 500/speak Lewis \"{{i18n:ElliottPennyWedding.3}}\"/pause 500/animate Penny false true 50 37/move Lewis 0 2 0 true/pause 2000/animate Elliott true true 50 50/animate Penny false true 50 38/positionOffset Elliott 2 0/pause 10/positionOffset Penny -2 0/pause 10/positionOffset Elliott 2 0/pause 10/positionOffset Penny -2 0/positionOffset Elliott 2 0/pause 10/positionOffset Penny -2 0/specificTemporarySprite heart 28 62/playSound dwop/pause 4000/specificTemporarySprite wed/positionOffset Elliott -2 0/pause 10/positionOffset Penny 2 0/pause 10/positionOffset Elliott -2 0/pause 10/positionOffset Penny 2 0/pause 10/positionOffset Elliott -2 0/pause 10/positionOffset Penny 2 0/pause 10/positionOffset Elliott -2 0/pause 10/positionOffset Penny 2 0/pause 10/animate Elliott true true 50 48/animate Penny false true 50 36/globalFade/viewport -1000 -1000/pause 2000/message \"{{i18n:ElliottPennyWedding.4}}\"/end"
+
+
+    }
+    }
+    ,
+    //Elliott and Penny wedding conversation topic dialogue lines
+{ "Action": "EditData",
+"Target": "Characters/Dialogue/Maru",
+"Entries": 
+{
+  "EPWedTopic": "{{i18n:Maru.EPWedTopic}}"
+
+}
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Robin",
+"Entries": 
+{
+  "EPWedTopic": "{{i18n:Robin.EPWedTopic}}"
+
+}
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Demetrius",
+"Entries": 
+{
+  "EPWedTopic": "{{i18n:Demetrius.EPWedTopic}}"
+
+}
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Sebastian",
+"Entries": 
+{
+  "EPWedTopic": "{{i18n:Sebastian.EPWedTopic}}"
+}
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Pam",
+"Entries": 
+{
+  "EPWedTopic": "{{i18n:Pam.EPWedTopic}}"
+}
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Lewis",
+"Entries": 
+{
+  "EPWedTopic": "{{i18n:Lewis.EPWedTopic}}"
+}
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Jodi",
+"Entries": 
+{
+  "EPWedTopic": "{{i18n:Jodi.EPWedTopic}}"
+}
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Sam",
+"Entries": 
+{
+  "EPWedTopic": "{{i18n:Sam.EPWedTopic}}"
+}
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Jas",
+"Entries": 
+{
+  "EPWedTopic": "{{i18n:Jas.EPWedTopic}}"
+}
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Marnie",
+"Entries": 
+{
+  "EPWedTopic": "{{i18n:Marnie.EPWedTopic}}"
+}
+},
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Leah",
+"Entries": 
+{
+  "EPWedTopic": "{{i18n:Leah.EPWedTopic}}"
+}
+},
+//Elliott and Penny festival dialogue changes
+{"Action": "EditData",
+"Target": "Data/Festivals/spring13",
+"Entries": 
+{
+  "Elliott": "{{i18n:spring13.Elliott}}",
+  "Penny": "{{i18n:spring13.Penny}}",
+  "Elliott_y2": "{{i18n:spring13.Elliott_y2}}",
+  "Penny_y2": "{{i18n:spring13.Penny_y2}}"
+  
+},
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/spring24",
+"Entries": {
+  "Elliott": "{{i18n:spring24.Elliott}}",
+  "Penny": "{{i18n:spring24.Penny}}",
+  "Elliott_y2": "{{i18n:spring24.Elliott_y2}}",
+  "Penny_y2": "{{i18n:spring24.Penny_y2}}"
+  
+  },
+"When": {"HasSeenEvent": "ElliottPennyWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/summer11",
+"Entries": {
+  "Penny": "{{i18n:summer11.Penny}}",
+  "Elliott": "{{i18n:summer11.Elliott}}",
+  "Penny_y2": "{{i18n:summer11.Penny_y2}}",
+  "Elliott_y2": "{{i18n:summer11.Elliott_y2}}"
+  
+},
+"When": {"HasSeenEvent": "ElliottPennyWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/summer28",
+"Entries": {
+  "Elliott": "{{i18n:summer28.Elliott}}",
+  "Penny": "{{i18n:summer28.Penny}}",
+  "Elliott_y2": "{{i18n:summer28.Elliott_y2}}",
+  "Penny_y2": "{{i18n:summer28.Penny_y2}}"
+  
+  },
+    "When": {"HasSeenEvent": "ElliottPennyWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/fall16",
+"Entries":{
+  "Penny": "{{i18n:fall16.Penny}}",
+  "Elliott": "{{i18n:fall16.Elliott}}",
+  "Penny_y2": "{{i18n:fall16.Penny_y2}}",
+  "Elliott_y2": "{{i18n:fall16.Elliott_y2}}"
+  
+    },
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/fall27",
+"Entries": {
+  "Elliott": "{{i18n:fall27.Elliott}}",
+  "Penny": "{{i18n:fall27.Penny}}",
+  "Elliott_y2": "{{i18n:fall27.Elliott_y2}}",
+  "Penny_y2": "{{i18n:fall27.Penny_y2}}"
+  
+    },
+      "When": {"HasSeenEvent": "ElliottPennyWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/winter8",
+"Entries": {
+  "Elliott": "{{i18n:winter8.Elliott}}",
+  "Penny": "{{i18n:winter8.Penny}}",
+  "Elliott_y2": "{{i18n:winter8.Elliott_y2}}",
+  "Penny_y2": "{{i18n:winter8.Penny_y2}}"
+  
+    },
+      "When": {"HasSeenEvent": "ElliottPennyWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/winter25",
+"Entries": {
+  "Penny": "{{i18n:winter25.Penny}}",
+  "Elliott": "{{i18n:winter25.Elliott}}",
+  "Penny_y2": "{{i18n:winter25.Penny_y2}}",
+  "Elliott_y2": "{{i18n:winter25.Elliott_y2}}"
+  
+  },
+    "When": {"HasSeenEvent": "ElliottPennyWedding"}},
+
+//Edit Elliott and Leah festival locations
+
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/summer11",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Penny 47 11 down",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+  },
+  {
+    "Action": "EditMap",
+    "Target": "Maps/Beach-Luau",
+    "MapTiles": [
+                    {
+                        "Position": {"X": 56, "Y": 17 },
+                        "Layer": "Set-Up",
+                        "Remove": true
+                    }
+                ],
+                "When": {"HasSeenEvent": "ElliottPennyWedding"}
+  },
+{
+    "Action": "EditData",
+  "Target": "Data/Festivals/summer11_y2",
+  "TextOperations": [
+      {
+          "Operation": "Append",
+          "Target": [
+              "Entries",
+              "Set-Up_additionalCharacters"
+          ],
+          "Value": "Penny 48 11 down",
+          "Delimiter": "/"
+      }
+    ],
+    "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Beach-Luau",
+  "MapTiles": [
+                  {
+                      "Position": {"X": 32, "Y": 17 },
+                      "Layer": "Set-Up",
+                      "Remove": true
+                  }
+              ],
+              "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/summer28",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Penny 86 33 left",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/summer28",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Elliott 86 34 left",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Beach-Jellies",
+  "MapTiles": [
+                  {
+                      "Position": {"X": 11, "Y": 21 },
+                      "Layer": "Set-Up",
+                      "Remove": true
+                  },
+                  {
+                    "Position": {"X": 44, "Y": 35 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                }
+              ],
+              "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/summer28",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters_y2"
+        ],
+        "Value": "Penny 86 33 left",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/summer28",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters_y2"
+        ],
+        "Value": "Elliott 86 32 left",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Beach-Luau2",
+  "MapTiles": [
+                  {
+                      "Position": {"X": 28, "Y": 36 },
+                      "Layer": "Set-Up",
+                      "Remove": true
+                  },
+                  {
+                    "Position": {"X": 49, "Y": 24 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                }
+              ],
+              "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/fall16",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Penny 22 65 0",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/fall16",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Elliott 23 65 0",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Town-Fair",
+  "MapTiles": [
+                  {
+                      "Position": {"X": 37, "Y": 70 },
+                      "Layer": "Set-Up",
+                      "Remove": true
+                  },
+                  {
+                    "Position": {"X": 30, "Y": 34 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                }
+              ],
+              "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/fall16",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters_y2"
+        ],
+        "Value": "Elliott 37 68 left",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/fall16",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters_y2"
+        ],
+        "Value": "Penny 37 69 left",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Town-Fair2",
+  "MapTiles": [
+                  {
+                      "Position": {"X": 43, "Y": 77 },
+                      "Layer": "Set-Up",
+                      "Remove": true
+                  },
+                  {
+                    "Position": {"X": 37, "Y": 68 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                }
+              ],
+              "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/winter25",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Elliott 32 56 down",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Town-Christmas",
+  "MapTiles": [
+                  {
+                    "Position": {"X": 23, "Y": 73 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                }
+              ],
+              "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/winter25",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters_y2"
+        ],
+        "Value": "Elliott 43 60 left",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Town-Christmas2",
+  "MapTiles": [
+                  {
+                    "Position": {"X": 30, "Y": 59 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                }
+              ],
+              "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+
+{ //Elliott and Penny relationship status change
+        "Action": "EditData",
+        "Target": "Data/Characters",
+        "Fields": {
+          "Elliott": 
+          {"CanBeRomanced": false
+          }},
+          "When": {"HasSeenEvent": "EPEngagement"}
+
+        },
+        {"Action": "EditData",
+        "Target": "Data/Characters",
+        "Fields": {
+          "Penny": 
+          {"CanBeRomanced": false
+          }},
+          "When": {"HasSeenEvent": "EPEngagement"}},
+
+        { //Penny home change
+        "Action": "EditData",
+        "Target": "Data/Characters",
+        "Fields": {
+          "Penny": 
+          {"Home": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "Location": "ElliottHouse",
+              "Tile": {
+                "X": 7,
+                "Y": 7
+              },
+              "Direction": "down"
+            }
+          ]}},
+          "When": {"HasSeenEvent": "ElliottPennyWedding"}
+
+        },
+//Remove 10 heart cutscenes
+
+{
+  "Action": "EditData",
+  "Target": "Data/Events/BathHouse_Pool",
+  "Entries": {
+      "38/f Penny 2500/t 1900 2400/n pennySpa": null
+  },
+  "When": {"HasSeenEvent": "EPEngagement"}
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Events/Beach",
+  "Entries": {
+      "43/f Elliott 2500/w sunny/t 700 1300/G !IS_PASSIVE_FESTIVAL_TODAY SquidFest": null
+  },
+  "When": {"HasSeenEvent": "EPEngagement"}
+},
+
+{
+    "Action": "EditData",
+    "Target": "Data/mail",
+    "Entries": {
+        "elliottBoat": null,
+        "pennySpa": null
+    },
+    "When": {"HasSeenEvent": "EPEngagement"}
+},
+
+
+//Elliott house changes
+{
+    "Action": "Load",
+    "Target": "Maps/ElliottHouse",
+    "FromFile": "assets/ElliottHouse.tmx",
+    "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+//Penny house changes
+{
+    "Action": "EditMap",
+    "Target": "Maps/Trailer",
+    "MapTiles": [
+         {
+              "Position": { "X": 5, "Y": 4 },
+              "Layer": "Buildings",
+              "Remove": true
+          },
+          {
+            "Position": { "X": 6, "Y": 4 },
+            "Layer": "Buildings",
+            "Remove": true
+        },
+        {
+            "Position": { "X": 5, "Y": 3 },
+            "Layer": "Buildings",
+            "Remove": true
+        },
+        {
+            "Position": { "X": 6, "Y": 3 },
+            "Layer": "Buildings",
+            "Remove": true
+        },
+        {
+            "Position": { "X": 5, "Y": 2 },
+            "Layer": "Front",
+            "Remove": true
+        },
+        {
+            "Position": { "X": 6, "Y": 2 },
+            "Layer": "Front",
+            "Remove": true
+        },
+        {
+            "Position": { "X": 5, "Y": 1 },
+            "Layer": "Front",
+            "Remove": true
+        },
+        {
+            "Position": { "X": 6, "Y": 1 },
+            "Layer": "Front",
+            "Remove": true
+        },
+        {
+            "Position": { "X": 1, "Y": 9 },
+            "Layer": "Buildings",
+            "Remove": true
+        },
+        {
+            "Position": {"X": 5, "Y": 3 },
+            "Layer": "Buildings",
+            "SetTilesheet": "1",
+            "SetIndex": "106"
+          },
+          {
+            "Position": {"X": 6, "Y": 3 },
+            "Layer": "Buildings",
+            "SetTilesheet": "1",
+            "SetIndex": "106"
+          }
+        ],
+        "When": {"HasSeenEvent": "ElliottPennyWedding"}
+    },
+//Penny schedule changes without other mods
+{
+  "Action": "EditData",
+  "Target": "Characters/schedules/Penny",
+  "Entries": {
+      "rain": "900 ElliottHouse 5 5 0/1100 ElliottHouse 9 4 2 penny_read/2100 ElliottHouse 12 4 1 penny_sleep",
+      "GreenRain": "0 Saloon 5 21 1 square_1_3",
+      "rain2": "810 Town 104 89 2 \"Strings\\schedules\\Penny:rain2.000\"/1000 ArchaeologyHouse 20 5 0/1200 ElliottHouse 9 4 2 penny_read/1600 Trailer 12 6 0 penny_dishes/1900 ElliottHouse 7 7 0/2100 ElliottHouse 12 4 1 penny_sleep",
+      "summer": "810 Town 96 18 3/1300 Town 63 15 2 penny_sit_down/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "winter_15": "900 ElliottHouse 5 5 0/1600 Beach 35 36 2 \"Strings\\schedules\\Penny:winter_15.000\"/2350 ElliottHouse 12 4 1 penny_sleep",
+      "winter": "900 ElliottHouse 5 5 0/1030 CommunityCenter 23 17 2 penny_read/1500 CommunityCenter 46 13 0/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "winter_4": "900 ElliottHouse 5 5 0 \"Strings\\schedules\\Penny:winter_4.000\"/1130 Hospital 4 17 2 penny_sit_down/1330 Hospital 4 6 1 \"Strings\\schedules\\Penny:winter_4.001\"/1600 Town 75 52 2 penny_sit_down/1900 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "9_6": "GOTO spring",
+      "23_6": "GOTO spring",
+      "9": "NOT friendship Sam 6/900 ElliottHouse 5 5 0/1100 Town 78 93 2 penny_sit_down/1600 ElliottHouse 6 7 2/1840 ElliottHouse 12 4 1 penny_sleep",
+      "23": "NOT friendship Sam 6/GOTO 9",
+      "summer_Sun": "800 Town 96 18 3/1200 ScienceHouse 8 5 2 penny_sit_down/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "Tue": "820 ElliottHouse 5 5 0/900 ArchaeologyHouse 17 9 2 penny_read/1400 Town 88 100 2/1620 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 ElliottHouse 12 4 1 penny_sleep",
+      "Wed": "GOTO Tue",
+      "Fri": "GOTO Tue",
+      "Sat": "1000 Town 32 89 2/1200 Town 12 13 1/1700 Town 29 91 3/2000 ElliottHouse 12 4 1 penny_sleep",
+      "spring": "800 Town 35 89 2 penny_read/1230 ElliottHouse 6 7 2/1600 Town 44 77 2 penny_sit_down/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "Sun": "800 Town 35 89 2 penny_read/1230 Trailer 12 6 0 penny_dishes/1500 Beach 45 24 2/2100 ElliottHouse 12 4 1 penny_sleep"
+    },
+  "When": 
+    {
+      "HasSeenEvent": "ElliottPennyWedding",
+      "HasMod|contains=Xiddav.LittleRedSchoolHouse": false,
+      "HasMod|contains=Xiddav.LittleRedSchoolHouseLazy": false
+    }
+  },
+  //Penny schedule changes with Little Red School House Lazy
+{
+  "Action": "EditData",
+  "Target": "Characters/schedules/Penny",
+  "Entries": {
+      "rain": "900 ElliottHouse 5 5 0/1100 ElliottHouse 9 4 2 penny_read/2100 ElliottHouse 12 4 1 penny_sleep",
+      "GreenRain": "0 Saloon 5 21 1 square_1_3",
+      "rain2": "810 Town 104 89 2 \"Strings\\schedules\\Penny:rain2.000\"/1000 ArchaeologyHouse 20 5 0/1200 ElliottHouse 9 4 2 penny_read/1600 Trailer 12 6 0 penny_dishes/1900 ElliottHouse 7 7 0/2100 ElliottHouse 12 4 1 penny_sleep",
+      "summer": "810 Town 96 18 3/1300 Town 63 15 2 penny_sit_down/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "winter_15": "900 ElliottHouse 5 5 0/1600 Beach 35 36 2 \"Strings\\schedules\\Penny:winter_15.000\"/2350 ElliottHouse 12 4 1 penny_sleep",
+      "winter": "900 ElliottHouse 5 5 0/1030 CommunityCenter 23 17 2 penny_read/1500 CommunityCenter 46 13 0/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "winter_4": "900 ElliottHouse 5 5 0 \"Strings\\schedules\\Penny:winter_4.000\"/1130 Hospital 4 17 2 penny_sit_down/1330 Hospital 4 6 1 \"Strings\\schedules\\Penny:winter_4.001\"/1600 Town 75 52 2 penny_sit_down/1900 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "9_6": "GOTO spring",
+      "23_6": "GOTO spring",
+      "9": "NOT friendship Sam 6/900 ElliottHouse 5 5 0/1100 Town 78 93 2 penny_sit_down/1600 ElliottHouse 6 7 2/1840 ElliottHouse 12 4 1 penny_sleep",
+      "23": "NOT friendship Sam 6/GOTO 9",
+      "summer_Sun": "800 Town 96 18 3/1200 ScienceHouse 8 5 2 penny_sit_down/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "Tue": "620 ElliottHouse 5 5 0/700 Town 10 13 2/a1000 Custom_SchoolHouse 15 7 2/1030 Custom_SchoolHouse 8 10 2 \"Strings\\schedules\\Penny:penny.littlered.Vincent\"/1100 Custom_SchoolHouse 15 7 2/1140 Town 12 13 1/a1300 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 19 10 0 \"Strings\\schedules\\Penny:penny.littlered.Jas\"/1500 Custom_SchoolHouse 15 7 2/1550 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 ElliottHouse 12 4 1 penny_sleep",
+      "Wed": "GOTO Tue",
+      "Fri": "GOTO Tue",
+      "Sat": "1000 Town 32 89 2/1200 Town 12 13 1/1700 Town 29 91 3/2000 ElliottHouse 12 4 1 penny_sleep",
+      "spring": "800 Town 35 89 2 penny_read/1230 ElliottHouse 6 7 2/1600 Town 44 77 2 penny_sit_down/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "Sun": "800 Town 35 89 2 penny_read/1230 Trailer 12 6 0 penny_dishes/1500 Beach 45 24 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "summer_Tue": "GOTO Tue",
+        "summer_Wed": "GOTO Tue",
+        "summer_Fri": "GOTO Tue",
+      "fall_Tue": "GOTO Tue",
+        "fall_Wed": "GOTO Tue",
+        "fall_Fri": "GOTO Tue",
+      "winter_Tue": "GOTO Tue",
+        "winter_Wed": "GOTO Tue",
+        "winter_Fri": "GOTO Tue"
+    },
+  "Priority": "Late",
+  "When": 
+    {
+      "noschoolday": false, 
+      "weather": "Sun, Wind, Snow",
+      "HasSeenEvent": "ElliottPennyWedding",
+      "HasMod": "Xiddav.LittleRedSchoolHouseLazy"
+    }
+  },
+{
+  "Action": "EditData",
+  "Target": "characters/schedules/Penny",
+  "Entries": 
+    {
+    "rain": "620 ElliottHouse 5 5 0/700 Custom_SchoolHouse 2 13 2/a1000 Custom_SchoolHouse 15 7 2/1030 Custom_SchoolHouse 8 10 2/1100 Custom_SchoolHouse 15 7 2/1140 Custom_SchoolHouse 18 4 2/a1300 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 19 10 0/1500 Custom_SchoolHouse 15 7 2/1550 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 ElliottHouse 12 4 1 penny_sleep",
+    "rain2": "620 ElliottHouse 5 5 0/700 Custom_SchoolHouse 2 13 2/a1000 Custom_SchoolHouse 15 7 2/1030 Custom_SchoolHouse 8 10 2/1100 Custom_SchoolHouse 15 7 2/1140 Custom_SchoolHouse 18 4 2/a1300 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 19 10 0/1500 Custom_SchoolHouse 15 7 2/1550 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 ElliottHouse 12 4 1 penny_sleep"
+	  },
+  "Priority": "Late",
+  "When": 
+    {
+      "HasSeenEvent": "ElliottPennyWedding",
+      "dayofweek":"Tuesday, Wednesday, Friday", 
+      "weather": "rain", 
+      "noschoolday": false,
+      "HasMod": "Xiddav.LittleRedSchoolHouseLazy"
+    }
+},
+
+{ "Action": "EditData",
+	"Target": "characters/schedules/Penny",
+  "Entries": {
+		 "9": "NOT friendship Sam 6/900 ElliottHouse 5 5 0/1100 Town 78 93 2 penny_sit_down/1600 ElliottHouse 6 7 2/1840 ElliottHouse 12 4 1 penny_sleep",
+		 "23": "NOT friendship Sam 6/GOTO 9",
+		 "Tue": "NOT friendship Sam 6/900 ElliottHouse 5 5 0/1100 Town 78 93 2 penny_sit_down/1600 ElliottHouse 6 7 2/1840 ElliottHouse 12 4 1 penny_sleep"
+    },
+  "Priority": "Late",
+  "When": {
+    "HasSeenEvent": "ElliottPennyWedding",
+    "noschoolday": true,
+    "HasMod": "Xiddav.LittleRedSchoolHouseLazy"
+  }
+},
+//Penny Schedule changes with Little Red School House OG
+{
+  "Action": "EditData",
+  "Target": "Characters/schedules/Penny",
+  "Entries": {
+      "rain": "900 ElliottHouse 5 5 0/1100 ElliottHouse 9 4 2 penny_read/2100 ElliottHouse 12 4 1 penny_sleep",
+      "GreenRain": "0 Saloon 5 21 1 square_1_3",
+      "rain2": "810 Town 104 89 2 \"Strings\\schedules\\Penny:rain2.000\"/1000 ArchaeologyHouse 20 5 0/1200 ElliottHouse 9 4 2 penny_read/1600 Trailer 12 6 0 penny_dishes/1900 ElliottHouse 7 7 0/2100 ElliottHouse 12 4 1 penny_sleep",
+      "summer": "810 Town 96 18 3/1300 Town 63 15 2 penny_sit_down/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "winter_15": "900 ElliottHouse 5 5 0/1600 Beach 35 36 2 \"Strings\\schedules\\Penny:winter_15.000\"/2350 ElliottHouse 12 4 1 penny_sleep",
+      "winter": "900 ElliottHouse 5 5 0/1030 CommunityCenter 23 17 2 penny_read/1500 CommunityCenter 46 13 0/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "winter_4": "900 ElliottHouse 5 5 0 \"Strings\\schedules\\Penny:winter_4.000\"/1130 Hospital 4 17 2 penny_sit_down/1330 Hospital 4 6 1 \"Strings\\schedules\\Penny:winter_4.001\"/1600 Town 75 52 2 penny_sit_down/1900 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "9_6": "GOTO spring",
+      "23_6": "GOTO spring",
+      "9": "NOT friendship Sam 6/900 ElliottHouse 5 5 0/1100 Town 78 93 2 penny_sit_down/1600 ElliottHouse 6 7 2/1840 ElliottHouse 12 4 1 penny_sleep",
+      "23": "NOT friendship Sam 6/GOTO 9",
+      "summer_Sun": "800 Town 96 18 3/1200 ScienceHouse 8 5 2 penny_sit_down/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "Tue": "620 ElliottHouse 5 5 0/700 Town 10 13 2/a1000 Custom_SchoolHouse 15 7 2/1030 Custom_SchoolHouse 8 10 2 \"Strings\\schedules\\Penny:penny.littlered.Vincent\"/1100 Custom_SchoolHouse 15 7 2/1140 Town 12 13 1/a1300 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 19 10 0 \"Strings\\schedules\\Penny:penny.littlered.Jas\"/1500 Custom_SchoolHouse 15 7 2/1550 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 ElliottHouse 12 4 1 penny_sleep",
+      "Wed": "GOTO Tue",
+      "Fri": "GOTO Tue",
+      "Sat": "1000 Town 32 89 2/1200 Town 12 13 1/1700 Town 29 91 3/2000 ElliottHouse 12 4 1 penny_sleep",
+      "spring": "800 Town 35 89 2 penny_read/1230 ElliottHouse 6 7 2/1600 Town 44 77 2 penny_sit_down/1800 ElliottHouse 6 7 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "Sun": "800 Town 35 89 2 penny_read/1230 Trailer 12 6 0 penny_dishes/1500 Beach 45 24 2/2100 ElliottHouse 12 4 1 penny_sleep",
+      "summer_Tue": "GOTO Tue",
+        "summer_Wed": "GOTO Tue",
+        "summer_Fri": "GOTO Tue",
+      "fall_Tue": "GOTO Tue",
+        "fall_Wed": "GOTO Tue",
+        "fall_Fri": "GOTO Tue",
+      "winter_Tue": "GOTO Tue",
+        "winter_Wed": "GOTO Tue",
+        "winter_Fri": "GOTO Tue"
+    },
+  "Priority": "Late",
+  "When": 
+    {
+      "noschoolday": false, 
+      "weather": "Sun, Wind, Snow",
+      "HasSeenEvent |contains=ElliottPennyWedding": true,
+      "HasSeenEvent |contains=9695002": true,
+      "HasMod": "Xiddav.LittleRedSchoolHouse"
+    }
+  },
+{
+  "Action": "EditData",
+  "Target": "characters/schedules/Penny",
+  "Entries": 
+    {
+    "rain": "620 ElliottHouse 5 5 0/700 Custom_SchoolHouse 2 13 2/a1000 Custom_SchoolHouse 15 7 2/1030 Custom_SchoolHouse 8 10 2/1100 Custom_SchoolHouse 15 7 2/1140 Custom_SchoolHouse 18 4 2/a1300 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 19 10 0/1500 Custom_SchoolHouse 15 7 2/1550 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 ElliottHouse 12 4 1 penny_sleep",
+    "rain2": "620 ElliottHouse 5 5 0/700 Custom_SchoolHouse 2 13 2/a1000 Custom_SchoolHouse 15 7 2/1030 Custom_SchoolHouse 8 10 2/1100 Custom_SchoolHouse 15 7 2/1140 Custom_SchoolHouse 18 4 2/a1300 Custom_SchoolHouse 15 7 2/1420 Custom_SchoolHouse 19 10 0/1500 Custom_SchoolHouse 15 7 2/1550 Town 17 90 3 penny_wave_left/1750 Forest 92 20 3 penny_wave_left/1830 ElliottHouse 12 4 1 penny_sleep"
+	  },
+  "Priority": "Late",
+  "When": 
+    {
+      "HasSeenEvent |contains=ElliottPennyWedding": true,
+      "HasSeenEvent |contains=9695002": true,
+      "dayofweek":"Tuesday, Wednesday, Friday", 
+      "weather": "rain", 
+      "noschoolday": false,
+      "HasMod": "Xiddav.LittleRedSchoolHouse"
+    }
+},
+
+{ "Action": "EditData",
+	"Target": "characters/schedules/Penny",
+  "Entries": {
+		 "9": "NOT friendship Sam 6/900 ElliottHouse 5 5 0/1100 Town 78 93 2 penny_sit_down/1600 ElliottHouse 6 7 2/1840 ElliottHouse 12 4 1 penny_sleep",
+		 "23": "NOT friendship Sam 6/GOTO 9",
+		 "Tue": "NOT friendship Sam 6/900 ElliottHouse 5 5 0/1100 Town 78 93 2 penny_sit_down/1600 ElliottHouse 6 7 2/1840 ElliottHouse 12 4 1 penny_sleep"
+    },
+  "Priority": "Late",
+  "When": {
+    "HasSeenEvent |contains=ElliottPennyWedding": true,
+    "HasSeenEvent |contains=9695002": true,
+    "noschoolday": true,
+    "HasMod": "Xiddav.LittleRedSchoolHouse"
+  }
+},
+//Elliott schedule changes
+{
+  "Action": "EditData",
+  "Target": "Characters/schedules/Elliott",
+  "Entries": {
+    "rain": "800 ElliottHouse 1 5 0/1000 ElliottHouse 6 4 0/1100 ElliottHouse 1 5 0/1330 ElliottHouse 1 5 0/1800 ElliottHouse 7 7 2/2000 ElliottHouse 1 5 0/2400 ElliottHouse 13 4 3 elliott_sleep",
+    "GreenRain": "0 Saloon 20 19 3",
+    "DesertFestival_1": "610 ElliottHouse 1 5 0/900 Desert 40 55 2 \"Strings\\1_6_Strings:DesertFestival_Elliott\"/2510 bed",
+    "winter_17": "800 ElliottHouse 1 5 0/1000 ElliottHouse 6 4 0/1100 ElliottHouse 1 5 0/1130 ArchaeologyHouse 21 11 2 elliott_read/1650 Beach 38 36 2 \"Strings\\schedules\\Elliott:winter_17.000\"/2500 ElliottHouse 13 4 3 elliott_sleep",
+    "summer_9": "900 ElliottHouse 1 5 0/1030 Hospital 12 14 0 \"Strings\\schedules\\Elliott:summer_9.000\"/1330 Hospital 4 6 1 \"Strings\\schedules\\Elliott:summer_9.001\"/1600 ElliottHouse 7 7 2/2100 ElliottHouse 1 5 0/2400 ElliottHouse 13 4 3 elliott_sleep",
+    "winter": "GOTO fall",
+    "SquidFest": "800 Beach 24 32 3 square_1_5_3/1700 Saloon 4 19 2 elliott_drink/2400 ElliottHouse 13 4 3 elliott_sleep",
+    "fall": "800 ElliottHouse 1 5 0/1000 ElliottHouse 6 4 0/1100 ElliottHouse 1 5 0/1130 ArchaeologyHouse 21 11 2 elliott_read/1730 ElliottHouse 7 7 2/2100 ElliottHouse 1 5 0/2400 ElliottHouse 13 4 3 elliott_sleep",
+    "Thu": "800 ElliottHouse 1 5 0/1000 ElliottHouse 6 4 0/1100 ElliottHouse 1 5 0/1130 SeedShop 10 20 0/1730 ElliottHouse 7 7 2/2100 ElliottHouse 1 5 0/2400 ElliottHouse 13 4 3 elliott_sleep",
+    "Sun": "800 ElliottHouse 1 5 0/1100 Beach 46 24 2/2100 ElliottHouse 13 4 3 elliott_sleep",
+    "Fri_6": "GOTO Thu",
+    "Fri": "NOT friendship Leah 6/800 ElliottHouse 1 5 0/1100 Beach 24 32 3 square_1_5_3/1700 Saloon 4 19 2 elliott_drink/2340 ElliottHouse 13 4 3 elliott_sleep",
+    "summer": "800 ElliottHouse 1 5 0/1000 ElliottHouse 6 4 0/1100 ElliottHouse 1 5 0/1130 Forest 96 39 2/1800 ElliottHouse 7 7 2/2200 ElliottHouse 1 5 0/2400 ElliottHouse 13 4 3 elliott_sleep",
+    "spring": "800 ElliottHouse 1 5 0/1000 ElliottHouse 6 4 0/1100 ElliottHouse 1 5 0/1200 Beach 49 19 2/1330 ElliottHouse 1 5 0/1500 Town 55 104 1/1800 ElliottHouse 7 7 2/2000 ElliottHouse 1 5 0/2400 ElliottHouse 13 4 3 elliott_sleep"
+  },
+  "When": {"HasSeenEvent": "ElliottPennyWedding"}
+},
+//Elliott and Penny after-marriage dialogue
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Elliott",
+"Entries": 
+  {
+    "ElliottHouse_Mon": "{{i18n:ElliottDialogue.ElliottHouse_Mon}}",
+    "ElliottHouse_Thu": "{{i18n:ElliottDialogue.ElliottHouse_Thu}}",
+    "SeedShop_Thu": "{{i18n:ElliottDialogue.SeedShop_Thu}}",
+    "Beach_Sun": "{{i18n:ElliottDialogue.Beach_Sun}}"
+    
+  },
+"When": {"HasSeenEvent": "ElliottPennyWedding"}},
+
+{"Action": "EditData",
+"Target": "Characters/Dialogue/Penny",
+"Entries": 
+  {
+    "ElliottHouse_Wed": "{{i18n:PennyDialogue.ElliottHouse_Wed}}",
+    "ElliottHouse_Tue": "{{i18n:PennyDialogue.ElliottHouse_Tue}}",
+    "ElliottHouse_Fri": "{{i18n:PennyDialogue.ElliottHouse_Fri}}",
+    "Trailer_Sun": "{{i18n:PennyDialogue.Trailer_Sun}}"
+    
+  },
+"When": {"HasSeenEvent": "ElliottPennyWedding"}}
+
+                ]}

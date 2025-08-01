@@ -1,0 +1,813 @@
+{ "Changes": [
+    { //Harvey and Maru first rival event
+  "Action": "EditData",
+  "Target": "Data/Events/Hospital",
+  "Entries":{
+    "HMHeart1/f Maru 750/f Harvey 750/p Maru Harvey/!D Maru/!D Harvey": "jaunty/8 11/Pam 10 16 0 Harvey 10 14 2 Maru 6 15 2 farmer -1000 -1000 0/skippable/changeSprite Maru Hospital/changePortrait Maru Hospital/pause 800/speak Harvey \"{{i18n:HMHeart1.0}}\"/pause 300/speak Pam \"{{i18n:HMHeart1.1}}\"/move Pam 0 0 2/pause 80/move Pam 0 3 2/pause 200/playSound doorClose/warp Pam -1000 -1000/pause 200/move Harvey -1 0 3/pause 400/speak Harvey \"{{i18n:HMHeart1.2}}\"/pause 100/animate Harvey false true 200 31/pause 500/stopAnimation Harvey 14/speak Harvey \"{{i18n:HMHeart1.3}}\"/pause 200/speak Maru \"{{i18n:HMHeart1.4}}\"/pause 1000/speak Harvey \"{{i18n:HMHeart1.5}}\"/pause 200/move Maru 0 0 1/pause 300/speak Maru \"{{i18n:HMHeart1.6}}\"/pause 300/speak Harvey \"{{i18n:HMHeart1.7}}\"/speak Maru \"{{i18n:HMHeart1.8}}\"/speak Harvey \"{{i18n:HMHeart1.9}}\"/speak Maru \"{{i18n:HMHeart1.10}}\"$h/speak Maru \"{{i18n:HMHeart1.11}}\"/speak Harvey \"{{i18n:HMHeart1.12}}\"/pause 500/speak Harvey \"{{i18n:HMHeart1.13}}\"/speak Harvey \"{{i18n:HMHeart1.14}}\"/pause 200/speak Maru \"{{i18n:HMHeart1.15}}\"/speak Harvey \"{{i18n:HMHeart1.16}}\"/speak Maru \"{{i18n:HMHeart1.17}}\"/pause 300/playSound doorClose/warp farmer 10 19/pause 300/move farmer 0 -2 0/pause 300/move Maru 0 0 2/speak Maru \"{{i18n:HMHeart1.18}}\"/pause 200/move farmer -3 0 0/move Harvey 1 0 0/textAboveHead Harvey \"{{i18n:HMHeart1.19}}\"/doAction 10 13/move Harvey 0 -7 0 true/pause 1000/emote Maru 32/pause 500/end"
+
+  }
+  }, 
+  { //Harvey and Maru second rival event
+  "Action": "EditData",
+  "Target": "Data/Events/ArchaeologyHouse",
+  "Entries":{
+    "HMHeart2/f Maru 1250/f Harvey 1250/e HMHeart1/!D Maru/!D Harvey": "libraryTheme/14 8/Gunther 6 8 2 Maru 17 9 0 Penny 19 9 0 farmer 10 11 3 Harvey 12 5 2 Elliott 6 10 0/skippable/pause 1000/speak Maru \"{{i18n:HMHeart2.0}}\"/pause 500/faceDirection Penny 3/pause 100/speak Penny \"{{i18n:HMHeart2.1}}\"/pause 200/speak Maru \"{{i18n:HMHeart2.2}}\"/pause 50/faceDirection Maru 1/pause 100/speak Maru \"{{i18n:HMHeart2.3}}\"/speak Penny \"{{i18n:HMHeart2.4}}\"/pause 200/speak Maru \"{{i18n:HMHeart2.5}}\"/pause 600/move Harvey 2 0 2/move Harvey 0 4 1/move Harvey 1 0 1/speak Harvey \"{{i18n:HMHeart2.6}}\"/emote Maru 16 true/pause 300/faceDirection Maru 3/pause 150/faceDirection Penny 3/speak Maru \"{{i18n:HMHeart2.7}}\"/pause 300/speak Harvey \"{{i18n:HMHeart2.8}}\"/pause 400/speak Harvey \"{{i18n:HMHeart2.9}}\"/pause 400/speak Maru \"{{i18n:HMHeart2.10}}\"/pause 100/end"
+ 
+  }
+
+},
+   { //Harvey and Maru third rival event
+   "Action": "EditData",
+   "Target": "Data/Events/Railroad",
+   "Entries":{
+    "HMHeart3/f Maru 1750/f Harvey 1750/t 2100 2300/w sunny/e HMHeart1/e HMHeart2/!D Maru/!D Harvey": "spaceMusic/35 24/farmer 1000 -1000 0 Maru 35 26 0 Harvey 25 30 0/skippable/move Harvey 0 -4 0/move Harvey 6 0 1/speak Harvey \"{{i18n:HMHeart3.0}}\"/jump Maru/shake Maru 300/faceDirection Maru 3/pause 200/speak Harvey \"{{i18n:HMHeart3.1}}\"/speak Harvey \"{{i18n:HMHeart3.2}}\"/move Harvey -4 0 3/speak Maru \"{{i18n:HMHeart3.3}}\"/pause 1000/faceDirection Harvey 1/pause 500/speak Maru \"{{i18n:HMHeart3.4}}\"/pause 500/move Harvey 4 0 1/speak Harvey \"{{i18n:HMHeart3.5}}\"/speak Maru \"{{i18n:HMHeart3.6}}\"/pause 1000/speak Harvey \"{{i18n:HMHeart3.7}}\"/pause 700/speak Maru \"{{i18n:HMHeart3.8}}\"/pause 400/speak Harvey \"{{i18n:HMHeart3.9}}\"/pause 1000/speak Maru \"{{i18n:HMHeart3.10}}\"/pause 200/speak Harvey \"{{i18n:HMHeart3.11}}\"/speak Maru \"{{i18n:HMHeart3.12}}\"/pause 400/speak Maru \"{{i18n:HMHeart3.13}}\"/pause 500/speak Harvey \"{{i18n:HMHeart3.14}}\"/pause 500/speak Maru \"{{i18n:HMHeart3.15}}\"/pause 300/move Harvey 3 0 1/pause 2000/animate Maru false true 50 28/positionOffset Maru -2 -1/pause 30/positionOffset Maru -2 -1/pause 30/positionOffset Maru -2 -1/pause 30/positionOffset Maru -2 0/animate Harvey true true 50 31/positionOffset Harvey 2 0/pause 10/positionOffset Maru -2 -1/pause 10/positionOffset Harvey 2 0/pause 10/positionOffset Maru -2 0/positionOffset Harvey 2 0/pause 10/positionOffset Maru -2 0/specificTemporarySprite heart 34 24/playSound dwop/pause 3000/stopAnimation Maru 14/pause 50/stopAnimation Harvey 6/pause 800/faceDirection Harvey 0/pause 300/faceDirection Maru 0/pause 1000/globalFade/viewport 1000 1000/end"
+
+    }
+
+},
+   { // Harvey and Maru final rival event
+   "Action":"EditData",
+   "Target":"Data/Events/ScienceHouse",
+   "Entries": {
+    "HMEngagement/f Maru 2000/f Harvey 2000/e HMHeart1/e HMHeart2/e HMHeart3/!D Maru/!D Harvey": "jaunty/7 18/farmer 7 20 0 Robin 8 18 2 Demetrius 19 18 0 Sebastian -1000 -1000 0 Maru 1000 1000 0 Harvey -1000 1000 0/skippable/pause 500/playSound doorClose/warp Maru 6 24/move Maru 0 -2 0/move Maru 1 0 0/playSound doorClose/warp Harvey 6 24/move Harvey 0 -2 0/pause 300/speak Maru \"{{i18n:HMEngagement.0}}\"/speak Maru \"{{i18n:HMEngagement.1}}\"/pause 300/faceDirection farmer 2 true/move Demetrius 0 2 0/move Demetrius -10 0 0/move Demetrius 0 1 3/playSound doorClose/warp Sebastian 12 22/move Sebastian 0 -2 2/move Sebastian -3 0 3/speak Maru \"{{i18n:HMEngagement.2}}\"/pause 300/speak Robin \"{{i18n:HMEngagement.3}}\"/pause 1000/textAboveHead Harvey \"{{i18n:HMEngagement.4}}\"/pause 500/speak Maru \"{{i18n:HMEngagement.5}}\"/pause 1000/speak Demetrius \"{{i18n:HMEngagement.6}}\"/speak Robin \"{{i18n:HMEngagement.7}}\"/pause 100/move Demetrius -3 0 2/speak Demetrius \"{{i18n:HMEngagement.8}}\"/emote farmer 20/textAboveHead Sebastian \"{{i18n:HMEngagement.9}}\"/speak Maru \"{{i18n:HMEngagement.10}}\"/faceDirection Maru 3/pause 300/speak Maru \"{{i18n:HMEngagement.11}}\"/faceDirection Harvey 1/pause 200/speak Maru \"{{i18n:HMEngagement.12}}\"/pause 500/speak Maru \"{{i18n:HMEngagement.13}}\"/speak Robin \"{{i18n:HMEngagement.14}}\"/faceDirection Harvey 0/move Robin -1 0 0/faceDirection Maru 0/move Robin 0 -1 3/move Robin -2 0 2/move Robin 0 4 2 true/pause 200/speak Demetrius \"{{i18n:HMEngagement.15}}\"/emote Harvey 56/globalFade/viewport 1000 1000/end"
+
+  }
+  },
+  { // Harvey and Maru Wedding invitation
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries":{
+        "HarveyMaruInvitation": "{{i18n:HarveyMaruInvitation}}"
+
+         }
+      },
+      {//Harvey and Maru wedding and conversation topic
+    "Action": "EditData",
+    "Target":"Data/Events/Farm",
+    "Entries": {
+      "HarveyMaruWedding/w sunny/t 600 900/e HMEngagement/n HarveyMaruInvitation": "sweet/-1000 1000/Harvey 0 0 2 Maru 0 0 2 Penny 0 0 0 Gus 0 0 0 Robin 0 0 0 Demetrius 0 0 0 farmer 0 0 0 Sebastian 0 0 0 Pam 0 0 0 Lewis 0 0 2 Jodi 0 0 0 Kent 0 0 0 Sam 0 0 0 Jas 0 0 0 Marnie 0 0 0 Vincent 0 0 0/skippable/AddConversationTopic HMWedTopic 28/viewport -1000 -1000/changelocation Town/specificTemporarySprite wedding/viewport 1000 1000/warp Harvey 27 63/warp Maru 28 63/warp Demetrius 26 65/warp Lewis 27 64/warp Penny 29 65/warp Pam 30 65/warp Marnie 25 66/warp Jas 24 66/warp Gus 26 66/warp Vincent 29 66/warp Jodi 30 66/warp Kent 31 66/warp Robin 25 65/warp Sebastian 24 65/warp farmer 31 65/faceDirection farmer 0/animate Harvey false true 50 48/animate Maru false true 50 36/viewport 27 64/pause 1000/speak Lewis \"{{i18n:HarveyMaruWedding.0 |day={{day}} |season={{season}} }}\"/animate Harvey true true 50 49/animate Maru false true 50 38/pause 500/faceDirection Lewis 2/pause 2000/speak Lewis \"{{i18n:HarveyMaruWedding.1}}\"/move Lewis 0 1 0/playMusic none/pause 1000/showFrame Lewis 20/pause 300/speak Lewis \"{{i18n:HarveyMaruWedding.2}}\"/pause 500/move Lewis 0 2 0 true/pause 2000/animate Harvey true true 50 50/animate Maru false true 50 38/positionOffset Harvey 2 0/pause 10/positionOffset Maru -2 0/pause 10/positionOffset Harvey 2 0/pause 10/positionOffset Maru -2 0/positionOffset Harvey 2 0/pause 10/positionOffset Maru -2 0/specificTemporarySprite heart 28 62/playSound dwop/pause 4000/specificTemporarySprite wed/positionOffset Harvey -2 0/pause 10/positionOffset Harvey 2 0/pause 10/positionOffset Harvey -2 0/pause 10/positionOffset Maru 2 0/pause 10/positionOffset Harvey -2 0/pause 10/positionOffset Maru 2 0/pause 10/positionOffset Harvey -2 0/pause 10/positionOffset Maru 2 0/pause 10/animate Harvey false true 50 48/animate Maru false true 50 36/globalFade/viewport -1000 -1000/pause 2000/message \"{{i18n:HarveyMaruWedding.3}}\"/end/"
+
+    }
+    }
+    ,
+   {//Send wedding invitation letter
+   "Action": "EditData",
+   "Target": "Data/TriggerActions",
+   "Entries":{
+   "{{ModID}}_RivalMarriages": {
+       "ID": "{{ModID}}_RivalMarriages",
+       "Trigger": "DayStarted",
+       "Actions": [
+           "AddMail Current HarveyMaruInvitation tomorrow"
+       ]
+       
+     }
+     },
+     "When": {"HasSeenEvent": "HMEngagement"}},
+
+  //Harvey and Maru after wedding dialogue
+{ "Action": "EditData",
+"Target": "Characters/Dialogue/Maru",
+"Entries": 
+  {
+    "HMWedTopic": "{{i18n:Maru.HMWedTopic}}"
+  }
+},
+{ "Action": "EditData",
+"Target": "Characters/Dialogue/Harvey",
+"Entries": 
+  {
+    "HMWedTopic": "{{i18n:Harvey.HMWedTopic}}"
+  }
+},
+{ "Action": "EditData",
+"Target": "Characters/Dialogue/Robin",
+"Entries": 
+  {
+    "HMWedTopic": "{{i18n:Robin.HMWedTopic}}"
+  }
+},
+{ "Action": "EditData",
+"Target": "Characters/Dialogue/Demetrius",
+"Entries": 
+  {
+    "HMWedTopic": "{{i18n:Demetrius.HMWedTopic}}"
+  }
+},
+{ "Action": "EditData",
+"Target": "Characters/Dialogue/Sebastian",
+"Entries": 
+  {
+    "HMWedTopic": "{{i18n:Sebastian.HMWedTopic}}"
+  }
+},
+{ "Action": "EditData",
+"Target": "Characters/Dialogue/Penny",
+"Entries": 
+  {
+    "HMWedTopic": "{{i18n:Penny.HMWedTopic}}"
+  }
+},
+{ "Action": "EditData",
+"Target": "Characters/Dialogue/Gus",
+"Entries": 
+  {
+    "HMWedTopic": "{{i18n:Gus.HMWedTopic}}"
+  }
+},
+{ "Action": "EditData",
+"Target": "Characters/Dialogue/Vincent",
+"Entries": 
+  {
+    "HMWedTopic": "{{i18n:Vincent.HMWedTopic}}"
+  }
+},
+{ "Action": "EditData",
+"Target": "Characters/Dialogue/Marnie",
+"Entries": 
+  {
+    "HMWedTopic": "{{i18n:Marnie.HMWedTopic}}"
+  }
+}
+,
+//Festival Dialogue changes
+{"Action": "EditData",
+"Target": "Data/Festivals/spring13",
+"Entries": 
+  {
+    "Maru": "{{i18n:spring13.Maru}}",
+    "Harvey": "{{i18n:spring13.Harvey}}",
+    "Maru_y2": "{{i18n:spring13.Maru_y2}}",
+    "Harvey_y2": "{{i18n:spring13.Harvey_y2}}"
+    
+  },
+  "When": {"HasSeenEvent": "HarveyMaruWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/spring24",
+"Entries": 
+  {
+    "Maru": "{{i18n:spring24.Maru}}",
+    "Harvey": "{{i18n:spring24.Harvey}}",
+    "Maru_y2": "{{i18n:spring24.Maru_y2}}",
+    "Harvey_y2": "{{i18n:spring24.Harvey_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "HarveyMaruWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/summer11",
+"Entries": 
+  {
+    "Maru": "{{i18n:summer11.Maru}}",
+    "Harvey": "{{i18n:summer11.Harvey}}",
+    "Maru_y2": "{{i18n:summer11.Maru_y2}}",
+    "Harvey_y2": "{{i18n:summer11.Harvey_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "HarveyMaruWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/summer28",
+"Entries": 
+  {
+    "Maru": "{{i18n:summer28.Maru}}",
+    "Harvey": "{{i18n:summer28.Harvey}}",
+    "Maru_y2": "{{i18n:summer28.Maru_y2}}",
+    "Harvey_y2": "{{i18n:summer28.Harvey_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "HarveyMaruWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/fall16",
+"Entries": 
+  {
+    "Maru": "{{i18n:fall16.Maru}}",
+    "Harvey": "{{i18n:fall16.Harvey}}",
+    "Maru_y2": "{{i18n:fall16.Maru_y2}}",
+    "Harvey_y2": "{{i18n:fall16.Harvey_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "HarveyMaruWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/fall27",
+"Entries": 
+  {
+    "Maru": "{{i18n:fall27.Maru}}",
+    "Harvey": "{{i18n:fall27.Harvey}}",
+    "Maru_y2": "{{i18n:fall27.Maru_y2}}",
+    "Harvey_y2": "{{i18n:fall27.Harvey_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "HarveyMaruWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/winter8",
+"Entries": 
+  {
+    "Maru": "{{i18n:winter8.Maru}}",
+    "Harvey": "{{i18n:winter8.Harvey}}",
+    "Maru_y2": "{{i18n:winter8.Maru_y2}}",
+    "Harvey_y2": "{{i18n:winter8.Harvey_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "HarveyMaruWedding"}},
+
+{"Action": "EditData",
+"Target": "Data/Festivals/winter25",
+"Entries": 
+  {
+    "Maru": "{{i18n:winter25.Maru}}",
+    "Harvey": "{{i18n:winter25.Harvey}}",
+    "Maru_y2": "{{i18n:winter25.Maru_y2}}",
+    "Harvey_y2": "{{i18n:winter25.Harvey_y2}}"
+    
+  },
+"When": {"HasSeenEvent": "HarveyMaruWedding"}},
+
+
+  
+
+
+//Edit Harvey and Maru festival locations
+
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/summer28",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Harvey 72 25 down",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Beach-Jellies",
+  "MapTiles": [
+                  {
+                    "Position": {"X": 66, "Y": 25 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                }
+              ],
+              "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/fall16",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Harvey 39 73 left",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/fall16",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Maru 39 72 left",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Town-Fair",
+  "MapTiles": [
+                  {
+                    "Position": {"X": 35, "Y": 33 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                },
+                {
+                  "Position": {"X": 63, "Y": 69 },
+                  "Layer": "Set-Up",
+                  "Remove": true
+              }
+              ],
+              "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/fall16",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters_y2"
+        ],
+        "Value": "Harvey 28 64 down",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Town-Fair2",
+  "MapTiles": [
+                {
+                  "Position": {"X": 51, "Y": 71 },
+                  "Layer": "Set-Up",
+                  "Remove": true
+              }
+              ],
+              "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/winter8",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Harvey 83 30 right",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/winter8",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Maru 83 31 right",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Forest-IceFestival",
+  "MapTiles": [
+                  {
+                    "Position": {"X": 83, "Y": 31 },
+                    "Layer": "Set-Up",
+                    "Remove": true
+                },
+                {
+                  "Position": {"X": 66, "Y": 45 },
+                  "Layer": "Set-Up",
+                  "Remove": true
+              }
+              ],
+              "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/winter25",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters"
+        ],
+        "Value": "Harvey 33 65 right",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Town-Christmas",
+  "MapTiles": [
+                {
+                  "Position": {"X": 26, "Y": 70 },
+                  "Layer": "Set-Up",
+                  "Remove": true
+              }
+              ],
+              "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditData",
+"Target": "Data/Festivals/winter25",
+"TextOperations": [
+    {
+        "Operation": "Append",
+        "Target": [
+            "Entries",
+            "Set-Up_additionalCharacters_y2"
+        ],
+        "Value": "Harvey 25 73 up",
+        "Delimiter": "/"
+    }
+  ],
+  "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+{
+  "Action": "EditMap",
+  "Target": "Maps/Town-Christmas2",
+  "MapTiles": [
+                {
+                  "Position": {"X": 37, "Y": 70 },
+                  "Layer": "Set-Up",
+                  "Remove": true
+              }
+              ],
+              "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+
+    { //Maru home change
+        "Action": "EditData",
+        "Target": "Data/Characters",
+        "Fields": {
+          "Maru": 
+          {"Home": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "Location": "HarveyRoom",
+              "Tile": {
+                "X": 12,
+                "Y": 4
+              },
+              "Direction": "right"
+            }
+          ]}},
+          "When": {"HasSeenEvent": "HarveyMaruWedding"}
+
+        },
+        //Harvey house map changes
+        {
+          "Action": "EditMap",
+          "Target": "Maps/HarveyRoom",
+          "MapTiles": [
+               {
+                    "Position": {"X": 2, "Y": 4 },
+                    "Layer": "Buildings",
+                    "SetTilesheet": "untitled tile sheet",
+                    "SetIndex": "1180"
+                  },
+                  {
+                    "Position": {"X": 2, "Y": 7 },
+                    "Layer": "Front",
+                    "SetTilesheet": "untitled tile sheet",
+                    "SetIndex": "1029"
+                  },
+                  {
+                    "Position": {"X": 8, "Y": 1 },
+                    "Layer": "Front2",
+                    "SetTilesheet": "v15_TownInterior_2",
+                    "SetIndex": "1157"
+                  },
+                  {
+                    "Position": {"X": 8, "Y": 2 },
+                    "Layer": "Front2",
+                    "SetTilesheet": "v15_TownInterior_2",
+                    "SetIndex": "1189"
+                  },
+                  {
+                    "Position": {"X": 10, "Y": 10 },
+                    "Layer": "Buildings",
+                    "SetTilesheet": "untitled tile sheet",
+                    "SetIndex": "1191"
+                  },
+                  {
+                    "Position": {"X": 18, "Y": 4 },
+                    "Layer": "Front",
+                    "SetTilesheet": "untitled tile sheet",
+                    "SetIndex": "308"
+                  },
+                  {
+                    "Position": {"X": 8, "Y": 8 },
+                    "Layer": "Back2",
+                    "SetTilesheet": "v15_TownInterior_2",
+                    "SetIndex": "455"
+                  },
+                  {
+                    "Position": {"X": 9, "Y": 8 },
+                    "Layer": "Back2",
+                    "SetTilesheet": "v15_TownInterior_2",
+                    "SetIndex": "456"
+                  }
+          ],
+          "When": {"HasSeenEvent": "HarveyMaruWedding",
+          "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false}
+        },
+        //Harvey house map changes *SVE VERSION*
+        {
+          "Action": "EditMap",
+          "Target": "Maps/HarveyRoom",
+          "MapTiles": [
+               {
+                    "Position": {"X": 2, "Y": 4 },
+                    "Layer": "Buildings",
+                    "SetTilesheet": "untitled tile sheet",
+                    "SetIndex": "1180"
+                  },
+                  {
+                    "Position": {"X": 2, "Y": 7 },
+                    "Layer": "Front",
+                    "SetTilesheet": "untitled tile sheet",
+                    "SetIndex": "1029"
+                  },
+                  {
+                    "Position": {"X": 8, "Y": 1 },
+                    "Layer": "Front",
+                    "SetTilesheet": "v15_TownInterior_2",
+                    "SetIndex": "1157"
+                  },
+                  {
+                    "Position": {"X": 8, "Y": 2 },
+                    "Layer": "Front",
+                    "SetTilesheet": "v15_TownInterior_2",
+                    "SetIndex": "1189"
+                  },
+                  {
+                    "Position": {"X": 10, "Y": 10 },
+                    "Layer": "Buildings",
+                    "SetTilesheet": "untitled tile sheet",
+                    "SetIndex": "1191"
+                  },
+                  {
+                    "Position": {"X": 18, "Y": 4 },
+                    "Layer": "Front",
+                    "SetTilesheet": "untitled tile sheet",
+                    "SetIndex": "308"
+                  },
+                  {
+                    "Position": {"X": 8, "Y": 8 },
+                    "Layer": "Back2",
+                    "SetTilesheet": "v15_TownInterior_2",
+                    "SetIndex": "455"
+                  },
+                  {
+                    "Position": {"X": 9, "Y": 8 },
+                    "Layer": "Back2",
+                    "SetTilesheet": "v15_TownInterior_2",
+                    "SetIndex": "456"
+                  }
+          ],
+          "When": {"HasSeenEvent": "HarveyMaruWedding",
+          "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true}
+        },
+        //Maru map changes
+        {
+          "Action": "EditMap",
+          "Target": "Maps/ScienceHouse",
+          "MapTiles": [
+               {
+                    "Position": { "X": 5, "Y": 4 },
+                    "Layer": "Buildings",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 7, "Y": 4 },
+                    "Layer": "Buildings",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 6, "Y": 6 },
+                    "Layer": "Buildings",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 6, "Y": 2 },
+                    "Layer": "Buildings",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 6, "Y": 1 },
+                    "Layer": "Buildings",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 5, "Y": 1 },
+                    "Layer": "Buildings",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 7, "Y": 1 },
+                    "Layer": "Buildings",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 6, "Y": 5 },
+                    "Layer": "Back2",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 8, "Y": 6 },
+                    "Layer": "Back2",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 9, "Y": 6 },
+                    "Layer": "Back2",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 9, "Y": 7 },
+                    "Layer": "Back2",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 8, "Y": 7 },
+                    "Layer": "Back2",
+                    "Remove": true
+                },
+                {
+                    "Position": { "X": 7, "Y": 5 },
+                    "Layer": "Back2",
+                    "Remove": true
+                },
+                {
+                    "Position": {"X": 5, "Y": 3 },
+                    "Layer": "Buildings",
+                    "SetTilesheet": "1",
+                    "SetIndex": "112"
+                  },
+                  {
+                    "Position": {"X": 6, "Y": 3 },
+                    "Layer": "Buildings",
+                    "SetTilesheet": "1",
+                    "SetIndex": "112"
+                  },
+                  {
+                    "Position": {"X": 7, "Y": 3 },
+                    "Layer": "Buildings",
+                    "SetTilesheet": "1",
+                    "SetIndex": "112"
+                  },
+                  {
+                    "Position": {"X": 5, "Y": 2 },
+                    "Layer": "Buildings",
+                    "SetTilesheet": "1",
+                    "SetIndex": "80"
+                  },
+                  {
+                    "Position": {"X": 6, "Y": 2 },
+                    "Layer": "Buildings",
+                    "SetTilesheet": "1",
+                    "SetIndex": "80"
+                  },
+                  {
+                    "Position": {"X": 7, "Y": 2 },
+                    "Layer": "Buildings",
+                    "SetTilesheet": "1",
+                    "SetIndex": "80"
+                  },
+                  {
+                    "Position": {"X": 6, "Y": 2 },
+                    "Layer": "Back",
+                    "SetTilesheet": "2",
+                    "SetIndex": "1118"
+                  },
+                  {
+                    "Position": {"X": 6, "Y": 1 },
+                    "Layer": "Back",
+                    "SetTilesheet": "2",
+                    "SetIndex": "1118"
+                  } 
+          ],
+     "When": {"HasSeenEvent": "HarveyMaruWedding"}},
+
+     //Maru schedule changes
+
+     {"Action": "EditData",
+  "Target": "Characters/schedules/Maru",
+  "Entries": {
+     "rain": "800 HarveyRoom 9 10 1 maru_tinker/2300 HarveyRoom 12 4 1 maru_sleep",
+     "GreenRain": "610 SebastianRoom 3 5 2",
+     "Tue": "730 Hospital 6 15 2/1400 Hospital 9 15 3/1600 Hospital 8 17 1/1640 HarveyRoom 3 6 2/2400 HarveyRoom 12 4 1 maru_sleep",
+     "Thu": "GOTO Tue",
+     "Mon": "800 HarveyRoom 9 10 1 maru_tinker/1330 Town 43 77 2 maru_sit_down/1830 HarveyRoom 9 10 1 maru_tinker/2300 HarveyRoom 12 4 1 maru_sleep",
+     "Sun": "GOTO Mon",
+     "Sat": "700 HarveyRoom 9 10 1 maru_tinker/830 ArchaeologyHouse 16 9 0/1500 HarveyRoom 19 7 0/1630 HarveyRoom 9 10 1 maru_tinker/1900 HarveyRoom 9 5 3/2200 HarveyRoom 12 4 3 harvey_sleep",
+     "summer_Mon": "800 HarveyRoom 9 10 1 maru_tinker/1310 Town 64 16 3/1830 HarveyRoom 9 10 1 maru_tinker/2300 HarveyRoom 12 4 1 maru_sleep",
+     "summer_Sun": "800 HarveyRoom 9 10 1 maru_tinker/1000 HarveyRoom 3 6 2/1810 HarveyRoom 9 10 1 maru_tinker/2300 HarveyRoom 12 4 1 maru_sleep",
+     "winter": "800 HarveyRoom 9 10 1 maru_tinker/900 HarveyRoom 3 6 2/1100 CommunityCenter 15 27 0/1600 HarveyRoom 9 10 1 maru_tinker/1730 Saloon 18 20 0/2200 HarveyRoom 12 4 1 maru_sleep",
+     "winter_16": "800 ScienceHouse 5 6 1 maru_tinker/900 ScienceHouse 19 18 0/1100 ScienceHouse 5 6 1 maru_tinker/1540 Beach 11 33 3 \"Strings\\schedules\\Maru:winter_16.000\"/2330 HarveyRoom 12 4 1 maru_sleep",
+     "CommunityCenter_Replacement": "ScienceHouse 5 19 1",
+     "summer": "800 HarveyRoom 9 10 1 maru_tinker/1400 Mountain 55 31 0/1900 Mountain 8 23 3 \"Strings\\schedules\\Maru:summer.000\"/2400 HarveyRoom 12 4 1 maru_sleep",
+     "spring": "800 HarveyRoom 9 10 1 maru_tinker/1400 Town 63 15 2 maru_sit_down/1800 HarveyRoom 9 10 1 maru_tinker/2200 HarveyRoom 12 4 1 maru_sleep"
+   },
+   "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+
+//Harvey schedule changes
+
+{"Action": "EditData",
+"Target": "Characters/schedules/Harvey",
+"Entries": {
+     "rain": "GOTO winter",
+     "GreenRain": "0 Saloon 6 17 2",
+     "Tue": "730 Hospital 1 5 0/1250 Hospital 10 14 2/1330 Hospital 5 5 2/1410 Hospital 5 6 3 harvey_examine_left/1550 Hospital 5 5 2/1610 Hospital 4 5 0/1630 Hospital 3 15 0/1800 HarveyRoom 9 5 0/2300 HarveyRoom 13 4 3 harvey_sleep",
+     "Thu": "GOTO Tue",
+     "Fri": "700 HarveyRoom 21 7 0/830 Hospital 6 15 2/1200 SeedShop 2 23 3 \"Strings\\schedules\\Harvey:Fri.000\"/1500 HarveyRoom 21 7 0 \"Strings\\schedules\\Harvey:Fri.001\"/1630 HarveyRoom 3 4 0/1900 HarveyRoom 8 5 0/2100 HarveyRoom 6 4 0/2200 HarveyRoom 13 4 3 harvey_sleep",
+     "Sat": "700 HarveyRoom 21 7 0/830 ArchaeologyHouse 16 9 0/1500 HarveyRoom 21 7 0 \"Strings\\schedules\\Harvey:Sat.000\"/1630 HarveyRoom 3 4 0/1900 HarveyRoom 8 5 1/2100 HarveyRoom 6 4 0/2200 HarveyRoom 13 4 3 harvey_sleep",
+     "winter_15": "800 HarveyRoom 19 7 0/840 Hospital 6 15 2/1200 HarveyRoom 4 5 1 harvey_radio/1600 HarveyRoom 11 5 3 harvey_read/1700 Beach 37 31 0 \"Strings\\schedules\\Harvey:winter_15.000\"/2400 HarveyRoom 13 4 3 harvey_sleep",
+     "winter": "800 HarveyRoom 19 7 0/840 Hospital 6 15 2/1200 HarveyRoom 4 5 1 harvey_radio/1600 HarveyRoom 11 5 3 harvey_read/1730 Saloon 18 20 0/2200 HarveyRoom 13 4 3 harvey_sleep",
+     "fall": "700 HarveyRoom 21 7 0/830 Hospital 6 15 2/1200 Town 46 102 2/1700 HarveyRoom 4 5 1 harvey_radio/2200 HarveyRoom 13 4 3 harvey_sleep",
+     "summer": "700 HarveyRoom 21 7 0/830 Hospital 6 15 2/1200 Town 23 36 2 square_7_5/1730 Hospital 9 15 3/1840 HarveyRoom 11 5 3 harvey_read/2200 HarveyRoom 13 4 3 harvey_sleep",
+     "spring": "700 HarveyRoom 21 7 0/830 Hospital 6 15 2/1200 Town 10 64 2 square_5_5/1730 Hospital 9 15 3/1840 HarveyRoom 11 5 3 harvey_read/2200 HarveyRoom 13 4 3 harvey_sleep"
+   },
+   "When": {"HasSeenEvent": "HarveyMaruWedding"}
+},
+
+//Maru dialogue changes
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Maru",
+"Entries": 
+  {
+    "Hospital_Tue": "{{i18n:MaruDialogue.Hospital_Tue}}",
+    "Mountain": "{{i18n:MaruDialogue.Mountain}}",
+    "HarveyRoom_Mon": "{{i18n:MaruDialogue.HarveyRoom_Mon}}",
+    "HarveyRoom_Wed": "{{i18n:MaruDialogue.HarveyRoom_Wed}}",
+    "Saloon": "{{i18n:MaruDialogue.Saloon}}"
+    
+  },
+"When": {"HasSeenEvent": "HarveyMaruWedding"}},
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Harvey",
+"Entries": 
+  {
+    "Hospital_Tue": "{{i18n:HarveyDialogue.Hospital_Tue}}",
+    "ArchaeologyHouse": "{{i18n:HarveyDialogue.ArchaeologyHouse}}",
+    "HarveyRoom_Wed": "{{i18n:HarveyDialogue.HarveyRoom_Wed}}",
+    "HarveyRoom_Tue": "{{i18n:HarveyDialogue.HarveyRoom_Tue}}",
+    "Saloon": "{{i18n:HarveyDialogue.Saloon}}"
+    
+  },
+"When": {"HasSeenEvent": "HarveyMaruWedding"}},
+
+    //Remove 10 heart cutscenes
+
+{
+  "Action": "EditData",
+  "Target": "Data/Events/ScienceHouse",
+  "Entries": {
+      "10/f Maru 2500/t 900 1600": null
+  },
+  "When": {"HasSeenEvent": "HMEngagement"}
+},
+{
+  "Action": "EditData",
+  "Target": "Data/Events/Railroad",
+  "Entries": {
+      "528052/f Harvey 2500/t 900 1700/n harveyBalloon": null
+  },
+  "When": {"HasSeenEvent": "HMEngagement"}
+},
+//Harvey and Maru relationship status change
+{ 
+        "Action": "EditData",
+        "Target": "Data/Characters",
+        "Fields": {
+          "Harvey": 
+          {"CanBeRomanced": false
+          }},
+          "When": {"HasSeenEvent": "HMEngagement"}
+
+        },
+        {"Action": "EditData",
+        "Target": "Data/Characters",
+        "Fields": {
+          "Maru": 
+          {"CanBeRomanced": false
+          }},
+          "When": {"HasSeenEvent": "HMEngagement"}}
+  ]
+    
+    
+      }

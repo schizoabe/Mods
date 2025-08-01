@@ -1,0 +1,66 @@
+{
+    "Format": "2.7.0",
+    "ConfigSchema": {
+		"RadioColor": {
+            "AllowValues": "gray, pink",
+            "Default": "gray"
+        }
+    },
+    "Changes": [
+        {
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Radio",
+            "FromFile": "Assets/{{RadioColor}}radio.png"
+        },
+        {
+            "LogName": "Add furniture data",
+            "Action": "EditData",
+            "Target": "Data/Furniture",
+            "Entries": {
+                "{{ModId}}_Radio": "{{ModId}}_Radio/decor/1 2/1 1/1/500/-1/{{i18n:Radio.DisplayName}}/0/Mods\\{{ModId}}\\Radio//"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "mushymato.MMAP/FurnitureProperties",
+            "Entries": {
+                "{{ModId}}_Radio": {
+                    "Description": "{{i18n:Radio.Desc}}",
+                    "CustomFields": {
+                        "TV": "0 0 0"
+                    }
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Carpenter", "Items" ],
+            "Entries": {
+                "{{ModId}}_Radio": {
+                    "Id": "{{ModId}}_Radio",
+                    "ItemId": "{{ModId}}_Radio",
+                    "Price": 500
+                },
+                "MoveEntries": [
+                    { "Id": "{{ModId}}_Radio", "BeforeId": "(F)1466" }
+                ]
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Furniture Catalogue", "Items" ],
+            "Entries": {
+                "{{ModId}}_Radio": {
+                    "Id": "{{ModId}}_Radio",
+                    "ItemId": "{{ModId}}_Radio",
+                    "Price": 0
+                },
+                "MoveEntries": [
+                    { "Id": "{{ModId}}_Radio", "BeforeId": "(F)1468" }
+                ]
+            }
+        }
+    ]
+}
