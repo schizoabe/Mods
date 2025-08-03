@@ -238,5 +238,14 @@
         "DisplayName": "{{i18n:VegasOctober.ItemCompatibilityPatch.CornucopiaBuckwheatFlourName}}",
       },
     },
+  },
+  {
+    "Action": "EditData",
+    "Target": "Data/Objects",
+    "Priority": "Late + 10",
+    "TargetField": [ "Cornucopia_Elderberries", "ContextTags" ],
+    "Entries": {
+      "elderberries_item": "elderberries_item",
+    },
   }]
 }

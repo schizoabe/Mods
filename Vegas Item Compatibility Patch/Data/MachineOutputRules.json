@@ -440,29 +440,54 @@
       "HasMod |contains=ilucie.wintercrops": true,
     },
     "Target": "Data/Machines",
-    "TargetField": [ "(BC)12", "OutputRules" ],
+    "TargetField": [ "(BC)12", "OutputRules", "ilucie.JuniperGin" ],
     "Priority": "Late + 10",
     "Entries": {
-      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
-        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
-        "Triggers": [{
-          "Trigger": "ItemPlacedInMachine",
-          "RequiredTags": ["juniper_berry_item"],
-          "RequiredCount": 1
-        }],
-        "OutputItem": [{
-          "Id": "(0)ilucie.JuniperGin",
-          "ItemId": "(O)ilucie.JuniperGin",
-          "Quality": -1,
-          "CopyQuality": true
-        }],
-        "MinutesUntilReady": 1800,
-        "DaysUntilReady": -1
-      }
+      "Triggers": [{
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": ["juniper_berry_item"],
+        "RequiredCount": 1
+      },
+      {
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredItemId": "(O)ilucie.JuniperBerry",
+        "RequiredCount": 1
+      }],
     },
-    "MoveEntries": [
-        { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
-    ]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)12", "OutputRules" ],
+    "Priority": "Late + 10",
+    "MoveEntries": [{ "Id": "ilucie.JuniperGin", "BeforeId": "Default_Wine" }]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+      "HasMod |contains=nachonline.mps": true,
+    },
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_GoldKeg", "OutputRules", "ilucie.JuniperGin" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "Triggers": [{
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": ["juniper_berry_item"],
+        "RequiredCount": 1
+      },
+      {
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredItemId": "(O)ilucie.JuniperBerry",
+        "RequiredCount": 1
+      }],
+    }
   },
   {
     "Action": "EditData",
@@ -474,24 +499,30 @@
     "Target": "Data/Machines",
     "TargetField": [ "(BC)nachonline.mps_GoldKeg", "OutputRules" ],
     "Priority": "Late + 10",
-    "Entries": {
-      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
-        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
-        "Triggers": [{
-          "Trigger": "ItemPlacedInMachine",
-          "RequiredTags": ["juniper_berry_item"],
-          "RequiredCount": 1
-        }],
-        "OutputItem": [{
-          "ItemId": "(O)ilucie.JuniperGin",
-          "CopyQuality": true,
-        }],
-        "MinutesUntilReady": 1620,
-      },
+    "MoveEntries": [{ "Id": "ilucie.JuniperGin", "BeforeId": "nachonline.mps_BerryLiqueur" }]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+      "HasMod |contains=nachonline.mps": true,
     },
-    "MoveEntries": [
-      { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
-    ]
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_DiamondKeg", "OutputRules", "ilucie.JuniperGin" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "Triggers": [{
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": ["juniper_berry_item"],
+        "RequiredCount": 1
+      },
+      {
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredItemId": "(O)ilucie.JuniperBerry",
+        "RequiredCount": 1
+      }],
+    }
   },
   {
     "Action": "EditData",
@@ -503,24 +534,30 @@
     "Target": "Data/Machines",
     "TargetField": [ "(BC)nachonline.mps_DiamondKeg", "OutputRules" ],
     "Priority": "Late + 10",
-    "Entries": {
-      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
-        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
-        "Triggers": [{
-          "Trigger": "ItemPlacedInMachine",
-          "RequiredTags": ["juniper_berry_item"],
-          "RequiredCount": 1
-        }],
-        "OutputItem": [{
-          "ItemId": "(O)ilucie.JuniperGin",
-          "CopyQuality": true,
-        }],
-        "MinutesUntilReady": 1440,
-      },
+    "MoveEntries": [{ "Id": "ilucie.JuniperGin", "BeforeId": "nachonline.mps_BerryLiqueur" }]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+      "HasMod |contains=nachonline.mps": true,
     },
-    "MoveEntries": [
-      { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
-    ]
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_IridiumKeg", "OutputRules", "ilucie.JuniperGin" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "Triggers": [{
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": ["juniper_berry_item"],
+        "RequiredCount": 1
+      },
+      {
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredItemId": "(O)ilucie.JuniperBerry",
+        "RequiredCount": 1
+      }],
+    }
   },
   {
     "Action": "EditData",
@@ -532,24 +569,30 @@
     "Target": "Data/Machines",
     "TargetField": [ "(BC)nachonline.mps_IridiumKeg", "OutputRules" ],
     "Priority": "Late + 10",
-    "Entries": {
-      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
-        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
-        "Triggers": [{
-          "Trigger": "ItemPlacedInMachine",
-          "RequiredTags": ["juniper_berry_item"],
-          "RequiredCount": 1
-        }],
-        "OutputItem": [{
-          "ItemId": "(O)ilucie.JuniperGin",
-          "CopyQuality": true,
-        }],
-        "MinutesUntilReady": 1260,
-      },
+    "MoveEntries": [{ "Id": "ilucie.JuniperGin", "BeforeId": "nachonline.mps_BerryLiqueur" }]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+      "HasMod |contains=nachonline.mps": true,
     },
-    "MoveEntries": [
-      { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
-    ]
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_RadioactiveKeg", "OutputRules", "ilucie.JuniperGin" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "Triggers": [{
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": ["juniper_berry_item"],
+        "RequiredCount": 1
+      },
+      {
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredItemId": "(O)ilucie.JuniperBerry",
+        "RequiredCount": 1
+      }],
+    }
   },
   {
     "Action": "EditData",
@@ -561,24 +604,30 @@
     "Target": "Data/Machines",
     "TargetField": [ "(BC)nachonline.mps_RadioactiveKeg", "OutputRules" ],
     "Priority": "Late + 10",
-    "Entries": {
-      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
-        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
-        "Triggers": [{
-          "Trigger": "ItemPlacedInMachine",
-          "RequiredTags": ["juniper_berry_item"],
-          "RequiredCount": 1
-        }],
-        "OutputItem": [{
-          "ItemId": "(O)ilucie.JuniperGin",
-          "CopyQuality": true,
-        }],
-        "MinutesUntilReady": 1080,
-      },
+    "MoveEntries": [{ "Id": "ilucie.JuniperGin", "BeforeId": "nachonline.mps_BerryLiqueur" }]
+  },
+  {
+    "Action": "EditData",
+    "When": {
+      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=ilucie.wintercrops": true,
+      "HasMod |contains=nachonline.mps": true,
     },
-    "MoveEntries": [
-      { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
-    ]
+    "Target": "Data/Machines",
+    "TargetField": [ "(BC)nachonline.mps_PrismaticKeg", "OutputRules", "ilucie.JuniperGin" ],
+    "Priority": "Late + 10",
+    "Entries": {
+      "Triggers": [{
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredTags": ["juniper_berry_item"],
+        "RequiredCount": 1
+      },
+      {
+        "Trigger": "ItemPlacedInMachine",
+        "RequiredItemId": "(O)ilucie.JuniperBerry",
+        "RequiredCount": 1
+      }],
+    }
   },
   {
     "Action": "EditData",
@@ -590,24 +639,7 @@
     "Target": "Data/Machines",
     "TargetField": [ "(BC)nachonline.mps_PrismaticKeg", "OutputRules" ],
     "Priority": "Late + 10",
-    "Entries": {
-      "VegasOctober.ItemCompatibilityPatch.JuniperGin": {
-        "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin",
-        "Triggers": [{
-          "Trigger": "ItemPlacedInMachine",
-          "RequiredTags": ["juniper_berry_item"],
-          "RequiredCount": 1
-        }],
-        "OutputItem": [{
-          "ItemId": "(O)ilucie.JuniperGin",
-          "CopyQuality": true,
-        }],
-        "MinutesUntilReady": 900,
-      },
-    },
-    "MoveEntries": [
-      { "Id": "VegasOctober.ItemCompatibilityPatch.JuniperGin", "BeforeId": "Default_Wine" },
-    ]
+    "MoveEntries": [{ "Id": "ilucie.JuniperGin", "BeforeId": "nachonline.mps_BerryLiqueur" }]
   },
   {
     "Action": "EditData",
@@ -679,7 +711,7 @@
   {
     "Action": "EditData",
     "When": {
-      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=Cornucopia.MoreCrops": false,
       "HasMod |contains=slimerrain.grainsoverhullcp": true,
       "HasMod |contains=nachonline.mps": true,
     },
@@ -699,7 +731,7 @@
   {
     "Action": "EditData",
     "When": {
-      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=Cornucopia.MoreCrops": false,
       "HasMod |contains=slimerrain.grainsoverhullcp": true,
       "HasMod |contains=nachonline.mps": true,
     },
@@ -719,7 +751,7 @@
   {
     "Action": "EditData",
     "When": {
-      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=Cornucopia.MoreCrops": false,
       "HasMod |contains=slimerrain.grainsoverhullcp": true,
       "HasMod |contains=nachonline.mps": true,
     },
@@ -739,7 +771,7 @@
   {
     "Action": "EditData",
     "When": {
-      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=Cornucopia.MoreCrops": false,
       "HasMod |contains=slimerrain.grainsoverhullcp": true,
       "HasMod |contains=nachonline.mps": true,
     },
@@ -759,7 +791,7 @@
   {
     "Action": "EditData",
     "When": {
-      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=Cornucopia.MoreCrops": false,
       "HasMod |contains=slimerrain.grainsoverhullcp": true,
       "HasMod |contains=nachonline.mps": true,
     },
@@ -779,7 +811,7 @@
   {
     "Action": "EditData",
     "When": {
-      "HasMod |contains=Cornucopia.MoreCrops": true,
+      "HasMod |contains=Cornucopia.MoreCrops": false,
       "HasMod |contains=slimerrain.grainsoverhullcp": true,
       "HasMod |contains=nachonline.mps": true,
     },
