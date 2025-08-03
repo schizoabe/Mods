@@ -1,0 +1,286 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooked Edits for Suushiico's Recipes",
+	"Changes": [
+		// SPK
+		{
+			"LogName": "Home Cooking - PKR + HC ONLY",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable PKR": "true",
+				"HasMod|contains=Suushiico.PeachyKeenRecipes": "true"
+			},
+			"Fields": {
+				"Peach Pie": { //make peach pie filling a separate ingredient like with planned apple pie filling? if so hide HC version if PKR is enabled
+					"0": "636 3 246 1 245 1 GoodJobSuzette.HomeCooking_Butter 1 GoodJobSuzette.HomeCooking_PieDough 2"
+				},
+				"Peach Pancakes": { //the addition of cinnamon is implied like with peachpie (I don't do implied that's why Home Cooking is the way it is)
+					"0": "724 2 636 1 GoodJobSuzette.HomeCooking_Batter 1 GoodJobSuzette.HomeCooking_GroundGinger 1"
+				},
+				"Peaches and Cream": { //replaced milk with heavycream
+					"0": "636 2 245 1 GoodJobSuzette.HomeCooking_HeavyCream 1" // peach2 sugar heavycream
+				},
+				"Peach Tea": { //make peach syrup a separate ingredient if needed elsewhere, black tea is more traditional -- SUB PEACH SYRUP WITH LIVE
+					"0": "815 2 636 1 245 1" // greentea originally | tealeaves2 [peach syrup:] peach(puree) sugar
+				},
+				"Peach and Strawberry Popsicle": { //good future use for that hazelnut milk idea --------- YEAH I DID IT
+					"0": "636 1 400 1 GoodJobSuzette.HomeCooking_BerryNutMilk 1" // peach(puree) strawberry milk (original: icecream, I see where the idea is going) - swapped to berrynutmilk to support strawberry
+				},
+				"Summer Salad": { //tomato peach corn salad, but the sprite has green stuff?
+					"0": "636 1 270 1 GoodJobSuzette.HomeCooking_TomatoDiced 2 GoodJobSuzette.HomeCooking_CowfolkSauce 1 GoodJobSuzette.HomeCooking_ShreddedGoatCheese 1" // peach corn tomatodiced2 cowfolksauce shreddedgoatcheese
+				},
+				"Peach Coffee Cake": { //coffeecake usually contains no coffee (which is what the original recipe used) so I had to adapt a new recipe from cakes that used fruit in combo with espresso powder & subsequently using brewed coffee as a substitute & oh god it was a good 1+ hr of research & now I'm tempted to actually make it
+					"0": "636 1 395 2 246 2 245 1 -5 2 GoodJobSuzette.HomeCooking_CreamCheese 1" //peach(puree) coffee2 wheatflour2 sugar egg2 creamcheese2
+				},
+				"Savory Peach Soup": { //once amaretto is live have mixology version with that recipe - after the coffee cake I wanted another easy recipe but went down another spiral again... original version has milk but for this one I replaced it with veggiebroth & it's a mix of two different recipes
+					"0": "636 1 GoodJobSuzette.HomeCooking_VeggieBroth 1 GoodJobSuzette.HomeCooking_ShreddedGoatCheese 1 GoodJobSuzette.HomeCooking_HerbOil 1" //peach(puree) veggiebroth shreddedgoatcheese herboil
+				},
+				"Spring Kebabs": { //without a redonion in game this recipe is pretty exact except I added honey combined with oilvinaigrette for a kind of glaze & for the first time it's occurred to me that I put way too much thought into this kind of stuff
+					"0": "636 1 340 1 GoodJobSuzette.HomeCooking_PepperOnion 2 GoodJobSuzette.HomeCooking_OilVinaigrette 1" // peach honey (springonion hotpepper) oilvinaigrette pepperonion
+				},
+				"Peach Crab Cakes": { //the original recipe added peach to crabcakes so I'm assuming it's in a sort of jelly or sauce
+					"0": "636 1 732 1 245 1" //peach crabcakes sugar (despite the simple addition of sugar don't be fooled, I did indeed go on a half hour search for peach sauces & even contemplated assuming a peach puree was a part of the crab cakes)
+				}
+			}
+		},
+		// SPK: player has WAG for Peach Syrup & Peach Blossom Jelly
+		{
+			"LogName": "Home Cooking - PKR + HC+WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable PKR": "true",
+				"Enable WAG": "true",
+				"HasMod|contains=Wildflour.AtelierGoods": "true",
+				"HasMod|contains=Suushiico.PeachyKeenRecipes": "true"
+			},
+			"Fields": {
+				"Peach Tea": {
+					"0": "815 2 Wildflour.AtelierGoods_Peach_Syrup 1"
+				},
+				"Peach Crab Cakes": {
+					"0": "Wildflour.AtelierGoods_Peach_Blossom_Jelly 1 732 1"
+				}
+			}
+		},
+		// SPK: player has Animal Husbandry for AHM Broths
+		{
+			"LogName": "Home Cooking - PKR + HC+AHM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable PKR": "true",
+				"Enable AHM": "true",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true",
+				"HasMod|contains=Suushiico.PeachyKeenRecipes": "true"
+			},
+			"Fields": {
+				"Savory Peach Soup": { //original version has milk but for this one I replaced it with chickenbroth for SAVORY & it's a mix of two different recipes
+					"0": "636 1 GoodJobSuzette.HomeCooking_ChickenBroth 1 GoodJobSuzette.HomeCooking_ShreddedGoatCheese 1 GoodJobSuzette.HomeCooking_HerbOil 1" //peach(puree) veggiebroth shreddedgoatcheese herboil
+				}
+			}
+		},
+		// SAR
+		{
+			"LogName": "Home Cooking - AR + HC ONLY",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable AR": "true",
+				"HasMod|contains=Suushiico.AppleRecipes": "true"
+			},
+			"Fields": {
+				"Apple Chips": {
+					"0": "GoodJobSuzette.HomeCooking_AppleSlices 3 247 1" // apple oil + salt
+				},
+				"Caramel Apple": { //it was difficult to find a recipe for caramel that didn't include corn syrup or melting existing caramel
+					"0": "613 1 245 1 GoodJobSuzette.HomeCooking_HeavyCream 1" // apple sugar + heavycream
+				},
+				"Spicy Apple Slaw": { //this one was weirdly difficult to search for also?? I ended up adding carrots & red cabbage & substituting hotpepper with hotpepperflakes to reinforce the spicy in CowfolkSauce
+					"0": "613 1 266 1 250 1 Carrot 1 GoodJobSuzette.HomeCooking_HotPepperFlakes 1 GoodJobSuzette.HomeCooking_CowfolkSauce 1" // apple hotpepper kale + carrot redcabbage cowfolksauce
+				},
+				"Apple Banana Smoothie": { // YEAH NON-DAIRY MILK
+					"0": "613 1 91 1 GoodJobSuzette.HomeCooking_RoastedNutMilk 1" // apple banana anymilk - roasted hazelnut milk instead
+				},
+				"Honey-Dipped Apples": { // looking up these recipes make me think I need a candy thermometer
+					"0": "613 1 340 1 245 1" // apple honey + sugar
+				},
+				"Stuffed Apple Fruit Salad": { // it took me a while to get this but stuffed apple refers to a hollowed out apple stuffed with whatever, in this case a fruit salad - topped it with an oil vinaigrette to balance the sweetness
+					"0": "613 1 258 1 254 1 634 1 GoodJobSuzette.HomeCooking_OilVinaigrette 1" // apple blueberry melon apricot + oilvinaigrette
+				},
+				"Pumpkin Apple Pie": { // subbed the wheatflour with piedough, pumpkin with pumpkinpuree, apple with applepiefilling which I made for this & added an egg bc that's what the recipe required
+					"0": "-5 1 245 1 GoodJobSuzette.HomeCooking_ApplePieFilling 1 GoodJobSuzette.HomeCooking_PumpkinPuree 1 GoodJobSuzette.HomeCooking_MilkPowder 1 GoodJobSuzette.HomeCooking_PieDough 1" // sugar + egg applepiefilling pumpkinpuree milkpowder piedough
+				},
+				/*"Even More Complete Breakfast": { // there were some different directions I could go but then I saw that the description says this is supposed to be apple juice so oh well
+					"0": "613 1 194 1 -6 1 210 1 211 1" // apple friedegg milk hashbrowns pancake
+				},*/
+				"Blueberry Apple Scone": { // omitted sugar bc apples & blueberries have the sweetness, added butter / EDIT back w baking soda stuff! bakingpowder is bakingsoda plus an acid like lemonjuice or vinegar in the place of cream of tartar
+					"0": "613 2 258 1 GoodJobSuzette.HomeCooking_Bechamel 1 GoodJobSuzette.HomeCooking_BakingSoda 1 419 1" // apple(puree+grated) blueberry wheatflour -sugar
+				},
+				"Apple Hazelnut Cider": { // when searching, this took two directions: alcoholic vs non-alcoholic, but it's the sugar (=syrup) that led me to a non-alcoholic cider with hazelnut-flavored syrup - if it's necessary I might make hazelnut syrup if I do like a coffee pack or something, or if other recipes need - even an extract hmm
+					"0": "613 3 607 1 245 1" // apple hazelnut sugar - swapped hazelnut for roastedhazelnuts as was recommended
+				}
+			}
+		},
+		// SAR CAM
+		{
+			"LogName": "Home Cooking - AR + HC + CAM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable AR": "true",
+				"Enable CAM": "true",
+				"HasMod|contains=Suushiico.AppleRecipes": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true"
+			},
+			"Fields": {
+				"Apple Chips": {
+					"0": "GoodJobSuzette.HomeCooking_AppleSlices 3 247 1 GoodJobSuzette.HomeCooking_Salt 1" // apple oil + salt
+				}
+			}
+		},
+		// SAR CMC
+		{
+			"LogName": "Home Cooking - AR + HC + CMC",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable AR": "true",
+				"Enable CMC": "true",
+				"HasMod|contains=Suushiico.AppleRecipes": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "true"
+			},
+			"Fields": {
+				"Pumpkin Apple Pie": {
+					"0": "-5 1 GoodJobSuzette.HomeCooking_CinnamonSugar 1 GoodJobSuzette.HomeCooking_ApplePieFilling 1 GoodJobSuzette.HomeCooking_PumpkinPuree 1 GoodJobSuzette.HomeCooking_MilkPowder 1 GoodJobSuzette.HomeCooking_PieDough 1"
+				}
+			}
+		},
+		// SAR HXW
+		{
+			"LogName": "Home Cooking - AR + HC + HXW",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable AR": "true",
+				"Enable HXW": "true",
+				"HasMod|contains=Suushiico.AppleRecipes": "true",
+				"HasMod|contains=HXW.Mixology": "true"
+			},
+			"Fields": {
+				"Blueberry Apple Scone": { // omitted sugar bc apples & blueberries have the sweetness, added butter / EDIT back w baking soda stuff! bakingpowder is bakingsoda plus an acid like lemonjuice or vinegar in the place of cream of tartar
+					"0": "613 2 258 1 GoodJobSuzette.HomeCooking_Bechamel 1 GoodJobSuzette.HomeCooking_BakingSoda 1 HXW.Mixology_lemon_juice 1" // apple(puree+grated) blueberry wheatflour -sugar
+				},
+				"Caramel Apple": {
+					"0": "613 1 245 1 GoodJobSuzette.HomeCooking_HeavyCream 1 GoodJobSuzette.HomeCooking_VanillaExtract 1"
+				},
+				"Honey-Dipped Apples": {
+					"0": "613 1 340 1 245 1 GoodJobSuzette.HomeCooking_VanillaExtract 1"
+				}
+			}
+		},
+		// SAR WAG
+		{
+			"LogName": "Home Cooking - AR + HC + WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable AR": "true",
+				"Enable WAG": "true",
+				"HasMod|contains=Suushiico.AppleRecipes": "true",
+				"HasMod|contains=Wildflour.AtelierGoods": "true"
+			},
+			"Fields": {
+				"Pumpkin Apple Pie": {
+					"0": "-5 1 GoodJobSuzette.HomeCooking_CinnamonSugar 1 GoodJobSuzette.HomeCooking_ApplePieFilling 1 GoodJobSuzette.HomeCooking_PumpkinPuree 1 GoodJobSuzette.HomeCooking_MilkPowder 1 GoodJobSuzette.HomeCooking_PieDough 1"
+				}
+			}
+		},
+		// SMR
+		{
+			"LogName": "Home Cooking - MR + HC ONLY",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable MR": "true",
+				"HasMod|contains=Suushiico.MatchaRecipes": "true"
+			},
+			"Fields": {
+				/*"Matcha Latte": { // I personally add agave syrup but there's no real reason to change the recipe in this section; Home Cooking adds nothing to it
+					"0": "614 1 -6 1 245 1" // greentea anymilk sugar
+				},*/
+				"Matcha Ice Cream": { // put greentea in a dehydrator/evaporator to get Green Tea Powder?
+					"0": "-6 1 245 1 815 1 GoodJobSuzette.HomeCooking_HeavyCream 1" // tealeaves icecream / anymilk sugar tealeaves heavycream
+				},
+				"Matcha Ginger Smoothie": { // if matchalatte test doesn't work: -6 1 340 1 815 1 instead
+					"0": "Suushiico.MatchaRecipes_Matcha_Latte 1 GoodJobSuzette.HomeCooking_GroundGinger 1" // tealeaves ginger anymilk / matchalatte groundginger / anymilk honey tealeaves
+				},
+				"Matcha Mochi": { // the problem here is that Stardew Valley doesn't have a bean except qibean & greenbeans....hmmm
+					"0": "815 1 246 1 245 1 {{ModId}}_BeanPaste 1" // tealeaves wheatflour rice / (beanpaste[dried lima beans, sugar, salt], riceflour, sugar, matcha)
+				},
+				"Matcha Cookies": { // why all the matcha cookies have chocolate? aren't there matcha cookies without chocolate?? I didn't have the heart to overthink it
+					"0": "-5 2 815 1 245 2 246 1 GoodJobSuzette.HomeCooking_Butter 1" // tealeaves sugar wheatflour / flour matcha butter confectionerssugar anyegg2 whitechocochips
+				},
+				"Matcha Waffles": { // either the cat altered the recipe or there's a typo for tealeaves in the original (in all honestly it could have been the cat, she was being an absolute MENACE)
+					"0": "815 1 724 1 GoodJobSuzette.HomeCooking_Waffles 1" // tealeaves wheatflour maplesyrup / maplesyrup matcha waffles
+				},
+				"Matcha Swiss Roll": { // seaweed in furnace for soda ash? don't ask how we got here
+					"0": "815 1 -5 4 -6 1 245 1 246 1 GoodJobSuzette.HomeCooking_HeavyCream 1" // tealeaves wheatflour anymilk / egg4 (cake)flour matcha sugar milk heavycream
+				},
+				"Matcha Sticky Rice": { // described as green rice but is this matcha biko?? the coconut is for coconutmilk...
+					"0": "-6 1 815 1 245 1 423 1 442 1 GoodJobSuzette.HomeCooking_MilkPowder 1" // tealeaves coconut rice / rice (coconut)milk egg3(just yolks = one duck egg??) condensedmilk(milkpowder sugar) matcha
+				},
+				"Matcha Moon Cake": { // salted duck yolks idea could be finally put to use?? my soda ash research paid off here though bc a lot of moon cake recipes use lye water which can be made by adding baked baking soda to water but the problem is how to make baking soda in Stardew Valley so now Soda Ash, Caustic Soda, Baking Soda, & Lye Water are actually things now thanks
+					"0": "815 1 {{ModId}}_MoonCakeDough 1 {{ModId}}_CuredDuckEgg 1 {{ModId}}_BeanPaste 1" // tealeaves rice duckegg / (honey lyewater oil wheatflour matcha) dough (curedduckegg beanpaste) filling
+				},
+				"Strawberry Matcha Crepes": { // with combos like this is it better to use batter or bechamel??
+					"0": "815 1 400 1 245 2 {{ModId}}_Batter 1 {{ModId}}_Butter 1 {{ModId}}_HeavyCream 1" // tealeaves strawberry wheatflour | batter butter sugar matcha heavycream strawberry
+				}
+			}
+		},
+		// SMR WAG
+		{
+			"LogName": "Home Cooking - MR + WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable MR": "true",
+				"Enable WAG": "true",
+				"HasMod|contains=Suushiico.MatchaRecipes": "true",
+				"HasMod|contains=Wildflour.AtelierGoods": "true"
+			},
+			"Fields": {
+				/*"Matcha Latte": { 
+					"0": "614 1 -6 1 245 1" // greentea anymilk sugar
+				},*/
+				"Matcha Ice Cream": {
+					"0": "-6 1 245 1 Wildflour.AtelierGoods_Matcha_Powder 1 Wildflour.AtelierGoods_Cream 1" // tealeaves icecream / anymilk sugar tealeaves heavycream
+				},
+				"Matcha Ginger Smoothie": { // if matchalatte test doesn't work: -6 1 340 1 Wildflour.AtelierGoods_Matcha_Powder 1 instead
+					"0": "Suushiico.MatchaRecipes_Matcha_Latte 1 GoodJobSuzette.HomeCooking_GroundGinger 1" // tealeaves ginger anymilk / matchalatte groundginger / anymilk honey tealeaves
+				},
+				"Matcha Mochi": {
+					"0": "Wildflour.AtelierGoods_Matcha_Powder 1 Wildflour.AtelierGoods_Rice_Flour 1 245 1 {{ModId}}_BeanPaste 1" // tealeaves wheatflour rice / (beanpaste[dried lima beans, sugar, salt], riceflour, sugar, matcha)
+				},
+				"Matcha Cookies": {
+					"0": "-5 2 Wildflour.AtelierGoods_Matcha_Powder 1 245 1 Wildflour.AtelierGoods_Confectioners_Sugar 1 Wildflour.AtelierGoods_Cake_Flour 1 Wildflour.AtelierGoods_Butter 1" // tealeaves sugar wheatflour / flour matcha butter confectionerssugar anyegg2 whitechocochips
+				},
+				"Matcha Waffles": {
+					"0": "Wildflour.AtelierGoods_Matcha_Powder 1 724 1 GoodJobSuzette.HomeCooking_Waffles 1" // tealeaves wheatflour maplesyrup / maplesyrup matcha waffles
+				},
+				"Matcha Swiss Roll": {
+					"0": "Wildflour.AtelierGoods_Matcha_Powder 1 -5 4 -6 1 245 1 Wildflour.AtelierGoods_Cake_Flour 1 Wildflour.AtelierGoods_Cream 1" // tealeaves wheatflour anymilk / egg4 (cake)flour matcha sugar milk heavycream
+				},
+				"Matcha Sticky Rice": {
+					"0": "Wildflour.AtelierGoods_Coconut_Milk 1 Wildflour.AtelierGoods_Matcha_Powder 1 245 1 423 1 442 1 GoodJobSuzette.HomeCooking_MilkPowder 1" // tealeaves coconut rice / rice (coconut)milk egg3(just yolks = one duck egg??) condensedmilk(milkpowder sugar) matcha
+				},
+				"Matcha Moon Cake": {
+					"0": "Wildflour.AtelierGoods_Matcha_Powder 1 {{ModId}}_MoonCakeDough 1 {{ModId}}_CuredDuckEgg 1 {{ModId}}_BeanPaste 1" // tealeaves rice duckegg / (honey lyewater oil wheatflour matcha) dough (curedduckegg beanpaste) filling
+				},
+				"Strawberry Matcha Crepes": {
+					"0": "Wildflour.AtelierGoods_Matcha_Powder 1 400 1 245 2 {{ModId}}_Batter 1 Wildflour.AtelierGoods_Butter 1 Wildflour.AtelierGoods_Cream 1" // tealeaves strawberry wheatflour | batter butter sugar matcha heavycream strawberry
+				}
+			}
+		}
+	]
+}

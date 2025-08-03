@@ -1,0 +1,289 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooked Machines",
+	"Changes": [
+		// MACHINE: Dehydrator
+		{
+			"LogName": "Dehydrator",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)Dehydrator",
+				"OutputRules"
+			],
+			"Priority": "Default + 100",
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_BakingSoda": {
+					"Id": "GoodJobSuzette.HomeCooking_BakingSoda",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)GoodJobSuzette.HomeCooking_CausticSoda",
+							"RequiredCount": 1
+						}
+					],
+					"OutputItem": [
+						{
+							"Id": "GoodJobSuzette.HomeCooking_BakingSoda",
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_BakingSoda",
+							"PreserveId": "DROP_IN",
+							"CopyQuality": "true"
+						}
+					],
+					"MinutesUntilReady": 380,
+					"InvalidCountMessage": "[LocalizedText Strings\\Objects:Machine_NeedsInputCount 1]"
+				},
+				"GoodJobSuzette.HomeCooking_DriedAcorns": {
+					"Id": "GoodJobSuzette.HomeCooking_DriedAcorns",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)309",
+							"RequiredCount": 10
+						}
+					],
+					"OutputItem": [
+						{
+							"Id": "GoodJobSuzette.HomeCooking_DriedAcorns",
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_DriedAcorns",
+							"PreserveId": "DROP_IN",
+							"CopyQuality": "true"
+						}
+					],
+					"MinutesUntilReady": 380,
+					"InvalidCountMessage": "[LocalizedText Strings\\Objects:Machine_NeedsInputCount 10]"
+				},
+				"GoodJobSuzette.HomeCooking_DriedGrass": {
+					"Id": "GoodJobSuzette.HomeCooking_DriedGrass",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Rexstrife20.MineralTownCP_Black_Grass",
+							"RequiredCount": 3
+						},
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Rexstrife20.MineralTownCP_Blue_Grass",
+							"RequiredCount": 3
+						},
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Rexstrife20.MineralTownCP_Green_Grass",
+							"RequiredCount": 3
+						},
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Rexstrife20.MineralTownCP_Indigo_Grass",
+							"RequiredCount": 3
+						},
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Rexstrife20.MineralTownCP_Orange_Grass",
+							"RequiredCount": 3
+						},
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Rexstrife20.MineralTownCP_Purple_Grass",
+							"RequiredCount": 3
+						},
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Rexstrife20.MineralTownCP_Red_Grass",
+							"RequiredCount": 3
+						},
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Rexstrife20.MineralTownCP_White_Grass",
+							"RequiredCount": 3
+						},
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)Rexstrife20.MineralTownCP_Yellow_Grass",
+							"RequiredCount": 3
+						}
+					],
+					"OutputItem": [
+						{
+							"Id": "GoodJobSuzette.HomeCooking_DriedGrass",
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_DriedGrass",
+							"PreserveId": "DROP_IN",
+							"CopyQuality": "true"
+						}
+					],
+					"MinutesUntilReady": 380,
+					"InvalidCountMessage": "[LocalizedText Strings\\Objects:Machine_NeedsInputCount 3]"
+				},
+				"GoodJobSuzette.HomeCooking_DriedOysters": {
+					"Id": "GoodJobSuzette.HomeCooking_DriedOysters",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)723",
+							"RequiredCount": 5
+						}
+					],
+					"OutputItem": [
+						{
+							"Id": "GoodJobSuzette.HomeCooking_DriedOysters",
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_DriedOysters",
+							"PreserveId": "DROP_IN",
+							"CopyQuality": "true"
+						}
+					],
+					"DaysUntilReady": 2,
+					"InvalidCountMessage": "[LocalizedText Strings\\Objects:Machine_NeedsInputCount 5]"
+				},
+				"GoodJobSuzette.HomeCooking_MilkPowder": {
+					"Id": "GoodJobSuzette.HomeCooking_MilkPowder",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)186",
+							"RequiredCount": 1
+						}
+					],
+					"OutputItem": [
+						{
+							"Id": "GoodJobSuzette.HomeCooking_MilkPowder",
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_MilkPowder",
+							"PreserveId": "DROP_IN",
+							"CopyQuality": "true"
+						}
+					],
+					"MinutesUntilReady": 380,
+					"InvalidCountMessage": "[LocalizedText Strings\\Objects:Machine_NeedsInputCount 1]"
+				},
+				"GoodJobSuzette.HomeCooking_SodaAsh": {
+					"Id": "GoodJobSuzette.HomeCooking_SodaAsh",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O)152",
+							"RequiredCount": 10
+						}
+					],
+					"OutputItem": [
+						{
+							"Id": "GoodJobSuzette.HomeCooking_SodaAsh",
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_SodaAsh",
+							"PreserveId": "DROP_IN",
+							"CopyQuality": "true"
+						}
+					],
+					"MinutesUntilReady": 900,
+					"InvalidCountMessage": "[LocalizedText Strings\\Objects:Machine_NeedsInputCount 10]"
+				}
+			}
+		},
+		// MACHINE: Mill
+		{
+			"Action": "EditData",
+			"Target": "Data/Buildings",
+			"TargetField": [
+				"Mill",
+				"ItemConversions"
+			],
+			"Entries": {
+				"{{ModId}}_AcornFlour": {
+					"Id": "{{ModId}}_AcornFlour",
+					"SourceChest": "Input",
+					"DestinationChest": "Output",
+					"RequiredTags": [
+						"dried_acorn_item"
+					],
+					"ProducedItems": [
+						{
+							"ItemId": "(O){{ModId}}_AcornFlour"
+						}
+					],
+					"MaxDailyConversions": -1
+				}
+			}
+		},
+		// MACHINE: Preserves Jar
+		{
+			"LogName": "Preserves Jar",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)15",
+				"OutputRules"
+			],
+			"Priority": "Default + 100",
+			"Entries": {
+				"{{ModId}}_CuredDuckEgg": {
+					"Id": "{{ModId}}_CuredDuckEgg",
+					"Triggers": [
+						{
+							"Trigger": "ItemPlacedInMachine",
+							"RequiredItemId": "(O){{ModId}}_VinegarDuckEgg",
+							"RequiredCount": 1
+						}
+					],
+					"OutputItem": [
+						{
+							"Id": "{{ModId}}_CuredDuckEgg",
+							"ItemId": "(O){{ModId}}_CuredDuckEgg"
+						}
+					],
+					"MinutesUntilReady": 1500
+				}
+			}
+		},
+		// MACHINE: Vinegar Keg
+		{
+			"LogName": "Add HC Vinegars to CAM Vinegar Keg",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"When": { "HasMod|contains=Cornucopia.ArtisanMachines": "true" },
+			"TargetField": [ "(BC)Cornucopia_VinegarKeg", "OutputRules" ],
+			"Priority": "Default + 100",
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_AppleCiderVinegar": {
+					"Id": "GoodJobSuzette.HomeCooking_AppleCiderVinegar",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)GoodJobSuzette.HomeCooking_AppleSlices",
+							"RequiredCount": 5
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_AppleCiderVinegar"
+						}
+					],
+					"MinutesUntilReady": 360
+				},
+				"GoodJobSuzette.HomeCooking_RedWineVinegar": {
+					"Id": "GoodJobSuzette.HomeCooking_RedWineVinegar",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)348",
+							"RequiredCount": 1
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_RedWineVinegar"
+						}
+					],
+					"MinutesUntilReady": 360
+				},
+				"GoodJobSuzette.HomeCooking_RiceVinegar": {
+					"Id": "GoodJobSuzette.HomeCooking_RiceVinegar",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)273",
+							"RequiredCount": 1
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_RiceVinegar"
+						}
+					],
+					"MinutesUntilReady": 360
+				}
+			}
+		}
+	]
+}

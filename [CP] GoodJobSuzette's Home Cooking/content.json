@@ -1,0 +1,225 @@
+{
+	"Format": "2.7.0",
+	"Changes": [
+		// LOADING ASSETS
+		{
+			"LogName": "LOAD",
+			"Action": "Load",
+			"Target": "Mods/{{ModId}}/cooking, Mods/{{ModId}}/basics, Mods/{{ModId}}/broths, Mods/{{ModId}}/smallDish, Mods/{{ModId}}/soups, Mods/{{ModId}}/fatjars",
+			"FromFile": "Assets/{{TargetWithoutPath}}.png"
+		},
+		// INCLUDING DATA
+		{
+			"LogName": "INCLUDE",
+			"Action": "Include",
+			"FromFile": "data/Basics.json, data/Broths.json, data/Cooking.json, data/GiftTastes.json, data/Machines.json, data/MiscMods.json, data/Shops.json, data/Soups.json, data/Suushiico.json, data/Vanilla.json"
+		},
+		{
+			"LogName": "INCLUDE SPACECORE",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=spacechase0.SpaceCore": "true"
+			},
+			"FromFile": "data/spacecore.json"
+		},
+		{
+			"LogName": "INCLUDE AHM ONLY",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true",
+				"HasMod|contains=kaazkulaas.AHMCrueltyFreeCompatibility": "false"
+			},
+			"FromFile": "data/AHMObjects.json, data/AHMRecipes.json"
+		},
+		{
+			"LogName": "INCLUDE AHM + RCM + KaazkulaasPatch",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=kaazkulaas.AHMCrueltyFreeCompatibility": "true"
+			},
+			"FromFile": "data/RCMObjects.json, data/KaazkulaasPatchRecipes.json"
+		},
+		{
+			"LogName": "INCLUDE AHM + RCM + RosePatch",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=Roseloves109.MeatPatch": "true"
+			},
+			"FromFile": "data/RCMObjects.json, data/AHMRecipes.json"
+		},
+		{
+			"LogName": "INCLUDE CAM",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true"
+			},
+			"FromFile": "data/CornucopiaArtisanMachines.json"
+		},
+		{
+			"LogName": "INCLUDE CMC",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=Cornucopia.MoreCrops": "true"
+			},
+			"FromFile": "data/CornucopiaMoreCrops.json"
+		},
+		{
+			"LogName": "INCLUDE COOKS TOOLS",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=Novaphene.CooksTools": "true"
+			},
+			"FromFile": "data/CooksTools.json"
+		},
+		{
+			"LogName": "INCLUDE HXW",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=HXW.Mixology": "true"
+			},
+			"FromFile": "data/HXWMixology.json"
+		},
+		{
+			"LogName": "INCLUDE LB",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=8BitAlien.Lilybrook": true
+			},
+			"FromFile": "data/Lilybrook.json"
+		},
+		{
+			"LogName": "INCLUDE RCM ONLY",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"HasMod|contains=kaazkulaas.AHMCrueltyFreeCompatibility": "false"
+			},
+			"FromFile": "data/RCMObjects.json, data/RCMRecipes.json"
+		},
+		{
+			"LogName": "INCLUDE RMT",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true"
+			},
+			"FromFile": "data/ReturntoMineralTown.json"
+		},
+		{
+			"LogName": "INCLUDE SBV",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=skellady.SBVCP": "true"
+			},
+			"FromFile": "data/SunberryVillage.json"
+		},
+		{
+			"LogName": "INCLUDE VMV",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=Lumisteria.MtVapius": "true"
+			},
+			"FromFile": "data/VisitMtVapius.json"
+		},
+		{
+			"LogName": "INCLUDE WAG",
+			"Action": "Include",
+			"When": {
+				"HasMod|contains=Wildflour.AtelierGoods": "true"
+			},
+			"FromFile": "data/WildflourAtelierGoods.json"
+		}
+	],
+	// CONFIGURATION
+	"ConfigSchema": {
+		"PerfectionScoreObjects": {
+			"Displayname": "{{i18n: config.PerfectionScoreObjects}}",
+			"Description": "Items and cooking add to Perfection requirement",
+			"AllowValues": "True, False",
+			"Default": "False"
+		},
+		"Vanilla Recipe Changes": {
+			"Displayname": "{{i18n: config.VanillaRecipeChanges}}",
+			"Description": "Vanilla recipes are altered to include Home Cooking items and supported modded addons",
+			"AllowValues": "True, False",
+			"Default": "False"
+		},
+		"Context Tag Recipes": {
+			"Displayname": "{{i18n: config.ContextTagRecipes}}",
+			"Description": "Spacecore uses ingredient context tags to override recipes (does nothing if spacecore is not installed)",
+			"AllowValues": "True, False",
+			"Default": "False"
+		},
+		"Enable AHM": {
+			"Displayname": "{{i18n: config.AHM}}",
+			"Description": "Enables and disables Animal Husbandry Mod &/or Rose's Cruelty-Free Meats alterations (does nothing if AHM or RCM is not installed)",
+			"AllowValues": "True, False",
+			"Default": "False"
+		},
+		"Enable AR": {
+			"Displayname": "{{i18n: config.AR}}",
+			"Description": "Enables and disables Home Cooking-style alterations to Suushiico's Apple Recipes (does nothing if mod is not installed)",
+			"AllowValues": "True, False",
+			"Default": "True"
+		},
+		"Enable CAM": {
+			"Displayname": "{{i18n: config.CAM}}",
+			"Description": "Enables and disables Cornucopia Artisan Machine alterations (does nothing if CAM is not installed)",
+			"AllowValues": "True, False",
+			"Default": "False"
+		},
+		"Enable CMC": {
+			"Displayname": "{{i18n: config.CMC}}",
+			"Description": "Enables and disables Cornucopia More Crops alterations (does nothing if CMC is not installed). All packs are recommended but choose FALSE if you do not play with them all.",
+			"AllowValues": "True, False",
+			"Default": "False"
+		},
+		"Enable HXW": {
+			"Displayname": "{{i18n: config.HXW}}",
+			"Description": "Enables and disables HXW's Mixology alterations (does nothing if HXW Mixology is not installed)",
+			"AllowValues": "True, False",
+			"Default": "False"
+		},
+		"Enable Lilybrook": {
+			"Displayname": "{{i18n: config.LB}}",
+			"Description": "Enables and disables Lilybrook's alterations (does nothing if Lilybrook is not installed)",
+			"AllowValues": "True, False",
+			"Default": "False"
+		},
+		"Enable MR": {
+			"Displayname": "{{i18n: config.MR}}",
+			"Description": "Enables and disables Home Cooking-style alterations to Suushiico's Matcha Recipes (does nothing if mod is not installed)",
+			"AllowValues": "True, False",
+			"Default": "True"
+		},
+		"Enable PKR": {
+			"Displayname": "{{i18n: config.PKR}}",
+			"Description": "Enables and disables Home Cooking-style alterations to Suushiico's Peachy Keen Recipes (does nothing if mod is not installed)",
+			"AllowValues": "True, False",
+			"Default": "True"
+		},
+		"Enable RMT": {
+			"Displayname": "{{i18n: config.RMT}}",
+			"Description": "Enables and disables Return to Mineral Town alterations (does nothing if RMT is not installed)",
+			"AllowValues": "True, False",
+			"Default": "False"
+		},
+		"Enable SBV": {
+			"Displayname": "{{i18n: config.SBV}}",
+			"Description": "Enables and disables Sunberry Village alterations (does nothing if SBV is not installed)",
+			"AllowValues": "True, False",
+			"Default": "False"
+		},
+		"Enable VMV": {
+			"Displayname": "{{i18n: config.VMV}}",
+			"Description": "Enables and disables Visit Mt. Vapius's alterations (does nothing if VMV is not installed)",
+			"AllowValues": "True, False",
+			"Default": "False"
+		},
+		"Enable WAG": {
+			"Displayname": "{{i18n: config.WAG}}",
+			"Description": "Enables and disables Wildflour's Atelier Goods alterations (does nothing if WAG is not installed)",
+			"AllowValues": "True, False",
+			"Default": "False"
+		}
+	}
+}

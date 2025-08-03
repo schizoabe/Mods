@@ -1,0 +1,773 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [ //not included: hamburger, cheeseburger, deluxecheeseburger, smellofthesea, applepiefilling, brightfishbroth, dashiumamibase, honeydriedfruit, thickenedfishbroth, grampletonpie, spaghettipie, sweetsausage, sweetsausageseasonings, ryebreadslices, shreddedewecheese, ewecheeseslices
+        // Universal Love
+        /*{
+          "Operation": "Append",
+          "Target": [ "Entries", "Universal_Love" ],
+          "Value": " ",
+          "Delimiter": " "
+        },*/
+        //Abigail Love - pumpkin, blackberry, purple stuff, combat stuff
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Abigail", 1 ],
+          "Value": "{{ModId}}_AutumnHarvestPotPie {{ModId}}_PumpkinPuree {{ModId}}_PumpkinRisotto",
+          "Delimiter": " "
+        },
+        //Alex Love - PROTEIN, salmonburger
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Alex", 1 ],
+          "Value": "{{ModId}}_BeefDumplings {{ModId}}_CatfishNoodleSoup {{ModId}}_ChickenGravySoup {{ModId}}_ChickenStew {{ModId}}_HamburgerSoup {{ModId}}_JojaRibs {{ModId}}_MashedStew {{ModId}}_PotRoastPie {{ModId}}_QuicheGrampleton {{ModId}}_RabbitDumplings {{ModId}}_SalmonBurger {{ModId}}_SalmonChowder {{ModId}}_SundayDinner",
+          "Delimiter": " "
+        },
+        //Caroline Love - tea & healthy things, fishtaco, tropicalcurry, trufflepopcorn
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Caroline", 1 ],
+          "Value": "{{ModId}}_JasmineTea {{ModId}}_RedCabbageSlaw {{ModId}}_SpringGardenSoup {{ModId}}_SummerGardenSoup {{ModId}}_SunflowerSalt {{ModId}}_TomatoYogurtSoup",
+          "Delimiter": " "
+        },
+        //Clint Love - minerals, fiddlehead risotto, artichokedip, fries, stardropsorbet
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Clint", 1 ],
+          "Value": "{{ModId}}_Fries {{ModId}}_PumpkinRisotto",
+          "Delimiter": " "
+        },
+        //Demetrius Love - greenbean, ice cream, rice pudding, strawberry, popcorn
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Demetrius", 1 ],
+          "Value": "{{ModId}}_NonnaGreenBeans {{ModId}}_SundayDinner",
+          "Delimiter": " "
+        },
+        //Dwarf Love - minerals, lava eel, cave carrot, artifacts
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Dwarf", 1 ],
+          "Value": "{{ModId}}_BoneStock",
+          "Delimiter": " "
+        },
+        //Elliott Love - shellfish, pomegranate, trufflepopcorn
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Elliott", 1 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_CrabBisque {{ModId}}_DriedOysters",
+          "Delimiter": " "
+        },
+        //Emily Love - minerals, survival burger, kale smoothie(she doesn't know I put berrynutmilk in it don't tell her [it has SALMONberry in it])
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Emily", 1 ],
+          "Value": "{{ModId}}_KaleSmoothie",
+          "Delimiter": " "
+        },
+        //Evelyn Love - choco cake, beets, raisins, fairy rose, stuffing, tulip, starcookie, capp mouse cake
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Evelyn", 1 ],
+          "Value": "{{ModId}}_AutumnPickledEggs {{ModId}}_JojaRice",
+          "Delimiter": " "
+        },
+        //George Love - friedmushrooms & leeks
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "George", 1 ],
+          "Value": "{{ModId}}_ChickenStew {{ModId}}_PorkBroth",
+          "Delimiter": " "
+        },
+        //Gus Love - snails, fishtaco, curry, orange, capmousecake panzanella salad, truffle popcorn
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Gus", 1 ],
+          "Value": "{{ModId}}_LemonPosset {{ModId}}_OrangePosset",
+          "Delimiter": " "
+        },
+        //Haley Love - coconut, sunflower, fruit salad, pink cake (both have Melon), capmousecake
+        /*{
+          "Operation": "Append",
+          "Target": [ "Fields", "Haley", 1 ],
+          "Value": "",
+          "Delimiter": " "
+        },*/
+        //Harvey Love - primavera, coffee, pickles, supermeal, truffleoil, wine, appleslices, jasminetea
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Harvey", 1 ],
+          "Value": "{{ModId}}_AppleSlices {{ModId}}_AutumnPickledEggs {{ModId}}_ClamJuice {{ModId}}_GoldenBroth {{ModId}}_JasmineTea {{ModId}}_PickledQuailEggs {{ModId}}_RabbitStock {{ModId}}_SBVPickledEggs {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_TomatoYogurtSoup {{ModId}}_WinterPickledEggs",
+          "Delimiter": " "
+        },
+        //Jas Love - fairyrose, plumpudding, pink cake
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Jas", 1 ],
+          "Value": "{{ModId}}_LemonPosset {{ModId}}_OrangePosset",
+          "Delimiter": " "
+        },
+        //Jodi Love - choco cake , crispy bass, eggparm, fried eel, pancakes, rhubarb pie, veggiemedley
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Jodi", 1 ],
+          "Value": "{{ModId}}_BeefDumplings {{ModId}}_BroccoliBake {{ModId}}_ChickenDumplings {{ModId}}_ChickenGravySoup {{ModId}}_JojaRibs {{ModId}}_JojaRice {{ModId}}_MamaFrittata {{ModId}}_MashedPotatoes {{ModId}}_MashedStew {{ModId}}_NonnaGreenBeans {{ModId}}_PotRoast {{ModId}}_RabbitDumplings {{ModId}}_SummerGardenSoup {{ModId}}_SummerHarvestPotPie",
+          "Delimiter": " "
+        },
+        //Kent Love - fiddlehead risotto, roastedhazelnuts (food that brings back memories), popcorn
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Kent", 1 ],
+          "Value": "{{ModId}}_BerryNutMilk {{ModId}}_CarobNutMilk {{ModId}}_Fries {{ModId}}_MamaFrittata {{ModId}}_NonnaGreenBeans {{ModId}}_PumpkinRisotto {{ModId}}_RoastedNutMilk",
+          "Delimiter": " "
+        },
+        //Krobus Love - pumpkin, void stuff, horseradish
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Krobus", 1 ],
+          "Value": "{{ModId}}_AutumnHarvestPotPie {{ModId}}_HardVoidEgg {{ModId}}_SBVPickledEggs {{ModId}}_PumpkinRisotto {{ModId}}_PumpkinPuree {{ModId}}_VoidPickledEggs",
+          "Delimiter": " "
+        },
+        //Marnie Love - farmers lunch (omelet parsnip), pink cake, pumpkinpie, icecreamsadnwich
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Marnie", 1 ],
+          "Value": "{{ModId}}_QuicheGrampleton",
+          "Delimiter": " "
+        },
+        //Lewis Love - autumnbounty glazedyam greentea hotpepper veggiemedley jasminetea
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Lewis", 1 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_AutumnHarvestPotPie {{ModId}}_GardenSalsa {{ModId}}_HotPepperFlakes {{ModId}}_HotSauce {{ModId}}_JasmineTea {{ModId}}_PepperOnion {{ModId}}_PickledQuailEggs {{ModId}}_RedCabbageSlaw {{ModId}}_SummerPickledEggs",
+          "Delimiter": " "
+        },
+        //Leah Love - goatcheese poppyseedmuffin salad stirfry truffle veggiemedly wine
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Leah", 1 ],
+          "Value": "{{ModId}}_GoatCheeseSlices {{ModId}}_ShreddedGoatCheese {{ModId}}_SpringGardenSoup {{ModId}}_SummerGardenSoup {{ModId}}_WinterForageSoup",
+          "Delimiter": " "
+        },
+        //Leo Love - mango, taro root stuff
+        /*{
+          "Operation": "Append",
+          "Target": [ "Fields", "Leo", 1 ],
+          "Value": "",
+          "Delimiter": " "
+        },*/
+        //Linus Love - blueberrytart cactusfruit coconut dishothesea(sardinehashbrowns) yam, salmonburger
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Linus", 1 ],
+          "Value": "{{ModId}}_SalmonBurger",
+          "Delimiter": " "
+        },
+        //Maru Love - cauliflower stuff, minertreat, pepperpopper(hotpepper, cheese), rhubarb pie, strawberry, starcookie
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Maru", 1 ],
+          "Value": "{{ModId}}_GardenSalsa",
+          "Delimiter": " "
+        },
+        //Penny Love - melon, poppy, poppyseed, redplate (redcabbage, radish), roots platter (cave carrot, winterrroot), sandfish, tomkhasoup (coconut shrimp commush)
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Penny", 1 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_MashedPotatoes {{ModId}}_RedCabbageSlaw {{ModId}}_RedNoodleSoup",
+          "Delimiter": " "
+        },
+        //Pam Love - alcohol, yams, parsnip, cactusfruit, nachos
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Pam", 1 ],
+          "Value": "{{ModId}}_BeefDumplings {{ModId}}_Nachos {{ModId}}_RabbitDumplings {{ModId}}_SalmonChowder {{ModId}}_TortillaChips {{ModId}}_VanillaExtract",
+          "Delimiter": " "
+        },
+        //Pierre Love - fried calamari, pizza
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Pierre", 1 ],
+          "Value": "{{ModId}}_PersonalPizza {{ModId}}_PizzaDough",
+          "Delimiter": " "
+        },
+        //Robin Love - goat cheese, peach, spaghetti
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Robin", 1 ],
+          "Value": "{{ModId}}_GoatCheeseSlices {{ModId}}_ShreddedGoatCheese",
+          "Delimiter": " "
+        },
+        //Sandy Love - mango sticky rice, crocus
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Sandy", 1 ],
+          "Value": "{{ModId}}_LemongrassLimeBlend {{ModId}}_WinterForageBlend {{ModId}}_WinterForageSoup {{ModId}}_WinterPickledEggs",
+          "Delimiter": " "
+        },
+        //Sam Love - cactusfruit, maplebar, pizza
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Sam", 1 ],
+          "Value": "{{ModId}}_PersonalPizza {{ModId}}_PizzaDough",
+          "Delimiter": " "
+        },
+        //Shane Love - Beer, hotpepper, pepperpopper (hotpeppercheese) pizza, jojacola, jojacorn, nacho, hummus
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Shane", 1 ],
+          "Value": "{{ModId}}_FireSalt {{ModId}}_GardenSalsa {{ModId}}_HotPepperFlakes {{ModId}}_HotSauce {{ModId}}_JojaRibs {{ModId}}_JojaRice {{ModId}}_Nachos {{ModId}}_PersonalPizza {{ModId}}_PizzaDough {{ModId}}_TortillaChips",
+          "Delimiter": " "
+        },
+        //Sebastian Love - pumpkinsoup, sashimi, voidegg, jasmine tea
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Sebastian", 1 ],
+          "Value": "{{ModId}}_HardVoidEgg {{ModId}}_JasmineTea {{ModId}}_PickledVoidEggs {{ModId}}_PumpkinRisotto",
+          "Delimiter": " "
+        },
+        //Vincent Love - cranberrycandy, gingerale, grape, pinkcake, snail
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Vincent", 1 ],
+          "Value": "{{ModId}}_OrangePosset",
+          "Delimiter": " "
+        },
+        //Willy Love - catfish, mead, octopus, pumpkin, sturgeon, seacuc, salmonburger
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Willy", 1 ],
+          "Value": "{{ModId}}_CatfishNoodleSoup {{ModId}}_CrabBisque {{ModId}}_PumpkinRisotto {{ModId}}_SalmonBurger {{ModId}}_TomatoFishSoup",
+          "Delimiter": " "
+        },
+        //Wizard Love - purple mushroom, super cucumber, void stuff, starcookie
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Wizard", 1 ],
+          "Value": "{{ModId}}_HardVoidEgg {{ModId}}_PickledVoidEggs",
+          "Delimiter": " "
+        },
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        // Universal Dislike
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Universal_Dislike" ],
+          "Value": "{{ModId}}_HardVoidEgg {{ModId}}_PickledVoidEggs",
+          "Delimiter": " "
+        },
+        //Abigail Dislike - eggs, fruit, veggies, sugar, horseradish
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Abigail", 5 ],
+          "Value": "{{ModId}}_AppleSlices {{ModId}}_AutumnPickledEggs {{ModId}}_BerryNutMilk {{ModId}}_HardEgg {{ModId}}_JojaRibs {{ModId}}_MamaFrittata {{ModId}}_PickledQuailEggs {{ModId}}_QuicheGrampleton {{ModId}}_RamenEgg {{ModId}}_SBVPickledEggs {{ModId}}_SoftEgg {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_WinterPickledEggs {{ModId}}_ZuzuBreakfastSandwich",
+          "Delimiter": " "
+        },
+        //Alex Dislike - rabbit food, salmonberry, horseradish
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Alex", 5 ],
+          "Value": "{{ModId}}_BerryNutMilk {{ModId}}_GoldenBroth {{ModId}}_LemonPosset {{ModId}}_NonnaGreenBeans {{ModId}}_OrangePosset {{ModId}}_TomatoYogurtSoup {{ModId}}_VeggieBroth {{ModId}}_WinterForagePotPie {{ModId}}_WinterForageSoup",
+          "Delimiter": " "
+        },
+        //Caroline Dislike - mushrooms, mayo, nuts, ginger, dandelion, leek, snowyam, winterroot fries, jojacorn, pizza
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Caroline", 5 ],
+          "Value": "{{ModId}}_CarobNutMilk {{ModId}}_Fries {{ModId}}_MashedGravy {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_PersonalPizza {{ModId}}_RoastedNutMilk {{ModId}}_SpringGardenSoup {{ModId}}_SpringHarvestPotPie {{ModId}}_WinterForageBlend",
+          "Delimiter": " "
+        },
+        //Caroline HATE!!! RAHH - salmonberry
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Caroline", 7 ],
+          "Value": "{{ModId}}_BerryNutMilk",
+          "Delimiter": " "
+        },
+        //Clint Dislike - salmonberry, horseradish, tea, hummussnack, jojacola/corn, panzanella salad
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Clint", 5 ],
+          "Value": "{{ModId}}_BerryNutMilk {{ModId}}_JasmineTea {{ModId}}_JojaRice {{ModId}}_PickledQuailEggs {{ModId}}_SBVPickledEggs {{ModId}}_SunflowerSalt",
+          "Delimiter": " "
+        },
+        //Dwarf Dislike - eggs, mushrooms, nuts, ginger, salmonberries, horseradish, roots
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Dwarf", 5 ],
+          "Value": "{{ModId}}_AutumnPickledEggs {{ModId}}_BerryNutMilk {{ModId}}_CarobNutMilk {{ModId}}_GarlicGingerPaste {{ModId}}_GroundGinger {{ModId}}_HardEgg {{ModId}}_MamaFrittata {{ModId}}_MashedGravy {{ModId}}_MashedPotatoes {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_PickledQuailEggs {{ModId}}_QuicheGrampleton {{ModId}}_RamenEgg {{ModId}}_RoastedNutMilk {{ModId}}_SBVPickledEggs {{ModId}}_SoftEgg  {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_WinterPickledEggs {{ModId}}_ZuzuBreakfastSandwich",
+          "Delimiter": " "
+        },
+        //Elliott Dislike - milk mushrooms dandelion ginger hazelnut leek morel pizza(but why tho) snowyam winterroot horseradish
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Elliott", 5 ],
+          "Value": "{{ModId}}_CarobNutMilk {{ModId}}_GarlicGingerPaste {{ModId}}_GroundGinger {{ModId}}_HeavyCream {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_PersonalPizza {{ModId}}_PizzaDough {{ModId}}_RoastedNutMilk {{ModId}}_WinterForageBlend {{ModId}}_WinterForagePotPie {{ModId}}_WinterForageSoup",
+          "Delimiter": " "
+        },
+        //Elliott HATE!!! RAHH - salmonberry, sea/super cucumbers
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Elliott", 5 ],
+          "Value": "{{ModId}}_BerryNutMilk",
+          "Delimiter": " "
+        },
+        //Emily Dislike - fried/spicy eel ice cream rice pudding fries nachos jojacolacorn popcorn pizza?? does this girl like ANYthing
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Emily", 5 ],
+          "Value": "{{ModId}}_Fries {{ModId}}_JojaRibs {{ModId}}_JojaRice {{ModId}}_LemonPosset {{ModId}}_Nachos {{ModId}}_OrangePosset {{ModId}}_PersonalPizza {{ModId}}_PizzaDough {{ModId}}_TortillaChips",
+          "Delimiter": " "
+        },
+        //Emily HATE!!! RAHH - fishtaco makiroll salmonberry(bc it's SALMON??) SALMON sashimi
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Emily", 7 ],
+          "Value": "{{ModId}}_BerryNutMilk {{ModId}}_CatfishNoodleSoup {{ModId}}_RedNoodleSoup {{ModId}}_SalmonChowder {{ModId}}_SalmonBurger {{ModId}}_SalmonPatty {{ModId}}_TomatoFishSoup",
+          "Delimiter": " "
+        },
+        //Evelyn Dislike - horseradish fries jasminetea(she loves flowers so why??) jojacolacorn nachos pizza popcorn peanuts
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Evelyn", 5 ],
+          "Value": "{{ModId}}_Fries {{ModId}}_JasmineTea {{ModId}}_Nachos {{ModId}}_PersonalPizza {{ModId}}_PizzaDough {{ModId}}_SBVPickledEggs {{ModId}}_SunflowerSalt {{ModId}}_TortillaChips",
+          "Delimiter": " "
+        },
+        //Evelyn HATE!!! RAHH - fish (except clam, oyster) garlic salmonspiceberry - granny's a big ol hater
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Evelyn", 7 ],
+          "Value": "{{ModId}}_BeefBroth {{ModId}}_BeefDumplings {{ModId}}_BerryNutMilk {{ModId}}_BoneStock {{ModId}}_CatfishNoodleSoup {{ModId}}_ChickenBroth {{ModId}}_ChickenDumplings {{ModId}}_ClamOreganata {{ModId}}_ClearClamChowder {{ModId}}_Dashi {{ModId}}_FishBroth {{ModId}}_GarlicCloves {{ModId}}_GarlicGingerPaste {{ModId}}_GoldenBroth {{ModId}}_HamburgerSoup {{ModId}}_JojaRibs {{ModId}}_MashedGravy {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_NonnaGreenBeans {{ModId}}_PorkBroth {{ModId}}_PotRoastPie {{ModId}}_RedNoodleSoup {{ModId}}_RedSauce {{ModId}}_QuicheGrampleton {{ModId}}_SalmonChowder {{ModId}}_SpringGardenSoup {{ModId}}_SpringPickledEggs {{ModId}}_TomatoFishSoup {{ModId}}_TomatoYogurtSoup {{ModId}}_VeggieBroth",
+          "Delimiter": " "
+        },
+        //Gus Dislike - salmonberry horseradish (HATE: coleslaw??)
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Gus", 5 ],
+          "Value": "{{ModId}}_BerryNutMilk {{ModId}}_PickledQuailEggs {{ModId}}_SBVPickledEggs",
+          "Delimiter": " "
+        },
+        //George Dislike - flowers, salmonberry, horseradish (HATE: dandelion)
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "George", 5 ],
+          "Value": "{{ModId}}_BerryNutMilk {{ModId}}_PickledQuailEggs {{ModId}}_SunflowerSalt {{ModId}}_SBVPickledEggs",
+          "Delimiter": " "
+        },
+        //Haley Dislike - eggs, fruit, milk, mushrooms, veggies, nuts, leek, dandelion, ginger, mystic syrup, snowyam, winterroot, fries, jojacolacorn, nachos, pizza popcorns, peanuts
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Haley", 5 ],
+          "Value": "{{ModId}}_AutumnPickledEggs {{ModId}}_BerryNutMilk {{ModId}}_CarobNutMilk {{ModId}}_Fries {{ModId}}_HardEgg {{ModId}}_HeavyCream {{ModId}}_JojaRice {{ModId}}_LemonPosset {{ModId}}_MashedGravy {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_Nachos {{ModId}}_OrangePosset {{ModId}}_PersonalPizza {{ModId}}_PickledQuailEggs {{ModId}}_PizzaDough {{ModId}}_RamenEgg {{ModId}}_SoftEgg {{ModId}}_SpringGardenSoup {{ModId}}_SpringPickledEggs {{ModId}}_SpringHarvestPotPie {{ModId}}_SummerGardenSoup {{ModId}}_SummerPickledEggs {{ModId}}_TomatoYogurtSoup {{ModId}}_TortillaChips {{ModId}}_WinterForageBlend {{ModId}}_WinterForageSoup {{ModId}}_WinterPickledEggs {{ModId}}_ZuzuBreakfastSandwich",
+          "Delimiter": " "
+        },
+        //Haley HATE!!! RAHH - fish, horseradish
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Haley", 7 ],
+          "Value": "{{ModId}}_CatfishNoodleSoup {{ModId}}_ClearClamChowder {{ModId}}_RedClamChowder {{ModId}}_RedNoodleSoup {{ModId}}_SalmonChowder {{ModId}}_SBVPickledEggs {{ModId}}_TomatoFishSoup",
+          "Delimiter": " "
+        },
+        //Harvey Dislike - baked goods & desserts, bread, cheese, goatcheese, fried stuff, pizza, cranberrysauce
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Harvey", 5 ],
+          "Value": "{{ModId}}_BreadSlices {{ModId}}_CheeseSlices {{ModId}}_Fries {{ModId}}_GoatCheeseSlices {{ModId}}_LemonPosset {{ModId}}_MeltingCheese {{ModId}}_OrangePosset {{ModId}}_PersonalPizza {{ModId}}_PizzaDough {{ModId}}_ShreddedCheese {{ModId}}_ShreddedGoatCheese",
+          "Delimiter": " "
+        },
+        //Harvey HATE!!! RAHH - salmonberry spiceberry
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Harvey", 7 ],
+          "Value": "{{ModId}}_BerryNutMilk",
+          "Delimiter": " "
+        },
+        //Jas Dislike - eggs, fruit (except coconut, cherry, peach, apricot, orange, pomegranate, apple, mango), dandelion, ginger. nuts, mushroom, veggies, leek, snowyam winterroot (HATES: artisangoods except honey, jelly, oil, horseradish)
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Jas", 5 ],
+          "Value": "{{ModId}}_AutumnPickledEggs {{ModId}}_BerryNutMilk {{ModId}}_CarobNutMilk {{ModId}}_GroundGinger {{ModId}}_HardEgg {{ModId}}_MashedGravy {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_PickledQuailEggs {{ModId}}_RamenEgg {{ModId}}_RoastedNutMilk {{ModId}}_SBVPickledEggs {{ModId}}_SoftEgg {{ModId}}_SpringGardenSoup {{ModId}}_SpringHarvestPotPie {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_WinterForageBlend {{ModId}}_WinterPickledEggs {{ModId}}_ZuzuBreakfastSandwich",
+          "Delimiter": " "
+        },
+        //Jodi Dislike - mushrooms, garlic ginger, nuts, snowyam winterroot, horseradish, leek (HATES: dandelion spiceberry)
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Jodi", 5 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_AutumnHarvestPotPie {{ModId}}_BerryNutMilk {{ModId}}_BoneStock {{ModId}}_CarobNutMilk {{ModId}}_CatfishNoodleSoup {{ModId}}_ChickenStew {{ModId}}_ClamOreganata {{ModId}}_ClearClamChowder {{ModId}}_FishBroth {{ModId}}_GarlicGingerPaste {{ModId}}_GoldenBroth {{ModId}}_GroundGinger {{ModId}}_HamburgerSoup {{ModId}}_MashedGravy {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_OysterChowder {{ModId}}_PorkBroth {{ModId}}_PotRoastPie {{ModId}}_QuicheGrampleton {{ModId}}_RedNoodleSoup {{ModId}}_RoastedNutMilk {{ModId}}_SalmonChowder {{ModId}}_SBVPickledEggs {{ModId}}_SpringGardenSoup {{ModId}}_SpringHarvestPotPie {{ModId}}_SpringPickledEggs {{ModId}}_TomatoFishSoup {{ModId}}_TomatoYogurtSoup {{ModId}}_VeggieBroth {{ModId}}_WinterForageBlend {{ModId}}_WinterForagePotPie {{ModId}}_WinterForageSoup",
+          "Delimiter": " "
+        },
+        //Kent Dislike - pinacolada snowyam
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Kent", 5 ],
+          "Value": "{{ModId}}_LemongrassLimeBlend {{ModId}}_WinterForageBlend",
+          "Delimiter": " "
+        },
+        //Kent HATE!!! RAHH - tortilla, rawfish, algae soup, milk
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Kent", 7 ],
+          "Value": "{{ModId}}_CrabBisque {{ModId}}_HeavyCream {{ModId}}_LemonPosset {{ModId}}_Nachos {{ModId}}_OrangePosset {{ModId}}_OysterChowder {{ModId}}_SalmonChowder {{ModId}}_TortillaChips",
+          "Delimiter": " "
+        },
+        //Krobus Dislike - COOKING (except bread, fried egg, seafoam pudding, strangebun), mushrooms, nuts, dandelion, ginger, leek, salmonberry snowyam, winterroot
+        /*{
+          "Operation": "Append",
+          "Target": [ "Fields", "Krobus", 5 ],
+          "Value": " ",
+          "Delimiter": " "
+        },*/
+        //Leah Dislike - carpsurprise cookie friedegg icecream pinkcake ricepudding seaweed survivalburger tortilla
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Leah", 5 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_Dashi {{ModId}}_Fries {{ModId}}_LemonPosset {{ModId}}_OrangePosset {{ModId}}_TortillaChips",
+          "Delimiter": " "
+        },
+        //Leah HATE!!! RAHH - bread hashbrown pancake pizza voidegg
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Leah", 7 ],
+          "Value": "{{ModId}}_BreadSlices {{ModId}}_HardVoidEgg {{ModId}}_PersonalPizza {{ModId}}_PizzaDough {{ModId}}_VoidPickledEggs {{ModId}}_ZuzuBreakfastSandwich",
+          "Delimiter": " "
+        },
+        //Lewis Dislike - milk, salmonberry, horseradish, jojacolacorn
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Lewis", 5 ],
+          "Value": "{{ModId}}_BerryNutMilk {{ModId}}_HeavyCream {{ModId}}_JojaRibs {{ModId}}_JojaRice {{ModId}}_LemonPosset {{ModId}}_OrangePosset {{ModId}}_OysterChowder {{ModId}}_SalmonChowder {{ModId}}_SBVPickledEggs",
+          "Delimiter": " "
+        },
+        //Leo Dislike - COOKING (except bread, friedegg, espresso), mushrooms, ginger, dandelion, nuts, leek, pickles snowyam horseradish, winterroot (HATES: alcohol, hops, morel, oil, espresso, unmilledrice)
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Leo", 5 ],
+          "Value": "{{ModId}}_AutumnHarvestPotPie {{ModId}}_AutumnPickledEggs {{ModId}}_BerryNutMilk {{ModId}}_CarobNutMilk {{ModId}}_GroundGinger {{ModId}}_MashedGravy {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_PickledQuailEggs {{ModId}}_RoastedNutMilk {{ModId}}_RiceVinegar {{ModId}}_SBVPickledEggs {{ModId}}_SpringPickledEggs {{ModId}}_SpringGardenSoup {{ModId}}_SpringHarvestPotPie {{ModId}}_SummerPickledEggs {{ModId}}_WinterForageBlend {{ModId}}_WinterForagePotPie {{ModId}}_WinterForageSoup {{ModId}}_WinterPickledEggs",
+          "Delimiter": " "
+        },
+        //Linus Dislike - expensive stuff, minerals, gems, jojacolacorn
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Linus", 5 ],
+          "Value": "{{ModId}}_JojaRibs {{ModId}}_JojaRice {{ModId}}_RedWineVinegar {{ModId}}_SaffronPasta {{ModId}}_ThickenedFishBroth",
+          "Delimiter": " "
+        },
+        //Marnie Dislike - fries jojacolacorn nacho peanut trufflepopcorn, salmonberry, seaweed, horseradish
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Marnie", 5 ],
+          "Value": "{{ModId}}_BerryNutMilk {{ModId}}_Dashi {{ModId}}_Fries {{ModId}}_Nachos {{ModId}}_SBVPickledEggs {{ModId}}_TortillaChips",
+          "Delimiter": " "
+        },
+        //Maru Dislike - jojacolacorn, blackberry, COMMONmushroom, crystalfruit, maplesyrup, salmonberry
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Maru", 5 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_AutumnHarvestPotPie {{ModId}}_BerryNutMilk {{ModId}}_FishBroth {{ModId}}_JojaRibs {{ModId}}_JojaRice {{ModId}}_MashedGravy {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_RedNoodleSoup",
+          "Delimiter": " "
+        },
+        //Maru HATE!!! RAHH - honey, pickles, snowyam, truffle
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Maru", 7 ],
+          "Value": "{{ModId}}_AutumnPickledEggs {{ModId}}_HoneyDriedFruit {{ModId}}_PickledQuailEggs {{ModId}}_SBVPickledEggs {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_WinterForageSoup {{ModId}}_WinterForagePotPie {{ModId}}_WinterPickledEggs",
+          "Delimiter": " "
+        },
+        //Pam Dislike - eggs, horseradish, appleslices, kale, jasminetea, cappmousecake hummus, panzanella salad (HATES: octopus, squid)
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Pam", 5 ],
+          "Value": "{{ModId}}_AppleSlices {{ModId}}_AutumnPickledEggs {{ModId}}_JasmineTea {{ModId}}_KaleSmoothie {{ModId}}_MamaFrittata {{ModId}}_PickledQuailEggs {{ModId}}_QuicheGrampleton {{ModId}}_SBVPickledEggs {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_WinterPickledEggs",
+          "Delimiter": " "
+        },
+        //Penny Dislike - algaesoup, palebroth, salmonberry, jojacolacorn
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Penny", 5 ],
+          "Value": "{{ModId}}_BerryNutMilk {{ModId}}_Dashi {{ModId}}_JojaRibs {{ModId}}_JojaRice",
+          "Delimiter": " "
+        },
+        //Penny HATE!!! RAHH - alcohol, rabbitfoot, grape
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Penny", 7 ],
+          "Value": "{{ModId}}_BeefDumplings {{ModId}}_CrabBisque {{ModId}}_ChickenGravy {{ModId}}_ClamOreganata {{ModId}}_FishBroth {{ModId}}_MashedStew {{ModId}}_PumpkinRisotto {{ModId}}_RabbitDumplings {{ModId}}_RabbitStock {{ModId}}_RedWineVinegar {{ModId}}_SalmonChowder {{ModId}}_VanillaExtract",
+          "Delimiter": " "
+        },
+        //Pierre Dislike - jojacolacorn mushrooms ginger nuts leek salmonberry horseradish snowyam winterroot
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Pierre", 5 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_AutumnHarvestPotPie {{ModId}}_BerryNutMilk {{ModId}}_CarobNutMilk {{ModId}}_ChickenStew {{ModId}}_GroundGinger {{ModId}}_JojaRibs {{ModId}}_JojaRice {{ModId}}_MashedGravy {{ModId}}_RoastedNutMilk {{ModId}}_SBVPickledEggs {{ModId}}_SpringHarvestPotPie {{ModId}}_SundayDinner {{ModId}}_WinterForageBlend {{ModId}}_WinterForagePotPie",
+          "Delimiter": " "
+        },
+        //Pierre HATE!!! RAHH - fish, corn, garlic, parsnipsoup, tortilla
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Pierre", 7 ],
+          "Value": "{{ModId}}_BeefBroth {{ModId}}_BeefDumplings {{ModId}}_BoneStock {{ModId}}_CatfishNoodleSoup {{ModId}}_ChickenBroth {{ModId}}_ChickenDumplings {{ModId}}_ClamJuice {{ModId}}_ClamOreganata {{ModId}}_ClearClamChowder {{ModId}}_Dashi {{ModId}}_DriedOysters {{ModId}}_FishBroth {{ModId}}_GarlicCloves {{ModId}}_GarlicGingerPaste {{ModId}}_GoldenBroth {{ModId}}_HamburgerSoup {{ModId}}_MushroomBroth {{ModId}}_OysterChowder {{ModId}}_PorkBroth {{ModId}}_PotRoastPie {{ModId}}_QuicheGrampleton {{ModId}}_RedNoodleSoup {{ModId}}_SalmonChowder {{ModId}}_SpringGardenSoup {{ModId}}_SpringPickledEggs {{ModId}}_TomatoFishSoup {{ModId}}_TomatoYogurtSoup {{ModId}}_TortillaChips {{ModId}}_VeggieBroth",
+          "Delimiter": " "
+        },
+        //Robin Dislike - horseradish
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Robin", 5 ],
+          "Value": "{{ModId}}_SBVPickledEggs",
+          "Delimiter": " "
+        },
+        //Sebastian Dislike - capmousecake, jojacolacorn, kale smoothy, panzanella salad, flowers, mushrooms, dandelion, ginger, nuts, leek, salmonberry, snowyam, horseradish, winterroot
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Sebastian", 5 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_AutumnHarvestPotPie {{ModId}}_BerryNutMilk {{ModId}}_CarobNutMilk {{ModId}}_CatfishNoodleSoup {{ModId}}_ChickenStew {{ModId}}_FishBroth {{ModId}}_GarlicGingerPaste {{ModId}}_GroundGinger {{ModId}}_JojaRibs {{ModId}}_JojaRice {{ModId}}_KaleSmoothie {{ModId}}_MashedGravy {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_OysterChowder {{ModId}}_PorkBroth {{ModId}}_RedNoodleSoup {{ModId}}_RoastedNutMilk {{ModId}}_SalmonChowder {{ModId}}_SpringGardenSoup {{ModId}}_SpringHarvestPotPie {{ModId}}_SundayDinner {{ModId}}_TomatoYogurtSoup {{ModId}}_WinterForageBlend {{ModId}}_WinterForagePotPie {{ModId}}_WinterForageSoup ",
+          "Delimiter": " "
+        },
+        //Seb HATE!!! RAHH - artisan goods (except coffee, greentea, oil), eggs, completebreakfast, farmerlunch, omelet (bc they all have eggs)
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Sebastian", 7 ],
+          "Value": "{{ModId}}_AutumnPickledEggs  {{ModId}}_HardEgg {{ModId}}_MamaFrittata {{ModId}}_PickledQuailEggs {{ModId}}_QuicheGrampleton {{ModId}}_RamenEgg {{ModId}}_SBVPickledEggs {{ModId}}_SoftEgg {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_WinterPickledEggs {{ModId}}_ZuzuBreakfastSandwich",
+          "Delimiter": " "
+        },
+        //Sam Dislike - vegetables, mushrooms, nuts dandelion ginger leek salmonberry seaweed snowyam horseradish winterroot, appleslices, hummus, jastea, popcorn, kale smoothie, panzanella salad
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Sam", 5 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_AutumnHarvestPotPie {{ModId}}_AutumnPickledEggs {{ModId}}_AppleSlices {{ModId}}_BeefDumplings {{ModId}}_BerryNutMilk {{ModId}}_BroccoliBake {{ModId}}_CarobNutMilk {{ModId}}_ChickenStew {{ModId}}_ClearClamChowder {{ModId}}_HamburgerSoup {{ModId}}_JasmineTea {{ModId}}_MamaFrittata {{ModId}}_MashedGravy {{ModId}}_MushroomGravy {{ModId}}_NonnaGreenBeans {{ModId}}_OysterChowder {{ModId}}_PumpkinPuree {{ModId}}_PumpkinRisotto {{ModId}}_RabbitDumplings {{ModId}}_RedNoodleSoup {{ModId}}_RoastedNutMilk {{ModId}}_SalmonChowder {{ModId}}_SpringGardenSoup {{ModId}}_SpringHarvestPotPie {{ModId}}_SummerGardenSoup {{ModId}}_SummerHarvestPotPie {{ModId}}_SundayDinner {{ModId}}_TomatoDiced {{ModId}}_TomatoSlices {{ModId}}_WinterForageBlend {{ModId}}_WinterForageSoup {{ModId}}_WinterForagePotPie",
+          "Delimiter": " "
+        },
+        //Sam HATE!!! RAHH - mayo, pickles
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Sam", 7 ],
+          "Value": "{{ModId}}_AutumnPickledEggs {{ModId}}_PickledQuailEggs {{ModId}}_SBVPickledEggs {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_WinterPickledEggs {{ModId}}_ZuzuBreakfastSandwich",
+          "Delimiter": " "
+        },
+        //Shane Dislike - mushrooms, dandelion, ginger, leek, seaweed, snowyam, horseradish, winterroot, appleslices, kalesmooth, cappmousecake, panzanella salad, truffle poporn
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Shane", 5 ],
+          "Value": "{{ModId}}_AppleSlices {{ModId}}_AutumnGardenSoup {{ModId}}_AutumnHarvestPotPie {{ModId}}_CatfishNoodleSoup {{ModId}}_Dashi {{ModId}}_KaleSmoothie {{ModId}}_MashedGravy {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_PorkBroth {{ModId}}_RedNoodleSoup {{ModId}}_SpringGardenSoup {{ModId}}_SpringHarvestPotPie {{ModId}}_TomatoYogurtSoup {{ModId}}_WinterForageBlend {{ModId}}_WinterForageSoup {{ModId}}_WinterForagePotPie",
+          "Delimiter": " "
+        },
+        //Shane HATE!!! RAHH - pickles
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Shane", 7 ],
+          "Value": "{{ModId}}_AutumnPickledEggs {{ModId}}_PickledQuailEggs {{ModId}}_SBVPickledEggs {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_WinterPickledEggs",
+          "Delimiter": " "
+        },
+        //Vincent Dislike - eggs, fruits (ex coconut grape fruit tree fruit), veggies, mushrooms, ginger, nuts, snowyam winterroot hummus, jojacolacorn, jastea, kale smooth, panzsalad, trufflepop (HATE: horseradish, espresso, alcohol)
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Vincent", 5 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_AutumnPickledEggs {{ModId}}_BerryNutMilk {{ModId}}_CarobNutMilk {{ModId}}_HardEgg {{ModId}}_KaleSmoothie {{ModId}}_JasmineTea {{ModId}}_MamaFrittata {{ModId}}_MashedGravy {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_PickledQuailEggs {{ModId}}_QuicheGrampleton {{ModId}}_RamenEgg {{ModId}}_RoastedNutMilk {{ModId}}_SBVPickledEggs {{ModId}}_SoftEgg {{ModId}}_SpringGardenSoup {{ModId}}_SpringHarvestPotPie {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_WinterForageBlend {{ModId}}_WinterPickledEggs {{ModId}}_ZuzuBreakfastSandwich",
+          "Delimiter": " "
+        },
+        //Willy Dislike - COOKING (except fish dishes), mushrooms, dandelion, ginger, nuts, leek, snoyam horseradish, winterrot
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Willy", 5 ],
+          "Value": "{{ModId}}_BerryNutMilk {{ModId}}_CarobNutMilk {{ModId}}_GroundGinger {{ModId}}_MashedGravy {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_RoastedNutMilk {{ModId}}_WinterForageBlend",
+          "Delimiter": " "
+        },
+        //Wizard Dislike - eggs, milk, mushrooms, dandelion, ginger, nuts, leek, salmonberry, snowyam horseradish, winterroot
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Willy", 5 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_AutumnPickledEggs {{ModId}}_BerryNutMilk {{ModId}}_CarobNutMilk {{ModId}}_HardEgg {{ModId}}_LemonPosset {{ModId}}_MamaFrittata {{ModId}}_MashedGravy {{ModId}}_MilkPowder {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_OrangePosset {{ModId}}_PickledQuailEggs {{ModId}}_QuicheGrampleton {{ModId}}_RamenEgg {{ModId}}_RoastedNutMilk {{ModId}}_SBVPickledEggs {{ModId}}_SoftEgg {{ModId}}_SpringGardenSoup {{ModId}}_SpringHarvestPotPie {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_WinterForageBlend {{ModId}}_WinterPickledEggs {{ModId}}_ZuzuBreakfastSandwich",
+          "Delimiter": " "
+        }
+      ]
+    },
+    // MODS : Jorts&Jean : Sunberry Villagers
+    //Jorts & Jean
+    /*{
+      "Action": "EditData",
+      "When": {
+        "HasMod|contains=tiakall.jortsandjean": "true"
+      },
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "JeanCat", 1 ],
+          "Value": "{{ModId}}_HeavyCream",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "JortsCat", 1 ],
+          "Value": "{{ModId}}_HeavyCream",
+          "Delimiter": " "
+        }
+      ]
+    },*/
+    //Wren
+    /*{
+      "Action": "EditData",
+      "When": {
+        "HasMod |contains=tiakall.wren": "true"
+      },
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        // Wren Love - joja cola
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "WrenSong", 1 ],
+          "Value": "{{ModId}}_JojaRice {{ModId}}_JojaRibs",
+          "Delimiter": " "
+        },
+        // Wren Dislike - trout soup, salad, fried calamari, carp surprise, fried eel - dislikes fried & fish? fishsoups? veggies?
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "WrenSong", 5 ],
+          "Value": "{{ModId}}_AutumnGardenSoup {{ModId}}_CatfishNoodleSoup {{ModId}}_ClearClamChowder {{ModId}}_CrabBisque {{ModId}}_Fries {{ModId}}_OysterChowder {{ModId}}_RedClamChowder {{ModId}}_RedNoodleSoup {{ModId}}_SalmonChowder {{ModId}}_TomatoFishSoup",
+          "Delimiter": " "
+        }
+      ]
+    },*/
+    //ARV - Sterling
+    {
+      "Action": "EditData",
+      "When": {
+        "HasMod |contains=Himetarts.ARV": "true"
+      },
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        // Sterling Love - strange bun, pancakes, fieldsnack, sunflower, blueberry tart, vegetable medley
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Sterling", 1 ],
+          "Value": "{{ModId}}_SunflowerSalt",
+          "Delimiter": " "
+        },
+        // Sterling Dislike - (CRANBERRY - HATE) oysters, eggplant, fishtaco
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Sterling", 5 ],
+          "Value": "{{ModId}}_DriedOysters {{ModId}}_OysterChowder",
+          "Delimiter": " "
+        }
+      ]
+    } /*,
+    //Rose & the Alchemist
+    {
+      "Action": "EditData",
+      "When": {
+        "HasMod |contains=Wildflour.SASS": "true"
+      },
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        // Rose Love - chocolatecake rhubarbpie cookies blueberrytart pumpkinpie blackberrycobbler poppyseedmuffin maplebar
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "RoseSASS", 1 ],
+          "Value": " ",
+          "Delimiter": " "
+        },
+        // Alchemist Love - greentea strawberry chanterelle morel tulip poppy
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "WildflourSASS", 1 ],
+          "Value": "{{ModId}}_AutumnHarvestPotPie {{ModId}}_ChickenStew {{ModId}}_MushroomBroth {{ModId}}_SpringGardenSoup",
+          "Delimiter": " "
+        },
+        // Rose Dislike - caviar roe jojacola
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "RoseSASS", 5 ],
+          "Value": "{{ModId}}_JojaRibs {{ModId}}_JojaRice",
+          "Delimiter": " "
+        },
+        // Alchemist Dislike - squidink
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "WildflourSASS", 5 ],
+          "Value": " ",
+          "Delimiter": " "
+        },
+        // Alchemist HATE RAHHH - jojacola caviar carpsurprise
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "WildflourSASS", 5 ],
+          "Value": "{{ModId}}_JojaRibs {{ModId}}_JojaRice",
+          "Delimiter": " "
+        }
+      ]
+    } /*,
+    //Ripley
+   /*{
+      "Action": "EditData",
+      "When": {
+        "HasMod |contains=Clara.Ripley": "true"
+      },
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        // Ripley Love - appleslices panzanellasalad saltedpeanuts trufflepopcorn
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Ripley", 1 ],
+          "Value": "{{ModId}}_AppleSlices",
+          "Delimiter": " "
+        },
+        // Ripley Dislike - nachos chocopopcorn (dislikes chocolate?)
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Ripley", 5 ],
+          "Value": "{{ModId}}_Nachos {{ModId}}_TortillaChips",
+          "Delimiter": " "
+        }
+      ]
+    },*/
+    //Lani
+    /*{
+      "Action": "EditData",
+      "When": {
+        "HasMod |contains=atelier99.SBV.NPCLani": "true"
+      },
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        // Lani Love - 421 593 787 228 227 202 564 565 "Ice Cream Sandwich", "Salmon Burger", "Truffle Popcorn", "Star Cookie"
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Lani", 1 ],
+          "Value": "{ModId}}_SalmonBurger",
+          "Delimiter": " "
+        },
+        // Lani HATE!!! - 344 342 445 812 447 92 93 99 178 154 jelly pickles
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Lani", 7 ],
+          "Value": "{{ModId}}_AutumnPickledEggs {{ModId}}_PickledQuailEggs {{ModId}}_SBVPickledEggs {{ModId}}_SpringPickledEggs {{ModId}}_SummerPickledEggs {{ModId}}_WinterPickledEggs",
+          "Delimiter": " "
+        }
+      ]
+    },*/
+    //Dao
+    /*{
+      "Action": "EditData",
+      "When": {
+        "HasMod |contains=Airyn.Dao.CP": "true"
+      },
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        // Dao Love - tomkhasoup coconut ricepudding stirfry fruitsalad crabcakes friedmushroom mangorice pineapple banana magmacap GoldenSunberry WildMustard Carob
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Dao", 1 ],
+          "Value": "{{ModId}}_BeerMustard {{ModId}}_CarobNutMilk {{ModId}}_HoneyMustard {{ModId}}_HotMustard {{ModId}}_MashedGravy {{ModId}}_MilkPowder {{ModId}}_MushroomBroth {{ModId}}_MushroomGravy {{ModId}}_MushroomPowder {{ModId}}_Mustard {{ModId}}_NutCheeseSlices {{ModId}}_SBVPickledEggs {{ModId}}_WineMustard",
+          "Delimiter": " "
+        },
+        // Dao HATE!!! - HATES SPICY & is Lactose Intolerant
+        {
+          "Operation": "Append",
+          "Target": [ "Fields", "Dao", 7 ],
+          "Value": "{{ModId}}_BroccoliBake {{ModId}}_Butter {{ModId}}_CheeseSlices {{ModId}}_CowfolkSauce {{ModId}}_CrabBisque {{ModId}}_CreamCheese {{ModId}}_FireSalt {{ModId}}_GardenSalsa {{ModId}}_GoatCheeseSlices {{ModId}}_HeavyCream {{ModId}}_HotPepperFlakes {{ModId}}_LemonPosset {{ModId}}_MamaFrittata {{ModId}}_MilkPowder {{ModId}}_OrangePosset {{ModId}}_QuicheGrampleton {{ModId}}_RabbitDumplings {{ModId}}_SalmonChowder {{ModId}}_ShreddedCheese {{ModId}}_ShreddedGoatCheese {{ModId}}_SourCream {{ModId}}_ZuzuBreakfastSandwich",
+          "Delimiter": " "
+        }
+      ]
+    }*/
+  ]
+}

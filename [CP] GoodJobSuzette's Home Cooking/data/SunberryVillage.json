@@ -1,0 +1,241 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooked Addons for Sunberry Village",
+	"Changes": [
+		// OBJECTS
+		{
+			"LogName": "OBJECTS - Sunberry Village ONLY",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_CarobNutMilk": {
+					"Name": "{{ModId}}_CarobNutMilk",
+					"Displayname": "{{i18n: HomeCooking_CarobNutMilk}}",
+					"Description": "{{i18n: HomeCooking_CarobNutMilk.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 500,
+					"Edibility": 55,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 88,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"milk_item",
+						"allergen_treenuts",
+						"food_vegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_CarobNutMilkBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_Mustard": {
+					"Name": "{{ModId}}_Mustard",
+					"Displayname": "{{i18n: HomeCooking_Mustard}}",
+					"Description": "{{i18n: HomeCooking_Mustard.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 50,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 38,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"mustard_item",
+						"spice_item",
+						"food_spicy",
+						"color_gold"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_MustardBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_BeerMustard": {
+					"Name": "{{ModId}}_BeerMustard",
+					"Displayname": "{{i18n: HomeCooking_BeerMustard}}",
+					"Description": "{{i18n: HomeCooking_BeerMustard.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 120,
+					"Edibility": 15,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 39,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"mustard_item",
+						"spice_item",
+						"food_spicy",
+						"color_gold"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_BeerMustardBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_HoneyMustard": {
+					"Name": "{{ModId}}_HoneyMustard",
+					"Displayname": "{{i18n: HomeCooking_HoneyMustard}}",
+					"Description": "{{i18n: HomeCooking_HoneyMustard.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 400,
+					"Edibility": 20,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 35,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"mustard_item",
+						"spice_item",
+						"color_gold"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_HoneyMustardBuff",
+							"Duration": 360,
+							"CustomAttributes": {
+								"Speed": 2
+							}
+						}
+					]
+				},
+				"{{ModId}}_HotMustard": {
+					"Name": "{{ModId}}_HotMustard",
+					"Displayname": "{{i18n: HomeCooking_HotMustard}}",
+					"Description": "{{i18n: HomeCooking_HotMustard.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 420,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 37,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"mustard_item",
+						"spice_item",
+						"food_spicy",
+						"color_gold"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_HotMustardBuff",
+							"Duration": 600,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"Speed": 3
+							}
+						}
+					]
+				},
+				"{{ModId}}_WineMustard": {
+					"Name": "{{ModId}}_WineMustard",
+					"Displayname": "{{i18n: HomeCooking_WineMustard}}",
+					"Description": "{{i18n: HomeCooking_WineMustard.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 350,
+					"Edibility": 15,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 36,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"mustard_item",
+						"spice_item",
+						"color_gold"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_WineMustardBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"Speed": 1
+							}
+						}
+					]
+				}
+			}
+		},
+		// RECIPES
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": { "HasMod|contains=skellady.SBVCP": "true" },
+			"Entries": {
+				"{{ModId}}_BeerMustard": "346 1 skellady.SBVCP_WildMustardSeeds 1/1 10/{{ModId}}_BeerMustard 3/default/{{i18n: HomeCooking_BeerMustard}}", //SPEED beer WildMustardSeeds 
+				"{{ModId}}_CarobNutMilk": "724 1 skellady.SBVCP_Carob 1 {{ModId}}_RoastedNutMilk 1/1 10/{{ModId}}_CarobNutMilk 1/default/{{i18n: HomeCooking_CarobNutMilk}}", //FARM1-FORAGE1 roastednutmilk carob maplesyrup 
+				"{{ModId}}_HoneyMustard": "306 1 340 1 {{ModId}}_Mustard 1 {{ModId}}_WineMustard 1/1 10/{{ModId}}_HoneyMustard 3/default/{{i18n: HomeCooking_HoneyMustard}}", //SPEED2 mayo honey winemustard mustard
+				"{{ModId}}_HotMustard": "{{ModId}}_Mustard 1 {{ModId}}_WineMustard 1 {{ModId}}_GarlicCloves 1 {{ModId}}_HerbVinegar 1 {{ModId}}_HotSauce 1/1 10/{{ModId}}_HotMustard 3/default/{{i18n: HomeCooking_HotMustard}}", //FARM-SPEED2 winemustard mustard garlicclove herbvinegar hotsauce
+				"{{ModId}}_Mustard": "419 1 skellady.SBVCP_WildMustardSeeds 1/1 10/{{ModId}}_Mustard 3/default/{{i18n: HomeCooking_Mustard}}", //SPEED vinegar WildMustardSeeds 
+				"{{ModId}}_WineMustard": "348 1 skellady.SBVCP_WildMustardSeeds 1/1 10/{{ModId}}_WineMustard 3/default/{{i18n: HomeCooking_WineMustard}}" //SPEED wine mustardseeds
+			}
+		},
+		// ADDONS
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable SBV": "true",
+				"HasMod|contains=skellady.SBVCP": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_HerbVinegar": {
+					"0": "419 1 skellady.SBVCP_WildMustardSeeds 1"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": {
+					"0": "247 1 GoodJobSuzette.HomeCooking_SpringSlices 1 GoodJobSuzette.HomeCooking_HoneyMustard 1"
+				}
+			}
+		},
+		// ADDONS: + Quail
+		{
+			"LogName": "Home Cooking - Quail + SBV",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable SBV": true,
+				"HasMod|contains=skellady.SBVCP": true,
+				"HasMod|contains=Mizu.Quail": true
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_PickledQuailEggs": {
+					"0": "Carrot 1 GoodJobSuzette.HomeCooking_HotPepperFlakes 1 GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_SpringSlices 4 Mizu.Quail_QuailEgg 3 skellady.SBVCP_WildMustardSeeds"
+				}
+			}
+		}
+	]
+}

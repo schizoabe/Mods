@@ -1,0 +1,670 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooked Edits for Miscellaneous Mods",
+	"Changes": [
+		/* AKA replacing vanilla ingredients with Home Cooking ones where it makes the most sense for users of both mods without altering what I think was the original intention */
+		// BINNING SKILL
+		{
+			"LogName": "Binning Skill",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": { "HasMod|contains=drbirbdev.BinningSkill": "true" },
+			"Priority": "Default + 200",
+			"Fields": {
+				"drbirbdev.BinningSkill_GrilledCheese": {
+					"0": "306 1 GoodJobSuzette.HomeCooking_BreadSlices 2 GoodJobSuzette.HomeCooking_CheeseSlices 1"
+				},
+				"drbirbdev.BinningSkill_FishCasserole": {
+					"0": "Carrot 2 -4 1 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1 GoodJobSuzette.HomeCooking_Bechamel 1"
+				}
+			}
+		},
+		// CORNUCOPIA MORE FLOWERS
+		{
+			"LogName": "OBJECTS - CMF (no WAG)",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"When": {
+				"HasMod|contains=Cornucopia.MoreFlowers": "true",
+				"HasMod|contains=Wildflour.AtelierGoods": "false"
+			},
+			"Entries": {
+				"{{ModId}}_JasmineTea": {
+					"Name": "{{ModId}}_JasmineTea",
+					"Displayname": "{{i18n: HomeCooking_JasmineTea}}",
+					"Description": "{{i18n: HomeCooking_JasmineTea.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 15,
+					"Edibility": 30,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 19,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"tea_item"
+					]
+				}
+			}
+		},
+		{
+			"LogName": "RECIPES - CMF (no WAG)",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Cornucopia.MoreFlowers": "true",
+				"HasMod|contains=Wildflour.AtelierGoods": "false"
+			},
+			"Entries": {
+				"{{ModId}}_JasmineTea": "815 1 Cornucopia_Jasmine 1/1 10/{{ModId}}_JasmineTea 1/default/{{i18n: HomeCooking_JasmineTea}}" // tealeaf jasmine
+			}
+		},
+		// COOKING DAILY
+		{
+			"LogName": "Cooking Daily",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": { "HasMod|contains=CuriousLotor.CookingDaily": "true" },
+			"Priority": "Default + 200",
+			"Fields": {
+				"CuriousLotor.CookingDaily_BeefDip": { //"Braised beef with gooey cheese in a fresh roll. It's a bit heavy, but perfect in every way."
+					"0": "639 1 Cornucopia_Stout 1 216 1 GoodJobSuzette.HomeCooking_MeltingCheese 1" // replaced cheese with melting cheese
+				},
+				"CuriousLotor.CookingDaily_ChickenAndWaffles": {
+					"0": "641 1 GoodJobSuzette.HomeCooking_Waffles 1 Cornucopia_ChiliPowder 1 247 1 724 1" // replaced wheatflour with waffles (use brine & dredge when live)
+				},
+				"CuriousLotor.CookingDaily_FishermansBreakfast": { //"Baked egg on a bed of sardines and vegetables."
+					"0": "Cornucopia_Onion 1 Cornucopia_Parsley 1 GoodJobSuzette.HomeCooking_TomatoSlices 2 131 1 -5 1" // replaced tomato with tomatoslices
+				},
+				"CuriousLotor.CookingDaily_MapleBaconBreakfastSandwich": {
+					"0": "666 1 194 1 GoodJobSuzette.HomeCooking_BreadSlices 2 724 1" // replaced bread with breadslices & subbed anyegg for fried egg
+				},
+				"CuriousLotor.CookingDaily_MiniBaconQuiche": {
+					"0": "666 1 -5 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_PieDough 1" // replaced flour w pie dough
+				},
+				/*"CuriousLotor.CookingDaily_ShrimpAndGrits": { // "Spicy, hearty, filling, savory."
+					"0": "720 1 270 1 -6 1 Cornucopia_ChiliPowder 1" // use grits when live
+				},*/
+				"CuriousLotor.CookingDaily_Spaetzle": {
+					"0": "GoodJobSuzette.HomeCooking_Batter 1 Cornucopia_Parsley 1" // replaced egg & wheatflour with batter
+				},
+				"CuriousLotor.CookingDaily_SpicyBreakfastSandwich": { //"Deeply savory sausage, egg, melty cheese, toasted muffin, a spicy kick. Even some green stuff!"
+					"0": "640 1 Cornucopia_Thyme 1 194 1 GoodJobSuzette.HomeCooking_CheeseSlices 1 GoodJobSuzette.HomeCooking_BreadSlices 2 Cornucopia_Spinach 1 Cornucopia_SpicyMayonnaise 1" // replaced cheese, bread (when live: replace 640 w breakfastsausage)
+				},
+				"CuriousLotor.CookingDaily_SpringPanzanella": {
+					"0": "Cornucopia_Shallot 1 250 1 GoodJobSuzette.HomeCooking_CowfolkSauce 1 216 1" // replaced vinegar with cowfolksauce
+				},
+				/*"CuriousLotor.CookingDaily_ThriftyMansMeal": { //"For when you don't want to swallow just a whole uncooked fish."
+					"0": "Cornucopia_Onion 1 192 1 -4 1 247 1" // use potatohash when live
+				},*/
+				"CuriousLotor.CookingDaily_YummyEggTarts": { // "They're so gooey, not too sweet, and dusted with cinnamon powder. Just begging to be eaten with an espresso."
+					"0": "245 1 GoodJobSuzette.HomeCooking_Batter 1 GoodJobSuzette.HomeCooking_HeavyCream 1 GoodJobSuzette.HomeCooking_GroundCinnamon 1 Cornucopia_CornFlour 1 Cornucopia_Vanilla 1" // replaced flour, egg with batter (when live: use puff pastry)
+				}
+			}
+		},
+		{
+			"LogName": "Cooking Daily",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=CuriousLotor.CookingDaily": "true",
+				"HasMod|contains=HXW.Mixology": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"CuriousLotor.CookingDaily_YummyEggTarts": {
+					"0": "245 1 GoodJobSuzette.HomeCooking_Batter 1 GoodJobSuzette.HomeCooking_HeavyCream 1 GoodJobSuzette.HomeCooking_GroundCinnamon 1 Cornucopia_CornFlour 1 GoodJobSuzette.HomeCooking_VanillaExtract 1" // with the addition of vanillaextract & swapping ground cinnamon
+				}
+			}
+		},
+		// CULINARY DELIGHT
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": { "HasMod|contains=HeyKatu.CulinaryDelight": "true" },
+			"Priority": "Default + 200",
+			"Fields": {
+				"HeyKatu.CulinaryDelight_apple_melon_pie": { //Apple Melon Pie: Apple x2, Sugar x1, Flour x1, Melon x1, Butter x1
+					"0": "613 2 245 1 Cornucopia_CanaryMelon 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_PieDough 2"
+				},
+				"HeyKatu.CulinaryDelight_gooseberry_pie": { //Gooseberry Pie: Gooseberries x2, Sugar x1, Flour x1, Butter x1, Egg x1
+					"0": "Cornucopia_Gooseberry 2 245 1 Cornucopia_Butter 1 -5 1 GoodJobSuzette.HomeCooking_PieDough 2"
+				},
+				"HeyKatu.CulinaryDelight_pecan_pie": { //Pecan Pie: Pecans x2, Sugar x1, Flour x1, Butter x1, Egg x1
+					"0": "Cornucopia_Pecan 2 245 1 Cornucopia_Butter 1 -5 1 GoodJobSuzette.HomeCooking_PieDough 2"
+				},
+				"HeyKatu.CulinaryDelight_cinnamon_latte": { //Cinnamon Latte: Coffee x1, Sugar x1, Milk x1, Cinnamon x1
+					"0": "395 1 -6 1 GoodJobSuzette.HomeCooking_CinnamonSugar 1"
+				},
+				"HeyKatu.CulinaryDelight_cooked_egg": { //Soft Boiled Egg: Egg x1, Salt x1, Pepper x1
+					"0": "GoodJobSuzette.HomeCooking_SoftBoiledEgg 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_Pepper 1"
+				},
+				"HeyKatu.CulinaryDelight_pierogies": { //Pierogies with Vegetables: Potato x1, Cheese x1, Peas x1, Sweet Potato x1, Bell Pepper x1
+					"0": "192 1 GoodJobSuzette.HomeCooking_ShreddedCheese 1 Cornucopia_GreenPeas 1 Cornucopia_SweetPotato 1 Cornucopia_BellPepper 1"
+				},
+				"HeyKatu.CulinaryDelight_omelette": { //Egg White Greek Omelette: Egg x2, Goat Cheese x1, Ground Cherries x1, Brined Olives x1, Olive Oil x1
+					"0": "-5 2 GoodJobSuzette.HomeCooking_ShreddedGoatCheese 1 Cornucopia_Groundcherries 1 Cornucopia_BrinedOlives 1 Cornucopia_OliveOil 1"
+				},
+				"HeyKatu.CulinaryDelight_green_salad": { //Garden Salad: Lettuce x1, Ground Cherries x1, Olive Oil x1, Vinegar x1
+					"0": "Cornucopia_Lettuce 1 Cornucopia_Groundcherries 1 GoodJobSuzette.HomeCooking_OilVinaigrette 1"
+				},
+				"HeyKatu.CulinaryDelight_sandwich": { //Tasty Tofu Sandwich: Bread x1, Lettuce x1, Tomato x1, Tofu x1, Garlic Mayo x1
+					"0": "GoodJobSuzette.HomeCooking_BreadSlices 2 Cornucopia_Lettuce 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 Cornucopia_Tofu 1 Cornucopia_GarlicMayonnaise 1"
+				},
+				"HeyKatu.CulinaryDelight_pita": { //Pita Sandwich: Tortilla x1, Pine Nuts x1, Tomato x1, Spinach x1, Chickpea x2
+					"0": "229 1 Cornucopia_PineNuts 1 GoodJobSuzette.HomeCooking_TomatoDiced 1 Cornucopia_Spinach 1 Cornucopia_Chickpea 2"
+				},
+				"HeyKatu.CulinaryDelight_sushi_rice": { //Sushi Rice (Ingredient): Rice x1, Vinegar x1, Sugar x1, Salt x1
+					"0": "423 1 GoodJobSuzette.HomeCooking_RiceVinegar 1 245 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"HeyKatu.CulinaryDelight_tomato_soup": { //Tomato Soup: Tomato x2, Fennel x1, Yogurt x1, Basil x1
+					"0": "GoodJobSuzette.HomeCooking_TomatoPaste 2 GoodJobSuzette.HomeCooking_VeggieBroth 1 Cornucopia_Fennel 1 Cornucopia_PlainYogurt 1 Cornucopia_Basil 1"
+				},
+				"HeyKatu.CulinaryDelight_minestrone_soup": { //Minestrone Soup: Tomato x1, Navy Bean x3, Noodles x1, Onion x1, Bay x1
+					"0": "GoodJobSuzette.HomeCooking_TomatoPaste 1 GoodJobSuzette.HomeCooking_VeggieBroth 1 Cornucopia_NavyBeans 3 Cornucopia_WheatNoodles 1 Cornucopia_Onion 1 Cornucopia_BayLeaves 1"
+				},
+				"HeyKatu.CulinaryDelight_dumpling_soup": { //Dumpling Soup: Flour x1, Garlic x1, Onion x1, Celery x1, Dill x1
+					"0": "GoodJobSuzette.HomeCooking_Dumplings 3 GoodJobSuzette.HomeCooking_GoldenBroth 1 Cornucopia_RoastedGarlic 1 Cornucopia_Onion 1 Cornucopia_Celery 1 Cornucopia_Dill 1"
+				},
+				"HeyKatu.CulinaryDelight_mushroom_stroganoff": { //Mushroom Stroganoff: Shiitake Mushroom x1, Yogurt x1, Noodles x1, Thyme x1, Salt x1
+					"0": "Cornucopia_Shiitake 1 Cornucopia_PlainYogurt 1 GoodJobSuzette.HomeCooking_EggNoodles 1 Cornucopia_Thyme 1 GoodJobSuzette.HomeCooking_Worchestershire 1 GoodJobSuzette.HomeCooking_MushroomBroth 1"
+				},
+				"HeyKatu.CulinaryDelight_miso_soup": { //Miso Soup: Miso Paste x1, Tofu x1, Chives x1, Salt x1
+					"0": "Cornucopia_MisoPaste 1 Cornucopia_Tofu 1 Cornucopia_Chives 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_Dashi 1"
+				},
+				"HeyKatu.CulinaryDelight_smoked_salmon_bagel": { //Smoked Salmon Bagel: Bread x1, Cheese x1, Smoked Salmon x1, Dill x1
+					"0": "216 1 GoodJobSuzette.HomeCooking_CreamCheese 1 Cornucopia_SmokedSalmon 1 Cornucopia_Dill 1"
+				},
+				"HeyKatu.CulinaryDelight_fancy_ramen": { //Fancy Ramen Bowl: Rice Noodles x1, Fish Sauce x1, Egg x1, Chives x1
+					"0": "Cornucopia_RiceNoodles 1 Cornucopia_FishSauce 1 GoodJobSuzette.HomeCooking_RamenEgg 1 Cornucopia_Chives 1 GoodJobSuzette.HomeCooking_Dashi 1"
+				},
+				"HeyKatu.CulinaryDelight_sweet_potato_fries": { //Sweet Potato Fries: Sweet Potato x1, Oil x1, Salt x1, Sugar x1, Nutmeg x1
+					"0": "Cornucopia_SweetPotato 1 247 1 GoodJobSuzette.HomeCooking_Salt 1 245 1 Cornucopia_Nutmeg 1"
+				},
+				"HeyKatu.CulinaryDelight_mushroom_skewer": { //Curried Mushroom Skewers: Shiitake Mushroom x3, Cumin x1, Turmeric x1, Paprika x1, Garlic x1
+					"0": "Cornucopia_Shiitake 3 Cornucopia_CuminSeeds 1 Cornucopia_Turmeric 1 Cornucopia_Paprika 1 GoodJobSuzette.HomeCooking_GarlicCloves 1"
+				},
+				"HeyKatu.CulinaryDelight_popcorn": { //Popcorn: Corn x1, Oil x1, Butter x1, Salt x1
+					"0": "270 1 247 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"HeyKatu.CulinaryDelight_burger": { //Black Bean Burger: Bread x1, Tomato x1, Cheese x1, Pickles x1, Black Beans x3, Lettuce x1
+					"0": "GoodJobSuzette.HomeCooking_PotatoBuns 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 GoodJobSuzette.HomeCooking_CheeseSlices 1 Cornucopia_PickleSpears 1 Cornucopia_BlackBeans 3 Cornucopia_Lettuce 1"
+				},
+				"HeyKatu.CulinaryDelight_dipping_fries": { //Dipping Fries: Potato x1, Tomato x1, Salt x1, Garlic Mayonnaise x1
+					"0": "GoodJobSuzette.HomeCooking_Fries 1 GoodJobSuzette.HomeCooking_Ketchup 1 Cornucopia_GarlicMayonnaise 1"
+				},
+				"HeyKatu.CulinaryDelight_margherita_pizza": { //Margherita Pizza: Flour x1, Tomato x1, Goat Cheese x1, Basil x1, Roasted Garlic x1
+					"0": "GoodJobSuzette.HomeCooking_PizzaDough 1 GoodJobSuzette.HomeCooking_RedSauce 1 GoodJobSuzette.HomeCooking_ShreddedGoatCheese 1 Cornucopia_Basil 1 Cornucopia_RoastedGarlic 1"
+				},
+				"HeyKatu.CulinaryDelight_grilled_cheese": { //Hot Grilled Cheese: Bread x1, Cheese x1, Spicy Mayonnaise x1, Jalapeno x1
+					"0": "GoodJobSuzette.HomeCooking_BreadSlices 2 GoodJobSuzette.HomeCooking_CheeseSlices 1 Cornucopia_SpicyMayonnaise 1 Cornucopia_Jalapeno 1"
+				},
+				"HeyKatu.CulinaryDelight_croquettes": { //Croquettes: Potato x1, Parsley x1, Onion x1, Egg x1, Oil x1, Salt x1
+					"0": "GoodJobSuzette.HomeCooking_MashedPotatoes 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Cornucopia_Onion 1 -5 1 247 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1"
+				},
+				"HeyKatu.CulinaryDelight_fish_and_chips": { //Fish and Chips: Fish x1, Flour x1, Potato x1, Lemon x1, Vinegar x1
+					"0": "-4 1 GoodJobSuzette.HomeCooking_Batter 1 GoodJobSuzette.HomeCooking_Fries 1 Cornucopia_Lemon 1 419 1"
+				},
+				"HeyKatu.CulinaryDelight_catfish_dinner": { //Catfish Dinner: Catfish x1, River Jelly x1, Lemon x1, Butter x1, Salt x1
+					"0": "143 1 RiverJelly 1 Cornucopia_Lemon 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"HeyKatu.CulinaryDelight_salmon_filet": { //Salmon Filet: Salmon x1, Maple Butter x1, Salt x1, Parsley x1
+					"0": "139 1 Cornucopia_MapleButter 1 GoodJobSuzette.HomeCooking_Salt 1 Cornucopia_Parsley 1"
+				},
+				"HeyKatu.CulinaryDelight_blackened_tofu": { //Blackened Tofu: Tofu x1, Basil x1, Oregano x1, Thyme x1, Pepper x1
+					"0": "Cornucopia_Tofu 1 Cornucopia_Basil 1 Cornucopia_Oregano 1 Cornucopia_Thyme 1 GoodJobSuzette.HomeCooking_Pepper 1"
+				},
+				"HeyKatu.CulinaryDelight_the_egg": { //"The Egg": Ostrich Egg x1, Salt x1, Pepper x1
+					"0": "289 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_Pepper 1"
+				}
+			}
+		},
+		// DESERT FESTIVAL FOODS
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": { "HasMod|contains=Wizadroid.DFF": "true" },
+			"Priority": "Default + 200",
+			"Fields": {
+				"Wizadroid.DFF_SkullCaveCasserole": {
+					"0": "188 2 192 1 GoodJobSuzette.HomeCooking_GarlicCloves 9"
+				},
+				"HeyKatu.CulinaryDelight_pecan_pie": { //Pecan Pie: Pecans x2, Sugar x1, Flour x1, Butter x1, Egg x1
+					"0": "Cornucopia_Pecan 2 245 1 Cornucopia_Butter 1 -5 1 GoodJobSuzette.HomeCooking_PieDough 2"
+				},
+				"HeyKatu.CulinaryDelight_cinnamon_latte": { //Cinnamon Latte: Coffee x1, Sugar x1, Milk x1, Cinnamon x1
+					"0": "395 1 -6 1 GoodJobSuzette.HomeCooking_CinnamonSugar 1"
+				},
+				"HeyKatu.CulinaryDelight_cooked_egg": { //Soft Boiled Egg: Egg x1, Salt x1, Pepper x1
+					"0": "GoodJobSuzette.HomeCooking_SoftBoiledEgg 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_Pepper 1"
+				},
+				"HeyKatu.CulinaryDelight_pierogies": { //Pierogies with Vegetables: Potato x1, Cheese x1, Peas x1, Sweet Potato x1, Bell Pepper x1
+					"0": "192 1 GoodJobSuzette.HomeCooking_ShreddedCheese 1 Cornucopia_GreenPeas 1 Cornucopia_SweetPotato 1 Cornucopia_BellPepper 1"
+				},
+				"HeyKatu.CulinaryDelight_omelette": { //Egg White Greek Omelette: Egg x2, Goat Cheese x1, Ground Cherries x1, Brined Olives x1, Olive Oil x1
+					"0": "-5 2 GoodJobSuzette.HomeCooking_ShreddedGoatCheese 1 Cornucopia_Groundcherries 1 Cornucopia_BrinedOlives 1 Cornucopia_OliveOil 1"
+				},
+				"HeyKatu.CulinaryDelight_green_salad": { //Garden Salad: Lettuce x1, Ground Cherries x1, Olive Oil x1, Vinegar x1
+					"0": "Cornucopia_Lettuce 1 Cornucopia_Groundcherries 1 GoodJobSuzette.HomeCooking_OilVinaigrette 1"
+				},
+				"HeyKatu.CulinaryDelight_sandwich": { //Tasty Tofu Sandwich: Bread x1, Lettuce x1, Tomato x1, Tofu x1, Garlic Mayo x1
+					"0": "GoodJobSuzette.HomeCooking_BreadSlices 2 Cornucopia_Lettuce 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 Cornucopia_Tofu 1 Cornucopia_GarlicMayonnaise 1"
+				},
+				"HeyKatu.CulinaryDelight_pita": { //Pita Sandwich: Tortilla x1, Pine Nuts x1, Tomato x1, Spinach x1, Chickpea x2
+					"0": "229 1 Cornucopia_PineNuts 1 GoodJobSuzette.HomeCooking_TomatoDiced 1 Cornucopia_Spinach 1 Cornucopia_Chickpea 2"
+				},
+				"HeyKatu.CulinaryDelight_sushi_rice": { //Sushi Rice (Ingredient): Rice x1, Vinegar x1, Sugar x1, Salt x1
+					"0": "423 1 GoodJobSuzette.HomeCooking_RiceVinegar 1 245 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"HeyKatu.CulinaryDelight_tomato_soup": { //Tomato Soup: Tomato x2, Fennel x1, Yogurt x1, Basil x1
+					"0": "GoodJobSuzette.HomeCooking_TomatoPaste 2 GoodJobSuzette.HomeCooking_VeggieBroth 1 Cornucopia_Fennel 1 Cornucopia_PlainYogurt 1 Cornucopia_Basil 1"
+				},
+				"HeyKatu.CulinaryDelight_minestrone_soup": { //Minestrone Soup: Tomato x1, Navy Bean x3, Noodles x1, Onion x1, Bay x1
+					"0": "GoodJobSuzette.HomeCooking_TomatoPaste 1 GoodJobSuzette.HomeCooking_VeggieBroth 1 Cornucopia_NavyBeans 3 Cornucopia_WheatNoodles 1 Cornucopia_Onion 1 Cornucopia_BayLeaves 1"
+				},
+				"HeyKatu.CulinaryDelight_dumpling_soup": { //Dumpling Soup: Flour x1, Garlic x1, Onion x1, Celery x1, Dill x1
+					"0": "GoodJobSuzette.HomeCooking_Dumplings 3 GoodJobSuzette.HomeCooking_GoldenBroth 1 Cornucopia_RoastedGarlic 1 Cornucopia_Onion 1 Cornucopia_Celery 1 Cornucopia_Dill 1"
+				},
+				"HeyKatu.CulinaryDelight_mushroom_stroganoff": { //Mushroom Stroganoff: Shiitake Mushroom x1, Yogurt x1, Noodles x1, Thyme x1, Salt x1
+					"0": "Cornucopia_Shiitake 1 Cornucopia_PlainYogurt 1 GoodJobSuzette.HomeCooking_EggNoodles 1 Cornucopia_Thyme 1 GoodJobSuzette.HomeCooking_Worchestershire 1 GoodJobSuzette.HomeCooking_MushroomBroth 1"
+				},
+				"HeyKatu.CulinaryDelight_miso_soup": { //Miso Soup: Miso Paste x1, Tofu x1, Chives x1, Salt x1
+					"0": "Cornucopia_MisoPaste 1 Cornucopia_Tofu 1 Cornucopia_Chives 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_Dashi 1"
+				},
+				"HeyKatu.CulinaryDelight_smoked_salmon_bagel": { //Smoked Salmon Bagel: Bread x1, Cheese x1, Smoked Salmon x1, Dill x1
+					"0": "216 1 GoodJobSuzette.HomeCooking_CreamCheese 1 Cornucopia_SmokedSalmon 1 Cornucopia_Dill 1"
+				},
+				"HeyKatu.CulinaryDelight_fancy_ramen": { //Fancy Ramen Bowl: Rice Noodles x1, Fish Sauce x1, Egg x1, Chives x1
+					"0": "Cornucopia_RiceNoodles 1 Cornucopia_FishSauce 1 GoodJobSuzette.HomeCooking_RamenEgg 1 Cornucopia_Chives 1 GoodJobSuzette.HomeCooking_Dashi 1"
+				},
+				"HeyKatu.CulinaryDelight_sweet_potato_fries": { //Sweet Potato Fries: Sweet Potato x1, Oil x1, Salt x1, Sugar x1, Nutmeg x1
+					"0": "Cornucopia_SweetPotato 1 247 1 GoodJobSuzette.HomeCooking_Salt 1 245 1 Cornucopia_Nutmeg 1"
+				},
+				"HeyKatu.CulinaryDelight_mushroom_skewer": { //Curried Mushroom Skewers: Shiitake Mushroom x3, Cumin x1, Turmeric x1, Paprika x1, Garlic x1
+					"0": "Cornucopia_Shiitake 3 Cornucopia_CuminSeeds 1 Cornucopia_Turmeric 1 Cornucopia_Paprika 1 GoodJobSuzette.HomeCooking_GarlicCloves 1"
+				},
+				"HeyKatu.CulinaryDelight_popcorn": { //Popcorn: Corn x1, Oil x1, Butter x1, Salt x1
+					"0": "270 1 247 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"HeyKatu.CulinaryDelight_burger": { //Black Bean Burger: Bread x1, Tomato x1, Cheese x1, Pickles x1, Black Beans x3, Lettuce x1
+					"0": "GoodJobSuzette.HomeCooking_PotatoBuns 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 GoodJobSuzette.HomeCooking_CheeseSlices 1 Cornucopia_PickleSpears 1 Cornucopia_BlackBeans 3 Cornucopia_Lettuce 1"
+				},
+				"HeyKatu.CulinaryDelight_dipping_fries": { //Dipping Fries: Potato x1, Tomato x1, Salt x1, Garlic Mayonnaise x1
+					"0": "GoodJobSuzette.HomeCooking_Fries 1 GoodJobSuzette.HomeCooking_Ketchup 1 Cornucopia_GarlicMayonnaise 1"
+				},
+				"HeyKatu.CulinaryDelight_margherita_pizza": { //Margherita Pizza: Flour x1, Tomato x1, Goat Cheese x1, Basil x1, Roasted Garlic x1
+					"0": "GoodJobSuzette.HomeCooking_PizzaDough 1 GoodJobSuzette.HomeCooking_RedSauce 1 GoodJobSuzette.HomeCooking_ShreddedGoatCheese 1 Cornucopia_Basil 1 Cornucopia_RoastedGarlic 1"
+				},
+				"HeyKatu.CulinaryDelight_grilled_cheese": { //Hot Grilled Cheese: Bread x1, Cheese x1, Spicy Mayonnaise x1, Jalapeno x1
+					"0": "GoodJobSuzette.HomeCooking_BreadSlices 2 GoodJobSuzette.HomeCooking_CheeseSlices 1 Cornucopia_SpicyMayonnaise 1 Cornucopia_Jalapeno 1"
+				},
+				"HeyKatu.CulinaryDelight_croquettes": { //Croquettes: Potato x1, Parsley x1, Onion x1, Egg x1, Oil x1, Salt x1
+					"0": "GoodJobSuzette.HomeCooking_MashedPotatoes 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Cornucopia_Onion 1 -5 1 247 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1"
+				},
+				"HeyKatu.CulinaryDelight_fish_and_chips": { //Fish and Chips: Fish x1, Flour x1, Potato x1, Lemon x1, Vinegar x1
+					"0": "-4 1 GoodJobSuzette.HomeCooking_Batter 1 GoodJobSuzette.HomeCooking_Fries 1 Cornucopia_Lemon 1 419 1"
+				},
+				"HeyKatu.CulinaryDelight_catfish_dinner": { //Catfish Dinner: Catfish x1, River Jelly x1, Lemon x1, Butter x1, Salt x1
+					"0": "143 1 RiverJelly 1 Cornucopia_Lemon 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"HeyKatu.CulinaryDelight_salmon_filet": { //Salmon Filet: Salmon x1, Maple Butter x1, Salt x1, Parsley x1
+					"0": "139 1 Cornucopia_MapleButter 1 GoodJobSuzette.HomeCooking_Salt 1 Cornucopia_Parsley 1"
+				},
+				"HeyKatu.CulinaryDelight_blackened_tofu": { //Blackened Tofu: Tofu x1, Basil x1, Oregano x1, Thyme x1, Pepper x1
+					"0": "Cornucopia_Tofu 1 Cornucopia_Basil 1 Cornucopia_Oregano 1 Cornucopia_Thyme 1 GoodJobSuzette.HomeCooking_Pepper 1"
+				},
+				"HeyKatu.CulinaryDelight_the_egg": { //"The Egg": Ostrich Egg x1, Salt x1, Pepper x1
+					"0": "289 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_Pepper 1"
+				}
+			}
+		},
+		// EAST SCARP
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=GoodJobSuzette.HomeCooking": "true",
+				"HasMod|contains=LemurKat.EastScarpe.CP": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"EastScarp_Cheesy_Jelly_Toast": { // 216 1 344 1 424 1
+					"0": "GoodJobSuzette.HomeCooking_BreadSlices 1 GoodJobSuzette.HomeCooking_CheeseSlices 1 344 1"
+				}
+			}
+		},
+		// EMILY THE MIXOLOGIST
+		{
+			"LogName": "Emily the Mixologist + Sunberry",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Airyn.EmilytheMixologist.CP": "true",
+				"HasMod|contains=skellady.SBVCP": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Airyn.EmilyMixologist_soggy_bandit": { // 216 1 344 1 424 1
+					"0": "skellady.SBVCP_WildMustard 1 GoodJobSuzette.HomeCooking_GroundGinger 1 Wildflour.AtelierGoods_Peach_Syrup 1 HXW.Mixology_vodka 1"
+				}
+			}
+		},
+		// GRANNY'S RECIPE BOX
+		{
+			"LogName": "Granny's Recipe Box",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=DuchessIvy.GrannysRecipeBox": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Ramen": {
+					"0": "DuchessIvy.GrannysRecipeBox_Rice_Noodles 1 -4 1 278 1 GoodJobSuzette.HomeCooking_SpringSlices 2 152 1 GoodJobSuzette.HomeCooking_RamenEgg 1"
+				},
+				"Macaroni and Cheese": {
+					"0": "GoodJobSuzette.HomeCooking_SpringSlices 1 GoodJobSuzette.HomeCooking_Pasta 1 -6 1 GoodJobSuzette.HomeCooking_MeltingCheese 1"
+				},
+				"Congee": {
+					"0": "404 2 423 1 GoodJobSuzette.HomeCooking_SpringSlices 2"
+				}
+			}
+		},
+		{
+			"LogName": "Granny's Recipe Box + CAM Rice Noodles",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=DuchessIvy.GrannysRecipeBox": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true"
+			},
+			"Priority": "Default + 200",
+			"Entries": { //this way you can buy granny's noodles & convert them to cam's since they are a one-use item
+				"Cornucopia_RiceNoodles": "DuchessIvy.GrannysRecipeBox_Rice_Noodles 1/1 10/Cornucopia_RiceNoodles 1/default"
+			},
+			"Fields": {
+				"Ramen": {
+					"0": "Cornucopia_RiceNoodles 1 -4 1 278 1 GoodJobSuzette.HomeCooking_SpringSlices 2 152 1 GoodJobSuzette.HomeCooking_RamenEgg 1"
+				}
+			}
+		},
+		// HIDDEN CROP RECIPES
+		{
+			"LogName": "Hidden Crop Recipes",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=cosmicRetribution.HiddenCropRecipes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"CarrotGingerSoup": {
+					"0": "Carrot 3 GoodJobSuzette.HomeCooking_GroundGinger 2 GoodJobSuzette.HomeCooking_HeavyCream 1 GoodJobSuzette.HomeCooking_RabbitBroth 1 GoodJobSuzette.HomeCooking_ShreddedGoatCheese 1"
+				},
+				"Pasta Primavera": {
+					"0": "Carrot 1 Broccoli 1 SummerSquash 1 GoodJobSuzette.HomeCooking_GarlicCloves 1 GoodJobSuzette.HomeCooking_Pasta 1"
+				},
+				"Quiche": {
+					"0": "-5 6 Broccoli 1 GoodJobSuzette.HomeCooking_SpringSlices 2 GoodJobSuzette.HomeCooking_ShreddedCheese 1 GoodJobSuzette.HomeCooking_HeavyCream 1 GoodJobSuzette.HomeCooking_PieDough 1"
+				},
+				"SummerSquashGoatCheeseTart": {
+					"0": "192 1 SummerSquash 1 GoodJobSuzette.HomeCooking_ShreddedGoatCheese 2 GoodJobSuzette.HomeCooking_Butter 1 GoodJobSuzette.HomeCooking_PieDough 1"
+				},
+				"SummerSquashSkillet": {
+					"0": "SummerSquash 1 404 1 247 1 GoodJobSuzette.HomeCooking_TomatoDiced 2"
+				}
+			}
+		},
+		// MAD DOG'S BEAR FAM
+		{
+			"LogName": "BearFam",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Priority": "Default + 200",
+			"When": {
+				"HasMod|contains=MadDog.HashtagBearFam": "true"
+			},
+			"Fields": {
+				"MadDog.HashtagBearFam_BrazierSecretAlfredo": {
+					"0": "GoodJobSuzette.HomeCooking_GarlicCloves 3 GoodJobSuzette.HomeCooking_ShreddedCheese 1 GoodJobSuzette.HomeCooking_Bechamel 1 GoodJobSuzette.HomeCooking_Pasta 1"
+				},
+				"MadDog.HashtagBearFam_SondraPerfectRamen": {
+					"0": "GoodJobSuzette.HomeCooking_SpringSlices 1 406 1 GoodJobSuzette.HomeCooking_SoftEgg 1 GoodJobSuzette.HomeCooking_RamenNoodles 1 GoodJobSuzette.HomeCooking_Dashi 1"
+				},
+				"MadDog.HashtagBearFam_SigurdPerfectRamen": {
+					"0": "GoodJobSuzette.HomeCooking_HotPepperFlakes 2 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_RamenEgg 1 GoodJobSuzette.HomeCooking_RamenNoodles 1 GoodJobSuzette.HomeCooking_Dashi 1"
+				},
+				"MadDog.HashtagBearFam_GunnarPerfectRamen": {
+					"0": "22 1 404 1 GoodJobSuzette.HomeCooking_SoftEgg 1 GoodJobSuzette.HomeCooking_RamenNoodles 1 GoodJobSuzette.HomeCooking_Dashi 1"
+				},
+				"MadDog.HashtagBearFam_GudrunPerfectRamen": {
+					"0": "278 1 250 1 GoodJobSuzette.HomeCooking_RamenEgg 1 GoodJobSuzette.HomeCooking_RamenNoodles 1 GoodJobSuzette.HomeCooking_VeggieBroth 1"
+				},
+				"MadDog.HashtagBearFam_TriangleGrilledCheese": {
+					"0": "GoodJobSuzette.HomeCooking_BreadSlices 2 GoodJobSuzette.HomeCooking_CheeseSlices 1 GoodJobSuzette.HomeCooking_Butter 1"
+				},
+				"MadDog.HashtagBearFam_TerenMakes_MushroomSteakBurger": {
+					"0": "250 1 404 2 GoodJobSuzette.HomeCooking_CaramelizedOnions 3 GoodJobSuzette.HomeCooking_TomatoSlices 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				}
+			}
+		},
+		// NEW RECIPES BY CYBERZ
+		{
+			"LogName": "CyberZ",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Priority": "Default + 200",
+			"When": {
+				"HasMod|contains=CyberZ.NewRecipes": "true"
+			},
+			"Fields": {
+				"Ratatouille": {
+					"0": "(O)272 1 GoodJobSuzette.HomeCooking_TomatoSlices 4 (O)SummerSquash 1 (O)247 1"
+				},
+				"Mushroom Soup": {
+					"0": "(O)404 1 GoodJobSuzette.HomeCooking_Bechamel 1 GoodJobSuzette.HomeCooking_HeavyCream 1 GoodJobSuzette.HomeCooking_MushroomBroth 1 GoodJobSuzette.HomeCooking_GarlicCloves 3"
+				},
+				"Salmon Steak": {
+					"0": "(O)139 1 (O)247 1 (O)340 1 GoodJobSuzette.HomeCooking_GarlicCloves 2"
+				},
+				"Mixed Fruit Smoothie": {
+					"0": "(O)282 1 (O)410 1 (O)400 1 (O)258 1 GoodJobSuzette.HomeCooking_BerryNutMilk 1"
+				},
+				"Shrimp Fried Rice": {
+					"0": "-5 1 (O)423 1 (O)720 1 GoodJobSuzette.HomeCooking_SpringSlices 2"
+				}
+			}
+		},
+		{
+			"LogName": "CyberZ - Curry Rice",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Priority": "Default + 200",
+			"When": {
+				"HasMod|contains=CyberZ.NewRecipes": "true",
+				"HasMod": "Cornucopia.MoreCrops, Wildflour.AtelierGoods"
+			},
+			"Fields": {
+				"Curry Rice": { //curryroux when live
+					"0": "(O)423 1 (O)192 1 (O)Carrot 1 (O)20 1 GoodJobSuzette.HomeCooking_CurryPowder 1"
+				}
+			}
+		},
+		// RIDGESIDE VALLEY
+		{
+			"LogName": "Ridgeside Valley",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Priority": "Default + 200",
+			"Fields": {
+				"Arugula Roll": {
+					"0": "Rafseazz.RSVCP_Mountain_Arugula 3 229 1 GoodJobSuzette.HomeCooking_RedSauce 1 GoodJobSuzette.HomeCooking_HotSauce 1"
+				},
+				"Ginger Arugula Fried Rice": {
+					"0": "423 1 Rafseazz.RSVCP_Mountain_Arugula 1 -5 1 GoodJobSuzette.HomeCooking_GroundGinger 1 GoodJobSuzette.HomeCooking_HerbOil 1 GoodJobSuzette.HomeCooking_SpringSlices 4"
+				},
+				"Honey Ginger Whitefish": {
+					"0": "Rafseazz.RSVCP_Mountain_Whitefish 1 Rafseazz.RSVCP_Mountain_Arugula 1 GoodJobSuzette.HomeCooking_GroundGinger 1 GoodJobSuzette.HomeCooking_CowfolkSauce 1"
+				},
+				"Pumpkin Darling Slice": {
+					"0": "245 1 Rafseazz.RSVCP_Mountain_Arugula 1 Rafseazz.RSVCP_Mountain_Plumcot 1 GoodJobSuzette.HomeCooking_PumpkinPuree 1 GoodJobSuzette.HomeCooking_PieDough 1"
+				},
+				"Ridge Fruity Plate": {
+					"0": "Rafseazz.RSVCP_Autumn_Drop_Berry 1 Rafseazz.RSVCP_Ridge_Wild_Apple 1 Rafseazz.RSVCP_Frost_Clump_Berry 1 Rafseazz.RSVCP_Highland_Chard 1 GoodJobSuzette.HomeCooking_OilVinaigrette 1"
+				},
+				"Ridge Mosaic Cake": {
+					"0": "223 2 245 1 GoodJobSuzette.HomeCooking_Batter 1 GoodJobSuzette.HomeCooking_Butter 1"
+				}
+			}
+		},
+		// SNACK TIME
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=WoolyPie.SnackTime": "true"
+			},
+			"Priority": "Default + 300",
+			"Fields": {
+				"Jerk Salmon Jerky": { // 260 1 139 1
+					"0": "139 1 GoodJobSuzette.HomeCooking_HotPepperFlakes 2"
+				},
+				"Peppy Pizza Rolls": { // 424 1 260 1 246 1
+					"0": "GoodJobSuzette.HomeCooking_SweetSausage 1 GoodJobSuzette.HomeCooking_RedSauce 2 GoodJobSuzette.HomeCooking_ShreddedCheese 2 GoodJobSuzette.HomeCooking_HotPepperFlakes 2 GoodJobSuzette.HomeCooking_PizzaDough 1"
+				},
+				"Rainy Day Ramen": { // -5 1 246 1 20 1
+					"0": "20 1 GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_RamenEgg 1 GoodJobSuzette.HomeCooking_Dashi 1 GoodJobSuzette.HomeCooking_RamenNoodles 1"
+				},
+				"Study Break Snack": { // 216 1 404 1
+					"0": "404 1 GoodJobSuzette.HomeCooking_Butter 1 GoodJobSuzette.HomeCooking_BreadSlices 2"
+				},
+				"Void Egg Salad Sandwich": { // 216 1 305 1
+					"0": "308 1 GoodJobSuzette.HomeCooking_HardVoidEgg 2 GoodJobSuzette.HomeCooking_BreadSlices 2"
+				}
+			}
+		},
+		// VANILLA COOKING RECIPES
+		{
+			"LogName": "Vanilla Cooking Recipes",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=GoodJobSuzette.HomeCooking": "true",
+				"HasMod|contains=MissAnaira.VanillaCookingRecipes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"MissAnaira.VanillaCookingRecipes_BreakfastBurrito": {
+					"0": "229 1 195 1 GoodJobSuzette.HomeCooking_ShreddedCheese 1 GoodJobSuzette.HomeCooking_HotSauce 1"
+				},
+				"MissAnaira.VanillaCookingRecipes_ChipsAndSalsa": { //sub hot pineapplesalsa when live
+					"0": "268 1 GoodJobSuzette.HomeCooking_TortillaChips 2 GoodJobSuzette.HomeCooking_GardenSalsa 1"
+				},
+				"MissAnaira.VanillaCookingRecipes_ClubSunwich": {
+					"0": "156 1 648 1 768 1 GoodJobSuzette.HomeCooking_BreadSlices 2 GoodJobSuzette.HomeCooking_VoidPickledEggs 1"
+				},
+				"MissAnaira.VanillaCookingRecipes_DeviledEggs": {
+					"0": "430 1 307 1 GoodJobSuzette.HomeCooking_HardEgg 3"
+				},
+				"MissAnaira.VanillaCookingRecipes_FishAndChips": {
+					"0": "-4 1 246 1 247 1 346 1 GoodJobSuzette.HomeCooking_Fries 1 GoodJobSuzette.HomeCooking_Ketchup 1"
+				},
+				"MissAnaira.VanillaCookingRecipes_GobySuccotash": {
+					"0": "Goby 1 270 1 188 1 GoodJobSuzette.HomeCooking_TomatoDiced 1 GoodJobSuzette.HomeCooking_Butter 1 GoodJobSuzette.HomeCooking_VeggieBroth 1"
+				},
+				"MissAnaira.VanillaCookingRecipes_MacAndCheese": {
+					"0": "GoodJobSuzette.HomeCooking_Pasta 1 GoodJobSuzette.HomeCooking_ShreddedCheese 1 GoodJobSuzette.HomeCooking_MeltingCheese 1"
+				},
+				"MissAnaira.VanillaCookingRecipes_QiBurger": {
+					"0": "GoodJobSuzette.HomeCooking_RoastedNutMilk 1 889 1 890 2 284 1 GoodJobSuzette.HomeCooking_PotatoBuns 1 GoodJobSuzette.HomeCooking_NutCheeseSlices 1"
+				},
+				"MissAnaira.VanillaCookingRecipes_Ramen": {
+					"0": "DriedMushrooms 1 GoodJobSuzette.HomeCooking_RamenEgg 2 Carrot 1 GoodJobSuzette.HomeCooking_RamenNoodles 1 GoodJobSuzette.HomeCooking_SpringSlices 2 278 1"
+				},
+				"MissAnaira.VanillaCookingRecipes_RhubarbBalsamic": {
+					"0": "252 1 GoodJobSuzette.HomeCooking_GroundGinger 1 724 1 419 1"
+				},
+				"MissAnaira.VanillaCookingRecipes_SquashRisotto": {
+					"0": "348 1 271 1 SummerSquash 1 GoodJobSuzette.HomeCooking_VeggieBroth 1 GoodJobSuzette.HomeCooking_SpringSlices 3"
+				}
+			}
+		},
+		{
+			"LogName": "Vanilla Cooking Recipes + SBV",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=GoodJobSuzette.HomeCooking": "true",
+				"HasMod|contains=MissAnaira.VanillaCookingRecipes": "true",
+				"HasMod|contains=skellady.SBVCP": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"MissAnaira.VanillaCookingRecipes_MacAndCheese": {
+					"0": "GoodJobSuzette.HomeCooking_Pasta 1 GoodJobSuzette.HomeCooking_ShreddedCheese 1 GoodJobSuzette.HomeCooking_MeltingCheese 1 GoodJobSuzette.HomeCooking_HotMustard 1"
+				}
+			}
+		},
+		// YET ANOTHER COOKING SKILL
+		{
+			"LogName": "YACS",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": { "HasMod|contains=moonslime.CookingSkill": "true" },
+			"Priority": "Default + 300",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_CrabBisque": {
+					"0": "348 1 moonslime.Cooking.rice 1 717 2 GoodJobSuzette.HomeCooking_TomatoPaste 1 GoodJobSuzette.HomeCooking_BoneStock 1 GoodJobSuzette.HomeCooking_HeavyCream 1"
+				},
+				"moonslime.Cooking.spring_onion_soup": { // 399 5
+					"0": "GoodJobSuzette.HomeCooking_SpringSlices 20 GoodJobSuzette.HomeCooking_GoldenBroth 1"
+				},
+				"moonslime.Cooking.fries": { // 192 3 256 1
+					"0": "192 3 GoodJobSuzette.HomeCooking_Ketchup 1"
+				},
+				"moonslime.Cooking.fishers_breakfast": { // 242 1 256 1
+					"0": "242 1 GoodJobSuzette.HomeCooking_TomatoSlices 3"
+				},
+				"moonslime.Cooking.ramen": { // 152 2 399 1 246 1 -4 1
+					"0": "-4 1 152 2 GoodJobSuzette.HomeCooking_Dashi 1 GoodJobSuzette.HomeCooking_SpringSlices 3 GoodJobSuzette.HomeCooking_RamenNoodles 1"
+				},
+				"moonslime.Cooking.egg_burrito": { // 195 1 424 1 229 1
+					"0": "195 1 GoodJobSuzette.HomeCooking_ShreddedCheese 1 229 1"
+				},
+				"moonslime.Cooking.oeuf": { // -5 1 216 1
+					"0": "GoodJobSuzette.HomeCooking_SoftEgg 1 GoodJobSuzette.HomeCooking_BreadSlices 1 GoodJobSuzette.HomeCooking_Butter 1"
+				},
+				"moonslime.Cooking.egg_ramen": { // -5 2 moonslime.Cooking.ramen 1
+					"0": "GoodJobSuzette.HomeCooking_RamenEgg 1 moonslime.Cooking.ramen 1"
+				},
+				"moonslime.Cooking.egg_sandwhich": { // -5 1 250 2 256 2 216 1
+					"0": "194 1 250 2 GoodJobSuzette.HomeCooking_TomatoSlices 2 GoodJobSuzette.HomeCooking_BreadSlices 2"
+				},
+				"moonslime.Cooking.tomatoe_cheese_omelet": { // 195 1 424 1 256 1
+					"0": "195 1 GoodJobSuzette.HomeCooking_ShreddedCheese 2 GoodJobSuzette.HomeCooking_TomatoSlices 2"
+				},
+				"moonslime.Cooking.nigiri": { // 148 3
+					"0": "148 3 GoodJobSuzette.HomeCooking_OysterSauce 1"
+				},
+				"moonslime.Cooking.wizard_casserole": { // 422 2 188 2 246 2 155 2
+					"0": "422 2 188 2 155 2 GoodJobSuzette.HomeCooking_Batter 1"
+				}
+			}
+		},
+		{
+			"LogName": "YACS + AHM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=moonslime.CookingSkill": "true",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true"
+			},
+			"Priority": "Default + 300",
+			"Fields": {
+				"moonslime.Cooking.tomato_soup": { // 256 5
+					"0": "GoodJobSuzette.HomeCooking_TomatoBeefBase 3"
+				}
+			}
+		}
+	]
+}

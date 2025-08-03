@@ -1,0 +1,494 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooked Addons for Wildflour Atelier Goods",
+	"Changes": [
+		// OBJECTS
+		{
+			"LogName": "OBJECTS - WAG",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_JasmineTea": {
+					"Name": "{{ModId}}_JasmineTea",
+					"Displayname": "{{i18n: HomeCooking_JasmineTea}}",
+					"Description": "{{i18n: HomeCooking_JasmineTea.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 15,
+					"Edibility": 30,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 19,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"tea_item"
+					]
+				}
+			}
+		},
+		// RECIPES
+		{
+			"LogName": "BASICS - WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": { "HasMod|contains=Wildflour.AtelierGoods": "true" },
+			"Entries": {
+				"{{ModId}}_CaramelizedOnions": "247 1 Wildflour.AtelierGoods_Butter 1 Wildflour.AtelierGoods_Red_Onion 3/1 10/{{ModId}}_CaramelizedOnions 18/default/{{i18n: HomeCooking_CaramelizedOnions}}", // oil butter redonion
+				"{{ModId}}_CinnamonSugar": "245 5 {{ModId}}_GroundCinnamon 5/1 10/{{ModId}}_CinnamonSugar 10/default/{{i18n: HomeCooking_CinnamonSugar}}", // DEFENSE1 sugar groundcinnamon
+				"{{ModId}}_CountrySeasoning": "Wildflour.AtelierGoods_Rosemary 1 Wildflour.AtelierGoods_Basil 1 Wildflour.AtelierGoods_Sage 1 Wildflour.AtelierGoods_Thyme 1/1 10/{{ModId}}_CountrySeasoning 10/default/{{i18n: HomeCooking_CountrySeasoning}}", // rosemary basil sage thyme
+				"{{ModId}}_CurryPowder": "{{ModId}}_GroundCinnamon 2 {{ModId}}_GroundGinger 2 {{ModId}}_HotPepperFlakes 2/1 10/{{ModId}}_CurryPowder 10/default/{{i18n: HomeCooking_CurryPowder}}", // SPEED2-DEFENSE2-ATTK2 groundginger2 groundcinnamon2 hotpepperflakes2
+				"{{ModId}}_GreenPasta": "Wildflour.AtelierGoods_Bread_Flour 3 -5 2 Wildflour.AtelierGoods_Olive_Oil 1 Wildflour.AtelierGoods_Basil 2/1 10/{{ModId}}_GreenPasta 5/default/{{i18n: HomeCooking_GreenPasta}}", // breadflour3 egg2 oil basil2
+				"{{ModId}}_GroundCinnamon": "Wildflour.AtelierGoods_Cinnamon 1/1 10/{{ModId}}_GroundCinnamon 10/default/{{i18n: HomeCooking_GroundCinnamon}}", // DEFENSE1 cinnamon
+				"{{ModId}}_JasmineTea": "815 1 Wildflour.AtelierGoods_Jasmine 1/1 10/{{ModId}}_JasmineTea 1/default/{{i18n: HomeCooking_JasmineTea}}" // tealeaf jasmine
+			}
+		},
+		// ADDONS: [CONTEXT TAG RECIPES: FALSE]
+		{
+			"LogName": "Home Cooking - WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Context Tag Recipes": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_ApplePieFilling": {
+					"0": "613 3 Wildflour.AtelierGoods_Almond_Flour 1 GoodJobSuzette.HomeCooking_CinnamonSugar 1 Wildflour.AtelierGoods_Butter 1 Wildflour.AtelierGoods_Vanilla 1"
+				},
+				"GoodJobSuzette.HomeCooking_AutumnGardenSoup": {
+					"0": "GoodJobSuzette.HomeCooking_AutumnGardenSoup_Veg 1 720 1 GoodJobSuzette.HomeCooking_DashiUmamiBase 1 GoodJobSuzette.HomeCooking_Pasta 1 Wildflour.AtelierGoods_Cashew 1"
+				},
+				"GoodJobSuzette.HomeCooking_Batter": {
+					"0": "-5 3 Wildflour.AtelierGoods_Almond_Flour 1 Wildflour.AtelierGoods_Olive_Oil 1"
+				},
+				"GoodJobSuzette.HomeCooking_BoneStock": { //6
+					"0": "Wildflour.AtelierGoods_Anise 2 GoodJobSuzette.HomeCooking_GroundCinnamon 1 881 20 Carrot 4 GoodJobSuzette.HomeCooking_GarlicCloves 6 GoodJobSuzette.HomeCooking_HerbVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_ClamOreganata": { //6
+					"0": "Wildflour.AtelierGoods_Butter 1 Wildflour.AtelierGoods_Lemon 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 372 3 348 1 GoodJobSuzette.HomeCooking_GarlicCloves 3"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": {
+					"0": "16 1 340 1 419 1 Wildflour.AtelierGoods_Red_Onion 1 Wildflour.AtelierGoods_Olive_Oil 1"
+				},
+				"GoodJobSuzette.HomeCooking_HotSauce": {
+					"0": "260 3 419 1 Wildflour.AtelierGoods_Lime 1 Wildflour.AtelierGoods_Cilantro 1"
+				},
+				"GoodJobSuzette.HomeCooking_JojaRice": { //6
+					"0": "167 1 GoodJobSuzette.HomeCooking_SpringSlices 1 423 1 Raisins 1 GoodJobSuzette.HomeCooking_VeggieBroth 1 Wildflour.AtelierGoods_Butter 1"
+				},
+				"GoodJobSuzette.HomeCooking_Ketchup": { //6
+					"0": "20 1 340 1 419 1 GoodJobSuzette.HomeCooking_TomatoPaste 1 GoodJobSuzette.HomeCooking_GroundCinnamon 1 Wildflour.AtelierGoods_Brown_Sugar 1"
+				},
+				"GoodJobSuzette.HomeCooking_LemonPosset": {
+					"0": "Wildflour.AtelierGoods_Lemon 2 Wildflour.AtelierGoods_Vanilla 1 245 1 Wildflour.AtelierGoods_Cream 1"
+				},
+				"GoodJobSuzette.HomeCooking_MamaFrittata": {
+					"0": "-5 3 Broccoli 1 Wildflour.AtelierGoods_Pepper_Relish 2 GoodJobSuzette.HomeCooking_ShreddedCheese 1 GoodJobSuzette.HomeCooking_SourCream 1"
+				},
+				"GoodJobSuzette.HomeCooking_MashedPotatoes": {
+					"0": "192 3 -6 2 Wildflour.AtelierGoods_Butter 2"
+				},
+				"GoodJobSuzette.HomeCooking_OilVinaigrette": {
+					"0": "GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_GarlicCloves 4 Wildflour.AtelierGoods_Olive_Oil 1 Wildflour.AtelierGoods_Lemon 1"
+				},
+				"GoodJobSuzette.HomeCooking_OrangePosset": {
+					"0": "Wildflour.AtelierGoods_Vanilla 1 635 1 245 1 Wildflour.AtelierGoods_Cream 1"
+				},
+				"GoodJobSuzette.HomeCooking_OysterChowder": { //6
+					"0": "GoodJobSuzette.HomeCooking_OysterChowder_Veg 1 723 3 Wildflour.AtelierGoods_Cream 1 GoodJobSuzette.HomeCooking_FishBroth 1 GoodJobSuzette.HomeCooking_ClamJuice 1 Wildflour.AtelierGoods_Lemon 1"
+				},
+				"GoodJobSuzette.HomeCooking_PersonalPizza": {
+					"0": "Wildflour.AtelierGoods_Pepper_Relish 1 GoodJobSuzette.HomeCooking_ShreddedCheese 1 GoodJobSuzette.HomeCooking_RedSauce 1 GoodJobSuzette.HomeCooking_PizzaDough 1"
+				},
+				"GoodJobSuzette.HomeCooking_PotatoBuns": { //6
+					"0": "-5 2 245 2 453 1 GoodJobSuzette.HomeCooking_MashedPotatoes 1 GoodJobSuzette.HomeCooking_CaramelizedOnions 3 Wildflour.AtelierGoods_Bread_Flour 2"
+				},
+				"GoodJobSuzette.HomeCooking_PizzaDough": {
+					"0": "245 2 Wildflour.AtelierGoods_Bread_Flour 3 Wildflour.AtelierGoods_Olive_Oil 1"
+				},
+				"GoodJobSuzette.HomeCooking_RedCabbageSlaw": { //6
+					"0": "264 1 266 1 306 1 340 1 Wildflour.AtelierGoods_Red_Onion 1 Wildflour.AtelierGoods_Cilantro 1"
+				},
+				"GoodJobSuzette.HomeCooking_SpringHarvestPotPie": { //6
+					"0": "20 1 GoodJobSuzette.HomeCooking_SpringVeg 1 GoodJobSuzette.HomeCooking_Bechamel 1 GoodJobSuzette.HomeCooking_PieDough 2 GoodJobSuzette.HomeCooking_VeggieBroth 1 Wildflour.AtelierGoods_Rosemary"
+				},
+				"GoodJobSuzette.HomeCooking_SummerHarvestPotPie": { //6
+					"0": "264 1 266 1 GoodJobSuzette.HomeCooking_Bechamel 1 GoodJobSuzette.HomeCooking_PieDough 2 GoodJobSuzette.HomeCooking_GoldenBroth 1 Wildflour.AtelierGoods_Chicken_Woods 1"
+				},
+				"GoodJobSuzette.HomeCooking_VeggieBroth": { //6
+					"0": "Wildflour.AtelierGoods_Rosemary 2 Wildflour.AtelierGoods_Thyme 1 Carrot 4 GoodJobSuzette.HomeCooking_GarlicCloves 4 250 1 GoodJobSuzette.HomeCooking_TomatoDiced 3"
+				},
+				"GoodJobSuzette.HomeCooking_WinterForagePotPie": {
+					"0": "GoodJobSuzette.HomeCooking_WinterForageBlend 1 GoodJobSuzette.HomeCooking_Bechamel 1 GoodJobSuzette.HomeCooking_PieDough 2 GoodJobSuzette.HomeCooking_RabbitStock 1 GoodJobSuzette.HomeCooking_GroundCinnamon 1"
+				},
+				"GoodJobSuzette.HomeCooking_Worchestershire": {
+					"0": "419 1 GoodJobSuzette.HomeCooking_HotSauce 1 Wildflour.AtelierGoods_Lime 1 Wildflour.AtelierGoods_Brown_Sugar 1"
+				}
+			}
+		},
+		{
+			"LogName": "Home Cooking - WAG (no RCM)",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Context Tag Recipes": "false",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "false"
+				},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_OysterSauce": {
+					"0": "GoodJobSuzette.HomeCooking_DriedOysters 3 GoodJobSuzette.HomeCooking_Worchestershire 1 245 1 Wildflour.AtelierGoods_Rice_Flour 1"
+				}
+			}
+		},
+		{
+			"LogName": "Home Cooking - WAG (+ RCM)",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Enable AHM": "true",
+				"Context Tag Recipes": "false",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_OysterSauce": {
+					"0": "Roseloves109_driedfish 3 GoodJobSuzette.HomeCooking_Worchestershire 1 245 1 Wildflour.AtelierGoods_Rice_Flour 1"
+				}
+			}
+		},
+		// ADDONS: [CONTEXT TAG RECIPES: TRUE]
+		{
+			"LogName": "Home Cooking - WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Context Tag Recipes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BoneStock": { //6
+					"0": "Wildflour.AtelierGoods_Anise 2 GoodJobSuzette.HomeCooking_GroundCinnamon 1 881 20 Carrot 4 GoodJobSuzette.HomeCooking_GarlicCloves 6 GoodJobSuzette.HomeCooking_HerbVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": {
+					"0": "16 1 340 1 419 1 Wildflour.AtelierGoods_Red_Onion 1 Wildflour.AtelierGoods_Olive_Oil 1"
+				},
+				"GoodJobSuzette.HomeCooking_JojaRice": { //6
+					"0": "167 1 GoodJobSuzette.HomeCooking_SpringSlices 1 423 1 Raisins 1 GoodJobSuzette.HomeCooking_VeggieBroth 1 Wildflour.AtelierGoods_Butter 1"
+				},
+				"GoodJobSuzette.HomeCooking_MamaFrittata": {
+					"0": "-5 3 Broccoli 1 Wildflour.AtelierGoods_Pepper_Relish 2 GoodJobSuzette.HomeCooking_ShreddedCheese 1 GoodJobSuzette.HomeCooking_SourCream 1"
+				},
+				"GoodJobSuzette.HomeCooking_MashedPotatoes": {
+					"0": "192 3 -6 2 Wildflour.AtelierGoods_Butter 2"
+				},
+				"GoodJobSuzette.HomeCooking_OilVinaigrette": {
+					"0": "GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_GarlicCloves 4 Wildflour.AtelierGoods_Olive_Oil 1 Wildflour.AtelierGoods_Lemon 1"
+				},
+				"GoodJobSuzette.HomeCooking_PersonalPizza": {
+					"0": "Wildflour.AtelierGoods_Pepper_Relish 1 GoodJobSuzette.HomeCooking_ShreddedCheese 1 GoodJobSuzette.HomeCooking_RedSauce 1 GoodJobSuzette.HomeCooking_PizzaDough 1"
+				},
+				"GoodJobSuzette.HomeCooking_PotatoBuns": { //6
+					"0": "-5 2 245 2 453 1 GoodJobSuzette.HomeCooking_MashedPotatoes 1 GoodJobSuzette.HomeCooking_CaramelizedOnions 3 Wildflour.AtelierGoods_Bread_Flour 2"
+				},
+				"GoodJobSuzette.HomeCooking_PizzaDough": {
+					"0": "245 2 Wildflour.AtelierGoods_Bread_Flour 3 Wildflour.AtelierGoods_Olive_Oil 1"
+				},
+				"GoodJobSuzette.HomeCooking_RedCabbageSlaw": { //6
+					"0": "264 1 266 1 306 1 340 1 Wildflour.AtelierGoods_Red_Onion 1 Wildflour.AtelierGoods_Cilantro 1"
+				},
+				"GoodJobSuzette.HomeCooking_VeggieBroth": { //6
+					"0": "Wildflour.AtelierGoods_Rosemary 2 Wildflour.AtelierGoods_Thyme 1 Carrot 4 GoodJobSuzette.HomeCooking_GarlicCloves 4 250 1 GoodJobSuzette.HomeCooking_TomatoDiced 3"
+				},
+				"GoodJobSuzette.HomeCooking_Worchestershire": {
+					"0": "419 1 GoodJobSuzette.HomeCooking_HotSauce 1 Wildflour.AtelierGoods_Lime 1 Wildflour.AtelierGoods_Brown_Sugar 1"
+				}
+			}
+		},
+		{
+			"LogName": "Home Cooking - WAG (no RCM)",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Context Tag Recipes": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_OysterSauce": {
+					"0": "GoodJobSuzette.HomeCooking_DriedOysters 3 GoodJobSuzette.HomeCooking_Worchestershire 1 245 1 Wildflour.AtelierGoods_Rice_Flour 1"
+				}
+			}
+		},
+		{
+			"LogName": "Home Cooking - WAG (+ RCM)",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Enable AHM": "true",
+				"Context Tag Recipes": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_OysterSauce": {
+					"0": "Roseloves109_driedfish 3 GoodJobSuzette.HomeCooking_Worchestershire 1 245 1 Wildflour.AtelierGoods_Rice_Flour 1"
+				}
+			}
+		},
+		// ADDONS: [CONTEXT TAG RECIPES: FALSE] + AHM
+		{
+			"LogName": "Home Cooking - WAG&AHM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Context Tag Recipes": "false",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_ChickenGravy": { //6
+					"0": "246 1 348 1 GoodJobSuzette.HomeCooking_ChickenBroth 1 641 2 Wildflour.AtelierGoods_Thyme 1 Wildflour.AtelierGoods_Sage 1"
+				},
+				"GoodJobSuzette.HomeCooking_HamburgerSoup": {
+					"0": "GoodJobSuzette.HomeCooking_TomatoBeefBase 1 192 1 Wildflour.AtelierGoods_Pepper_Relish 1 Carrot 1 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_GroundBeef 1"
+				},
+				"GoodJobSuzette.HomeCooking_JojaRibs": { //6
+					"0": "GoodJobSuzette.HomeCooking_TomatoBeefBase 1 167 1 639 1 Carrot 1 GoodJobSuzette.HomeCooking_MashedPotatoes 1 Wildflour.AtelierGoods_Rosemary 1"
+				},
+				"GoodJobSuzette.HomeCooking_PieDough": {
+					"0": "245 1 419 1 Wildflour.AtelierGoods_Butter 2 Wildflour.AtelierGoods_Pastry_Flour 1"
+				},
+				"GoodJobSuzette.HomeCooking_PotRoast": {
+					"0": "Carrot 2 639 1 GoodJobSuzette.HomeCooking_BeefBroth 1 Wildflour.AtelierGoods_Thyme 1 Wildflour.AtelierGoods_Rosemary 1"
+				},
+				"GoodJobSuzette.HomeCooking_PumpkinRisotto": { //6
+					"0": "348 1 271 1 666 1 GoodJobSuzette.HomeCooking_PumpkinPuree 1 GoodJobSuzette.HomeCooking_ChickenBroth 1 Wildflour.AtelierGoods_Butter 1"
+				},
+				"GoodJobSuzette.HomeCooking_RedClamChowder": { //6
+					"0": "GoodJobSuzette.HomeCooking_TomatoDiced 6 Wildflour.AtelierGoods_Pepper_Relish 1 372 3 660 1 GoodJobSuzette.HomeCooking_ClamJuice 1 Wildflour.AtelierGoods_Thyme 1"
+				}
+			}
+		},
+		// ADDONS: [CONTEXT TAG RECIPES: FALSE] + AHM
+		{
+			"LogName": "Home Cooking - WAG&AHM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Context Tag Recipes": "false",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true",
+				"HasMod|contains=kaazkulaas.AHMCrueltyFreeCompatibility": "false",
+				"HasMod|contains=Roseloves109.MeatPatch": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_SweetSausageSeasonings": {
+					"0": "245 1 348 1 GoodJobSuzette.HomeCooking_RedSauce 1 Wildflour.AtelierGoods_Basil 1 Wildflour.AtelierGoods_Rosemary 1"
+				}
+			}
+		},
+		// ADDONS: [CONTEXT TAG RECIPES: FALSE] + RCM
+		{
+			"LogName": "Home Cooking - WAG&RCM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Context Tag Recipes": "false",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_ChickenGravy": { //6
+					"0": "246 1 348 1 GoodJobSuzette.HomeCooking_ChickenBroth 1 641 2 Wildflour.AtelierGoods_Thyme 1 Wildflour.AtelierGoods_Sage 1"
+				},
+				"GoodJobSuzette.HomeCooking_HamburgerSoup": {
+					"0": "GoodJobSuzette.HomeCooking_TomatoBeefBase 1 192 1 Wildflour.AtelierGoods_Pepper_Relish 1 Carrot 1 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_GroundBeef 1"
+				},
+				"GoodJobSuzette.HomeCooking_JojaRibs": { //6
+					"0": "GoodJobSuzette.HomeCooking_TomatoBeefBase 1 167 1 Roseloves109_Beef 1 Carrot 1 GoodJobSuzette.HomeCooking_MashedPotatoes 1 Wildflour.AtelierGoods_Rosemary 1"
+				},
+				"GoodJobSuzette.HomeCooking_PieDough": {
+					"0": "245 1 419 1 Wildflour.AtelierGoods_Butter 2 Wildflour.AtelierGoods_Pastry_Flour 1"
+				},
+				"GoodJobSuzette.HomeCooking_PotRoast": {
+					"0": "Carrot 2 Roseloves109_Beef 1 GoodJobSuzette.HomeCooking_BeefBroth 1 Wildflour.AtelierGoods_Thyme 1 Wildflour.AtelierGoods_Rosemary 1"
+				},
+				"GoodJobSuzette.HomeCooking_PumpkinRisotto": { //6
+					"0": "348 1 271 1 Roseloves109_Bacon 1 GoodJobSuzette.HomeCooking_PumpkinPuree 1 GoodJobSuzette.HomeCooking_ChickenBroth 1 Wildflour.AtelierGoods_Butter 1"
+				},
+				"GoodJobSuzette.HomeCooking_RedClamChowder": { //6
+					"0": "GoodJobSuzette.HomeCooking_TomatoDiced 6 Wildflour.AtelierGoods_Pepper_Relish 1 372 3 660 1 GoodJobSuzette.HomeCooking_ClamJuice 1 Wildflour.AtelierGoods_Thyme 1"
+				}
+			}
+		},
+		{
+			"LogName": "Home Cooking - WAG&RCM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Context Tag Recipes": "false",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "false",
+				"HasMod|contains=kaazkulaas.AHMCrueltyFreeCompatibility": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_SweetSausageSeasonings": {
+					"0": "245 1 348 1 GoodJobSuzette.HomeCooking_RedSauce 1 Wildflour.AtelierGoods_Basil 1 Wildflour.AtelierGoods_Rosemary 1"
+				}
+			}
+		},
+		{
+			"LogName": "Home Cooking - WAG NO AHM (aka bg no ahm)",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "false",
+				"Context Tag Recipes": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_PieDough": {
+					"0": "245 1 419 1 GoodJobSuzette.HomeCooking_Lard 1 Wildflour.AtelierGoods_Butter 1 Wildflour.AtelierGoods_Pastry_Flour 1"
+				}
+			}
+		},
+		// ADDONS: [CONTEXT TAG RECIPES: FALSE] + CAM
+		{
+			"LogName": "Home Cooking - WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Enable CAM": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"Context Tag Recipes": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_CurryPowder": {
+					"0": "{{ModId}}_GroundCinnamon 2 {{ModId}}_GroundGinger 2 Cornucopia_ChiliPowder 2"
+				},
+				"GoodJobSuzette.HomeCooking_TortillaChips": {
+					"0": "Wildflour.AtelierGoods_Lime 1 229 3 GoodJobSuzette.HomeCooking_Salt 1"
+				}
+			}
+		},
+		// ADDONS: [CONTEXT TAG RECIPES: FALSE] + RMT
+		{
+			"LogName": "Home Cooking - WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable WAG": "true",
+				"Enable RMT": "true",
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "false",
+				"Context Tag Recipes": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_TortillaChips": {
+					"0": "Wildflour.AtelierGoods_Lime 1 229 3 GoodJobSuzette.HomeCooking_MineralSalt 1"
+				}
+			}
+		},
+		// VANILLA
+		{
+			"LogName": "Home Cooking - VANILLA + WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Vanilla Recipe Changes": "True",
+				"Enable WAG": "true",
+				"HasMod|contains=Wildflour.AtelierGoods": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Artichoke Dip": {
+					"0": "306 1 Wildflour.AtelierGoods_Artichoke_Hearts 1 GoodJobSuzette.HomeCooking_SourCream 1 Wildflour.AtelierGoods_Cream_Cheese 1 GoodJobSuzette.HomeCooking_ShreddedCheese 1 GoodJobSuzette.HomeCooking_GarlicCloves 1"
+				},
+				"Baked Fish": {
+					"0": "132 1 145 1 246 1 Wildflour.AtelierGoods_Thyme 1 Wildflour.AtelierGoods_Lemon 2 GoodJobSuzette.HomeCooking_GarlicCloves 1"
+				},
+				"Bruschetta": {
+					"0": "Wildflour.AtelierGoods_Bruschetta 1 GoodJobSuzette.HomeCooking_BreadSlices 1"
+				},
+				"Carp Surprise": {
+					"0": "142 4 250 1 GoodJobSuzette.HomeCooking_HerbOil 1 Wildflour.AtelierGoods_Lemon 1"
+				},
+				"Crab Cakes": {
+					"0": "-5 1 306 1 717 2 Wildflour.AtelierGoods_Lemon 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1"
+				},
+				"Crispy Bass": {
+					"0": "136 1 246 1 250 1 Wildflour.AtelierGoods_Lemon 1 GoodJobSuzette.HomeCooking_GarlicCloves 3 GoodJobSuzette.HomeCooking_TomatoPaste 1"
+				},
+				"Dish o' The Sea": { // Dish O' The Sea 242
+					"0": "131 2 210 1 342 1 Wildflour.AtelierGoods_Lemon 1 GoodJobSuzette.HomeCooking_Ketchup 1 GoodJobSuzette.HomeCooking_GarlicCloves 3"
+				},
+				"Eggplant Parm.": { //Eggplant Parmesan 231
+					"0": "272 1 Wildflour.AtelierGoods_Basil 1 Wildflour.AtelierGoods_Thyme 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_ShreddedCheese 2 GoodJobSuzette.HomeCooking_RedSauce 2"
+				},
+				"Fried Eel": {
+					"0": "148 1 247 1 Wildflour.AtelierGoods_Lemon 1 Wildflour.AtelierGoods_Rice_Flour 1 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1 GoodJobSuzette.HomeCooking_GarlicCloves 2"
+				},
+				"Radish Salad": {
+					"0": "264 3 Wildflour.AtelierGoods_Thyme 1 GoodJobSuzette.HomeCooking_OilVinaigrette 1"
+				},
+				"Red Plate": {
+					"0": "247 1 264 1 266 1 Wildflour.AtelierGoods_Red_Onion 1 Wildflour.AtelierGoods_Thyme 1 GoodJobSuzette.HomeCooking_GarlicCloves 3"
+				},
+				"Shrimp Cocktail": {
+					"0": "16 1 720 3 Wildflour.AtelierGoods_Lemon 1 GoodJobSuzette.HomeCooking_Ketchup 1 GoodJobSuzette.HomeCooking_Worchestershire 1 GoodJobSuzette.HomeCooking_HotSauce 1"
+				},
+				"Tropical Curry": {
+					"0": "GoodJobSuzette.HomeCooking_CurryPowder 1 Wildflour.AtelierGoods_Coconut_Milk 1 91 1 260 1 832 1 834 1"
+				}
+			}
+		},
+		// RECIPE EDITS
+		{
+			"LogName": "Wildflour EDITS",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Priority": "Default + 300",
+			"Fields": {
+				"Wildflour.AtelierGoods_Bruschetta": {
+					"0": "GoodJobSuzette.HomeCooking_TomatoDiced 2 GoodJobSuzette.HomeCooking_GarlicCloves 4 Wildflour.AtelierGoods_Basil 1"
+				},
+				"Wildflour.AtelierGoods_Kale_Pesto": {
+					"0": "250 2 Wildflour.AtelierGoods_Olive_Oil 1 GoodJobSuzette.HomeCooking_GarlicCloves 3"
+				},
+				"Wildflour.AtelierGoods_Tomato_Salsa": {
+					"0": "Wildflour.AtelierGoods_Red_Onion 1 Wildflour.AtelierGoods_Cilantro 1 GoodJobSuzette.HomeCooking_GarlicCloves 2 GoodJobSuzette.HomeCooking_TomatoDiced 4"
+				},
+				"Wildflour.AtelierGoods_Peach_Salsa": {
+					"0": "636 3 260 2 Wildflour.AtelierGoods_Cilantro 1 GoodJobSuzette.HomeCooking_GarlicCloves 2"
+				},
+				"Wildflour.AtelierGoods_Pickled_Fish": {
+					"0": "-4 2 Wildflour.AtelierGoods_Red_Onion 1 419 1 GoodJobSuzette.HomeCooking_GarlicCloves 3"
+				},
+				"Wildflour.AtelierGoods_Spicy_Tomato_Salsa": {
+					"0": "260 2 Wildflour.AtelierGoods_Cilantro 1 GoodJobSuzette.HomeCooking_TomatoDiced 6 GoodJobSuzette.HomeCooking_GarlicCloves 3"
+				},
+				"Wildflour.AtelierGoods_Tomato_Corn_Salsa": {
+					"0": "270 2 Wildflour.AtelierGoods_Cilantro 1 GoodJobSuzette.HomeCooking_GarlicCloves 1 GoodJobSuzette.HomeCooking_TomatoDiced 6"
+				},
+				"GoodJobSuzette.HomeCooking_RedSauce": {
+					"0": "340 1 GoodJobSuzette.HomeCooking_TomatoPaste 1 Wildflour.AtelierGoods_Bruschetta 1"
+				}
+			}
+		}
+	]
+}

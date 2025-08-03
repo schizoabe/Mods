@@ -1,0 +1,352 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooked Broths",
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_BoneStock": {
+					"Name": "{{ModId}}_BoneStock",
+					"Displayname": "{{i18n: HomeCooking_BoneStock}}",
+					"Description": "{{i18n: HomeCooking_BoneStock.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 175,
+					"Edibility": 200,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 0,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_BoneStockBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"Defense": 1,
+								"FarmingLevel": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"color_gray",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_BrightFishBroth": {
+					"Name": "{{ModId}}_BrightFishBroth",
+					"Displayname": "{{i18n: HomeCooking_BrightFishBroth}}",
+					"Description": "{{i18n: HomeCooking_BrightFishBroth.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 850,
+					"Edibility": 35,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 10,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_fish",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_BrightFishBrothBuff",
+							"Duration": 230,
+							"CustomAttributes": {
+								"FishingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ClamJuice": {
+					"Name": "{{ModId}}_ClamJuice",
+					"Displayname": "{{i18n: HomeCooking_ClamJuice}}",
+					"Description": "{{i18n: HomeCooking_ClamJuice.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 50,
+					"Edibility": 15,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 6,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_ClamJuiceBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FishingLevel": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"allergen_fish",
+						"allergen_shellfish",
+						"color_white",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_Dashi": {
+					"Name": "{{ModId}}_Dashi",
+					"Displayname": "{{i18n: HomeCooking_Dashi}}",
+					"Description": "{{i18n: HomeCooking_Dashi.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 40,
+					"Edibility": 15,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 7,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_DashiBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FishingLevel": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"allergen_fish",
+						"color_white",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_DashiUmamiBase": {
+					"Name": "{{ModId}}_DashiUmamiBase",
+					"Displayname": "{{i18n: HomeCooking_DashiUmamiBase}}",
+					"Description": "{{i18n: HomeCooking_DashiUmamiBase.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 950,
+					"Edibility": 20,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 8,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_DashiUmamiBaseBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FishingLevel": 2,
+								"Speed": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"allergen_fish",
+						"color_brown",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_FishBroth": {
+					"Name": "{{ModId}}_FishBroth",
+					"Displayname": "{{i18n: HomeCooking_FishBroth}}",
+					"Description": "{{i18n: HomeCooking_FishBroth.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 230,
+					"Edibility": 30,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 1,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_FishBrothBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FishingLevel": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"allergen_fish",
+						"color_blue",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_GoldenBroth": {
+					"Name": "{{ModId}}_GoldenBroth",
+					"Displayname": "{{i18n: HomeCooking_GoldenBroth}}",
+					"Description": "{{i18n: HomeCooking_GoldenBroth.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 75,
+					"Edibility": 20,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 2,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_GoldenBrothBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"color_yellow"
+					]
+				},
+				"{{ModId}}_MushroomBroth": {
+					"Name": "{{ModId}}_MushroomBroth",
+					"Displayname": "{{i18n: HomeCooking_MushroomBroth}}",
+					"Description": "{{i18n: HomeCooking_MushroomBroth.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 110,
+					"Edibility": 30,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 3,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_MushroomBrothBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"MiningLevel": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"allergen_mushroom",
+						"color_brown"
+					]
+				},
+				"{{ModId}}_RabbitStock": {
+					"Name": "{{ModId}}_RabbitStock",
+					"Displayname": "{{i18n: HomeCooking_RabbitStock}}",
+					"Description": "{{i18n: HomeCooking_RabbitStock.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 220,
+					"Edibility": 20,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 4,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_RabbitStockBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"LuckLevel": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"color_sand",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_ThickenedFishBroth": {
+					"Name": "{{ModId}}_ThickenedFishBroth",
+					"Displayname": "{{i18n: HomeCooking_ThickenedFishBroth}}",
+					"Description": "{{i18n: HomeCooking_ThickenedFishBroth.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1200,
+					"Edibility": 30,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 9,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_ThickenedFishBrothBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FishingLevel": 2,
+								"Speed": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"allergen_fish",
+						"color_gray",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_VeggieBroth": {
+					"Name": "{{ModId}}_VeggieBroth",
+					"Displayname": "{{i18n: HomeCooking_VeggieBroth}}",
+					"Description": "{{i18n: HomeCooking_VeggieBroth.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 90,
+					"Edibility": 20,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 5,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_VeggieBrothBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"color_green"
+					]
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Entries": {
+				"{{ModId}}_BoneStock": "881 20 Carrot 4 {{ModId}}_GarlicCloves 6 {{ModId}}_HerbVinegar 1/1 10/{{ModId}}_BoneStock 5/default/{{i18n: HomeCooking_BoneStock}}", //4:DEFENSE-FARM bonefragments carrot garliccloves herbvinegar
+				"{{ModId}}_BrightFishBroth": "348 1 {{ModId}}_FishBroth 1/1 10/{{ModId}}_BrightFishBroth 1/default/{{i18n: HomeCooking_BrightFishBroth}}", //2:wine fishbroth
+				"{{ModId}}_ClamJuice": "372 3/1 10/{{ModId}}_ClamJuice 5/default/{{i18n: HomeCooking_ClamJuice}}", //1:FISH1 clams
+				"{{ModId}}_Dashi": "130 1 152 2/1 10/{{ModId}}_Dashi 5/default/{{i18n: HomeCooking_Dashi}}", //2:FISH1 tuna seaweed
+				"{{ModId}}_DashiUmamiBase": "{{ModId}}_Dashi 1 {{ModId}}_OysterSauce 1/1 10/{{ModId}}_DashiUmamiBase 5/default/{{i18n: HomeCooking_DashiUmamiBase}}", //2:FISH1 dashi oystersauce
+				"{{ModId}}_FishBroth": "Carrot 2 -4 3 348 1 404 2 152 1/1 10/{{ModId}}_FishBroth 5/default/{{i18n: HomeCooking_FishBroth}}", //5:FISH1 anyfish carrot wine mushrooms seaweed
+				"{{ModId}}_GoldenBroth": "270 4 {{ModId}}_GarlicCloves 4/1 10/{{ModId}}_GoldenBroth 5/default/{{i18n: HomeCooking_GoldenBroth}}", //2:FARM1 corn garliccloves
+				"{{ModId}}_MushroomBroth": "404 3 281 1 {{ModId}}_GarlicCloves 3/1 10/{{ModId}}_MushroomBroth 5/none/{{i18n: HomeCooking_MushroomBroth}}", //3:MINING1 mushroom chanterelle garliccloves
+				"{{ModId}}_RabbitStock": "446 1 Carrot 2 /1 10/{{ModId}}_RabbitStock 5/default/{{i18n: HomeCooking_RabbitStock}}", //2:LUCK1 rabbitfoot carrot
+				"{{ModId}}_ThickenedFishBroth": "246 1 {{ModId}}_OysterSauce 1 {{ModId}}_FishBroth 1/1 10/{{ModId}}_ThickenedFishBroth 1/default/{{i18n: HomeCooking_ThickenedFishBroth}}", //3:FISH2-SPEED1 wheatflour fishbroth oystersauce
+				"{{ModId}}_VeggieBroth": "Carrot 4 250 1 {{ModId}}_GarlicCloves 4 {{ModId}}_TomatoDiced 3/1 10/{{ModId}}_VeggieBroth 5/default/{{i18n: HomeCooking_VeggieBroth}}" //4:FARM1 carrot garliccloves kale tomatodiced
+			}
+		}
+	]
+}

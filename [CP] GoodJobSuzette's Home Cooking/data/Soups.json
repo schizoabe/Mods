@@ -1,0 +1,293 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooked Soups",
+	"Changes": [
+		{
+			"LogName": "SOUPS",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Priority": "Default + 100",
+			"Entries": {
+				"{{ModId}}_AutumnGardenSoup": {
+					"Name": "{{ModId}}_AutumnGardenSoup",
+					"Displayname": "{{i18n: HomeCooking_AutumnGardenSoup}}",
+					"Description": "{{i18n: HomeCooking_AutumnGardenSoup.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 800,
+					"Edibility": 115,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 7,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_gluten",
+						"allergen_mushroom",
+						"allergen_fish",
+						"allergen_shellfish",
+						"allergen_treenut",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Duration": 480,
+							"CustomAttributes": {
+								"FishingLevel": 2,
+								"Speed 1": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_AutumnGardenSoup_Veg": {
+					"Name": "{{ModId}}_AutumnGardenSoup_Veg",
+					"Displayname": "{{i18n: HomeCooking_AutumnGardenSoup_Veg}}",
+					"Description": "{{i18n: HomeCooking_AutumnGardenSoup_Veg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 300,
+					"Edibility": 40,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 7,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_mushroom",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_CatfishNoodleSoup": {
+					"Name": "{{ModId}}_CatfishNoodleSoup",
+					"Displayname": "{{i18n: HomeCooking_CatfishNoodleSoup}}",
+					"Description": "{{i18n: HomeCooking_CatfishNoodleSoup.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 900,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 0,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_dark_yellow",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_fish",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Duration": 600,
+							"CustomAttributes": {
+								"FishingLevel": 2,
+								"Speed": 2,
+								"Attack": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_CrabBisque": {
+					"Name": "{{ModId}}_CrabBisque",
+					"Displayname": "{{i18n: HomeCooking_CrabBisque}}",
+					"Description": "{{i18n: HomeCooking_CrabBisque.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1900,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 5,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_pink",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_dairy",
+						"allergen_shellfish",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"Defense": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_OysterChowder": {
+					"Name": "{{ModId}}_OysterChowder",
+					"Displayname": "{{i18n: HomeCooking_OysterChowder}}",
+					"Description": "{{i18n: HomeCooking_OysterChowder.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1400,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 4,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_yellow",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_dairy",
+						"allergen_fish",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FishingLevel": 2
+							}
+						}
+					]
+				},
+				"{{ModId}}_OysterChowder_Veg": {
+					"Name": "{{ModId}}_OysterChowder_Veg",
+					"Displayname": "{{i18n: HomeCooking_OysterChowder_Veg}}",
+					"Description": "{{i18n: HomeCooking_OysterChowder_Veg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 300,
+					"Edibility": 35,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 4,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"vegetable_item"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FishingLevel": 2
+							}
+						}
+					]
+				},
+				"{{ModId}}_RedNoodleSoup": {
+					"Name": "{{ModId}}_RedNoodleSoup",
+					"Displayname": "{{i18n: HomeCooking_RedNoodleSoup}}",
+					"Description": "{{i18n: HomeCooking_RedNoodleSoup.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 800,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 6,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_gluten",
+						"allergen_mushroom",
+						"allergen_fish",
+						"food_nonvegan",
+						"color_red"
+					],
+					"Buffs": [
+						{
+							"Duration": 360,
+							"CustomAttributes": {
+								"FishingLevel": 2,
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_RedNoodleSoup_Veg": {
+					"Name": "{{ModId}}_RedNoodleSoup_Veg",
+					"Displayname": "{{i18n: HomeCooking_RedNoodleSoup_Veg}}",
+					"Description": "{{i18n: HomeCooking_RedNoodleSoup_Veg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 300,
+					"Edibility": 30,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 6,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_mushroom",
+						"vegetable_item"
+					]
+				},
+				"{{ModId}}_TomatoFishSoup": {
+					"Name": "{{ModId}}_TomatoFishSoup",
+					"Displayname": "{{i18n: HomeCooking_TomatoFishSoup}}",
+					"Description": "{{i18n: HomeCooking_TomatoFishSoup.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1200,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 1,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_red",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_fish",
+						"allergen_gluten",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"FishingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_TomatoYogurtSoup": {
+					"Name": "{{ModId}}_TomatoYogurtSoup",
+					"Displayname": "{{i18n: HomeCooking_TomatoYogurtSoup}}",
+					"Description": "{{i18n: HomeCooking_TomatoYogurtSoup.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 700,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 2,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_red",
+						"modid_goodjobsuzette.homecooking",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Duration": 360,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"Attack": 1
+							}
+						}
+					]
+				}
+			}
+		},
+// 8 out of 18-20 - (~3/4 fish, ~2/5 crustacean, ~2/3 other shellfish, ~1/5 vegetable) - put clam oreganata in cooking, readjust
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Priority": "Default + 100",
+			"Entries": {
+				"{{ModId}}_AutumnGardenSoup": "{{ModId}}_AutumnGardenSoup_Veg 1 720 1 {{ModId}}_DashiUmamiBase 1 {{ModId}}_RamenNoodles 1/1 10/{{ModId}}_AutumnGardenSoup 1/default/{{i18n: HomeCooking_AutumnGardenSoup}}", //4:FISH2-SPEED1 shrimp pasta(ramen) _veg dashiumamibase
+				"{{ModId}}_AutumnGardenSoup_Veg": "278 1 404 1 Broccoli 1/1 10/{{ModId}}_AutumnGardenSoup_Veg 1/default/{{i18n: HomeCooking_AutumnGardenSoup_Veg}}", //3:broccoli commonmushroom bokchoy
+				"{{ModId}}_CatfishNoodleSoup": "{{ModId}}_ThickenedFishBroth 1 143 1 {{ModId}}_GarlicCloves 3 {{ModId}}_CapeStarletSeasoning 1 {{ModId}}_Pasta 1/1 10/{{ModId}}_CatfishNoodleSoup 1/default/{{i18n: HomeCooking_CatfishNoodleSoup}}", //5:FISH2-SPEED2-ATTACK1 catfish garliccloves capestarletseasoning pasta thickenedfishbroth
+				"{{ModId}}_CrabBisque": "348 1 423 1 717 2 {{ModId}}_TomatoPaste 1 {{ModId}}_BoneStock 1 {{ModId}}_HeavyCream 1/1 10/{{ModId}}_CrabBisque 1/f Willy 6/{{i18n: HomeCooking_CrabBisque}}", //6:DEFENSE1 wine rice crab tomatopaste bonestock heavycream
+				"{{ModId}}_OysterChowder": "{{ModId}}_OysterChowder_Veg 1 723 3 {{ModId}}_HeavyCream 1 {{ModId}}_FishBroth 1 {{ModId}}_ClamJuice 1/1 10/{{ModId}}_OysterChowder 1/default/{{i18n: HomeCooking_OysterChowder}}", //5:FISH2 _veg oyster heavycream fishbroth clamjuice
+				"{{ModId}}_OysterChowder_Veg": "20 1 192 2 250 1/1 10/{{ModId}}_OysterChowder_Veg 1/default/{{i18n: HomeCooking_OysterChowder_Veg}}", //3:leek potato kale
+				"{{ModId}}_RedNoodleSoup": "{{ModId}}_RedNoodleSoup_Veg 1 {{ModId}}_DashiUmamiBase 1 146 1 150 1 {{ModId}}_Pasta 1/1 10/{{ModId}}_RedNoodleSoup 1/default/{{i18n: HomeCooking_RedNoodleSoup}}", //4:FISH2-SPEED1 redsnapper redmullet pasta(udon) _DashiUmamiBase _veg
+				"{{ModId}}_RedNoodleSoup_Veg": "278 1 404 1 {{ModId}}_TomatoDiced 3 {{ModId}}_SpringSlices 2/1 10/{{ModId}}_RedNoodleSoup_Veg 1/default/{{i18n: HomeCooking_RedNoodleSoup_Veg}}", //4:tomatodiced bokchoy mushroom springslices
+				"{{ModId}}_TomatoFishSoup": "-4 1 423 1 {{ModId}}_TomatoDiced 6 {{ModId}}_GarlicCloves 3 {{ModId}}_ThickenedFishBroth 1/1 10/{{ModId}}_TomatoFishSoup 1/f Pam 4/{{i18n: HomeCooking_TomatoFishSoup}}", //5:FISH2-SPEED1 anyfish garliccloves tomatodiced rice ThickenedFishBroth
+				"{{ModId}}_TomatoYogurtSoup": "{{ModId}}_SourCream 1 {{ModId}}_TomatoDiced 9 {{ModId}}_GarlicGingerPaste 1 {{ModId}}_GoldenBroth 1/1 10/{{ModId}}_TomatoYogurtSoup 1/f Harvey 2/{{i18n: HomeCooking_TomatoYogurtSoup}}" //4:FARM1-ATTACK1 tomatodiced garlicgingerpaste goldenbroth sourcream
+			}
+		}
+	]
+}

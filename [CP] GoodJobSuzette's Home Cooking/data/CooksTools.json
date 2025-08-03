@@ -1,0 +1,157 @@
+{
+	"Changes": [
+		// SPICE GRINDER
+		{
+			"LogName": "Spice Grinder",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)Novaphene.CooksTools.SpiceGrinder",
+				"OutputRules"
+			],
+			"When": {
+				"HasMod|contains=Novaphene.CooksTools": "true",
+				"HasMod|contains=GoodJobSuzette.HomeCooking": "true"
+			},
+			"Priority": "Default + 200",
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_GroundGinger": {
+					"Id": "GoodJobSuzette.HomeCooking_GroundGinger",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)829",
+							"RequiredCount": 1
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_GroundGinger",
+							"Quality": 10,
+							"MinStack": 10
+						}
+					],
+					"MinutesUntilReady": 60
+				},
+				"GoodJobSuzette.HomeCooking_GroundCinnamon_WAG": {
+					"Id": "GoodJobSuzette.HomeCooking_GroundCinnamon",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)Wildflour.AtelierGoods_Cinnamon",
+							"RequiredCount": 1
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_GroundCinnamon",
+							"Quality": 10,
+							"MinStack": 10
+						}
+					],
+					"MinutesUntilReady": 60
+				},
+				"GoodJobSuzette.HomeCooking_GroundCinnamon_CMC": {
+					"Id": "GoodJobSuzette.HomeCooking_GroundCinnamon_CMC",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)Cornucopia_CinnamonSticks",
+							"RequiredCount": 1
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_GroundCinnamon",
+							"Quality": 10,
+							"MinStack": 10
+						}
+					],
+					"MinutesUntilReady": 60
+				},
+				"GoodJobSuzette.HomeCooking_GrassPowder": {
+					"Id": "GoodJobSuzette.HomeCooking_GrassPowder",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)GoodJobSuzette.HomeCooking_DriedGrass",
+							"RequiredCount": 1
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_GrassPowder",
+							"Quality": 10,
+							"MinStack": 10
+						}
+					],
+					"MinutesUntilReady": 60
+				}
+			}
+		},
+		// AIR FRYER
+		{
+			"LogName": "Air Fryer",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [
+				"(BC)Novaphene.CooksTools.AirFryer",
+				"OutputRules"
+			],
+			"Priority": "Default + 200",
+			"Entries": {
+				"Novaphene.CooksTools.FriedChicken": {
+					"Id": "Novaphene.CooksTools.FriedChicken",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)641"
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)Novaphene.CooksTools.FriedChicken"
+						}
+					],
+					"MinutesUntilReady": 20
+				},
+				"Roseloves109_FriedChicken": {
+					"Id": "Roseloves109_FriedChicken",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)Roseloves109_Chicken"
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)Roseloves109_FriedChicken"
+						}
+					],
+					"MinutesUntilReady": 10
+				}
+			}
+		},
+		// COOK'S TOOLS MEAT COMPATIBILITY
+		{
+			"LogName": "Animal Husbandry Chicken & Pork Compatibility",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Novaphene.CooksTools": "true",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true"
+			},
+			"Entries": {
+				"640": "Novaphene.CooksTools.Pork 1/1 10/640 1/default",
+				"641": "Novaphene.CooksTools.Chicken 1/1 10/641 1/default"
+			}
+		},
+		{
+			"LogName": "Rose's Cruelfree Chicken & Pork Compatibility",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Novaphene.CooksTools": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true"
+			},
+			"Entries": {
+				"Roseloves109_Pork": "Novaphene.CooksTools.Pork 1/1 10/Roseloves109_Pork 1/default",
+				"Roseloves109_Chicken": "Novaphene.CooksTools.Chicken 1/1 10/Roseloves109_Chicken 1/default"
+			}
+		}
+	]
+}

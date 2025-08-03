@@ -1,0 +1,192 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooked Addons for Visit Mt. Vapius",
+	"Changes": [
+		// OBJECTS
+		{
+			"LogName": "VMV BASICS",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"When": {
+				"HasMod|contains=Lumisteria.MtVapius": "true"
+			},
+			"Entries": {
+				"{{ModId}}_CountrySeasoning": {
+					"Name": "{{ModId}}_CountrySeasoning",
+					"Displayname": "{{i18n: HomeCooking_CountrySeasoning}}",
+					"Description": "{{i18n: HomeCooking_CountrySeasoning.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 60,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 102,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"seasoning_item",
+						"herb_item",
+						"allergen_mushrooms"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_CountrySeasoningBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_EweCheeseSlices": {
+					"Name": "{{ModId}}_EweCheeseSlices",
+					"Displayname": "{{i18n: HomeCooking_EweCheeseSlices}}",
+					"Description": "{{i18n: HomeCooking_EweCheeseSlices.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 100,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 71,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dairy_item",
+						"cheese_item",
+						"sliced_cheese_item",
+						"allergen_dairy",
+						"color_yellow"
+					]
+				},
+				"{{ModId}}_RyeBreadSlices": {
+					"Name": "{{ModId}}_RyeBreadSlices",
+					"Displayname": "{{i18n: HomeCooking_RyeBreadSlices}}",
+					"Description": "{{i18n: HomeCooking_RyeBreadSlices.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 15,
+					"Edibility": 15,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 65,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"allergen_gluten",
+						"bread_item"
+					]
+				},
+				"{{ModId}}_ShreddedEweCheese": {
+					"Name": "{{ModId}}_ShreddedEweCheese",
+					"Displayname": "{{i18n: HomeCooking_ShreddedEweCheese}}",
+					"Description": "{{i18n: HomeCooking_ShreddedEweCheese.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 50,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 50,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dairy_item",
+						"cheese_item",
+						"shredded_cheese_item",
+						"allergen_dairy",
+						"color_yellow"
+					]
+				}
+			}
+		},
+		// RECIPES
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Lumisteria.MtVapius": "true"
+			},
+			"Entries": {
+				"{{ModId}}_CountrySeasoning": "Lumisteria.MtVapius_Rosemary 2 Lumisteria.MtVapius_Basil 2 {{ModId}}_MushroomPowder 1/1 10/{{ModId}}_CountrySeasoning 10/default/{{i18n: HomeCooking_CountrySeasoning}}", // rosemary basil + mushroompowder
+				"{{ModId}}_EweCheeseSlices": "Lumisteria.MtVapius_EweCheese 1/1 10/ {{ModId}}_EweCheeseSlices 6/default/{{i18n: HomeCooking_EweCheeseSlices}}", // ewecheese
+				"{{ModId}}_RyeBreadSlices": "Lumisteria.MtVapius_Cooking_RyeBread 1/1 10/{{ModId}}_RyeBreadSlices 6/default/{{i18n: HomeCooking_RyeBreadSlices}}", //ryebread
+				"{{ModId}}_ShreddedEweCheese": "Lumisteria.MtVapius_EweCheese 1/1 10/{{ModId}}_ShreddedEweCheese 12/default/{{i18n: HomeCooking_ShreddedEweCheese}}" // ewecheese
+			}
+		},
+		// ADDONS - NO CMC
+		{
+			"LogName": "Lumisteria.MtVapius - NO CMC",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable VMV": "true",
+				"HasMod|contains=Lumisteria.MtVapius": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BeanPaste": {
+					"0": "Lumisteria.MtVapius_FireBeans 6 245 1 247 1"
+				}
+			}
+		},
+		// ADDONS: [Context Tag Recipes: FALSE] + AHM
+		{
+			"LogName": "Home Cooking - + AHM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable VMV": "true",
+				"Enable AHM": "true",
+				"Context Tag Recipes": "false",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_SweetSausageSeasonings": {
+					"0": "245 1 348 1 GoodJobSuzette.HomeCooking_RedSauce 1 Lumisteria.MtVapius_Basil 1 Lumisteria.MtVapius_Rosemary 1"
+				}
+			}
+		},
+		// EDITED RECIPES
+		{
+			"LogName": "Lumisteria.MtVapius",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable VMV": "true",
+				"HasMod|contains=Lumisteria.MtVapius": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Lumisteria.MtVapius_Cooking_CheeseFritters": {
+					"0": "246 2 247 1 -5 2 GoodJobSuzette.HomeCooking_ShreddedEweCheese 1 Lumisteria.MtVapius_Butter 1"
+				},
+				"Lumisteria.MtVapius_Cooking_EggAndToast": {
+					"0": "GoodJobSuzette.HomeCooking_RyeBreadSlices 3 -5 3 Lumisteria.MtVapius_Butter 1"
+				},
+				"Lumisteria.MtVapius_Cooking_GratinVapius": {
+					"0": "192 2 -6 1 GoodJobSuzette.HomeCooking_GarlicCloves 2"
+				},
+				"Lumisteria.MtVapius_Cooking_JamPie": {
+					"0": "344 1 Lumisteria.MtVapius_Butter 1 GoodJobSuzette.HomeCooking_PieDough 1"
+				},
+				"Lumisteria.MtVapius_Cooking_PistouSoup": {
+					"0": "Lumisteria.MtVapius_Basil 3 188 1 Lumisteria.MtVapius_FireBeans 1 78 1 GoodJobSuzette.HomeCooking_ShreddedEweCheese 1 GoodJobSuzette.HomeCooking_VeggieBroth 1"
+				},
+				"Lumisteria.MtVapius_Cooking_TomatoSalad": {
+					"0": "GoodJobSuzette.HomeCooking_TomatoDiced 2 GoodJobSuzette.HomeCooking_ShreddedEweCheese 1 Lumisteria.MtVapius_Basil 2 GoodJobSuzette.HomeCooking_OilVinaigrette 1"
+				},
+				"Lumisteria.MtVapius_Cooking_TroutAndToast": {
+					"0": "GoodJobSuzette.HomeCooking_RyeBreadSlices 1 138 1 GoodJobSuzette.HomeCooking_GoatCheeseSlices 1"
+				}
+			}
+		}
+	]
+}

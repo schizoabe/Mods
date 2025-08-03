@@ -1,0 +1,281 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooking for HXW's Mixology",
+	"Changes": [
+		// OBJECTS
+		{
+			"LogName": "OBJECTS - HXW.MIXOLOGY",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_VanillaExtract": {
+					"Name": "{{ModId}}_VanillaExtract",
+					"Displayname": "{{i18n: HomeCooking_VanillaExtract}}",
+					"Description": "{{i18n: HomeCooking_VanillaExtract.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 125,
+					"Edibility": 1,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 48,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"vanilla_item",
+						"extract_item",
+						"color_dark_brown"
+					]
+				}
+			}
+		},
+		// RECIPES
+		{
+			"LogName": "RECIPES - HXW.MIXOLOGY",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Entries": {
+				"{{ModId}}_VanillaExtract": "Wildflour.AtelierGoods_Vanilla 3 HXW.Mixology_vodka 1/1 10/{{ModId}}_VanillaExtract 5/default/{{i18n: HomeCooking_VanillaExtract}}" // vanilla3 vodka
+			}
+		},
+		// ADDONS
+		{
+			"LogName": "Home Cooking - HXW*WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable HXW": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_CreamCheese": {
+					"0": "HXW.Mixology_lemon_juice 1 184 1 GoodJobSuzette.HomeCooking_HeavyCream 1"
+				},
+				"GoodJobSuzette.HomeCooking_HotSauce": {
+					"0": "260 3 419 1 HXW.Mixology_lime_juice 1"
+				},
+				"GoodJobSuzette.HomeCooking_OilVinaigrette": {
+					"0": "GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_GarlicCloves 4 Wildflour.AtelierGoods_Olive_Oil 1 HXW.Mixology_lemon_juice 1"
+				},
+				"GoodJobSuzette.HomeCooking_SourCream": {
+					"0": "HXW.Mixology_lemon_juice 1 GoodJobSuzette.HomeCooking_HeavyCream 1"
+				},
+				"GoodJobSuzette.HomeCooking_Waffles": {
+					"0": "245 1 GoodJobSuzette.HomeCooking_Batter 1 Wildflour.AtelierGoods_Butter 1 GoodJobSuzette.HomeCooking_VanillaExtract 1"
+				}
+			}
+		},
+		// ADDONS: [CONTEXT TAG: FALSE]
+		{
+			"LogName": "Home Cooking - HXW*WAG - CONTEXT TAG FALSE",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable HXW": "true",
+				"Context Tag Recipes": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_ApplePieFilling": {
+					"0": "613 3 Wildflour.AtelierGoods_Almond_Flour 1 GoodJobSuzette.HomeCooking_CinnamonSugar 1 Wildflour.AtelierGoods_Butter 1 GoodJobSuzette.HomeCooking_VanillaExtract 1"
+				}
+			}
+		},
+		// ADDONS: - AHM
+		{
+			"LogName": "Home Cooking - AHM - HXW",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable AHM": "true",
+				"Enable HXW": "true",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_PieDough": {
+					"0": "245 1 419 1 Wildflour.AtelierGoods_Butter 2 Wildflour.AtelierGoods_Pastry_Flour 1 HXW.Mixology_vodka 1"
+				}
+			}
+		},
+		// ADDONS: + AHM
+		{
+			"LogName": "Home Cooking - AHM+HXW",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable AHM": "true",
+				"Enable HXW": "true",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_PieDough": { //6
+					"0": "245 1 246 1 419 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Lard 1 HXW.Mixology_vodka 1"
+				}
+			}
+		},
+		// ADDONS: RCM
+		{
+			"LogName": "Home Cooking - RCM+HXW",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable AHM": "true",
+				"Enable HXW": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_PieDough": { //6
+					"0": "245 1 246 1 419 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Lard 1 HXW.Mixology_vodka 1"
+				}
+			}
+		},
+		// ADDONS: CAM
+		{
+			"LogName": "Home Cooking - HXW+CAM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": "true",
+				"Enable HXW": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"Context Tag Recipes": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_TortillaChips": {
+					"0": "HXW.Mixology_lime_juice 1 229 3 GoodJobSuzette.HomeCooking_Salt 1"
+				}
+			}
+		},
+		// ADDONS: + RMT - CAM
+		{
+			"LogName": "Home Cooking - HXW+RMT -CAM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable HXW": "true",
+				"Enable RMT": "true",
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "false",
+				"Context Tag Recipes": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_TortillaChips": {
+					"0": "HXW.Mixology_lime_juice 1 229 3 GoodJobSuzette.HomeCooking_MineralSalt 1"
+				}
+			}
+		},
+		// VANILLA: + RMT + WAG
+		{
+			"LogName": "Home Cooking - RMT+SBV+WAG*HXW VANILLA",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true",
+				"HasMod|contains=Wildflour.AtelierGoods": "true",
+				"HasMod|contains=HXW.Mixology": "true",
+				"Enable HXW": "true",
+				"Enable RMT": "true",
+				"Vanilla Recipe Changes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Seafoam Pudding": {
+					"0": "Rexstrife20.MineralTownCP_Pudding 1 267 1 269 1 814 1 GoodJobSuzette.HomeCooking_VanillaExtract 1"
+				}
+			}
+		},
+		// VANILLA: + WAG
+		{
+			"LogName": "Home Cooking - VANILLA + HXW*WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Vanilla Recipe Changes": "True",
+				"Enable HXW": "true",
+				"HasMod|contains=Wildflour.AtelierGoods": "true",
+				"HasMod|contains=HXW.Mixology": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Baked Fish": {
+					"0": "132 1 145 1 246 1 Wildflour.AtelierGoods_Thyme 1 HXW.Mixology_lemon_juice 1 GoodJobSuzette.HomeCooking_GarlicCloves 1"
+				},
+				"Banana Pudding": {
+					"0": "-5 3 91 2 245 1 Wildflour.AtelierGoods_Confectioners_Sugar 1 GoodJobSuzette.HomeCooking_VanillaExtract 1 Wildflour.AtelierGoods_Cream 1"
+				},
+				"Carp Surprise": {
+					"0": "142 4 250 1 GoodJobSuzette.HomeCooking_HerbOil 1 HXW.Mixology_lemon_juice 1"
+				},
+				"Cookies": {
+					"0": "Wildflour.AtelierGoods_Cookie_Mix 1 Raisins 1 GoodJobSuzette.HomeCooking_VanillaExtract 1"
+				},
+				"Crab Cakes": {
+					"0": "-5 1 306 1 717 2 HXW.Mixology_lemon_juice 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1"
+				},
+				"Dish o' The Sea": {
+					"0": "131 2 210 1 342 1 HXW.Mixology_lemon_juice 1 GoodJobSuzette.HomeCooking_Ketchup 1 GoodJobSuzette.HomeCooking_GarlicCloves 3"
+				},
+				"Fried Eel": {
+					"0": "148 1 247 1 HXW.Mixology_lemon_juice 1 Wildflour.AtelierGoods_Rice_Flour 1 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1 GoodJobSuzette.HomeCooking_GarlicCloves 2"
+				},
+				"Ginger Ale": {
+					"0": "829 3 340 1 245 1 Wildflour.AtelierGoods_Lime 1 HXW.Mixology_club_soda 1"
+				},
+				"Glazed Yams": {
+					"0": "280 1 GoodJobSuzette.HomeCooking_VanillaExtract 1 Wildflour.AtelierGoods_Cinnamon 1 Wildflour.AtelierGoods_Brown_Sugar 1 Wildflour.AtelierGoods_Butter 1"
+				},
+				"Pink Cake": {
+					"0": "Wildflour.AtelierGoods_Cake_Mix 1 Wildflour.AtelierGoods_Confectioners_Sugar 1 254 1 Wildflour.AtelierGoods_Pink_Hard_Candy 1 HXW.Mixology_lemon_juice 1 GoodJobSuzette.HomeCooking_VanillaExtract 1"
+				},
+				"Poppyseed Muffin": {
+					"0": "453 1 635 1 Wildflour.AtelierGoods_Muffin_Mix 1 GoodJobSuzette.HomeCooking_VanillaExtract 1 Wildflour.AtelierGoods_Butter 1"
+				},
+				"Rice Pudding": {
+					"0": "-6 1 245 1 423 1 Wildflour.AtelierGoods_Butter 1 GoodJobSuzette.HomeCooking_VanillaExtract 1" // milk sugar rice BUTTER VANILLAEXTRACT
+				}
+			}
+		},
+		// SPACECORE
+		{
+			"LogName": "Cooking Recipe Overrides HXW",
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/CookingRecipeOverrides",
+			"When": {
+				"Context Tag Recipes": "True",
+				"Enable HXW": "true",
+				"HasMod|contains=spacechase0.SpaceCore": "true"
+			},
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_VanillaExtract": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_VanillaExtract",
+					"ProductAmount": 5,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)HXW.Mixology_vodka",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "vanilla_item, vanilla_Bean_item",
+							"Amount": 3,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Vanilla}}",
+							"OverrideTexturePath": "Mods/GoodJobSuzette.HomeCooking/basics",
+							"OverrideTextureRect": {
+								"X": 128,
+								"Y": 64,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				}
+			}
+		}
+	]
+}

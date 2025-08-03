@@ -1,0 +1,337 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooking for Return to Mineral Town",
+	"Changes": [
+		// OBJECTS
+		{
+			"LogName": "OBJECTS - Return to Mineral Town",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_DriedGrass": {
+					"Name": "{{ModId}}_DriedGrass",
+					"Displayname": "{{i18n: HomeCooking_DriedGrass}}",
+					"Description": "{{i18n: HomeCooking_DriedGrass.Description}}",
+					"Type": "Fertilizer",
+					"Category": -19,
+					"Price": 300,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 106,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dried_grass_item",
+						"dehydrator_item"
+					]
+				},
+				"{{ModId}}_GrassPowder": {
+					"Name": "{{ModId}}_GrassPowder",
+					"Displayname": "{{i18n: HomeCooking_GrassPowder}}",
+					"Description": "{{i18n: HomeCooking_GrassPowder.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 30,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 103,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"powder_item",
+						"color_green"
+					]
+				},
+				"{{ModId}}_MineralSalt": {
+					"Name": "{{ModId}}_MineralSalt",
+					"Displayname": "{{i18n: HomeCooking_MineralSalt}}",
+					"Description": "{{i18n: HomeCooking_MineralSalt.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 10,
+					"Edibility": 1,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 33,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"salt_item",
+						"color_white"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_MineralSaltBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				}
+			}
+		},
+		// RECIPES
+		{
+			"LogName": "BASICS - Return to Mineral Town: Recipes",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Entries": {
+				"{{ModId}}_MineralSalt": "Rexstrife20.MineralTownCP_Mineral_Salt 1/1 10/{{ModId}}_MineralSalt 20/default/{{i18n: HomeCooking_MineralSalt}}", //FARM1 Rexstrife20.MineralTownCP_Mineral_Salt,
+				"{{ModId}}_GrassPowder": "{{ModId}}_DriedGrass 1/1 10/{{ModId}}_GrassPowder 10/default/{{i18n: HomeCooking_GrassPowder}}" // driedgrass
+			}
+		},
+		// RECIPES: - CAM
+		{
+			"LogName": "BASICS - Return to Mineral Town: Recipes",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Cornucopia.ArtisanMachines": "false",
+				"Enable CAM": "false"
+			},
+			"Entries": {
+				"{{ModId}}_SunflowerSalt": "421 2 815 3 {{ModId}}_MineralSalt 5/1 10/{{ModId}}_SunflowerSalt 10/default", //LUCK1-FARM2 sunflower2 tealeaves3 mtsalt5
+				"{{ModId}}_FireSalt": "{{ModId}}_MineralSalt 5 {{ModId}}_HotPepperFlakes 5/1 10/{{ModId}}_FireSalt 10/default", //SPEED1-FARM2 mtsalt5 hotpepperflakes
+				"{{ModId}}_HerbSeasoning": "Rexstrife20.MineralTownCP_Mineral_Salt 1 {{ModId}}_DriedGrass 1/1 10/{{ModId}}_HerbSeasoning 20/default/{{i18n: HomeCooking_HerbSeasoning}}" //FORAGE1 Mineral_Salt DriedGrass
+			}
+		},
+		// ADDONS (have the enable + priority of default + 200)
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable RMT": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_Dashi": {
+					"0": "152 2 Rexstrife20.MineralTownCP_Bonito 1"
+				}
+			}
+		},
+		// ADDONS: - CAM
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable RMT": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_Fries": {
+					"0": "192 2 GoodJobSuzette.HomeCooking_Tallow 1 GoodJobSuzette.HomeCooking_MineralSalt 1"
+				},
+				"GoodJobSuzette.HomeCooking_RamenNoodles": {
+					"0": "246 2 GoodJobSuzette.HomeCooking_MineralSalt 1 GoodJobSuzette.HomeCooking_LyeWater 1"
+				},
+				"GoodJobSuzette.HomeCooking_TortillaChips": {
+					"0": "229 3 GoodJobSuzette.HomeCooking_MineralSalt 1"
+				}
+			}
+		},
+		// VANILLA
+		{
+			"LogName": "Home Cooking - VANILLA + RMT",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Vanilla Recipe Changes": "True",
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Bean Hotpot": {
+					"0": "188 2 GoodJobSuzette.HomeCooking_GrassPowder 1 GoodJobSuzette.HomeCooking_VeggieBroth 1 GoodJobSuzette.HomeCooking_SpringSlices 3 GoodJobSuzette.HomeCooking_GarlicCloves 5 GoodJobSuzette.HomeCooking_Worchestershire 1"
+				},
+				"Bread": {
+					"0": "245 1 246 2 247 1 GoodJobSuzette.HomeCooking_MineralSalt 1"
+				},
+				"Carp Surprise": {
+					"0": "142 4 250 1 GoodJobSuzette.HomeCooking_HerbOil 1 GoodJobSuzette.HomeCooking_MineralSalt 1"
+				},
+				"Chocolate Cake": {
+					"0": "245 1 638 1 Rexstrife20.MineralTownCP_Dark_Chocolate_Bar 1 GoodJobSuzette.HomeCooking_Batter 1 GoodJobSuzette.HomeCooking_Butter 1 GoodJobSuzette.HomeCooking_MineralSalt 1"
+				},
+				"Cookies": {
+					"0": "Raisins 1 -5 1 245 2 246 1 247 1 GoodJobSuzette.HomeCooking_MineralSalt 1"
+				},
+				"Crab Cakes": {
+					"0": "-5 1 306 1 717 2 Rexstrife20.MineralTownCP_Salted_Butter 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1"
+				},
+				"Crispy Bass": {
+					"0": "136 1 246 1 250 1 GoodJobSuzette.HomeCooking_FireSalt 1 GoodJobSuzette.HomeCooking_GarlicCloves 3 GoodJobSuzette.HomeCooking_TomatoPaste 1"
+				},
+				"Fried Mushroom": {
+					"0": "247 1 257 1 404 1 Rexstrife20.MineralTownCP_Salted_Butter 1 GoodJobSuzette.HomeCooking_HerbVinegar 1"
+				},
+				"Ice Cream": {
+					"0": "245 1 -6 1 GoodJobSuzette.HomeCooking_MineralSalt 1 GoodJobSuzette.HomeCooking_HeavyCream 1"
+				},
+				"Maki Roll": {
+					"0": "-4 1 152 1 423 1 829 1 Rexstrife20.MineralTownCP_Harvest_Cucumber 1 GoodJobSuzette.HomeCooking_HerbVinegar 1"
+				},
+				"Omelet": {
+					"0": "-5 3 -6 1 GoodJobSuzette.HomeCooking_MineralSalt 1"
+				},
+				"Radish Salad": {
+					"0": "264 3 GoodJobSuzette.HomeCooking_OilVinaigrette 1 GoodJobSuzette.HomeCooking_SunflowerSalt 1"
+				},
+				"Salad": {
+					"0": "20 1 22 1 GoodJobSuzette.HomeCooking_CowfolkSauce 1 GoodJobSuzette.HomeCooking_SunflowerSalt 1"
+				},
+				"Salmon Dinner": {
+					"0": "139 1 250 1 300 1 GoodJobSuzette.HomeCooking_SunflowerSalt 1"
+				}
+			}
+		},
+		// VANILLA: + WAG
+		{
+			"LogName": "Home Cooking - RMT+WAG VANILLA",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "false",
+				"HasMod|contains=Wildflour.AtelierGoods": "true",
+				"Vanilla Recipe Changes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Salmon Dinner": {
+					"0": "139 1 250 1 300 1 Wildflour.AtelierGoods_Lemon 1 GoodJobSuzette.HomeCooking_SunflowerSalt 1"
+				}
+			}
+		},
+		// RECIPE EDITS
+		{
+			"LogName": "RMT EDITS",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable RMT": "true",
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Rexstrife20.MineralTownCP_Cheese_Fondue": {
+					"0": "348 1 GoodJobSuzette.HomeCooking_MeltingCheese 1 GoodJobSuzette.HomeCooking_GarlicCloves 2"
+				},
+				"Rexstrife20.MineralTownCP_Sandwich": {
+					"0": "Rexstrife20.MineralTownCP_Harvest_Cucumber 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 GoodJobSuzette.HomeCooking_BreadSlices 2"
+				},
+				"Rexstrife20.MineralTownCP_Savory_Pancakes": {
+					"0": "247 1 266 1 Carrot 1 GoodJobSuzette.HomeCooking_SpringSlices 3 GoodJobSuzette.HomeCooking_Batter 1 GoodJobSuzette.HomeCooking_GrassPowder 1"
+				},
+				"Rexstrife20.MineralTownCP_Spicy_Ketchup": {
+					"0": "GoodJobSuzette.HomeCooking_SpringSlices 1 GoodJobSuzette.HomeCooking_HotSauce 1 GoodJobSuzette.HomeCooking_Ketchup 1"
+				},
+				"Rexstrife20.MineralTownCP_Stew": {
+					"0": "GoodJobSuzette.HomeCooking_Bechamel 1 GoodJobSuzette.HomeCooking_MineralSalt 1 GoodJobSuzette.HomeCooking_MushroomBroth 1 GoodJobSuzette.HomeCooking_SpringVeg 1"
+				},
+				"Rexstrife20.MineralTownCP_Strawberry_Latte": {
+					"0": "-6 1 400 1 GoodJobSuzette.HomeCooking_GrassPowder 1"
+				},
+				"Rexstrife20.MineralTownCP_Yellow_Miso_Soup": {
+					"0": "Rexstrife20.MineralTownCP_Miso 1 Rexstrife20.MineralTownCP_Bamboo_Shoot 1 GoodJobSuzette.HomeCooking_Dashi 1 GoodJobSuzette.HomeCooking_GrassPowder 1 404 1"
+				}
+			}
+		},
+		// DRIED GRASS EFFECTS
+		{
+			"Action": "EditData",
+			"Target": "Data/Fertilizers",
+			"Entries": {
+				"{{ModId}}_DriedGrass": {
+					"Id": "{{ModId}}_DriedGrass",
+					"DisplayName": "Dried Grass",
+					"ApplyTo": "NonPaddyCropsOnly",
+					"Actions": [
+						{
+							"Action": "WaterRetention",
+							"Chance": 1.0
+						},
+						{
+							"Action": "IncreaseQualityChance",
+							"Amount": 0.3
+						},
+						{
+							"Action": "PreventWeeds"
+						}
+					]
+				}
+			}
+		},
+		// ADDING INGREDIENT CONTEXT TAGS (idk if this actually works)
+		{
+			"Action": "EditData",
+			"Target": "Data/ObjectContextTags",
+			"When": {
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true"
+			},
+			"Priority": "Default + 150",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Curry_Rice"
+					],
+					"Value": "curry_item rice_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Dark_Chocolate_Bar"
+					],
+					"Value": "chocolate_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Mineral_Salt"
+					],
+					"Value": "salt_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Miso"
+					],
+					"Value": "miso_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Salted_Butter"
+					],
+					"Value": "butter_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Spicy_Ketchup"
+					],
+					"Value": "ketchup_item condiment_item",
+					"Delimiter": ", "
+				}
+			]
+		}
+	]
+}

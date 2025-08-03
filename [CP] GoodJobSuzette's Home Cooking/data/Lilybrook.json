@@ -1,0 +1,281 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooked Addons for Lilybrook",
+	"Changes": [
+		// OBJECTS (no CMC)
+		{
+			"LogName": "OBJECTS - Lilybrook (no CMC)",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"When": {
+				"HasMod|contains=8BitAlien.Lilybrook": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "false"
+			},
+			"Entries": {
+				"{{ModId}}_Mirepoix": {
+					"Name": "{{ModId}}_Mirepoix",
+					"Displayname": "{{i18n: HomeCooking_Mirepoix}}",
+					"Description": "{{i18n: HomeCooking_Mirepoix.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 80,
+					"Edibility": 50,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 12,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"blend_item"
+					]
+				}
+			}
+		},
+		// RECIPES (no CMC)
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=8BitAlien.Lilybrook": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "false"
+			},
+			"Entries": {
+				"{{ModId}}_Mirepoix": "Carrot 3 Lilybrook.Onion 3 Lilybrook.BellPepper 3/1 10/{{ModId}}_Mirepoix 9/default/{{i18n: HomeCooking_Mirepoix}}", // carrot onion celery(essential only: bellpepper)
+				"{{ModId}}_CaramelizedOnions": "247 1 GoodJobSuzette.HomeCooking_Butter 1 Lilybrook.Onion 3/1 10/{{ModId}}_CaramelizedOnions 18/default/{{i18n: HomeCooking_CaramelizedOnions}}" // oil butter onion
+			}
+		},
+		// ADDONS
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable Lilybrook": "true",
+				"HasMod|contains=8BitAlien.Lilybrook": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_PepperOnion": {
+					"0": "247 1 Lilybrook.Onion 2 Lilybrook.BellPepper 3"
+				},
+				"GoodJobSuzette.HomeCooking_BoneStock": {
+					"0": "881 20 GoodJobSuzette.HomeCooking_GarlicCloves 6 GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": { //oniondiced1
+					"0": "16 1 247 1 340 1 419 1 Lilybrook.Onion 1"
+				},
+				"GoodJobSuzette.HomeCooking_FishBroth": {
+					"0": "-4 3 348 1 404 2 152 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_Ketchup": {
+					"0": "340 1 419 1 GoodJobSuzette.HomeCooking_GarlicCloves 2 GoodJobSuzette.HomeCooking_TomatoPaste 1 Lilybrook.Onion 1"
+				},
+				"GoodJobSuzette.HomeCooking_RabbitStock": {
+					"0": "446 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_RedSauce": {
+					"0": "GoodJobSuzette.HomeCooking_TomatoPaste 1 GoodJobSuzette.HomeCooking_TomatoDiced 6 GoodJobSuzette.HomeCooking_GarlicCloves 4 340 1 Lilybrook.Onion 1"
+				},
+				"GoodJobSuzette.HomeCooking_VeggieBroth": {
+					"0": "GoodJobSuzette.HomeCooking_GarlicCloves 4 250 1 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				}
+			}
+		},
+		// ADDONS: + AHM
+		{
+			"LogName": "Home Cooking - Lilybrook+AHM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable Lilybrook": "true",
+				"Enable AHM": "true",
+				"Context Tag Recipes": "false",
+				"HasMod|contains=8BitAlien.Lilybrook": "true",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BeefBroth": {
+					"0": "639 1 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenBroth": {
+					"0": "641 1 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenDumplings": {
+					"0": "GoodJobSuzette.HomeCooking_ChickenGravy 1 GoodJobSuzette.HomeCooking_Dumplings 3 GoodJobSuzette.HomeCooking_GarlicCloves 2 GoodJobSuzette.HomeCooking_Worchestershire 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenGravyStew": {
+					"0": "GoodJobSuzette.HomeCooking_ChickenGravy 1 GoodJobSuzette.HomeCooking_ChickenBroth 1 GoodJobSuzette.HomeCooking_Eggnoodles 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_HamburgerSoup": {
+					"0": "GoodJobSuzette.HomeCooking_TomatoBeefBase 1 192 1 GoodJobSuzette.HomeCooking_TomatoDiced 3 260 2 GoodJobSuzette.HomeCooking_GroundBeef 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_JojaRibs": {
+					"0": "GoodJobSuzette.HomeCooking_TomatoBeefBase 1 167 1 639 1 GoodJobSuzette.HomeCooking_MashedPotatoes 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_PorkBroth": {
+					"0": "20 1 GoodJobSuzette.HomeCooking_GarlicGingerPaste 1 640 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_PotRoast": {
+					"0": "639 1 GoodJobSuzette.HomeCooking_BeefBroth 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				}
+			}
+		},
+		// ADDONS: + RCM
+		{
+			"LogName": "Home Cooking - Lilybrook+RCM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable Lilybrook": "true",
+				"Enable AHM": "true",
+				"Context Tag Recipes": "false",
+				"HasMod|contains=8BitAlien.Lilybrook": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BeefBroth": {
+					"0": "Roseloves109_Beef 1 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenBroth": {
+					"0": "Roseloves109_Chicken 1 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenDumplings": {
+					"0": "GoodJobSuzette.HomeCooking_ChickenGravy 1 GoodJobSuzette.HomeCooking_Dumplings 3 GoodJobSuzette.HomeCooking_GarlicCloves 2 GoodJobSuzette.HomeCooking_Worchestershire 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenGravyStew": {
+					"0": "GoodJobSuzette.HomeCooking_ChickenGravy 1 GoodJobSuzette.HomeCooking_ChickenBroth 1 GoodJobSuzette.HomeCooking_Eggnoodles 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_HamburgerSoup": {
+					"0": "GoodJobSuzette.HomeCooking_TomatoBeefBase 1 192 1 GoodJobSuzette.HomeCooking_TomatoDiced 3 260 2 GoodJobSuzette.HomeCooking_GroundBeef 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_JojaRibs": {
+					"0": "GoodJobSuzette.HomeCooking_TomatoBeefBase 1 167 1 Roseloves109_Beef 1 GoodJobSuzette.HomeCooking_MashedPotatoes 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_PorkBroth": {
+					"0": "20 1 GoodJobSuzette.HomeCooking_GarlicGingerPaste 1 Roseloves109_Pork 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_PotRoast": {
+					"0": "Roseloves109_Beef 1 GoodJobSuzette.HomeCooking_BeefBroth 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				}
+			}
+		},
+		// ADDONS: + AHM + CAM
+		{
+			"LogName": "Home Cooking - AHM + CAM + LB",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Context Tag Recipes": "false",
+				"Enable AHM": "true",
+				"Enable CAM": "true",
+				"Enable Lilybrook": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=8BitAlien.Lilybrook": "true",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BeefBroth": {
+					"0": "639 1 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_RedWineVinegar 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				}
+			}
+		},
+		// ADDONS: + RCM + CAM
+		{
+			"LogName": "Home Cooking - RCM + CAM + LB",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Context Tag Recipes": "false",
+				"Enable AHM": "true",
+				"Enable CAM": "true",
+				"Enable Lilybrook": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=8BitAlien.Lilybrook": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BeefBroth": {
+					"0": "Roseloves109_Beef 1 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_RedWineVinegar 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				}
+			}
+		},
+		// ADDONS: + CAM
+		{
+			"LogName": "Home Cooking - CAM + LB",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": "true",
+				"Enable Lilybrook": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=8BitAlien.Lilybrook": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BoneStock": {
+					"0": "881 20 GoodJobSuzette.HomeCooking_GarlicCloves 6 GoodJobSuzette.HomeCooking_AppleCiderVinegar 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_CaramelizedOnions": {
+					"0": "247 1 GoodJobSuzette.HomeCooking_Salt 1 Lilybrook.Onion 3 GoodJobSuzette.HomeCooking_Butter 1"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": { //oniondiced1
+					"0": "340 1 419 1 Lilybrook.Onion 1 Cornucopia_ChiliOil 1"
+				},
+				"GoodJobSuzette.HomeCooking_Ketchup": { //6
+					"0": "340 1 GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_TomatoPaste 1 Lilybrook.Onion 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_SalmonPatty": { //6 -oniondiced1 when live
+					"0": "-5 1 139 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_SourCream 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Lilybrook.Onion 1"
+				}
+			}
+		},
+		// ADDONS: + CAM + SBV
+		{
+			"LogName": "Home Cooking - CAM + LB + SBV",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": "true",
+				"Enable Lilybrook": "true",
+				"Enable SBV": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=8BitAlien.Lilybrook": "true",
+				"HasMod|contains=skellady.SBVCP": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": { //oniondiced1
+					"0": "GoodJobSuzette.HomeCooking_HoneyMustard 1 Lilybrook.Onion 1 Cornucopia_ChiliOil 1"
+				}
+			}
+		},
+		// RECIPE EDITS
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable Lilybrook": "true",
+				"HasMod|contains=8BitAlien.Lilybrook": "true"
+			},
+			"Priority": "Default + 300",
+			"Fields": {
+				"Lilybrook.TomatoSoup": {
+					"0": "Lilybrook.Onion 1 Carrot 1 GoodJobSuzette.HomeCooking_TomatoBeefBase 1"
+				},
+				"Lilybrook.Milkshake": {
+					"0": "400 3 GoodJobSuzette.HomeCooking_BerryNutMilk 1 GoodJobSuzette.HomeCooking_HeavyCream 1"
+				},
+				"Lilybrook.EnchantingPizza": {
+					"0": "GoodJobSuzette.HomeCooking_ShreddedCheese 2 GoodJobSuzette.HomeCooking_TomatoSlices 2 GoodJobSuzette.HomeCooking_PepperOnion 1 GoodJobSuzette.HomeCooking_PizzaDough 1"
+				},
+				"Lilybrook.OnionRings": {
+					"0": "247 1 GoodJobSuzette.HomeCooking_Batter 1 Lilybrook.Onion 2"
+				}
+			}
+		}
+	]
+}

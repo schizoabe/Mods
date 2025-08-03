@@ -1,0 +1,259 @@
+1.5.9:
+-FIRST, FOREMOST, & COOLEST UPDATE IS A VISUAL ONE! SteeveJr updated the food & ingredient sprites & they're AWESOME!!
+
+-You'll notice the names for common items such as Butter, Sour Cream, etc. have been changed in the i18n file to now be Homemade Butter, Homemade Sour Cream, etc. This is to help distinguish them from other commonly named items.
+
+-Melting Cheese is now drinkable, you're welcome
+
+-Removed egg_item tag from Vinegar'd Duck Egg, which may have interfered with getting the correct Cured Duck Egg item? But if you use chests with Cornucopia Artisan Machines & Automate please be aware that it may pull Cured Duck Egg again for...extra cured eggs. The simple solution is to just put the Vinegar Egg into an un-attached Preserves Jar.
+
+-Fixed an issue with Hidden Crop Recipes. It's part of a larger project which integrates Home Cooking into other popular cooking mods in a hopefully non-intrusive way (because if you use this mod you hopefully like what it does & how it treats ingredients). Most of the changes are things like adding a broth to soups or stews, using bread or cheese slices instead of the whole item, etc.
+
+! NEW ITEMS !
+-Buttered Bread! It's butter on bread! "{{ModId}}_Butter 1 {{ModId}}_BreadSlices 1" to be precise!
+-Dried Acorns (put 10 Acorns in the Dehydrator)!
+-Acorn Flour (put 1 DriedAcorns in the Mill)!
+-Acorn Pancakes
+
+[CONTEXT TAG RECIPES]
+-Adjusted for Cornucopia More Crops, Visit Mt. Vapius, & Wildflour Atelier Goods
+
+[COOK'S TOOLS]
+-Ground Cinnamon & Grass Powder can be made in the Spice Grinder! 
+-If you put Rosa's Cruelty-Free Chicken in the Air Fryer, then it now gives out Rosa's Cruelty-Free Fried Chicken!
+
+[CORNUCOPIA ARTISAN MACHINES & RETURN TO MINERAL TOWN]
+-Adjusted so that if you do not have either mods then the Salt-based objects won't appear in your game
+
+[CORNUCOPIA MORE CROPS]
+-Adjusted "whens" for recipes so that if you don't have a certain pack (mostly herb) enabled then the recipe won't show
+
+[CORNUCOPIA MORE CROPS & WILDFLOUR ATELIER GOODS]
+-New seasoning items: Ground Cinnamon, Curry Powder, & Country Seasoning
+-The recipe for Cinnamon Sugar has been adjusted for Ground Cinnamon
+-Adjusted so that if you do not have either mods then the Cinnamon-based objects won't appear in your game
+
+[RETURN TO MINERAL TOWN]
+-New recipe for Herb Seasoning (provided you do not have CAM)! Instead of Dried Vegetables or Dried Herbs it uses Dried Grass!!
+-Dried Grass can be made by putting 3 of any color of Grass in the Dehydrator. From there you can make Herb Seasoning with it (if you do not have CAM) or Grass Powder. (There's also a secret third option!!!)
+-Grass Powder is made in the Kitchen and can be used as an herb-type supplement, especially if you have Vanilla Recipe Changes enabled! You can also use it in Savory Pancakes, Strawberry Latte, & Yellow Miso Soup
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+1.5.8:
+-Fixed Soda Ash & Baking Soda's required input number text string for the Dehydrator
+-Fixed an error where the pie dough was included in Autumn Harvest Pot Pie Filling!
+
+[APPLE RECIPES]
+-Edited Apple Chips & Blueberry Apple Scone
+
+[CONTEXT TAG RECIPES]
+-Fixed Butter image (no more delicious waffle, sorry)
+-Added option for Vanilla Extract provided both "Context Tag Recipes" & "Enable HXW" are enabled
+
+[COOKS TOOLS] ! NEW !
+-With this mod installed you can now use the Spice Grinder to make a better quality Ground Ginger! You can also still do it through your imaginary Mortar & Pestle in the Kitchen menu, too.
+-If you have Cook's Tools along with Animal Husbandry Mod or Rosa's Cruelty-Free Meat, the wrapped Chicken & Pork versions you buy at Gus's Saloon can be "unwrapped" to the meat from your meat mod of choice! Consider it the store-bought kind instead of the grown or raised kind. Even homesteaders might have to go to the store for a missing ingredient now & then ;)
+-Stick raw chicken from Cook's Tools or another meat mod in the Air Fryer to get Cook's Tool's Fried Chicken! Neat!
+-In a future update, this mod will have more functionality with Chicken & Pork recipes available along with greater use of more of Cook's Tool's machines.
+
+[CORNUCOPIA ARTISAN MACHINES]
+-Apple Cider Vinegar now requires 5 Apple Slices instead of Cornucopia's Applesauce
+
+[CORNUCOPIA MORE CROPS]
+-Fixed a few "when" conditions for Mirepoix & VRC overrides so that certain changes will actually take place if you have the herbs pack or extended packs
+
+[ROSA'S CRUELTY-FREE MEAT]
+-Fixed an issue where DriedOysters were being overrided by "DriedFish". ...Actually it's not fixed, Oyster Sauce just now requires DriedFish instead if you have this mod installed.
+-Fixed an issue where modded-addons were still reading Sweet Sausage Seasonings even if RCM was installed
+
+[VANILLA RECIPE CHANGES]
+-Changed a few Vanilla recipes & added mod enables as well. I forgot to document exactly which changes I made...
+
+---------------------------------------------------------------------------------------------------------------------
+
+1.5.7:
+
+NEW ITEMS:
+-Batter! Waffles! Moon Cake Dough! Bean Paste! Vinegar'd Duck Egg! Cured Duck Egg! Ramen Noodles! Soda Ash? Caustic Soda?? Baking Soda! Lye Water?!
+-[Animal Husbandry Mod / Rose's CF Meats] Diced Ham! Sliced Ham!
+
+
+IF YOU HAVE:
+-[Animal Husbandry Mod] I held off on fixing the recipe errors in 1.5.5 until after my vacation & then forgot I didn't actually fix it for the next update after I came back! Well, as it turns out I don't actually know how to fix it so I concede defeat & that section of AHMObjects.json has been deleted. I couldn't recreate seeing the SMAPI warning but I could definitely see that no matter what I did, AHM's recipes weren't changing. If anyone has any idea how to change AHM's recipes without touching the mod itself just let me know!
+
+-[Cornucopia Artisan Machines &/or Wildflour's Atelier Goods] If you have the respective mods Enabled & Context Tag Recipes set to False, then the Batter recipe will be very different as those specific combinations use a different type of flour with the rest of the ingredients accounting for that.
+
+-[Cornucopia More Crops] Instead of Green Beans, Bean Paste uses Soy Beans
+
+-[Rose's CF Meats]
+--Tags have been changed for a lot of meat items. Instead of having the "meat_item" tag they have the "faux_meat_item" tag to distinguish it from intentional meat wherever the "meat_item" tag is used.
+--Also added "Enables" here for each mod that changes a recipe, now it's consistent
+
+-[Visit Mt. Vapius] Instead of Green Beans, Bean Paste uses Fire Beans (unless you have CMC installed)
+
+-[Matcha Recipes] Finally finished Matcha Recipes & now all of Suushiico's recipe trilogy have been completed!  I honestly thought that once I got my head back in that this would be a simple addition, but no we have more new items like Waffles, Lye Water, Cured Duck Egg, & the other ingredients to support those all done out of typical Home Cooking overthinking fashion. According to the mod pages, Suushiico retired from modding & allowed editing of their mods so I wanted to give a new spin on their recipe ideas. Some of these were actually a challenge to figure out - especially Peach Coffee Cake, which ended up in me creating an entirely new IRL recipe from scratch to adapt for the game. 
+
+Because of two dishes in Matcha Recipes (Matcha Mochi, Matcha Waffles & Matcha Moon Cake) I decided to make a few new items that require more than just the Kitchen or Cookout Kit to make:
+
+-Vinegar'd Duck Egg is made with Duck Egg & Vinegar in the Kitchen/Cookout Kit. To make Cured Duck Egg, take the item to a Preserves Jar. This item will take a much shorter time to "cure" than a lot of other items because of the vinegar.
+
+-I tried to make what to do to get Lye Water intuitive via the descriptions but these are the steps:
+--1. Put 10 Seaweed into the Dehydrator to make Soda Ash (This item CURRENTLY has no further use)
+--2. In the Kitchen/Cookout Kit make Caustic Soda from 5 Soda Ash (the addition of water as well as Junimo magic is implied & Caustic Soda has no further current use but will be used as Lye in a future update)
+--3. Put Caustic Soda in the Dehydrator to make Baking Soda (baking soda will have many more uses in the future)
+--4. In the Kitchen/Cookout Kit make Lye Water from Baking Soda (again, the addition of water & Junimo magic is implied)
+
+
+EDIT RECIPES:
+-Autumn Garden Soup now uses Ramen Noodles instead of Pasta
+
+VANILLA RECIPES:
+-IF you have Vanilla Recipe Changes enabled, Chocolate Cake & Pink Cake have now been changed to incorporate Batter.
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+1.5.6 -
+
+This update is actually pretty major, but it doesn't actually add a lot of things, & it expands on things that were introduced in 1.5.5.  
+
+The reason why I say it's major is that, you may have noticed, there is not ADDON file anymore. Thanks to learning about priority, I've consolidated both folders as well as the files for them. If you do not have a mod, then the file for that mod will not load. As this mod grows more and more complex, I wanted to make things as easy as possible for the players who enjoy my mod as well as myself.
+
+!! NEW COMPATIBILITY WITH CRUELTY-FREE MEAT !!
+-If you have Rosa's Cruelty-Free Meat, you can now make meat dishes without Animal Husbandry Mod!!!! Like AHM, RCM versions of future meat dishes will release just the same as AHM. Note that this update does not incorporate the Animal Product Crops Pack...yet. 
+-Additionally, Cruelty-Free Meat recipes will get the Home Cooking treatment!
+-If you have both mods then either compatibility patches (either Rose's or Kaazkulaas') are NECESSARY.
+-If you are using ONLY RCM, NO AHM &/OR CORNUCOPIA & are getting errors with HC items that add HamburgerPatty, Sausage, Bacon, & Ham, in RCM (with GMCM) toggle the Cornucopia changes to TRUE. Whenever you are done cooking any of those four items, you can turn it back to FALSE.
+
+!! COMPATIBILITY WITH LILYBROOK !!
+-Lilybrook adds several crops including the classic lettuce, onion, bellpepper, and turnip. For players who have both Lilybrook & Cornucopia's More Crops, Home Cooking Recipes will still use Cornucopia. However, if you don't use More Crops, then that opens up previously CMC-only recipes for you with Lilybrook! This is an admittedly small list because the CMC idea list is just so massive but players of Lilybrook can make Mirepoix (using CMC's essential crops only version that uses bellpepper instead). In the future, this mod may get a more focused update.
+
+NEW ITEMS:
+-[Animal Husbandry &/or Rose's CF Meat] Players can now enjoy Sweet Sausage! For AHM, Sweet Sausage can be prepared in the kitchen by combining GroundPork with Sweet Sausage Seasoning, a separately cooked ingredient made of sugar, wine, and Red Sauce. For RCM & any of the patches, put Ground Pork in the Sausage Machine for Sweet Sausage! Until there are other dishes that use Sweet Sausage Seasoning's ingredient list, this seasoning ingredient item will be AHM-only (bc trust me I tried so many different things for the Sausage Machine to accept SSSeasoning instead of MeatSeasoning when combined with Ground Pork - & Ground Pork only works bc it has the groundmeat_item tag instead of meat_item haha).
+-[Visit Mt. Vapius] If you have this mod, you may have noticed a few extra ingredients: Ewe Cheese Slices, Rye Bread Slices, Shredded Ewe Cheese. They don't have a place yet (except for personal testing edits because I'm still exploring the mod) & integration may be slow but steady.
+
+NEW DISHES:
+-[Animal Husbandry &/or Rose's CF Meat] Grampleton Pie, Spaghetti Pie
+
+RECIPE EDITS:
+-[Animal Husbandry &/or Rose's CF Meat] 
+--Broths now require only 1 of their meats
+-[Cornucopia Artisan Machines] Removed Fish Sauce instances so that Worcestershire Sauce is now vegan no matter what mods you use
+-[Cornucopia More Crops] Fixed SpiceBlend error
+
+BUYABLE RECIPES:
+-Made JojaRice & JojaRibs buyable recipes at JojaMart
+-[Animal Husbandry &/or Rose's CF Meat] Made certain buyable recipes
+
+SUUSHIICO'S MATCHA RECIPES:
+-Not ready yet! I got so focused with Rose's CF Meat, then the Lilybrook expansion, & then my idea to consolidate the files that when I looked at my tin of Matcha for inspiration I instead just despaired. That'll be a 1.5.7 thing.
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+1.5.5 - 
+Wow, this ended up being a much larger update than I imagined! Enough that I think we can jump to 1.5.5.
+
+-Stick a Large Milk into the Dehydrator to get Milk Powder now! Wow!
+-Still trying to get the optimal energy reduction for Void Pickled Eggs. The idea is that if you can survive eating that, you can survive anything.
+-IF you have Suushiico's Peachy Keen Recipes &/or Apple Recipes, you can enable for Home Cooking to edit the recipes so that Peaches & Cream will use Heavy Cream instead of Milk, Pumpkin Apple Pie will use new ingredients (like Apple Pie Filling!) alongside Pumpkin Puree & Pie Dough, etc. Unlike the other configs, this one is DEFAULTED TO TRUE for both mods (Suushiico's Matcha Recipes is next but I have to go out of town & ran out of time!).
+
+RECIPE EDITS: (THIS ONE IS BIG!!)
+-Recipes over 6 ingredients have been altered and spread out to create (hopeful) COMPATIBILITY with LOVE OF COOKING as well as providing players with incremental steps instead of having to wait until you have all 1,800 ingredients to finally be able to make the recipe.
+-For example, Beef Dumplings used to be potato2 carrot2 greenbean dumplings3 potroast wine garlicclove tomatopaste beefbroth.  NOW Beef Dumplings is dumplings3, potroast, wine, Spring Soup Vegetables (potato2 carrot2 greenbean), & Tomato-Based Beef Broth (garlicclove tomatopaste beefbroth). That way if it's spring, you can already have your soup vegetables made in advance, & there are a couple of recipes that use the same vegetables & broths!
+-Vanilla Recipe Changes & Context Tag Recipes have been updated accordingly!
+
+NEW INGREDIENTS:
+-[HC] ApplePieFilling, AppleSlices, AutumnGardenSoup_Veg, AutumnHarvestPotPie_Filling, BrightFishBroth, DashiUmamiBase, HoneyDriedFruit, OysterChowder_Veg, PepperOnion, RedNoodleSoup_Veg, SpringVeg, ThickenedFishBroth, WinterForageBlend, RoastedNutMilk, BerryNutMilk
+-[AHM] ChickenGravyStew, ChickenSoup_Base, ChickenSoup_Veg, RabbitDumplings_Base, RabbitDumplings_Veg, QuicheGrampleton_Filling, SalmonChowder_Veg, SpringGardenSoup_Veg, TomatoBeefBroth
+-[CAM] AppleCiderVinegar, RedWineVinegar, RiceVinegar
+-[CMC] LemongrassLimeBlend
+-[CMC/WAG] CinnamonSugar
+
+NEW DISHES: 
+-[HC] KaleSmoothie, Nachos, PersonalPizza (continuing with the Concession Food items)
+-[SBV] CarobNutMilk
+-[WAG] JasmineTea
+
+-For users of Cornucopia Artisan Machines, THAT'S RIGHT you get new vinegars!! Since Home Cooking's conception I've been searching for a way to get those vinegars into my game. Once I realized I could use CAM's Vinegar Keg, it took a LOT of trial & error but I did it!! Can you tell I'm excited to finally have these?!  Just put wine, rice shoots, and CAM's applesauce (also just go with it okay, I had a hard time trying to override CAM's vinegar output) into the Vinegar Keg!  Make sure you have the HC ADDON optional file with CAM enabled in the GMCM so that you can use them!  Or just sell them & not use them, whatever! Either way, YAYYYY!
+
+-Did you notice the three different versions of dairy-free milk?  Home Cooking now has Roasted Hazelnut Milk made from, you guessed it, the vanilla dish Roasted Hazelnuts! There is the sweetened version made with salmonberries and blackberries along with, if you have Sunberry Village, a version made with carob! This update is already way too big but more vegan and non-dairy dishes are in the future along with incorporating Rose's Cruelty-Free Meats. Maybe the vegan alternatives should be a separate add-on mod? Or I could add a toggle to hide non-vegan, meat, gluten, and/or dairy items? As long as I am able to hide things based on a tag, this would be very easy to do (I don't know how to enable/disable based on tags yet). Let me know what you think!
+
+---------------------------------------------------------------------------------------------------------------------
+
+1.5.1 -
+RECIPE EDITS: 
+-changed FishBroth to use any fish
+-removed leek from DeluxeCheeseburger
+-changed Worchestershire to use DriedFruit not a Bullfish (wow my bad)
+-WAGBasic's CaramelizedOnions fix
+-add-ons have alterations to BeefPatty
+
+i18n EDITS: 
+-reworded SalmonBurger's description
+-just realized for the first time that I've been spelling Worcestershire Sauce the wrong way. can't pronounce it, can't spell it, wow, but the updated i18n file can now!
+
+---------------------------------------------------------------------------------------------------------------------
+
+1.5.0 - 
+THIS IS THE BIG UPDATE!  ACTUALLY, A BIGGER UPDATE THAN I WAS INITIALLY EXPECTING!  It's enough of a change that I think it warrants jumping up to 1.5.0 because every existing recipe has undergone some alteration, and the price of every object has been adjusted; I realized it was ridiculously high especially when that price was meant for as a whole & not individually.
+
+The new ingredients are designed to help with inventory management.  You can get more use out of commonly used ingredients like Cheese, Tomatoes, Garlic, etc. because it doesn't make sense to waste a whole tomato when just a slice will do.  This level of detail isn't for everyone, so I understand if there is a demand for a "simple" mod (pre-1.5 simple ingredients but still updated with the new dishes).  If there is, let me know in the comments after you give this version a shot!
+
+NEW INGREDIENTS: 
+-Home Cooking: Herbal Vinegar, Herbal Oil, Hot Pepper Flakes, Cloves of Garlic, Sliced Spring Onions, Sliced Cheese, Sliced Goat Cheese, Sliced Tomatoes, Diced Tomatoes, Shredded Cheese, Shredded Goat Cheese, Garlic-Ginger Paste, Ketchup, Pizza Dough, Cape Starlet Seasoning, Bechamel Sauce, Oil Vinaigrette, Ground Ginger, Tortilla Chips, Garden Salsa, Oyster Sauce, Mushroom Powder, Dried Oysters, Salmon Patty, Caramelized Onions (for base Home Cooking! turns out you CAN caramelize Spring Onions - just the white parts of Spring Onions, though, which is why they specifically take 6 instead of the 3 for Cornucopia's Onion or Wildflour's Red Onion [which can be caramelized as well])
+-Animal Husbandry Mod [AHM]: Beef Patty, Chicken Patty
+-Cornucopia Artisan Machines [CAM] &/or Return to Mineral Town [RMT]: Sunflower Salt, Fire Salt, 
+-CAM: Sliced Nut Cheese, Apple Cider Vinegar, Red Wine Vinegar, Rice Vinegar
+-HXW's Mixology: Vanilla Extract
+-RMT: HerbSeasoning (that's right, if you have Return to Mineral Town you can access all the salts[sunflower salt, fire salt] & HerbSeasoning without needing CAM, CMC, WAG, or anything else!)
+-Sunberry Village: Mustard, Honey Mustard, Beer Mustard, Hot Mustard, Wine Mustard
+
+NEW DISHES: Red Cabbage Slaw (an ingredient in Fish Taco with VRC), Salmon Burger, Smell of the Sea, Seasonal Pickled Eggs(4), Void Pickled Eggs
+-Animal Husbandry Mod: Cheeseburger, Deluxe Cheeseburger & Fries, Hamburger, Beef Dumplings, Chicken Gravy & Eggnoodle Soup, Stew Chicken & Dumplings
+-Mizu's Quail: Pickled Quail Eggs
+-Sunberry Village: Mustard Pickled Eggs
+
+BUYABLE RECIPES:
+-Many recipes are now buyable at Marnie's Ranch, the Desert Trader, Willy's fish shop, Krobus's shop, & the Saloon since I found relying on /f CHARACTER H#/ to be unreliable, especially with as many recipes as this mod has. In the future I'd like for the specialty shops to be able to have a pamphlet with recipes because ultimately knowing the possibilities of what you can do with ingredients is going to inspire purchases, & for a small town, & a small shop within a small town, that sort of given information is invaluable. Having recipes being bought in the Saloon doesn't make sense to me because Gus is in the market of cooking for others, unless the recipe is simple & won't take away from his market.
+-Marnie's ranch has the seasonal pickled eggs recipes.
+-The Desert Trader sells the homemade Smell of the Sea recipe.  In the future I want to do all the Desert Festival foods (& then have it as a Cookbook) but in order for players to hopefully not encounter the recipe before reaching the Calico Desert, I opted for this approach.
+-Willy's Fish Shop sells fish-related recipes. 
+-Krobus's shop sells one recipe, Void Pickled Eggs, for 10,000G. You're not certain of his intentions with that one.
+
+SPACECORE & VANILLA RECIPE CHANGES:
+-Added Spacecore for Add-on file & defaulted any configuration changes to FALSE.  If you do not have Spacecore then neither the Main or Addon Spacecore files will load in your game, so no worries :)  To see the Vanilla Recipe Changes & Context Tag Recipes, then you need to go into General Mod Configuration Menu (easiest) and toggle them to TRUE.  If you don't want a certain change, just go in & delete the entry in the json file; don't be afraid to edit my files to cater to your personal style.
+-Added toggles for individual mods in the Add-On file.  Say you have Return to Mineral Town (RMT) & want the recipe changes it adds (for instance, it makes Dashi require Bonito instead of Tuna), you can toggle it on.  In fact, you could toggle it off to make Dashi with Tuna & then toggle it back on without any harm done.  Like with Vanilla Recipe Changes & Context Tag Recipes, all mods are defaulted to "false" so you can pick & choose your level of difficulty. 
+-VANILLA RECIPE CHANGES (VRC): Nearly every recipe has undergone some altering. The Add-On file also has its own VRC toggle. If a certain recipe doesn't fit into your play style, go ahead & play with the Add-On toggles or turn it off altogether.
+-CONTEXT TAG RECIPES (CTR): Changes a few vanilla recipes both in the main & add-on files.
+-IF YOU HAVE CORNUCOPIA ARTISAN MACHINES & WISH TO SEE HOME COOKING VERSIONS OF VANILLA RECIPES (which incorporates & expands on CAM & then some):
+--1) In Home Cooking toggle Vanilla Recipe Changes to TRUE.
+--2) In Cornucopia Artisan Machines toggle Enable Vanilla Recipe Changes AND Enable Flexible Recipes to FALSE.
+--3) Don't worry because HC will cover all CAM changes IF you have the mod & only add on to them in HC fashion.
+--4) These changes are easily made and unmade with General Mod Configuration Menu without ever having to leave the game.
+-IF YOU USE LOVE OF COOKING, leave VRC & CTR to "false" (in other words, do nothing until I get a better grasp on that mod)
+
+EDITED RECIPES: 
+-Mama's Red Sauce adds Tomato Paste
+-Vinegar becomes Herbal Vinegar for: BoneStock, BeefBroth
+-Spring Onion becomes Sliced Spring Onions for: JojaRice, RabbitDumplings, ChickenStew, MashedStew, RedNoodleSoup
+-Garlic becomes Cloves of Garlic for: RabbitDumplings, ClearClamChowder, HamburgerSoup, SpringGardenSoup, QuicheGrampleton, JojaRibs, PotRoastPie, BeefBroth, ChickenBroth, CatfishNoodleSoup, TomatoFishSoup, RedSauce, HerbVinegar, BoneStock, MushroomBroth, SpiceBlend
+-Tomato becomes Diced Tomatoes for: RedClamChowder, HamburgerSoup, MashedStew, SummerGardenSoup, BeefBroth, TomatoFishSoup, TomatoYogurtSoup, RedNoodleSoup, RedSauce
+-Cheese becomes Shredded Cheese for: QuicheGrampleton, MeltingCheese, BroccoliBake, MamaFrittata
+-Garlic & Ginger become Garlic-Ginger Paste for: PorkBroth, CatfishNoodleSoup, TomatoYogurtSoup
+-Most of the SeasonalPotPies & Broccoli Bake use Bechamel Sauce
+-Other little changes that I forgot to keep track of
+
+MINOR UPDATES:
+-A LOT of sprite alterations and swaps.
+-Mostly completed the Gift Tastes? I think??
+-Everything has been unhidden with its i18n complete!
+-Exclude from Perfection Score should actually work this time.
+-Buffs have been altered to be more intentional with the duration actually considered.
+-GreenPasta is no longer drinkable, sorry! But most soups ARE!! I stand by my truth!!!
+-After careful consideration because of the way it's made and the nonsensical reverse-processing, Buttermilk has been removed.  Any future dishes involving Buttermilk will be WAG-only.  Additionally, I removed Tomato Clam Chowder because it was too similar to Red Clam Chowder.
+
+
+(see Nexus changelog for pre-1.5 updates!)

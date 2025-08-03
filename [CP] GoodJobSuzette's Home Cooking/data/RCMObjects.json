@@ -1,0 +1,1938 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooking - Rosa's Cruelty-Free Meat Objects + Compatibility",
+	"Changes": [
+		// OBJECTS
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Priority": "Default + 100",
+			"Entries": {
+				"{{ModId}}_BeefBroth": {
+					"Name": "{{ModId}}_BeefBroth",
+					"Displayname": "{{i18n: HomeCooking_BeefBroth}}",
+					"Description": "{{i18n: HomeCooking_BeefBroth.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 130,
+					"Edibility": 30,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 12,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"color_brown"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_BeefDumplings": {
+					"Name": "{{ModId}}_BeefDumplings",
+					"Displayname": "{{i18n: HomeCooking_BeefDumplings}}",
+					"Description": "{{i18n: HomeCooking_BeefDumplings.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 2500,
+					"Edibility": 95,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 13,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_brown",
+						"allergen_gluten"
+					],
+					"Buffs": [
+						{
+							"Duration": 600,
+							"CustomAttributes": {
+								"FarmingLevel": 2
+							}
+						}
+					]
+				},
+				"{{ModId}}_BeefPatty": {
+					"Name": "{{ModId}}_BeefPatty",
+					"Displayname": "{{i18n: HomeCooking_BeefPatty}}",
+					"Description": "{{i18n: HomeCooking_BeefPatty.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 200,
+					"Edibility": 80,
+					"Texture": "Mods/{{ModId}}/smalldish",
+					"SpriteIndex": 1,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"faux_meat_item",
+						"patty_item"
+					],
+					"Buffs": [
+						{
+							"Duration": 600,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_Cheeseburger": {
+					"Name": "{{ModId}}_Cheeseburger",
+					"Displayname": "{{i18n: HomeCooking_Cheeseburger}}",
+					"Description": "{{i18n: HomeCooking_Cheeseburger.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 650,
+					"Edibility": 125,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 13,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"burger_item",
+						"color_brown"
+					],
+					"Buffs": [
+						{
+							"Duration": 840,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ChickenBroth": {
+					"Name": "{{ModId}}_ChickenBroth",
+					"Displayname": "{{i18n: HomeCooking_ChickenBroth}}",
+					"Description": "{{i18n: HomeCooking_ChickenBroth.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 180,
+					"Edibility": 50,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 13,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"color_dark_yellow"
+					],
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ChickenDumplings": {
+					"Name": "{{ModId}}_ChickenDumplings",
+					"Displayname": "{{i18n: HomeCooking_ChickenDumplings}}",
+					"Description": "{{i18n: HomeCooking_ChickenDumplings.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 2600,
+					"Edibility": 90,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 11,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_brown",
+						"allergen_gluten"
+					],
+					"Buffs": [
+						{
+							"Duration": 480,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ChickenGravy": {
+					"Name": "{{ModId}}_ChickenGravy",
+					"Displayname": "{{i18n: HomeCooking_ChickenGravy}}",
+					"Description": "{{i18n: HomeCooking_ChickenGravy.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 2100,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 84,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"ingredient_item",
+						"color_brown",
+						"gravy_item",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_mushroom"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ChickenGravyStew": {
+					"Name": "{{ModId}}_ChickenGravyStew",
+					"Displayname": "{{i18n: HomeCooking_ChickenGravyStew}}",
+					"Description": "{{i18n: HomeCooking_ChickenGravyStew.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 2500,
+					"Edibility": 75,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 12,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_brown",
+						"allergen_gluten"
+					],
+					"Buffs": [
+						{
+							"Duration": 360,
+							"CustomAttributes": {
+								"FarmingLevel": 2
+							}
+						}
+					]
+				},
+				"{{ModId}}_ChickenPatty": {
+					"Name": "{{ModId}}_ChickenPatty",
+					"Displayname": "{{i18n: HomeCooking_ChickenPatty}}",
+					"Description": "{{i18n: HomeCooking_ChickenPatty.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 400,
+					"Edibility": 90,
+					"Texture": "Mods/{{ModId}}/smalldish",
+					"SpriteIndex": 2,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"faux_meat_item",
+						"patty_item"
+					],
+					"Buffs": [
+						{
+							"Duration": 600,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ChickenSoup": {
+					"Name": "{{ModId}}_ChickenSoup",
+					"Displayname": "{{i18n: HomeCooking_ChickenSoup}}",
+					"Description": "{{i18n: HomeCooking_ChickenSoup.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1100,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 6,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_brown"
+					],
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ChickenSoup_Base": {
+					"Name": "{{ModId}}_ChickenSoup_Base",
+					"Displayname": "{{i18n: HomeCooking_ChickenSoup_Base}}",
+					"Description": "{{i18n: HomeCooking_ChickenSoup_Base.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 300,
+					"Edibility": 55,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 6,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_brown",
+						"base_ingredient"
+					],
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ClearClamChowder": {
+					"Name": "{{ModId}}_ClearClamChowder",
+					"Displayname": "{{i18n: HomeCooking_ClearClamChowder}}",
+					"Description": "{{i18n: HomeCooking_ClearClamChowder.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 800,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 4,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_fish",
+						"allergen_shellfish",
+						"color_yellow"
+					],
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"FishingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_DeluxeCheeseburger": {
+					"Name": "{{ModId}}_DeluxeCheeseburger",
+					"Displayname": "{{i18n: HomeCooking_DeluxeCheeseburger}}",
+					"Description": "{{i18n: HomeCooking_DeluxeCheeseburger.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 2500,
+					"Edibility": 175,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 14,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"meal_item",
+						"color_brown",
+						"allergen_gluten"
+					],
+					"Buffs": [
+						{
+							"Duration": 960,
+							"CustomAttributes": {
+								"FarmingLevel": 2,
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_GrampletonPie": {
+					"Name": "{{ModId}}_GrampletonPie",
+					"Displayname": "{{i18n: HomeCooking_GrampletonPie}}",
+					"Description": "{{i18n: HomeCooking_GrampletonPie.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 3200,
+					"Edibility": 140,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 1,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"pie_item",
+						"color_orange"
+					],
+					"Buffs": [
+						{
+							"Duration": 600,
+							"CustomAttributes": {
+								"FarmingLevel": 2,
+								"ForagingLevel": 1,
+								"Attack": 1,
+								"Defense": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_GroundBeef": {
+					"Name": "{{ModId}}_GroundBeef",
+					"Displayname": "{{i18n: HomeCooking_GroundBeef}}",
+					"Description": "{{i18n: HomeCooking_GroundBeef.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 100,
+					"Edibility": 35,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 8,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"ingredient_item",
+						"color_dark_brown",
+						"faux_meat_item",
+						"modid_goodjobsuzette.homecooking"
+					],
+					"Buffs": [
+						{
+							"Duration": 360,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_GroundChicken": {
+					"Name": "{{ModId}}_GroundChicken",
+					"Displayname": "{{i18n: HomeCooking_GroundChicken}}",
+					"Description": "{{i18n: HomeCooking_GroundChicken.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 200,
+					"Edibility": 35,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 9,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"ingredient_item",
+						"color_brown",
+						"faux_meat_item",
+						"modid_goodjobsuzette.homecooking"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_GroundPork": {
+					"Name": "{{ModId}}_GroundPork",
+					"Displayname": "{{i18n: HomeCooking_GroundPork}}",
+					"Description": "{{i18n: HomeCooking_GroundPork.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 950,
+					"Edibility": 45,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 6,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"ingredient_item",
+						"color_brown",
+						"faux_meat_item",
+						"modid_goodjobsuzette.homecooking"
+					],
+					"Buffs": [
+						{
+							"Duration": 480,
+							"CustomAttributes": {
+								"ForagingLevel": 1,
+								"Attack": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_Hamburger": {
+					"Name": "{{ModId}}_Hamburger",
+					"Displayname": "{{i18n: HomeCooking_Hamburger}}",
+					"Description": "{{i18n: HomeCooking_Hamburger.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 550,
+					"Edibility": 120,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 12,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"burger_item",
+						"color_brown"
+					],
+					"Buffs": [
+						{
+							"Duration": 720,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_HamburgerSoup": {
+					"Name": "{{ModId}}_HamburgerSoup",
+					"Displayname": "{{i18n: HomeCooking_HamburgerSoup}}",
+					"Description": "{{i18n: HomeCooking_HamburgerSoup.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 800,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 5,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_brown"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_HamDiced": {
+					"Name": "{{ModId}}_HamDiced",
+					"Displayname": "{{i18n: HomeCooking_HamDiced}}",
+					"Description": "{{i18n: HomeCooking_HamDiced.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 75,
+					"Edibility": 15,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 16,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"ingredient_item",
+						"color_pink",
+						"faux_meat_item",
+						"modid_goodjobsuzette.homecooking"
+					],
+					"Buffs": [
+						{
+							"Duration": 360,
+							"CustomAttributes": {
+								"MiningLevel": 1,
+								"LuckLevel": 1,
+								"Speed": 1,
+								"MagneticRadius": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_HamSlices": {
+					"Name": "{{ModId}}_HamSlices",
+					"Displayname": "{{i18n: HomeCooking_HamSlices}}",
+					"Description": "{{i18n: HomeCooking_HamSlices.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 25,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 63,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"ingredient_item",
+						"color_pink",
+						"faux_meat_item",
+						"modid_goodjobsuzette.homecooking"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"MiningLevel": 1,
+								"LuckLevel": 1,
+								"Speed": 1,
+								"MagneticRadius": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_JojaRibs": {
+					"Name": "{{ModId}}_JojaRibs",
+					"Displayname": "{{i18n: HomeCooking_JojaRibs}}",
+					"Description": "{{i18n: HomeCooking_JojaRibs.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 700,
+					"Edibility": 120,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 23,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_brown"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_Lard": {
+					"Name": "{{ModId}}_Lard",
+					"Displayname": "{{i18n: HomeCooking_Lard}}",
+					"Description": "{{i18n: HomeCooking_Lard.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 700,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 11,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"ingredient_item",
+						"color_white",
+						"fat_item",
+						"faux_meat_item",
+						"modid_goodjobsuzette.homecooking"
+					],
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_MashedStew": {
+					"Name": "{{ModId}}_MashedStew",
+					"Displayname": "{{i18n: HomeCooking_MashedStew}}",
+					"Description": "{{i18n: HomeCooking_MashedStew.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1800,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 7,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_brown"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_PorkBroth": {
+					"Name": "{{ModId}}_PorkBroth",
+					"Displayname": "{{i18n: HomeCooking_PorkBroth}}",
+					"Description": "{{i18n: HomeCooking_PorkBroth.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 900,
+					"Edibility": 30,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 14,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"color_brown"
+					],
+					"Buffs": [
+						{
+							"Duration": 360,
+							"CustomAttributes": {
+								"ForagingLevel": 1,
+								"Attack": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_PotRoast": {
+					"Name": "{{ModId}}_PotRoast",
+					"Displayname": "{{i18n: HomeCooking_PotRoast}}",
+					"Description": "{{i18n: HomeCooking_PotRoast.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 400,
+					"Edibility": 120,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 21,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"ingredient_item",
+						"color_brown",
+						"modid_goodjobsuzette.homecooking",
+						"faux_meat_item"
+					],
+					"Buffs": [
+						{
+							"Duration": 360,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_PotRoastPie": {
+					"Name": "{{ModId}}_PotRoastPie",
+					"Displayname": "{{i18n: HomeCooking_PotRoastPie}}",
+					"Description": "{{i18n: HomeCooking_PotRoastPie.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1200,
+					"Edibility": 120,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 25,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_brown",
+						"modid_goodjobsuzette.homecooking"
+					],
+					"Buffs": [
+						{
+							"Duration": 600,
+							"CustomAttributes": {
+								"FarmingLevel": 2
+							}
+						}
+					]
+				},
+				"{{ModId}}_PumpkinRisotto": {
+					"Name": "{{ModId}}_PumpkinRisotto",
+					"Displayname": "{{i18n: HomeCooking_PumpkinRisotto}}",
+					"Description": "{{i18n: HomeCooking_PumpkinRisotto.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 2200,
+					"Edibility": 125,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 26,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_orange",
+						"modid_goodjobsuzette.homecooking"
+					],
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							},
+							"CustomFields": {}
+						}
+					]
+				},
+				"{{ModId}}_QuicheGrampleton": {
+					"Name": "{{ModId}}_QuicheGrampleton",
+					"Displayname": "{{i18n: HomeCooking_QuicheGrampleton}}",
+					"Description": "{{i18n: HomeCooking_QuicheGrampleton.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1200,
+					"Edibility": 95,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 27,
+					"IsDrink": false,
+					"ContextTags": [
+						"color_orange",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_gluten"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							},
+							"CustomFields": {}
+						}
+					]
+				},
+				"{{ModId}}_QuicheGrampleton_Filling": {
+					"Name": "{{ModId}}_QuicheGrampleton_Filling",
+					"Displayname": "{{i18n: HomeCooking_QuicheGrampleton_Filling}}",
+					"Description": "{{i18n: HomeCooking_QuicheGrampleton_Filling.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 950,
+					"Edibility": 85,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 33,
+					"IsDrink": false,
+					"ContextTags": [
+						"color_orange",
+						"modid_goodjobsuzette.homecooking"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							},
+							"CustomFields": {}
+						}
+					]
+				},
+				"{{ModId}}_RabbitDumplings": {
+					"Name": "{{ModId}}_RabbitDumplings",
+					"Displayname": "{{i18n: HomeCooking_RabbitDumplings}}",
+					"Description": "{{i18n: HomeCooking_RabbitDumplings.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 5000,
+					"Edibility": 120,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 0,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"LuckLevel": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_dairy"
+					]
+				},
+				"{{ModId}}_RabbitDumplings_Base": {
+					"Name": "{{ModId}}_RabbitDumplings_Base",
+					"Displayname": "{{i18n: HomeCooking_RabbitDumplings_Base}}",
+					"Description": "{{i18n: HomeCooking_RabbitDumplings_Base.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 90,
+					"Edibility": 35,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 28,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"LuckLevel": 1
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"base_ingredient"
+					]
+				},
+				"{{ModId}}_RabbitDumplings_Veg": {
+					"Name": "{{ModId}}_RabbitDumplings_Veg",
+					"Displayname": "{{i18n: HomeCooking_RabbitDumplings_Veg}}",
+					"Description": "{{i18n: HomeCooking_RabbitDumplings_Veg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 250,
+					"Edibility": 45,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 29,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"vegetable_ingredient"
+					]
+				},
+				"{{ModId}}_RedClamChowder": {
+					"Name": "{{ModId}}_RedClamChowder",
+					"Displayname": "{{i18n: HomeCooking_RedClamChowder}}",
+					"Description": "{{i18n: HomeCooking_RedClamChowder.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1000,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 3,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_red",
+						"allergen_shellfish",
+						"allergen_fish"
+					],
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"FishingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_SalmonChowder": {
+					"Name": "{{ModId}}_SalmonChowder",
+					"Displayname": "{{i18n: HomeCooking_SalmonChowder}}",
+					"Description": "{{i18n: HomeCooking_SalmonChowder.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 2300,
+					"Edibility": 110,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 1,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_dairy",
+						"allergen_fish"
+					],
+					"Buffs": [
+						{
+							"Duration": 230,
+							"CustomAttributes": {
+								"FishingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_SalmonChowder_Veg": {
+					"Name": "{{ModId}}_SalmonChowder_Veg",
+					"Displayname": "{{i18n: HomeCooking_SalmonChowder_Veg}}",
+					"Description": "{{i18n: HomeCooking_SalmonChowder_Veg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 600,
+					"Edibility": 60,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 2,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking"
+					]
+				},
+				"{{ModId}}_SpaghettiPie": {
+					"Name": "{{ModId}}_SpaghettiPie",
+					"Displayname": "{{i18n: HomeCooking_SpaghettiPie}}",
+					"Description": "{{i18n: HomeCooking_SpaghettiPie.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 2200,
+					"Edibility": 120,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 0,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_red",
+						"allergen_gluten"
+					],
+					"Buffs": [
+						{
+							"Duration": 600,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"ForagingLevel": 1,
+								"Attack": 1,
+								"Defense": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_SpringGardenSoup": {
+					"Name": "{{ModId}}_SpringGardenSoup",
+					"Displayname": "{{i18n: HomeCooking_SpringGardenSoup}}",
+					"Description": "{{i18n: HomeCooking_SpringGardenSoup.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1000,
+					"Edibility": 120,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 8,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_mushroom",
+						"allergen_gluten"
+					],
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"MiningLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_SpringGardenSoup_Veg": {
+					"Name": "{{ModId}}_SpringGardenSoup_Veg",
+					"Displayname": "{{i18n: HomeCooking_SpringGardenSoup_Veg}}",
+					"Description": "{{i18n: HomeCooking_SpringGardenSoup_Veg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 700,
+					"Edibility": 60,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 27,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking"
+					]
+				},
+				"{{ModId}}_SummerGardenSoup": {
+					"Name": "{{ModId}}_SummerGardenSoup",
+					"Displayname": "{{i18n: HomeCooking_SummerGardenSoup}}",
+					"Description": "{{i18n: HomeCooking_SummerGardenSoup.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 700,
+					"Edibility": 105,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 9,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_gluten"
+					],
+					"Buffs": [
+						{
+							"Duration": 230,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_SundayDinner": {
+					"Name": "{{ModId}}_SundayDinner",
+					"Displayname": "{{i18n: HomeCooking_SundayDinner}}",
+					"Description": "{{i18n: HomeCooking_SundayDinner.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1000,
+					"Edibility": 150,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 24,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_brown",
+						"meal_item"
+					],
+					"Buffs": [
+						{
+							"Duration": 720,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"ForagingLevel": 1
+							},
+							"CustomFields": {}
+						}
+					]
+				},
+				"GoodJobSuzette.HomeCooking_SweetSausage": {
+					"Name": "{{ModId}}_SweetSausage",
+					"Displayname": "{{i18n: HomeCooking_SweetSausage}}",
+					"Description": "{{i18n: HomeCooking_SweetSausage.Description}}",
+					"Type": "Basic",
+					"Category": -26,
+					"Price": 1700,
+					"Edibility": 80,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 32,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"ingredient_item",
+						"color_brown",
+						"modid_goodjobsuzette.homecooking",
+						"faux_meat_item",
+						"sausage_item"
+					],
+					"Buffs": [
+						{
+							"Duration": 600,
+							"CustomAttributes": {
+								"ForagingLevel": 1,
+								"Attack": 1,
+								"Defense": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_Tallow": {
+					"Name": "{{ModId}}_Tallow",
+					"Displayname": "{{i18n: HomeCooking_Tallow}}",
+					"Description": "{{i18n: HomeCooking_Tallow.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 50,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 49,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"ingredient_item",
+						"color_yellow",
+						"fat_item",
+						"modid_goodjobsuzette.homecooking"
+					],
+					"Buffs": [
+						{
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_TomatoBeefBase": {
+					"Name": "{{ModId}}_TomatoBeefBase",
+					"Displayname": "{{i18n: HomeCooking_TomatoBeefBase}}",
+					"Description": "{{i18n: HomeCooking_TomatoBeefBase.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 250,
+					"Edibility": 40,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 15,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"broth_item",
+						"color_red",
+						"base_item"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_WinterForageSoup": {
+					"Name": "{{ModId}}_WinterForageSoup",
+					"Displayname": "{{i18n: HomeCooking_WinterForageSoup}}",
+					"Description": "{{i18n: HomeCooking_WinterForageSoup.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1300,
+					"Edibility": 110,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 10,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_gluten"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				}
+			}
+		},
+		// OBJECTS: player has Mizu's Turkey
+		{
+			"LogName": "RCM BASICS - Mizu.Turkey",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Priority": "Default + 100",
+			"When": {
+				"HasMod|contains=Mizu.Turkey": "true"
+			},
+			"Entries": {
+				"{{ModId}}_GroundTurkey": {
+					"Name": "{{ModId}}_GroundTurkey",
+					"Displayname": "{{i18n: HomeCooking_GroundTurkey}}",
+					"Description": "{{i18n: HomeCooking_GroundTurkey.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 400,
+					"Edibility": 40,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 7,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"ingredient_item",
+						"color_brown",
+						"groundmeat_item",
+						"meat_item",
+						"turkey_item",
+						"modid_goodjobsuzette.homecooking"
+					],
+					"Buffs": [
+						{
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				}
+			}
+		},
+		// RECIPE: Oyster Sauce *this Recipe is in RCMObjects because RCM overrides DriedOysters no matter if there is a patch or not*
+		{
+			"LogName": "OysterSauce",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Priority": "Default + 100",
+			"Fields": {
+				"{{ModId}}_OysterSauce": {
+					"0": "Roseloves109_driedfish 3 245 1 246 1 {{ModId}}_Worchestershire 1"
+				}
+			}
+		},
+		// MACHINE: SausageMachine
+		{
+			"LogName": "Add HC Sausages to RCM SausageMachine",
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"When": {
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true"
+			},
+			"Priority": "Default + 100",
+			"TargetField": [
+				"(BC)Roseloves109_SausageMachine",
+				"OutputRules"
+			],
+			"BeforeID": "Roseloves109_PackofSausages",
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_SweetSausage": {
+					"Id": "GoodJobSuzette.HomeCooking_SweetSausage",
+					"Triggers": [
+						{
+							"RequiredItemId": "(O)GoodJobSuzette.HomeCooking_GroundPork"
+						}
+					],
+					"OutputItem": [
+						{
+							"ItemId": "(O)GoodJobSuzette.HomeCooking_SweetSausage"
+						}
+					],
+					"MinutesUntilReady": 30,
+					"AdditionalConsumedItems": [
+						{
+							"ItemId": "(O)Roseloves109_MeatSeasonings",
+							"RequiredCount": 1
+						}
+					]
+				}
+			}
+		},
+		// SPACECORE: (CAM, VMV, WAG)
+		{
+			"LogName": "Cooking Recipe Overrides - RCM",
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/CookingRecipeOverrides",
+			"When": {
+				"Context Tag Recipes": "True",
+				"Enable AHM": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "True",
+				"HasMod": "Cornucopia.ArtisanMachines, Lumisteria.MtVapius, Wildflour.AtelierGoods"
+			},
+			"Priority": "Default + 200",
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_PieDough": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_PieDough",
+					"ProductAmount": 5,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)245",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "flour_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Flour}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 96,
+								"Y": 160,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)419",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_Lard",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "butter_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Butter}}",
+							"OverrideTexturePath": "Mods/GoodJobSuzette.HomeCooking/basics",
+							"OverrideTextureRect": {
+								"X": 48,
+								"Y": 16,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				},
+				"GoodJobSuzette.HomeCooking_PumpkinRisotto": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_PumpkinRisotto",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)348",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)423",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)666",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_ChickenBroth",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_PumpkinPuree",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "butter_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Butter}}",
+							"OverrideTexturePath": "Mods/GoodJobSuzette.HomeCooking/basics",
+							"OverrideTextureRect": {
+								"X": 48,
+								"Y": 16,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				}
+			}
+		},
+		// SPACECORE: (CMC, VMV, WAG)
+		{
+			"LogName": "Cooking Recipe Overrides - RCM",
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/CookingRecipeOverrides",
+			"When": {
+				"Context Tag Recipes": "True",
+				"Enable AHM": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "True",
+				"HasMod": "Cornucopia.MoreCrops, Lumisteria.MtVapius, Wildflour.AtelierGoods"
+			},
+			"Priority": "Default + 200",
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_JojaRibs": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_JojaRibs",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)167",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)639",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)Carrot",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_TomatoBeefBase",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_MashedPotatoes",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "rosemary_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Rosemary}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 0,
+								"Y": 0,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				}
+			}
+		},
+		// SPACECORE: (CAM, RMT)
+		{
+			"LogName": "Cooking Recipe Overrides - RCM",
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/CookingRecipeOverrides",
+			"When": {
+				"Context Tag Recipes": "True",
+				"Enable AHM": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "True",
+				"HasMod": "Cornucopia.ArtisanMachines, Rexstrife20.MineralTownCP"
+			},
+			"Priority": "Default + 200",
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_Fries": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_Fries",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)192",
+							"Amount": 2
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_Tallow",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "salt_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Salt}}",
+							"OverrideTexturePath": "Mods/GoodJobSuzette.HomeCooking/basics",
+							"OverrideTextureRect": {
+								"X": 48,
+								"Y": 48,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				}
+			}
+		},
+		// SPACECORE: (CMC, WAG)
+		{
+			"LogName": "Cooking Recipe Overrides - RCM",
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/CookingRecipeOverrides",
+			"When": {
+				"Context Tag Recipes": "True",
+				"Enable AHM": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "True",
+				"HasMod": "Cornucopia.MoreCrops, Wildflour.AtelierGoods"
+			},
+			"Priority": "Default + 200",
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_PotRoast": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_PotRoast",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)639",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)Carrot",
+							"Amount": 2
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_BeefBroth",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "thyme_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Thyme}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 0,
+								"Y": 0,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "rosemary_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Rosemary}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 0,
+								"Y": 0,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				},
+				"GoodJobSuzette.HomeCooking_ChickenGravy": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_ChickenGravy",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)348",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)641",
+							"Amount": 2
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_ChickenBroth",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "flour_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Flour}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 96,
+								"Y": 160,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "sage_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Sage}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 0,
+								"Y": 0,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "thyme_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Thyme}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 0,
+								"Y": 0,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				},
+				"GoodJobSuzette.HomeCooking_RedClamChowder": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_RedClamChowder",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_TomatoDiced",
+							"Amount": 6
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)260",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)372",
+							"Amount": 3
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)660",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_ClamJuice",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "thyme_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Thyme}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 0,
+								"Y": 0,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				}
+			}
+		},
+		// SPACECORE: (VMV, WAG)
+		{
+			"LogName": "Cooking Recipe Overrides - RCM",
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/CookingRecipeOverrides",
+			"When": {
+				"Context Tag Recipes": "True",
+				"Enable AHM": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "True",
+				"HasMod": "Lumisteria.MtVapius, Wildflour.AtelierGoods"
+			},
+			"Priority": "Default + 200",
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_RabbitDumplings": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_RabbitDumplings",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_RabbitDumplings_Veg",
+							"Amount": 3
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_RabbitDumplings_Base",
+							"Amount": 5
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)643",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_Dumplings",
+							"Amount": 3
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "cream_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Cream}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 256,
+								"Y": 112,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "rosemary_item",
+							"Amount": 3,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Rosemary}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 0,
+								"Y": 0,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				},
+				"GoodJobSuzette.HomeCooking_SalmonChowder": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_SalmonChowder",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)139",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)666",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_BrightFishBroth",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_SalmonChowder_Veg",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "cream_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Cream}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 256,
+								"Y": 112,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				},
+				"GoodJobSuzette.HomeCooking_QuicheGrampleton_Filling": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_QuicheGrampleton_Filling",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_GarlicCloves",
+							"Amount": 3
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_ShreddedCheese",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)666",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "category_milk, milk_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Milk}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 256,
+								"Y": 112,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "category_egg, egg_item",
+							"Amount": 2,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Egg}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 128,
+								"Y": 112,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "cream_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Cream}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 256,
+								"Y": 112,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				}
+			}
+		},
+		// ADDONS: + CAM + CMC
+		{
+			"LogName": "Home Cooking - RCM + CAM + CMC",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Context Tag Recipes": false,
+				"Enable AHM": true,
+				"Enable CAM": true,
+				"Enable CMC": true,
+				"HasMod|contains=Cornucopia.ArtisanMachines": true,
+				"HasMod|contains=Cornucopia.MoreCrops": true,
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": true
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BeefBroth": {
+					"0": "Roseloves109_Beef 1 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_RedWineVinegar 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_BeefPatty": {
+					"0": "-5 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_SpiceBlend 1 GoodJobSuzette.HomeCooking_GroundBeef 1 GoodJobSuzette.HomeCooking_MushroomPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenPatty": {
+					"0": "-5 1 306 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_GroundChicken 1 GoodJobSuzette.HomeCooking_Worchestershire 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1"
+				}
+			}
+		},
+		// ADDONS: + CAM + WAG
+		{
+			"LogName": "Home Cooking - RCM + CAM + WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Context Tag Recipes": false,
+				"Enable AHM": true,
+				"Enable CAM": true,
+				"Enable WAG": true,
+				"HasMod|contains=Cornucopia.ArtisanMachines": true,
+				"HasMod|contains=Wildflour.AtelierGoods": true,
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": true
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BeefPatty": {
+					"0": "-5 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 GoodJobSuzette.HomeCooking_GroundBeef 1 GoodJobSuzette.HomeCooking_MushroomPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenPatty": {
+					"0": "-5 1 306 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_GroundChicken 1 GoodJobSuzette.HomeCooking_Worchestershire 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1"
+				}
+			}
+		},
+		// ADDING INGREDIENT CONTEXT TAGS (idk if this actually works)
+		{
+			"Action": "EditData",
+			"Target": "Data/ObjectContextTags",
+			"When": {
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true"
+			},
+			"Priority": "Default + 150",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"HamburgerPatty"
+					],
+					"Value": "patty_item faux_meat_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Sausage"
+					],
+					"Value": "sausage_item faux_meat_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Bacon"
+					],
+					"Value": "bacon_item faux_meat_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Ham"
+					],
+					"Value": "ham_item faux_meat_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"BBQSauce"
+					],
+					"Value": "bbq_item condiment_item",
+					"Delimiter": ", "
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Ketchup"
+					],
+					"Value": "ketchup_item condiment_item",
+					"Delimiter": ", "
+				}
+			]
+		}
+	]
+}

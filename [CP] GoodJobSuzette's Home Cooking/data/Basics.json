@@ -1,0 +1,2063 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooked Basics",
+	"Changes": [
+		// HC OBJECTS
+		{
+			"LogName": "BASICS",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_AcornFlour": {
+					"Name": "GoodJobSuzette.HomeCooking_AcornFlour",
+					"Displayname": "{{i18n: HomeCooking_AcornFlour}}",
+					"Description": "{{i18n: HomeCooking_AcornFlour.Description}}",
+					"Type": "Basic",
+					"Category": -26,
+					"Price": 200,
+					"Edibility": 1,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 109,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"mill_item",
+						"flour_item",
+						"allergen_nuts",
+						"color_orange"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_AcornFlourBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ApplePieFilling": {
+					"Name": "{{ModId}}_ApplePieFilling",
+					"Displayname": "{{i18n: HomeCooking_ApplePieFilling}}",
+					"Description": "{{i18n: HomeCooking_ApplePieFilling.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 15,
+					"Edibility": 30,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 4,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"allergen_gluten",
+						"allergen_dairy",
+						"color_red"
+					]
+				},
+				"{{ModId}}_AppleSlices": {
+					"Name": "{{ModId}}_AppleSlices",
+					"Displayname": "{{i18n: HomeCooking_AppleSlices}}",
+					"Description": "{{i18n: HomeCooking_AppleSlices.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 25,
+					"Edibility": 25,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 62,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"apple_item",
+						"color_red"
+					]
+				},
+				"GoodJobSuzette.HomeCooking_BakingSoda": {
+					"Name": "GoodJobSuzette.HomeCooking_BakingSoda",
+					"Displayname": "{{i18n: HomeCooking_BakingSoda}}",
+					"Description": "{{i18n: HomeCooking_BakingSoda.Description}}",
+					"Type": "Basic",
+					"Category": -26,
+					"Price": 1500,
+					"Edibility": 1,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 31,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dehydrator_item"
+					]
+				},
+				"{{ModId}}_Batter": {
+					"Name": "{{ModId}}_Batter",
+					"Displayname": "{{i18n: HomeCooking_Batter}}",
+					"Description": "{{i18n: HomeCooking_Batter.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 30,
+					"Edibility": 2,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 80,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"milk_item",
+						"allergen_dairy",
+						"allergen_gluten"
+					]
+				},
+				"{{ModId}}_BeanPaste": {
+					"Name": "{{ModId}}_BeanPaste",
+					"Displayname": "{{i18n: HomeCooking_BeanPaste}}",
+					"Description": "{{i18n: HomeCooking_BeanPaste.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 600,
+					"Edibility": 20,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 3,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"paste_item",
+						"bean_item"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_BeanPasteBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"Defense": 3
+							}
+						}
+					]
+				},
+				"{{ModId}}_Bechamel": {
+					"Name": "{{ModId}}_Bechamel",
+					"Displayname": "{{i18n: HomeCooking_Bechamel}}",
+					"Description": "{{i18n: HomeCooking_Bechamel.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 100,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 81,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"sauce_item",
+						"color_white",
+						"allergen_gluten",
+						"allergen_dairy"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_BechamelBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_BerryNutMilk": {
+					"Name": "{{ModId}}_BerryNutMilk",
+					"Displayname": "{{i18n: HomeCooking_BerryNutMilk}}",
+					"Description": "{{i18n: HomeCooking_BerryNutMilk.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 750,
+					"Edibility": 55,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 89,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"milk_item",
+						"allergen_treenuts",
+						"food_vegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_BerryNutMilkBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_Breadcrumbs": {
+					"Name": "{{ModId}}_Breadcrumbs",
+					"Displayname": "{{i18n: HomeCooking_Breadcrumbs}}",
+					"Description": "{{i18n: HomeCooking_Breadcrumbs.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 15,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 10,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"allergen_gluten",
+						"color_brown"
+					]
+				},
+				"{{ModId}}_BreadSlices": {
+					"Name": "{{ModId}}_BreadSlices",
+					"Displayname": "{{i18n: HomeCooking_BreadSlices}}",
+					"Description": "{{i18n: HomeCooking_BreadSlices.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 15,
+					"Edibility": 15,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 64,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"allergen_gluten",
+						"bread_item"
+					]
+				},
+				"{{ModId}}_Butter": {
+					"Name": "{{ModId}}_Butter",
+					"Displayname": "{{i18n:HomeCooking_Butter}}",
+					"Description": "{{i18n: HomeCooking_Butter.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 200,
+					"Edibility": 25,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 13,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dairy_item",
+						"butter_item",
+						"allergen_dairy",
+						"color_yellow",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_CapeStarletSeasoning": {
+					"Name": "{{ModId}}_CapeStarletSeasoning",
+					"Displayname": "{{i18n: HomeCooking_CapeStarletSeasoning}}",
+					"Description": "{{i18n: HomeCooking_CapeStarletSeasoning.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 10,
+					"Edibility": 2,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 45,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"spice_item"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_CapeStarletSeasoningBuff",
+							"Duration": 480,
+							"CustomAttributes": {
+								"Speed": 1,
+								"Attack": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_CaramelizedOnions": {
+					"Name": "{{ModId}}_CaramelizedOnions",
+					"Displayname": "{{i18n: HomeCooking_CaramelizedOnions}}",
+					"Description": "{{i18n: HomeCooking_CaramelizedOnions.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 40,
+					"Edibility": 50,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 47,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"onion_item",
+						"allergen_dairy"
+					]
+				},
+				"{{ModId}}_CausticSoda": {
+					"Name": "{{ModId}}_CausticSoda",
+					"Displayname": "{{i18n: HomeCooking_CausticSoda}}",
+					"Description": "{{i18n: HomeCooking_CausticSoda.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1300,
+					"Edibility": -999,
+					"Texture": "Mods/{{ModId}}/broths",
+					"SpriteIndex": 11,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"lye_item"
+					]
+				},
+				"{{ModId}}_CheeseSlices": {
+					"Name": "{{ModId}}_CheeseSlices",
+					"Displayname": "{{i18n: HomeCooking_CheeseSlices}}",
+					"Description": "{{i18n: HomeCooking_CheeseSlices.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 70,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 73,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dairy_item",
+						"cheese_item",
+						"sliced_cheese_item",
+						"allergen_dairy",
+						"color_yellow"
+					]
+				},
+				"{{ModId}}_ChickenSoup_Veg": {
+					"Name": "{{ModId}}_ChickenSoup_Veg", // KALE FORAGE
+					"Displayname": "{{i18n: HomeCooking_ChickenSoup_Veg}}",
+					"Description": "{{i18n: HomeCooking_ChickenSoup_Veg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 550,
+					"Edibility": 45,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 35,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"vegetable_ingredient"
+					]
+				},
+				"{{ModId}}_CowfolkSauce": {
+					"Name": "{{ModId}}_CowfolkSauce",
+					"Displayname": "{{i18n: HomeCooking_CowfolkSauce}}",
+					"Description": "{{i18n: HomeCooking_CowfolkSauce.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 200,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 24,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dressing_item",
+						"color_orange"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_CowfolkSauceBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_CreamCheese": {
+					"Name": "{{ModId}}_CreamCheese",
+					"Displayname": "{{i18n: HomeCooking_CreamCheese}}",
+					"Description": "{{i18n: HomeCooking_CreamCheese.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 150,
+					"Edibility": 25,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 19,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dairy_item",
+						"cream_cheese_item",
+						"allergen_dairy",
+						"color_white",
+						"food_nonvegan"
+					]
+				},
+				"GoodJobSuzette.HomeCooking_CuredDuckEgg": {
+					"Name": "GoodJobSuzette.HomeCooking_CuredDuckEgg",
+					"Displayname": "{{i18n: HomeCooking_CuredDuckEgg}}",
+					"Description": "{{i18n: HomeCooking_CuredDuckEgg.Description}}",
+					"Type": "Basic",
+					"Category": -26,
+					"Price": 500,
+					"Edibility": 55,
+					"Texture": "Mods/{{ModId}}/smalldish",
+					"SpriteIndex": 4,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"egg_item",
+						"allergen_egg",
+						"color_orange",
+						"food_nonvegan",
+						"preserve_jar_item"
+					]
+				},
+				"GoodJobSuzette.HomeCooking_DriedAcorns": {
+					"Name": "GoodJobSuzette.HomeCooking_DriedAcorns",
+					"Displayname": "{{i18n: HomeCooking_DriedAcorns}}",
+					"Description": "{{i18n: HomeCooking_DriedAcorns.Description}}",
+					"Type": "Basic",
+					"Category": -26,
+					"Price": 200,
+					"Edibility": 1,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 107,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dehydrator_item",
+						"dried_acorn_item",
+						"allergen_nuts",
+						"color_orange"
+					]
+				},
+				"GoodJobSuzette.HomeCooking_DriedOysters": {
+					"Name": "GoodJobSuzette.HomeCooking_DriedOysters",
+					"Displayname": "{{i18n: HomeCooking_DriedOysters}}",
+					"Description": "{{i18n: HomeCooking_DriedOysters.Description}}",
+					"Type": "Basic",
+					"Category": -26,
+					"Price": 750,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 54,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dehydrator_item",
+						"dried_oyster_item",
+						"allergen_shellfish",
+						"color_blue"
+					]
+				},
+				"{{ModId}}_Dumplings": {
+					"Name": "{{ModId}}_Dumplings",
+					"Displayname": "{{i18n: HomeCooking_Dumplings}}",
+					"Description": "{{i18n: HomeCooking_Dumplings.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 30,
+					"Edibility": 50,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 69,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"biscuit_item",
+						"allergen_gluten",
+						"color_brown"
+					]
+				},
+				"{{ModId}}_EggNoodles": {
+					"Name": "{{ModId}}_EggNoodles",
+					"Displayname": "{{i18n: HomeCooking_EggNoodles}}",
+					"Description": "{{i18n: HomeCooking_EggNoodles.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 65,
+					"Edibility": 65,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 58,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"pasta_item",
+						"noodle_item",
+						"allergen_gluten",
+						"allergen_egg"
+					]
+				},
+				"{{ModId}}_Fries": {
+					"Name": "{{ModId}}_Fries",
+					"Displayname": "{{i18n: HomeCooking_Fries}}",
+					"Description": "{{i18n: HomeCooking_Fries.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 90,
+					"Edibility": 40,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 61,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"fried_item",
+						"fries_item"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_FriesBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_GardenSalsa": {
+					"Name": "{{ModId}}_GardenSalsa",
+					"Displayname": "{{i18n: HomeCooking_GardenSalsa}}",
+					"Description": "{{i18n: HomeCooking_GardenSalsa.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 80,
+					"Edibility": 45,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 20,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"salsa_item",
+						"food_spicy",
+						"color_dark_red"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_GardenSalsaBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_GarlicCloves": {
+					"Name": "{{ModId}}_GarlicCloves",
+					"Displayname": "{{i18n: HomeCooking_GarlicCloves}}",
+					"Description": "{{i18n: HomeCooking_GarlicCloves.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 10,
+					"Edibility": 1,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 18,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"spice_item",
+						"garlic_item"
+					]
+				},
+				"{{ModId}}_GarlicGingerPaste": {
+					"Name": "{{ModId}}_GarlicGingerPaste",
+					"Displayname": "{{i18n: HomeCooking_GarlicGingerPaste}}",
+					"Description": "{{i18n: HomeCooking_GarlicGingerPaste.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 60,
+					"Edibility": 2,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 2,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"spice_item",
+						"color_yellow"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_GarlicGingerPasteBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"Attack": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_GoatCheeseSlices": {
+					"Name": "{{ModId}}_GoatCheeseSlices",
+					"Displayname": "{{i18n: HomeCooking_GoatCheeseSlices}}",
+					"Description": "{{i18n: HomeCooking_GoatCheeseSlices.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 100,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 74,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dairy_item",
+						"cheese_item",
+						"sliced_cheese_item",
+						"allergen_dairy",
+						"color_yellow"
+					]
+				},
+				"{{ModId}}_GreenPasta": {
+					"Name": "{{ModId}}_GreenPasta",
+					"Displayname": "{{i18n: HomeCooking_GreenPasta}}",
+					"Description": "{{i18n: HomeCooking_GreenPasta.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 115,
+					"Edibility": 50,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 57,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"pasta_item",
+						"noodle_item",
+						"allergen_gluten",
+						"allergen_egg",
+						"color_green"
+					]
+				},
+				"{{ModId}}_GroundGinger": {
+					"Name": "{{ModId}}_GroundGinger",
+					"Displayname": "{{i18n: HomeCooking_GroundGinger}}",
+					"Description": "{{i18n: HomeCooking_GroundGinger.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 10,
+					"Edibility": 1,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 46,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"powder_item",
+						"spice_item",
+						"color_yellow"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_GroundGingerBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"Attack": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_HardEgg": {
+					"Name": "{{ModId}}_HardEgg",
+					"Displayname": "{{i18n: HomeCooking_HardEgg}}",
+					"Description": "{{i18n: HomeCooking_HardEgg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 80,
+					"Edibility": 20,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 76,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"boiled_egg_item",
+						"allergen_egg"
+					]
+				},
+				"{{ModId}}_HardVoidEgg": {
+					"Name": "{{ModId}}_HardVoidEgg",
+					"Displayname": "{{i18n: HomeCooking_HardVoidEgg}}",
+					"Description": "{{i18n: HomeCooking_HardVoidEgg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 115,
+					"Edibility": -15,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 79,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"boiled_egg_item",
+						"void_item",
+						"allergen_egg"
+					]
+				},
+				"{{ModId}}_HeavyCream": {
+					"Name": "{{ModId}}_HeavyCream",
+					"Displayname": "{{i18n: HomeCooking_HeavyCream}}",
+					"Description": "{{i18n: HomeCooking_HeavyCream.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 200,
+					"Edibility": 25,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 85,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dairy_item",
+						"cream_item",
+						"allergen_dairy",
+						"color_white",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_HerbOil": {
+					"Name": "{{ModId}}_HerbOil",
+					"Displayname": "{{i18n: HomeCooking_HerbOil}}",
+					"Description": "{{i18n: HomeCooking_HerbOil.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 30,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 97,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"oil_item"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_HerbOilBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_HerbVinegar": {
+					"Name": "{{ModId}}_HerbVinegar",
+					"Displayname": "{{i18n: HomeCooking_HerbVinegar}}",
+					"Description": "{{i18n: HomeCooking_HerbVinegar.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 30,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 92,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"vinegar_item"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_HerbVinegarBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_HoneyDriedFruit": {
+					"Name": "{{ModId}}_HoneyDriedFruit",
+					"Displayname": "{{i18n: HomeCooking_HoneyDriedFruit}}",
+					"Description": "{{i18n: HomeCooking_HoneyDriedFruit.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1000,
+					"Edibility": 35,
+					"Texture": "Mods/{{ModId}}/fatjars",
+					"SpriteIndex": 7,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_HoneyDriedFruitBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_HotPepperFlakes": {
+					"Name": "{{ModId}}_HotPepperFlakes",
+					"Displayname": "{{i18n: HomeCooking_HotPepperFlakes}}",
+					"Description": "{{i18n: HomeCooking_HotPepperFlakes.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 40,
+					"Edibility": 1,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 42,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"spice_item",
+						"color_red",
+						"food_spicy",
+						"dye_medium"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_HotPepperFlakesBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_HotSauce": {
+					"Name": "{{ModId}}_HotSauce",
+					"Displayname": "{{i18n: HomeCooking_HotSauce}}",
+					"Description": "{{i18n: HomeCooking_HotSauce.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 40,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 98,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"condiment_item",
+						"spice_item",
+						"food_spicy",
+						"color_red",
+						"dye_strong"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_HotSauceBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_Ketchup": {
+					"Name": "{{ModId}}_Ketchup",
+					"Displayname": "{{i18n: HomeCooking_Ketchup}}",
+					"Description": "{{i18n: HomeCooking_Ketchup.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 150,
+					"Edibility": 30,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 34,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"condiment_item",
+						"color_red"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_KetchupBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_LyeWater": {
+					"Name": "{{ModId}}_LyeWater",
+					"Displayname": "{{i18n: HomeCooking_LyeWater}}",
+					"Description": "{{i18n: HomeCooking_LyeWater.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1700,
+					"Edibility": -5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 94,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item"
+					]
+				},
+				"{{ModId}}_MashedPotatoes": {
+					"Name": "{{ModId}}_MashedPotatoes",
+					"Displayname": "{{i18n: HomeCooking_MashedPotatoes}}",
+					"Description": "{{i18n: HomeCooking_MashedPotatoes.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 240,
+					"Edibility": 50,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 15,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"allergen_dairy",
+						"color_white"
+					]
+				},
+				"{{ModId}}_MeltingCheese": {
+					"Name": "{{ModId}}_MeltingCheese",
+					"Displayname": "{{i18n: HomeCooking_MeltingCheese}}",
+					"Description": "{{i18n: HomeCooking_MeltingCheese.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 100,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 83,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"cheese_item",
+						"allergen_dairy",
+						"color_orange",
+						"dye_strong",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_MeltingCheeseBuff",
+							"Duration": 360,
+							"CustomAttributes": {
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"GoodJobSuzette.HomeCooking_MilkPowder": {
+					"Name": "GoodJobSuzette.HomeCooking_MilkPowder",
+					"Displayname": "{{i18n: HomeCooking_MilkPowder}}",
+					"Description": "{{i18n: HomeCooking_MilkPowder.Description}}",
+					"Type": "Basic",
+					"Category": -26,
+					"Price": 40,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 43,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dairy_item",
+						"milk_item",
+						"allergen_dairy",
+						"color_white",
+						"dehydrator_item"
+					]
+				},
+				"{{ModId}}_MoonCakeDough": {
+					"Name": "{{ModId}}_MoonCakeDough",
+					"Displayname": "{{i18n: HomeCooking_MoonCakeDough}}",
+					"Description": "{{i18n: HomeCooking_MoonCakeDough.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 2500,
+					"Edibility": 45,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 75,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dough_item",
+						"allergen_gluten",
+						"color_green"
+					]
+				},
+				"{{ModId}}_MushroomGravy": {
+					"Name": "{{ModId}}_MushroomGravy",
+					"Displayname": "{{i18n: HomeCooking_MushroomGravy}}",
+					"Description": "{{i18n: HomeCooking_MushroomGravy.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 150,
+					"Edibility": 15,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 82,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"gravy_item",
+						"allergen_mushroom",
+						"allergen_gluten",
+						"allergen_dairy",
+						"color_brown"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_MushroomGravyBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_MushroomPowder": {
+					"Name": "{{ModId}}_MushroomPowder",
+					"Displayname": "{{i18n: HomeCooking_MushroomPowder}}",
+					"Description": "{{i18n: HomeCooking_MushroomPowder.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 300,
+					"Edibility": 28,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 40,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"powder_item",
+						"allergen_mushroom",
+						"color_brown"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_MushroomPowderBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_OilVinaigrette": {
+					"Name": "{{ModId}}_OilVinaigrette",
+					"Displayname": "{{i18n: HomeCooking_OilVinaigrette}}",
+					"Description": "{{i18n: HomeCooking_OilVinaigrette.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 20,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 25,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dressing_item"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_OilVinaigretteBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 2
+							}
+						}
+					]
+				},
+				"{{ModId}}_OysterSauce": {
+					"Name": "{{ModId}}_OysterSauce",
+					"Displayname": "{{i18n: HomeCooking_OysterSauce}}",
+					"Description": "{{i18n: HomeCooking_OysterSauce.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 900,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 5,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"sauce_item",
+						"allergen_shellfish",
+						"color_dark_brown"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_OysterSauceBuff",
+							"Duration": 360,
+							"CustomAttributes": {
+								"Speed": 1,
+								"FishingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_Pasta": {
+					"Name": "{{ModId}}_Pasta",
+					"Displayname": "{{i18n: HomeCooking_Pasta}}",
+					"Description": "{{i18n: HomeCooking_Pasta.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 50,
+					"Edibility": 60,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 55,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"pasta_item",
+						"allergen_gluten",
+						"allergen_egg"
+					]
+				},
+				"{{ModId}}_PepperOnion": {
+					"Name": "{{ModId}}_PepperOnion",
+					"Displayname": "{{i18n: HomeCooking_PepperOnion}}",
+					"Description": "{{i18n: HomeCooking_PepperOnion.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 40,
+					"Edibility": 25,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 28,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item"
+					]
+				},
+				"{{ModId}}_PieDough": {
+					"Name": "{{ModId}}_PieDough",
+					"Displayname": "{{i18n: HomeCooking_PieDough}}",
+					"Description": "{{i18n: HomeCooking_PieDough.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 225,
+					"Edibility": 65,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 68,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"allergen_gluten",
+						"allergen_dairy",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_PieDoughBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_PizzaDough": {
+					"Name": "{{ModId}}_PizzaDough",
+					"Displayname": "{{i18n: HomeCooking_PizzaDough}}",
+					"Description": "{{i18n: HomeCooking_PizzaDough.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 80,
+					"Edibility": 60,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 66,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"allergen_gluten"
+					]
+				},
+				"{{ModId}}_PotatoBuns": {
+					"Name": "{{ModId}}_PotatoBuns",
+					"Displayname": "{{i18n: HomeCooking_PotatoBuns}}",
+					"Description": "{{i18n: HomeCooking_PotatoBuns.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 350,
+					"Edibility": 40,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 60,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"bun_item",
+						"allergen_gluten"
+					]
+				},
+				"{{ModId}}_PumpkinPuree": {
+					"Name": "{{ModId}}_PumpkinPuree",
+					"Displayname": "{{i18n: HomeCooking_PumpkinPuree}}",
+					"Description": "{{i18n: HomeCooking_PumpkinPuree.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 300,
+					"Edibility": 40,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 1,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"color_orange",
+						"dye_medium"
+					]
+				},
+				"{{ModId}}_RamenEgg": {
+					"Name": "{{ModId}}_RamenEgg",
+					"Displayname": "{{i18n: HomeCooking_RamenEgg}}",
+					"Description": "{{i18n: HomeCooking_RamenEgg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 200,
+					"Edibility": 20,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 78,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"boiled_egg_item",
+						"allergen_egg"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_RamenEggBuff",
+							"Duration": 600,
+							"CustomAttributes": {
+								"ForagingLevel": 1,
+								"FishingLevel": 1,
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_RamenNoodles": {
+					"Name": "{{ModId}}_RamenNoodles",
+					"Displayname": "{{i18n: HomeCooking_RamenNoodles}}",
+					"Description": "{{i18n: HomeCooking_RamenNoodles.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 200,
+					"Edibility": 20,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 67,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"noodle_item",
+						"allergen_gluten"
+					]
+				},
+				"{{ModId}}_RedPasta": {
+					"Name": "{{ModId}}_RedPasta",
+					"Displayname": "{{i18n: HomeCooking_RedPasta}}",
+					"Description": "{{i18n: HomeCooking_RedPasta.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 80,
+					"Edibility": 65,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 59,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"pasta_item",
+						"allergen_gluten",
+						"allergen_egg",
+						"color_red"
+					]
+				},
+				"{{ModId}}_RedSauce": {
+					"Name": "{{ModId}}_RedSauce",
+					"Displayname": "{{i18n: HomeCooking_RedSauce}}",
+					"Description": "{{i18n: HomeCooking_RedSauce.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 90,
+					"Edibility": 15,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 96,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"sauce_item",
+						"color_red",
+						"dye_strong"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_RedSauceBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"Defense": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_RoastedNutMilk": {
+					"Name": "{{ModId}}_RoastedNutMilk",
+					"Displayname": "{{i18n: HomeCooking_RoastedNutMilk}}",
+					"Description": "{{i18n: HomeCooking_RoastedNutMilk.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 100,
+					"Edibility": 50,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 87,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"milk_item",
+						"allergen_treenuts",
+						"food_vegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_RoastedNutMilkBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_SalmonPatty": {
+					"Name": "{{ModId}}_SalmonPatty",
+					"Displayname": "{{i18n: HomeCooking_SalmonPatty}}",
+					"Description": "{{i18n: HomeCooking_SalmonPatty.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 100,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/smalldish",
+					"SpriteIndex": 3,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"meat_item",
+						"fish_item",
+						"patty_item",
+						"allergen_egg",
+						"allergen_fish",
+						"allergen_shellfish",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_ShreddedCheese": {
+					"Name": "{{ModId}}_ShreddedCheese",
+					"Displayname": "{{i18n: HomeCooking_ShreddedCheese}}",
+					"Description": "{{i18n: HomeCooking_ShreddedCheese.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 40,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 52,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dairy_item",
+						"cheese_item",
+						"shredded_cheese_item",
+						"allergen_dairy",
+						"color_yellow"
+					]
+				},
+				"{{ModId}}_ShreddedGoatCheese": {
+					"Name": "{{ModId}}_ShreddedGoatCheese",
+					"Displayname": "{{i18n: HomeCooking_ShreddedGoatCheese}}",
+					"Description": "{{i18n: HomeCooking_ShreddedGoatCheese.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 50,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 53,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dairy_item",
+						"cheese_item",
+						"shredded_cheese_item",
+						"allergen_dairy",
+						"color_yellow"
+					]
+				},
+				"GoodJobSuzette.HomeCooking_SodaAsh": {
+					"Name": "GoodJobSuzette.HomeCooking_SodaAsh",
+					"Displayname": "{{i18n: HomeCooking_SodaAsh}}",
+					"Description": "{{i18n: HomeCooking_SodaAsh.Description}}",
+					"Type": "Basic",
+					"Category": -26,
+					"Price": 250,
+					"Edibility": 0,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 32,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"furnace_item"
+					]
+				},
+				"{{ModId}}_SoftEgg": {
+					"Name": "{{ModId}}_SoftEgg",
+					"Displayname": "{{i18n: HomeCooking_SoftEgg}}",
+					"Description": "{{i18n: HomeCooking_SoftEgg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 80,
+					"Edibility": 20,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 77,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"boiled_egg_item",
+						"allergen_egg"
+					]
+				},
+				"{{ModId}}_SourCream": {
+					"Name": "{{ModId}}_SourCream",
+					"Displayname": "{{i18n: HomeCooking_SourCream}}",
+					"Description": "{{i18n: HomeCooking_SourCream.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 60,
+					"Edibility": 25,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 14,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"dairy_item",
+						"sour_cream_item",
+						"allergen_dairy",
+						"color_white",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_SpringSlices": {
+					"Name": "{{ModId}}_SpringSlices",
+					"Displayname": "{{i18n: HomeCooking_SpringSlices}}",
+					"Description": "{{i18n: HomeCooking_SpringSlices.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 5,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 21,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"onion_item",
+						"color_green"
+					]
+				},
+				"{{ModId}}_SpringVeg": {
+					"Name": "{{ModId}}_SpringVeg",
+					"Displayname": "{{i18n: HomeCooking_SpringVeg}}",
+					"Description": "{{i18n: HomeCooking_SpringVeg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 400,
+					"Edibility": 50,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 17,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"vegetable_ingredient"
+					]
+				},
+				"{{ModId}}_TomatoDiced": {
+					"Name": "{{ModId}}_TomatoDiced",
+					"Displayname": "{{i18n: HomeCooking_TomatoDiced}}",
+					"Description": "{{i18n: HomeCooking_TomatoDiced.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 40,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 23,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"tomato_item",
+						"color_red",
+						"dye_medium"
+					]
+				},
+				"{{ModId}}_TomatoPaste": {
+					"Name": "{{ModId}}_TomatoPaste",
+					"Displayname": "{{i18n: HomeCooking_TomatoPaste}}",
+					"Description": "{{i18n: HomeCooking_TomatoPaste.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 60,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 0,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"tomato_item",
+						"color_red",
+						"dye_strong"
+					]
+				},
+				"{{ModId}}_TomatoSlices": {
+					"Name": "{{ModId}}_TomatoSlices",
+					"Displayname": "{{i18n: HomeCooking_TomatoSlices}}",
+					"Description": "{{i18n: HomeCooking_TomatoSlices.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 25,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 22,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"tomato_item",
+						"color_red",
+						"dye_medium"
+					]
+				},
+				"{{ModId}}_TortillaChips": {
+					"Name": "{{ModId}}_TortillaChips",
+					"Displayname": "{{i18n: HomeCooking_TortillaChips}}",
+					"Description": "{{i18n: HomeCooking_TortillaChips.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 30,
+					"Edibility": 25,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 29,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"tortilla_chip_item",
+						"allergen_gluten"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_TortillaChipsBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_VinegarDuckEgg": {
+					"Name": "{{ModId}}_VinegarDuckEgg",
+					"Displayname": "{{i18n: HomeCooking_VinegarDuckEgg}}",
+					"Description": "{{i18n: HomeCooking_VinegarDuckEgg.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 250,
+					"Edibility": 50,
+					"Texture": "Mods/{{ModId}}/fatjars",
+					"SpriteIndex": 8,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"allergen_eggs"
+					]
+				},
+				"{{ModId}}_Waffles": {
+					"Name": "{{ModId}}_Waffles",
+					"Displayname": "{{i18n: HomeCooking_Waffles}}",
+					"Description": "{{i18n: HomeCooking_Waffles.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 575,
+					"Edibility": 50,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 70,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"waffle_item",
+						"allergen_gluten",
+						"allergen_eggs",
+						"color_yellow"
+					]
+				},
+				"{{ModId}}_WinterForageBlend": {
+					"Name": "{{ModId}}_WinterForageBlend",
+					"Displayname": "{{i18n: HomeCooking_WinterForageBlend}}",
+					"Description": "{{i18n: HomeCooking_WinterForageBlend.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 300,
+					"Edibility": 20,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 18,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"vegetable_item"
+					]
+				},
+				"{{ModId}}_Worchestershire": {
+					"Name": "{{ModId}}_Worchestershire",
+					"Displayname": "{{i18n: HomeCooking_Worchestershire}}",
+					"Description": "{{i18n: HomeCooking_Worchestershire.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 260,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 99,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"sauce_item",
+						"color_dark_brown",
+						"dye_medium"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_WorchestershireBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"Speed": 1
+							}
+						}
+					]
+				}
+			}
+		},
+		// HC OBJECTS + CMC,WAG
+		{
+			"LogName": "BASIC OBJECTS + CMC/WAG",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"When": {
+				"HasMod": "Cornucopia.MoreCrops, Wildflour.AtelierGoods"
+			},
+			"Entries": {
+				"{{ModId}}_CinnamonSugar": {
+					"Name": "{{ModId}}_CinnamonSugar",
+					"Displayname": "{{i18n: HomeCooking_CinnamonSugar}}",
+					"Description": "{{i18n: HomeCooking_CinnamonSugar.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 15,
+					"Edibility": 3,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 28,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"sugar_item",
+						"cinnamon_item"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_CinnamonSugarBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"Defense": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_CountrySeasoning": {
+					"Name": "{{ModId}}_CountrySeasoning",
+					"Displayname": "{{i18n: HomeCooking_CountrySeasoning}}",
+					"Description": "{{i18n: HomeCooking_CountrySeasoning.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 60,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 102,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"seasoning_item",
+						"herb_item"
+					]
+				},
+				"{{ModId}}_CurryPowder": {
+					"Name": "{{ModId}}_CurryPowder",
+					"Displayname": "{{i18n: HomeCooking_CurryPowder}}",
+					"Description": "{{i18n: HomeCooking_CurryPowder.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 60,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 101,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"seasoning_item",
+						"herb_item"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_CurryPowderBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"Speed": 2,
+								"Defense": 2,
+								"Attack": 2
+							}
+						}
+					]
+				},
+				"{{ModId}}_GroundCinnamon": {
+					"Name": "{{ModId}}_GroundCinnamon",
+					"Displayname": "{{i18n: HomeCooking_GroundCinnamon}}",
+					"Description": "{{i18n: HomeCooking_GroundCinnamon.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 10,
+					"Edibility": 1,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 100,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"powder_item",
+						"spice_item",
+						"color_red"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_GroundCinnamonBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"Defense": 1
+							}
+						}
+					]
+				}
+			}
+		},
+		// HC OBJECTS + CAM,RMT
+		{
+			"LogName": "BASIC OBJECTS + CAM/RMT",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"When": {
+				"HasMod": "Cornucopia.ArtisanMachines, Rexstrife20.MineralTownCP"
+			},
+			"Entries": {
+				"{{ModId}}_FireSalt": {
+					"Name": "{{ModId}}_FireSalt",
+					"Displayname": "{{i18n: HomeCooking_FireSalt}}",
+					"Description": "{{i18n: HomeCooking_FireSalt.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 50,
+					"Edibility": 3,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 27,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"spice_item",
+						"salt_item",
+						"color_red"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_FireSaltBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"Speed": 2,
+								"ForagingLevel": 2
+							}
+						}
+					]
+				},
+				"{{ModId}}_HerbSeasoning": {
+					"Name": "{{ModId}}_HerbSeasoning",
+					"Displayname": "{{i18n: HomeCooking_HerbSeasoning}}",
+					"Description": "{{i18n: HomeCooking_HerbSeasoning.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 15,
+					"Edibility": 2,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 29,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"salt_item",
+						"color_green"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_HerbSeasoningBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"ForagingLevel": 1,
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_SunflowerSalt": {
+					"Name": "{{ModId}}_SunflowerSalt",
+					"Displayname": "{{i18n: HomeCooking_SunflowerSalt}}",
+					"Description": "{{i18n: HomeCooking_SunflowerSalt.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 50,
+					"Edibility": 3,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 26,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_SunflowerSaltBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"LuckLevel": 2,
+								"ForagingLevel": 2
+							}
+						}
+					],
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"salt_item",
+						"color_yellow"
+					]
+				}
+			}
+		},
+
+		// COOKING RECIPES
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Entries": {
+				"{{ModId}}_ApplePieFilling": "613 3 245 1 246 1 {{ModId}}_Butter 1/1 10/{{ModId}}_ApplePieFilling 5/default/{{i18n: HomeCooking_ApplePieFilling}}", // apple3 sugar wheatflour butter
+				"{{ModId}}_AppleSlices": "613 1/1 10/{{ModId}}_AppleSlices 6/default/{{i18n: HomeCooking_AppleSlices}}", // apple
+				"{{ModId}}_Batter": "-5 1 -6 2 246 4/1 10/{{ModId}}_Batter 5/default/{{i18n: HomeCooking_Batter}}", // anyegg anymilk wheatflour
+				"{{ModId}}_BeanPaste": "188 6 245 1 247 1/1 10/{{ModId}}_BeanPaste 1/default/{{i18n: HomeCooking_BeanPaste}}", // greenbean sugar oil (use white beans in CMC [not the same as red bean paste], firebeans in VMV, etc.)
+				"{{ModId}}_Bechamel": "-6 1 246 1 {{ModId}}_Butter 1/1 10/{{ModId}}_Bechamel 5/default/{{i18n: HomeCooking_Bechamel}}", //FARM1 wheatflour anymilk butter |+ [cmc:nutmeg]
+				"{{ModId}}_BerryNutMilk": "296 3 410 3 {{ModId}}_HoneyDriedFruit 1 {{ModId}}_RoastedNutMilk 1/1 10/{{ModId}}_BerryNutMilk 1/none/{{i18n: HomeCooking_BerryNutMilk}}", //FARM1-FORAGE1 salmonberry blackberry HoneyDriedFruit RoastedNutMilk
+				"{{ModId}}_Breadcrumbs": "216 1/1 10/{{ModId}}_Breadcrumbs 5/default/{{i18n: HomeCooking_Breadcrumbs}}", // bread
+				"{{ModId}}_BreadSlices": "216 1/1 10/{{ModId}}_BreadSlices 6/default/{{i18n: HomeCooking_BreadSlices}}", // bread
+				"{{ModId}}_Butter": "{{ModId}}_HeavyCream 2/1 10/{{ModId}}_Butter 1/default/{{i18n: HomeCooking_Butter}}", // heavycream
+				"{{ModId}}_CapeStarletSeasoning": "{{ModId}}_HotPepperFlakes 1 {{ModId}}_GarlicGingerPaste 1/1 10/{{ModId}}_CapeStarletSeasoning 10/none/{{i18n: HomeCooking_CapeStarletSeasoning}}", //SPEED2-ATTACK garlicgingerpaste hotpepperflakes
+				"{{ModId}}_CaramelizedOnions": "247 1 399 6 GoodJobSuzette.HomeCooking_Butter 1/1 10/{{ModId}}_CaramelizedOnions 18/default/{{i18n: HomeCooking_CaramelizedOnions}}", // oil butter springonion
+				"{{ModId}}_CausticSoda": "{{ModId}}_SodaAsh 1/1 10/{{ModId}}_CausticSoda 1/default/{{i18n: HomeCooking_CausticSoda}}", // sodaash
+				"{{ModId}}_CheeseSlices": "424 1/1 10/{{ModId}}_CheeseSlices 6/default/{{i18n: HomeCooking_CheeseSlices}}", // cheese
+				"{{ModId}}_ChickenSoup_Veg": "20 1 250 1 257 1/1 10/{{ModId}}_ChickenSoup_Veg 1/default/{{i18n: HomeCooking_ChickenSoup_Veg}}", // (KALE FORAGE) leek kale morel
+				"{{ModId}}_CowfolkSauce": "16 1 247 1 340 1 419 1 {{ModId}}_SpringSlices 1/1 10/{{ModId}}_CowfolkSauce 5/none/{{i18n: HomeCooking_CowfolkSauce}}", //FORAGE1 oil vinegar honey horseradish springslices - used preppedhorseradish when live
+				"{{ModId}}_CreamCheese": "419 1 186 1 {{ModId}}_HeavyCream 1/1 10/{{ModId}}_CreamCheese 5/default/{{i18n: HomeCooking_CreamCheese}}", // largemilk vinegar heavycream				
+				"{{ModId}}_Dumplings": "246 1 247 1 -6 1/1 10/{{ModId}}_Dumplings 13/default/{{i18n: HomeCooking_Dumplings}}", // wheatflour oil anymilk
+				"{{ModId}}_EggNoodles": "246 2 -5 3/1 10/ {{ModId}}_EggNoodles 5/default/{{i18n: HomeCooking_EggNoodles}}", // wheatflour2 anyegg3
+				"{{ModId}}_GardenSalsa": "260 2 {{ModId}}_TomatoDiced 5 {{ModId}}_HerbVinegar 1/1 10/{{ModId}}_GardenSalsa 5/default/{{i18n: HomeCooking_GardenSalsa}}", //FARM1-SPEED1 hotpepper2 tomatodiced5 herbvinegar
+				"{{ModId}}_GarlicCloves": "248 1/1 10/{{ModId}}_GarlicCloves 12/default/{{i18n: HomeCooking_GarlicCloves}}", // garlic
+				"{{ModId}}_GarlicGingerPaste": "247 1 248 1 829 1/1 10/{{ModId}}_GarlicGingerPaste 5/default/{{i18n: HomeCooking_GarlicGingerPaste}}", //ATTACK1 oil garlic ginger
+				"{{ModId}}_GoatCheeseSlices": "426 1/1 10/ {{ModId}}_GoatCheeseSlices 6/default/{{i18n: HomeCooking_GoatCheeseSlices}}", // goatcheese
+				"{{ModId}}_GroundGinger": "829 1/1 10/{{ModId}}_GroundGinger 10/default/{{i18n: HomeCooking_GroundGinger}}", //ATTACK ginger
+				"{{ModId}}_HardEgg": "-5 1/1 10/{{ModId}}_HardEgg 1/default/{{i18n: HomeCooking_HardEgg}}", // anyegg
+				"{{ModId}}_HardVoidEgg": "305 1/1 10/{{ModId}}_HardVoidEgg 1/default/{{i18n: HomeCooking_HardVoidEgg}}", // voidegg
+				"{{ModId}}_HeavyCream": "-6 1/1 10/{{ModId}}_HeavyCream 1/default/{{i18n: HomeCooking_HeavyCream}}", // anymilk
+				"{{ModId}}_HerbOil": "247 1 {{ModId}}_GarlicCloves 4/1 10/{{ModId}}_HerbOil 5/default/{{i18n: HomeCooking_HerbOil}}", //FARM1 oil garlic
+				"{{ModId}}_HerbVinegar": "419 1 {{ModId}}_GarlicCloves 4/1 10/{{ModId}}_HerbVinegar 5/default/{{i18n: HomeCooking_HerbVinegar}}", //FARM1 garlic vinegar
+				"{{ModId}}_HoneyDriedFruit": "340 1 DriedFruit 1/1 10/{{ModId}}_HoneyDriedFruit 3/default/{{i18n: HomeCooking_HoneyDriedFruit}}", //FARM1 honey driedfruit
+				"{{ModId}}_HotPepperFlakes": "260 3/1 10/{{ModId}}_HotPepperFlakes 5/default/{{i18n: HomeCooking_HotPepperFlakes}}", //SPEED1 hotpepper3
+				"{{ModId}}_HotSauce": "260 3 419 1/1 10/{{ModId}}_HotSauce 5/default/{{i18n: HomeCooking_HotSauce}}", //SPEED1 vinegar hotpepper3
+				"{{ModId}}_Ketchup": "20 1 340 1 419 1 {{ModId}}_TomatoPaste 1/1 10/{{ModId}}_Ketchup 5/default/{{i18n: HomeCooking_Ketchup}}", //FARM1 honey vinegar leek tomatopaste
+				"{{ModId}}_LyeWater": "{{ModId}}_BakingSoda 1/1 10/{{ModId}}_LyeWater 1/default/{{i18n: HomeCooking_LyeWater}}", // bakingsoda
+				"{{ModId}}_MashedPotatoes": "192 3 -6 2 {{ModId}}_Butter 2/1 10/{{ModId}}_MashedPotatoes 5/default/{{i18n: HomeCooking_MashedPotatoes}}", // potatoes milk butter
+				"{{ModId}}_MeltingCheese": "{{ModId}}_ShreddedCheese 1 {{ModId}}_MilkPowder 1 {{ModId}}_Worchestershire 1 {{ModId}}_CreamCheese 1/1 10/{{ModId}}_MeltingCheese 5/default/{{i18n: HomeCooking_MeltingCheese}}", //SPEED1 worchestershire shreddedcheese milkpowder creamcheese
+				/*"{{ModId}}_MilkPowder": "-6 1/1 10/{{ModId}}_MilkPowder 5/default/{{i18n: HomeCooking_MilkPowder}}", // anymilk*/
+				"{{ModId}}_MoonCakeDough": "246 1 247 1 340 1 {{ModId}}_LyeWater 1/1 10/{{ModId}}_MoonCakeDough 5/default/{{i18n: HomeCooking_MoonCakeDough}}", // honey lyewater oil wheatflour matcha
+				"{{ModId}}_MushroomGravy": "246 1 247 1 404 3 {{ModId}}_GarlicCloves 4 {{ModId}}_HeavyCream 1 {{ModId}}_MushroomBroth 1/1 10/{{ModId}}_MushroomGravy 5/default/{{i18n: HomeCooking_MushroomGravy}}", //FORAGE1 mushrooms mushroombroth oil garliccloves wheatflour heavycream - veloute?
+				"{{ModId}}_MushroomPowder": "DriedMushrooms 1/1 10/{{ModId}}_MushroomPowder 10/default/{{i18n: HomeCooking_MushroomPowder}}", //FORAGE1 driedmushrooms
+				"{{ModId}}_OilVinaigrette": "{{ModId}}_HerbVinegar 1 {{ModId}}_HerbOil 1/1 10/{{ModId}}_OilVinaigrette 5/default/{{i18n: HomeCooking_OilVinaigrette}}", //FARM2 herbvinegar herboil
+				"{{ModId}}_OysterSauce": "GoodJobSuzette.HomeCooking_DriedOysters 3 245 1 246 1 {{ModId}}_Worchestershire 1/1 10/{{ModId}}_OysterSauce 5/none/{{i18n: HomeCooking_OysterSauce}}", //SPEED-FISH driedoysters3 sugar [rice]flour worchestershire/soysauce
+				"{{ModId}}_Pasta": "246 2 -5 2/1 10/{{ModId}}_Pasta 5/default/{{i18n: HomeCooking_Pasta}}", // wheatflour2 anyegg2
+				"{{ModId}}_PepperOnion": "247 1 260 3 399 2/1 10/{{ModId}}_PepperOnion 5/default/{{i18n: HomeCooking_PepperOnion}}", // hotpepper3 springonion2 oil
+				"{{ModId}}_PizzaDough": "245 2 246 3 247 1/1 10/{{ModId}}_PizzaDough 5/default/{{i18n: HomeCooking_PizzaDough}}", // sugar2 oil wheatflour3
+				"{{ModId}}_PotatoBuns": "-5 2 245 2 246 2 453 1 {{ModId}}_MashedPotatoes 1 {{ModId}}_CaramelizedOnions 3/1 10/{{ModId}}_PotatoBuns 6/none/{{i18n: HomeCooking_PotatoBuns}}", // wheatflour2 sugar2 egg2 poppyseed mashedpotatoes
+				"{{ModId}}_PumpkinPuree": "276 3/1 10/{{ModId}}_PumpkinPuree 5/default/{{i18n: HomeCooking_PumpkinPuree}}", // pumpkin3
+				"{{ModId}}_RamenEgg": "245 2 419 1 815 2 {{ModId}}_SoftEgg 4 {{ModId}}_OysterSauce 1 {{ModId}}_MushroomPowder 1/1 10/{{ModId}}_RamenEgg 4/default/{{i18n: HomeCooking_RamenEgg}}", //6:SPEED-FISH-FORAGE sugar2 vinegar oystersauce mushroompowder tealeaf2 softeggs4
+				"{{ModId}}_RamenNoodles": "246 2 {{ModId}}_LyeWater 1/1 10/{{ModId}}_RamenNoodles 5/default/{{i18n: HomeCooking_RamenNoodles}}", // wheatflour salt lyewater
+				"{{ModId}}_RedPasta": "246 2 -5 3 {{ModId}}_TomatoPaste 1/1 10/{{ModId}}_RedPasta 5/default/{{i18n: HomeCooking_RedPasta}}", // wheatflour2 egg3 tomatopaste
+				"{{ModId}}_RedSauce": "340 1 {{ModId}}_TomatoPaste 1 {{ModId}}_TomatoDiced 6 {{ModId}}_GarlicCloves 4/1 10/{{ModId}}_RedSauce 5/default/{{i18n: HomeCooking_RedSauce}}", //DEFENSE1 tomatopaste tomatodiced garliccloves honey
+				"{{ModId}}_RoastedNutMilk": "607 1/1 10/{{ModId}}_RoastedNutMilk 3/default/{{i18n: HomeCooking_RoastedNutMilk}}", // roastedhazelnuts
+				"{{ModId}}_SalmonPatty": "-5 1 139 1 {{ModId}}_Breadcrumbs 1 {{ModId}}_SpringSlices 1 {{ModId}}_SourCream 1/1 10/{{ModId}}_SalmonPatty 3/default/{{i18n: HomeCooking_SalmonPatty}}", // salmon egg breadcrumbs springslices sourcream
+				"{{ModId}}_ShreddedCheese": "424 1/1 10/{{ModId}}_ShreddedCheese 12/default/{{i18n: HomeCooking_ShreddedCheese}}", // cheese
+				"{{ModId}}_ShreddedGoatCheese": "426 1/1 10/{{ModId}}_ShreddedGoatCheese 12/default/{{i18n: HomeCooking_ShreddedGoatCheese}}", // Goatcheese
+				"{{ModId}}_SoftEgg": "-5 1/1 10/{{ModId}}_SoftEgg 1/default/{{i18n: HomeCooking_SoftEgg}}", // anyegg
+				"{{ModId}}_SourCream": "419 1 {{ModId}}_HeavyCream 1/1 10/{{ModId}}_SourCream 5/default/{{i18n: HomeCooking_SourCream}}", // vinegar heavycream
+				"{{ModId}}_SpringSlices": "399 1/1 10/{{ModId}}_SpringSlices 12/default/{{i18n: HomeCooking_SpringSlices}}", // springonion
+				"{{ModId}}_SpringVeg": "Carrot 2 192 2 188 1/1 10/{{ModId}}_SpringVeg 1/default/{{i18n: HomeCooking_SpringVeg}}", //3:potato2 carrot2 greenbeans
+				"{{ModId}}_TomatoDiced": "256 1/1 10/{{ModId}}_TomatoDiced 3/default/{{i18n: HomeCooking_TomatoDiced}}", // tomato
+				"{{ModId}}_TomatoPaste": "256 3/1 10/{{ModId}}_TomatoPaste 5/default/{{i18n: HomeCooking_TomatoPaste}}", // tomatoes
+				"{{ModId}}_TomatoSlices": "256 1/1 10/{{ModId}}_TomatoSlices 4/default/{{i18n: HomeCooking_TomatoSlices}}", // tomato
+				"{{ModId}}_TortillaChips": "229 3/1 10/{{ModId}}_TortillaChips 24/default/{{i18n: HomeCooking_TortillaChips}}", //FORAGE1 tortilla3
+				"{{ModId}}_VinegarDuckEgg": "419 1 442 1/1 10/{{ModId}}_VinegarDuckEgg 1/default/{{i18n: HomeCooking_VinegarDuckEgg}}", // vinegar duckegg
+				"{{ModId}}_Waffles": "245 1 {{ModId}}_Batter 1 {{ModId}}_Butter 1/1 10/{{ModId}}_Waffles 2/default/{{i18n: HomeCooking_Waffles}}", // sugar batter butter
+				"{{ModId}}_WinterForageBlend": "412 1 414 1 416 1/1 10/{{ModId}}_WinterForageBlend 1/default/{{i18n: HomeCooking_WinterForageBlend}}", //winterroot crystalfruit snowyam
+				"{{ModId}}_Worchestershire": "DriedFruit 1 419 2 {{ModId}}_HotSauce 1/1 10/{{ModId}}_Worchestershire 5/none/{{i18n: HomeCooking_Worchestershire}}" //SPEED1 vinegar2 HotSauce driedfruit
+			}
+		},
+		//player does NOT have AHM installed
+		{
+			"LogName": "BASICS - NO AHM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": { "HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "false" },
+			"Entries": {
+				"{{ModId}}_PieDough": "245 1 246 1 419 1 {{ModId}}_Butter 2/1 10/{{ModId}}_PieDough 5/default/{{i18n: HomeCooking_PieDough}}", //FARM1 sugar wheatflour vinegar butter2
+				"{{ModId}}_Fries": "192 2 247 1/1 10/{{ModId}}_Fries 4/default/{{i18n: HomeCooking_Fries}}" //2:FARM1 potato2 tallow(oil) +salt
+			}
+		},
+		//player does NOT have CMC & WAG installed
+		{
+			"LogName": "BASICS - NO CMC & WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Cornucopia.MoreCrops": "false",
+				"HasMod|contains=Wildflour.AtelierGoods": "false"
+			},
+			"Entries": {
+				"{{ModId}}_GreenPasta": "250 2 246 2 -5 3/1 10/{{ModId}}_GreenPasta 5/default/{{i18n: HomeCooking_GreenPasta}}" // wheatflour2 egg3 
+			}
+		}
+	]
+}

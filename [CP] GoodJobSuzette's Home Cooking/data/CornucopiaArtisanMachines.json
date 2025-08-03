@@ -1,0 +1,1152 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooking for Cornucopia Artisan Machines",
+	"Changes": [
+		// OBJECTS
+		{
+			"LogName": "Cornucopia.ArtisanMachines: Objects",
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_Salt": {
+					"Name": "{{ModId}}_Salt",
+					"Displayname": "{{i18n: HomeCooking_Salt}}",
+					"Description": "{{i18n: HomeCooking_Salt.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 10,
+					"Edibility": 1,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 33,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"salt_item",
+						"color_white"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_SaltBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_SaffronPasta": {
+					"Name": "{{ModId}}_SaffronPasta",
+					"Displayname": "{{i18n: HomeCooking_SaffronPasta}}",
+					"Description": "{{i18n: HomeCooking_SaffronPasta.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 300,
+					"Edibility": 60,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 56,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"pasta_item",
+						"saffron_item",
+						"allergen_gluten",
+						"allergen_egg",
+						"color_purple"
+					]
+				},
+				"{{ModId}}_NutCheeseSlices": {
+					"Name": "{{ModId}}_NutCheeseSlices",
+					"Displayname": "{{i18n: HomeCooking_NutCheeseSlices}}",
+					"Description": "{{i18n: HomeCooking_NutCheeseSlices.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 100,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 72,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"vegan_item",
+						"cheese_item",
+						"sliced_cheese_item",
+						"allergen_nut",
+						"color_yellow"
+					]
+				},
+				"{{ModId}}_AppleCiderVinegar": {
+					"Name": "{{ModId}}_AppleCiderVinegar",
+					"Displayname": "{{i18n: HomeCooking_AppleCiderVinegar}}",
+					"Description": "{{i18n: HomeCooking_AppleCiderVinegar.Description}}",
+					"Type": "Basic",
+					"Category": -26,
+					"Price": 300,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 91,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"vinegar_item",
+						"color_orange",
+						"kss_sides"
+					]
+				},
+				"{{ModId}}_RedWineVinegar": {
+					"Name": "{{ModId}}_RedWineVinegar",
+					"Displayname": "{{i18n: HomeCooking_RedWineVinegar}}",
+					"Description": "{{i18n: HomeCooking_RedWineVinegar.Description}}",
+					"Type": "Basic",
+					"Category": -26,
+					"Price": 1000,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 93,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"vinegar_item",
+						"color_dark_red",
+						"homecooking_redwinevinegar"
+					]
+				},
+				"{{ModId}}_RiceVinegar": {
+					"Name": "{{ModId}}_RiceVinegar",
+					"Displayname": "{{i18n: HomeCooking_RiceVinegar}}",
+					"Description": "{{i18n: HomeCooking_RiceVinegar.Description}}",
+					"Type": "Basic",
+					"Category": -26,
+					"Price": 300,
+					"Edibility": 5,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 90,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"ingredient_item",
+						"vinegar_item",
+						"homecooking_ricevinegar"
+					]
+				}
+			}
+		},
+		// RECIPES:
+		{
+			"LogName": "BASICS - Cornucopia.ArtisanMachines: Recipes",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Entries": {
+				"{{ModId}}_FireSalt": "{{ModId}}_Salt 5 Cornucopia_ChiliPowder 5/1 10/{{ModId}}_FireSalt 10/default/{{i18n: HomeCooking_FireSalt}}", //FORAGE2-SPEED2 salt5 | chilipowder5
+				"{{ModId}}_HerbSeasoning": "Cornucopia_Salt 1 Cornucopia_DriedVegetable 1/1 10/{{ModId}}_HerbSeasoning 20/default/{{i18n: HomeCooking_HerbSeasoning}}", //FORAGE1 cornucopia_salt cornucopia_driedherb
+				"{{ModId}}_NutCheeseSlices": "Cornucopia_NutCheese 1/1 10/{{ModId}}_NutCheeseSlices 6/default/{{i18n: HomeCooking_NutCheeseSlices}}", // cornucopia_nutcheese				
+				"{{ModId}}_Salt": "Cornucopia_Salt 1/1 10/{{ModId}}_Salt 20/default/{{i18n: HomeCooking_Salt}}", //FORAGE1 cornucopia_salt
+				"{{ModId}}_SaffronPasta": "246 3 -5 2 247 1 348 1 Cornucopia_Saffron 2/1 10/{{ModId}}_SaffronPasta 5/default/{{i18n: HomeCooking_SaffronPasta}}", // wheatflour2 egg2 oil wine saffron2
+				"{{ModId}}_SunflowerSalt": "421 2 815 3 {{ModId}}_Salt 5/1 10/{{ModId}}_SunflowerSalt 10/default/{{i18n: HomeCooking_SunflowerSalt}}" //FORAGE2-LUCK2 sunflower2 tealeaves3 salt5
+			}
+		},
+		// RECIPES: - AHM
+		{
+			"LogName": "BASICS - NO AHM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "false"
+			},
+			"Entries": {
+				"{{ModId}}_Fries": "192 2 247 1 {{ModId}}_Salt 1/1 10/{{ModId}}_Fries 4/default/{{i18n: HomeCooking_Fries}}" //2:FARM1 potato2 tallow(oil) +salt
+			}
+		},
+		// RECIPES: - RCM
+		{
+			"LogName": "BASICS - NO AHM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "false"
+			},
+			"Entries": {
+				"{{ModId}}_Fries": "192 2 247 1 {{ModId}}_Salt 1/1 10/{{ModId}}_Fries 4/default/{{i18n: HomeCooking_Fries}}" //2:FARM1 potato2 tallow(oil) +salt
+			}
+		},
+		// ADDONS: [Context Tag Recipes: FALSE]
+		{
+			"LogName": "Home Cooking - Cornucopia Artisan Machines",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Context Tag Recipes": "false",
+				"Enable CAM": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BoneStock": {
+					"0": "881 20 Carrot 4 GoodJobSuzette.HomeCooking_GarlicCloves 6 GoodJobSuzette.HomeCooking_AppleCiderVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_Batter": {
+					"0": "346 1 246 2 Cornucopia_CornFlour 2"
+				},
+				"GoodJobSuzette.HomeCooking_CapeStarletSeasoning": {
+					"0": "GoodJobSuzette.HomeCooking_GarlicGingerPaste 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_CatfishNoodleSoup": {
+					"0": "GoodJobSuzette.HomeCooking_CatfishNoodleSoup_Base 1 143 1 GoodJobSuzette.HomeCooking_GarlicCloves 3 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1 Cornucopia_RiceNoodles 1"
+				},
+				"GoodJobSuzette.HomeCooking_ClamOreganata": {
+					"0": "Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 372 3 348 1 GoodJobSuzette.HomeCooking_GarlicCloves3"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": {
+					"0": "340 1 419 1 GoodJobSuzette.HomeCooking_SpringSlices 1 Cornucopia_ChiliOil 1"
+				},
+				"GoodJobSuzette.HomeCooking_EggNoodles": {
+					"0": "246 2 -5 3 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"GoodJobSuzette.HomeCooking_GardenSalsa": {
+					"0": "260 2 GoodJobSuzette.HomeCooking_TomatoDiced 5 GoodJobSuzette.HomeCooking_GarlicCloves 1 GoodJobSuzette.HomeCooking_RedWineVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_HerbOil": {
+					"0": "247 1 Cornucopia_DriedHerb 1"
+				},
+				"GoodJobSuzette.HomeCooking_HerbVinegar": {
+					"0": "419 1 Cornucopia_DriedHerb 1"
+				},
+				"GoodJobSuzette.HomeCooking_JojaRice": { //6
+					"0": "167 1 GoodJobSuzette.HomeCooking_SpringSlices 1 271 1 Raisins 1 GoodJobSuzette.HomeCooking_VeggieBroth 1 Cornucopia_Butter 1"
+				},
+				"GoodJobSuzette.HomeCooking_Ketchup": {
+					"0": "20 1 340 1 419 1 GoodJobSuzette.HomeCooking_TomatoPaste 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_MashedPotatoes": {
+					"0": "192 3 -6 2 Cornucopia_Butter 2"
+				},
+				"GoodJobSuzette.HomeCooking_MeltingCheese": {
+					"0": " GoodJobSuzette.HomeCooking_ShreddedCheese 1 GoodJobSuzette.HomeCooking_MilkPowder 1 Cornucopia_GellingPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_OysterSauce": {
+					"0": "GoodJobSuzette.HomeCooking_DriedOysters 3 GoodJobSuzette.HomeCooking_Worchestershire 1 GoodJobSuzette.HomeCooking_Salt 1 245 1 246 1"
+				},
+				"GoodJobSuzette.HomeCooking_Pasta": {
+					"0": "246 2 -5 2 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"GoodJobSuzette.HomeCooking_PotatoBuns": { //6
+					"0": "-5 2 245 2 246 2 453 1 GoodJobSuzette.HomeCooking_MashedPotatoes 1 GoodJobSuzette.HomeCooking_Salt 2" // wheatflour2 sugar2 egg2 poppyseeds mashedpotatoes salt2
+				},
+				"GoodJobSuzette.HomeCooking_RamenEgg": { //6
+					"0": "245 2 815 2 GoodJobSuzette.HomeCooking_SoftEgg 4 GoodJobSuzette.HomeCooking_OysterSauce 1 GoodJobSuzette.HomeCooking_MushroomPowder 1 GoodJobSuzette.HomeCooking_RiceVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_RamenNoodles": {
+					"0": "246 2 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_LyeWater 1"
+				},
+				"GoodJobSuzette.HomeCooking_RedCabbageSlaw": { //6
+					"0": "264 1 266 1 306 1 340 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_SalmonPatty": { //6
+					"0": "-5 1 139 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_SpringSlices 1 GoodJobSuzette.HomeCooking_SourCream 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"GoodJobSuzette.HomeCooking_ThickenedFishBroth": {
+					"0": "GoodJobSuzette.HomeCooking_FishBroth 1 Cornucopia_FishSauce 1 246 1"
+				},
+				"GoodJobSuzette.HomeCooking_TomatoFishSoup": {
+					"0": "GoodJobSuzette.HomeCooking_ThickenedFishBroth 1 Cornucopia_ShrimpPaste 1 -4 1 GoodJobSuzette.HomeCooking_GarlicCloves 3 GoodJobSuzette.HomeCooking_TomatoDiced 6 423 1"
+				},
+				"GoodJobSuzette.HomeCooking_TomatoPaste": {
+					"0": "256 3 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"GoodJobSuzette.HomeCooking_TomatoYogurtSoup": {
+					"0": "GoodJobSuzette.HomeCooking_TomatoDiced 9 GoodJobSuzette.HomeCooking_GarlicGingerPaste 1 GoodJobSuzette.HomeCooking_GoldenBroth 1 Cornucopia_PlainYogurt 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_TortillaChips": {
+					"0": "229 3 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"GoodJobSuzette.HomeCooking_ZuzuBreakfastSandwich": { //6
+					"0": "-5 3 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_BreadSlices 2 GoodJobSuzette.HomeCooking_MeltingCheese 1 Cornucopia_Butter 1 Cornucopia_SpicyMayonnaise 1"
+				}
+			}
+		},
+		// ADDONS: [Context Tag Recipes: TRUE]
+		{
+			"LogName": "Home Cooking - Cornucopia Artisan Machines",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Context Tag Recipes": "true",
+				"HasMod|contains=spacechase0.SpaceCore": "true",
+				"Enable CAM": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BoneStock": {
+					"0": "881 20 Carrot 4 GoodJobSuzette.HomeCooking_GarlicCloves 6 GoodJobSuzette.HomeCooking_AppleCiderVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_CatfishNoodleSoup": {
+					"0": "GoodJobSuzette.HomeCooking_ThickenedFishBroth 1 143 1 GoodJobSuzette.HomeCooking_GarlicCloves 3 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1 Cornucopia_RiceNoodles 1"
+				},
+				"GoodJobSuzette.HomeCooking_GardenSalsa": {
+					"0": "260 2 GoodJobSuzette.HomeCooking_TomatoDiced 5 GoodJobSuzette.HomeCooking_GarlicCloves 1 GoodJobSuzette.HomeCooking_RedWineVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_RamenEgg": { //6
+					"0": "245 2 815 2 GoodJobSuzette.HomeCooking_SoftEgg 4 GoodJobSuzette.HomeCooking_OysterSauce 1 GoodJobSuzette.HomeCooking_MushroomPowder 1 GoodJobSuzette.HomeCooking_RiceVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_ThickenedFishBroth": {
+					"0": "GoodJobSuzette.HomeCooking_FishBroth 1 Cornucopia_FishSauce 1 246 1"
+				},
+				"GoodJobSuzette.HomeCooking_TomatoFishSoup": {
+					"0": "GoodJobSuzette.HomeCooking_ThickenedFishBroth 1 Cornucopia_ShrimpPaste 1 -4 1 GoodJobSuzette.HomeCooking_GarlicCloves 3 GoodJobSuzette.HomeCooking_TomatoDiced 6 423 1"
+				},
+				"GoodJobSuzette.HomeCooking_TomatoYogurtSoup": {
+					"0": "GoodJobSuzette.HomeCooking_TomatoDiced 9 GoodJobSuzette.HomeCooking_GarlicGingerPaste 1 GoodJobSuzette.HomeCooking_GoldenBroth 1 Cornucopia_PlainYogurt 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_ZuzuBreakfastSandwich": { //6
+					"0": "-5 3 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_BreadSlices 2 GoodJobSuzette.HomeCooking_MeltingCheese 1 Cornucopia_Butter 1 Cornucopia_SpicyMayonnaise 1"
+				}
+			}
+		},
+		// ADDONS: [Context Tag Recipes: FALSE] - AHM
+		{
+			"LogName": "Home Cooking - Cornucopia Artisan Machines NO AHM (aka bg + cam)",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Context Tag Recipes": "false",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "false",
+				"Enable CAM": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_PieDough": {
+					"0": "245 1 246 1 419 1 Cornucopia_Butter 2"
+				}
+			}
+		},
+		// ADDONS: [Context Tag Recipes: FALSE] + AHM
+		{
+			"LogName": "Home Cooking - Cornucopia Artisan Machines + AHM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Context Tag Recipes": "false",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true",
+				"Enable CAM": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BeefBroth": {
+					"0": "639 1 Carrot 3 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_RedWineVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_BeefPatty": {
+					"0": "-5 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_FireSalt 1 GoodJobSuzette.HomeCooking_GroundBeef 1 GoodJobSuzette.HomeCooking_MushroomPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenSoup": {
+					"0": "GoodJobSuzette.HomeCooking_ChickenSoup_Base 1 GoodJobSuzette.HomeCooking_Chickenoup_Veg 1 GoodJobSuzette.HomeCooking_EggNoodles 1 641 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1"
+				},
+				"GoodJobSuzette.HomeCooking_Fries": {
+					"0": "192 2 GoodJobSuzette.HomeCooking_Tallow 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"GoodJobSuzette.HomeCooking_PieDough": {
+					"0": "245 1 246 1 419 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Lard 1"
+				},
+				"GoodJobSuzette.HomeCooking_PumpkinRisotto": { // 6
+					"0": "348 1 271 1 666 1 GoodJobSuzette.HomeCooking_PumpkinPuree 1 GoodJobSuzette.HomeCooking_ChickenBroth 1 Cornucopia_Butter 1"
+				},
+				"GoodJobSuzette.HomeCooking_SpaghettiPie": {
+					"0": "224 1 GoodJobSuzette.HomeCooking_HeavyCream 1 GoodJobSuzette.HomeCooking_ShreddedCheese 2 GoodJobSuzette.HomeCooking_GroundBeef 1 GoodJobSuzette.HomeCooking_SweetSausage 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1"
+				}
+			}
+		},
+		// ADDONS: [Context Tag Recipes: FALSE] + RCM
+		{
+			"LogName": "Home Cooking - Cornucopia Artisan Machines + RCM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Context Tag Recipes": "false",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"Enable CAM": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BeefBroth": {
+					"0": "Roseloves109_Beef 1 Carrot 3 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_RedWineVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_BeefPatty": {
+					"0": "-5 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_FireSalt 1 GoodJobSuzette.HomeCooking_GroundBeef 1 GoodJobSuzette.HomeCooking_MushroomPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenSoup": {
+					"0": "GoodJobSuzette.HomeCooking_ChickenSoup_Base 1 GoodJobSuzette.HomeCooking_Chickenoup_Veg 1 GoodJobSuzette.HomeCooking_EggNoodles 1 641 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1"
+				},
+				"GoodJobSuzette.HomeCooking_Fries": {
+					"0": "192 2 GoodJobSuzette.HomeCooking_Tallow 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"GoodJobSuzette.HomeCooking_PieDough": {
+					"0": "245 1 246 1 419 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Lard 1"
+				},
+				"GoodJobSuzette.HomeCooking_PumpkinRisotto": { // 6
+					"0": "348 1 271 1 Roseloves109_Bacon 1 GoodJobSuzette.HomeCooking_PumpkinPuree 1 GoodJobSuzette.HomeCooking_ChickenBroth 1 Cornucopia_Butter 1"
+				},
+				"GoodJobSuzette.HomeCooking_SpaghettiPie": {
+					"0": "224 1 GoodJobSuzette.HomeCooking_HeavyCream 1 GoodJobSuzette.HomeCooking_ShreddedCheese 2 GoodJobSuzette.HomeCooking_GroundBeef 1 GoodJobSuzette.HomeCooking_SweetSausage 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1"
+				}
+			}
+		},
+		// ADDONS: [Context Tag Recipes: TRUE] + AHM
+		{
+			"LogName": "Home Cooking - Cornucopia Artisan Machines + AHM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Context Tag Recipes": "true",
+				"HasMod|contains=spacechase0.SpaceCore": "true",
+				"HasMod|contains=DIGUS.ANIMALHUSBANDRYMOD": "true",
+				"Enable CAM": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BeefBroth": {
+					"0": "639 1 Carrot 3 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_RedWineVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_BeefPatty": {
+					"0": "-5 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_FireSalt 1 GoodJobSuzette.HomeCooking_GroundBeef 1 GoodJobSuzette.HomeCooking_MushroomPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenSoup": {
+					"0": "GoodJobSuzette.HomeCooking_ChickenSoup_Base 1 GoodJobSuzette.HomeCooking_ChickenSoup_Veg 1 GoodJobSuzette.HomeCooking_EggNoodles 1 Roseloves109_CookedChicken 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1"
+				}
+			}
+		},
+		// ADDONS: [Context Tag Recipes: TRUE] + RCM
+		{
+			"LogName": "Home Cooking - Cornucopia Artisan Machines + RCM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Context Tag Recipes": "true",
+				"HasMod|contains=spacechase0.SpaceCore": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"Enable CAM": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BeefBroth": {
+					"0": "Roseloves109_Beef 1 Carrot 3 GoodJobSuzette.HomeCooking_GarlicCloves 4 GoodJobSuzette.HomeCooking_TomatoDiced 3 GoodJobSuzette.HomeCooking_RedWineVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_BeefPatty": {
+					"0": "-5 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_FireSalt 1 GoodJobSuzette.HomeCooking_GroundBeef 1 GoodJobSuzette.HomeCooking_MushroomPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_ChickenSoup": {
+					"0": "GoodJobSuzette.HomeCooking_ChickenSoup_Base 1 GoodJobSuzette.HomeCooking_ChickenSoup_Veg 1 GoodJobSuzette.HomeCooking_EggNoodles 1 Roseloves109_CookedChicken 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1"
+				}
+			}
+		},
+		// ADDONS: + CMC
+		{
+			"LogName": "Home Cooking - CAM + CMC",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": "true",
+				"Enable CMC": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "true",
+				"HasReadLetter: hostPlayer |contains=Cornucopia.MoreCrops_HerbsPackEnabled": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BoneStock": {
+					"0": "Cornucopia_Fennel 2 GoodJobSuzette.HomeCooking_GroundCinnamon 1 881 20 GoodJobSuzette.HomeCooking_GarlicCloves 6 GoodJobSuzette.HomeCooking_AppleCiderVinegar 1 GoodJobSuzette.HomeCooking_Mirepoix 1"
+				},
+				"GoodJobSuzette.HomeCooking_CapeStarletSeasoning": {
+					"0": "GoodJobSuzette.HomeCooking_GarlicGingerPaste 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Cornucopia_Paprika 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_CaramelizedOnions": {
+					"0": "247 1 GoodJobSuzette.HomeCooking_Salt 1 Cornucopia_Onion 3 Cornucopia_Butter 1"
+				},
+				"GoodJobSuzette.HomeCooking_CatfishNoodleSoup": { //6
+					"0": "GoodJobSuzette.HomeCooking_ThickenedFishBroth 1 143 1 GoodJobSuzette.HomeCooking_GarlicCloves 3 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1 Cornucopia_RiceNoodles 1 GoodJobSuzette.HomeCooking_LemongrassLimeBlend 1"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": { //oniondiced1
+					"0": "340 1 419 1 Cornucopia_Onion 1 Cornucopia_ChiliOil 1"
+				},
+				"GoodJobSuzette.HomeCooking_Ketchup": { //6
+					"0": "340 1 GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_TomatoPaste 1 GoodJobSuzette.HomeCooking_GroundCinnamon 1 Cornucopia_Onion 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_OilVinaigrette": {
+					"0": "GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_GarlicCloves 4 Cornucopia_OliveOil 1 Cornucopia_Lemon 1"
+				},
+				"GoodJobSuzette.HomeCooking_OysterSauce": {
+					"0": "GoodJobSuzette.HomeCooking_DriedOysters 3 GoodJobSuzette.HomeCooking_Salt 1 Cornucopia_SoySauce 1 245 1 246 1"
+				},
+				"GoodJobSuzette.HomeCooking_RamenEgg": {
+					"0": "245 2 419 1 GoodJobSuzette.HomeCooking_SoftEgg 4 Cornucopia_SoySauce 1"
+				},
+				"GoodJobSuzette.HomeCooking_RedCabbageSlaw": { //6
+					"0": "264 1 266 1 306 1 340 1 GoodJobSuzette.HomeCooking_SpiceBlend 1 Cornucopia_RedOnion 1"
+				},
+				"GoodJobSuzette.HomeCooking_SaffronPasta": {
+					"0": "-5 3 GoodJobSuzette.HomeCooking_Salt 1 Cornucopia_Saffron 1 Cornucopia_SemolinaFlour 2"
+				},
+				"GoodJobSuzette.HomeCooking_SalmonPatty": { //6 -oniondiced1 when live
+					"0": "-5 1 139 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_SourCream 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Cornucopia_Onion 1"
+				},
+				"GoodJobSuzette.HomeCooking_SpiceBlend": { //6
+					"0": "GoodJobSuzette.HomeCooking_GarlicCloves 2 GoodJobSuzette.HomeCooking_FireSalt 1 GoodJobSuzette.HomeCooking_Pepper 1 Cornucopia_CuminSeeds 1 Cornucopia_Oregano 1 Cornucopia_Paprika 1"
+				},
+				"GoodJobSuzette.HomeCooking_ZuzuBreakfastSandwich": {
+					"0": "-5 3 GoodJobSuzette.HomeCooking_CaramelizedOnions 3 GoodJobSuzette.HomeCooking_BreadSlices 2 GoodJobSuzette.HomeCooking_MeltingCheese 1 Cornucopia_Butter 1 Cornucopia_SpicyMayonnaise 1"
+				}
+			}
+		},
+		// ADDONS: + CMC + SBV
+		{
+			"LogName": "Home Cooking - CAM + CMC + SBV",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": true,
+				"Enable CMC": true,
+				"Enable SBV": true,
+				"HasMod|contains=Cornucopia.ArtisanMachines": true,
+				"HasMod|contains=Cornucopia.MoreCrops": true,
+				"HasMod|contains=skellady.SBVCP": true
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_CapeStarletSeasoning": {
+					"0": "GoodJobSuzette.HomeCooking_GarlicGingerPaste 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Cornucopia_Paprika 1 Cornucopia_ChiliPowder 1 skellady.SBVCP_WildMustardSeeds 1"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": { //oniondiced1
+					"0": "GoodJobSuzette.HomeCooking_HoneyMustard 1 Cornucopia_Onion 1 Cornucopia_ChiliOil 1"
+				}
+			}
+		},
+		// ADDONS: + SBV
+		{
+			"LogName": "Home Cooking - CAM + SBV",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": true,
+				"Enable SBV": true,
+				"HasMod|contains=Cornucopia.ArtisanMachines": true,
+				"HasMod|contains=skellady.SBVCP": true
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_CapeStarletSeasoning": {
+					"0": "GoodJobSuzette.HomeCooking_GarlicGingerPaste 1 Cornucopia_ChiliPowder 1 skellady.SBVCP_WildMustardSeeds 1"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": {
+					"0": "GoodJobSuzette.HomeCooking_HoneyMustard 1 GoodJobSuzette.HomeCooking_SpringSlices 1 Cornucopia_ChiliOil 1"
+				},
+				"GoodJobSuzette.HomeCooking_HoneyMustard": {
+					"0": "306 1 340 1 GoodJobSuzette.HomeCooking_Mustard 1 GoodJobSuzette.HomeCooking_WineMustard 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_HotMustard": { //6
+					"0": "348 1 419 1 GoodJobSuzette.HomeCooking_GarlicCloves 1 GoodJobSuzette.HomeCooking_HerbVinegar 1 skellady.SBVCP_WildMustardSeeds 2 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_SBVPickledEggs": {
+					"0": "245 1 GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_HardEgg 3 GoodJobSuzette.HomeCooking_Salt 3 skellady.SBVCP_WildMustardSeeds 3"
+				}
+			}
+		},
+		// ADDONS: + SBV + WAG
+		{
+			"LogName": "Home Cooking - CAM + SBV + WAG",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": true,
+				"Enable SBV": true,
+				"Enable WAG": true,
+				"HasMod|contains=Cornucopia.ArtisanMachines": true,
+				"HasMod|contains=skellady.SBVCP": true,
+				"HasMod|contains=Wildflour.AtelierGoods": true
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_CapeStarletSeasoning": {
+					"0": "GoodJobSuzette.HomeCooking_GarlicGingerPaste 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Cornucopia_ChiliPowder 1 skellady.SBVCP_WildMustardSeeds 1"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": {
+					"0": "GoodJobSuzette.HomeCooking_HoneyMustard 1 Cornucopia_ChiliOil 1 Wildflour.AtelierGoods_Red_Onion 1"
+				}
+			}
+		},
+		// ADDONS: + WAG - HXW
+		{
+			"LogName": "Home Cooking - CAM+WAG -HxW",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": true,
+				"Enable HXW": false,
+				"Enable WAG": true,
+				"HasMod|contains=Cornucopia.ArtisanMachines": true,
+				"HasMod|contains=Wildflour.AtelierGoods": true,
+				"HasMod|contains=HxW.Mixology": false
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_BoneStock": { //6
+					"0": "Wildflour.AtelierGoods_Anise 2 GoodJobSuzette.HomeCooking_GroundCinnamon 1 881 20 Carrot 4 GoodJobSuzette.HomeCooking_GarlicCloves 6 GoodJobSuzette.HomeCooking_AppleCiderVinegar 1"
+				},
+				"GoodJobSuzette.HomeCooking_CapeStarletSeasoning": {
+					"0": "GoodJobSuzette.HomeCooking_GarlicGingerPaste 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": {
+					"0": "340 1 419 1 Cornucopia_ChiliOil 1 Wildflour.AtelierGoods_Red_Onion 1"
+				},
+				"GoodJobSuzette.HomeCooking_Ketchup": { //6
+					"0": "340 1 GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_TomatoPaste 1 GoodJobSuzette.HomeCooking_GroundCinnamon 1 Cornucopia_Onion 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_OysterSauce": {
+					"0": "GoodJobSuzette.HomeCooking_DriedOysters 3 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_Worchestershire 1 245 1 Wildflour.AtelierGoods_Rice_Flour 1"
+				}
+			}
+		},
+		// ADDONS: + WAG + HXW
+		{
+			"LogName": "Home Cooking - CAM+WAG+HxW",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": true,
+				"Enable HXW": true,
+				"Enable WAG": true,
+				"HasMod|contains=Cornucopia.ArtisanMachines": true,
+				"HasMod|contains=Wildflour.AtelierGoods": true,
+				"HasMod|contains=HxW.Mixology": true
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_CapeStarletSeasoning": {
+					"0": "GoodJobSuzette.HomeCooking_GarlicGingerPaste 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Cornucopia_ChiliPowder 1"
+				},
+				"GoodJobSuzette.HomeCooking_CowfolkSauce": {
+					"0": "340 1 419 1 Cornucopia_ChiliOil 1 Wildflour.AtelierGoods_Red_Onion 1"
+				},
+				"GoodJobSuzette.HomeCooking_Ketchup": {
+					"0": "20 1 340 1 419 1 GoodJobSuzette.HomeCooking_TomatoPaste 1 GoodJobSuzette.HomeCooking_GroundCinnamon 1 Wildflour.AtelierGoods_Brown_Sugar 1 Cornucopia_ChiliPowder 1"
+				}
+			}
+		},
+		// ADDONS: + QUAIL
+		{
+			"LogName": "Home Cooking - CAM + Quail",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": true,
+				"HasMod|contains=Cornucopia.ArtisanMachines": true,
+				"HasMod|contains=Mizu.Quail": true
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_PickledQuailEggs": { //6
+					"0": "Carrot 1 GoodJobSuzette.HomeCooking_Salt 2 GoodJobSuzette.HomeCooking_HotPepperFlakes 1 GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_SpringSlices 4 Mizu.Quail_QuailEgg 3"
+				}
+			}
+		},
+		// ADDONS: + QUAIL + SBV
+		{
+			"LogName": "Home Cooking - CAM + Quail + SBV",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": true,
+				"Enable SBV": true,
+				"HasMod|contains=skellady.SBVCP": true,
+				"HasMod|contains=Cornucopia.ArtisanMachines": true,
+				"HasMod|contains=Mizu.Quail": true
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"GoodJobSuzette.HomeCooking_PickledQuailEggs": { //6
+					"0": "Carrot 1 GoodJobSuzette.HomeCooking_Salt 2 GoodJobSuzette.HomeCooking_HerbVinegar 1 GoodJobSuzette.HomeCooking_SpringSlices 4 Mizu.Quail_QuailEgg 3 skellady.SBVCP_WildMustardSeeds 1"
+				}
+			}
+		},
+		// ADDONS: SPACECORE
+		{
+			"LogName": "Home Cooking Spacecore Overrides",
+			"Action": "EditData",
+			"Target": "spacechase0.SpaceCore/CookingRecipeOverrides",
+			"When": {
+				"Context Tag Recipes": "True",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true"
+			},
+			"Priority": "Default + 200",
+			"Entries": {
+				"GoodJobSuzette.HomeCooking_FireSalt": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_FireSalt",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "ContextTag",
+							"Value": "salt_item",
+							"Amount": 5,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Salt}}",
+							"OverrideTexturePath": "Mods/GoodJobSuzette.HomeCooking/basics",
+							"OverrideTextureRect": {
+								"X": 48,
+								"Y": 48,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "spice_item",
+							"Amount": 5,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Spice}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 320,
+								"Y": 160,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				},
+				"GoodJobSuzette.HomeCooking_TortillaChips": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_TortillaChips",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "229",
+							"Amount": 3
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "lime_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Lime}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 304,
+								"Y": 368,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "salt_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Salt}}",
+							"OverrideTexturePath": "Mods/GoodJobSuzette.HomeCooking/basics",
+							"OverrideTextureRect": {
+								"X": 48,
+								"Y": 48,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				},
+				"GoodJobSuzette.HomeCooking_OilVinaigrette": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_OilVinaigrette",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)GoodJobSuzette.HomeCooking_HerbOil",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "lemon_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Lemon}}",
+							"OverrideTexturePath": "Mods/GoodJobSuzette.HomeCooking/cooking",
+							"OverrideTextureRect": {
+								"X": 0,
+								"Y": 48,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "vinegar_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Vinegar}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 176,
+								"Y": 272,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				},
+				"GoodJobSuzette.HomeCooking_RedCabbageSlaw": {
+					"ProductQualifiedId": "(O)GoodJobSuzette.HomeCooking_RedCabbageSlaw",
+					"ProductAmount": 1,
+					"Ingredients": [
+						{
+							"Type": "Item",
+							"Value": "(O)264",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)266",
+							"Amount": 1
+						},
+						{
+							"Type": "Item",
+							"Value": "(O)340",
+							"Amount": 1
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "salt_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Salt}}",
+							"OverrideTexturePath": "Mods/GoodJobSuzette.HomeCooking/basics",
+							"OverrideTextureRect": {
+								"X": 48,
+								"Y": 48,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "spice_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Spice}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 320,
+								"Y": 160,
+								"Width": 16,
+								"Height": 16
+							}
+						},
+						{
+							"Type": "ContextTag",
+							"Value": "mayo_item",
+							"Amount": 1,
+							"OverrideText": "{{i18n: HomeCooking_Ingredients_Mayo}}",
+							"OverrideTexturePath": "Maps/springobjects",
+							"OverrideTextureRect": {
+								"X": 288,
+								"Y": 192,
+								"Width": 16,
+								"Height": 16
+							}
+						}
+					]
+				}
+			}
+		},
+		// VANILLA
+		{
+			"LogName": "Home Cooking - VANILLA + CAM",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": "true",
+				"Vanilla Recipe Changes": "True",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Bread": { //CAM Salt
+					"0": "245 1 246 2 247 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"Bruschetta": {
+					"0": "GoodJobSuzette.HomeCooking_BreadSlices 1 GoodJobSuzette.HomeCooking_TomatoDiced 1 GoodJobSuzette.HomeCooking_GarlicCloves 1 GoodJobSuzette.HomeCooking_HerbOil 1 GoodJobSuzette.HomeCooking_RedWineVinegar 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"Cookies": {
+					"0": "Raisins 1 -5 1 245 2 246 1 Cornucopia_Margarine 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"Dish o' The Sea": { //Dish o' The Sea
+					"0": "131 2 210 1 Cornucopia_CoconutOil 1 342 1 GoodJobSuzette.HomeCooking_Ketchup 1 GoodJobSuzette.HomeCooking_GarlicCloves 3"
+				},
+				"Ice Cream": { //CAM Salt
+					"0": "-6 1 245 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_HeavyCream 1"
+				},
+				"Fried Egg": {
+					"0": "-5 1 247 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"Omelet": {
+					"0": "-5 3 -6 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"Rice Pudding": {
+					"0": "-6 1 245 1 423 1 GoodJobSuzette.HomeCooking_Butter 1 GoodJobSuzette.HomeCooking_Salt 1" // milk sugar rice BUTTER SALT
+				},
+				"Radish Salad": { //CAM SunflowerSalt
+					"0": "264 3 GoodJobSuzette.HomeCooking_OilVinaigrette 1 GoodJobSuzette.HomeCooking_SunflowerSalt 1"
+				},
+				"Salad": { //CAM SunflowerSalt
+					"0": "20 1 22 1 GoodJobSuzette.HomeCooking_CowfolkSauce 1 GoodJobSuzette.HomeCooking_SunflowerSalt 1"
+				},
+				"Salmon Dinner": { //CAM SunflowerSalt
+					"0": "139 1 250 1 300 1 GoodJobSuzette.HomeCooking_SunflowerSalt 1"
+				},
+				"Spaghetti": {
+					"0": "Cornucopia_WheatNoodles 1 GoodJobSuzette.HomeCooking_RedSauce 1"
+				},
+				"Tom Kha Soup": {
+					"0": "GoodJobSuzette.HomeCooking_GroundGinger 1 GoodJobSuzette.HomeCooking_SpringSlices 6 GoodJobSuzette.HomeCooking_OysterSauce 1 Cornucopia_CoconutMilk 1 720 1 DriedMushrooms 1"
+				},
+				"Tortilla": {
+					"0": "Cornucopia_CornFlour 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"Tropical Curry": {
+					"0": "Cornucopia_CoconutMilk 1 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1 91 1 260 1 832 1 834 1"
+				}
+			}
+		},
+		// VANILLA: + CMC
+		{
+			"LogName": "Home Cooking - CAM+CMC VANILLA",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "true", /* essential crops */
+				"Enable CMC": "true",
+				"Enable CAM": "true",
+				"Vanilla Recipe Changes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Autumn's Bounty": {
+					"0": "280 1 340 1 613 1 Cornucopia_Zucchini 1 GoodJobSuzette.HomeCooking_PumpkinPuree 1 GoodJobSuzette.HomeCooking_FireSalt 1"
+				},
+				"Carp Surprise": {
+					"0": "142 4 250 1 GoodJobSuzette.HomeCooking_HerbOil 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1"
+				},
+				"Fried Calamari": {
+					"0": "-6 1 151 1 246 1 247 1 Cornucopia_ChiliPowder 1 GoodJobSuzette.HomeCooking_Pepper 1"
+				},
+				"Fried Egg": {
+					"0": "-5 1 247 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_Pepper 1"
+				},
+				"Maki Roll": {
+					"0": "-4 1 152 1 245 1 423 1 829 1 Cornucopia_Cucumber 1"
+				},
+				"Omelet": {
+					"0": "-5 3 -6 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_Pepper 1"
+				},
+				"Rice Pudding": { //consider hxw version
+					"0": "-6 1 245 1 423 1 GoodJobSuzette.HomeCooking_Salt 1 Cornucopia_Vanilla 1"
+				}
+			}
+		},
+		{
+			"LogName": "Home Cooking - CAM+CMC VANILLA",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "true",
+				"HasReadLetter: hostPlayer |contains=Cornucopia.MoreCrops_ExtendedCropsPackEnabled": "true",
+				"Enable CMC": "true",
+				"Enable CAM": "true",
+				"Vanilla Recipe Changes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Algae Soup": { // GoodJobSuzette.HomeCooking_OnionDiced 2 when live
+					"0": "153 4 457 1 Cornucopia_GreenPeas 2 Cornucopia_Onion 1 Cornucopia_ChiliPowder 1 GoodJobSuzette.HomeCooking_GarlicCloves 2"
+				},
+				"Autumn's Bounty": {
+					"0": "340 1 613 1 Cornucopia_SweetPotato 1 Cornucopia_Zucchini 1 GoodJobSuzette.HomeCooking_PumpkinPuree 1 GoodJobSuzette.HomeCooking_FireSalt 1"
+				},
+				"Red Plate": {
+					"0": "264 1 266 1 Cornucopia_RedOnion 1 Cornucopia_OliveOil 1 GoodJobSuzette.HomeCooking_GarlicCloves 3"
+				},
+				"Squid Ink Ravioli": {
+					"0": "-5 1 717 1 720 1 814 1 Cornucopia_SemolinaFlour 1 GoodJobSuzette.HomeCooking_RedSauce 1"
+				}
+			}
+		},
+		{
+			"LogName": "Home Cooking - CAM+CMC VANILLA",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "true",
+				"HasReadLetter: hostPlayer |contains=Cornucopia.MoreCrops_ExtendedTreesPackEnabled": "true",
+				"Enable CMC": "true",
+				"Enable CAM": "true",
+				"Vanilla Recipe Changes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Carp Surprise": {
+					"0": "142 4 250 1 GoodJobSuzette.HomeCooking_HerbOil 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Cornucopia_LemonZest 1"
+				},
+				"Crab Cakes": {
+					"0": "-5 1 306 1 717 2 Cornucopia_Lemon 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1"
+				},
+				"Salmon Dinner": {
+					"0": "139 1 250 1 300 1 Cornucopia_Lemon 1 GoodJobSuzette.HomeCooking_SunflowerSalt 1"
+				}
+			}
+		},
+		{
+			"LogName": "Home Cooking - CAM+CMC VANILLA",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "true",
+				"HasReadLetter: hostPlayer |contains=Cornucopia.MoreCrops_HerbsPackEnabled": "true",
+				"Enable CMC": "true",
+				"Enable CAM": "true",
+				"Vanilla Recipe Changes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Algae Soup": { // GoodJobSuzette.HomeCooking_OnionDiced 2 when live
+					"0": "153 4 457 1 Cornucopia_GreenPeas 2 Cornucopia_Onion 1 Cornucopia_ChiliPowder 1 GoodJobSuzette.HomeCooking_GarlicCloves 2"
+				},
+				"Autumn's Bounty": {
+					"0": "340 1 613 1 Cornucopia_SweetPotato 1 Cornucopia_Zucchini 1 GoodJobSuzette.HomeCooking_PumpkinPuree 1 GoodJobSuzette.HomeCooking_FireSalt 1"
+				},
+				"Bruschetta": {
+					"0": "Cornucopia_Basil 1 Cornucopia_Oregano 1 GoodJobSuzette.HomeCooking_BreadSlices 1 GoodJobSuzette.HomeCooking_TomatoDiced 1 GoodJobSuzette.HomeCooking_GarlicClove 1 GoodJobSuzette.HomeCooking_HerbOil 1"
+				},
+				"Crab Cakes": {
+					"0": "-5 1 306 1 717 2 Cornucopia_Parsley 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1"
+				},
+				"Eggplant Parm.": { //Eggplant Parmesan 231
+					"0": "272 1 Cornucopia_Basil 1 Cornucopia_Oregano 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_ShreddedCheese 2 GoodJobSuzette.HomeCooking_RedSauce 2"
+				},
+				"Fried Mushroom": {
+					"0": "247 1 257 1 404 1 Cornucopia_Parsley 1 Cornucopia_Butter 1 GoodJobSuzette.HomeCooking_AppleCiderVinegar 1"
+				},
+				"Tropical Curry": {
+					"0": "Cornucopia_CoconutMilk 1 GoodJobSuzette.HomeCooking_CurryPowder 1 91 1 260 1 832 1 834 1"
+				}
+			}
+		},
+		{
+			"LogName": "Home Cooking - CAM+CMC VANILLA",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "true",
+				"HasReadLetter: hostPlayer |contains=Cornucopia.MoreCrops_ExtendedCropsPackEnabled": "true",
+				"HasReadLetter: hostPlayer |contains=Cornucopia.MoreCrops_HerbsPackEnabled": "true",
+				"Enable CMC": "true",
+				"Enable CAM": "true",
+				"Vanilla Recipe Changes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Red Plate": {
+					"0": "264 1 266 1 Cornucopia_Thyme 1 Cornucopia_RedOnion 1 Cornucopia_OliveOil 1 GoodJobSuzette.HomeCooking_GarlicCloves 3"
+				}
+			}
+		},
+		// VANILLA: + HXW*WAG
+		{
+			"LogName": "Home Cooking - CAM+WAG*HXW VANILLA",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=HXW.Mixology": "true",
+				"Enable CAM": "true",
+				"Enable HXW": "true",
+				"Vanilla Recipe Changes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Rice Pudding": {
+					"0": "-6 1 245 1 423 1 Wildflour.AtelierGoods_Butter 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_VanillaExtract 1" // milk sugar rice SALT BUTTER VANILLA
+				}
+			}
+		},
+		// VANILLA: + RMT
+		{
+			"LogName": "Home Cooking - CAM+RMT VANILLA",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Vanilla Recipe Changes": "True",
+				"Enable CAM": "true",
+				"Enable RMT": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Chocolate Cake": {
+					"0": "-5 2 245 1 246 1 638 1 Cornucopia_CoconutMilk 1 Rexstrife20.MineralTownCP_Dark_Chocolate_Bar 1"
+				},
+				"Crab Cakes": {
+					"0": "-5 1 306 1 717 2 Rexstrife20.MineralTownCP_Salted_Butter 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1"
+				},
+				"Rice Pudding": {
+					"0": "-6 1 245 1 423 1 Rexstrife20.MineralTownCP_Salted_Butter 1" // milk sugar rice SALTEDBUTTER
+				},
+				"Maki Roll": {
+					"0": "-4 1 152 1 423 1 829 1 Rexstrife20.MineralTownCP_Harvest_Cucumber 1 GoodJobSuzette.HomeCooking_RiceVinegar 1"
+				},
+				"Tropical Curry": {
+					"0": "Cornucopia_CoconutMilk 1 Rexstrife20.MineralTownCP_Harvest_Curry_Powder 1 91 1 260 1 832 1 834 1"
+				}
+			}
+		},
+		// VANILLA: + WAG
+		{
+			"LogName": "Home Cooking - CAM+WAG VANILLA",
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=Wildflour.AtelierGoods": "true",
+				"Enable CAM": "true",
+				"Enable WAG": "true",
+				"Vanilla Recipe Changes": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Algae Soup": {
+					"0": "153 4 457 1 Wildflour.AtelierGoods_Thyme 1 Cornucopia_ChiliPowder 1 GoodJobSuzette.HomeCooking_GarlicCloves 2 GoodJobSuzette.HomeCooking_SpringSlices 12"
+				},
+				"Carp Surprise": {
+					"0": "142 4 250 1 GoodJobSuzette.HomeCooking_HerbOil 1 GoodJobSuzette.HomeCooking_HerbSeasoning 1 Wildflour.AtelierGoods_Lemon 1"
+				},
+				"Crab Cakes": {
+					"0": "-5 1 306 1 717 2 Wildflour.AtelierGoods_Lemon 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_CapeStarletSeasoning 1"
+				},
+				"Eggplant Parm.": { //eggplant parm
+					"0": "272 1 Wildflour.AtelierGoods_Basil 1 Wildflour.AtelierGoods_Thyme 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 GoodJobSuzette.HomeCooking_ShreddedCheese 2 GoodJobSuzette.HomeCooking_RedSauce 2"
+				},
+				"Glazed Yams": { //consider hxw version
+					"0": "280 1 Wildflour.AtelierGoods_Vanilla 1 Wildflour.AtelierGoods_Cinnamon 1 Wildflour.AtelierGoods_Brown_Sugar 1 Wildflour.AtelierGoods_Butter 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"Omelet": {
+					"0": "-5 3 Wildflour.AtelierGoods_Cream 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"Rice Pudding": {
+					"0": "-6 1 245 1 423 1 GoodJobSuzette.HomeCooking_Salt 1 Wildflour.AtelierGoods_Butter 1 Wildflour.AtelierGoods_Vanilla 1" // milk sugar rice SALT BUTTER VANILLA
+				},
+				"Salmon Dinner": {
+					"0": "139 1 250 1 300 1 Wildflour.AtelierGoods_Lemon 1 GoodJobSuzette.HomeCooking_SunflowerSalt 1"
+				}
+			}
+		}
+	]
+}

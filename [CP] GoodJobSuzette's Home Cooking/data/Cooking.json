@@ -1,0 +1,914 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooking Recipes",
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_AcornCakes_Dry": {
+					"Name": "{{ModId}}_AcornCakes_Dry",
+					"Displayname": "{{i18n: HomeCooking_AcornCakes_Dry}}",
+					"Description": "{{i18n: HomeCooking_AcornCakes_Dry.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 2000,
+					"Edibility": 10,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 104,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_brown",
+						"modid_goodjobsuzette.homecooking",
+						"pancake_item",
+						"allergen_gluten",
+						"allergen_nuts",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_AcornCakesDryBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_AcornCakes_Wet": {
+					"Name": "{{ModId}}_AcornCakes_Wet",
+					"Displayname": "{{i18n: HomeCooking_AcornCakes_Wet}}",
+					"Description": "{{i18n: HomeCooking_AcornCakes_Wet.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 500,
+					"Edibility": 30,
+					"Texture": "Mods/{{ModId}}/basics",
+					"SpriteIndex": 86,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_brown",
+						"modid_goodjobsuzette.homecooking",
+						"pancake_item",
+						"allergen_gluten",
+						"allergen_nuts",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_AcornCakesWetBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"ForagingLevel": 1,
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_AcornPancakes": {
+					"Name": "{{ModId}}_AcornPancakes",
+					"Displayname": "{{i18n: HomeCooking_AcornPancakes}}",
+					"Description": "{{i18n: HomeCooking_AcornPancakes.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 2500,
+					"Edibility": 115,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 38,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_brown",
+						"modid_goodjobsuzette.homecooking",
+						"pancake_item",
+						"allergen_gluten",
+						"allergen_nuts",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_AcornPancakesBuff",
+							"Duration": 360,
+							"CustomAttributes": {
+								"ForagingLevel": 2,
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_AutumnHarvestPotPie": {
+					"Name": "{{ModId}}_AutumnHarvestPotPie",
+					"Displayname": "{{i18n: HomeCooking_AutumnHarvestPotPie}}",
+					"Description": "{{i18n: HomeCooking_AutumnHarvestPotPie.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1600,
+					"Edibility": 125,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 9,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_orange",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_gluten",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_AutumnHarvestPotPie",
+							"Duration": 360,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"MiningLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_AutumnHarvestPotPie_Filling": {
+					"Name": "{{ModId}}_AutumnHarvestPotPie_Filling",
+					"Displayname": "{{i18n: HomeCooking_AutumnHarvestPotPie_Filling}}",
+					"Description": "{{i18n: HomeCooking_AutumnHarvestPotPie_Filling.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1350,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 34,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_orange",
+						"modid_goodjobsuzette.homecooking",
+						"food_nonvegan",
+						"filling_item"
+					]
+				},
+				"{{ModId}}_AutumnPickledEggs": {
+					"Name": "{{ModId}}_AutumnPickledEggs",
+					"Displayname": "{{i18n: HomeCooking_AutumnPickledEggs}}",
+					"Description": "{{i18n: HomeCooking_AutumnPickledEggs.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 300,
+					"Edibility": 60,
+					"Texture": "Mods/{{ModId}}/fatjars",
+					"SpriteIndex": 2,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"pickled_egg_item",
+						"allergen_egg",
+						"color_pink",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_AutumnPickledEggsBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ButteredBread": {
+					"Name": "{{ModId}}_ButteredBread",
+					"DisplayName": "{{i18n: HomeCooking_ButteredBread}}",
+					"Description": "{{i18n: HomeCooking_ButteredBread.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 225,
+					"Edibility": 75,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 39,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"food_nonvegan",
+						"allergen_gluten",
+						"allergen_dairy"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_ButteredBreadBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"MaxStamina": 25
+							}
+						}
+					]
+				},
+				"{{ModId}}_BroccoliBake": {
+					"Name": "{{ModId}}_BroccoliBake",
+					"Displayname": "{{i18n: HomeCooking_BroccoliBake}}",
+					"Description": "{{i18n: HomeCooking_BroccoliBake.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1000,
+					"Edibility": 80,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 4,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_dairy",
+						"allergen_gluten",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_BroccoliBakeBuff",
+							"Duration": 300,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ClamOreganata": {
+					"Name": "{{ModId}}_ClamOreganata",
+					"Displayname": "{{i18n: HomeCooking_ClamOreganata}}",
+					"Description": "{{i18n: HomeCooking_ClamOreganata.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 700,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/soups",
+					"SpriteIndex": 17,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_fish",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_JojaRice": {
+					"Name": "{{ModId}}_JojaRice",
+					"Displayname": "{{i18n: HomeCooking_JojaRice}}",
+					"Description": "{{i18n: HomeCooking_JojaRice.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1100,
+					"Edibility": 60,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 6,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_brown",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_dairy",
+						"food_nonvegan",
+						"food_sweet"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_JojaRiceBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_KaleSmoothie": {
+					"Name": "{{ModId}}_KaleSmoothie",
+					"Displayname": "{{i18n: HomeCooking_KaleSmoothie}}",
+					"Description": "{{i18n: HomeCooking_KaleSmoothie.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 600,
+					"Edibility": 100,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 20,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_green",
+						"allergen_treenuts",
+						"food_vegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_KaleSmoothieBuff",
+							"Duration": 360,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_LemonPosset": {
+					"Name": "{{ModId}}_LemonPosset",
+					"Displayname": "{{i18n: HomeCooking_LemonPosset}}",
+					"Description": "{{i18n: HomeCooking_LemonPosset.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 600,
+					"Edibility": 40,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 30,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_yellow",
+						"allergen_dairy",
+						"food_nonvegan",
+						"food_sweet"
+					]
+				},
+				"{{ModId}}_MamaFrittata": {
+					"Name": "{{ModId}}_MamaFrittata",
+					"Displayname": "{{i18n: HomeCooking_MamaFrittata}}",
+					"Description": "{{i18n: HomeCooking_MamaFrittata.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 550,
+					"Edibility": 75,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 2,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_yellow",
+						"allergen_dairy",
+						"allergen_egg",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_MashedGravy": {
+					"Name": "{{ModId}}_MashedGravy",
+					"Displayname": "{{i18n: HomeCooking_MashedGravy}}",
+					"Description": "{{i18n: HomeCooking_MashedGravy.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 450,
+					"Edibility": 95,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 5,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_brown",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_dairy",
+						"allergen_mushroom",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_MashedGravyBuff",
+							"Duration": 360,
+							"CustomAttributes": {
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_Nachos": {
+					"Name": "{{ModId}}_Nachos",
+					"Displayname": "{{i18n: HomeCooking_Nachos}}",
+					"Description": "{{i18n: HomeCooking_Nachos.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 350,
+					"Edibility": 40,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 22,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_dairy",
+						"allergen_gluten",
+						"nacho_item"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_NachosBuff",
+							"Duration": 480,
+							"CustomAttributes": {
+								"Speed": 1,
+								"ForagingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_NonnaGreenBeans": {
+					"Name": "{{ModId}}_NonnaGreenBeans",
+					"Displayname": "{{i18n: HomeCooking_NonnaGreenBeans}}",
+					"Description": "{{i18n: HomeCooking_NonnaGreenBeans.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 300,
+					"Edibility": 75,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 3,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_green"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_NonnaGreenBeansBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"Defense": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_OrangePosset": {
+					"Name": "{{ModId}}_OrangePosset",
+					"Displayname": "{{i18n: HomeCooking_OrangePosset}}",
+					"Description": "{{i18n: HomeCooking_OrangePosset.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 600,
+					"Edibility": 40,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 31,
+					"IsDrink": true,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"color_orange",
+						"allergen_dairy",
+						"food_nonvegan",
+						"food_sweet"
+					]
+				},
+				"{{ModId}}_PersonalPizza": {
+					"Name": "{{ModId}}_PersonalPizza",
+					"Displayname": "{{i18n: HomeCooking_PersonalPizza}}",
+					"Description": "{{i18n: HomeCooking_PersonalPizza.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 175,
+					"Edibility": 50,
+					"Texture": "Mods/{{ModId}}/smalldish",
+					"SpriteIndex": 5,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"pizza_item",
+						"allergen_dairy",
+						"allergen_gluten",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_RedCabbageSlaw": {
+					"Name": "{{ModId}}_RedCabbageSlaw",
+					"Displayname": "{{i18n: HomeCooking_RedCabbageSlaw}}",
+					"Description": "{{i18n: HomeCooking_RedCabbageSlaw.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1600,
+					"Edibility": 75,
+					"Texture": "Mods/{{ModId}}/smalldish",
+					"SpriteIndex": 0,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"side_item",
+						"slaw_item",
+						"allergen_egg",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_SalmonBurger": {
+					"Name": "{{ModId}}_SalmonBurger",
+					"Displayname": "{{i18n: HomeCooking_SalmonBurger}}",
+					"Description": "{{i18n: HomeCooking_SalmonBurger.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1600,
+					"Edibility": 75,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 15,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"burger_item",
+						"allergen_dairy",
+						"allergen_fish",
+						"food_nonvegan"
+					]
+				},
+				"{{ModId}}_SmelloftheSea": {
+					"Name": "{{ModId}}_SmelloftheSea",
+					"Displayname": "{{i18n: HomeCooking_SmelloftheSea}}",
+					"Description": "{{i18n: HomeCooking_SmelloftheSea.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1600,
+					"Edibility": 75,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 16,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"side_item",
+						"slaw_item",
+						"allergen_egg",
+						"allergen_fish",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_SmelloftheSeaBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FishingLevel": 4,
+								"Attack": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_SpringHarvestPotPie": {
+					"Name": "{{ModId}}_SpringHarvestPotPie",
+					"Displayname": "{{i18n: HomeCooking_SpringHarvestPotPie}}",
+					"Description": "{{i18n: HomeCooking_SpringHarvestPotPie.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 900,
+					"Edibility": 115,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 7,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_orange",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_gluten",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_SpringHarvestPotPieBuff",
+							"Duration": 360,
+							"CustomAttributes": {
+								"FarmingLevel": 2
+							}
+						}
+					]
+				},
+				"{{ModId}}_SpringPickledEggs": {
+					"Name": "{{ModId}}_SpringPickledEggs",
+					"Displayname": "{{i18n: HomeCooking_SpringPickledEggs}}",
+					"Description": "{{i18n: HomeCooking_SpringPickledEggs.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 200,
+					"Edibility": 60,
+					"Texture": "Mods/{{ModId}}/fatjars",
+					"SpriteIndex": 0,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"pickled_egg_item",
+						"allergen_egg",
+						"color_gray",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_SpringPickledEggsBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_SummerHarvestPotPie": {
+					"Name": "{{ModId}}_SummerHarvestPotPie",
+					"Displayname": "{{i18n: HomeCooking_SummerHarvestPotPie}}",
+					"Description": "{{i18n: HomeCooking_SummerHarvestPotPie.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1200,
+					"Edibility": 105,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 8,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_orange",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_gluten",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_SummerHarvestPotPieBuff",
+							"Duration": 360,
+							"CustomAttributes": {
+								"FarmingLevel": 2
+							}
+						}
+					]
+				},
+				"{{ModId}}_SummerPickledEggs": {
+					"Name": "{{ModId}}_SummerPickledEggs",
+					"Displayname": "{{i18n: HomeCooking_SummerPickledEggs}}",
+					"Description": "{{i18n: HomeCooking_SummerPickledEggs.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 200,
+					"Edibility": 60,
+					"Texture": "Mods/{{ModId}}/fatjars",
+					"SpriteIndex": 1,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"pickled_egg_item",
+						"allergen_egg",
+						"color_red",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_SummerPickledEggsBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"Speed": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_VoidPickledEggs": {
+					"Name": "{{ModId}}_VoidPickledEggs",
+					"Displayname": "{{i18n: HomeCooking_VoidPickledEggs}}",
+					"Description": "{{i18n: HomeCooking_VoidPickledEggs.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 225,
+					"Edibility": -250,
+					"Texture": "Mods/{{ModId}}/fatjars",
+					"SpriteIndex": 6,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"pickled_egg_item",
+						"allergen_egg",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_VoidPickledEggsBuff",
+							"Duration": 900,
+							"CustomAttributes": {
+								"Defense": 100,
+								"Immunity": 8,
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_WinterForagePotPie": {
+					"Name": "{{ModId}}_WinterForagePotPie",
+					"Displayname": "{{i18n: HomeCooking_WinterForagePotPie}}",
+					"Description": "{{i18n: HomeCooking_WinterForagePotPie.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1200,
+					"Edibility": 110,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 10,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"color_orange",
+						"modid_goodjobsuzette.homecooking",
+						"allergen_gluten",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_WinterForageBuff",
+							"Duration": 360,
+							"CustomAttributes": {
+								"LuckLevel": 1,
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_WinterPickledEggs": {
+					"Name": "{{ModId}}_WinterPickledEggs",
+					"Displayname": "{{i18n: HomeCooking_WinterPickledEggs}}",
+					"Description": "{{i18n: HomeCooking_WinterPickledEggs.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 250,
+					"Edibility": 60,
+					"Texture": "Mods/{{ModId}}/fatjars",
+					"SpriteIndex": 3,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"pickled_egg_item",
+						"allergen_egg",
+						"color_purple",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_WinterPickledEggsBuff",
+							"Duration": 120,
+							"CustomAttributes": {
+								"FarmingLevel": 1
+							}
+						}
+					]
+				},
+				"{{ModId}}_ZuzuBreakfastSandwich": {
+					"Name": "{{ModId}}_ZuzuBreakfastSandwich",
+					"Displayname": "{{i18n: HomeCooking_ZuzuBreakfastSandwich}}",
+					"Description": "{{i18n: HomeCooking_ZuzuBreakfastSandwich.Description}}.",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 1200,
+					"Edibility": 115,
+					"Texture": "Mods/{{ModId}}/cooking",
+					"SpriteIndex": 11,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"allergen_gluten",
+						"allergen_egg",
+						"allergen_dairy",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_ZuzuBreakfastSandwichBuff",
+							"Duration": 480,
+							"CustomAttributes": {
+								"Speed": 2
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Entries": {
+				"{{ModId}}_AcornCakes_Dry": "{{ModId}}_AcornFlour 1 {{ModId}}_BakingSoda 1 246 2/1 10/{{ModId}}_AcornCakes_Dry 1/default/{{i18n: HomeCooking_AcornCakes_Dry}}", //FORAGE1 wheatflour2 acornflour bakingsoda
+				"{{ModId}}_AcornCakes_Wet": "{{ModId}}_RoastedNutMilk 1 {{ModId}}_Butter 1 -5 1 419 1/1 10/{{ModId}}_AcornCakes_Wet 1/default/{{i18n: HomeCooking_AcornCakes_Wet}}", //FORAG1-FARM1 egg vinegar roastednutmilk butter
+				"{{ModId}}_AcornPancakes": "{{ModId}}_AcornCakes_Dry 1 {{ModId}}_AcornCakes_Wet 1 {{ModId}}_Butter 1 258 3 724 1/1 10/{{ModId}}_AcornPancakes 1/default/{{i18n: HomeCooking_AcornPancakes}}", //FORAG2-FARM1 _wet _dry butter blueberries maplesyrup
+				"{{ModId}}_AutumnHarvestPotPie": "{{ModId}}_AutumnHarvestPotPie_Filling 1 {{ModId}}_PieDough 2/1 10/{{ModId}}_AutumnHarvestPotPie 1/default/{{i18n: HomeCooking_AutumnHarvestPotPie}}", //2:FARM1-MINING1 _filling piedough2
+				"{{ModId}}_AutumnHarvestPotPie_Filling": "280 1 281 1 404 1 {{ModId}}_HeavyCream 1 {{ModId}}_PumpkinPuree 1 {{ModId}}_MushroomBroth 1/1 10/{{ModId}}_AutumnHarvestPotPie_Filling 1/default/{{i18n: HomeCooking_AutumnHarvestPotPie_Filling}}", //6:FARM1-MINING1 commonmushroom chanterelle yam pumpkinpuree heavycream mushroombroth
+				"{{ModId}}_AutumnPickledEggs": "245 1 284 3 {{ModId}}_HerbVinegar 1 {{ModId}}_HardEgg 3/1 10/{{ModId}}_AutumnPickledEggs 3/none/{{i18n: HomeCooking_AutumnPickledEggs}}", //4:FARM1 sugar beet3 herbvinegar hardegg3
+				"{{ModId}}_BroccoliBake": "423 1 Broccoli 2 {{ModId}}_Bechamel 1 {{ModId}}_ShreddedCheese 3 {{ModId}}_CreamCheese 1 {{ModId}}_Breadcrumbs 1/1 10/{{ModId}}_BroccoliBake/f Jodi 1/{{i18n: HomeCooking_BroccoliBake}}", //6:FARM1-SPEED1 bechamel rice shreddedcheese broccoli creamcheese breadcrumbs
+				"{{ModId}}_ButteredBread": "{{ModId}}_Butter 1 {{ModId}}_BreadSlices 1/1 10/{{ModId}}_ButteredBread/default/{{i18n: HomeCooking_ButteredBread}}", //MXStam25 butter breadslices
+				"{{ModId}}_ClamOreganata": "372 3 348 1 {{ModId}}_GarlicCloves 3 {{ModId}}_Breadcrumbs 1 {{ModId}}_Butter 1/1 10/{{ModId}}_ClamOreganata 1/f Willy 2/{{i18n: HomeCooking_ClamOreganata}}", //5:clam wine garliccloves breadcrumbs butter
+				"{{ModId}}_JojaRice": "167 1 423 1 Raisins 1 {{ModId}}_SpringSlices 1 {{ModId}}_Butter 1 {{ModId}}_VeggieBroth 1/1 10/{{ModId}}_JojaRice/f Sam 8/{{i18n: HomeCooking_JojaRice}}", //6:FARM1 rice springslices raisins jojacola butter veggiebroth
+				"{{ModId}}_KaleSmoothie": "91 1 250 2 {{ModId}}_BerryNutMilk 1/1 10/{{ModId}}_KaleSmoothie 1/none/{{i18n: HomeCooking_KaleSmoothie}}", //4: kale banana berrynutmilk
+				"{{ModId}}_LemonPosset": "419 2 245 2 {{ModId}}_HeavyCream 1/1 10/{{ModId}}_LemonPosset 2/f Sandy 3/{{i18n: HomeCooking_LemonPosset}}", //3:heavycream sugar vinegar
+				"{{ModId}}_MamaFrittata": "-5 3 Broccoli 1 {{ModId}}_PepperOnion 2 {{ModId}}_ShreddedCheese 1 {{ModId}}_SourCream 1/1 10/{{ModId}}_MamaFrittata/default/{{i18n: HomeCooking_MamaFrittata}}", //5:anyegg pepperonion shreddedcheese broccoli sourcream
+				"{{ModId}}_MashedGravy": "{{ModId}}_MashedPotatoes 1 {{ModId}}_MushroomGravy 1/1 10/{{ModId}}_MashedGravy/default/{{i18n: HomeCooking_MashedGravy}}", //2:FORAGE1 mashedpotatoes mushroomgravy
+				"{{ModId}}_Nachos": "{{ModId}}_HotSauce 1 {{ModId}}_MeltingCheese 1 {{ModId}}_TortillaChips 3/1 10/{{ModId}}_Nachos/default/{{i18n: HomeCooking_Nachos}}", //FORAGE1-SPEED1 tortillachips3 meltingcheese hotsauce
+				"{{ModId}}_NonnaGreenBeans": "188 3 {{ModId}}_RedSauce 1/1 10/{{ModId}}_NonnaGreenBeans/default/{{i18n: HomeCooking_NonnaGreenBeans}}", //2:DEFENSE greenbean redsauce
+				"{{ModId}}_OrangePosset": "635 1 245 1 {{ModId}}_HeavyCream 1/1 10/ {{ModId}}_OrangePosset 2/f Sandy 5/{{i18n: HomeCooking_OrangePosset}}", //3:orange sugar heavycream
+				"{{ModId}}_PersonalPizza": "{{ModId}}_PepperOnion 1 {{ModId}}_ShreddedCheese 1 {{ModId}}_RedSauce 1 {{ModId}}_PizzaDough 1/1 10/{{ModId}}_PersonalPizza/default/{{i18n: HomeCooking_PersonalPizza}}", //4:pizzadough shreddedcheese pepperonion
+				"{{ModId}}_RedCabbageSlaw": "264 1 266 1 306 1 340 1/1 10/{{ModId}}_RedCabbageSlaw 1/none/{{i18n: HomeCooking_RedCabbageSlaw}}", //4:honey redcabbage radish mayo
+				"{{ModId}}_SalmonBurger": "306 1 {{ModId}}_SalmonPatty 1 {{ModId}}_PotatoBuns 1/1 10/{{ModId}}_SalmonBurger 1/none/{{i18n: HomeCooking_SalmonBurger}}", //3:mayo salmonpatty potatobuns
+				"{{ModId}}_SmelloftheSea": "152 1 423 1 720 3 {{ModId}}_FishBroth 1 {{ModId}}_HeavyCream 1 {{ModId}}_GarlicCloves 6/1 10/{{ModId}}_SmelloftheSea 1/none/{{i18n: HomeCooking_SmelloftheSea}}", //6:FISH4-ATTACK1 shrimp3 rice seaweed fishbroth heavycream garlicclvoes6
+				"{{ModId}}_SpringHarvestPotPie": "20 1 {{ModId}}_SpringVeg 1 {{ModId}}_Bechamel 1 {{ModId}}_PieDough 2 {{ModId}}_VeggieBroth 1/1 10/{{ModId}}_SpringHarvestPotPie 1/f Linus 2/{{i18n: HomeCooking_SpringHarvestPotPie}}", //5:FARM2 leek springveg veggiebroth piedough2 bechamel
+				"{{ModId}}_SpringPickledEggs": "245 1 {{ModId}}_GarlicCloves 12 {{ModId}}_HerbVinegar 1 {{ModId}}_HardEgg 3/1 10/{{ModId}}_SpringPickledEggs 3/none/{{i18n: HomeCooking_SpringPickledEggs}}", //4:FARM1 sugar garliccloves herbvinegar hardegg3
+				"{{ModId}}_SummerHarvestPotPie": "264 1 266 1 {{ModId}}_Bechamel 1 {{ModId}}_PieDough 2 {{ModId}}_GoldenBroth 1/1 10/{{ModId}}_SummerHarvestPotPie 1/f Linus 4/{{i18n: HomeCooking_SummerHarvestPotPie}}", //5:FARM2 radish redcabbage goldenbroth bechamel piedough2
+				"{{ModId}}_SummerPickledEggs": "245 1 260 2 {{ModId}}_HerbVinegar 1 {{ModId}}_HardEgg 3 {{ModId}}_HotPepperFlakes 1/1 10/{{ModId}}_SummerPickledEggs 3/none/{{i18n: HomeCooking_SummerPickledEggs}}", //5:FARM1-SPEED sugar hotpepper2 herbvinegar hardegg3 hotpepperflakes
+				"{{ModId}}_VoidPickledEggs": "245 1 769 3 {{ModId}}_HerbVinegar 1 {{ModId}}_HardVoidEgg 3/1 10/{{ModId}}_VoidPickledEggs 3/none/{{i18n: HomeCooking_VoidPickledEggs}}", //4:FARM1 sugar voidessence3 herbvinegar hardegg3
+				"{{ModId}}_WinterForagePotPie": "{{ModId}}_WinterForageBlend 1 {{ModId}}_Bechamel 1 {{ModId}}_PieDough 2 {{ModId}}_RabbitStock 1/1 10/{{ModId}}_WinterForagePotPie 1/f Linus 8/{{i18n: HomeCooking_WinterForagePotPie}}", //4:LUCK1-FARM1 winterforageblend rabbitstock piedough2 bechamel
+				"{{ModId}}_WinterPickledEggs": "245 1 418 3 {{ModId}}_HerbVinegar 1 {{ModId}}_HardEgg 3/1 10/{{ModId}}_WinterPickledEggs 3/none/{{i18n: HomeCooking_WinterPickledEggs}}", //4:FARM1 sugar crocus3 herbvinegar hardegg3
+				"{{ModId}}_ZuzuBreakfastSandwich": "-5 3 306 1 {{ModId}}_Butter 1 {{ModId}}_HotSauce 1 {{ModId}}_BreadSlices 2 {{ModId}}_MeltingCheese 1 {{ModId}}_CaramelizedOnions 3/1 10/{{ModId}}_ZuzuBreakfastSandwich 1/none/{{i18n: HomeCooking_ZuzuBreakfastSandwich}}" //6:SPEED2 anyegg butter hotsauce breadslices meltingcheese mayo
+			}
+		},
+		// player has Mizu's Quail (no AHM necessary)
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"When": {
+				"HasMod|contains=Mizu.Quail": true
+			},
+			"Entries": {
+				"{{ModId}}_PickledQuailEggs": {
+					"Name": "{{ModId}}_PickledQuailEggs",
+					"Displayname": "{{i18n: HomeCooking_PickledQuailEggs}}",
+					"Description": "{{i18n: HomeCooking_PickledQuailEggs.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 150,
+					"Edibility": 40,
+					"Texture": "Mods/{{ModId}}/fatjars",
+					"SpriteIndex": 4,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"pickled_egg_item",
+						"color_green",
+						"allergen_egg",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_PickledQuailEggsBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"Speed": 1
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Mizu.Quail": true
+			},
+			"Entries": {
+				"{{ModId}}_PickledQuailEggs": "Carrot 1 {{ModId}}_HotPepperFlakes 1 {{ModId}}_HerbVinegar 1 {{ModId}}_SpringSlices 6 Mizu.Quail_QuailEgg 3/1 10/{{ModId}}_PickledQuailEggs 3/default/{{i18n: HomeCooking_PickledQuailEggs}}" //SPEED1-FARM1 carrot hotpepperflakes herbvinegar springslices6 quaileggs3
+			}
+		},
+		// player has Sunberry Village
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"When": {
+				"HasMod|contains=skellady.SBVCP": true
+			},
+			"Entries": {
+				"{{ModId}}_SBVPickledEggs": {
+					"Name": "{{ModId}}_SBVPickledEggs",
+					"Displayname": "{{i18n: HomeCooking_SBVPickledEggs}}",
+					"Description": "{{i18n: HomeCooking_SBVPickledEggs.Description}}",
+					"Type": "Cooking",
+					"Category": -7,
+					"Price": 250,
+					"Edibility": 60,
+					"Texture": "Mods/{{ModId}}/fatjars",
+					"SpriteIndex": 5,
+					"IsDrink": false,
+					"ExcludeFromShippingCollection": "{{PerfectionScoreObjects}}",
+					"ContextTags": [
+						"modid_goodjobsuzette.homecooking",
+						"pickled_egg_item",
+						"color_yellow",
+						"allergen_egg",
+						"food_nonvegan"
+					],
+					"Buffs": [
+						{
+							"Id": "{{ModId}}_SBVPickledEggsBuff",
+							"Duration": 240,
+							"CustomAttributes": {
+								"FarmingLevel": 1,
+								"Speed": 3
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=skellady.SBVCP": true
+			},
+			"Entries": {
+				"{{ModId}}_SBVPickledEggs": "245 1 {{ModId}}_HerbVinegar 1 {{ModId}}_HardEgg 3 skellady.SBVCP_WildMustardSeeds 3/1 10/{{ModId}}_SBVPickledEggs 3/default/{{i18n: HomeCooking_SBVPickledEggs}}" //SPEED3-FARM1 sugar herbvinegar hardegg3 skellady.SBVCP_wildmustardseeds3
+			}
+		}
+	]
+}

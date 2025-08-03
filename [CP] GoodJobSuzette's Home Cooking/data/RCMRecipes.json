@@ -1,0 +1,380 @@
+{
+	"LogName": "GoodJobSuzette's Home Cooking - Rosa's Cruelty-Free Meat Recipes",
+	"Changes": [
+		// HC RECIPES
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Priority": "Default + 100",
+			"Entries": {
+				//broths
+				"{{ModId}}_BeefBroth": "Roseloves109_Beef 1 Carrot 3 {{ModId}}_GarlicCloves 4 {{ModId}}_TomatoDiced 3 {{ModId}}_HerbVinegar 1/1 10/{{ModId}}_BeefBroth 5/default/{{i18n: HomeCooking_BeefBroth}}", //5:FARM1 beef carrot garliccloves tomatodiced herbvinegar
+				"{{ModId}}_ChickenBroth": "Roseloves109_Chicken 1 Carrot 2 {{ModId}}_GarlicCloves 4/1 10/{{ModId}}_ChickenBroth 5/default/{{i18n: HomeCooking_ChickenBroth}}", //3:FARM1 chicken carrots garliccloves
+				"{{ModId}}_PorkBroth": "Carrot 2 20 1 Roseloves109_Pork 1 {{ModId}}_GarlicGingerPaste 1/1 10/{{ModId}}_PorkBroth 5/default/{{i18n: HomeCooking_PorkBroth}}", //4:FORAGE-ATTACK carrot leek pork garlicgingerpaste
+				"{{ModId}}_TomatoBeefBase": "{{ModId}}_GarlicCloves 2 {{ModId}}_TomatoPaste 1 {{ModId}}_BeefBroth 1/1 10/{{ModId}}_TomatoBeefBase 1/default/{{i18n: HomeCooking_TomatoBeefBase}}", //3:FARM1 garlicclove2 tomatopaste beefbroth
+				//basics
+				"{{ModId}}_BeefPatty": "-5 1 {{ModId}}_Breadcrumbs 1 Roseloves109_HamburgerPatty 1 {{ModId}}_MushroomPowder 1/1 10/{{ModId}}_BeefPatty 3/default/{{i18n: HomeCooking_BeefPatty}}", //4:FARM-FORAGE egg breadcrumbs groundbeef mushroompowder
+				"{{ModId}}_ChickenGravy": "246 1 348 1 Roseloves109_Chicken 1 {{ModId}}_ChickenBroth 1/1 10/{{ModId}}_ChickenGravy 1/none/{{i18n: HomeCooking_ChickenGravy}}", //4:FARM wheatflour wine chickenbroth chicken
+				"{{ModId}}_ChickenPatty": "306 1 {{ModId}}_Breadcrumbs 1 {{ModId}}_GroundChicken 1 {{ModId}}_Worchestershire 1/1 10/{{ModId}}_ChickenPatty 3/default/{{i18n: HomeCooking_ChickenPatty}}", //5:FARM-SPEED mayo egg breadcrumbs worchestershire groundchicken
+				"{{ModId}}_Fries": "192 2 {{ModId}}_Tallow 1/1 10/{{ModId}}_Fries 4/default/{{i18n: HomeCooking_Fries}}", //2:FARM1 potato2 tallow +salt
+				"{{ModId}}_GroundBeef": "Roseloves109_Beef 3 Roseloves109_MeatSeasonings 1 {{ModId}}_BeefBroth 1/1 10/{{ModId}}_GroundBeef 5/default/{{i18n: HomeCooking_GroundBeef}}", //3:FARM1 beefbroth beef + meatseasoning
+				"{{ModId}}_GroundChicken": "Roseloves109_Chicken 3 Roseloves109_MeatSeasonings 1 {{ModId}}_ChickenBroth 1/1 10/{{ModId}}_GroundChicken 5/default/{{i18n: HomeCooking_GroundChicken}}", //3:FARM1 chickenbroth chicken + seasoning
+				"{{ModId}}_GroundPork": "Roseloves109_Pork 3 Roseloves109_MeatSeasonings 1 {{ModId}}_PorkBroth 1/1 10/{{ModId}}_GroundPork 5/default/{{i18n: HomeCooking_GroundPork}}", //3:FORAGE-ATTACK porkbroth pork + seasoning
+				"{{ModId}}_HamDiced": "{{ModId}}_HamSlices 3/1 10/{{ModId}}_HamDiced 1/default/{{i18n: HomeCooking_HamDiced}}", //1:MINE-LUCK-SPEED-1-MAGNET1 hamslices
+				"{{ModId}}_HamSlices": "Roseloves109_Ham 1/1 10/{{ModId}}_HamSlices 24/default/{{i18n: HomeCooking_HamSlices}}", //1:MINE-LUCK-SPEED-1-MAGNET1 glazedham
+				"{{ModId}}_Lard": "Roseloves109_Pork 1/1 10/{{ModId}}_Lard 2/default/{{i18n: HomeCooking_Lard}}", //1:FARM1 pork
+				"{{ModId}}_PieDough": "245 1 246 1 419 1 {{ModId}}_Butter 1 {{ModId}}_Lard 1/1 10/{{ModId}}_PieDough 5/default/{{i18n: HomeCooking_PieDough}}", //5:FARM1 sugar wheatflour vinegar butter lard
+				"{{ModId}}_PotRoast": "Carrot 2 Roseloves109_Beef 1 Roseloves109_MeatSeasonings 1 {{ModId}}_BeefBroth 1/1 10/ {{ModId}}_PotRoast 1/none/{{i18n: HomeCooking_PotRoast}}", //4:FARM1 carrot beef beefbroth
+				"{{ModId}}_Tallow": "Roseloves109_Beef 1/1 10/{{ModId}}_Tallow 2/default/{{i18n: HomeCooking_Tallow}}", //1:FARM1 beef
+				//soups
+				"{{ModId}}_BeefDumplings": "{{ModId}}_TomatoBeefBase 1 {{ModId}}_SpringVeg 1 {{ModId}}_Dumplings 3 {{ModId}}_PotRoast 1 348 1/1 10/{{ModId}}_BeefDumplings 1/none/{{i18n: HomeCooking_BeefDumplings}}", //5:FARM2 springveg dumplings3 potroast wine tomatobeefbase
+				"{{ModId}}_ChickenDumplings": "Carrot 1 {{ModId}}_ChickenGravy 1 {{ModId}}_Dumplings 3 {{ModId}}_GarlicCloves 2 {{ModId}}_Worchestershire 1/1 10/{{ModId}}_ChickenDumplings 1/none/{{i18n: HomeCooking_ChickenDumplings}}", //5:SPEED1-FARM1 carrot ChickenGravy Dumplings GarlicCloves2 Worchestershire
+				"{{ModId}}_ChickenGravyStew": "{{ModId}}_SpringVeg 1 {{ModId}}_ChickenGravy 1 {{ModId}}_ChickenBroth 1 {{ModId}}_EggNoodles 1/1 10/{{ModId}}_ChickenGravyStew 1/f Jodi 3/{{i18n: HomeCooking_ChickenGravyStew}}", //4:FARM2 springveg chickengravy chickenbroth eggnoodles
+				"{{ModId}}_ChickenSoup": "{{ModId}}_ChickenSoup_Base 1 {{ModId}}_ChickenSoup_Veg 1 Roseloves109_CookedChicken 1 {{ModId}}_Eggnoodles 1/1 10/{{ModId}}_ChickenSoup 1/none/{{i18n: HomeCooking_ChickenSoup}}", //4:FARM1 _base _veg eggnoodles chicken
+				"{{ModId}}_ChickenSoup_Base": "{{ModId}}_TomatoPaste 1 {{ModId}}_ChickenBroth 1/1 10/{{ModId}}_ChickenSoup_Base 1/default/{{i18n: HomeCooking_ChickenSoup_Base}}", //2:tomatopaste chickenbroth
+				"{{ModId}}_ClearClamChowder": "192 1 372 3 Roseloves109_Bacon 1 {{ModId}}_GarlicCloves 3 {{ModId}}_ClamJuice 1/1 10/{{ModId}}_ClearClamChowder 1/f Willy 1/{{i18n: HomeCooking_ClearClamChowder}}", //5:FISH1 potato clam bacon garliccloves clamjuice
+				"{{ModId}}_HamburgerSoup": "{{ModId}}_TomatoBeefBase 1 192 1 {{ModId}}_PepperOnion 1 Carrot 1 {{ModId}}_TomatoDiced 3 {{ModId}}_GroundBeef 1/1 10/{{ModId}}_HamburgerSoup 1/f Jodie 6/{{i18n: HomeCooking_HamburgerSoup}}", //6:FARM1 tomatobeefbase potato tomatodiced pepperonion carrot groundbeef  
+				"{{ModId}}_MashedStew": "348 1 Roseloves109_Beef 1 {{ModId}}_TomatoDiced 3 {{ModId}}_SpringSlices 1 {{ModId}}_Worchestershire 1 {{ModId}}_MashedPotatoes 1/1 10/{{ModId}}_MashedStew 1/f Gus 4/{{i18n: HomeCooking_MashedStew}}", //6:SPEED wine tomatodiced beef springslices worchestershire mashedpotatoes
+				"{{ModId}}_RabbitDumplings": "{{ModId}}_RabbitDumplings_Base 1 {{ModId}}_RabbitDumplings_Veg 1 Roseloves109_CookedRabbit 1 {{ModId}}_Dumplings 3 {{ModId}}_HeavyCream 1/1 10/{{ModId}}_RabbitDumplings 1/none/{{i18n: HomeCooking_RabbitDumplings}}", //5:LUCK1 _base _veg rabbit dumplings heavycream
+				"{{ModId}}_RabbitDumplings_Base": "348 1 635 1 {{ModId}}_RabbitStock 1/1 10/{{ModId}}_RabbitDumplings_Base 1/default/{{i18n: HomeCooking_RabbitDumplings_Base}}", //4:wine orange rabbitstock
+				"{{ModId}}_RabbitDumplings_Veg": "Carrot 3 250 2 {{ModId}}_GarlicCloves 5 {{ModId}}_SpringSlices 2/1 10/{{ModId}}_RabbitDumplings_Veg 1/default/{{i18n: HomeCooking_RabbitDumplings_Veg}}", //4:carrot kale springslices2 garliccloves5
+				"{{ModId}}_RedClamChowder": "372 3 Roseloves109_Sausage 1 {{ModId}}_PepperOnion 1 {{ModId}}_TomatoDiced 6 {{ModId}}_ClamJuice 1/1 10/{{ModId}}_RedClamChowder 1/f Willy 3/{{i18n: HomeCooking_RedClamChowder}}", //5:FISH pepperonion clam sausage tomatodiced clamjuice
+				"{{ModId}}_SalmonChowder": "{{ModId}}_BrightFishBroth 1 {{ModId}}_SalmonChowder_Veg 1 139 1 Roseloves109_Bacon 1 {{ModId}}_HeavyCream 1/1 10/{{ModId}}_SalmonChowder 1/none/{{i18n: HomeCooking_SalmonChowder}}", //5:FISH1 salmon bacon heavycream brightfishbroth _veg
+				"{{ModId}}_SalmonChowder_Veg": "20 1 270 1 {{ModId}}_SpringVeg 1/1 10/{{ModId}}_SalmonChowder_Veg 1/default/{{i18n: HomeCooking_SalmonChowder_Veg}}", //4:leek springveg corn
+				"{{ModId}}_SpringGardenSoup": "{{ModId}}_SpringGardenSoup_Veg 1 Roseloves109_Beef 1 {{ModId}}_MushroomBroth 1 {{ModId}}_GreenPasta 1/1 10/{{ModId}}_SpringGardenSoup 1/f Robin 4/{{i18n: HomeCooking_SpringGardenSoup}}", //4:MINING1 _veg mushroombroth greenpasta(tortellini) beef
+				"{{ModId}}_SpringGardenSoup_Veg": "{{ModId}}_SpringVeg 1 {{ModId}}_ChickenSoup_Veg 1/1 10/{{ModId}}_SpringGardenSoup_Veg 1/default/{{i18n: HomeCooking_SpringGardenSoup_Veg}}", //4:springveg kaleforage
+				"{{ModId}}_SummerGardenSoup": "SummerSquash 1 260 1 Roseloves109_Chicken 1 {{ModId}}_TomatoDiced 3 {{ModId}}_GoldenBroth 1 {{ModId}}_RedPasta 1/1 10/{{ModId}}_SummerGardenSoup 1/f Robin 6/{{i18n: HomeCooking_SummerGardenSoup}}", //6:FARM1 tomatodiced summersquash hotpepper goldenbroth redpasta chicken
+				"{{ModId}}_WinterForageSoup": "{{ModId}}_WinterForageBlend 1 423 1 Roseloves109_Mutton 1 {{ModId}}_BeefBroth 1/1 10/{{ModId}}_WinterForageSoup 1/f Robin 8/{{i18n: HomeCooking_WinterForageSoup}}", //4:FARM1 winterforageblend rice beefbroth mutton
+				//cooking
+				"{{ModId}}_Cheeseburger": "{{ModId}}_Hamburger 1 {{ModId}}_CheeseSlices 1/1 10/{{ModId}}_Cheeseburger 1/default/{{i18n: HomeCooking_Cheeseburger}}", //2:FARM1-FORAGE1 hamburger cheeseslices
+				"{{ModId}}_DeluxeCheeseburger": "{{ModId}}_Cheeseburger 1 306 1 {{ModId}}_TomatoSlices 2 250 1 {{ModId}}_Fries 1 {{ModId}}_Ketchup 2/1 10/{{ModId}}_DeluxeCheeseburger 1/none/{{i18n: HomeCooking_DeluxeCheeseburger}}", //6:FARM2-FORAGE1 mayo kale cheeseburger tomatoslices2 fries ketchup2
+				"{{ModId}}_GrampletonPie": "-5 1 {{ModId}}_PieDough 2 {{ModId}}_BeefBroth 1 {{ModId}}_SweetSausage 1 Roseloves109_Duck 1 Roseloves109_Bacon 1/1 10/{{ModId}}_GrampletonPie 1/default/{{i18n: HomeCooking_GrampletonPie}}", //6:FORAGE-FARM2-ATTACK-DEFENSE1 egg piedough2 beefbroth sweetsausage duck bacon
+				"{{ModId}}_Hamburger": "{{ModId}}_PotatoBuns 1 {{ModId}}_BeefPatty 1/1 10/{{ModId}}_Hamburger 1/default/{{i18n: HomeCooking_Hamburger}}", //2:FARM1-FORAGE1 potatobun beefpatty
+				"{{ModId}}_JojaRibs": "{{ModId}}_TomatoBeefBase 1 167 1 Roseloves109_Beef 1 Carrot 1 {{ModId}}_MashedPotatoes 1/1 10/{{ModId}}_JojaRibs 1/f Kent 4/{{i18n: HomeCooking_JojaRibs}}", //5:FARM1 jojacola carrot tomatobeefbase mashedpotatoes beef
+				"{{ModId}}_PotRoastPie": "{{ModId}}_GarlicCloves 4 {{ModId}}_PotRoast 1 {{ModId}}_MashedGravy 1 {{ModId}}_PieDough 1/1 10/{{ModId}}_PotRoastPie/f Kent 5/{{i18n: HomeCooking_PotRoastPie}}", //4:FARM2 garliccloves potroast piedough mashedgravy
+				"{{ModId}}_PumpkinRisotto": "348 1 423 1 Roseloves109_Bacon 1 {{ModId}}_PumpkinPuree 1 {{ModId}}_ChickenBroth 1 {{ModId}}_Butter 1/1 10/{{ModId}}_PumpkinRisotto 1/f Gus 8/{{i18n: HomeCooking_PumpkinRisotto}}", //FARM1 rice wine pumpkinpuree chickenbroth butter bacon
+				"{{ModId}}_QuicheGrampleton": "{{ModId}}_QuicheGrampleton_Filling 1 {{ModId}}_PieDough 1/1 10/{{ModId}}_QuicheGrampleton 1/none/{{i18n: HomeCooking_QuicheGrampleton}}", //2:FARM1 QuicheGrampleton_Filling piedough
+				"{{ModId}}_QuicheGrampleton_Filling": "-5 2 -6 1 Roseloves109_Bacon 1 {{ModId}}_ShreddedCheese 1 {{ModId}}_GarlicCloves 3 {{ModId}}_HeavyCream 1/1 10/{{ModId}}_QuicheGrampleton_Filling 1/default/{{i18n: HomeCooking_QuicheGrampleton_Filling}}", //6:egg2 milk shreddedcheese garliccloves heavycream bacon
+				"{{ModId}}_SpaghettiPie": "224 1 {{ModId}}_HeavyCream 1 {{ModId}}_ShreddedCheese 2 {{ModId}}_GroundBeef 1 {{ModId}}_SweetSausage 1/1 10/{{ModId}}_SpaghettiPie 1/default/{{i18n: HomeCooking_SpaghettiPie}}", //3:FARM1-FORAGE1-DEFENSE1-ATTACK1 spaghetti heavycream shreddedcheese2 groundbeef sweetsausage
+				"{{ModId}}_SundayDinner": "207 1 {{ModId}}_PotRoast 1 {{ModId}}_MashedGravy 1/1 10/{{ModId}}_SundayDinner 1/f Evelyn 6/{{i18n: HomeCooking_SundayDinner}}" //3:FARM1-FORAGE1 beanhotpot potroast mashedgravy
+			}
+		},
+		// HC RECIPES: player has Mizu's Turkey
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Mizu.Turkey": "true"
+			},
+			"Priority": "Default + 100",
+			"Entries": {
+				"{{ModId}}_GroundTurkey": "{{ModId}}_ChickenBroth 1 Roseloves109_TurkeyMeat 3/1 10/{{ModId}}_GroundTurkey 5/default/{{i18n: HomeCooking_GroundTurkey}}" //2:FARM1 chickenbroth turkey
+			}
+		},
+		// RECIPE EDITS to override vanilla ingredients in Rosa's Cruelty-Free Meat
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true"
+			},
+			"Priority": "Default + 100",
+			"Fields": {
+				"Roseloves109_Baconandeggs": { // bacon egg
+					"0": "Roseloves109_Bacon 2 -5 2"
+				},
+				"Roseloves109_BaconHamburger": { // lettuce hamburgerpatty tomato bread bacon
+					"0": "250 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 Roseloves109_HamburgerPatty 1 Roseloves109_Bacon 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				},
+				"Roseloves109_Beefkebab": { // beef bellpepper onion bbqsauce meatseasoning
+					"0": "169 1 Roseloves109_CookedBeef 2 GoodJobSuzette.HomeCooking_PepperOnion 2 Roseloves109_BBQSauce 1"
+				},
+				"Roseloves109_BeefSandwich": { // lettuce cucumber beef bread
+					"0": "306 1 250 1 Roseloves109_CookedBeef 1 GoodJobSuzette.HomeCooking_BreadSlices 2"
+				},
+				"Roseloves109_BeefTaco": { // beef lettuce hotpepper tomato tortilla
+					"0": "Roseloves109_Beef 1 250 1 GoodJobSuzette.HomeCooking_GardenSalsa 1 229 1"
+				},
+				"Roseloves109_CheeseBurger": { // lettuce hamburgerpatty tomato cheese bread
+					"0": "250 1 Roseloves109_HamburgerPatty 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 GoodJobSuzette.HomeCooking_CheeseSlices 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				},
+				"Roseloves109_ChickenSalad": { // chicken cucumber celery lettuce
+					"0": "Roseloves109_CookedChicken 1 250 1 GoodJobSuzette.HomeCooking_CowfolkSauce 1"
+				},
+				"Roseloves109_ChickenSandwich": { // lettuce cucumber tomato chicken bread
+					"0": "250 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 Roseloves109_CookedChicken 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				},
+				"Roseloves109_Chickensoup": { // chicken onion celery carrot
+					"0": "Carrot 3 Roseloves109_Chicken 1 GoodJobSuzette.HomeCooking_ChickenBroth 1"
+				},
+				"Roseloves109_MeatSeasonings": { // hotpepper springonion garlic
+					"0": "GoodJobSuzette.HomeCooking_HotPepperFlakes 1 GoodJobSuzette.HomeCooking_SpringSlices 2 GoodJobSuzette.HomeCooking_GarlicCloves 1"
+				}
+			}
+		},
+		// + Lilybrook
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable Lilybrook": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"HasMod|contains=8BitAlien.Lilybrook": "true"
+			},
+			"Priority": "Default + 100",
+			"Fields": {
+				"Roseloves109_BaconHamburger": { // lettuce hamburgerpatty tomato bread bacon
+					"0": "Lilybrook.Lettuce 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 Roseloves109_HamburgerPatty 1 Roseloves109_Bacon 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				},
+				"Roseloves109_BeefSandwich": { // lettuce cucumber beef bread
+					"0": "306 1 Lilybrook.Lettuce 1 Roseloves109_CookedBeef 1 GoodJobSuzette.HomeCooking_BreadSlices 2"
+				},
+				"Roseloves109_BeefTaco": { // beef lettuce hotpepper tomato tortilla
+					"0": "Roseloves109_Beef 1 Lilybrook.Lettuce 1 GoodJobSuzette.HomeCooking_GardenSalsa 1 229 1"
+				},
+				"Roseloves109_CheeseBurger": { // lettuce hamburgerpatty tomato cheese bread
+					"0": "Lilybrook.Lettuce 1 Roseloves109_HamburgerPatty 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 GoodJobSuzette.HomeCooking_CheeseSlices 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				},
+				"Roseloves109_ChickenSalad": { // chicken cucumber celery lettuce
+					"0": "Roseloves109_CookedChicken 1 Lilybrook.Lettuce 1 GoodJobSuzette.HomeCooking_CowfolkSauce 1"
+				},
+				"Roseloves109_ChickenSandwich": { // lettuce cucumber tomato chicken bread
+					"0": "Lilybrook.Lettuce 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 Roseloves109_CookedChicken 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				},
+				"Roseloves109_Chickensoup": { // chicken onion celery carrot
+					"0": "GoodJobSuzette.HomeCooking_Mirepoix 2 Roseloves109_Chicken 1 GoodJobSuzette.HomeCooking_ChickenBroth 1"
+				}
+			}
+		},
+		// Cornucopia Crops Enabled, same vanilla ingredient concept
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CMC": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "true"
+			},
+			"Priority": "Default + 100",
+			"Fields": {
+				"Roseloves109_BaconHamburger": { // lettuce hamburgerpatty tomato bread bacon
+					"0": "Cornucopia_Lettuce 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 Roseloves109_HamburgerPatty 1 Roseloves109_Bacon 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				},
+				"Roseloves109_BeefBurrito": { // lettuce beef tomato tortilla
+					"0": "Cornucopia_Lettuce 1 Roseloves109_Beef 2 GoodJobSuzette.HomeCooking_TomatoDiced 1 229 1"
+				},
+				"Roseloves109_Beefribs": { // beef onionDICED bbqsauce salt pepper
+					"0": "Roseloves109_Beef 2 Cornucopia_Onion 1 Roseloves109_BBQSauce 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"Roseloves109_BeefSandwich": { // lettuce cucumber beef bread
+					"0": "306 1 Cornucopia_Lettuce 1 Cornucopia_Cucumber 1 Roseloves109_CookedBeef 1 GoodJobSuzette.HomeCooking_BreadSlices 2"
+				},
+				"Roseloves109_BeefSoup": { // beef onion celery
+					"0": "Roseloves109_Beef 1 GoodJobSuzette.HomeCooking_Mirepoix 1 GoodJobSuzette.HomeCooking_VeggieBroth 1"
+				},
+				"Roseloves109_BeefTaco": { // beef lettuce hotpepper tomato tortilla
+					"0": "Roseloves109_Beef 1 Cornucopia_Lettuce 1 GoodJobSuzette.HomeCooking_GardenSalsa 1 229 1"
+				},
+				"Roseloves109_CheeseBurger": { // lettuce hamburgerpatty tomato commonmushroom bread
+					"0": "Cornucopia_Lettuce 1 Roseloves109_HamburgerPatty 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 GoodJobSuzette.HomeCooking_CheeseSlices 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				},
+				"Roseloves109_ChickenSalad": { // chicken cucumber celery lettuce
+					"0": "Roseloves109_CookedChicken 1 Cornucopia_Cucumber 1 Cornucopia_Celery 1 Cornucopia_Lettuce 1 GoodJobSuzette.HomeCooking_CowfolkSauce 1"
+				},
+				"Roseloves109_ChickenSandwich": { // lettuce cucumber tomato chicken bread
+					"0": "Cornucopia_Lettuce 1 Cornucopia_Cucumber 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 Roseloves109_CookedChicken 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				},
+				"Roseloves109_Chickensoup": { // chicken onion celery carrot
+					"0": "Roseloves109_Chicken 1 GoodJobSuzette.HomeCooking_Mirepoix 2 GoodJobSuzette.HomeCooking_ChickenBroth 1"
+				},
+				"Roseloves109_FriedChicken": { // chicken meatseason flour egg
+					"0": "Roseloves109_Chicken 1 Roseloves109_MeatSeasonings 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 -5 1 GoodJobSuzette.HomeCooking_Lard 1"
+				},
+				"Roseloves109_FriedPork": { // pork meatseason flour egg
+					"0": "Roseloves109_Pork 1 Roseloves109_MeatSeasonings 1 GoodJobSuzette.HomeCooking_Breadcrumbs 1 -5 1 GoodJobSuzette.HomeCooking_Lard 1"
+				},
+				"Roseloves109_HamSandwich": { // lettuce cucumber whitegravy ham bread
+					"0": "Cornucopia_Lettuce 1 Cornucopia_Cucumber 1 Roseloves109_WhiteGravy 1 GoodJobSuzette.HomeCooking_HamSlices 2 GoodJobSuzette.HomeCooking_BreadSlices 2"
+				},
+				/*"Roseloves109_Meatloaf": { // beef egg onionDICED meatseason whitegravy -- research meatloaf with white gravy
+					"0": "Roseloves109_Beef 3 -5 1 Cornucopia_Onion 1 Roseloves109_MeatSeasonings 1 Roseloves109_WhiteGravy 1"
+				},*/
+				"Roseloves109_PizzaDiavolo": { // sausage bacon wheatflour tomato mushroom
+					"0": "Roseloves109_Sausage 1 Roseloves109_Bacon 1 GoodJobSuzette.HomeCooking_PizzaDough 1 GoodJobSuzette.HomeCooking_TomatoDiced 1 424 1 GoodJobSuzette.HomeCooking_ShreddedCheese 2"
+				},
+				/*"Roseloves109_PorkEggRolls": { // pork egg wheat oil soysauce(+CAM), eggroll wrappers
+					"0": "Roseloves109_Pork 1 -5 2 246 1 247 1 Cornucopia_SoySauce 1"
+				},*/
+				"Roseloves109_SpaghettiandMeatballs": { // flour tomato beef
+					"0": "GoodJobSuzette.HomeCooking_Pasta 1 GoodJobSuzette.HomeCooking_RedSauce 1 Roseloves109_Beef 1"
+				},
+				"Roseloves109_Steak": { // beef garlic oil salt pepper
+					"0": "Roseloves109_Beef 2 GoodJobSuzette.HomeCooking_GarlicCloves 1 247 1"
+				},
+				"Roseloves109_SteakandMashedPotatoes": { // beef meatseasoning potato
+					"0": "Roseloves109_Steak 1 GoodJobSuzette.HomeCooking_MashedPotatoes 1"
+				}
+			}
+		},
+		// Cornucopia Artisan, same vanilla ingredient concept
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true"
+			},
+			"Priority": "Default + 100",
+			"Fields": {
+				"Roseloves109_BBQSauce": { // ketchup onion salt
+					"0": "Roseloves109_Ketchup 1 GoodJobSuzette.HomeCooking_HerbSeasoning 2"
+				},
+				"Roseloves109_Corndog": { // sausage flour ketchup
+					"0": "Roseloves109_Sausage 1 GoodJobSuzette.HomeCooking_Batter 1 Roseloves109_Ketchup 1"
+				},
+				"Roseloves109_Ketchup": { // tomato sugar vinegar salt
+					"0": "GoodJobSuzette.HomeCooking_TomatoPaste 1 245 1 419 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"Roseloves109_Steak": { // beef garlic oil salt pepper
+					"0": "Roseloves109_Beef 2 GoodJobSuzette.HomeCooking_GarlicCloves 1 247 1 GoodJobSuzette.HomeCooking_Salt 1"
+				},
+				"Roseloves109_WhiteGravy": { // milk flour butter salt
+					"0": "GoodJobSuzette.HomeCooking_Bechamel 1 GoodJobSuzette.HomeCooking_Salt 1"
+				}
+			}
+		},
+		// Cornucopia Artisan+Lilybrook, same vanilla ingredient concept
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"Priority": "Default + 100",
+			"When": {
+				"Enable CAM": "true",
+				"Enable Lilybrook": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=8BitAlien.Lilybrook": "true"
+			},
+			"Fields": {
+				"Roseloves109_Beefribs": { // beef onionDICED bbqsauce salt pepper
+					"0": "Roseloves109_Beef 2 Lilybrook.Onion 1 Roseloves109_BBQSauce 1 GoodJobSuzette.HomeCooking_Salt 1"
+				}
+			}
+		},
+		// CAM + SBV
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": "true",
+				"Enable SBV": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=skellady.SBVCP": "true"
+			},
+			"Priority": "Default + 100",
+			"Fields": {
+				"Roseloves109_Corndog": { // sausage flour ketchup
+					"0": "Roseloves109_Sausage 1 GoodJobSuzette.HomeCooking_Batter 1 Roseloves109_Ketchup 1 GoodJobSuzette.HomeCooking_Mustard 1"
+				}
+			}
+		},
+		// CAM + CMC
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable CAM": "true",
+				"Enable CMC": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"HasMod|contains=Cornucopia.ArtisanMachines": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "true"
+			},
+			"Priority": "Default + 100",
+			"Fields": {
+				"Roseloves109_Beefribs": { // beef onionDICED bbqsauce salt pepper
+					"0": "Roseloves109_Beef 2 Cornucopia_Onion 1 Roseloves109_BBQSauce 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_Cornucopia_Pepper 1"
+				},
+				"Roseloves109_Steak": { // beef garlic oil salt pepper
+					"0": "Roseloves109_Beef 2 GoodJobSuzette.HomeCooking_GarlicCloves 1 247 1 GoodJobSuzette.HomeCooking_Salt 1 GoodJobSuzette.HomeCooking_Pepper 1"
+				}
+			}
+		},
+		// RCM + RMT - CMC
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable AHM": "true",
+				"Enable RMT": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"HasMod|contains=kaazkulaas.AHMCrueltyFreeCompatibility": "true",
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "false"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Roseloves109_BeefSandwich": { // lettuce cucumber beef bread
+					"0": "306 1 250 1 Rexstrife20.MineralTownCP_Harvest_Cucumber 1 Roseloves109_CookedBeef 1 GoodJobSuzette.HomeCooking_BreadSlices 2"
+				},
+				"Roseloves109_ChickenSalad": { // chicken cucumber celery lettuce
+					"0": "Roseloves109_CookedChicken 1 250 1 Rexstrife20.MineralTownCP_Harvest_Cucumber 1 GoodJobSuzette.HomeCooking_CowfolkSauce 1"
+				},
+				"Roseloves109_ChickenSandwich": { // lettuce cucumber tomato chicken bread
+					"0": "250 1 Rexstrife20.MineralTownCP_Harvest_Cucumber 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 Roseloves109_CookedChicken 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				}
+			}
+		},
+		// RCM + RMT + CMC
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable AHM": "true",
+				"Enable RMT": "true",
+				"Enable CMC": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"HasMod|contains=kaazkulaas.AHMCrueltyFreeCompatibility": "true",
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true",
+				"HasMod|contains=Cornucopia.MoreCrops": "true"
+			},
+			"Priority": "Default + 200",
+			"Fields": {
+				"Roseloves109_BeefSandwich": { // lettuce cucumber beef bread
+					"0": "306 1 Cornucopia_Lettuce 1 Rexstrife20.MineralTownCP_Harvest_Cucumber 1 Roseloves109_CookedBeef 1 GoodJobSuzette.HomeCooking_BreadSlices 2"
+				},
+				"Roseloves109_ChickenSalad": { // chicken cucumber celery lettuce
+					"0": "Roseloves109_CookedChicken 1 Cornucopia_Lettuce 1 Rexstrife20.MineralTownCP_Harvest_Cucumber 1 GoodJobSuzette.HomeCooking_CowfolkSauce 1"
+				},
+				"Roseloves109_ChickenSandwich": { // lettuce cucumber tomato chicken bread
+					"0": "Cornucopia_Lettuce 1 Rexstrife20.MineralTownCP_Harvest_Cucumber 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 Roseloves109_CookedChicken 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				}
+			}
+		},
+		// RMT + Lilybrook
+		{
+			"Action": "EditData",
+			"Target": "Data/CookingRecipes",
+			"When": {
+				"Enable RMT": "true",
+				"Enable Lilybrook": "true",
+				"HasMod|contains=Roseloves109.RosasCruelfreeMeat": "true",
+				"HasMod|contains=Rexstrife20.MineralTownCP": "true",
+				"HasMod|contains=8BitAlien.Lilybrook": "true"
+			},
+			"Priority": "Default + 100",
+			"Fields": {
+				"Roseloves109_BeefSandwich": { // lettuce cucumber beef bread
+					"0": "306 1 Lilybrook.Lettuce 1 Rexstrife20.MineralTownCP_Harvest_Cucumber 1 Roseloves109_CookedBeef 1 GoodJobSuzette.HomeCooking_BreadSlices 2"
+				},
+				"Roseloves109_ChickenSalad": { // chicken cucumber celery lettuce
+					"0": "Roseloves109_CookedChicken 1 Lilybrook.Lettuce 1 Rexstrife20.MineralTownCP_Harvest_Cucumber 1 GoodJobSuzette.HomeCooking_CowfolkSauce 1"
+				},
+				"Roseloves109_ChickenSandwich": { // lettuce cucumber tomato chicken bread
+					"0": "Lilybrook.Lettuce 1 Rexstrife20.MineralTownCP_Harvest_Cucumber 1 GoodJobSuzette.HomeCooking_TomatoSlices 1 Roseloves109_CookedChicken 1 GoodJobSuzette.HomeCooking_PotatoBuns 1"
+				}
+			}
+		}
+	]
+}
