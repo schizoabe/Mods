@@ -14,8 +14,7 @@
 					"Type": "Basic",
 					"Category": 0,
 					"Price": 100,
-					"Texture": "TileSheets\\Objects_2",
-					"SpriteIndex": 69, //Essentially, this means it'll look like a prize ticket.
+					"Texture": "Mods/AgentLyoko.PortraitShop/Objects",
 					"GeodeDropsDefaultItems": false,
 					"GeodeDrops": null,
 					"ArtifactSpotChances": null,
@@ -24,6 +23,13 @@
 				}
 			},
 		},
+		
+		{
+			"LogName": "Portrait Ticket Image", //Thank you to MissSweetBean!
+            "Action": "Load",
+            "Target": "Mods/AgentLyoko.PortraitShop/Objects",
+            "FromFile": "assets/Vanilla/PortraitTicket.png"
+        },
 		
 		{
             "LogName": "Ticket as Universal Neutral (to prevent being used for Friendship)",

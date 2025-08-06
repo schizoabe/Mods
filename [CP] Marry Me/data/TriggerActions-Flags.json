@@ -2,134 +2,386 @@
 "Changes": [
 
 //Trigger Actions -- set 10 heart event flags
-//These should trigger whether or not the player is engaged because they are just timers
-//I had these on a two week timer but that was a little unstable and people might not want that anyway. Leaving the flags in case I decide to mess with them any more in the future
+//If random timing is OFF, just set the flag and make the event go
 {
-"Action": "EditData",
-"Target": "Data/TriggerActions",
-"Entries": {
-    "{{ModId}}_AbigailFlag": {
-        "Id": "{{ModId}}_AbigailFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Abigail_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartAbigail Received",
-        ]
-    },
-    
-    "{{ModId}}_AlexFlag": {
-        "Id": "{{ModId}}_AlexFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Alex_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartAlex Received",
-        ]
-    },
-    
-    "{{ModId}}_ElliottFlag": {
-        "Id": "{{ModId}}_ElliottFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Elliott_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartElliott Received",
-        ]
-    },
-    
-    "{{ModId}}_EmilyFlag": {
-        "Id": "{{ModId}}_EmilyFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Emily_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartEmily Received",
-        ]
-    },
-    
-    "{{ModId}}_HaleyFlag": {
-        "Id": "{{ModId}}_HaleyFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Haley_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartHaley Received",
-        ]
-    },
-    
-    "{{ModId}}_HarveyFlag": {
-        "Id": "{{ModId}}_HarveyFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Harvey_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartHarvey Received",
-        ]
-    },
-    
-    "{{ModId}}_LeahFlag": {
-        "Id": "{{ModId}}_LeahFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Leah_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartLeah Received",
-        ]
-    },
-    
-    "{{ModId}}_MaruFlag": {
-        "Id": "{{ModId}}_MaruFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Maru_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartMaru Received",
-        ]
-    },
-    
-    "{{ModId}}_PennyFlag": {
-        "Id": "{{ModId}}_PennyFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Penny_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartPenny Received",
-        ]
-    },
-    
-    "{{ModId}}_SamFlag": {
-        "Id": "{{ModId}}_SamFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Sam_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartSam Received",
-        ]
-    },
-    
-    "{{ModId}}_SebastianFlag": {
-        "Id": "{{ModId}}_SebastianFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Sebastian_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartSebastian Received",
-        ]
-    },
-    
-    "{{ModId}}_ShaneFlag": {
-        "Id": "{{ModId}}_ShaneFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Shane_10h}}",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartShane Received",
-        ]
-    },
-    
-    //Mod support
-    "{{ModId}}_OlderSebFlag": {
-        "Id": "{{ModId}}_OlderSebFlag",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_SEEN_EVENT Current Kantrip.OlderSebastian_Event_10heart",
-        "Actions": [
-            "AddMail Current {{ModId}}_StartSebastian Received",
-        ]
-    },
-    
-    //TODO Immersive Shane 10heart?
-    
-}
+    "Action": "EditData",
+    "Target": "Data/TriggerActions",
+    "When": { "RandomTiming": false },
+    "Entries": {
+        "{{ModId}}_AbigailFlag": {
+            "Id": "{{ModId}}_AbigailFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Abigail_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartAbigail Received",
+            ]
+        },
+        
+        "{{ModId}}_AlexFlag": {
+            "Id": "{{ModId}}_AlexFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Alex_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartAlex Received",
+            ]
+        },
+        
+        "{{ModId}}_ElliottFlag": {
+            "Id": "{{ModId}}_ElliottFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Elliott_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartElliott Received",
+            ]
+        },
+        
+        "{{ModId}}_EmilyFlag": {
+            "Id": "{{ModId}}_EmilyFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Emily_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartEmily Received",
+            ]
+        },
+        
+        "{{ModId}}_HaleyFlag": {
+            "Id": "{{ModId}}_HaleyFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Haley_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartHaley Received",
+            ]
+        },
+        
+        "{{ModId}}_HarveyFlag": {
+            "Id": "{{ModId}}_HarveyFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Harvey_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartHarvey Received",
+            ]
+        },
+        
+        "{{ModId}}_LeahFlag": {
+            "Id": "{{ModId}}_LeahFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Leah_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartLeah Received",
+            ]
+        },
+        
+        "{{ModId}}_MaruFlag": {
+            "Id": "{{ModId}}_MaruFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Maru_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartMaru Received",
+            ]
+        },
+        
+        "{{ModId}}_PennyFlag": {
+            "Id": "{{ModId}}_PennyFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Penny_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartPenny Received",
+            ]
+        },
+        
+        "{{ModId}}_SamFlag": {
+            "Id": "{{ModId}}_SamFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Sam_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartSam Received",
+            ]
+        },
+        
+        "{{ModId}}_SebastianFlag": {
+            "Id": "{{ModId}}_SebastianFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Sebastian_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartSebastian Received",
+            ]
+        },
+        
+        "{{ModId}}_ShaneFlag": {
+            "Id": "{{ModId}}_ShaneFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Shane_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartShane Received",
+            ]
+        },
+        
+        //Mod support
+        "{{ModId}}_OlderSebFlag": {
+            "Id": "{{ModId}}_OlderSebFlag",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current Kantrip.OlderSebastian_Event_10heart",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartSebastian Received",
+            ]
+        },
+        
+        //TODO Immersive Shane 10heart?
+        
+    }
 },
 
+//RANDOM TIMING BABY!
+//1 flag to start a timer
+//1 flag to make the proposal go if too long has passed
+{
+    "Action": "EditData",
+    "Target": "Data/TriggerActions",
+    "When": { "RandomTiming": true },
+    "Entries": {
+        "{{ModId}}_AbigailTimer": {
+            "Id": "{{ModId}}_AbigailTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Abigail_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Abigail Received",
+                "AddConversationTopic {{ModId}}_Timer_Abigail {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_AbigailFlag": {
+            "Id": "{{ModId}}_AbigailFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Abigail, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Abigail",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartAbigail Received",
+                "RemoveMail Current {{ModId}}_Flag_Abigail"
+            ]
+        },
+        
+        "{{ModId}}_AlexTimer": {
+            "Id": "{{ModId}}_AlexTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Alex_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Alex Received",
+                "AddConversationTopic {{ModId}}_Timer_Alex {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_AlexFlag": {
+            "Id": "{{ModId}}_AlexFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Alex, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Alex",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartAlex Received",
+                "RemoveMail Current {{ModId}}_Flag_Alex"
+            ]
+        },
+        
+        "{{ModId}}_ElliottTimer": {
+            "Id": "{{ModId}}_ElliottTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Elliott_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Elliott Received",
+                "AddConversationTopic {{ModId}}_Timer_Elliott {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_ElliottFlag": {
+            "Id": "{{ModId}}_ElliottFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Elliott, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Elliott",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartElliott Received",
+                "RemoveMail Current {{ModId}}_Flag_Elliott"
+            ]
+        },
+        
+        "{{ModId}}_EmilyTimer": {
+            "Id": "{{ModId}}_EmilyTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Emily_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Emily Received",
+                "AddConversationTopic {{ModId}}_Timer_Emily {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_EmilyFlag": {
+            "Id": "{{ModId}}_EmilyFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Emily, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Emily",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartEmily Received",
+                "RemoveMail Current {{ModId}}_Flag_Emily"
+            ]
+        },
+        
+        "{{ModId}}_HaleyTimer": {
+            "Id": "{{ModId}}_HaleyTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Haley_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Haley Received",
+                "AddConversationTopic {{ModId}}_Timer_Haley {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_HaleyFlag": {
+            "Id": "{{ModId}}_HaleyFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Haley, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Haley",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartHaley Received",
+                "RemoveMail Current {{ModId}}_Flag_Haley"
+            ]
+        },
+        
+        "{{ModId}}_HarveyTimer": {
+            "Id": "{{ModId}}_HarveyTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Harvey_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Harvey Received",
+                "AddConversationTopic {{ModId}}_Timer_Harvey {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_HarveyFlag": {
+            "Id": "{{ModId}}_HarveyFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Harvey, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Harvey",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartHarvey Received",
+                "RemoveMail Current {{ModId}}_Flag_Harvey"
+            ]
+        },
+        
+        "{{ModId}}_LeahTimer": {
+            "Id": "{{ModId}}_LeahTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Leah_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Leah Received",
+                "AddConversationTopic {{ModId}}_Timer_Leah {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_LeahFlag": {
+            "Id": "{{ModId}}_LeahFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Leah, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Leah",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartLeah Received",
+                "RemoveMail Current {{ModId}}_Flag_Leah"
+            ]
+        },
+        
+        "{{ModId}}_MaruTimer": {
+            "Id": "{{ModId}}_MaruTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Maru_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Maru Received",
+                "AddConversationTopic {{ModId}}_Timer_Maru {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_MaruFlag": {
+            "Id": "{{ModId}}_MaruFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Maru, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Maru",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartMaru Received",
+                "RemoveMail Current {{ModId}}_Flag_Maru"
+            ]
+        },
+        
+        "{{ModId}}_PennyTimer": {
+            "Id": "{{ModId}}_PennyTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Penny_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Penny Received",
+                "AddConversationTopic {{ModId}}_Timer_Penny {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_PennyFlag": {
+            "Id": "{{ModId}}_PennyFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Penny, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Penny",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartPenny Received",
+                "RemoveMail Current {{ModId}}_Flag_Penny"
+            ]
+        },
+        
+        "{{ModId}}_SamTimer": {
+            "Id": "{{ModId}}_SamTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Sam_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Sam Received",
+                "AddConversationTopic {{ModId}}_Timer_Sam {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_SamFlag": {
+            "Id": "{{ModId}}_SamFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Sam, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Sam",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartSam Received",
+                "RemoveMail Current {{ModId}}_Flag_Sam"
+            ]
+        },
+        
+        "{{ModId}}_SebastianTimer": {
+            "Id": "{{ModId}}_SebastianTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Sebastian_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Sebastian Received",
+                "AddConversationTopic {{ModId}}_Timer_Sebastian {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_SebastianFlag": {
+            "Id": "{{ModId}}_SebastianFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Sebastian, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Sebastian",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartSebastian Received",
+                "RemoveMail Current {{ModId}}_Flag_Sebastian"
+            ]
+        },
+        
+        "{{ModId}}_ShaneTimer": {
+            "Id": "{{ModId}}_ShaneTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current {{Shane_10h}}",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Shane Received",
+                "AddConversationTopic {{ModId}}_Timer_Shane {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        "{{ModId}}_ShaneFlag": {
+            "Id": "{{ModId}}_ShaneFlag",
+            "Trigger": "DayStarted",
+            "Condition": "PLAYER_HAS_Mail Current {{ModId}}_Flag_Shane, !PLAYER_HAS_CONVERSATION_TOPIC Current {{ModId}}_Timer_Shane",
+            "Actions": [
+                "AddMail Current {{ModId}}_StartShane Received",
+                "RemoveMail Current {{ModId}}_Flag_Shane"
+            ]
+        },
+        
+        
+        //Mod support
+        "{{ModId}}_OlderSebTimer": {
+            "Id": "{{ModId}}_OlderSebTimer",
+            "Trigger": "DayEnding",
+            "Condition": "PLAYER_HAS_SEEN_EVENT Current Kantrip.OlderSebastian_Event_10heart",
+            "Actions": [
+                "AddMail Current {{ModId}}_Flag_Sebastian Received",
+                "AddConversationTopic {{ModId}}_Timer_Sebastian {{Random:{{Range:14,28}}}}",
+            ]
+        },
+        
+        //TODO Immersive Shane 10heart?
+    }
+}
+    
 ]
 }

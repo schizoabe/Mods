@@ -13,65 +13,65 @@
 
     "{{ModId}}_AbigailLetter": {
         "Id": "{{ModId}}_AbigailLetter",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartAbigail, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Abigail, PLAYER_NPC_RELATIONSHIP Current Abigail Dating, PLAYER_HEARTS Current Abigail 10, WEATHER Here Sun Wind",
+        "Trigger": "DayEnding",
+        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartAbigail, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Abigail, PLAYER_NPC_RELATIONSHIP Current Abigail Dating, PLAYER_FRIENDSHIP_POINTS Current Abigail 2502, Spiderbuttons.BETAS_WEATHER_FOR_TOMORROW Default Sun Wind",
         "Actions": [
-            "AddMail Current {{ModId}}_Letter_Abigail Now",
+            "AddMail Current {{ModId}}_Letter_Abigail",
         ]
     },
     
     "{{ModId}}_AlexLetter": {
         "Id": "{{ModId}}_AlexLetter",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartAlex, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Alex, PLAYER_NPC_RELATIONSHIP Current Alex Dating, PLAYER_HEARTS Current Alex 10, WEATHER Here Sun Wind",
+        "Trigger": "DayEnding",
+        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartAlex, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Alex, PLAYER_NPC_RELATIONSHIP Current Alex Dating, PLAYER_FRIENDSHIP_POINTS Current Alex 2502, Spiderbuttons.BETAS_WEATHER_FOR_TOMORROW Default Sun Wind",
         "Actions": [
-            "AddMail Current {{ModId}}_Letter_Alex Now",
+            "AddMail Current {{ModId}}_Letter_Alex",
         ]
     },
     
     "{{ModId}}_ElliottLetter": {
         "Id": "{{ModId}}_ElliottLetter",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartElliott, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Elliott, PLAYER_NPC_RELATIONSHIP Current Elliott Dating, PLAYER_HEARTS Current Elliott 10, WEATHER Here Sun Wind",
+        "Trigger": "DayEnding",
+        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartElliott, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Elliott, PLAYER_NPC_RELATIONSHIP Current Elliott Dating, PLAYER_FRIENDSHIP_POINTS Current Elliott 2502, Spiderbuttons.BETAS_WEATHER_FOR_TOMORROW Default Sun Wind",
         "Actions": [
-            "AddMail Current {{ModId}}_Letter_Elliott Now",
+            "AddMail Current {{ModId}}_Letter_Elliott",
         ]
     },
     
     "{{ModId}}_HarveyLetter": {
         "LogName": "Sending Harvey's letter",
         "Id": "{{ModId}}_HarveyLetter",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartHarvey, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Harvey, PLAYER_NPC_RELATIONSHIP Current Harvey Dating, PLAYER_HEARTS Current Harvey 10",
+        "Trigger": "DayEnding",
+        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartHarvey, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Harvey, PLAYER_NPC_RELATIONSHIP Current Harvey Dating, PLAYER_FRIENDSHIP_POINTS Current Harvey 2502",
         "Actions": [
-            "AddMail Current {{ModId}}_Letter_Harvey Now",
+            "AddMail Current {{ModId}}_Letter_Harvey",
         ]
     },
     
     "{{ModId}}_LeahLetter": {
         "Id": "{{ModId}}_LeahLetter",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartLeah, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Leah, PLAYER_NPC_RELATIONSHIP Current Leah Dating, PLAYER_HEARTS Current Leah 10, !SEASON Winter, WEATHER Here Sun Wind",
+        "Trigger": "DayEnding",
+        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartLeah, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Leah, PLAYER_NPC_RELATIONSHIP Current Leah Dating, PLAYER_FRIENDSHIP_POINTS Current Leah 2502, !SEASON Winter, !DAY_OF_MONTH 28, Spiderbuttons.BETAS_WEATHER_FOR_TOMORROW Default Sun Wind",
         "Actions": [
-            "AddMail Current {{ModId}}_Letter_Leah Now",
+            "AddMail Current {{ModId}}_Letter_Leah",
         ]
     },
 
     "{{ModId}}_SebastianLetter": {
         "Id": "{{ModId}}_SebastianLetter",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartSebastian, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Sebastian, PLAYER_NPC_RELATIONSHIP Current Sebastian Dating, PLAYER_HEARTS Current Sebastian 10, !SEASON Winter, WEATHER Here Sun Wind",
+        "Trigger": "DayEnding",
+        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartSebastian, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Sebastian, PLAYER_NPC_RELATIONSHIP Current Sebastian Dating, PLAYER_FRIENDSHIP_POINTS Current Sebastian 2502, !SEASON Winter, !DAY_OF_MONTH 28, Spiderbuttons.BETAS_WEATHER_FOR_TOMORROW Default Sun Wind",
         "Actions": [
-            "AddMail Current {{ModId}}_Letter_Sebastian Now",
+            "AddMail Current {{ModId}}_Letter_Sebastian",
         ]
     },
 
     "{{ModId}}_ShaneLetter": {
         "Id": "{{ModId}}_ShaneLetter",
-        "Trigger": "DayStarted",
-        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartShane, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Shane, PLAYER_NPC_RELATIONSHIP Current Shane Dating, PLAYER_HEARTS Current Shane 10, WEATHER Here Sun Wind",
+        "Trigger": "DayEnding",
+        "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_StartShane, !PLAYER_HAS_SEEN_EVENT Current {{ModId}}_Proposal_Shane, PLAYER_NPC_RELATIONSHIP Current Shane Dating, PLAYER_FRIENDSHIP_POINTS Current Shane 2502, Spiderbuttons.BETAS_WEATHER_FOR_TOMORROW Default Sun Wind",
         "Actions": [
-            "AddMail Current {{ModId}}_Letter_Shane Now",
+            "AddMail Current {{ModId}}_Letter_Shane",
         ]
     },
 },

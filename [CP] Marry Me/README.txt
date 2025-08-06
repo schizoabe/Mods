@@ -5,6 +5,7 @@ A Content Patcher mod that adds unique engagement events for every vanilla suito
 + SMAPI
 + Content Patcher
 + ReverseProposals (included)
++ BETAS (not included)
 
 ##:: FEATURES ::
 + A unique proposal event for each vanilla bachelor/bachelorette

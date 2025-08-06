@@ -2457,6 +2457,14 @@
             <summary>Raised when a Treasure Hunt ends.</summary>
             <param name="found">Whether the player successfully discovered the treasure.</param>
         </member>
+        <member name="M:DaLion.Professions.Framework.Hunting.TreasureHunt.RollStack(System.Int32,System.Int32,System.Double,System.Double)">
+            <summary>Rolls a big fat stack of ores or metal bars.</summary>
+            <param name="baseMin">The minimum value of the base roll.</param>
+            <param name="baseMax">The maximum value of the base roll.</param>
+            <param name="chanceToDouble">The base chance to double the stack.</param>
+            <param name="chanceDecay">The decay to the <paramref name="chanceToDouble"/> after a successful doubling.</param>
+            <returns>A big fat stack.</returns>
+        </member>
         <member name="T:DaLion.Professions.Framework.Hunting.TreasureHuntProfession">
             <summary>
                 The type of <see cref="T:DaLion.Professions.Framework.Hunting.ITreasureHunt"/>; either <see cref="F:DaLion.Professions.Framework.VanillaProfession.Scavenger"/> or
@@ -3751,13 +3759,24 @@
         <member name="M:DaLion.Professions.Framework.Patchers.Farming.HoeDirtApplySpeedIncreasesPatcher.HoeDirtApplySpeedIncreasesTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.Emit.ILGenerator,System.Reflection.MethodBase)">
             <summary>Patch to increase prestiged Agriculturist crop growth speed.</summary>
         </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Farming.HoeDirtCanPlantThisSeedHerePatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Farming.HoeDirtCanPlantThisSeedHerePatcher"/> class.</summary>
+            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
+            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Farming.HoeDirtCanPlantThisSeedHerePatcher.HoeDirtCanPlantThisSeedHereTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.MethodBase)">
+            <summary>Patch for Prestiged Agriculturist crop endurance.</summary>
+        </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Farming.HoeDirtPlantPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Farming.HoeDirtPlantPatcher"/> class.</summary>
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
             <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
         </member>
-        <member name="M:DaLion.Professions.Framework.Patchers.Farming.HoeDirtPlantPatcher.HoeDirtPlantPostfix(StardewValley.TerrainFeatures.HoeDirt,StardewValley.Farmer)">
+        <member name="M:DaLion.Professions.Framework.Patchers.Farming.HoeDirtPlantPatcher.HoeDirtPlantPostfix(StardewValley.TerrainFeatures.HoeDirt,System.Boolean@,System.String,StardewValley.Farmer,System.Boolean)">
             <summary>Patch to record crops planted by Agriculturist.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Farming.HoeDirtPlantPatcher.HoeDirtPlantTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.Emit.ILGenerator,System.Reflection.MethodBase)">
+            <summary>Patch for Prestiged Agriculturist crop endurance.</summary>
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Farming.ObjectAttemptAutoLoadPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Farming.ObjectAttemptAutoLoadPatcher"/> class.</summary>
@@ -4111,6 +4130,14 @@
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Foraging.TreeUpdateTapperProductPatcher.TreeUpdateTapperProductPostfix(StardewValley.TerrainFeatures.Tree,StardewValley.Object)">
             <summary>Patch to decrease syrup production time for Tapper.</summary>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Foraging.UtilityPickFarmEventPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
+            <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Foraging.UtilityPickFarmEventPatcher"/> class.</summary>
+            <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
+            <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
+        </member>
+        <member name="M:DaLion.Professions.Framework.Patchers.Foraging.UtilityPickFarmEventPatcher.UtilityPickFarmEventTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.Emit.ILGenerator,System.Reflection.MethodBase)">
+            <summary>Patch to increase fairy chance for Silviculturist.</summary>
         </member>
         <member name="M:DaLion.Professions.Framework.Patchers.Game1DrawHudPatcher.#ctor(DaLion.Shared.Harmony.Harmonizer,DaLion.Shared.Logger)">
             <summary>Initializes a new instance of the <see cref="T:DaLion.Professions.Framework.Patchers.Game1DrawHudPatcher"/> class.</summary>
@@ -5485,7 +5512,7 @@
             <summary>The unique key for a translation equivalent to "Crops grow 10% faster, plus 5% for each new crop type grown in the same tile and season. Highest-quality crops can be harvested organically, without fertilizers.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Agriculturist_Desc_Prestiged">
-            <summary>The unique key for a translation equivalent to "Crops grow 10% &gt;&gt; 20% faster and can survive up to one week out of season. Chance to harvest crops grown previously in the same tile and season.".</summary>
+            <summary>The unique key for a translation equivalent to "Chance to harvest crops grown previously in the same tile and season. Use Retaining Soil to grow crops out of season.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Artisan_Title_Male">
             <summary>The unique key for a translation equivalent to "Artisan".</summary>
@@ -5641,7 +5668,7 @@
             <summary>The unique key for a translation equivalent to "Planted trees grow 25% faster. All trees have a chance to drop hardwood.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Arborist_Desc_Prestiged">
-            <summary>The unique key for a translation equivalent to "All trees can drop even more hardwood. The Green Rain may fall in any season if Green Rain Trees are grown on the farm.".</summary>
+            <summary>The unique key for a translation equivalent to "All trees can drop even more hardwood. Green Rain may fall in any season if Green Rain Trees are grown on the farm.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Tapper_Title_Male">
             <summary>The unique key for a translation equivalent to "Tapper".</summary>
@@ -5821,10 +5848,10 @@
             <summary>The unique key for a translation equivalent to "Ichthyologist".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Aquarist_Desc">
-            <summary>The unique key for a translation equivalent to "Fish pond max capacity +2. Catching bar decreases slower for every unique fish species raised in a Fish Pond. Can raise legendary fish at half capacity.".</summary>
+            <summary>The unique key for a translation equivalent to "Fish pond max capacity +2. Catching bar decreases slower for every unique fish species raised in a Fish Pond.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Aquarist_Desc_Prestiged">
-            <summary>The unique key for a translation equivalent to "Fish pond max capacity +2 &gt;&gt; +4. Fish species raised to max pond capacity are reeled instantly. Unlocked legendary Fish Pond capacity.".</summary>
+            <summary>The unique key for a translation equivalent to "Fish pond max capacity +2 &gt;&gt; +4. Fish species raised to max pond capacity are reeled instantly.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Trapper_Title_Male">
             <summary>The unique key for a translation equivalent to "Trapper".</summary>
@@ -5983,7 +6010,7 @@
             <summary>The unique key for a translation equivalent to "Prismatrice".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Piper_Desc">
-            <summary>The unique key for a translation equivalent to "Slime Hutch capacity +50%. Slimes raised in a Hutch are summoned to fight alongside you. One can be assigned as a Hat Slime to carry items.".</summary>
+            <summary>The unique key for a translation equivalent to "Slime Hutch capacity +50%. Slimes raised in a Hutch are summoned in combat. One can be assigned as a Hat Slime to carry items.".</summary>
         </member>
         <member name="F:DaLion.Professions.I18n.Keys.Piper_Desc_Prestiged">
             <summary>The unique key for a translation equivalent to "Ally Slimes gain unique abilities based on their color. Obtain rare colored items from Slime Balls.".</summary>
@@ -6621,7 +6648,7 @@
             <summary>Get a translation equivalent to "Crops grow 10% faster, plus 5% for each new crop type grown in the same tile and season. Highest-quality crops can be harvested organically, without fertilizers.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Agriculturist_Desc_Prestiged">
-            <summary>Get a translation equivalent to "Crops grow 10% &gt;&gt; 20% faster and can survive up to one week out of season. Chance to harvest crops grown previously in the same tile and season.".</summary>
+            <summary>Get a translation equivalent to "Chance to harvest crops grown previously in the same tile and season. Use Retaining Soil to grow crops out of season.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Artisan_Title_Male">
             <summary>Get a translation equivalent to "Artisan".</summary>
@@ -6777,7 +6804,7 @@
             <summary>Get a translation equivalent to "Planted trees grow 25% faster. All trees have a chance to drop hardwood.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Arborist_Desc_Prestiged">
-            <summary>Get a translation equivalent to "All trees can drop even more hardwood. The Green Rain may fall in any season if Green Rain Trees are grown on the farm.".</summary>
+            <summary>Get a translation equivalent to "All trees can drop even more hardwood. Green Rain may fall in any season if Green Rain Trees are grown on the farm.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Tapper_Title_Male">
             <summary>Get a translation equivalent to "Tapper".</summary>
@@ -6958,10 +6985,10 @@
             <summary>Get a translation equivalent to "Ichthyologist".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Aquarist_Desc">
-            <summary>Get a translation equivalent to "Fish pond max capacity +2. Catching bar decreases slower for every unique fish species raised in a Fish Pond. Can raise legendary fish at half capacity.".</summary>
+            <summary>Get a translation equivalent to "Fish pond max capacity +2. Catching bar decreases slower for every unique fish species raised in a Fish Pond.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Aquarist_Desc_Prestiged">
-            <summary>Get a translation equivalent to "Fish pond max capacity +2 &gt;&gt; +4. Fish species raised to max pond capacity are reeled instantly. Unlocked legendary Fish Pond capacity.".</summary>
+            <summary>Get a translation equivalent to "Fish pond max capacity +2 &gt;&gt; +4. Fish species raised to max pond capacity are reeled instantly.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Trapper_Title_Male">
             <summary>Get a translation equivalent to "Trapper".</summary>
@@ -7130,7 +7157,7 @@
             <summary>Get a translation equivalent to "Prismatrice".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Piper_Desc">
-            <summary>Get a translation equivalent to "Slime Hutch capacity +50%. Slimes raised in a Hutch are summoned to fight alongside you. One can be assigned as a Hat Slime to carry items.".</summary>
+            <summary>Get a translation equivalent to "Slime Hutch capacity +50%. Slimes raised in a Hutch are summoned in combat. One can be assigned as a Hat Slime to carry items.".</summary>
         </member>
         <member name="M:DaLion.Professions.I18n.Piper_Desc_Prestiged">
             <summary>Get a translation equivalent to "Ally Slimes gain unique abilities based on their color. Obtain rare colored items from Slime Balls.".</summary>

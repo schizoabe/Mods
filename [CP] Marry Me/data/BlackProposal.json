@@ -26,7 +26,9 @@
         "Rival": "{{Random: {{Kantrip.ReverseProposals/RivalSuitors:for={{BlackHeartSuitor}} }} }}",
     },
     "Entries": {
-        
+
+        "{{ModId}}_Proposal_Black/Dating {{Suitor}}/n {{ModId}}_Flag_{{Suitor}}/f {{Suitor}} 2500/!n {{ModId}}_StopBlack_{{Suitor}}/t 600 2300/c 1/": "{{BlackHeartMusic}}/-1000 -1000/farmer 12 23 1 {{Suitor}} 27 18 3/switchEvent {{ModId}}_{{Suitor}}_Black_Start",
+
         "{{ModId}}_Proposal_Black/Dating {{Suitor}}/n {{ModId}}_Start{{Suitor}}/f {{Suitor}} 2500/!n {{ModId}}_StopBlack_{{Suitor}}/t 600 2300/c 1/": "{{BlackHeartMusic}}/-1000 -1000/farmer 12 23 1 {{Suitor}} 27 18 3/switchEvent {{ModId}}_{{Suitor}}_Black_Start",
         
         "{{ModId}}_{{Suitor}}_Black_Start": "--skippable/eventSeen {{ModId}}_Proposal_{{Suitor}}/makeInvisible 10 22 26 4/makeInvisible 20 16 7 4/viewport 24 25 clamp true/advancedMove farmer false 11 0 4 500/pause 4000/faceDirection {{Suitor}} 2/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.0 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 200/faceDirection farmer 0/emote farmer 8/pause 800/advancedMove {{Suitor}} false 2 1000 -3 0 2 500/move farmer 0 -2 0/pause 2500/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.1 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 500/faceDirection {{Suitor}} 1/pause 1500/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.2 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 1000/emote farmer 40/pause 1200/faceDirection {{Suitor}} 2/pause 400/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.3 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 500/speed {{Suitor}} 1/advancedMove {{Suitor}} false 0 3 3 500/pause 2500/faceDirection farmer 1/waitForAllStationary/pause 1500/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.4 |Rival={{Rival}} |You={{You}} |Your={{Your}}}}\"/pause 1500/message \"{{i18n:Black_{{Suitor}}.action |Suitor={{Suitor}} |You={{You}} |Your={{Your}}}}\"/pause 500/speak {{Suitor}} \"{{i18n:Black_{{Suitor}}.Q}}\"/pause 400/emote farmer 16/pause 200/question fork1 \"{{i18n:proposalResponse}}\"/fork {{ModId}}_{{Suitor}}_Black_No/switchEvent {{ModId}}_{{Suitor}}_Black_Yes",

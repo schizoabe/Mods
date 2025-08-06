@@ -20,6 +20,12 @@
         "Default": false,
         "Description": "Experimental. Probably only relevant for people running PolyamorySweet or similar mods",
     },
+    
+    "RandomTiming": {
+        "AllowValues": "true, false",
+        "Default": true,
+        "Description": "Introduces a delay of 2-4 after the 10 heart event for proposals",
+    },
 },
 
 "DynamicTokens": [
@@ -190,24 +196,12 @@
         "Shane_10h":        "2128292",
     }
 },
-{
-    "Action": "Include",
-    "FromFile": "data/TriggerActions-Letters.json",
-    "When": {
-        "IsEngaged": false,
-        "Query: {{PlayerIsFree}} OR {{CanDoProposalsWhenMarried}}": true,
-        "Query: {{Count:{{Kantrip.ReverseProposals/MaxHeartSuitors:type=all}}}} > 0": true,
-        "Query: {{FarmhouseUpgrade}} > 0": true,
-    },
-},
 
 //Invitation letters for vanilla events
 {
     "Action": "Include",
     "FromFile": "data/Letters.json",
 },
-
-//TODO: check if I can use DayEvent to prevent stuff happening on festival days
 
 //Black events possible if config good, event not seen, no current partner and dating at least one person
 {

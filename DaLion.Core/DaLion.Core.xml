@@ -51,7 +51,7 @@
         <member name="M:DaLion.Core.CoreApi.IsBurning(StardewValley.Monsters.Monster)">
             <inheritdoc />
         </member>
-        <member name="M:DaLion.Core.CoreApi.Chill(StardewValley.Monsters.Monster,System.Int32,System.Single,System.Single,System.Boolean)">
+        <member name="M:DaLion.Core.CoreApi.Chill(StardewValley.Monsters.Monster,System.Int32,System.Single,System.Single,System.Boolean,System.Boolean)">
             <inheritdoc />
         </member>
         <member name="M:DaLion.Core.CoreApi.Unchill(StardewValley.Monsters.Monster)">
@@ -795,12 +795,13 @@
             <param name="monster">The <see cref="T:StardewValley.Monsters.Monster"/>.</param>
             <returns><see langword="true"/> if the <paramref name="monster"/> has non-zero burn timer, otherwise <see langword="false"/>.</returns>
         </member>
-        <member name="M:DaLion.Core.Framework.Extensions.MonsterExtensions.Chill(StardewValley.Monsters.Monster,System.Int32,System.Single,System.Single,System.Boolean)">
+        <member name="M:DaLion.Core.Framework.Extensions.MonsterExtensions.Chill(StardewValley.Monsters.Monster,System.Int32,System.Single,System.Single,System.Boolean,System.Boolean)">
             <summary>Chills the <paramref name="monster"/> for the specified <paramref name="duration"/>.</summary>
             <param name="monster">The <see cref="T:StardewValley.Monsters.Monster"/>.</param>
             <param name="duration">The duration in milliseconds.</param>
             <param name="intensity">The intensity of the slow effect.</param>
             <param name="freezeThreshold">The required slow intensity total for the target to be considered frozen.</param>
+            <param name="isActuallyFrozen"><see langword="false"/> if this a stacked chill effect, or <see langword="true"/> if this is actually an immediate freeze.</param>
             <param name="playSoundEffect">Whether to play the chill sound effect.</param>
         </member>
         <member name="M:DaLion.Core.Framework.Extensions.MonsterExtensions.Unchill(StardewValley.Monsters.Monster)">
@@ -893,7 +894,7 @@
         <member name="M:DaLion.Core.Framework.Extensions.SObjectExtensions.TryGetHopper(StardewValley.Object,StardewValley.Objects.Chest@)">
             <summary>Checks if the <paramref name="object"/> instance is a hopper chest, and if so returns a <see cref="T:StardewValley.Objects.Chest"/> reference to the instance.</summary>
             <param name="object">The <see cref="T:StardewValley.Object"/>.</param>
-            <param name="hopper">A <see cref="T:StardewValley.Objects.Chest"/> reference to the <paramref name="@object"/>, if applicable. Otherwise <see langword="null"/>.</param>
+            <param name="hopper">A <see cref="T:StardewValley.Objects.Chest"/> reference to the <paramref name="object"/>, if applicable. Otherwise <see langword="null"/>.</param>
             <returns><see langword="true"/> if the instance is a hopper chest, otherwise <see langword="false"/>.</returns>
         </member>
         <member name="T:DaLion.Core.Framework.Extensions.SpriteBatchExtensions">
@@ -1081,6 +1082,9 @@
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
             <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
         </member>
+        <member name="M:DaLion.Core.Framework.Patchers.ObjectCheckForActionOnMachinePatcher.ApplyImpl(HarmonyLib.Harmony)">
+            <inheritdoc />
+        </member>
         <member name="M:DaLion.Core.Framework.Patchers.ObjectCheckForActionOnMachinePatcher.ObjectCheckForActionOnMachineTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.Emit.ILGenerator,System.Reflection.MethodBase)">
             <summary>Prevents remote item pickup when harvested by Hopper.</summary>
         </member>
@@ -1097,6 +1101,9 @@
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
             <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
         </member>
+        <member name="M:DaLion.Core.Framework.Patchers.ObjectMinutesElapsedPatcher.ApplyImpl(HarmonyLib.Harmony)">
+            <inheritdoc />
+        </member>
         <member name="M:DaLion.Core.Framework.Patchers.ObjectMinutesElapsedPatcher.ObjectMinutesElapsedPostfix(StardewValley.Object)">
             <summary>Patch to make Hopper actually useful. Attempt load to chest underneath.</summary>
         </member>
@@ -1105,6 +1112,9 @@
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
             <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
         </member>
+        <member name="M:DaLion.Core.Framework.Patchers.ObjectOnReadyForHarvestPatcher.ApplyImpl(HarmonyLib.Harmony)">
+            <inheritdoc />
+        </member>
         <member name="M:DaLion.Core.Framework.Patchers.ObjectOnReadyForHarvestPatcher.ObjectOnReadyForHarvestPostfix(StardewValley.Object)">
             <summary>Patch to make Hopper actually useful.</summary>
         </member>
@@ -1112,6 +1122,9 @@
             <summary>Initializes a new instance of the <see cref="T:DaLion.Core.Framework.Patchers.ObjectPlacementActionPatcher"/> class.</summary>
             <param name="harmonizer">The <see cref="T:DaLion.Shared.Harmony.Harmonizer"/> instance that manages this patcher.</param>
             <param name="logger">A <see cref="T:DaLion.Shared.Logger"/> instance.</param>
+        </member>
+        <member name="M:DaLion.Core.Framework.Patchers.ObjectPlacementActionPatcher.ApplyImpl(HarmonyLib.Harmony)">
+            <inheritdoc />
         </member>
         <member name="M:DaLion.Core.Framework.Patchers.ObjectPlacementActionPatcher.ObjectPlacementActionPostfix(StardewValley.Object)">
             <summary>Patch to make Hopper actually useful.</summary>
@@ -1220,12 +1233,13 @@
             <param name="monster">The <see cref="T:StardewValley.Monsters.Monster"/>.</param>
             <returns><see langword="true"/> if the <paramref name="monster"/> has non-zero burn timer, otherwise <see langword="false"/>.</returns>
         </member>
-        <member name="M:DaLion.Core.ICoreApi.Chill(StardewValley.Monsters.Monster,System.Int32,System.Single,System.Single,System.Boolean)">
+        <member name="M:DaLion.Core.ICoreApi.Chill(StardewValley.Monsters.Monster,System.Int32,System.Single,System.Single,System.Boolean,System.Boolean)">
             <summary>Chills the <paramref name="monster"/> for the specified <paramref name="duration"/>.</summary>
             <param name="monster">The <see cref="T:StardewValley.Monsters.Monster"/>.</param>
             <param name="duration">The duration in milliseconds.</param>
             <param name="intensity">The intensity of the slow effect.</param>
             <param name="freezeThreshold">The required slow intensity total for the target to be considered frozen.</param>
+            <param name="isActuallyFrozen"><see langword="false"/> if this a stacked chill effect, or <see langword="true"/> if this is actually an immediate freeze.</param>
             <param name="playSoundEffect">Whether to play the chill sound effect.</param>
         </member>
         <member name="M:DaLion.Core.ICoreApi.Unchill(StardewValley.Monsters.Monster)">
@@ -3392,7 +3406,7 @@
         <member name="T:DaLion.Shared.Extensions.SMAPI.SButtonExtensions">
             <summary>Extensions for the <see cref="T:StardewModdingAPI.SButton"/> enum.</summary>
         </member>
-        <member name="M:DaLion.Shared.Extensions.SMAPI.SButtonExtensions.ToButton(StardewModdingAPI.SButton)">
+        <member name="M:DaLion.Shared.Extensions.SMAPI.SButtonExtensions.ToButtons(StardewModdingAPI.SButton)">
             <summary>Get the <see cref="T:Microsoft.Xna.Framework.Input.Buttons" /> equivalent for the given <see cref="T:StardewModdingAPI.SButton"/>.</summary>
             <param name="button">The controller button to convert.</param>
             <returns>The <see cref="T:Microsoft.Xna.Framework.Input.Buttons"/> equivalent.</returns>
@@ -6682,6 +6696,9 @@
         </member>
         <member name="F:DaLion.Shared.Enums.ObjectCategory.AnimalGoods">
             <summary>The category for animal goods.</summary>
+        </member>
+        <member name="F:DaLion.Shared.Enums.ObjectCategory.Fertilizer">
+            <summary>The category for fertilizers.</summary>
         </member>
         <member name="F:DaLion.Shared.Enums.ObjectCategory.Junk">
             <summary>The category for junk items.</summary>

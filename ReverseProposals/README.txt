@@ -13,7 +13,7 @@ https://github.com/Kantrip-Mods/SDV/tree/main/ReverseProposals
 
 
 ##:: LICENSE  ::
-+ GPL
+MIT
 
 ##::  CREDITS ::
 + The BaseToken class was copied directly from Vertigon's Stats as Tokens (hence the GPL license)
